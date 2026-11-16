@@ -28,6 +28,7 @@ on:
 
 jobs:
   unit:
+    name: ${{ github.event_name == 'workflow_dispatch' && inputs.qg5_only && 'unit (not requested)' || 'unit' }}
     if: ${{ github.event_name != 'workflow_dispatch' || !inputs.qg5_only }}
     runs-on: ubuntu-latest
     steps:
@@ -52,6 +53,7 @@ jobs:
         run: pnpm test
 
   typecheck:
+    name: ${{ github.event_name == 'workflow_dispatch' && inputs.qg5_only && 'typecheck (not requested)' || 'typecheck' }}
     if: ${{ github.event_name != 'workflow_dispatch' || !inputs.qg5_only }}
     runs-on: ubuntu-latest
     steps:
@@ -72,6 +74,7 @@ jobs:
         run: pnpm typecheck
 
   coverage:
+    name: ${{ github.event_name == 'workflow_dispatch' && inputs.qg5_only && 'coverage (not requested)' || 'coverage' }}
     if: ${{ github.event_name != 'workflow_dispatch' || !inputs.qg5_only }}
     runs-on: ubuntu-latest
     steps:
@@ -102,6 +105,7 @@ jobs:
           if-no-files-found: error
 
   build-generated:
+    name: ${{ github.event_name == 'workflow_dispatch' && inputs.qg5_only && 'build-generated (not requested)' || 'build-generated' }}
     if: ${{ github.event_name != 'workflow_dispatch' || !inputs.qg5_only }}
     runs-on: ubuntu-latest
     steps:
@@ -141,6 +145,7 @@ jobs:
         run: git diff --check
 
   docs:
+    name: ${{ github.event_name == 'workflow_dispatch' && inputs.qg5_only && 'docs (not requested)' || 'docs' }}
     if: ${{ github.event_name != 'workflow_dispatch' || !inputs.qg5_only }}
     runs-on: ubuntu-latest
     steps:
@@ -161,6 +166,7 @@ jobs:
         run: pnpm docs:build
 
   consumer:
+    name: ${{ github.event_name == 'workflow_dispatch' && inputs.qg5_only && 'consumer (not requested)' || 'consumer' }}
     if: ${{ github.event_name != 'workflow_dispatch' || !inputs.qg5_only }}
     runs-on: ubuntu-latest
     steps:
@@ -239,6 +245,7 @@ jobs:
           if-no-files-found: error
 
   browser:
+    name: ${{ github.event_name == 'workflow_dispatch' && inputs.qg5_only && 'browser (not requested)' || 'browser' }}
     if: ${{ github.event_name != 'workflow_dispatch' || !inputs.qg5_only }}
     runs-on: ubuntu-latest
     steps:

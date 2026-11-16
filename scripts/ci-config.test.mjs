@@ -135,7 +135,8 @@ test('QG5-only dispatch is opt-in and keeps push and PR jobs enabled', () => {
   const guard = "    if: ${{ github.event_name != 'workflow_dispatch' || !inputs.qg5_only }}"
   for (const name of ['unit', 'typecheck', 'coverage', 'build-generated', 'docs', 'consumer', 'browser']) {
     const job = workflowSource.match(new RegExp(`\\n  ${name}:\\n([\\s\\S]*?)(?=\\n  [a-z][\\w-]*:|$)`))?.[1]
-    assert.ok(job?.startsWith(guard + '\n'), `${name} must skip only an explicit QG5-only dispatch`)
+    assert.ok(job?.includes('\n' + guard + '\n'), `${name} must skip only an explicit QG5-only dispatch`)
+    assert.ok(job?.startsWith(`    name: \${{ github.event_name == 'workflow_dispatch' && inputs.qg5_only && '${name} (not requested)' || '${name}' }}\n`), `${name} skipped checks must not replace full-CI status contexts`)
   }
   assert.doesNotMatch(qg5Job, /qg5_only/)
   assert.doesNotMatch(qg5Job, /^    (?:if|needs):/m)
