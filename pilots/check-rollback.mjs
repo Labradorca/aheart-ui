@@ -21,15 +21,19 @@ const out = path.resolve(arg('--out'))
 await mkdir(out, { recursive: false })
 const originalManifest = await readFile(path.join(project, 'package.json'))
 const originalLock = await readFile(path.join(project, 'package-lock.json'))
-const baselineLock = await readFile(path.join(root, 'pilots/muxu-todo/package-lock.json'))
+const baselineVersion = arg('--baseline-version') ?? '1.1.0'
+assert.ok(['1.1.0', '1.1.1'].includes(baselineVersion), 'Use a reviewed public baseline: 1.1.0 or 1.1.1')
+const baselineLock = baselineVersion === '1.1.0'
+  ? await readFile(path.join(root, 'pilots/muxu-todo/package-lock.json'))
+  : originalLock
 const baselineCore = JSON.parse(baselineLock).packages['node_modules/aheart-ui']
-assert.equal(baselineCore.version, '1.1.0')
+assert.equal(baselineCore.version, baselineVersion)
 assert.match(baselineCore.resolved, /^https:\/\/registry\.npmjs\.org\/aheart-ui\/-\//)
 const manifest = JSON.parse(originalManifest)
 assert.equal(manifest.name, 'aheart-pilot-muxu-todo')
 assert.equal(manifest.private, true)
 const sha256 = data => createHash('sha256').update(data).digest('hex')
-const result = { status: 'failed', project, candidate: { version: candidate.version, sha256: sha256(await readFile(tarball)) }, baseline: 'aheart-ui@1.1.0', originalLockSha256: sha256(originalLock), commands: [], stages: [], errors: [], restoration: 'not-run' }
+const result = { status: 'failed', project, candidate: { version: candidate.version, sha256: sha256(await readFile(tarball)) }, baseline: `aheart-ui@${baselineVersion}`, originalLockSha256: sha256(originalLock), commands: [], stages: [], errors: [], restoration: 'not-run' }
 const command = async (label, args) => {
   try {
     const done = await run('npm', args, { cwd: project, timeout: 180000, maxBuffer: 30 * 1024 * 1024 })
@@ -43,7 +47,7 @@ const command = async (label, args) => {
 }
 const install = async (dependency, label) => {
   await writeFile(path.join(project, 'package.json'), JSON.stringify({ ...manifest, dependencies: { ...manifest.dependencies, 'aheart-ui': dependency } }, null, 2) + '\n')
-  if (dependency === '1.1.0') {
+  if (dependency === baselineVersion) {
     // A local candidate can have the same version as the registry baseline.
     // Restore the registry lock explicitly; a semver edit alone can retain file:.
     await writeFile(path.join(project, 'package-lock.json'), baselineLock)
@@ -54,7 +58,7 @@ const install = async (dependency, label) => {
   await command(`${label}-build`, ['run', 'build'])
   const lock = await readFile(path.join(project, 'package-lock.json'))
   const core = JSON.parse(lock).packages['node_modules/aheart-ui']
-  if (dependency === '1.1.0') {
+  if (dependency === baselineVersion) {
     assert.equal(core.resolved, baselineCore.resolved)
     assert.equal(core.integrity, baselineCore.integrity)
   } else {
@@ -68,7 +72,7 @@ const tooling = createRequire(path.join(root, 'pilots/tooling/package.json'))
 const { chromium, expect } = tooling('@playwright/test')
 let server, browser
 try {
-  await install('1.1.0', 'baseline')
+  await install(baselineVersion, 'baseline')
   const vite = await import(pathToFileURL(path.join(project, 'node_modules/vite/dist/node/index.js')).href)
   server = await vite.preview({ root: project, configFile: false, build: { outDir: 'dist' }, preview: { host: '127.0.0.1', port: 0 } })
   result.url = `http://127.0.0.1:${server.httpServer.address().port}/ssr.html`
@@ -98,7 +102,7 @@ try {
   await load()
   await add(before)
   await page.getByRole('checkbox', { name: before, exact: true }).check()
-  await snapshot('baseline', 'rgb(64, 150, 255)')
+  await snapshot('baseline', baselineVersion === '1.1.0' ? 'rgb(64, 150, 255)' : 'rgb(0, 62, 179)')
   await install(`file:${tarball}`, 'upgrade')
   await load()
   await expect(page.getByRole('checkbox', { name: before, exact: true })).toBeChecked()
@@ -106,14 +110,14 @@ try {
   await page.getByRole('checkbox', { name: during, exact: true }).check()
   await page.getByRole('checkbox', { name: before, exact: true }).uncheck()
   await snapshot('upgrade', 'rgb(0, 62, 179)')
-  await install('1.1.0', 'rollback')
+  await install(baselineVersion, 'rollback')
   await load()
   await expect(page.getByRole('checkbox', { name: before, exact: true })).not.toBeChecked()
   await expect(page.getByRole('checkbox', { name: during, exact: true })).toBeChecked()
   await page.getByRole('button', { name: `删除 ${before}`, exact: true }).click()
   await page.getByRole('button', { name: '确认删除', exact: true }).click()
   await expect(page.getByRole('checkbox', { name: before, exact: true })).toHaveCount(0)
-  await snapshot('rollback', 'rgb(64, 150, 255)')
+  await snapshot('rollback', baselineVersion === '1.1.0' ? 'rgb(64, 150, 255)' : 'rgb(0, 62, 179)')
   assert.deepEqual(result.errors, [])
   result.status = 'passed'
 } catch (error) {

@@ -19,7 +19,7 @@ const aiExports = optionalPackageExports(getComponentEntries('ai'))
 export const packageContracts = [
   {
     name: 'aheart-ui',
-    version: '1.2.0',
+    version: '1.3.0',
     packageDir: 'packages/components',
     expectedExports: baseExports,
     cssSideEffects: true,

@@ -11,7 +11,8 @@ import { componentEntries } from '../packages/components/build/entries.mjs'
 const run = promisify(execFile)
 const root = fileURLToPath(new URL('..', import.meta.url))
 const arg = name => { const i = process.argv.indexOf(name); return i < 0 ? undefined : process.argv[i + 1] }
-const tarball = await realpath(arg('--tarball') ?? 'test-results/release-tarballs/aheart-ui-1.2.0.tgz')
+const expectedVersion = JSON.parse(await readFile(path.join(root, 'packages/components/package.json'), 'utf8')).version
+const tarball = await realpath(arg('--tarball') ?? `test-results/release-tarballs/aheart-ui-${expectedVersion}.tgz`)
 const output = path.resolve(arg('--out') ?? 'test-results/m1-consumer')
 await mkdir(output, { recursive: true })
 const consumer = await realpath(await mkdtemp(path.join(tmpdir(), 'aheart-m1-consumer-')))
@@ -35,7 +36,7 @@ try {
   assert.equal((await lstat(installed)).isSymbolicLink(), false)
   assert.equal(await realpath(installed), installed)
   results.installedVersion = JSON.parse(await readFile(path.join(installed, 'package.json'), 'utf8')).version
-  assert.equal(results.installedVersion, '1.2.0')
+  assert.equal(results.installedVersion, expectedVersion)
   // Probe the actual package's ESM, CJS and legacy entry resolution in Node SSR.
   await writeFile(path.join(consumer, 'node-probe.mjs'), `
 import assert from 'node:assert/strict'

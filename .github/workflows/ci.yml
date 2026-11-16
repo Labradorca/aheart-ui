@@ -198,7 +198,7 @@ jobs:
           pnpm --dir packages/components pack --json --pack-destination "$pack_dir" > "$pack_dir/pack.json"
           pnpm --dir packages/dnd pack --json --pack-destination "$pack_dir" > "$pack_dir/dnd-pack.json"
           pnpm --dir packages/ai pack --json --pack-destination "$pack_dir" > "$pack_dir/ai-pack.json"
-          components_tarball="$pack_dir/aheart-ui-1.2.0.tgz"
+          components_tarball="$pack_dir/aheart-ui-1.3.0.tgz"
           dnd_tarball="$(node -p 'require(process.argv[1]).filename' "$pack_dir/dnd-pack.json")"
           ai_tarball="$(node -p 'require(process.argv[1]).filename' "$pack_dir/ai-pack.json")"
           node scripts/root-entry-consumer.mjs --tarball "$components_tarball" --out "$root_out"
@@ -213,7 +213,7 @@ jobs:
       - name: M3 packed consumer and Workbench pilot
         run: |
           node pilots/run-baselines.mjs --entry-mode subpath --only clean-consumer,ai-review-gate \
-            --core-tarball test-results/release-tarballs/aheart-ui-1.2.0.tgz \
+            --core-tarball test-results/release-tarballs/aheart-ui-1.3.0.tgz \
             --ai-tarball test-results/release-tarballs/aheart-ui-ai-1.1.0.tgz \
             --dnd-tarball test-results/release-tarballs/aheart-ui-dnd-1.1.0.tgz \
             --out test-results/m3-pilots
@@ -222,9 +222,9 @@ jobs:
       - name: M1 split and compatibility pilot paths
         run: |
           mkdir -p test-results/m1-pilots
-          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.2.0.tgz --entry-mode subpath --out test-results/m1-pilots/chromium
-          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.2.0.tgz --entry-mode subpath --only clean-consumer --browser firefox --out test-results/m1-pilots/firefox
-          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.2.0.tgz --entry-mode subpath --only clean-consumer --browser webkit --out test-results/m1-pilots/webkit
+          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.3.0.tgz --entry-mode subpath --out test-results/m1-pilots/chromium
+          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.3.0.tgz --entry-mode subpath --only clean-consumer --browser firefox --out test-results/m1-pilots/firefox
+          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.3.0.tgz --entry-mode subpath --only clean-consumer --browser webkit --out test-results/m1-pilots/webkit
       - name: Upload Consumer Evidence
         if: ${{ always() }}
         uses: actions/upload-artifact@v4
