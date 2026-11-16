@@ -1,0 +1,236 @@
+{
+  "schemaVersion": "qg5-master-stability.v1",
+  "runs": [
+    {
+      "runId": 43883024918,
+      "workflow": "CI",
+      "branch": "master",
+      "event": "workflow_dispatch",
+      "sha": "63ddb9ae9dfd029608df96bed2e399275d46a25c",
+      "createdAt": "2026-11-16T14:10:45Z",
+      "attempts": [
+        {
+          "attempt": 1,
+          "conclusion": "success",
+          "projects": {
+            "desktop-firefox": "success",
+            "mobile": "success",
+            "desktop-webkit": "success",
+            "desktop": "success",
+            "mobile-webkit": "success"
+          }
+        }
+      ]
+    },
+    {
+      "runId": 43882433129,
+      "workflow": "CI",
+      "branch": "master",
+      "event": "workflow_dispatch",
+      "sha": "63ddb9ae9dfd029608df96bed2e399275d46a25c",
+      "createdAt": "2026-11-16T14:07:14Z",
+      "attempts": [
+        {
+          "attempt": 1,
+          "conclusion": "success",
+          "projects": {
+            "mobile": "success",
+            "desktop-firefox": "success",
+            "mobile-webkit": "success",
+            "desktop": "success",
+            "desktop-webkit": "success"
+          }
+        }
+      ]
+    },
+    {
+      "runId": 43881835594,
+      "workflow": "CI",
+      "branch": "master",
+      "event": "workflow_dispatch",
+      "sha": "63ddb9ae9dfd029608df96bed2e399275d46a25c",
+      "createdAt": "2026-11-16T14:03:36Z",
+      "attempts": [
+        {
+          "attempt": 1,
+          "conclusion": "success",
+          "projects": {
+            "mobile-webkit": "success",
+            "mobile": "success",
+            "desktop-webkit": "success",
+            "desktop": "success",
+            "desktop-firefox": "success"
+          }
+        }
+      ]
+    },
+    {
+      "runId": 43881318879,
+      "workflow": "CI",
+      "branch": "master",
+      "event": "workflow_dispatch",
+      "sha": "63ddb9ae9dfd029608df96bed2e399275d46a25c",
+      "createdAt": "2026-11-16T14:00:34Z",
+      "attempts": [
+        {
+          "attempt": 1,
+          "conclusion": "success",
+          "projects": {
+            "mobile-webkit": "success",
+            "desktop": "success",
+            "desktop-firefox": "success",
+            "desktop-webkit": "success",
+            "mobile": "success"
+          }
+        }
+      ]
+    },
+    {
+      "runId": 43880736429,
+      "workflow": "CI",
+      "branch": "master",
+      "event": "workflow_dispatch",
+      "sha": "63ddb9ae9dfd029608df96bed2e399275d46a25c",
+      "createdAt": "2026-11-16T13:57:01Z",
+      "attempts": [
+        {
+          "attempt": 1,
+          "conclusion": "success",
+          "projects": {
+            "mobile-webkit": "success",
+            "desktop-firefox": "success",
+            "desktop-webkit": "success",
+            "mobile": "success",
+            "desktop": "success"
+          }
+        }
+      ]
+    },
+    {
+      "runId": 43880235022,
+      "workflow": "CI",
+      "branch": "master",
+      "event": "workflow_dispatch",
+      "sha": "63ddb9ae9dfd029608df96bed2e399275d46a25c",
+      "createdAt": "2026-11-16T13:53:59Z",
+      "attempts": [
+        {
+          "attempt": 1,
+          "conclusion": "success",
+          "projects": {
+            "desktop-webkit": "success",
+            "mobile": "success",
+            "desktop-firefox": "success",
+            "mobile-webkit": "success",
+            "desktop": "success"
+          }
+        }
+      ]
+    },
+    {
+      "runId": 43879749156,
+      "workflow": "CI",
+      "branch": "master",
+      "event": "workflow_dispatch",
+      "sha": "63ddb9ae9dfd029608df96bed2e399275d46a25c",
+      "createdAt": "2026-11-16T13:50:59Z",
+      "attempts": [
+        {
+          "attempt": 1,
+          "conclusion": "success",
+          "projects": {
+            "desktop": "success",
+            "desktop-firefox": "success",
+            "desktop-webkit": "success",
+            "mobile": "success",
+            "mobile-webkit": "success"
+          }
+        }
+      ]
+    },
+    {
+      "runId": 43879174774,
+      "workflow": "CI",
+      "branch": "master",
+      "event": "workflow_dispatch",
+      "sha": "63ddb9ae9dfd029608df96bed2e399275d46a25c",
+      "createdAt": "2026-11-16T13:47:27Z",
+      "attempts": [
+        {
+          "attempt": 1,
+          "conclusion": "success",
+          "projects": {
+            "mobile": "success",
+            "desktop-webkit": "success",
+            "mobile-webkit": "success",
+            "desktop-firefox": "success",
+            "desktop": "success"
+          }
+        }
+      ]
+    },
+    {
+      "runId": 43878676712,
+      "workflow": "CI",
+      "branch": "master",
+      "event": "workflow_dispatch",
+      "sha": "63ddb9ae9dfd029608df96bed2e399275d46a25c",
+      "createdAt": "2026-11-16T13:44:27Z",
+      "attempts": [
+        {
+          "attempt": 1,
+          "conclusion": "success",
+          "projects": {
+            "mobile": "success",
+            "mobile-webkit": "success",
+            "desktop-firefox": "success",
+            "desktop": "success",
+            "desktop-webkit": "success"
+          }
+        }
+      ]
+    },
+    {
+      "runId": 43878194347,
+      "workflow": "CI",
+      "branch": "master",
+      "event": "workflow_dispatch",
+      "sha": "63ddb9ae9dfd029608df96bed2e399275d46a25c",
+      "createdAt": "2026-11-16T13:41:25Z",
+      "attempts": [
+        {
+          "attempt": 1,
+          "conclusion": "success",
+          "projects": {
+            "mobile": "success",
+            "desktop": "success",
+            "desktop-firefox": "success",
+            "mobile-webkit": "success",
+            "desktop-webkit": "success"
+          }
+        }
+      ]
+    },
+    {
+      "runId": 43877998700,
+      "workflow": "CI",
+      "branch": "master",
+      "event": "push",
+      "sha": "63ddb9ae9dfd029608df96bed2e399275d46a25c",
+      "createdAt": "2026-11-16T13:40:14Z",
+      "attempts": [
+        {
+          "attempt": 1,
+          "conclusion": "success",
+          "projects": {
+            "mobile": "success",
+            "mobile-webkit": "success",
+            "desktop-firefox": "success",
+            "desktop-webkit": "success",
+            "desktop": "success"
+          }
+        }
+      ]
+    }
+  ]
+}

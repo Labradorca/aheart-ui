@@ -1,0 +1,67 @@
+{
+  "recordType": "release preparation, not a registry publication record",
+  "preparedDate": "2026-11-16",
+  "package": "aheart-ui",
+  "version": "1.1.1",
+  "baselineTag": "v1.1.0",
+  "baselineCommit": "90a0b25e43065c80261fdb2069dad472c92e1e38",
+  "codeCandidateCommit": "2f233ff758a0bf6b304722d7499323603a6a7506",
+  "codeCandidateCI": {
+    "url": "https://github.com/Labradorca/aheart-ui/actions/runs/43861034620",
+    "jobs": 12,
+    "conclusion": "success"
+  },
+  "releasePullRequest": "https://github.com/Labradorca/aheart-ui/pull/46",
+  "tarball": {
+    "filename": "aheart-ui-1.1.1.tgz",
+    "platform": "darwin-arm64",
+    "sha256": "e4980045101386b95026c61bd7bdf7381cd6681b646e09f71319951b43d68d98",
+    "integrity": "sha512-MO2gXgIDquEKsGo0II5aCbfCGl8V5IVFmibEpzWxdxh7Qx/K0e0HJLOlbvIpZHEvEDjUrZ10Y2ws1GWR7L/nzQ=="
+  },
+  "changedPackedFiles": [
+    "package/es/card/index.d.ts",
+    "package/es/style.css",
+    "package/lib/card/index.d.ts",
+    "package/lib/style.css",
+    "package/package.json"
+  ],
+  "strictConsumer": {
+    "vue": [
+      "3.5.38",
+      "3.5.44"
+    ],
+    "typescript": "5.9.3",
+    "skipLibCheck": false,
+    "status": "passed"
+  },
+  "codeCandidateTests": {
+    "componentTests": 1764,
+    "scriptTests": 248,
+    "browserPassed": 770,
+    "browserSkipped": 124,
+    "qg5Passed": 62,
+    "qg5Skipped": 3
+  },
+  "qg5Measurement": {
+    "masterCommit": "63ddb9ae9dfd029608df96bed2e399275d46a25c",
+    "runs": 10,
+    "projectsPerRun": 5,
+    "flakyRuns": 0,
+    "flakyRate": 0,
+    "validator": "scripts/qg5-master-stability.mjs (unchanged)"
+  },
+  "physicalIos": {
+    "status": "deferred",
+    "reason": "owner has no physical test device; browser emulation is separate"
+  },
+  "scope": {
+    "publish": [
+      "aheart-ui@1.1.1"
+    ],
+    "unchangedPublishedPackages": [
+      "@aheart-ui/dnd@1.0.0",
+      "@aheart-ui/ai@1.0.0"
+    ]
+  },
+  "finalReleaseCommit": "the commit containing this preparation record; its final CI and later tag/registry evidence must be checked independently"
+}
