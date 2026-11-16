@@ -180,7 +180,7 @@ jobs:
           pnpm --dir packages/components pack --json --pack-destination "$pack_dir" > "$pack_dir/pack.json"
           pnpm --dir packages/dnd pack --json --pack-destination "$pack_dir" > "$pack_dir/dnd-pack.json"
           pnpm --dir packages/ai pack --json --pack-destination "$pack_dir" > "$pack_dir/ai-pack.json"
-          components_tarball="$pack_dir/aheart-ui-1.1.0.tgz"
+          components_tarball="$pack_dir/aheart-ui-1.1.1.tgz"
           dnd_tarball="$pack_dir/aheart-ui-dnd-1.0.0.tgz"
           ai_tarball="$pack_dir/aheart-ui-ai-1.0.0.tgz"
           node scripts/root-entry-consumer.mjs --tarball "$components_tarball" --out "$root_out"

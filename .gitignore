@@ -26,3 +26,6 @@ selenium-debug.log
 
 package-lock.json
 yarn.lock
+
+# Isolated patch-release evidence (kept outside Playwright cleanup).
+.release-runs/

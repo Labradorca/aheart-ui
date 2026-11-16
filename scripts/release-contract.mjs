@@ -9,7 +9,7 @@ const repositoryRoot = resolve(fileURLToPath(new URL('..', import.meta.url)))
 export const packageContracts = [
   {
     name: 'aheart-ui',
-    version: '1.1.0',
+    version: '1.1.1',
     packageDir: 'packages/components',
     requiredFiles: ['README.md', 'LICENSE', 'package.json', 'es/package.json', 'es/index.js', 'es/index.d.ts', 'es/style.css', 'lib/package.json', 'lib/index.js', 'lib/index.d.ts', 'lib/style.css']
   },

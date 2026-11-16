@@ -1,10 +1,10 @@
 # 发布
 
-本页定义 Aheart UI `aheart-ui@1.1.0`、`@aheart-ui/dnd@1.0.0` 和 `@aheart-ui/ai@1.0.0` 的发布流程。日常开发与发布准备不得执行真实发布。
+本维护分支准备 `aheart-ui@1.1.1` 补丁，基线为已发布的 `v1.1.0`。`@aheart-ui/dnd@1.0.0` 和 `@aheart-ui/ai@1.0.0` 仅参与兼容验证，不重新发布。日常开发与发布准备不得执行真实发布。
 
 ## 发布前门禁
 
-从干净的 `master` 执行：
+从维护分支的干净提交执行：
 
 ```bash
 corepack pnpm install --frozen-lockfile
@@ -15,77 +15,57 @@ git status --short
 验收要求：
 
 - 单元测试、类型检查、三包构建和中文文档构建通过。
-- Playwright 桌面与移动端用例无失败。
-- 三个 tarball 均通过 release contract。
+- 实际 tarball 在工作区 Vue 与 Vue 3.5.44 下通过 `skipLibCheck: false` 检查，保留 Card props、slots、别名和安装类型。
+- Playwright 桌面与移动端用例无失败，按钮悬停对比度与自定义主题 token 回归通过。
+- 三个 tarball 均通过 release contract，旧版 AI/DND 可与核心补丁一起安装。
 - 构建后 `es/lib` 无漂移，Git 工作区保持干净。
+- 物理 iOS Safari 与连续 10 次 QG5 主线稳定性分别按 [QG5 跨浏览器证据](./qg5-evidence.md) 归档；移动视口仿真不能替代真机。缺少证据时保持待验收，不宣告发布门禁全部通过。
 
 ## 检查 tarball
 
 ```bash
-corepack pnpm release:pack
+corepack pnpm release:pack --pack-destination test-results/release-tarballs
+corepack pnpm check:consumer-types
+npm publish test-results/release-tarballs/aheart-ui-1.1.1.tgz --dry-run --access public
 ```
 
-验证器会临时打包并检查：
+验证器检查核心 `1.1.1`、DnD `1.0.0` 和 AI `1.0.0`。每个包必须包含 README、LICENSE、package.json、ESM、Node/SSR 可用的 CommonJS、TypeScript 声明和样式；不得包含源码、测试或未解析的 `workspace:` 协议。`es/package.json` 与 `lib/package.json` 分别声明 `module` 和 `commonjs` 模块类型。
 
-- `aheart-ui@1.1.0`
-- `@aheart-ui/dnd@1.0.0`
-- `@aheart-ui/ai@1.0.0`
-
-每个包必须包含 README、LICENSE、package.json、ESM、Node/SSR 可用的 CommonJS、TypeScript 声明和样式；不得包含源码、测试或未解析的 `workspace:` 协议。`es/package.json` 与 `lib/package.json` 必须分别声明 `module` 和 `commonjs` 模块类型。
+正式候选必须来自同一受审提交，记录提交 SHA、tarball SHA-256、npm integrity 和兼容验证结果。只发布核心 tarball；禁止重发已经存在的两个领域包版本。
 
 ## 正式发布
 
-以下步骤只能在负责人明确批准后执行。先把 `CHANGELOG.md` 的 Unreleased 替换为实际发布日期，提交发布版本，并从该提交创建本地 tag：
+以下步骤只能在负责人明确批准后执行。先关闭适用门禁，把 `CHANGELOG.md` 中的“未发布”替换为实际发布日期，提交后重新构建并复验。核对 `1.1.1` 尚不存在、npm 会话有效且 registry 为 `https://registry.npmjs.org/`。
 
 ```bash
 git status --short
 CI=true corepack pnpm release:check
-git tag -a v1.1.0 -m "Aheart UI v1.1.0"
-```
-
-随后保持在同一提交发布三个包：
-
-```bash
 npm whoami
 npm config get registry
-corepack pnpm --dir packages/components publish --access public
-corepack pnpm --dir packages/dnd publish --access public
-corepack pnpm --dir packages/ai publish --access public
+npm view aheart-ui versions --json
+npm publish test-results/release-tarballs/aheart-ui-1.1.1.tgz --access public --tag latest
 ```
 
-发布顺序固定为核心包、DnD、AI。发布前确认 registry 为 `https://registry.npmjs.org/`，账号拥有 `@aheart-ui` scope 的发布权限，并启用 npm 要求的二次验证。任一包失败时停止后续发布，不移动或重建 tag。
+发布后从公开 registry 在空目录精确安装 `aheart-ui@1.1.1`，并与已发布的 `@aheart-ui/dnd@1.0.0`、`@aheart-ui/ai@1.0.0` 组合验证 ESM、CommonJS、严格类型、CSS、SSR 与关键任务。
 
-## 发布后验证
+确认结果后，为构建 tarball 的同一提交创建 tag 与 GitHub Release：
 
 ```bash
-npm view aheart-ui@1.1.0 version
-npm view @aheart-ui/dnd@1.0.0 version
-npm view @aheart-ui/ai@1.0.0 version
+git tag -a v1.1.1 -m "Aheart UI v1.1.1"
+git push origin v1.1.1
 ```
 
-随后在空目录安装三个包，验证 ESM、CommonJS、类型和样式入口。确认无误后推送同一 tag 并创建 GitHub Release：
+Git tag、GitHub Release 与 npm tarball 必须来自同一提交。v1.2+ 的主线不能代替 v1.1.1 维护分支的发布来源。
 
-```bash
-git push origin v1.1.0
-```
+## 回滚与发布故障
 
-Git tag、GitHub Release 与 npm tarball 必须来自同一提交。
+npm 已发布版本不能用同一包名和版本号覆盖或重发。安装或 smoke test 失败时停止 rollout，保留版本、提交 SHA、tag、tarball hash 和失败日志，不移动或重建 tag。优先弃用有问题的版本并发布新的修复版本，不能用 `npm unpublish` 作为常规回滚。[npm 弃用说明](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions/)
 
-## 回滚与部分发布故障
-
-npm 已发布版本不能用同一包名和版本号覆盖或重发。发现版本有问题时，优先弃用受影响版本并发布新的修复版本；npm 也建议对仍有使用者的版本弃用，而不是直接从 registry 删除。[弃用版本](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions/) · [取消发布策略](https://docs.npmjs.com/policies/unpublish/)
-
-按以下步骤处置：
-
-1. 任一包发布失败或 smoke test 失败，立即停止后续包发布，记录已发布版本、tag、提交 SHA 和失败日志；不要移动或重建已创建的 tag。
-2. 已发布的坏版本先加弃用说明，例如 `npm deprecate aheart-ui@1.1.0 "请升级到修复版本"`。不要把 `npm unpublish` 当作常规回滚；只有负责人批准且符合 npm 当前策略时才单独评估。
-3. 只有当此前存在经过验证且仍兼容的版本时，才可把 `latest` dist-tag 指回该版本，例如 `npm dist-tag add aheart-ui@1.0.0 latest`。dist-tag 只影响默认安装选择，不会删除或更改已发布 tarball。[npm dist-tag 文档](https://docs.npmjs.com/adding-dist-tags-to-packages/)
-4. DnD 和 AI 的 `1.0.0` 是首次计划发布时，没有可假定回退到的旧版本；发生问题就暂停这两个包的 rollout、弃用有问题的版本，并用新版本号发布修复包。
-5. 修复源码时用独立提交/PR，重新通过本指南中的完整门禁，再创建绑定到修复提交的新 tag 和 Release。完成后核对 `npm view <package> versions dist-tags` 与干净项目安装结果，并记录恢复结论。
+只有在旧版本仍兼容且经回退验证后，才能把 `latest` 指回 `aheart-ui@1.1.0`；这会恢复旧版已知的 Card 类型和按钮对比度问题，需明确记录。dist-tag 不改变已发布 tarball。[npm dist-tag 文档](https://docs.npmjs.com/adding-dist-tags-to-packages/)
 
 ## 生成产物策略
 
-源代码变化引起的 `es/lib` 输出必须随阶段提交。完整构建连续执行两次后，第二次不得产生任何差异。任何与当前源码无关的声明顺序漂移都必须先查明原因，不能通过暂存文件绕过检查。
+源代码变化引起的 `es/lib` 输出必须随补丁提交。完整构建连续执行两次后，第二次不得产生任何差异。与本轮源码无关的声明顺序漂移必须先查明原因，不能通过暂存文件绕过检查。
 
 ## 日期时间迁移检查
 
