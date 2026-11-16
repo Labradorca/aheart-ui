@@ -18,3 +18,9 @@ test('Pages deploys only an exact master SHA whose full push CI workflow succeed
   assert.doesNotMatch(workflow, /workflow_dispatch:/)
   assert.match(workflow, /deploy:\s*[\s\S]*needs: build/)
 })
+
+test('manual CI completion cannot cancel a push-triggered Pages deployment', async () => {
+  const workflow = await readFile(path.join(root, '.github/workflows/pages.yml'), 'utf8')
+  assert.match(workflow, /group: pages-\$\{\{ github\.event\.workflow_run\.event \}\}/)
+  assert.match(workflow, /cancel-in-progress: true/)
+})

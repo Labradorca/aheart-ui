@@ -44,7 +44,7 @@ JSON 同目录下应有与 `evidenceId` 同名的 artifact 文件夹。设备型
 
 采集与检查：
 
-可在 Actions 对 `master` 手动运行 CI，显式设置 `qg5_only=true`，仅执行原有五个 QG5 浏览器项目及证据上传。默认值为 `false`，推送、PR 和其他分支始终执行全量检查。测量运行使用独立并发组，不会取消全量 CI；同一组的测量仍需逐次完成，避免相互取消。测量中未请求的检查使用不同名称，不替代全量 CI 的状态；Pages 仅由成功的主线 push CI 触发。十轮必须绑定同一主线 SHA，期间主线变化时重新建立窗口。
+可在 Actions 对 `master` 手动运行 CI，显式设置 `qg5_only=true`，仅执行原有五个 QG5 浏览器项目及证据上传。默认值为 `false`，推送、PR 和其他分支始终执行全量检查。测量运行使用独立并发组，不会取消全量 CI；同一组的测量仍需逐次完成，避免相互取消。测量中未请求的检查使用不同名称，不替代全量 CI 的状态；Pages 仅由成功的主线 push CI 部署，其并发组也按上游事件隔离，避免测量产生的跳过运行取消正在执行的部署。十轮必须绑定同一主线 SHA，期间主线变化时重新建立窗口。
 
 ```bash
 gh workflow run ci.yml --repo Labradorca/aheart-ui --ref master -f qg5_only=true
