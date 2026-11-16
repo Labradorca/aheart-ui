@@ -130,6 +130,29 @@ test('allows repeatable QG5 baseline collection on master without weakening push
   assert.match(qg5Job, /qg5-cross-browser/)
 })
 
+test('QG5-only dispatch is opt-in and keeps push and PR jobs enabled', () => {
+  assert.match(workflowSource, /qg5_only:\n\s+description: [^\n]+\n\s+type: boolean\n\s+required: false\n\s+default: false/)
+  const guard = "    if: ${{ github.event_name != 'workflow_dispatch' || github.ref != 'refs/heads/master' || !inputs.qg5_only }}"
+  for (const name of ['unit', 'typecheck', 'coverage', 'build-generated', 'docs', 'consumer', 'browser']) {
+    const job = workflowSource.match(new RegExp(`\\n  ${name}:\\n([\\s\\S]*?)(?=\\n  [a-z][\\w-]*:|$)`))?.[1]
+    assert.ok(job?.includes('\n' + guard + '\n'), `${name} must skip only an explicit QG5-only dispatch`)
+    assert.ok(job?.startsWith(`    name: \${{ github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master' && inputs.qg5_only && '${name} (not requested)' || '${name}' }}\n`), `${name} skipped checks must not replace full-CI status contexts`)
+  }
+  for (const event of ['push', 'pull_request', 'workflow_dispatch']) {
+    for (const ref of ['refs/heads/master', 'refs/heads/codex/example']) {
+      for (const requested of [false, true]) {
+        const condition = guard.slice(11, -3)
+        const enabled = new Function('github', 'inputs', `return (${condition})`)({ event_name: event, ref }, { qg5_only: requested })
+        assert.equal(enabled, !(event === 'workflow_dispatch' && ref === 'refs/heads/master' && requested), `${event} ${ref} requested=${requested}`)
+      }
+    }
+  }
+  assert.doesNotMatch(qg5Job, /qg5_only/)
+  assert.doesNotMatch(qg5Job, /^    (?:if|needs):/m)
+  // A measurement run must not cancel an ordinary full master/PR verification.
+  assert.ok(workflowSource.includes("${{ github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master' && inputs.qg5_only && 'qg5' || 'full' }}"))
+})
+
 test('splits CI into observable unit, typecheck, build, docs, consumer and browser jobs', () => {
   for (const job of ['  unit:', '  typecheck:', '  coverage:', '  build-generated:', '  docs:', '  consumer:', '  browser:', '  qg5-cross-browser:']) {
     assert.match(workflowSource, new RegExp(`\\n${job}`), `${job} job is missing`)
