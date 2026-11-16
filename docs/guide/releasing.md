@@ -1,95 +1,22 @@
 # 发布
 
-本页定义 Aheart UI `aheart-ui@1.1.0`、`@aheart-ui/dnd@1.0.0` 和 `@aheart-ui/ai@1.0.0` 的发布流程。日常开发与发布准备不得执行真实发布。
+当前 v1.x 交付范围见 [范围与验收约定](./v1x-closeout.md)。本线发布 `aheart-ui@1.2.0`；AI / DND 对应版本为 `1.0.0`。1.2 仅发布核心；1.3 发布三个包。已存在的版本不能重发。
 
-## 发布前门禁
+## 发布前检查
 
-从干净的 `master` 执行：
+从受审的干净提交执行：
 
 ```bash
 corepack pnpm install --frozen-lockfile
 CI=true corepack pnpm release:check
-git status --short
 ```
 
-验收要求：
+保留组件和脚本测试、严格类型、确定性构建、文档构建、实际 tarball、五浏览器和消费端检查。物理 iOS Safari 真机测试已于 2026-11-16 由负责人取消，状态为 Cancelled / N/A；不作为发布阻塞，不声称测试通过。QG5 的自动化和主线稳定性证据继续分别归档。
 
-- 单元测试、类型检查、三包构建和中文文档构建通过。
-- Playwright 桌面与移动端用例无失败。
-- 三个 tarball 均通过 release contract。
-- 构建后 `es/lib` 无漂移，Git 工作区保持干净。
+## 交付
 
-## 检查 tarball
+负责人已在本次任务授权完成 v2 启动前的 v1.x 发布闭环。发布前核对包名、版本、依赖、官方 registry、维护者身份、源码 SHA 和 tarball SHA-256，确认目标版本尚未存在。最终提交必须通过完整 CI，构建后的包与验证输入一致。只能发布已验证的确切 tarball；1.3 的顺序为核心、DND、AI。
 
-```bash
-corepack pnpm release:pack
-```
+公开 registry 可读取版本后，在全新独立工程安装精确版本，验证 ESM / CommonJS、严格类型、CSS、SSR / hydration、模块图和关键交互。升级 / 回退使用已发布的 core 1.1.1 及原领域包 1.0.0，并保留任务状态。npm 发布、tag、GitHub Release 和 Pages 状态分别记录。
 
-验证器会临时打包并检查：
-
-- `aheart-ui@1.1.0`
-- `@aheart-ui/dnd@1.0.0`
-- `@aheart-ui/ai@1.0.0`
-
-每个包必须包含 README、LICENSE、package.json、ESM、Node/SSR 可用的 CommonJS、TypeScript 声明和样式；不得包含源码、测试或未解析的 `workspace:` 协议。`es/package.json` 与 `lib/package.json` 必须分别声明 `module` 和 `commonjs` 模块类型。
-
-## 正式发布
-
-以下步骤只能在负责人明确批准后执行。先把 `CHANGELOG.md` 的 Unreleased 替换为实际发布日期，提交发布版本，并从该提交创建本地 tag：
-
-```bash
-git status --short
-CI=true corepack pnpm release:check
-git tag -a v1.1.0 -m "Aheart UI v1.1.0"
-```
-
-随后保持在同一提交发布三个包：
-
-```bash
-npm whoami
-npm config get registry
-corepack pnpm --dir packages/components publish --access public
-corepack pnpm --dir packages/dnd publish --access public
-corepack pnpm --dir packages/ai publish --access public
-```
-
-发布顺序固定为核心包、DnD、AI。发布前确认 registry 为 `https://registry.npmjs.org/`，账号拥有 `@aheart-ui` scope 的发布权限，并启用 npm 要求的二次验证。任一包失败时停止后续发布，不移动或重建 tag。
-
-## 发布后验证
-
-```bash
-npm view aheart-ui@1.1.0 version
-npm view @aheart-ui/dnd@1.0.0 version
-npm view @aheart-ui/ai@1.0.0 version
-```
-
-随后在空目录安装三个包，验证 ESM、CommonJS、类型和样式入口。确认无误后推送同一 tag 并创建 GitHub Release：
-
-```bash
-git push origin v1.1.0
-```
-
-Git tag、GitHub Release 与 npm tarball 必须来自同一提交。
-
-## 回滚与部分发布故障
-
-npm 已发布版本不能用同一包名和版本号覆盖或重发。发现版本有问题时，优先弃用受影响版本并发布新的修复版本；npm 也建议对仍有使用者的版本弃用，而不是直接从 registry 删除。[弃用版本](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions/) · [取消发布策略](https://docs.npmjs.com/policies/unpublish/)
-
-按以下步骤处置：
-
-1. 任一包发布失败或 smoke test 失败，立即停止后续包发布，记录已发布版本、tag、提交 SHA 和失败日志；不要移动或重建已创建的 tag。
-2. 已发布的坏版本先加弃用说明，例如 `npm deprecate aheart-ui@1.1.0 "请升级到修复版本"`。不要把 `npm unpublish` 当作常规回滚；只有负责人批准且符合 npm 当前策略时才单独评估。
-3. 只有当此前存在经过验证且仍兼容的版本时，才可把 `latest` dist-tag 指回该版本，例如 `npm dist-tag add aheart-ui@1.0.0 latest`。dist-tag 只影响默认安装选择，不会删除或更改已发布 tarball。[npm dist-tag 文档](https://docs.npmjs.com/adding-dist-tags-to-packages/)
-4. DnD 和 AI 的 `1.0.0` 是首次计划发布时，没有可假定回退到的旧版本；发生问题就暂停这两个包的 rollout、弃用有问题的版本，并用新版本号发布修复包。
-5. 修复源码时用独立提交/PR，重新通过本指南中的完整门禁，再创建绑定到修复提交的新 tag 和 Release。完成后核对 `npm view <package> versions dist-tags` 与干净项目安装结果，并记录恢复结论。
-
-## 生成产物策略
-
-源代码变化引起的 `es/lib` 输出必须随阶段提交。完整构建连续执行两次后，第二次不得产生任何差异。任何与当前源码无关的声明顺序漂移都必须先查明原因，不能通过暂存文件绕过检查。
-
-## 日期时间迁移检查
-
-- TimePicker 默认业务格式为 `HH:mm:ss`；旧项目保留分钟值时同时设置 `format="HH:mm"` 与 `value-format="HH:mm"`。
-- `format` 只负责显示，`valueFormat` 决定字符串模型值；Dayjs 不属于公共值类型。
-- 范围选择统一使用 `DateRangePicker` / `TimeRangePicker` 或对应的 `RangePicker` 静态成员，不再拼接两个单值组件。
-- AIForm 范围字段使用 `date-range` / `time-range` 和二元字符串数组；发布前需验证空端、必填与受控拒绝更新。
+公开消费通过后，为生成这些 tarball 的同一源码提交创建注释 tag 和 GitHub Release。附件包括确切 tarball、SHA-256 以及公开安装 / 回退证据。任何失败保留日志，停止后续 rollout；不覆盖 npm 版本、不移动既有 tag。常规恢复使用修复版本，禁止把 unpublish 当作常规回滚。

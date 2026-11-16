@@ -2,6 +2,27 @@
 
 Aheart UI 的重要变更统一记录在本文件中。
 
+## [1.2.0] - 2026-11-16
+
+- 新增 Button、Modal、Select 的公共子入口，提供 ESM / CommonJS 与严格类型。
+- 新增显式 theme / 组件 / full CSS；保留根插件、旧样式和 es/lib 入口。
+- 通过实际包的模块图、样式预算、SSR / hydration 和原生 Tab 回归验证按需消费。
+- 仅发布核心包；AI / DND 继续使用公开 1.0.0。物理 iOS Safari 已由负责人取消必测要求。
+
+## [1.1.1] - 2026-11-16
+
+### 修复
+
+- 修复 CardMeta、CardGrid 的公开声明在 `skipLibCheck: false` 与 Vue 3.5 类型下触发的 TS2344 错误，保留组件 props、slots、别名和安装类型。
+- 修复默认颜色按钮悬停时的文字对比度。新增 `--aheart-color-primary-text-hover`，允许主题独立设置悬停文字颜色。
+- 发布门禁增加实际 tarball 的严格消费类型检查，覆盖工作区 Vue 与 Vue 3.5.44。
+
+### 发布范围
+
+- 仅发布 `aheart-ui@1.1.1`；`@aheart-ui/dnd@1.0.0` 和 `@aheart-ui/ai@1.0.0` 继续使用已发布版本。
+- 此补丁基于 `v1.1.0`，不包含后续组件子入口、CSS 拆分、Combobox 或浮层迁移。
+- 主线 `63ddb9a` 的连续 10 次 QG5 测量通过，flaky rate 为 0；物理 iOS Safari 当时延期，现已由负责人取消。npm、tag 与 Release 已完成，公开安装验证通过。
+
 ## [1.1.0] - 2026-09-29
 
 ### 新增与改进

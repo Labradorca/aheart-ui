@@ -76,6 +76,7 @@ export default defineConfig({
                 { text: '主题 Token', link: '/guide/theme' },
                 { text: '质量矩阵', link: '/guide/quality-matrix' },
                 { text: 'QG5 证据', link: '/guide/qg5-evidence' },
+            { text: 'v1.x 交付', link: '/guide/v1x-closeout' },
                 { text: '发布', link: '/guide/releasing' }
               ]
             }

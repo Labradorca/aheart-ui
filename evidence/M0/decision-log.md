@@ -84,3 +84,7 @@ G1：规范批准已有，M0 契约冻结仍待确认；G2/G3：仅本次文档/
 ## 回滚与状态
 
 现有 v1 根入口和 `aheart-ui/style.css` 保持作为回退路径。本轮文档/新试点可单独 revert；主库包和 pnpm lockfile 未修改，新增三个独立 npm lockfile。公开包不可覆盖重发；修复需新版本和单独发布授权。PR 尚未合并时保留 worktree；仅在确认合并后才清理分支/worktree。v2 Stable 未进入。
+
+## 2026-11-16 当前独立待办更新
+
+Card 与默认按钮补丁已发布为 1.1.1；原主线 SHA `63ddb9a` 的连续十次 QG5 已通过，flaky rate 为 0。负责人本日取消物理 iOS Safari 真机测试，记为 Cancelled / N/A，不再作为待办；历史状态保持为当时记录。v1.x 后续公开交付见 [范围与验收约定](../../docs/guide/v1x-closeout.md)。

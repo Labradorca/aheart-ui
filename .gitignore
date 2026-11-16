@@ -31,3 +31,6 @@ yarn.lock
 
 # Isolated consumer installs and evidence stay on the repository volume.
 .pilot-runs/
+
+# Release execution logs and isolated registry consumers.
+.release-runs/

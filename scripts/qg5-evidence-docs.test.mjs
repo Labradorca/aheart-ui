@@ -5,7 +5,11 @@ import test from 'node:test'
 const guide = readFileSync(new URL('../docs/guide/qg5-evidence.md', import.meta.url), 'utf8')
 const config = readFileSync(new URL('../docs/.vitepress/config.ts', import.meta.url), 'utf8')
 
-test('documents physical iOS Safari evidence without equating it to mobile WebKit automation', () => {
+test('records owner-cancelled physical acceptance and keeps optional historical evidence distinct from automation', () => {
+  assert.match(guide, /2026-11-16.*取消真机测试/)
+  assert.match(guide, /已取消 \/ N\/A/)
+  assert.match(guide, /不再作为 v1\.x 发布门禁或待办/)
+  assert.match(guide, /取消要求不表示测试通过/)
   assert.match(guide, /物理 iOS 设备/)
   assert.match(guide, /不能替代|不可替代/)
   assert.match(guide, /mobile-webkit/)
