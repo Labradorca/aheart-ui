@@ -130,6 +130,19 @@ test('allows repeatable QG5 baseline collection on master without weakening push
   assert.match(qg5Job, /qg5-cross-browser/)
 })
 
+test('QG5-only dispatch is opt-in and keeps push and PR jobs enabled', () => {
+  assert.match(workflowSource, /qg5_only:\n\s+description: [^\n]+\n\s+type: boolean\n\s+required: false\n\s+default: false/)
+  const guard = "    if: ${{ github.event_name != 'workflow_dispatch' || !inputs.qg5_only }}"
+  for (const name of ['unit', 'typecheck', 'coverage', 'build-generated', 'docs', 'consumer', 'browser']) {
+    const job = workflowSource.match(new RegExp(`\\n  ${name}:\\n([\\s\\S]*?)(?=\\n  [a-z][\\w-]*:|$)`))?.[1]
+    assert.ok(job?.startsWith(guard + '\n'), `${name} must skip only an explicit QG5-only dispatch`)
+  }
+  assert.doesNotMatch(qg5Job, /qg5_only/)
+  assert.doesNotMatch(qg5Job, /^    (?:if|needs):/m)
+  // A measurement run must not cancel an ordinary full master/PR verification.
+  assert.ok(workflowSource.includes("${{ github.event_name == 'workflow_dispatch' && inputs.qg5_only && 'qg5' || 'full' }}"))
+})
+
 test('splits CI into observable unit, typecheck, build, docs, consumer and browser jobs', () => {
   for (const job of ['  unit:', '  typecheck:', '  coverage:', '  build-generated:', '  docs:', '  consumer:', '  browser:', '  qg5-cross-browser:']) {
     assert.match(workflowSource, new RegExp(`\\n${job}`), `${job} job is missing`)

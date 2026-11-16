@@ -7,11 +7,17 @@ permissions:
   contents: read
 
 concurrency:
-  group: ci-${{ github.workflow }}-${{ github.ref }}
+  group: ci-${{ github.workflow }}-${{ github.ref }}-${{ github.event_name == 'workflow_dispatch' && inputs.qg5_only && 'qg5' || 'full' }}
   cancel-in-progress: true
 
 on:
   workflow_dispatch:
+    inputs:
+      qg5_only:
+        description: Run only the five QG5 browser projects for stability evidence
+        type: boolean
+        required: false
+        default: false
   push:
     branches:
       - master
@@ -22,6 +28,7 @@ on:
 
 jobs:
   unit:
+    if: ${{ github.event_name != 'workflow_dispatch' || !inputs.qg5_only }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -45,6 +52,7 @@ jobs:
         run: pnpm test
 
   typecheck:
+    if: ${{ github.event_name != 'workflow_dispatch' || !inputs.qg5_only }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -64,6 +72,7 @@ jobs:
         run: pnpm typecheck
 
   coverage:
+    if: ${{ github.event_name != 'workflow_dispatch' || !inputs.qg5_only }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -93,6 +102,7 @@ jobs:
           if-no-files-found: error
 
   build-generated:
+    if: ${{ github.event_name != 'workflow_dispatch' || !inputs.qg5_only }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -131,6 +141,7 @@ jobs:
         run: git diff --check
 
   docs:
+    if: ${{ github.event_name != 'workflow_dispatch' || !inputs.qg5_only }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -150,6 +161,7 @@ jobs:
         run: pnpm docs:build
 
   consumer:
+    if: ${{ github.event_name != 'workflow_dispatch' || !inputs.qg5_only }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -227,6 +239,7 @@ jobs:
           if-no-files-found: error
 
   browser:
+    if: ${{ github.event_name != 'workflow_dispatch' || !inputs.qg5_only }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
