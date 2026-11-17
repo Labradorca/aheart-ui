@@ -844,7 +844,6 @@ export function getComponentDomains(locale: Locale): ComponentDomain[] {
 export function getComponentSidebar(locale: Locale) {
   return getComponentDomains(locale).map((domain) => ({
     text: `${domain.name} · ${domain.components.length}`,
-    collapsed: true,
     items: domain.components.map((component) => ({
       text: component.zhName ? `${component.name} ${component.zhName}` : component.name,
       link: component.link
@@ -865,7 +864,6 @@ export function getCoreComponentDomains(locale: Locale): ComponentDomain[] {
 export function getCoreComponentSidebar(locale: Locale) {
   return getCoreComponentDomains(locale).map((domain) => ({
     text: `${domain.name} · ${domain.components.length}`,
-    collapsed: true,
     items: domain.components.map((component) => ({
       text: component.zhName ? `${component.name} ${component.zhName}` : component.name,
       link: component.link

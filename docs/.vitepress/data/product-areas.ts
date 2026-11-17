@@ -254,7 +254,6 @@ export function getProductAreaSidebar(key: ProductAreaKey) {
     { text: `${area.name} · ${area.eyebrow.split(' / ')[1] ?? '入口'}`, link: `/${key}/overview` },
     ...area.sections.map((section) => ({
       text: section.title,
-      collapsed: false,
       items: section.items.filter((item) => item.href).map((item) => ({ text: item.name, link: item.href }))
     }))
   ]
