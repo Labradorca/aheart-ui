@@ -1,0 +1,38 @@
+[
+  {
+    "zoom": "1",
+    "innerWidth": 390,
+    "rootScrollWidth": 390,
+    "bodyMinWidth": "320px",
+    "bodyWidth": "390px",
+    "mediaQuery640": true,
+    "bodyBounds": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 3298,
+      "top": 0,
+      "right": 390,
+      "bottom": 3298,
+      "left": 0
+    }
+  },
+  {
+    "zoom": "2",
+    "innerWidth": 390,
+    "rootScrollWidth": 640,
+    "bodyMinWidth": "320px",
+    "bodyWidth": "320px",
+    "mediaQuery640": true,
+    "bodyBounds": {
+      "x": 0,
+      "y": 0,
+      "width": 640,
+      "height": 7789,
+      "top": 0,
+      "right": 640,
+      "bottom": 7789,
+      "left": 0
+    }
+  }
+]

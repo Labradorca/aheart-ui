@@ -6,6 +6,8 @@
 
 后续 [#50 协调复核](coordination-recheck-2026-11-17.md)：#50 head 已前进到 `5c83519b`，仍开放且有同文件冲突；41 条登记和 49 个 Ready 计数未变。下表的 `f6ec14f7` 保留为首次核对事实。
 
+最新：#50 已合入 `287058d`，当前分支已 rebase 并应用路线图；[合并后证据](roadmap-after-pr50/README.md) 单独记录，早期快照不覆盖。下表 PR 状态为首次核对时的历史。
+
 | 核对项 | 结果 | 证据/口径 |
 | --- | --- | --- |
 | npm latest | `aheart-ui@1.3.0`、`@aheart-ui/ai@1.1.0`、`@aheart-ui/dnd@1.1.0`；与草稿一致 | `npm view <包> version dist-tags dist.integrity gitHead --json --registry=https://registry.npmjs.org`；facts.json 的 npm |
@@ -36,6 +38,6 @@
 
 ## #50 同文件协调决定
 
-负责人本轮明确选择：“先提交 V0 其余内容和路线图文案方案，待 #50 合入后再应用”。因此本分支不修改 `V2Roadmap.vue`，文案放在 [roadmap-copy.md](roadmap-copy.md)。这不是 V0 路线图任务完成；#50 合入后须在最新结构上应用、构建并检查实际页面，再更新 V0 状态。
+负责人明确选择：“先提交 V0 其余内容和路线图文案方案，待 #50 合入后再应用”。合并前保留 Vue 文件；#50 合入后已按 [文案方案](roadmap-copy.md) 应用并完成本地生产预览检查，保留其布局。阶段批准、v2 决定和开 PR 授权仍未获得，不能从 #50 合入推导授权。
 
 四份 2026-09-08 原文和 A1 均保留原样；基线 hash 在 source-audit.json。A2 的批准框保持未选，V0 的“是否启动 v2”未代填。

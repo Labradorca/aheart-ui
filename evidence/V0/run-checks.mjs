@@ -1,8 +1,9 @@
-import { spawnSync } from 'node:child_process'
+import { execFileSync, spawnSync } from 'node:child_process'
 import { readFileSync, writeFileSync } from 'node:fs'
 
 // Capture each command and exit code without hiding a failure behind a shell pipe.
-const baseline = '735d3d33e0e5a770c5cb83f782dbe33016b4ada7'
+const baseline = execFileSync('git', ['merge-base', 'HEAD', 'origin/master'], { encoding: 'utf8' }).trim()
+const worktreeHead = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim()
 const checks = [
   ['docs-and-matrix', ['node', '--test',
     'scripts/docs-copy.test.mjs', 'scripts/docs-social-icon.test.mjs',
@@ -21,7 +22,7 @@ for (const [name, command] of checks.filter(([name]) => !requested.size || reque
   writeFileSync(`evidence/V0/checks/${name}.txt`, output)
   const previous = results.findIndex((entry) => entry.name === name)
   if (previous !== -1) results.splice(previous, 1)
-  results.push({ name, command, baseline, scope: 'baseline plus V0 working diff',
+  results.push({ name, command, baseline, worktreeHead, scope: 'recorded HEAD plus V0 working diff',
     startedAt, finishedAt: new Date().toISOString(), exitCode: result.status,
     signal: result.signal, output: `${name}.txt` })
   console.log(`${name}: exit ${result.status}`)

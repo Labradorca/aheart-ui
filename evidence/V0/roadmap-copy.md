@@ -1,6 +1,6 @@
-# 路线图文案方案（等待 #50 合入）
+# 路线图文案方案（#50 合入后已应用）
 
-2026-11-17；基线 `735d3d33e0e5a770c5cb83f782dbe33016b4ada7`。负责人已选择先交付其余 V0 内容和本方案，待 [PR #50](https://github.com/Labradorca/aheart-ui/pull/50) 合入后再应用。目标文件 `docs/.vitepress/theme/V2Roadmap.vue` **本轮未修改**；本方案不是页面验收证据。
+2026-11-17；初始基线 `735d3d33e0e5a770c5cb83f782dbe33016b4ada7`。负责人选择先交付其余 V0 内容和本方案，待 [PR #50](https://github.com/Labradorca/aheart-ui/pull/50) 合入后再应用。#50 已合入 `287058d`，目标文件 `docs/.vitepress/theme/V2Roadmap.vue` 已保留其新布局应用文案，源提交为 `17e7256`；本方案仍不是用户验收，实际检查见 [运行证据](roadmap-after-pr50/README.md)。
 
 ## 页首
 
@@ -30,6 +30,6 @@ M4 在 A2 批准并生效后由 V0–V4 取代；批准前可展示上述提案�
 
 1. 确认 #50 merged，更新到最新 origin/master，检查其新布局和阶段数据结构；保留其样式、交互、布局和导航。
 2. 按当时 A2 的批准状态应用文案。A2 未生效时不能把 V 阶段写成现行已批准路线；所有 public 版本再次查 registry。
-3. 同步链接 M2/M3/V0 决策日志与合并计划；不得因版本发布把用户验收写成 Pass。
+3. 在 PR 审阅资料中关联 M2/M3/V0 决策日志与合并计划；公开页面不得因版本发布把用户验收写成 Pass，也不链接尚未合入的主线文件冒充可访问证据。
 4. 跑 docs/quality-matrix 脚本、文档构建、diff check；用真实页面检查桌面与窄视口、链接和状态。记录 URL、浏览器、视口、SHA，不能用本 Markdown 替代。
-5. 再审 V0 出口。此项落地前 V0 不标为 Pass，不启动依赖 V0 合并的 V1。
+5. 再审 V0 出口。应用已在本地落地；负责人批准与决定、V0 PR/主线门禁尚未完成，不标 V0 Pass，不启动依赖 V0 合并的 V1。

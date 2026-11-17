@@ -11,10 +11,11 @@
       "scripts/quality-matrix.test.mjs",
       "scripts/qg5-skip-ledger.test.mjs"
     ],
-    "baseline": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
-    "scope": "baseline plus V0 working diff",
-    "startedAt": "2026-11-17T05:52:18.763Z",
-    "finishedAt": "2026-11-17T05:52:19.035Z",
+    "baseline": "287058d6395460913b8013c9201c196e9b36c2c9",
+    "worktreeHead": "a54b955f5410f60ed9b429911b8808d50aea10b7",
+    "scope": "recorded HEAD plus V0 working diff",
+    "startedAt": "2026-11-17T06:20:44.892Z",
+    "finishedAt": "2026-11-17T06:20:45.199Z",
     "exitCode": 0,
     "signal": null,
     "output": "docs-and-matrix.txt"
@@ -26,10 +27,11 @@
       "pnpm",
       "docs:build"
     ],
-    "baseline": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
-    "scope": "baseline plus V0 working diff",
-    "startedAt": "2026-11-17T05:52:19.036Z",
-    "finishedAt": "2026-11-17T05:52:28.570Z",
+    "baseline": "287058d6395460913b8013c9201c196e9b36c2c9",
+    "worktreeHead": "a54b955f5410f60ed9b429911b8808d50aea10b7",
+    "scope": "recorded HEAD plus V0 working diff",
+    "startedAt": "2026-11-17T06:20:45.200Z",
+    "finishedAt": "2026-11-17T06:20:53.490Z",
     "exitCode": 0,
     "signal": null,
     "output": "docs-build.txt"
@@ -41,10 +43,11 @@
       "diff",
       "--check"
     ],
-    "baseline": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
-    "scope": "baseline plus V0 working diff",
-    "startedAt": "2026-11-17T06:01:32.791Z",
-    "finishedAt": "2026-11-17T06:01:32.804Z",
+    "baseline": "287058d6395460913b8013c9201c196e9b36c2c9",
+    "worktreeHead": "17e72568e6197988fcea0df36c76c1c99e5a8bb2",
+    "scope": "recorded HEAD plus V0 working diff",
+    "startedAt": "2026-11-17T06:43:44.388Z",
+    "finishedAt": "2026-11-17T06:43:44.400Z",
     "exitCode": 0,
     "signal": null,
     "output": "diff-check.txt"
@@ -57,10 +60,11 @@
       "--cached",
       "--check"
     ],
-    "baseline": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
-    "scope": "baseline plus V0 working diff",
-    "startedAt": "2026-11-17T06:01:32.805Z",
-    "finishedAt": "2026-11-17T06:01:32.818Z",
+    "baseline": "287058d6395460913b8013c9201c196e9b36c2c9",
+    "worktreeHead": "17e72568e6197988fcea0df36c76c1c99e5a8bb2",
+    "scope": "recorded HEAD plus V0 working diff",
+    "startedAt": "2026-11-17T06:43:44.400Z",
+    "finishedAt": "2026-11-17T06:43:44.415Z",
     "exitCode": 0,
     "signal": null,
     "output": "staged-diff-check.txt"

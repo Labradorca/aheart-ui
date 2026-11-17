@@ -1,6 +1,6 @@
 # Aheart UI 合并计划（现行 A1 + 待批准 A2）
 
-2026-11-17，审计基线 `735d3d33e0e5a770c5cb83f782dbe33016b4ada7`。这是供单文档执行与审查的合并视图；**A2 尚未批准，本文件不让 A2 提前生效，也不是 v2 Go**。原文保持原样；每条下列规则的来源随条文给出。未提及的技术细节不得用作扩大当前阶段的授权。
+2026-11-17，初始审计基线 `735d3d33e0e5a770c5cb83f782dbe33016b4ada7`；#50 合入后的实施基线为 `287058d6395460913b8013c9201c196e9b36c2c9`。这是供单文档执行与审查的合并视图；**A2 尚未批准，本文件不让 A2 提前生效，也不是 v2 Go**。原文保持原样；每条下列规则的来源随条文给出。未提及的技术细节不得用作扩大当前阶段的授权。
 
 ## 来源与优先级
 
@@ -79,7 +79,7 @@ A1 已删除原 14 天 Beta、三试点持续使用与 30/60/90 复盘；不能�
 
 | 阶段 / 前置 | Must 与出口 | 回滚、停止 | 来源与旧任务映射 |
 | --- | --- | --- | --- |
-| V0 无发布；A2 批准后正式 Go | M2/M3 九行表、精确 PR/SHA/CI/Pages/Release；缺失照记；登记组合/data→V3；路线图与公开版本同步；四项弃用清单、此合并计划、v2 书面决定。出口为文档合入、清单无未定处置、决定已记 | Go/延期继续1.x/缩范围由用户填写；No-Go 不启动 V2/V4，additive V1 可另作决定。#50 后才应用路线图，目前是已约定的待落地项 | A2-1/A2-2/A2-7；T M0-DOC/原 M8 决策；[V0 日志](../../../evidence/V0/decision-log.md) |
+| V0 无发布；A2 批准后正式 Go | M2/M3 九行表、精确 PR/SHA/CI/Pages/Release；缺失照记；登记组合/data→V3；路线图与公开版本同步；四项弃用清单、此合并计划、v2 书面决定。出口为文档合入、清单无未定处置、决定已记 | Go/延期继续1.x/缩范围由用户填写；No-Go 不启动 V2/V4，additive V1 可另作决定。#50 已合入，路线图已在本地应用；负责人批准、决定与 V0 PR 合并仍未完成 | A2-1/A2-2/A2-7；T M0-DOC/原 M8 决策；[V0 日志](../../../evidence/V0/decision-log.md) |
 | V1 / 1.4.x additive；V0 合并后另分支 | entries.mjs 消费单一清单驱动全 Ready 子入口与 CSS；Resolver 全覆盖；exports/Resolver/nav/matrix 漂移测试；开发弃用提示、生产无输出；1.3→2.0迁移表与可机械 codemod。出口：覆盖100%，Q06预算不变，1.3消费脚本及两试点不改源码通过，strict types/SSR/hydration/五项目全通过，P0=P1=0；evidence/V1 九行表 | 拆不干净或超预算立即停报根因，不放预算、不跳组件。回退1.3与锁文件。PR、合并、改版本、npm、tag各自授权，V0授权不继承 | A2-3/A2-7；R §7/§8/§17/§18.4；T M1/M7；本轮负责人停止点 |
 | V2 / 2.0-alpha；V1 Pass | 按弃用表切 root/full、dist/facade、AI optional DND；B4为回归。根图不含full/Table/DatePicker/AI/DND；无DND的chat可安装/strict/build；旧es/lib/style路径解析；files最小且确定性；两试点指南外改动0；1.3→alpha→1.3状态保留 | 只用next，latest留1.x；任一推荐路径或回退失败不进Beta。候选若新增breaking先改清单批准 | A2-4；R §7/§15/§18；T M1/M6/M8技术任务 |
 | V3 / 2.1 additive；需求触发，不阻塞2.0 | namespaced Combobox 与浮层统一data；按原Q M3 Must、12交互/8键盘a11y/SSR+iframe各1/五项目/P0P1=0/真实采用执行；普通与组合 API、数据模型/Anatomy/merge/focus/模块图齐全 | 若发现必须breaking，先回V2清单；失败保留普通API和旧Select，不冒称组合完成。按3A→3B→3C切片 | A2-5；Q 原M3；R §9/§10/§13；T M3、M4 |

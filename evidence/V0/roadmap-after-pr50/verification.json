@@ -1,0 +1,115 @@
+{
+  "observedAt": "2026-11-17T06:34:53.335647+00:00",
+  "initialBaseline": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+  "implementationBase": "287058d6395460913b8013c9201c196e9b36c2c9",
+  "roadmapSourceCommit": "17e72568e6197988fcea0df36c76c1c99e5a8bb2",
+  "pr50": {
+    "state": "closed",
+    "merged": true,
+    "merged_at": "2026-11-17T06:02:23Z",
+    "merge_commit_sha": "287058d6395460913b8013c9201c196e9b36c2c9",
+    "html_url": "https://github.com/Labradorca/aheart-ui/pull/50"
+  },
+  "publicVersions": {
+    "aheart-ui": "1.3.0",
+    "@aheart-ui/ai": "1.1.0",
+    "@aheart-ui/dnd": "1.1.0"
+  },
+  "skipSites": 41,
+  "entries": {
+    "base": 4,
+    "ai": 16,
+    "dnd": 4
+  },
+  "roadmapSha256": "6bc8699a85570dec10a771ba1c8ce0e52104fa222c64f40bd88feebb2ada145c",
+  "commands": [
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/pulls/50"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "npm",
+        "view",
+        "aheart-ui",
+        "version",
+        "--json",
+        "--registry=https://registry.npmjs.org"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "npm",
+        "view",
+        "@aheart-ui/ai",
+        "version",
+        "--json",
+        "--registry=https://registry.npmjs.org"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "npm",
+        "view",
+        "@aheart-ui/dnd",
+        "version",
+        "--json",
+        "--registry=https://registry.npmjs.org"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "merge-base",
+        "HEAD",
+        "origin/master"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "--input-type=module",
+        "-e",
+        "import { readFileSync } from \"node:fs\"; import { parseReadyComponentKeys } from \"./scripts/quality-matrix.mjs\"; console.log(parseReadyComponentKeys(readFileSync(\"docs/.vitepress/data/components.ts\",\"utf8\")).length)"
+      ],
+      "exitCode": 0,
+      "stdout": "49\n"
+    }
+  ],
+  "readyCount": 49,
+  "screenshots": [
+    {
+      "path": "roadmap-narrow-final.png",
+      "sha256": "940a9e48fd6994fffe60d614a064fd6865cfd420c6e7f4237649f3d37a07e045",
+      "capturedAt": "2026-11-17T06:24:09.819485+00:00"
+    },
+    {
+      "path": "roadmap-narrow-stages.png",
+      "sha256": "2d0f2b4475ae3b9a1d93f7a73e3e47111e0dec7425af9b1e4171d0fbab381746",
+      "capturedAt": "2026-11-17T06:23:45.863416+00:00"
+    },
+    {
+      "path": "roadmap-narrow.png",
+      "sha256": "57a555ce367cf0a70587114a488d1a35cadb4bd1d4a39edf60bddc615e0de364",
+      "capturedAt": "2026-11-17T06:23:10.473038+00:00"
+    },
+    {
+      "path": "roadmap-wide-stages.png",
+      "sha256": "08cd0565c7456fa9ff2412ab838ca779b83bbe40e5ffe4426ec759f7bb013db8",
+      "capturedAt": "2026-11-17T06:24:55.268300+00:00"
+    },
+    {
+      "path": "roadmap-wide.png",
+      "sha256": "cc452c73072c77010a73bdfe6548223345faaac4cb8f96dd1daa123bbd33bcc1",
+      "capturedAt": "2026-11-17T06:22:00.163569+00:00"
+    }
+  ]
+}

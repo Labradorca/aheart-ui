@@ -1,6 +1,6 @@
 # V0 收口与范围决策 · 2026-11-17
 
-状态：**Local 候选；Needs decision；V0 未通过**。负责人授权本轮整理与核对；A2 尚未批准，四份原规范和 A1 不变。#50 路线图同步按负责人决定延后，本轮只提交文案方案。V1 尚未启动。
+状态：**Local 候选；Needs decision；V0 未通过**。负责人授权本轮整理与核对；A2 尚未批准，四份原规范和 A1 不变。#50 已合入，本地路线图按此前确认的方案应用并检查；V1 尚未启动。
 
 ## 负责人决定（由本人填写）
 
@@ -16,14 +16,14 @@
 
 ## 基线与交付
 
-- 基线 `735d3d33e0e5a770c5cb83f782dbe33016b4ada7`，分支 `codex/v2-a2-v0`，worktree `/Users/start/code/aheart-ui-wt/v2-a2-v0`。旧检出只复制草稿，没有在旧检出实施。
+- 初始基线 `735d3d33e0e5a770c5cb83f782dbe33016b4ada7`；#50 合入后 rebase 到 `287058d6395460913b8013c9201c196e9b36c2c9`。分支 `codex/v2-a2-v0`，worktree `/Users/start/code/aheart-ui-wt/v2-a2-v0`。旧检出只复制草稿，没有在旧检出实施。
 - [事实核对](fact-check.md)：npm、PR #43/#44/#50、41 条跳过、49 个 Ready 与 24 条子路径口径；只读 [API 快照](facts.json)、[源码审计](source-audit.json)、上游 Release 附件副本。
 - [修订 A2](../../docs/superpowers/specs/2026-11-17-aheart-ui-v2-amendment-a2-draft.md)：逐项写明补充和纠正；增加全部 M1 数值预算，不放宽任何值。
 - [M2 日志](../M2/decision-log.md)、[M3 日志](../M3/decision-log.md)：九行表；M2 namespaced/data 拟归 V3；M3 精确 SHA 的 CI cancelled / Pages 缺失保留；用户验收均缺失。
 - [四项弃用处置](../../docs/superpowers/plans/2026-11-17-aheart-ui-v2-deprecations.md)：旧/替代 API、开始/移除版本、warning、示例、入口/依赖/产物依据。第四项已由 1.3 发布产物满足，只保留回归契约；前三项为 major 提案。
 - [合并计划](../../docs/superpowers/plans/2026-11-17-aheart-ui-current-plan.md)：六份来源逐条可追溯；A1 现行与 A2 提案效力分明；技术契约、V0–V4、质量、Icons/Motion 按需项与回滚集中可读。提案在 superpowers 下，当前文档站配置不发布这些源规范页面。
-- [路线图文案](roadmap-copy.md)：负责人本轮选定“待 #50 合入再应用”；`V2Roadmap.vue` 未修改。应用与页面验证仍是 V0 待办。
-- [#50 后续复核](coordination-recheck-2026-11-17.md)：head 已更新，仍未合并；跳过登记与 Ready 数量未变。保留首次事实快照，并继续等待相同的负责人决定。
+- [路线图文案](roadmap-copy.md)：负责人选定“待 #50 合入再应用”；该条件已解除，已保留 #50 布局并应用 M2/M3 版本与 V0–V4 提案状态，见 [运行证据](roadmap-after-pr50/README.md)。
+- [#50 合并前复核](coordination-recheck-2026-11-17.md) 保留历史；[合并后快照](roadmap-after-pr50/verification.json) 记录 merged、准确合并 SHA 与公开版本，41 条跳过基线不变。
 - PR 模板增加阶段日志、分状态与授权范围检查项。本轮不改运行时代码、依赖、exports、版本号、tag 或 npm。
 
 ## 一张验收表（A2-7 格式，非批准声明）
@@ -31,9 +31,9 @@
 | 项目 | 分项状态 | 证据 | SHA / 时间 | 责任人 |
 | --- | --- | --- | --- | --- |
 | G1 设计 | 草稿已整理；A2 批准、v2 决定缺失 | A2、合并计划、弃用表；上方决定栏为空 | 基线 + 本地 diff；2026-11-17 | wzfdhr |
-| G2 代码 | Local：仅文档/证据/PR 模板候选 | 本节交付清单与 git diff；原规范/A1/路线图 Vue 保持基线 | 基线 + 本地 diff | Codex |
+| G2 代码 | Local：文档/证据/PR 模板与路线图文案候选 | 本节交付清单；原规范/A1 保持原样，路线图保留 #50 布局 | 实施基线 `287058d`；路线图源提交 `17e7256` | Codex |
 | G3 自动检查 | 见检查记录的逐项退出码 | [检查记录](checks/README.md)、[checks.json](checks/results.json)；测试仅说明此次文档范围 | 基线 + 本地 diff | Codex |
-| G4 视觉 | 缺失：路线图实际页面修改与检查待 #50；原 M2/M3 不补造 | 文案方案不是页面证据；本轮无新的页面 Accepted | 待 #50 | wzfdhr / 后续实施 |
+| G4 视觉 | 代理已检查实际生产预览的宽/窄视口；用户接受仍缺失 | [截图与观察](roadmap-after-pr50/README.md)；补充 CSS zoom 探针的既有最小宽度限制另记，不宣称原生缩放通过；原 M2/M3 不补造 | `17e72568e6197988fcea0df36c76c1c99e5a8bb2` | Codex 观察 / wzfdhr 验收 |
 | G5 包 | npm pack：N/A（纯文档候选，未重打包） | 上游三包 Release 附件只作已有证据引用 | 已有发布基线 `735d3d33` | N/A |
 | G6 PR / 合并 | PR：未创建；Merged：否 | 必须先交差异摘要获得开 PR 授权；合并及 Pages 另需明确授权 | 缺失 | wzfdhr |
 | G7 主线 CI / Pages | Main CI：本候选缺失；Pages：本候选未部署 | facts.json 中成功记录属于基线及历史 SHA，不能代表本候选 | 本候选缺失 | 待授权后 CI |
@@ -44,7 +44,7 @@
 
 | 项目 | 解除条件 |
 | --- | --- |
-| #50 同文件重构 | #50 合入后基于新结构应用文案，构建/脚本检查及真实页面验证；此前不把路线图任务打勾 |
+| #50 同文件重构 | 已解除：基于 `287058d` 保留新结构应用文案，文档构建、16 项脚本和宽/窄实际页面检查有记录；这不是用户验收 |
 | A2 批准与范围冻结 | 负责人批准；M2 范围变更、四项处置与全部预算一致后合入生效 |
 | 是否启动 v2 | 负责人填写 Go / 延期 / 缩范围及依据；不能从“允许开 PR”推导 Go |
 | M2/M3 历史缺失 | 缺失保留；后续证据只证明对应 SHA 与任务，不改写历史 UA |

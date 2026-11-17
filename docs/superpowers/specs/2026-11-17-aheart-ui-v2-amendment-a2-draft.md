@@ -4,14 +4,14 @@
 >
 > 修订对象：[产品与技术总体方案](./2026-09-08-aheart-ui-product-and-technical-master-plan.md)、[技术 RFC](./2026-09-08-aheart-ui-v2-architecture-optimization-design.md)、[阶段验收标准](./2026-09-08-aheart-ui-v2-phase-acceptance-criteria.md)、[整体任务流程清单](./2026-09-08-aheart-ui-v2-task-flow-checklist.md)、[修订 A1](./2026-11-05-aheart-ui-v2-solo-scope-amendment.md)。
 >
-> 日期：2026-11-17。核对基线：`origin/master` `735d3d33`；公开 npm `aheart-ui@1.3.0`、`@aheart-ui/ai@1.1.0`、`@aheart-ui/dnd@1.1.0`。
+> 日期：2026-11-17。初始核对基线：`735d3d33`；当前实施基线：`287058d`；公开 npm `aheart-ui@1.3.0`、`@aheart-ui/ai@1.1.0`、`@aheart-ui/dnd@1.1.0`。
 
 ## 2026-11-17 事实复核与本稿改动（未批准）
 
-核对分支 `codex/v2-a2-v0`，基线完整 SHA 为 `735d3d33e0e5a770c5cb83f782dbe33016b4ada7`。旧检出仅作为草稿来源。详细命令与 API 快照见 [V0 事实核对](../../../evidence/V0/fact-check.md)。
+核对分支 `codex/v2-a2-v0`，初始基线完整 SHA 为 `735d3d33e0e5a770c5cb83f782dbe33016b4ada7`。#50 合入后，当前实施基线更新到 `287058d6395460913b8013c9201c196e9b36c2c9`。旧检出仅作为草稿来源。详细命令与 API 快照见 [V0 事实核对](../../../evidence/V0/fact-check.md)。
 
 - npm 版本与草稿一致：基础包 1.3.0，AI/DND 各 1.1.0。
-- #43、#44 均已合并；#50 仍开放且修改 `V2Roadmap.vue`。负责人本轮选择：先交付 V0 其余内容与路线图文案，待 #50 合入后应用；本分支不修改该 Vue 文件。
+- #43、#44 均已合并。#50 最初开放且修改 `V2Roadmap.vue`；负责人选择等其合入后应用。#50 已于 `2026-11-17T06:02:23Z` 合入 `287058d`，本分支已保留其布局并应用路线图文案；V0–V4 明确标为待批准提案，见 [运行检查](../../../evidence/V0/roadmap-after-pr50/README.md)。
 - 补充量化基线：跳过登记 **41 条调用点**；文档/质量矩阵 **49 个 Ready 条目**（基础包 45、AI 3、DND 1）。入口 manifest 是另一口径：base 4、AI 16、DND 4，共 24 条子路径；AI/DND 中场景、别名不等同于 Ready 组件条目。
 - 修正 M3 证据表述：#44 合并 SHA 的主线 CI 为 cancelled，同 SHA Pages **缺失**；后续 1.3.0 发布 SHA 的 CI/Pages 成功，分开记录。
 - 修正第四项破坏性候选：1.3.0 发布 JS 已不隐式加载真实 CSS；V2 固化显式样式契约，不虚构新的破坏或弃用提示。
