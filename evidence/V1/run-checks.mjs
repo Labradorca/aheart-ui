@@ -27,7 +27,7 @@ let failed=false
 for(const name of process.argv.slice(2)){
   const command=checks[name]
   if(!command)throw new Error(`Unknown check: ${name}`)
-  const record={name,command,baseline:'b1eef9b6f5e1b64706beee5d4d56e08891f27c26',head:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),scope:'recorded HEAD plus V1 working diff',workingDiffCommand:['git','diff','HEAD','--binary'],workingDiffSha256:hash(execFileSync('git',['diff','HEAD','--binary'])),startedAt:new Date().toISOString()}
+  const record={name,command,baseline:'b1eef9b6f5e1b64706beee5d4d56e08891f27c26',head:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),scope:'recorded HEAD plus V1 working diff',workingDiffCommand:['git','diff','HEAD','--binary'],workingDiffSha256:hash(execFileSync('git',['diff','HEAD','--binary'],{maxBuffer:64*1024*1024})),startedAt:new Date().toISOString()}
   const run=spawnSync(command[0],command.slice(1),{encoding:'utf8',maxBuffer:64*1024*1024})
   const raw=`${run.stdout??''}${run.stderr??''}${run.error?String(run.error):''}`
   const output=raw.split('\n').map(line=>line.trimEnd()).join('\n')

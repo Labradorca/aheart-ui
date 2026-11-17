@@ -16,7 +16,12 @@
     "signal": null,
     "rawOutputSha256": "0151863cacf8985629deb5fb3def4b7a42ca8716be9e8ca787a34b2a2f58345a",
     "output": "build-components.txt",
-    "normalization": "trailing whitespace only"
+    "normalization": "trailing whitespace only",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "--binary"
+    ]
   },
   {
     "name": "drift",
@@ -35,7 +40,12 @@
     "signal": null,
     "rawOutputSha256": "4b63aea33d7fccc8204e62663efa2f97c22634c19b6e67b9391b8ee6a91d88ef",
     "output": "drift.txt",
-    "normalization": "trailing whitespace only"
+    "normalization": "trailing whitespace only",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "--binary"
+    ]
   },
   {
     "name": "pack",
@@ -56,6 +66,36 @@
     "signal": null,
     "rawOutputSha256": "bc2f45d295b1d2d260057ad405672cbe88dc8b534e0ca3cf5d17379cd31329f5",
     "output": "pack.txt",
+    "normalization": "trailing whitespace only",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "--binary"
+    ]
+  },
+  {
+    "name": "diff",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "d8e419237f0b8a16a31c1909b55069b4b52e565a",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "HEAD",
+      "--binary"
+    ],
+    "workingDiffSha256": "a61667e1574939a3dc2343e790e2d0787ff6324f7d9ea5a31003a2524eb4cec1",
+    "startedAt": "2026-11-17T10:23:55.453Z",
+    "finishedAt": "2026-11-17T10:23:55.470Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "output": "diff.txt",
     "normalization": "trailing whitespace only"
   }
 ]
