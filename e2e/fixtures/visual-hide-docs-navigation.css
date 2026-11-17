@@ -34,3 +34,9 @@
 .aheart-ai-workbench {
   font-family: var(--vp-font-family-base);
 }
+@media (min-width: 960px) {
+  .aheart-ai-workbench {
+    width: 1040px;
+    max-width: none;
+  }
+}

@@ -2,7 +2,7 @@ name: Refresh documentation visual baselines
 on:
   push:
     branches: ['codex/homepage-redesign']
-    paths: ['.github/workflows/docs-visual-baseline.yml']
+    paths: ['.github/workflows/docs-visual-baseline.yml', 'e2e/fixtures/visual-hide-docs-navigation.css']
   workflow_dispatch:
 permissions:
   contents: read
