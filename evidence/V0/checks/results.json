@@ -1,0 +1,68 @@
+[
+  {
+    "name": "docs-and-matrix",
+    "command": [
+      "node",
+      "--test",
+      "scripts/docs-copy.test.mjs",
+      "scripts/docs-social-icon.test.mjs",
+      "scripts/qg5-evidence-docs.test.mjs",
+      "scripts/m3-doc-entries.test.mjs",
+      "scripts/quality-matrix.test.mjs",
+      "scripts/qg5-skip-ledger.test.mjs"
+    ],
+    "baseline": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+    "scope": "baseline plus V0 working diff",
+    "startedAt": "2026-11-17T05:52:18.763Z",
+    "finishedAt": "2026-11-17T05:52:19.035Z",
+    "exitCode": 0,
+    "signal": null,
+    "output": "docs-and-matrix.txt"
+  },
+  {
+    "name": "docs-build",
+    "command": [
+      "corepack",
+      "pnpm",
+      "docs:build"
+    ],
+    "baseline": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+    "scope": "baseline plus V0 working diff",
+    "startedAt": "2026-11-17T05:52:19.036Z",
+    "finishedAt": "2026-11-17T05:52:28.570Z",
+    "exitCode": 0,
+    "signal": null,
+    "output": "docs-build.txt"
+  },
+  {
+    "name": "diff-check",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "baseline": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+    "scope": "baseline plus V0 working diff",
+    "startedAt": "2026-11-17T05:56:46.784Z",
+    "finishedAt": "2026-11-17T05:56:46.797Z",
+    "exitCode": 0,
+    "signal": null,
+    "output": "diff-check.txt"
+  },
+  {
+    "name": "staged-diff-check",
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "baseline": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+    "scope": "baseline plus V0 working diff",
+    "startedAt": "2026-11-17T05:56:46.797Z",
+    "finishedAt": "2026-11-17T05:56:46.814Z",
+    "exitCode": 0,
+    "signal": null,
+    "output": "staged-diff-check.txt"
+  }
+]

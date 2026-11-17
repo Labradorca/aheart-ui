@@ -1,0 +1,1408 @@
+{
+  "observedAt": "2026-11-17T05:54:02.436Z",
+  "baseline": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+  "worktreeHead": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+  "repository": "Labradorca/aheart-ui",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/pulls/43"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/pulls/43/reviews"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/issues/43/comments"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/pulls/44"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/pulls/44/reviews"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/issues/44/comments"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/pulls/50"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/pulls/50/files?per_page=100"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/actions/runs?head_sha=9889ce995e647ee6b6868bd826a973be074691b0&per_page=100"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/actions/runs?head_sha=25d0d4babfee5782377c787ac187d9728a3635a4&per_page=100"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/actions/runs?head_sha=735d3d33e0e5a770c5cb83f782dbe33016b4ada7&per_page=100"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/releases/tags/v1.3.0"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "rev-list",
+        "-n",
+        "1",
+        "v1.3.0"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/actions/runs/42963104012/jobs?per_page=100"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/actions/runs/42984728965/jobs?per_page=100"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/actions/runs/43912659909/jobs?per_page=100"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/actions/runs/42966860141/jobs?per_page=100"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/actions/runs/43920744949/jobs?per_page=100"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/pages"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/deployments?environment=github-pages&per_page=100"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/deployments/7831655329/statuses"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/deployments/7702690937/statuses"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "npm",
+        "view",
+        "aheart-ui",
+        "version",
+        "dist-tags",
+        "dist.integrity",
+        "gitHead",
+        "--json",
+        "--registry=https://registry.npmjs.org"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "npm",
+        "view",
+        "@aheart-ui/ai",
+        "version",
+        "dist-tags",
+        "dist.integrity",
+        "gitHead",
+        "--json",
+        "--registry=https://registry.npmjs.org"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "npm",
+        "view",
+        "@aheart-ui/dnd",
+        "version",
+        "dist-tags",
+        "dist.integrity",
+        "gitHead",
+        "--json",
+        "--registry=https://registry.npmjs.org"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "pullRequests": [
+    {
+      "number": 43,
+      "title": "feat: M2 Combobox 与浮层迁移",
+      "state": "closed",
+      "html_url": "https://github.com/Labradorca/aheart-ui/pull/43",
+      "merged": true,
+      "merged_at": "2026-11-11T05:02:32Z",
+      "merge_commit_sha": "9889ce995e647ee6b6868bd826a973be074691b0",
+      "head": "2849231b17507124ccca992baa0dfdecc594266b",
+      "base": "a87bd741a4237d065cc26ea73714e896e3a49db9",
+      "reviews": [],
+      "comments": []
+    },
+    {
+      "number": 44,
+      "title": "feat: M3 AI/DND 按需入口、Resolver 与迁移指南",
+      "state": "closed",
+      "html_url": "https://github.com/Labradorca/aheart-ui/pull/44",
+      "merged": true,
+      "merged_at": "2026-11-11T08:08:49Z",
+      "merge_commit_sha": "25d0d4babfee5782377c787ac187d9728a3635a4",
+      "head": "c5423fb6e5ae9eeb850b59e5654669270a344751",
+      "base": "9889ce995e647ee6b6868bd826a973be074691b0",
+      "reviews": [],
+      "comments": []
+    },
+    {
+      "number": 50,
+      "title": "feat(docs): redesign the documentation site with interactive examples",
+      "state": "open",
+      "html_url": "https://github.com/Labradorca/aheart-ui/pull/50",
+      "merged": false,
+      "merged_at": null,
+      "merge_commit_sha": "2a1d452c3aa77f10d75775bb39df25a873ae2460",
+      "head": "82376b194cde16a5e3ece663dab16114e343c051",
+      "base": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+      "files": [
+        "docs/.vitepress/config.ts",
+        "docs/.vitepress/data/components.ts",
+        "docs/.vitepress/data/product-areas.ts",
+        "docs/.vitepress/theme/ButtonPlayground.vue",
+        "docs/.vitepress/theme/ComponentContext.vue",
+        "docs/.vitepress/theme/ComponentOverview.vue",
+        "docs/.vitepress/theme/DocContext.vue",
+        "docs/.vitepress/theme/DocInteractions.vue",
+        "docs/.vitepress/theme/DocsPlayground.vue",
+        "docs/.vitepress/theme/HomePage.vue",
+        "docs/.vitepress/theme/ProductAreaOverview.vue",
+        "docs/.vitepress/theme/V2Roadmap.vue",
+        "docs/.vitepress/theme/editorial.css",
+        "docs/.vitepress/theme/homepage.css",
+        "docs/.vitepress/theme/index.ts",
+        "docs/.vitepress/theme/reference.css",
+        "docs/.vitepress/theme/site.css",
+        "docs/.vitepress/theme/studio.css",
+        "docs/.vitepress/theme/style.css",
+        "docs/components/button.md",
+        "docs/guide/introduction.md",
+        "docs/index.md",
+        "docs/public/fonts/Familjen-Grotesk-OFL.txt",
+        "docs/public/fonts/familjen-grotesk-400.ttf",
+        "docs/public/fonts/familjen-grotesk-500.ttf",
+        "docs/quality/documentation-redesign-20261116.md",
+        "docs/quality/homepage-redesign-20261116.md",
+        "docs/superpowers/evidence/d9-skip-ledger.json",
+        "e2e/a11y-visual.spec.ts",
+        "e2e/dnd-splitter.spec.ts",
+        "e2e/docs-button-playground.spec.ts",
+        "e2e/docs-homepage.spec.ts",
+        "e2e/docs-information-architecture.spec.ts",
+        "e2e/fixtures/visual-hide-docs-navigation.css",
+        "scripts/docs-copy.test.mjs",
+        "scripts/m3-doc-entries.test.mjs"
+      ]
+    }
+  ],
+  "mainRuns": [
+    {
+      "sha": "9889ce995e647ee6b6868bd826a973be074691b0",
+      "runs": [
+        {
+          "id": 42966860141,
+          "name": "Deploy documentation",
+          "head_sha": "9889ce995e647ee6b6868bd826a973be074691b0",
+          "head_branch": "master",
+          "event": "workflow_run",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42966860141",
+          "created_at": "2026-11-11T05:36:24Z",
+          "updated_at": "2026-11-11T05:37:16Z"
+        },
+        {
+          "id": 42963104012,
+          "name": "CI",
+          "head_sha": "9889ce995e647ee6b6868bd826a973be074691b0",
+          "head_branch": "master",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42963104012",
+          "created_at": "2026-11-11T05:02:35Z",
+          "updated_at": "2026-11-11T05:36:21Z"
+        }
+      ]
+    },
+    {
+      "sha": "25d0d4babfee5782377c787ac187d9728a3635a4",
+      "runs": [
+        {
+          "id": 42984728965,
+          "name": "CI",
+          "head_sha": "25d0d4babfee5782377c787ac187d9728a3635a4",
+          "head_branch": "master",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "cancelled",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42984728965",
+          "created_at": "2026-11-11T08:08:52Z",
+          "updated_at": "2026-11-11T08:40:25Z"
+        }
+      ]
+    },
+    {
+      "sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+      "runs": [
+        {
+          "id": 43920744949,
+          "name": "Deploy documentation",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_run",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43920744949",
+          "created_at": "2026-11-16T17:39:56Z",
+          "updated_at": "2026-11-16T17:41:04Z"
+        },
+        {
+          "id": 43918890557,
+          "name": "Deploy documentation",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_run",
+          "status": "completed",
+          "conclusion": "skipped",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43918890557",
+          "created_at": "2026-11-16T17:29:20Z",
+          "updated_at": "2026-11-16T17:29:21Z"
+        },
+        {
+          "id": 43918415893,
+          "name": "CI",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43918415893",
+          "created_at": "2026-11-16T17:26:37Z",
+          "updated_at": "2026-11-16T17:29:15Z"
+        },
+        {
+          "id": 43918298461,
+          "name": "Deploy documentation",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_run",
+          "status": "completed",
+          "conclusion": "skipped",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43918298461",
+          "created_at": "2026-11-16T17:25:56Z",
+          "updated_at": "2026-11-16T17:26:03Z"
+        },
+        {
+          "id": 43917695256,
+          "name": "CI",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43917695256",
+          "created_at": "2026-11-16T17:22:30Z",
+          "updated_at": "2026-11-16T17:25:52Z"
+        },
+        {
+          "id": 43917598295,
+          "name": "Deploy documentation",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_run",
+          "status": "completed",
+          "conclusion": "skipped",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43917598295",
+          "created_at": "2026-11-16T17:21:57Z",
+          "updated_at": "2026-11-16T17:22:06Z"
+        },
+        {
+          "id": 43917064661,
+          "name": "CI",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43917064661",
+          "created_at": "2026-11-16T17:18:55Z",
+          "updated_at": "2026-11-16T17:21:53Z"
+        },
+        {
+          "id": 43916970667,
+          "name": "Deploy documentation",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_run",
+          "status": "completed",
+          "conclusion": "skipped",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43916970667",
+          "created_at": "2026-11-16T17:18:22Z",
+          "updated_at": "2026-11-16T17:18:32Z"
+        },
+        {
+          "id": 43916337272,
+          "name": "CI",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43916337272",
+          "created_at": "2026-11-16T17:14:53Z",
+          "updated_at": "2026-11-16T17:18:18Z"
+        },
+        {
+          "id": 43916241865,
+          "name": "Deploy documentation",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_run",
+          "status": "completed",
+          "conclusion": "skipped",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43916241865",
+          "created_at": "2026-11-16T17:14:19Z",
+          "updated_at": "2026-11-16T17:14:21Z"
+        },
+        {
+          "id": 43915710177,
+          "name": "CI",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43915710177",
+          "created_at": "2026-11-16T17:11:21Z",
+          "updated_at": "2026-11-16T17:14:15Z"
+        },
+        {
+          "id": 43915661517,
+          "name": "Deploy documentation",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_run",
+          "status": "completed",
+          "conclusion": "skipped",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43915661517",
+          "created_at": "2026-11-16T17:11:04Z",
+          "updated_at": "2026-11-16T17:11:11Z"
+        },
+        {
+          "id": 43915161909,
+          "name": "CI",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43915161909",
+          "created_at": "2026-11-16T17:08:21Z",
+          "updated_at": "2026-11-16T17:11:00Z"
+        },
+        {
+          "id": 43915091210,
+          "name": "Deploy documentation",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_run",
+          "status": "completed",
+          "conclusion": "skipped",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43915091210",
+          "created_at": "2026-11-16T17:07:58Z",
+          "updated_at": "2026-11-16T17:07:59Z"
+        },
+        {
+          "id": 43914413493,
+          "name": "CI",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43914413493",
+          "created_at": "2026-11-16T17:04:18Z",
+          "updated_at": "2026-11-16T17:07:55Z"
+        },
+        {
+          "id": 43914368784,
+          "name": "Deploy documentation",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_run",
+          "status": "completed",
+          "conclusion": "skipped",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43914368784",
+          "created_at": "2026-11-16T17:04:04Z",
+          "updated_at": "2026-11-16T17:04:05Z"
+        },
+        {
+          "id": 43913761547,
+          "name": "CI",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43913761547",
+          "created_at": "2026-11-16T17:00:45Z",
+          "updated_at": "2026-11-16T17:04:01Z"
+        },
+        {
+          "id": 43913725509,
+          "name": "Deploy documentation",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_run",
+          "status": "completed",
+          "conclusion": "skipped",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43913725509",
+          "created_at": "2026-11-16T17:00:34Z",
+          "updated_at": "2026-11-16T17:00:35Z"
+        },
+        {
+          "id": 43913316827,
+          "name": "CI",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43913316827",
+          "created_at": "2026-11-16T16:58:17Z",
+          "updated_at": "2026-11-16T17:00:29Z"
+        },
+        {
+          "id": 43913238829,
+          "name": "Deploy documentation",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_run",
+          "status": "completed",
+          "conclusion": "skipped",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43913238829",
+          "created_at": "2026-11-16T16:57:50Z",
+          "updated_at": "2026-11-16T16:57:51Z"
+        },
+        {
+          "id": 43912683775,
+          "name": "CI",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43912683775",
+          "created_at": "2026-11-16T16:54:46Z",
+          "updated_at": "2026-11-16T16:57:46Z"
+        },
+        {
+          "id": 43912659909,
+          "name": "CI",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "master",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43912659909",
+          "created_at": "2026-11-16T16:54:38Z",
+          "updated_at": "2026-11-16T17:39:53Z"
+        },
+        {
+          "id": 43904170413,
+          "name": "CI",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "codex/v1x-closeout",
+          "event": "pull_request",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43904170413",
+          "created_at": "2026-11-16T16:08:30Z",
+          "updated_at": "2026-11-16T16:54:05Z"
+        },
+        {
+          "id": 43903971226,
+          "name": "CI",
+          "head_sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+          "head_branch": "codex/v1x-closeout",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43903971226",
+          "created_at": "2026-11-16T16:07:27Z",
+          "updated_at": "2026-11-16T16:54:18Z"
+        }
+      ]
+    }
+  ],
+  "release": {
+    "html_url": "https://github.com/Labradorca/aheart-ui/releases/tag/v1.3.0",
+    "tag_name": "v1.3.0",
+    "target_commitish": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+    "published_at": "2026-11-17T01:10:36Z",
+    "body": "Aheart UI v1.3.0 完成 v1.x 兼容增量交付。\n\n- Combobox 单选、筛选、键盘导航及独立入口 / CSS。\n- Popover、Tooltip、Dropdown、Modal、Drawer、Select 与 Picker 族复用浮层和焦点逻辑。\n- AI 1.1.0 提供 Chat / Agent / Workbench，DND 1.1.0 提供按需子入口与样式。\n- Resolver、迁移示例及公开包消费验证；保留 v1 根插件与旧 Workbench 导出。\n\n```bash\nnpm install aheart-ui@1.3.0 @aheart-ui/ai@1.1.0 @aheart-ui/dnd@1.1.0\n```\n\n验证：发布源码完整 CI 12/12；公开 registry 的严格声明、ESM / CommonJS、CSS、SSR 检查通过。两个试点在 Chromium / Firefox / WebKit 的桌面及窄视口通过；从公开 1.1.1 升级、回退并保留任务状态的演练通过，公开下载包与测试输入逐字节一致。新 AI / DND 也已通过搭配公开 core 1.1.1 的兼容检查；最终主线十次独立 QG5 测量通过，flaky rate 为 0，主线 CI / Pages 均成功。\n\n物理 iOS Safari 真机测试由负责人于 2026-11-16 取消，状态为 Cancelled / N/A，不是测试通过，也不再保留设备待办。v2 功能开发不属于本次交付。\n\n源码：`735d3d33e0e5a770c5cb83f782dbe33016b4ada7`。附件 tarball 与公开 npm 下载一致，SHA-256 见 SHA256SUMS；精确 CI、公开消费、升级回退及验收边界见 release-evidence.json。\n",
+    "assets": [
+      {
+        "name": "aheart-ui-1.3.0.tgz",
+        "browser_download_url": "https://github.com/Labradorca/aheart-ui/releases/download/v1.3.0/aheart-ui-1.3.0.tgz",
+        "size": 601011,
+        "digest": "sha256:96dab41f93885399d9776969abe42b1dc6a0e7efc670429387d653cae6e095a7"
+      },
+      {
+        "name": "aheart-ui-ai-1.1.0.tgz",
+        "browser_download_url": "https://github.com/Labradorca/aheart-ui/releases/download/v1.3.0/aheart-ui-ai-1.1.0.tgz",
+        "size": 88730,
+        "digest": "sha256:a92e62d8670de8d3d604b3d6d030ccf89459236a85e140399fd0e72493746a3f"
+      },
+      {
+        "name": "aheart-ui-dnd-1.1.0.tgz",
+        "browser_download_url": "https://github.com/Labradorca/aheart-ui/releases/download/v1.3.0/aheart-ui-dnd-1.1.0.tgz",
+        "size": 28188,
+        "digest": "sha256:8cbc23c703b7250154c7d8afd2c18bf0e2ba3fe16f6bd6a82754967caf54747a"
+      },
+      {
+        "name": "qg5-master-stability.json",
+        "browser_download_url": "https://github.com/Labradorca/aheart-ui/releases/download/v1.3.0/qg5-master-stability.json",
+        "size": 7354,
+        "digest": "sha256:1c4598ca6ea712c7ef378e9e1a0440914b818d9318e4c99a01d41acba9eb8769"
+      },
+      {
+        "name": "release-evidence.json",
+        "browser_download_url": "https://github.com/Labradorca/aheart-ui/releases/download/v1.3.0/release-evidence.json",
+        "size": 31936,
+        "digest": "sha256:89d66913c4e21c947586ad9426f18682adfe201c0f891fcb887e9b8b41d4d3a1"
+      },
+      {
+        "name": "SHA256SUMS",
+        "browser_download_url": "https://github.com/Labradorca/aheart-ui/releases/download/v1.3.0/SHA256SUMS",
+        "size": 265,
+        "digest": "sha256:c70cd0951f1cf5ba3c4a95085a6b766807d16a1cffa6112fb3ebe0a0f2201d78"
+      }
+    ]
+  },
+  "releaseTagSha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+  "jobs": [
+    {
+      "runId": 42963104012,
+      "jobs": [
+        {
+          "name": "consumer",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42963104012/job/130334032265"
+        },
+        {
+          "name": "qg5-cross-browser (desktop-firefox)",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42963104012/job/130334032591"
+        },
+        {
+          "name": "qg5-cross-browser (mobile)",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42963104012/job/130334032614"
+        },
+        {
+          "name": "typecheck",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42963104012/job/130334032618"
+        },
+        {
+          "name": "build-generated",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42963104012/job/130334032650"
+        },
+        {
+          "name": "unit",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42963104012/job/130334032654"
+        },
+        {
+          "name": "browser",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42963104012/job/130334032721"
+        },
+        {
+          "name": "coverage",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42963104012/job/130334032736"
+        },
+        {
+          "name": "qg5-cross-browser (desktop-webkit)",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42963104012/job/130334032782"
+        },
+        {
+          "name": "docs",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42963104012/job/130334032799"
+        },
+        {
+          "name": "qg5-cross-browser (desktop)",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42963104012/job/130334032807"
+        },
+        {
+          "name": "qg5-cross-browser (mobile-webkit)",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42963104012/job/130334032887"
+        }
+      ]
+    },
+    {
+      "runId": 42984728965,
+      "jobs": [
+        {
+          "name": "build-generated",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42984728965/job/130403082733"
+        },
+        {
+          "name": "browser",
+          "status": "completed",
+          "conclusion": "cancelled",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42984728965/job/130403082917"
+        },
+        {
+          "name": "typecheck",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42984728965/job/130403082920"
+        },
+        {
+          "name": "coverage",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42984728965/job/130403082936"
+        },
+        {
+          "name": "qg5-cross-browser (desktop)",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42984728965/job/130403082946"
+        },
+        {
+          "name": "qg5-cross-browser (mobile-webkit)",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42984728965/job/130403083035"
+        },
+        {
+          "name": "qg5-cross-browser (desktop-firefox)",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42984728965/job/130403083043"
+        },
+        {
+          "name": "qg5-cross-browser (mobile)",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42984728965/job/130403083065"
+        },
+        {
+          "name": "qg5-cross-browser (desktop-webkit)",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42984728965/job/130403083121"
+        },
+        {
+          "name": "unit",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42984728965/job/130403083137"
+        },
+        {
+          "name": "consumer",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42984728965/job/130403083199"
+        },
+        {
+          "name": "docs",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42984728965/job/130403083318"
+        }
+      ]
+    },
+    {
+      "runId": 43912659909,
+      "jobs": [
+        {
+          "name": "docs",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43912659909/job/133458416276"
+        },
+        {
+          "name": "unit",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43912659909/job/133458416419"
+        },
+        {
+          "name": "build-generated",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43912659909/job/133458416472"
+        },
+        {
+          "name": "browser",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43912659909/job/133458416557"
+        },
+        {
+          "name": "qg5-cross-browser (mobile)",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43912659909/job/133458416595"
+        },
+        {
+          "name": "typecheck",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43912659909/job/133458416602"
+        },
+        {
+          "name": "consumer",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43912659909/job/133458416612"
+        },
+        {
+          "name": "qg5-cross-browser (desktop-webkit)",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43912659909/job/133458416686"
+        },
+        {
+          "name": "qg5-cross-browser (desktop)",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43912659909/job/133458416725"
+        },
+        {
+          "name": "qg5-cross-browser (desktop-firefox)",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43912659909/job/133458416740"
+        },
+        {
+          "name": "qg5-cross-browser (mobile-webkit)",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43912659909/job/133458416817"
+        },
+        {
+          "name": "coverage",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43912659909/job/133458416917"
+        }
+      ]
+    },
+    {
+      "runId": 42966860141,
+      "jobs": [
+        {
+          "name": "build",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42966860141/job/130345958427"
+        },
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42966860141/job/130346168945"
+        }
+      ]
+    },
+    {
+      "runId": 43920744949,
+      "jobs": [
+        {
+          "name": "build",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43920744949/job/133487049989"
+        },
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43920744949/job/133487492727"
+        }
+      ]
+    }
+  ],
+  "pages": {
+    "url": "https://api.github.com/repos/Labradorca/aheart-ui/pages",
+    "status": null,
+    "cname": null,
+    "custom_404": false,
+    "html_url": "https://labradorca.github.io/aheart-ui/",
+    "build_type": "workflow",
+    "source": {
+      "branch": "master",
+      "path": "/"
+    },
+    "public": true,
+    "protected_domain_state": null,
+    "pending_domain_unverified_at": null,
+    "https_enforced": true
+  },
+  "deployments": [
+    {
+      "id": 7831655329,
+      "sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+      "ref": "master",
+      "created_at": "2026-11-16T17:40:40Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/7831655329/statuses"
+    },
+    {
+      "id": 7826705853,
+      "sha": "63ddb9ae9dfd029608df96bed2e399275d46a25c",
+      "ref": "master",
+      "created_at": "2026-11-16T14:26:42Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/7826705853/statuses"
+    },
+    {
+      "id": 7823977520,
+      "sha": "db46efd0d2896bd1b3863a4f6719a551046dec2e",
+      "ref": "master",
+      "created_at": "2026-11-16T12:28:36Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/7823977520/statuses"
+    },
+    {
+      "id": 7706342187,
+      "sha": "db46efd0d2896bd1b3863a4f6719a551046dec2e",
+      "ref": "master",
+      "created_at": "2026-11-11T09:20:52Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/7706342187/statuses"
+    },
+    {
+      "id": 7702690937,
+      "sha": "9889ce995e647ee6b6868bd826a973be074691b0",
+      "ref": "master",
+      "created_at": "2026-11-11T05:37:01Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/7702690937/statuses"
+    },
+    {
+      "id": 7676808850,
+      "sha": "a87bd741a4237d065cc26ea73714e896e3a49db9",
+      "ref": "master",
+      "created_at": "2026-11-10T08:08:33Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/7676808850/statuses"
+    },
+    {
+      "id": 7675123651,
+      "sha": "259db118c7c95904ae7054313fd0b7a0e2630214",
+      "ref": "master",
+      "created_at": "2026-11-10T06:20:27Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/7675123651/statuses"
+    },
+    {
+      "id": 7671197298,
+      "sha": "90285d6244b74091b79d2abd10ed93b4bc557cdb",
+      "ref": "master",
+      "created_at": "2026-11-10T01:46:51Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/7671197298/statuses"
+    },
+    {
+      "id": 7568124068,
+      "sha": "c63edbf8c9098043d2d967d70d61d11db40e1a59",
+      "ref": "master",
+      "created_at": "2026-11-05T07:46:37Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/7568124068/statuses"
+    },
+    {
+      "id": 6742660215,
+      "sha": "512e2431fd4e89120a211d5f0a91e4ebcf76185a",
+      "ref": "master",
+      "created_at": "2026-09-29T18:43:28Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6742660215/statuses"
+    },
+    {
+      "id": 6726944827,
+      "sha": "90a0b25e43065c80261fdb2069dad472c92e1e38",
+      "ref": "master",
+      "created_at": "2026-09-29T04:50:44Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6726944827/statuses"
+    },
+    {
+      "id": 6714486785,
+      "sha": "d5fcb8214994d3f2fe44a85d324e355fd2f6dc3c",
+      "ref": "master",
+      "created_at": "2026-09-28T15:59:28Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6714486785/statuses"
+    },
+    {
+      "id": 6711781434,
+      "sha": "d5145c3af4fdfb157fe1a557c392c15321ae8a1f",
+      "ref": "master",
+      "created_at": "2026-09-28T14:00:09Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6711781434/statuses"
+    },
+    {
+      "id": 6451400289,
+      "sha": "17b3494e4f16972edde3d3d77d058102d6f4ee2c",
+      "ref": "master",
+      "created_at": "2026-09-15T03:58:40Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6451400289/statuses"
+    },
+    {
+      "id": 6449182309,
+      "sha": "168592599475108e253e646115121402996e2d00",
+      "ref": "master",
+      "created_at": "2026-09-15T00:32:26Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6449182309/statuses"
+    },
+    {
+      "id": 6446187447,
+      "sha": "6c8ef64adb16b3987e34ece3f5c6d6acf31973ea",
+      "ref": "master",
+      "created_at": "2026-09-14T20:50:31Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6446187447/statuses"
+    },
+    {
+      "id": 6443518582,
+      "sha": "faf5521b3244bd635d23989396947515b54473ce",
+      "ref": "master",
+      "created_at": "2026-09-14T18:18:14Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6443518582/statuses"
+    },
+    {
+      "id": 6439389740,
+      "sha": "05f6b904195ca2a654bd76b2d06b69afb3fb7a4c",
+      "ref": "master",
+      "created_at": "2026-09-14T14:35:05Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6439389740/statuses"
+    },
+    {
+      "id": 6434200887,
+      "sha": "19a0bf88c7701071f2b788845a030751cfd249c3",
+      "ref": "master",
+      "created_at": "2026-09-14T09:29:27Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6434200887/statuses"
+    },
+    {
+      "id": 6365511099,
+      "sha": "4a7511f9594d0a74906e427e158d02343ba33a22",
+      "ref": "master",
+      "created_at": "2026-09-10T05:54:24Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6365511099/statuses"
+    },
+    {
+      "id": 6348313716,
+      "sha": "ff243fffc2a3c8e7d7d1b169e77d7c3914cf0f1e",
+      "ref": "master",
+      "created_at": "2026-09-09T11:08:57Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6348313716/statuses"
+    },
+    {
+      "id": 6341789184,
+      "sha": "b6630ceb31c3d30e4bdc6529c622354b1e34c181",
+      "ref": "master",
+      "created_at": "2026-09-09T03:19:46Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6341789184/statuses"
+    },
+    {
+      "id": 6339143688,
+      "sha": "759daca733791e17eec0e462bfd1fb9a1bea9b7c",
+      "ref": "master",
+      "created_at": "2026-09-08T23:22:51Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6339143688/statuses"
+    },
+    {
+      "id": 6312722070,
+      "sha": "92cbb52b470741be795b95f981e67f398c4cbc81",
+      "ref": "master",
+      "created_at": "2026-09-07T16:32:05Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6312722070/statuses"
+    },
+    {
+      "id": 6307427022,
+      "sha": "1587b4e4d63dc34bf13239712243c698a88ffd83",
+      "ref": "master",
+      "created_at": "2026-09-07T11:12:31Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6307427022/statuses"
+    },
+    {
+      "id": 6306788499,
+      "sha": "22d60d4fa550db9de4953bd4c9e087b5832ed3d4",
+      "ref": "master",
+      "created_at": "2026-09-07T10:31:27Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6306788499/statuses"
+    },
+    {
+      "id": 6289880754,
+      "sha": "3dc64ff1734004c2e51cc2a5e6a99a59c85ae1a2",
+      "ref": "master",
+      "created_at": "2026-09-06T06:19:19Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6289880754/statuses"
+    },
+    {
+      "id": 6263114158,
+      "sha": "f63df811e1e83aacc5bd3015c63b9f436d09a5ea",
+      "ref": "master",
+      "created_at": "2026-09-04T11:14:40Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6263114158/statuses"
+    },
+    {
+      "id": 6261550192,
+      "sha": "f7baa2fbf929ae25ecd406982b66d9f4c69c239f",
+      "ref": "master",
+      "created_at": "2026-09-04T09:26:45Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6261550192/statuses"
+    },
+    {
+      "id": 6192689808,
+      "sha": "e719e8d09ab8d794571a6d16d664332d4d26093c",
+      "ref": "master",
+      "created_at": "2026-09-01T01:25:30Z",
+      "statuses_url": "https://api.github.com/repos/Labradorca/aheart-ui/deployments/6192689808/statuses"
+    }
+  ],
+  "pagesStatuses": [
+    {
+      "id": 7831655329,
+      "sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+      "statuses": [
+        {
+          "state": "success",
+          "environment_url": "https://labradorca.github.io/aheart-ui/",
+          "log_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43920744949/job/133487492727",
+          "created_at": "2026-11-16T17:41:04Z"
+        },
+        {
+          "state": "in_progress",
+          "environment_url": "",
+          "log_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43920744949/job/133487492727",
+          "created_at": "2026-11-16T17:40:47Z"
+        },
+        {
+          "state": "queued",
+          "environment_url": "",
+          "log_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43920744949/job/133487492727",
+          "created_at": "2026-11-16T17:40:44Z"
+        },
+        {
+          "state": "waiting",
+          "environment_url": "",
+          "log_url": "https://github.com/Labradorca/aheart-ui/actions/runs/43920744949/job/133487492727",
+          "created_at": "2026-11-16T17:40:42Z"
+        }
+      ]
+    },
+    {
+      "id": 7702690937,
+      "sha": "9889ce995e647ee6b6868bd826a973be074691b0",
+      "statuses": [
+        {
+          "state": "inactive",
+          "environment_url": "",
+          "log_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42966860141/job/130346168945",
+          "created_at": "2026-11-11T09:21:12Z"
+        },
+        {
+          "state": "success",
+          "environment_url": "https://labradorca.github.io/aheart-ui/",
+          "log_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42966860141/job/130346168945",
+          "created_at": "2026-11-11T05:37:16Z"
+        },
+        {
+          "state": "in_progress",
+          "environment_url": "",
+          "log_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42966860141/job/130346168945",
+          "created_at": "2026-11-11T05:37:07Z"
+        },
+        {
+          "state": "queued",
+          "environment_url": "",
+          "log_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42966860141/job/130346168945",
+          "created_at": "2026-11-11T05:37:05Z"
+        },
+        {
+          "state": "queued",
+          "environment_url": "",
+          "log_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42966860141/job/130346168945",
+          "created_at": "2026-11-11T05:37:04Z"
+        },
+        {
+          "state": "waiting",
+          "environment_url": "",
+          "log_url": "https://github.com/Labradorca/aheart-ui/actions/runs/42966860141/job/130346168945",
+          "created_at": "2026-11-11T05:37:03Z"
+        }
+      ]
+    }
+  ],
+  "npm": [
+    {
+      "name": "aheart-ui",
+      "result": {
+        "version": "1.3.0",
+        "dist-tags": {
+          "latest": "1.3.0"
+        },
+        "dist.integrity": "sha512-w3h6Vp/+v/+4cUPtdZrn54pY4wS/mQj00zpZT62pWyXe6nVGpbiPYfSKHJ7kt9UL/HPt0JSmPhX9T+TAfK+E2Q=="
+      }
+    },
+    {
+      "name": "@aheart-ui/ai",
+      "result": {
+        "version": "1.1.0",
+        "dist-tags": {
+          "latest": "1.1.0"
+        },
+        "dist.integrity": "sha512-IFl3JfqqAL/4qE32qEujgIyndidYMEx3oxeopQ9J7Xvxr+7VeCwDNrbp0sj/5dafFTRVCfGRU5w/Psh/vqpmvw=="
+      }
+    },
+    {
+      "name": "@aheart-ui/dnd",
+      "result": {
+        "version": "1.1.0",
+        "dist-tags": {
+          "latest": "1.1.0"
+        },
+        "dist.integrity": "sha512-Rg64ck5Ernu3GcR6BHf0C0SwRUpRMF0WFUQdNFkqvd46+ZbbRusRU4yFZ7tr7RRMhli15v/H1Gh2DfCVnzFJTA=="
+      }
+    }
+  ],
+  "inventory": {
+    "readyCount": 49,
+    "ready": [
+      "button",
+      "config-provider",
+      "icon",
+      "typography",
+      "space",
+      "divider",
+      "splitter",
+      "flex",
+      "grid",
+      "tabs",
+      "breadcrumb",
+      "dropdown",
+      "menu",
+      "steps",
+      "input",
+      "date-picker",
+      "time-picker",
+      "upload",
+      "tree",
+      "tree-select",
+      "cascader",
+      "dnd",
+      "textarea",
+      "input-number",
+      "checkbox",
+      "radio",
+      "switch",
+      "combobox",
+      "select",
+      "form",
+      "tag",
+      "badge",
+      "card",
+      "empty",
+      "descriptions",
+      "table",
+      "pagination",
+      "alert",
+      "message",
+      "modal",
+      "drawer",
+      "tooltip",
+      "popover",
+      "popconfirm",
+      "spin",
+      "skeleton",
+      "ai",
+      "ai-form",
+      "ai-agent-workbench"
+    ],
+    "skipSites": 41,
+    "readyByPackage": {
+      "aheart-ui": 45,
+      "@aheart-ui/dnd": 1,
+      "@aheart-ui/ai": 3
+    },
+    "entries": {
+      "base": {
+        "count": 4,
+        "subpaths": [
+          "button",
+          "combobox",
+          "modal",
+          "select"
+        ]
+      },
+      "ai": {
+        "count": 16,
+        "subpaths": [
+          "actions",
+          "attachments",
+          "bubble",
+          "conversations",
+          "form",
+          "process",
+          "prompts",
+          "sender",
+          "sources",
+          "thought-chain",
+          "welcome",
+          "chat-panel",
+          "agent-workbench",
+          "chat",
+          "agent",
+          "workbench"
+        ]
+      },
+      "dnd": {
+        "count": 4,
+        "subpaths": [
+          "draggable",
+          "droppable",
+          "drag-overlay",
+          "sortable"
+        ]
+      }
+    }
+  },
+  "sourceHashes": {
+    "docs/superpowers/evidence/d9-skip-ledger.json": "36247b59b0f748278a4ba13380e6f8f00c18e738538656e53397ffd0b2e71ceb",
+    "packages/components/src/constant/entries.json": "d7baad244e5ba559aca5fb7f2ffcdab7de93343d9fb68c1a19dac86d0a916035",
+    "docs/.vitepress/data/components.ts": "e7a1c4a6dbe47edaf46c49d66ab3d6d978fe311167af0add35619047749c609b",
+    "docs/.vitepress/theme/V2Roadmap.vue": "e3cbf89add7a15ff39632dc19964cc0b3c3179056ce6038e74c8de2302768c6a"
+  }
+}

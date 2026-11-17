@@ -1,0 +1,24 @@
+✔ Chinese docs shell and component status copy stay localized (12.985917ms)
+✔ DnD docs use visible handles and assign physical iOS touch evidence to QG5 (1.629875ms)
+✔ docs GitHub social icon is local, labelled, and non-empty (1.00775ms)
+✔ M3 public import examples match the shared release entry contract (8.770334ms)
+✔ candidate navigation links to the migration guide and its scenario anchors (1.034875ms)
+✔ documented component and scenario subpaths have quality matrix coverage (1.934916ms)
+✔ records owner-cancelled physical acceptance and keeps optional historical evidence distinct from automation (0.860209ms)
+✔ documents the two-stage master stability gate and exposes the guide in Chinese navigation (0.278333ms)
+✔ describes always-retained and failure-only browser evidence accurately (0.224667ms)
+✔ D9 skip ledger registers every static e2e skip with owner, issue and expiry (24.670791ms)
+✔ D9 skip ledger rejects an expiry date before the execution date (4.154041ms)
+✔ quality matrix registers every Ready component exactly once with release evidence (116.968792ms)
+✔ QG4 matrix records only component-specific accessibility and visual evidence (1.888417ms)
+✔ quality matrix uses the planned mutually exclusive risk mapping (0.16625ms)
+✔ R1 records have current component evidence and product task metadata (0.140208ms)
+✔ pull request template requires product task and quality matrix review (0.642459ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 183.377416

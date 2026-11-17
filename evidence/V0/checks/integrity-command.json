@@ -1,0 +1,8 @@
+{
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path\nimport re, hashlib, json\npaths=[Path('docs/superpowers/specs/2026-11-17-aheart-ui-v2-amendment-a2-draft.md'),*Path('docs/superpowers/plans').glob('2026-11-17-aheart-ui-*.md'),Path('evidence/M2/decision-log.md'),Path('evidence/M3/decision-log.md'),*Path('evidence/V0').rglob('*.md')]\nmissing=[]\nfor p in paths:\n for target in re.findall(r'\\[[^\\]]*\\]\\(([^)]+)\\)',p.read_text()):\n  if target.startswith(('https:','http:','#')): continue\n  if not (p.parent/target.split('#')[0]).exists(): missing.append((str(p),target))\nassert not missing, missing\nprint('All new Markdown local links resolve')\naudit=json.loads(Path('evidence/V0/source-audit.json').read_text())\nfor p,digest in audit['sourceHashes'].items():\n assert hashlib.sha256(Path(p).read_bytes()).hexdigest()==digest,p\nprint('Four original specifications and A1 unchanged')\nfacts=json.loads(Path('evidence/V0/facts.json').read_text())\np=Path('docs/.vitepress/theme/V2Roadmap.vue')\nassert hashlib.sha256(p.read_bytes()).hexdigest()==facts['sourceHashes'][str(p)]\nprint('Roadmap Vue unchanged')\nfor asset in facts['release']['assets']:\n p=Path('evidence/V0/upstream-release')/asset['name']\n if p.exists():\n  assert 'sha256:'+hashlib.sha256(p.read_bytes()).hexdigest()==asset['digest'],p\n  print('Release digest matched:',p.name)\na2=Path('docs/superpowers/specs/2026-11-17-aheart-ui-v2-amendment-a2-draft.md').read_text()\nassert '- [x]' not in a2\nv0=Path('evidence/V0/decision-log.md').read_text()\nassert '| 是否启动 v2 |  |  |' in v0\nprint('A2 approval remains unchecked; v2 decision remains blank')\n"
+  ],
+  "exitCode": 0
+}

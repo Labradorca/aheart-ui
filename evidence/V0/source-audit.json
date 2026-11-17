@@ -1,0 +1,64 @@
+{
+  "baseline": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+  "packages": {
+    "components": {
+      "generatedJsFiles": 648,
+      "realCssImports": [],
+      "placeholderCssImports": [
+        {
+          "file": "packages/components/es/index.js",
+          "import": "./theme/index.css.js"
+        },
+        {
+          "file": "packages/components/es/tooltip/tooltip.vue.js",
+          "import": "../utils/floating.css.js"
+        },
+        {
+          "file": "packages/components/es/popconfirm/popconfirm.vue.js",
+          "import": "../utils/floating.css.js"
+        },
+        {
+          "file": "packages/components/es/popover/popover.vue.js",
+          "import": "../utils/floating.css.js"
+        },
+        {
+          "file": "packages/components/lib/index.js",
+          "import": "./theme/index.css.js"
+        },
+        {
+          "file": "packages/components/lib/tooltip/tooltip.vue.js",
+          "import": "../utils/floating.css.js"
+        },
+        {
+          "file": "packages/components/lib/popconfirm/popconfirm.vue.js",
+          "import": "../utils/floating.css.js"
+        },
+        {
+          "file": "packages/components/lib/popover/popover.vue.js",
+          "import": "../utils/floating.css.js"
+        }
+      ],
+      "trackedEsLibFiles": 1096
+    },
+    "ai": {
+      "generatedJsFiles": 98,
+      "realCssImports": [],
+      "placeholderCssImports": [],
+      "trackedEsLibFiles": 202
+    },
+    "dnd": {
+      "generatedJsFiles": 48,
+      "realCssImports": [],
+      "placeholderCssImports": [],
+      "trackedEsLibFiles": 100
+    }
+  },
+  "sourceHashes": {
+    "docs/superpowers/specs/2026-09-08-aheart-ui-product-and-technical-master-plan.md": "c411f5d830e3c825f78d621b4dc3b4d0621fe974b79b9df40862b6c52dd8f353",
+    "docs/superpowers/specs/2026-09-08-aheart-ui-v2-phase-acceptance-criteria.md": "baeda6da7c53d897594e9e61e324f2589ae132f1bdacbd8cd26f681a068a4624",
+    "docs/superpowers/specs/2026-09-08-aheart-ui-v2-task-flow-checklist.md": "3e8d8c7d7f3bea7a8fa88c6ad2077bb64f319f8b75ec945ea9e153ddff8d79e4",
+    "docs/superpowers/specs/2026-09-08-aheart-ui-v2-architecture-optimization-design.md": "1c8ee8fbe3abed9f4a4901a4171976887b367d117a55cddb5ea6568008e5a271",
+    "docs/superpowers/specs/2026-11-05-aheart-ui-v2-solo-scope-amendment.md": "4d586c39272e06c4bd9810a737eb5e2a8d465d54437f40af07a224d47514f83d"
+  },
+  "copiedDraftSha256": "b96322a00179b8c3950736d630136748f6850b93268bb1e47cdc91dc0a7347a8"
+}
