@@ -1,0 +1,21 @@
+{
+  "sourceCommit": "83204817713e34bb4dbdf8fcb2102c80c40e606b",
+  "roadmapSha256": "0712071b3f2c71c55f45bbd9e51416fab31f8555cd1953e1bab8947e61ea8224",
+  "screenshots": [
+    {
+      "path": "1185.png",
+      "sha256": "831cf43f10c52a58f74537e20f520fbef4ef457086ec9f55fd8553b3e21856f8",
+      "capturedAt": "2026-11-17T07:29:41.274481+00:00"
+    },
+    {
+      "path": "390.png",
+      "sha256": "58f1fec4e2e5aad38b1f745c3b54ac4a1b3366a789223c28d018d385f486dd4e",
+      "capturedAt": "2026-11-17T07:29:42.197478+00:00"
+    },
+    {
+      "path": "go.png",
+      "sha256": "ce2446603d6fc9a8e899fe082c20576c6eeb3f795dce66bd27c96c078115b568",
+      "capturedAt": "2026-11-17T07:29:42.259676+00:00"
+    }
+  ]
+}

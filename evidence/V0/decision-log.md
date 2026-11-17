@@ -30,12 +30,14 @@
 
 ## 一张验收表（A2-7 格式，非批准声明）
 
+本表是随 PR 提交的证据快照，不预填合并后的结果。最终合并 SHA、Main CI 与 Pages 以 [PR #51](https://github.com/Labradorca/aheart-ui/pull/51) 的结果说明和其对应工作流为准；提交时的未完成状态不冒充合并后状态。
+
 | 项目 | 分项状态 | 证据 | SHA / 时间 | 责任人 |
 | --- | --- | --- | --- | --- |
 | G1 设计 | A2 已批准；v2 Go 已由负责人决定；待合入生效 | A2、合并计划、弃用表及 [直接回复](owner-decisions-2026-11-17.md)；开 PR 和合并/Pages 分开授权 | 2026-11-17 | wzfdhr |
 | G2 代码 | Local：文档/证据/PR 模板与路线图文案候选 | 本节交付清单；原规范/A1 保持原样，路线图保留 #50 布局 | 实施基线 `287058d`；路线图源提交 `17e7256` | Codex |
 | G3 自动检查 | 见检查记录的逐项退出码 | [检查记录](checks/README.md)、[checks.json](checks/results.json)；测试仅说明此次文档范围 | 基线 + 本地 diff | Codex |
-| G4 视觉 | 代理已检查批准状态更新后的实际生产预览宽/窄视口；操作验收仍未代填 | [当前截图与观察](roadmap-approved/README.md)；[审批前记录](roadmap-after-pr50/README.md) 及 CSS zoom 限制保留；原 M2/M3 不补造 | `c70c5a53f045f8506d38533829e93c4ab5e52141` | Codex 观察 / wzfdhr 验收 |
+| G4 视觉 | 代理已查看最终生效条件文案的宽/窄生产预览；操作验收仍未代填 | [最终运行与截图](roadmap-effective/README.md)、[独立 Chrome 观察](roadmap-approved/README.md)；CSS zoom 限制保留；原 M2/M3 不补造 | `83204817713e34bb4dbdf8fcb2102c80c40e606b` | Codex 观察 / wzfdhr 验收 |
 | G5 包 | npm pack：N/A（纯文档候选，未重打包） | 上游三包 Release 附件只作已有证据引用 | 已有发布基线 `735d3d33` | N/A |
 | G6 PR / 合并 | PR：Draft，待审；Merged：否 | [PR #51](https://github.com/Labradorca/aheart-ui/pull/51)；最终 head 的 PR CI 看该 PR 实时检查，不能以 PR CI 替代合并后主线 CI；合并及 Pages 另需明确授权 | 2026-11-17；创建快照见 [pr-created.json](pr-created.json) | wzfdhr |
 | G7 主线 CI / Pages | Main CI：本候选缺失；Pages：本候选未部署 | facts.json 中成功记录属于基线及历史 SHA，不能代表本候选 | 本候选缺失 | 待授权后 CI |

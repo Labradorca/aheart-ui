@@ -1,6 +1,6 @@
 # A2 批准与 v2 Go 后的路线图复核
 
-2026-11-17；源提交 `c70c5a53f045f8506d38533829e93c4ab5e52141`。负责人已在 [直接回复](../owner-decisions-2026-11-17.md) 中批准 A2 并选择 v2 Go。本轮仅同步文案与决定记录，保留 #50 布局；合入 master 前仍按 A1，不把批准计划写成阶段已启动或 V0 已通过。
+2026-11-17；源提交 `c70c5a53f045f8506d38533829e93c4ab5e52141`。负责人已在 [直接回复](../owner-decisions-2026-11-17.md) 中批准 A2 并选择 v2 Go。本轮是批准后、最终生效条件措辞前的运行快照；最终短文案复核见 [当前记录](../roadmap-effective/README.md)。本轮仅同步文案与决定记录，保留 #50 布局；合入 master 前仍按 A1，不把批准计划写成阶段已启动或 V0 已通过。
 
 - `node evidence/V0/run-checks.mjs docs-and-matrix docs-build`：16 项脚本和文档生产构建均 exit 0，详见 [检查记录](../checks/README.md)。
 - `corepack pnpm --dir docs preview --host 127.0.0.1 --port 65367 --strictPort` 服务生产结果；URL 为 `http://127.0.0.1:65367/roadmap/v2`。
