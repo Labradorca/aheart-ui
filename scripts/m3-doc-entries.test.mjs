@@ -25,7 +25,7 @@ test('candidate navigation links to the migration guide and its scenario anchors
     read('docs/.vitepress/config.ts'), read('docs/guide/m3-migration.md'),
     read('docs/ai/overview.md'), read('docs/dnd/overview.md')
   ])
-  assert.match(config, /link: '\/guide\/m3-migration'/)
+  assert.match(config.replaceAll('"', "'"), /link: '\/guide\/m3-migration'/)
   for (const [page, name] of [[ai, 'AI'], [dnd, 'DND']]) {
     assert.ok(page.includes(`../guide/m3-migration#${name.toLowerCase()}`))
     assert.ok(guide.split('\n').includes(`## ${name}`))

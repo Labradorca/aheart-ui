@@ -7,15 +7,17 @@ test.describe('GitHub Pages v2 product information architecture', () => {
     await page.goto('/')
 
     const nav = page.locator('.VPNavBarMenu')
-    for (const label of ['开始', '基础组件', '组合组件', 'AI 产品', '工程质量', '路线图']) {
+    await expect(nav.getByRole('link', { name: '指南', exact: true })).toBeVisible()
+    await expect(nav.getByRole('link', { name: 'AI 产品', exact: true })).toHaveAttribute('href', /\/ai\/overview/)
+    await nav.getByRole('button', { name: '组件', exact: true }).hover()
+    for (const label of ['基础组件', '组合组件']) {
       await expect(nav.getByRole('link', { name: label, exact: true })).toBeVisible()
     }
-    await expect(nav.getByText('扩展能力', { exact: true })).toBeVisible()
-    await nav.getByText('扩展能力', { exact: true }).hover()
+    await nav.getByRole('button', { name: '扩展能力', exact: true }).hover()
     for (const label of ['Motion', 'DND', 'Icons']) {
-      await expect(page.getByRole('link', { name: label, exact: true })).toBeVisible()
+      await expect(nav.getByRole('link', { name: label, exact: true })).toBeVisible()
     }
-    await expect(nav.getByRole('link', { name: 'AI 产品', exact: true })).toHaveAttribute('href', /\/ai\/overview/)
+    await nav.getByRole('button', { name: '项目', exact: true }).hover()
     await expect(nav.getByRole('link', { name: '路线图', exact: true })).toHaveAttribute('href', /\/roadmap\/v2/)
 
     await page.goto('/components/overview')
@@ -24,7 +26,7 @@ test.describe('GitHub Pages v2 product information architecture', () => {
     await expect(page.locator('[data-domain="ai"]')).toHaveCount(0)
     await expect(page.locator('[data-domain="advanced"]')).toHaveCount(0)
     await expect(page.locator('a[href*="/components/form"]')).toHaveCount(0)
-    await expect(page.locator('.aheart-component-overview__release')).toContainText('已发布')
+    await expect(page.getByLabel('查找组件', { exact: true })).toBeVisible()
   })
 
   test('each new product area has an independent landing and explicit state copy', async ({ page }, testInfo) => {
@@ -108,7 +110,7 @@ test.describe('GitHub Pages v2 product information architecture', () => {
   test('Chinese shell and state copy stay localized', async ({ page }, testInfo) => {
     test.skip(testInfo.project.name !== 'mobile', 'mobile shell copy check')
     await page.goto('/components/overview')
-    await expect(page.locator('.aheart-component-overview__eyebrow')).toHaveText('基础组件 / 中文站')
+    await expect(page.getByRole('navigation', { name: '文档路径' })).toContainText('组件文档')
     await expect(page.locator('.aheart-component-item .aheart-status').first()).toHaveText('当前可用 / 已验证')
     await expect(page.getByText('菜单', { exact: true })).toBeVisible()
     await expect(page.getByRole('button', { name: '返回顶部' })).toBeVisible()
@@ -131,4 +133,41 @@ test.describe('GitHub Pages v2 product information architecture', () => {
       expect(blocking, `Blocking accessibility findings on ${path}`).toEqual([])
     }
   })
+})
+
+test('catalog search filters, explains empty results and resets', async ({ page }) => {
+  await page.goto('/components/overview')
+  const search = page.getByLabel('查找组件', { exact: true })
+  await search.fill('button')
+  await expect(page.locator('.aheart-component-item')).toHaveCount(1)
+  await expect(page.locator('.aheart-component-item')).toContainText('Button')
+  await search.fill('no-such-component-xyz')
+  await expect(page.getByRole('heading', { name: '没有匹配的组件' })).toBeVisible()
+  await page.getByRole('button', { name: '清除搜索' }).click()
+  await expect(page.locator('.aheart-component-item')).toHaveCount(28)
+})
+
+test('product area search preserves matching document links', async ({ page }) => {
+  await page.goto('/ai/overview')
+  const search = page.getByLabel('查找能力', { exact: true })
+  const rows = page.locator('.aheart-product-area__card')
+  const total = await rows.count()
+  await search.fill('Chat')
+  await expect(rows.first()).toContainText('Chat')
+  await expect(rows.first().getByRole('link')).toHaveAttribute('href', /components/)
+  await search.fill('no-such-capability-xyz')
+  await expect(page.getByRole('heading', { name: '没有匹配的能力' })).toBeVisible()
+  await page.getByRole('button', { name: '清除搜索' }).click()
+  await expect(rows).toHaveCount(total)
+})
+
+test('global documentation search opens and returns indexed content', async ({ page }) => {
+  await page.goto('/guide/introduction')
+  await page.getByRole('button', { name: '搜索文档' }).click()
+  const search = page.locator('#localsearch-input')
+  await expect(search).toBeVisible()
+  await search.fill('Button')
+  await expect(page.locator('.VPLocalSearchBox .result').first()).toBeVisible()
+  await page.keyboard.press('Escape')
+  await expect(search).not.toBeVisible()
 })

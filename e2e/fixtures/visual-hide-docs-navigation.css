@@ -3,3 +3,40 @@
 .VPLocalNav {
   visibility: hidden !important;
 }
+
+/* These baselines measure library surfaces, not the surrounding documentation.
+   Freeze the original specimen framing while the docs theme evolves. */
+.VPDoc .content-container,
+.VPDoc.has-aside .content-container {
+  max-width: 688px !important;
+  padding: 0 !important;
+}
+.vp-doc .aheart-demo-panel {
+  font-family: 'Inter', sans-serif;
+  color: #3c3c43;
+  background: #fff;
+  margin: 18px 0;
+  padding: 18px;
+  min-height: 0;
+  display: block;
+  border: 1px solid #e6e8ef;
+  border-radius: 8px;
+}
+.aheart-drawer__panel,
+.aheart-ai-workbench {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+:root {
+  --vp-font-family-base: 'Punctuation SC', 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+.vp-doc .aheart-demo-panel,
+.aheart-drawer__panel,
+.aheart-ai-workbench {
+  font-family: var(--vp-font-family-base);
+}
+@media (min-width: 960px) {
+  .aheart-ai-workbench {
+    width: 1040px;
+    max-width: none;
+  }
+}

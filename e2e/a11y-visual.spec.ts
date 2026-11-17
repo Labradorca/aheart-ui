@@ -10,7 +10,7 @@ const hideDocsNavigation = join(__dirname, 'fixtures/visual-hide-docs-navigation
 
 const surfaceScreenshotOptions = (component: string) => ({
   animations: 'disabled' as const,
-  ...(component === 'splitter' ? { stylePath: hideDocsNavigation } : {}),
+  stylePath: hideDocsNavigation,
   ...(component === 'ai-agent-workbench' ? { maxDiffPixels: 16 } : {})
 })
 
@@ -355,7 +355,7 @@ test.describe('QG4 accessibility and visual regression gates', () => {
     await expect(drawer).toContainText('产物')
     await drawer.locator('.aheart-drawer__body').evaluate((element) => { element.scrollTop = 0 })
     await expect(priority).toBeVisible()
-    await expect(drawer).toHaveScreenshot('ai-agent-workbench-execution-mobile-390x844.png', { animations: 'disabled' })
+    await expect(drawer).toHaveScreenshot('ai-agent-workbench-execution-mobile-390x844.png', { animations: 'disabled', stylePath: hideDocsNavigation })
   })
 
   test('AI Workbench opens the pending approval directly from the mobile summary', async ({ page }, testInfo) => {
@@ -374,7 +374,13 @@ test.describe('QG4 accessibility and visual regression gates', () => {
     await page.setViewportSize({ width: 1440, height: 900 })
     for (const component of components) {
       await gotoComponent(page, component)
+      await page.addStyleTag({ path: hideDocsNavigation })
+      await page.evaluate(async () => { await document.fonts.load('14px Inter'); await document.fonts.ready })
       const surface = await getComponentSurface(page, component)
+      await surface.evaluate((element) => {
+        const rect = element.getBoundingClientRect()
+        ;(element as HTMLElement).style.transform = `translate(${Math.round(rect.x) - rect.x}px, ${Math.round(rect.y) - rect.y}px)`
+      })
       await expect(surface).toHaveScreenshot(`${component}-desktop-1440x900.png`, surfaceScreenshotOptions(component))
     }
   })
@@ -383,7 +389,13 @@ test.describe('QG4 accessibility and visual regression gates', () => {
     await page.setViewportSize({ width: 390, height: 844 })
     for (const component of components) {
       await gotoComponent(page, component)
+      await page.addStyleTag({ path: hideDocsNavigation })
+      await page.evaluate(async () => { await document.fonts.load('14px Inter'); await document.fonts.ready })
       const surface = await getComponentSurface(page, component)
+      await surface.evaluate((element) => {
+        const rect = element.getBoundingClientRect()
+        ;(element as HTMLElement).style.transform = `translate(${Math.round(rect.x) - rect.x}px, ${Math.round(rect.y) - rect.y}px)`
+      })
       await expect(surface).toHaveScreenshot(`${component}-mobile-390x844.png`, surfaceScreenshotOptions(component))
     }
   })
