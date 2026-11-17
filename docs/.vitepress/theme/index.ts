@@ -10,6 +10,9 @@ import "@aheart-ui/dnd/style.css";
 import "./style.css";
 import DocContext from "./DocContext.vue";
 import "./site.css";
+import "./studio.css";
+import "./editorial.css";
+import "./reference.css";
 import ComponentOverview from "./ComponentOverview.vue";
 import QualityMatrix from "./QualityMatrix.vue";
 

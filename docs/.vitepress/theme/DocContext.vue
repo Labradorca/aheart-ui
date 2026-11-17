@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useData, withBase } from "vitepress";
+import DocInteractions from "./DocInteractions.vue";
 import ComponentContext from "./ComponentContext.vue";
 const { page } = useData();
 const section = computed(() => {
@@ -29,6 +30,6 @@ const section = computed(() => {
       <a :href="withBase('/')">Aheart UI</a><span aria-hidden="true">/</span
       ><a :href="withBase(section.href)">{{ section.name }}</a>
     </nav>
-    <ComponentContext />
+    <ComponentContext /><DocInteractions />
   </div>
 </template>

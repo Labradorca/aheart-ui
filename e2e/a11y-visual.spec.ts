@@ -10,7 +10,7 @@ const hideDocsNavigation = join(__dirname, 'fixtures/visual-hide-docs-navigation
 
 const surfaceScreenshotOptions = (component: string) => ({
   animations: 'disabled' as const,
-  ...(component === 'splitter' ? { stylePath: hideDocsNavigation } : {}),
+  stylePath: hideDocsNavigation,
   ...(component === 'ai-agent-workbench' ? { maxDiffPixels: 16 } : {})
 })
 

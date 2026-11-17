@@ -110,6 +110,7 @@ const itemOrder = (list: Locator) => list.locator('[data-item-id]').evaluateAll(
 )
 
 const pointerResizeBy = async (page: Page, handle: Locator, deltaX: number, deltaY: number) => {
+  await handle.scrollIntoViewIfNeeded()
   const box = await handle.boundingBox()
   expect(box).not.toBeNull()
   const startX = box!.x + box!.width / 2
@@ -206,6 +207,7 @@ test.describe('QG2 中文 DnD fixture', () => {
     const handle = itemHandle(todo, '整理需求')
     const target = item(todo, '准备发布')
     await source.scrollIntoViewIfNeeded()
+    await handle.scrollIntoViewIfNeeded()
     const handleBox = await handle.boundingBox()
     const targetBox = await target.boundingBox()
     expect(handleBox).not.toBeNull()
@@ -272,6 +274,7 @@ test.describe('QG2 中文 DnD fixture', () => {
     const handle = itemHandle(todo, '整理需求')
     const target = item(todo, '准备发布')
     await source.scrollIntoViewIfNeeded()
+    await handle.scrollIntoViewIfNeeded()
     const handleBox = await handle.boundingBox()
     const targetBox = await target.boundingBox()
     expect(handleBox).not.toBeNull()
@@ -689,6 +692,7 @@ test.describe('QG2 中文 Splitter fixture', () => {
     const handle = lazy.getByRole('separator')
     const panel = lazy.locator('.aheart-splitter__panel').first()
     await lazy.scrollIntoViewIfNeeded()
+    await handle.scrollIntoViewIfNeeded()
     const handleBox = await handle.boundingBox()
     const beforeBox = await panel.boundingBox()
     const beforeValues = await page.getByTestId('splitter-lazy-values').textContent()
@@ -716,6 +720,7 @@ test.describe('QG2 中文 Splitter fixture', () => {
     const handle = lazy.getByRole('separator')
     const panel = lazy.locator('.aheart-splitter__panel').first()
     await lazy.scrollIntoViewIfNeeded()
+    await handle.scrollIntoViewIfNeeded()
     const handleBox = await handle.boundingBox()
     const beforeBox = await panel.boundingBox()
     const beforeValues = await page.getByTestId('splitter-lazy-values').textContent()
@@ -751,6 +756,7 @@ test.describe('QG2 中文 Splitter fixture', () => {
     const handle = lazy.getByRole('separator')
     const panel = lazy.locator('.aheart-splitter__panel').first()
     await lazy.scrollIntoViewIfNeeded()
+    await handle.scrollIntoViewIfNeeded()
     const handleBox = await handle.boundingBox()
     const beforeBox = await panel.boundingBox()
     const beforeValues = await page.getByTestId('splitter-lazy-values').textContent()
@@ -804,6 +810,7 @@ test.describe('QG2 中文 Splitter fixture', () => {
     const handle = splitter.getByRole('separator')
     const panel = splitter.locator('.aheart-splitter__panel').first()
     await splitter.scrollIntoViewIfNeeded()
+    await handle.scrollIntoViewIfNeeded()
     const handleBox = await handle.boundingBox()
     const beforePanel = await panel.boundingBox()
     const bodyStyle = await page.locator('body').evaluate((body) => ({ cursor: body.style.cursor, userSelect: body.style.userSelect }))
@@ -838,6 +845,7 @@ test.describe('QG2 中文 Splitter fixture', () => {
     const handle = fixture.getByRole('separator')
     await fixture.scrollIntoViewIfNeeded()
     const bodyStyle = await page.locator('body').evaluate((body) => ({ cursor: body.style.cursor, userSelect: body.style.userSelect }))
+    await handle.scrollIntoViewIfNeeded()
     const handleBox = await handle.boundingBox()
     expect(handleBox).not.toBeNull()
 
@@ -859,6 +867,7 @@ test.describe('QG2 中文 Splitter fixture', () => {
 
   test('cleans global drag state when navigating between Splitter and DnD', async ({ page }) => {
     const handle = page.getByTestId('splitter-horizontal').getByRole('separator')
+    await handle.scrollIntoViewIfNeeded()
     const handleBox = await handle.boundingBox()
     const initialBodyStyle = await page.locator('body').evaluate((body) => ({ cursor: body.style.cursor, userSelect: body.style.userSelect }))
     expect(handleBox).not.toBeNull()

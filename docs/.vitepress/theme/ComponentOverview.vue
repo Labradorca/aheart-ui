@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
+import DocsPlayground from "./DocsPlayground.vue";
 import { withBase } from "vitepress";
 import { getCoreComponentDomains, statusText } from "../data/components";
 const domains = getCoreComponentDomains("zh");
@@ -33,6 +34,7 @@ const count = computed(() =>
         API。
       </p>
     </header>
+    <DocsPlayground />
     <div class="docs-catalog-tools">
       <label for="component-search">查找组件</label
       ><input
@@ -67,7 +69,11 @@ const count = computed(() =>
           >{{ domain.components.length }} 个组件</span
         >
       </header>
-      <div class="aheart-component-domain__items">
+      <TransitionGroup
+        name="docs-filter"
+        tag="div"
+        class="aheart-component-domain__items"
+      >
         <a
           v-for="component in domain.components"
           :key="component.key"
@@ -86,7 +92,7 @@ const count = computed(() =>
             >{{ statusText.zh[component.status] }}</span
           ></a
         >
-      </div>
+      </TransitionGroup>
     </section>
     <div v-if="!filtered.length" class="docs-empty">
       <h2>没有匹配的组件</h2>

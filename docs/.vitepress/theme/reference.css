@@ -1,0 +1,464 @@
+/* Hallmark: Aheart reference edition; extend the approved warm-paper homepage and Button page. */
+/* Critique: shared typography, quiet navigation and explicit content hierarchy across every route. */
+:root {
+  --docs-paper: var(--ed-paper);
+  --docs-surface: var(--ed-stage);
+  --docs-ink: var(--ed-ink);
+  --docs-muted: var(--ed-muted);
+  --docs-line: var(--ed-line);
+  --docs-tint: var(--ed-stage);
+  --docs-font: var(--ed-sans);
+  --docs-accent: var(--ed-blue);
+  --studio-paper: var(--ed-paper);
+  --studio-ink: var(--ed-ink);
+  --studio-muted: var(--ed-muted);
+  --studio-line: var(--ed-line);
+  --studio-soft: var(--ed-stage);
+}
+:root.dark {
+  --docs-paper: var(--ed-paper);
+  --docs-surface: var(--ed-stage);
+  --docs-ink: var(--ed-ink);
+  --docs-muted: var(--ed-muted);
+  --docs-line: var(--ed-line);
+  --docs-tint: var(--ed-stage);
+  --studio-paper: var(--ed-paper);
+  --studio-ink: var(--ed-ink);
+  --studio-muted: var(--ed-muted);
+  --studio-line: var(--ed-line);
+  --studio-soft: var(--ed-stage);
+}
+.VPNavBar,
+.VPSidebar,
+.VPDoc,
+.VPLocalNav {
+  background: var(--ed-paper);
+}
+.VPNavBar .title {
+  font-family: var(--ed-sans);
+  letter-spacing: -0.02em;
+}
+.VPNavBarMenuLink,
+.VPNavBarMenuGroup .text {
+  font-size: 13px;
+}
+.VPNavBarSearch .DocSearch-Button {
+  background: transparent;
+  border-color: var(--ed-line);
+  border-radius: 6px;
+}
+.VPSidebar {
+  border-right: 1px solid var(--ed-line);
+}
+.VPSidebar .group + .group {
+  border-top: 0;
+  padding-top: 16px;
+}
+.VPSidebarItem.level-0 > .item > .text {
+  color: var(--ed-muted);
+  font-size: 12px;
+  font-weight: 500;
+}
+.VPSidebarItem.is-link > .item > .link {
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+.VPSidebarItem.is-active > .item {
+  box-shadow: none;
+}
+.VPSidebarItem.is-active > .item > .link {
+  background: var(--ed-stage);
+}
+.VPSidebarItem.is-active > .item .text {
+  color: var(--ed-ink);
+  font-weight: 600;
+}
+.VPSidebarItem .text {
+  font-size: 13px;
+}
+.VPDoc .content-container {
+  padding: 0 16px 48px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+.docs-context {
+  margin-bottom: 24px;
+}
+.docs-breadcrumb {
+  color: var(--ed-muted);
+  font-size: 12px;
+}
+.aheart-component-context {
+  gap: 8px 20px;
+  border: 0;
+  padding: 12px 0 0;
+  margin-bottom: 0;
+  font-size: 11px;
+}
+.aheart-component-context__domain {
+  color: var(--ed-muted);
+  font-weight: 400;
+}
+.aheart-component-context__related {
+  color: var(--ed-muted);
+}
+.VPDoc .vp-doc > div > h1 {
+  font-family: var(--ed-sans);
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  color: var(--ed-ink);
+}
+.VPDoc .vp-doc > div > h1 .aheart-status {
+  vertical-align: middle;
+  margin-left: 12px;
+  font-size: 11px;
+}
+.VPDoc .vp-doc > div > h1 + p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--ed-muted);
+}
+.VPDoc .vp-doc > div > h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 40px;
+  padding-top: 24px;
+  color: var(--ed-ink);
+  border-color: var(--ed-line);
+}
+.VPDoc .vp-doc > div > h3 {
+  font-size: 18px;
+  color: var(--ed-ink);
+}
+.VPDoc .vp-doc > div > :is(p, ul, ol) {
+  font-size: 14px;
+  line-height: 1.9;
+}
+.VPDoc .vp-doc > div > table {
+  border-color: var(--ed-line);
+  border-radius: 6px;
+  font-size: 13px;
+}
+.VPDoc .vp-doc > div > table th {
+  background: var(--ed-stage);
+  color: var(--ed-ink);
+}
+.VPDoc .vp-doc > div > table td {
+  background: var(--ed-paper);
+  color: var(--ed-ink);
+}
+.VPDoc .vp-doc > div > div[class*="language-"] {
+  border-color: var(--ed-line);
+  background: var(--ed-stage);
+  border-radius: 6px;
+}
+.VPDoc .vp-doc > div > .custom-block {
+  background: var(--ed-stage);
+  border: 1px solid var(--ed-line);
+  border-radius: 6px;
+  color: var(--ed-ink);
+}
+.docs-demo-toolbar {
+  background: var(--ed-stage);
+  border-color: var(--ed-line);
+  color: var(--ed-muted);
+  padding: 12px 16px;
+}
+.docs-demo-toolbar button {
+  background: var(--ed-paper);
+  color: var(--ed-ink);
+  border-color: var(--ed-line);
+}
+.docs-demo-toolbar + .aheart-demo-panel {
+  border-color: var(--ed-line);
+  padding: 32px 24px;
+}
+.docs-start-links {
+  gap: 0 32px;
+  border-top: 1px solid var(--ed-line);
+  margin: 32px 0 40px;
+}
+.VPDoc .vp-doc .docs-start-links a {
+  border: 0;
+  border-bottom: 1px solid var(--ed-line);
+  border-radius: 0;
+  background: transparent;
+  padding: 24px 0;
+  box-shadow: none;
+  transform: none;
+}
+.docs-start-links strong {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--ed-ink);
+}
+.docs-start-links span {
+  font-size: 13px;
+  color: var(--ed-muted);
+}
+/* Index pages share the homepage's editorial title, with a compact reading surface. */
+.aheart-component-overview,
+.aheart-product-area,
+.aheart-roadmap {
+  padding: 0;
+}
+.aheart-component-overview__header,
+.aheart-product-area__hero,
+.aheart-roadmap__hero {
+  padding: 0 0 28px;
+  border-bottom: 1px solid var(--ed-line);
+  margin-bottom: 32px;
+}
+.aheart-component-overview__header h1,
+.aheart-product-area__hero h1,
+.aheart-roadmap__hero h1 {
+  font-family: var(--ed-serif);
+  font-size: 52px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  color: var(--ed-ink);
+  text-wrap: balance;
+}
+.aheart-component-overview__header p,
+.aheart-product-area__lead,
+.aheart-roadmap__hero > p {
+  color: var(--ed-muted);
+  font-size: 15px;
+  line-height: 1.85;
+  max-width: 64ch;
+}
+.aheart-product-area__note {
+  color: var(--ed-muted);
+  font-size: 12px;
+}
+.docs-catalog-tools {
+  padding: 16px 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+.docs-catalog-tools input {
+  background: var(--ed-paper);
+  border-color: var(--docs-control-line);
+  border-radius: 5px;
+}
+.docs-category-nav {
+  padding: 12px 0 32px;
+  border-bottom: 1px solid var(--ed-line);
+}
+.docs-category-nav a {
+  background: transparent;
+  color: var(--ed-muted);
+  padding: 8px 12px;
+  border-color: var(--ed-line);
+  border-radius: 5px;
+}
+.aheart-component-domain__header h2,
+.aheart-product-area__section-header h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--ed-ink);
+}
+.aheart-component-domain__header p,
+.aheart-product-area__section-header p {
+  color: var(--ed-muted);
+  font-size: 13px;
+}
+.aheart-component-domain__items {
+  gap: 0 32px;
+}
+.VPDoc .vp-doc .aheart-component-domain__items .aheart-component-item {
+  background: transparent;
+  padding: 24px 0;
+  min-height: 152px;
+  border: 0;
+  border-bottom: 1px solid var(--ed-line);
+  border-radius: 0;
+  box-shadow: none;
+}
+.aheart-component-item strong {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--ed-ink);
+}
+.aheart-component-item small {
+  color: var(--ed-muted);
+  font-size: 13px;
+}
+.aheart-product-area__grid {
+  gap: 0;
+}
+.aheart-product-area__card {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--ed-line);
+  border-radius: 0;
+  padding: 24px 0;
+  margin: 0;
+}
+.aheart-product-area__card h3 {
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--ed-ink);
+}
+.aheart-product-area__card p {
+  color: var(--ed-muted);
+  font-size: 13px;
+}
+.VPDoc .vp-doc .aheart-product-area__card-link {
+  color: var(--docs-accent);
+  font-size: 12px;
+  text-underline-offset: 4px;
+}
+.aheart-product-area__guardrail,
+.aheart-roadmap__guardrail {
+  padding: 20px 24px;
+  border: 1px solid var(--ed-line);
+  border-radius: 6px;
+  background: var(--ed-stage);
+  color: var(--ed-muted);
+  font-size: 13px;
+}
+.docs-playground {
+  background: var(--ed-stage);
+  color: var(--ed-ink);
+  border: 1px solid var(--ed-line);
+  border-radius: 8px;
+  padding: 28px;
+  box-shadow: none;
+}
+.docs-playground .docs-playground__intro h2 {
+  font-family: var(--ed-serif);
+  font-weight: 500;
+  font-size: 30px;
+  color: var(--ed-ink);
+}
+.docs-playground__intro p {
+  font-size: 13px;
+  color: var(--ed-muted);
+}
+.docs-playground__surface {
+  border: 1px solid var(--ed-line);
+  border-radius: 6px;
+}
+.docs-playground__tabs {
+  border-color: var(--ed-line);
+}
+.docs-playground__tabs button {
+  color: var(--studio-navy);
+}
+.docs-playground__tabs button[aria-selected="true"] {
+  color: var(--ed-blue);
+}
+.docs-playground__code {
+  border-color: var(--ed-line);
+}
+.aheart-roadmap__phase {
+  border-color: var(--ed-line);
+  background: transparent;
+}
+.aheart-roadmap__phase-marker {
+  background: var(--ed-stage);
+  color: var(--ed-ink);
+  border: 1px solid var(--ed-line);
+}
+.aheart-roadmap__phase-heading h2 {
+  color: var(--ed-ink);
+  font-size: 22px;
+}
+.aheart-quality-matrix__table-wrap {
+  border-color: var(--ed-line);
+  border-radius: 6px;
+}
+.aheart-quality-matrix :is(th, td) {
+  border-color: var(--ed-line);
+}
+.aheart-quality-matrix th {
+  background: var(--ed-stage);
+  color: var(--ed-ink);
+}
+.aheart-quality-matrix td {
+  background: var(--ed-paper);
+  color: var(--ed-ink);
+}
+.VPDocFooter .edit-link-button,
+.VPDocFooter .pager-link .title {
+  color: var(--docs-accent);
+}
+.VPDocFooter .pager-link {
+  border-color: var(--ed-line);
+  border-radius: 6px;
+  background: transparent;
+}
+.VPDoc .aside .outline-link {
+  color: var(--ed-muted);
+}
+.VPDoc .aside .outline-link.active {
+  color: var(--ed-ink);
+}
+@media (hover: hover) and (pointer: fine) {
+  .VPDoc .vp-doc .aheart-component-domain__items .aheart-component-item:hover {
+    transform: translateY(-2px);
+    box-shadow: none;
+    border-color: var(--ed-ink);
+  }
+  .aheart-product-area__card:hover {
+    transform: translateX(3px);
+  }
+  .docs-category-nav a:hover {
+    background: var(--ed-stage);
+    color: var(--ed-ink);
+  }
+  .VPDoc .vp-doc .docs-start-links a:hover strong {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+@media (max-width: 640px) {
+  .VPDoc .content-container {
+    padding: 0 0 32px;
+  }
+  .VPDoc .vp-doc > div > h1 {
+    font-size: 32px;
+  }
+  .aheart-component-overview__header h1,
+  .aheart-product-area__hero h1,
+  .aheart-roadmap__hero h1 {
+    font-size: 40px;
+  }
+  .docs-playground {
+    padding: 20px;
+  }
+  .aheart-component-context__related {
+    display: none;
+  }
+  .docs-demo-toolbar + .aheart-demo-panel {
+    padding: 24px 16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aheart-product-area__card,
+  .aheart-component-item {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+/* Long component names stay readable in the shared sidebar. */
+.VPSidebarItem .text {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.VPSidebarItem .link {
+  min-width: 0;
+}
+
+.VPSidebarItem .link:focus-visible,.docs-category-nav a:focus-visible,
+.docs-demo-toolbar button:focus-visible,.docs-start-links a:focus-visible {
+  outline:2px solid var(--docs-accent); outline-offset:4px; transition:none;
+}
+.docs-demo-toolbar button:active,.docs-category-nav a:active { transform:scale(.98); }
+@media(prefers-reduced-motion:reduce) { .docs-demo-toolbar button:active,.docs-category-nav a:active { transform:none; } }

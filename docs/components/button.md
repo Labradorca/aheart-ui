@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { h } from 'vue'
+import ButtonPlayground from '../.vitepress/theme/ButtonPlayground.vue'
 
 const nodeIcon = h('span', { class: 'demo-button-node-icon' }, '★')
 </script>
@@ -7,6 +8,8 @@ const nodeIcon = h('span', { class: 'demo-button-node-icon' }, '★')
 # Button 按钮 <span class="aheart-status aheart-status--ready">已完成</span>
 
 Button 用于触发操作。它支持 Ant 风格的视觉类型、危险态、幽灵态、形状、链接渲染、加载、禁用、块级宽度和原生按钮类型。
+
+<ButtonPlayground />
 
 ## 基础用法
 
@@ -146,6 +149,7 @@ import 'aheart-ui/es/style.css'
 ```vue
 <script setup lang="ts">
 import { h } from 'vue'
+import ButtonPlayground from '../.vitepress/theme/ButtonPlayground.vue'
 
 const nodeIcon = h('span', { class: 'demo-button-node-icon' }, '★')
 </script>
