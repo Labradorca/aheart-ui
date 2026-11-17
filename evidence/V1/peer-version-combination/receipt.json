@@ -1,0 +1,166 @@
+{
+  "checkedAt": "2026-11-17T15:26:42.378Z",
+  "head": "ca06147b330c70745d443590ea2a809b7a642100",
+  "scope": "authorized local candidate version combination; not PR/merge/deploy/publication/tag or full V1 acceptance",
+  "packages": [
+    {
+      "name": "aheart-ui",
+      "version": "1.4.0",
+      "tarball": "test-results/release-tarballs/aheart-ui-1.4.0.tgz",
+      "sha256": "1681586cdccba5506ff1632b5cf61b84be8d42b0b04e6673ca9e540ba008d3e0"
+    },
+    {
+      "name": "@aheart-ui/dnd",
+      "version": "1.1.0",
+      "tarball": "test-results/release-tarballs/aheart-ui-dnd-1.1.0.tgz",
+      "sha256": "8cbc23c703b7250154c7d8afd2c18bf0e2ba3fe16f6bd6a82754967caf54747a"
+    },
+    {
+      "name": "@aheart-ui/ai",
+      "version": "1.2.0",
+      "corePeer": "^1.4.0",
+      "tarball": "test-results/release-tarballs/aheart-ui-ai-1.2.0.tgz",
+      "sha256": "de047dc77f2c0c035f7604ff4a2a585627868da8d5f28136eae3f5660ca451db"
+    }
+  ],
+  "checks": [
+    {
+      "name": "release-contract-tests",
+      "command": [
+        "node",
+        "--test",
+        "scripts/release-contract.test.mjs"
+      ],
+      "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+      "head": "ca06147b330c70745d443590ea2a809b7a642100",
+      "scope": "recorded HEAD plus V1 working diff",
+      "workingDiffCommand": [
+        "git",
+        "diff",
+        "HEAD",
+        "--binary"
+      ],
+      "workingDiffSha256": "9cd732f4549dc690dfdcacaf738fafff7e61a36d485e59e57cfd1988943e77d9",
+      "startedAt": "2026-11-17T15:23:43.809Z",
+      "finishedAt": "2026-11-17T15:23:44.034Z",
+      "exitCode": 0,
+      "signal": null,
+      "rawOutputSha256": "b6c5d9d2e52e1770fde795c89d05463fb1d9670f8b066037a17ed06f3aeb7ed9",
+      "output": "release-contract-tests.txt",
+      "normalization": "trailing whitespace and blank lines at EOF only"
+    },
+    {
+      "name": "pack",
+      "command": [
+        "corepack",
+        "pnpm",
+        "release:pack",
+        "--pack-destination",
+        "test-results/release-tarballs"
+      ],
+      "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+      "head": "ca06147b330c70745d443590ea2a809b7a642100",
+      "scope": "recorded HEAD plus V1 working diff",
+      "workingDiffCommand": [
+        "git",
+        "diff",
+        "HEAD",
+        "--binary"
+      ],
+      "workingDiffSha256": "5219f1fd71d973dabb12d7ba48fef33859a485cb33080c626752dce8357f051a",
+      "startedAt": "2026-11-17T15:23:44.076Z",
+      "finishedAt": "2026-11-17T15:23:45.980Z",
+      "exitCode": 0,
+      "signal": null,
+      "rawOutputSha256": "1ba0744821e521307d66b45b4d6d2a9e3385b748f272303fec157029937db3e5",
+      "output": "pack.txt",
+      "normalization": "trailing whitespace and blank lines at EOF only"
+    },
+    {
+      "name": "m1-consumer",
+      "command": [
+        "corepack",
+        "pnpm",
+        "check:m1-consumer"
+      ],
+      "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+      "head": "ca06147b330c70745d443590ea2a809b7a642100",
+      "scope": "recorded HEAD plus V1 working diff",
+      "workingDiffCommand": [
+        "git",
+        "diff",
+        "HEAD",
+        "--binary"
+      ],
+      "workingDiffSha256": "70b47698474a9c9a325fc41a39f4136119523884687c26b21cd1d5f50d7897e7",
+      "startedAt": "2026-11-17T15:23:46.017Z",
+      "finishedAt": "2026-11-17T15:24:19.677Z",
+      "exitCode": 0,
+      "signal": null,
+      "rawOutputSha256": "0840132f8891f1c81d4551ac9f18b18ef22aa640951fcbd6b23c2f409f08a476",
+      "output": "m1-consumer.txt",
+      "normalization": "trailing whitespace and blank lines at EOF only"
+    },
+    {
+      "name": "m3-consumer",
+      "command": [
+        "corepack",
+        "pnpm",
+        "check:m3-consumer"
+      ],
+      "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+      "head": "ca06147b330c70745d443590ea2a809b7a642100",
+      "scope": "recorded HEAD plus V1 working diff",
+      "workingDiffCommand": [
+        "git",
+        "diff",
+        "HEAD",
+        "--binary"
+      ],
+      "workingDiffSha256": "ed160365b15b0171acccc0454f25c6340ac4ec55b3aa8a7236c56057a1359a58",
+      "startedAt": "2026-11-17T15:24:19.717Z",
+      "finishedAt": "2026-11-17T15:24:51.289Z",
+      "exitCode": 0,
+      "signal": null,
+      "rawOutputSha256": "06bdd764b72d236900af36b4432e1610415d5e1e8b734923f2048f708e676a8e",
+      "output": "m3-consumer.txt",
+      "normalization": "trailing whitespace and blank lines at EOF only"
+    },
+    {
+      "name": "strict",
+      "command": [
+        "corepack",
+        "pnpm",
+        "check:consumer-types"
+      ],
+      "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+      "head": "ca06147b330c70745d443590ea2a809b7a642100",
+      "scope": "recorded HEAD plus V1 working diff",
+      "workingDiffCommand": [
+        "git",
+        "diff",
+        "HEAD",
+        "--binary"
+      ],
+      "workingDiffSha256": "0d85ac0355f0ced339eda58735d2626cc8b45a86323d6bbf9f8cb6aab942db07",
+      "startedAt": "2026-11-17T15:24:51.326Z",
+      "finishedAt": "2026-11-17T15:25:08.435Z",
+      "exitCode": 0,
+      "signal": null,
+      "rawOutputSha256": "fbef45cf3d71e1f20e4516ad8d377ef0015cbb7a3e205817f5adb470e75255dc",
+      "output": "strict.txt",
+      "normalization": "trailing whitespace and blank lines at EOF only"
+    }
+  ],
+  "strictVueVersions": [
+    "3.5.38",
+    "3.5.44"
+  ],
+  "protectedSourceCount": 57,
+  "businessPilotChanges": [],
+  "protectedChanges": [
+    "scripts/fixtures/m3-consumer/probe.mjs",
+    "scripts/m1-consumer.mjs"
+  ],
+  "metadataAndCombinationPass": true
+}

@@ -1,0 +1,40 @@
+Scope: all 5 workspace projects
+ WARN  `node_modules` is present. Lockfile only installation will make it out-of-date
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 8, reused 0, downloaded 0, added 0
+Progress: resolved 9, reused 0, downloaded 0, added 0
+Progress: resolved 17, reused 0, downloaded 0, added 0
+Progress: resolved 21, reused 0, downloaded 0, added 0
+Progress: resolved 22, reused 0, downloaded 0, added 0
+Progress: resolved 32, reused 0, downloaded 0, added 0
+Progress: resolved 40, reused 0, downloaded 0, added 0
+Progress: resolved 50, reused 0, downloaded 0, added 0
+Progress: resolved 75, reused 0, downloaded 0, added 0
+Progress: resolved 112, reused 0, downloaded 0, added 0
+Progress: resolved 220, reused 0, downloaded 0, added 0
+Progress: resolved 235, reused 0, downloaded 0, added 0
+Progress: resolved 265, reused 0, downloaded 0, added 0
+Progress: resolved 292, reused 0, downloaded 0, added 0
+Progress: resolved 318, reused 0, downloaded 0, added 0
+Progress: resolved 352, reused 0, downloaded 0, added 0
+Progress: resolved 379, reused 0, downloaded 0, added 0
+Progress: resolved 404, reused 0, downloaded 0, added 0
+Progress: resolved 428, reused 0, downloaded 0, added 0
+Progress: resolved 445, reused 0, downloaded 0, added 0
+Progress: resolved 456, reused 0, downloaded 0, added 0
+Progress: resolved 468, reused 0, downloaded 0, added 0
+Progress: resolved 479, reused 0, downloaded 0, added 0
+Progress: resolved 483, reused 0, downloaded 0, added 0
+Progress: resolved 485, reused 0, downloaded 0, added 0
+Progress: resolved 486, reused 0, downloaded 0, added 0
+Progress: resolved 487, reused 0, downloaded 0, added 0
+Progress: resolved 488, reused 0, downloaded 0, added 0
+Progress: resolved 489, reused 0, downloaded 0, added 0
+Progress: resolved 490, reused 0, downloaded 0, added 0
+Progress: resolved 491, reused 0, downloaded 0, added 0
+ WARN  6 deprecated subdependencies found: glob@10.5.0, glob@7.2.3, inflight@1.0.6, lodash.get@4.4.2, lodash.isequal@4.5.0, whatwg-encoding@3.1.1
+Progress: resolved 491, reused 0, downloaded 0, added 0, done
+
+Done in 55.3s
+(node:64251) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)

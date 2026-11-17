@@ -9,6 +9,7 @@ const checks={
   'build-ai':['corepack','pnpm','--filter','@aheart-ui/ai','build'],
   'test-ai':['corepack','pnpm','--filter','@aheart-ui/ai','test'],
   'types-ai':['corepack','pnpm','--filter','@aheart-ui/ai','typecheck'],
+  'release-contract-tests':['node','--test','scripts/release-contract.test.mjs'],
   build:['corepack','pnpm','build'],
   drift:['node','--test','scripts/v1-entry-manifest.test.mjs'],
   'docs-and-matrix':['node','--test','scripts/docs-copy.test.mjs','scripts/docs-social-icon.test.mjs','scripts/qg5-evidence-docs.test.mjs','scripts/m3-doc-entries.test.mjs','scripts/quality-matrix.test.mjs','scripts/qg5-skip-ledger.test.mjs'],

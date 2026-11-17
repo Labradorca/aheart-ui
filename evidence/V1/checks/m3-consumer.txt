@@ -1,0 +1,5 @@
+
+> aheart-ui-workspace@1.0.0 check:m3-consumer /Users/start/code/aheart-ui-wt/v1.4-entries
+> node scripts/m3-consumer.mjs
+
+M3 tarball consumer passed. Evidence at /Users/start/code/aheart-ui-wt/v1.4-entries/test-results/m3-consumer

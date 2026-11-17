@@ -1,5 +1,6 @@
 # V1 本地检查点：AIForm精确导入，停在peer修改前
 
+**最新状态（2026-11-17）**：负责人已单独授权AI peer ^1.4.0与本地core1.4.0/AI1.2.0/DND1.1.0组合，已通过实际pack、旧M1/M3消费及全部声明严格类型检查；继续V1。[授权与回执](peer-version-combination/README.md)。下文peer停止点内容保留当时快照；没有PR、合并/Pages、npm或tag授权。
 基线 `b1eef9b6f5e1b64706beee5d4d56e08891f27c26`；独立分支 `codex/v1.4-entries`。负责人已 [确认12复合/53叶子分类并授权恢复实现](owner-classification-confirmation-2026-11-17.md)，本轮推进到AIForm精确导入的peer停止点。peer、版本、消费/试点业务源码、锁文件未改；V1未开PR、未合并/部署/发布/tag。
 
 | 已做 | 证据 |

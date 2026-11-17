@@ -2,6 +2,6 @@
 > aheart-ui-workspace@1.0.0 release:pack /Users/start/code/aheart-ui-wt/v1.4-entries
 > node scripts/release-contract.mjs "--pack-destination" "test-results/release-tarballs"
 
-✓ aheart-ui@1.3.0: 1181 files
+✓ aheart-ui@1.4.0: 1181 files
 ✓ @aheart-ui/dnd@1.1.0: 103 files
-✓ @aheart-ui/ai@1.1.0: 205 files
+✓ @aheart-ui/ai@1.2.0: 205 files
