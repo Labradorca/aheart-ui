@@ -1,0 +1,14 @@
+
+Running 2 tests using 1 worker
+
+
+(node:8493) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/2] [desktop] › e2e/button-hover-contrast.spec.ts:4:5 › default outlined, dashed, link and text buttons keep AA text contrast when hovered
+
+(node:8531) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[2/2] [mobile] › e2e/button-hover-contrast.spec.ts:4:5 › default outlined, dashed, link and text buttons keep AA text contrast when hovered
+  2 passed (8.4s)

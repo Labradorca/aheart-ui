@@ -1,0 +1,230 @@
+{
+  "status": "passed",
+  "scope": "actual tarball AIForm 13 fields + Workbench: SSR/hydration and full-versus-scoped CSS equivalence; not user acceptance",
+  "tarballs": [
+    {
+      "name": "aheart-ui",
+      "version": "1.4.0",
+      "sha256": "fdf5a2abe927aff8735bd68170aac76d287bc58e31134b276d6c1774eec17bc6"
+    },
+    {
+      "name": "@aheart-ui/dnd",
+      "version": "1.1.0",
+      "sha256": "8cbc23c703b7250154c7d8afd2c18bf0e2ba3fe16f6bd6a82754967caf54747a"
+    },
+    {
+      "name": "@aheart-ui/ai",
+      "version": "1.2.0",
+      "sha256": "be22efd9b1adcfb435608a5fa76715eda57702ef53e8f5319fc011a4f274aebe"
+    }
+  ],
+  "sourceSha": "f20bc4986510d3cd7a4c8dd55439c297b6ad45df",
+  "cases": [
+    {
+      "engine": "chromium",
+      "browserVersion": "149.0.7827.55",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "full",
+      "url": "http://127.0.0.1:52245/full.html",
+      "fields": 13,
+      "exposedMethods": true,
+      "modelUpdateReset": true,
+      "lastTimelineConnectorHidden": true,
+      "errors": [],
+      "screenshot": "chromium-1440-full.png",
+      "sha256": "d6d2b25a1d8ddea5efa23762b38b20c3d8867e6411eba79f4ca99ff70bf693eb"
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "149.0.7827.55",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "scoped",
+      "url": "http://127.0.0.1:52245/scoped.html",
+      "fields": 13,
+      "exposedMethods": true,
+      "modelUpdateReset": true,
+      "lastTimelineConnectorHidden": true,
+      "errors": [],
+      "screenshot": "chromium-1440-scoped.png",
+      "sha256": "d6d2b25a1d8ddea5efa23762b38b20c3d8867e6411eba79f4ca99ff70bf693eb"
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "149.0.7827.55",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "mode": "full",
+      "url": "http://127.0.0.1:52245/full.html",
+      "fields": 13,
+      "exposedMethods": true,
+      "modelUpdateReset": true,
+      "lastTimelineConnectorHidden": true,
+      "errors": [],
+      "screenshot": "chromium-390-full.png",
+      "sha256": "d4638bda455c0b6a5dfcf75f3c693169e0e58f19350aa0e70f132bf34ef0fa8a"
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "149.0.7827.55",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "mode": "scoped",
+      "url": "http://127.0.0.1:52245/scoped.html",
+      "fields": 13,
+      "exposedMethods": true,
+      "modelUpdateReset": true,
+      "lastTimelineConnectorHidden": true,
+      "errors": [],
+      "screenshot": "chromium-390-scoped.png",
+      "sha256": "d4638bda455c0b6a5dfcf75f3c693169e0e58f19350aa0e70f132bf34ef0fa8a"
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "151.0",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "full",
+      "url": "http://127.0.0.1:52245/full.html",
+      "fields": 13,
+      "exposedMethods": true,
+      "modelUpdateReset": true,
+      "lastTimelineConnectorHidden": true,
+      "errors": [],
+      "screenshot": "firefox-1440-full.png",
+      "sha256": "0c68dd09b18a2555490f3175cb264cf8141b0d26712b750204f96953bd494aa8"
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "151.0",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "scoped",
+      "url": "http://127.0.0.1:52245/scoped.html",
+      "fields": 13,
+      "exposedMethods": true,
+      "modelUpdateReset": true,
+      "lastTimelineConnectorHidden": true,
+      "errors": [],
+      "screenshot": "firefox-1440-scoped.png",
+      "sha256": "0c68dd09b18a2555490f3175cb264cf8141b0d26712b750204f96953bd494aa8"
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "151.0",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "mode": "full",
+      "url": "http://127.0.0.1:52245/full.html",
+      "fields": 13,
+      "exposedMethods": true,
+      "modelUpdateReset": true,
+      "lastTimelineConnectorHidden": true,
+      "errors": [],
+      "screenshot": "firefox-390-full.png",
+      "sha256": "a9a6160a6f1cc0182a45d36ea49f4a876cdd1d22432341198d12d04b8af2360d"
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "151.0",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "mode": "scoped",
+      "url": "http://127.0.0.1:52245/scoped.html",
+      "fields": 13,
+      "exposedMethods": true,
+      "modelUpdateReset": true,
+      "lastTimelineConnectorHidden": true,
+      "errors": [],
+      "screenshot": "firefox-390-scoped.png",
+      "sha256": "a9a6160a6f1cc0182a45d36ea49f4a876cdd1d22432341198d12d04b8af2360d"
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "full",
+      "url": "http://127.0.0.1:52245/full.html",
+      "fields": 13,
+      "exposedMethods": true,
+      "modelUpdateReset": true,
+      "lastTimelineConnectorHidden": true,
+      "errors": [],
+      "screenshot": "webkit-1440-full.png",
+      "sha256": "e69c3f6e243b6e9aefcccceced9718f671f68cff5eb0b16171278259a976248c"
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "scoped",
+      "url": "http://127.0.0.1:52245/scoped.html",
+      "fields": 13,
+      "exposedMethods": true,
+      "modelUpdateReset": true,
+      "lastTimelineConnectorHidden": true,
+      "errors": [],
+      "screenshot": "webkit-1440-scoped.png",
+      "sha256": "e69c3f6e243b6e9aefcccceced9718f671f68cff5eb0b16171278259a976248c"
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "mode": "full",
+      "url": "http://127.0.0.1:52245/full.html",
+      "fields": 13,
+      "exposedMethods": true,
+      "modelUpdateReset": true,
+      "lastTimelineConnectorHidden": true,
+      "errors": [],
+      "screenshot": "webkit-390-full.png",
+      "sha256": "bb24d7d926fdde9f35340ba8830cafa59b3663b6fbb1da9cba482573d3f932b2"
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "mode": "scoped",
+      "url": "http://127.0.0.1:52245/scoped.html",
+      "fields": 13,
+      "exposedMethods": true,
+      "modelUpdateReset": true,
+      "lastTimelineConnectorHidden": true,
+      "errors": [],
+      "screenshot": "webkit-390-scoped.png",
+      "sha256": "bb24d7d926fdde9f35340ba8830cafa59b3663b6fbb1da9cba482573d3f932b2"
+    }
+  ],
+  "pixelComparison": "six engine/viewport pairs are byte-identical; 12 screenshots",
+  "ssrFields": 13
+}

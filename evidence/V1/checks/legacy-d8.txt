@@ -1,0 +1,5 @@
+{
+  "status": "passed",
+  "out": "test-results/v1-legacy/d8",
+  "consumerRoot": "/private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-d8-ai-PsTXam"
+}

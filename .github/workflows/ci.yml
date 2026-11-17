@@ -191,6 +191,18 @@ jobs:
         run: pnpm check:consumer-types
       - name: V1 all Ready entry JS CSS and module boundaries
         run: pnpm check:v1-consumer
+      - name: V1 packed SSR hydration and full versus scoped styles
+        run: pnpm check:v1-visual-consumer
+      - name: V1 unchanged pilot compatibility
+        run: |
+          mkdir -p test-results/v1-pilot-compatibility
+          for engine in chromium firefox webkit; do
+            node pilots/run-baselines.mjs --entry-mode legacy --only clean-consumer,ai-review-gate \
+              --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz \
+              --ai-tarball test-results/release-tarballs/aheart-ui-ai-1.2.0.tgz \
+              --dnd-tarball test-results/release-tarballs/aheart-ui-dnd-1.1.0.tgz \
+              --browser "$engine" --out "test-results/v1-pilot-compatibility/$engine"
+          done
       - name: V1 development diagnostics and migration codemod
         run: pnpm check:v2-migration-consumer
       - name: Pack and run isolated consumers
@@ -237,6 +249,8 @@ jobs:
           path: |
             test-results/release-tarballs/*.tgz
             test-results/v1-consumer/
+            test-results/v1-visual-consumer/
+            test-results/v1-pilot-compatibility/
             test-results/v2-migration-consumer/
             test-results/m1-consumer/
             test-results/m3-consumer/*.log

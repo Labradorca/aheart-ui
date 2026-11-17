@@ -1,0 +1,204 @@
+
+Running 40 tests using 1 worker
+
+
+(node:1005) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1024) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[2/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1036) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[3/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1047) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[4/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1084) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[5/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1092) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[6/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1100) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[7/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1109) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[8/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1117) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[9/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1125) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[10/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1154) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[11/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1177) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[12/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1185) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[13/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1195) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[14/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1205) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[15/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1220) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[16/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1230) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[17/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1239) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[18/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1245) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[19/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1258) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[20/40] [desktop] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1268) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[21/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1276) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[22/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1295) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[23/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1347) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[24/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1355) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[25/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1361) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[26/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1371) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[27/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1386) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[28/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1395) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[29/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1404) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[30/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1411) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[31/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1427) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[32/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1438) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[33/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1455) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[34/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1468) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[35/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1509) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[36/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1521) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[37/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1563) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[38/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1584) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[39/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+
+(node:1594) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[40/40] [mobile] › e2e/button-hover-contrast.spec.ts:31:5 › hover text token can be themed separately from the button border
+  40 passed (1.3m)

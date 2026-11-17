@@ -174,6 +174,8 @@ test('splits CI into observable unit, typecheck, build, docs, consumer and brows
     assert.ok(workflowSource.includes(filename), `CI must consume the current contract tarball ${filename}`)
   }
   assert.match(workflowSource, /pnpm check:v1-consumer/)
+  assert.match(workflowSource, /pnpm check:v1-visual-consumer/)
+  assert.ok(getStep('V1 unchanged pilot compatibility')?.includes('--entry-mode legacy'))
   assert.match(workflowSource, /pnpm check:v2-migration-consumer/)
   assert.doesNotMatch(workflowSource, /  verify:\n/)
 })

@@ -1,0 +1,21 @@
+
+> aheart-pilot-ai-review-gate@0.0.0 build
+> npm run ssr && vite build
+
+
+> aheart-pilot-ai-review-gate@0.0.0 ssr
+> node ssr.mjs
+
+{"ssr":"passed","htmlBytes":11147}
+vite v5.4.21 building for production...
+transforming...
+✓ 2545 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/iframe.html                 0.31 kB │ gzip:   0.30 kB
+dist/index.html                  0.39 kB │ gzip:   0.31 kB
+dist/ssr.html                   10.98 kB │ gzip:   2.65 kB
+dist/module-graph.json          39.00 kB │ gzip:   3.48 kB
+dist/assets/main-CZgcTXgz.css  208.91 kB │ gzip:  28.43 kB
+dist/assets/main-BYPzdZYx.js   302.52 kB │ gzip: 101.06 kB
+✓ built in 1.27s

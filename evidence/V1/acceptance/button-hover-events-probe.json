@@ -1,0 +1,566 @@
+[
+  {
+    "i": 0,
+    "bringToFront": true,
+    "before": {
+      "x": 381,
+      "y": 882,
+      "width": 94,
+      "height": 32
+    },
+    "immediate": {
+      "hover": true,
+      "rect": {
+        "x": 377,
+        "y": 688,
+        "width": 94,
+        "height": 32,
+        "top": 688,
+        "right": 471,
+        "bottom": 720,
+        "left": 377
+      },
+      "focus": true,
+      "scrollY": 265
+    },
+    "settled": {
+      "hover": true,
+      "rect": {
+        "x": 377,
+        "y": 688,
+        "width": 94,
+        "height": 32,
+        "top": 688,
+        "right": 471,
+        "bottom": 720,
+        "left": 377
+      },
+      "focus": true,
+      "scrollY": 265,
+      "color": "rgb(91, 33, 130)",
+      "events": [
+        {
+          "name": "pointermove",
+          "x": 428,
+          "y": 360,
+          "scrollY": 538,
+          "focus": true,
+          "time": 1325.0999999046326
+        },
+        {
+          "name": "mousemove",
+          "x": 428,
+          "y": 360,
+          "scrollY": 538,
+          "focus": true,
+          "time": 1325.0999999046326
+        },
+        {
+          "name": "scroll",
+          "scrollY": 538,
+          "focus": true,
+          "time": 1343.7999999523163
+        },
+        {
+          "name": "pointermove",
+          "x": 424,
+          "y": 704,
+          "scrollY": 265,
+          "focus": true,
+          "time": 1392.1999998092651
+        },
+        {
+          "name": "mousemove",
+          "x": 424,
+          "y": 704,
+          "scrollY": 265,
+          "focus": true,
+          "time": 1392.1999998092651
+        },
+        {
+          "name": "scroll",
+          "scrollY": 265,
+          "focus": true,
+          "time": 1392.5
+        }
+      ]
+    }
+  },
+  {
+    "i": 1,
+    "bringToFront": false,
+    "before": {
+      "x": 381,
+      "y": 882,
+      "width": 94,
+      "height": 32
+    },
+    "immediate": {
+      "hover": true,
+      "rect": {
+        "x": 377,
+        "y": 415,
+        "width": 94,
+        "height": 32,
+        "top": 415,
+        "right": 471,
+        "bottom": 447,
+        "left": 377
+      },
+      "focus": true,
+      "scrollY": 538
+    },
+    "settled": {
+      "hover": false,
+      "rect": {
+        "x": 377,
+        "y": 415,
+        "width": 94,
+        "height": 32,
+        "top": 415,
+        "right": 471,
+        "bottom": 447,
+        "left": 377
+      },
+      "focus": true,
+      "scrollY": 538,
+      "color": "rgb(31, 35, 41)",
+      "events": [
+        {
+          "name": "pointermove",
+          "x": 428,
+          "y": 360,
+          "scrollY": 538,
+          "focus": true,
+          "time": 1240.7999999523163
+        },
+        {
+          "name": "mousemove",
+          "x": 428,
+          "y": 360,
+          "scrollY": 538,
+          "focus": true,
+          "time": 1240.9000000953674
+        },
+        {
+          "name": "scroll",
+          "scrollY": 538,
+          "focus": true,
+          "time": 1258.6000001430511
+        }
+      ]
+    }
+  },
+  {
+    "i": 2,
+    "bringToFront": true,
+    "before": {
+      "x": 381,
+      "y": 882,
+      "width": 94,
+      "height": 32
+    },
+    "immediate": {
+      "hover": true,
+      "rect": {
+        "x": 377,
+        "y": 415,
+        "width": 94,
+        "height": 32,
+        "top": 415,
+        "right": 471,
+        "bottom": 447,
+        "left": 377
+      },
+      "focus": true,
+      "scrollY": 538
+    },
+    "settled": {
+      "hover": false,
+      "rect": {
+        "x": 377,
+        "y": 415,
+        "width": 94,
+        "height": 32,
+        "top": 415,
+        "right": 471,
+        "bottom": 447,
+        "left": 377
+      },
+      "focus": true,
+      "scrollY": 538,
+      "color": "rgb(31, 35, 41)",
+      "events": [
+        {
+          "name": "pointermove",
+          "x": 428,
+          "y": 360,
+          "scrollY": 538,
+          "focus": true,
+          "time": 1146.5999999046326
+        },
+        {
+          "name": "mousemove",
+          "x": 428,
+          "y": 360,
+          "scrollY": 538,
+          "focus": true,
+          "time": 1146.7000000476837
+        },
+        {
+          "name": "scroll",
+          "scrollY": 538,
+          "focus": true,
+          "time": 1165.3999998569489
+        }
+      ]
+    }
+  },
+  {
+    "i": 3,
+    "bringToFront": false,
+    "before": {
+      "x": 381,
+      "y": 882,
+      "width": 94,
+      "height": 32
+    },
+    "immediate": {
+      "hover": true,
+      "rect": {
+        "x": 377,
+        "y": 688,
+        "width": 94,
+        "height": 32,
+        "top": 688,
+        "right": 471,
+        "bottom": 720,
+        "left": 377
+      },
+      "focus": true,
+      "scrollY": 265
+    },
+    "settled": {
+      "hover": true,
+      "rect": {
+        "x": 377,
+        "y": 688,
+        "width": 94,
+        "height": 32,
+        "top": 688,
+        "right": 471,
+        "bottom": 720,
+        "left": 377
+      },
+      "focus": true,
+      "scrollY": 265,
+      "color": "rgb(91, 33, 130)",
+      "events": [
+        {
+          "name": "pointermove",
+          "x": 428,
+          "y": 360,
+          "scrollY": 538,
+          "focus": true,
+          "time": 1292.7000000476837
+        },
+        {
+          "name": "mousemove",
+          "x": 428,
+          "y": 360,
+          "scrollY": 538,
+          "focus": true,
+          "time": 1292.7000000476837
+        },
+        {
+          "name": "scroll",
+          "scrollY": 538,
+          "focus": true,
+          "time": 1311.4000000953674
+        },
+        {
+          "name": "pointermove",
+          "x": 424,
+          "y": 704,
+          "scrollY": 265,
+          "focus": true,
+          "time": 1357
+        },
+        {
+          "name": "mousemove",
+          "x": 424,
+          "y": 704,
+          "scrollY": 265,
+          "focus": true,
+          "time": 1357
+        },
+        {
+          "name": "scroll",
+          "scrollY": 265,
+          "focus": true,
+          "time": 1357.2000000476837
+        }
+      ]
+    }
+  },
+  {
+    "i": 4,
+    "bringToFront": true,
+    "before": {
+      "x": 381,
+      "y": 882,
+      "width": 94,
+      "height": 32
+    },
+    "immediate": {
+      "hover": true,
+      "rect": {
+        "x": 377,
+        "y": 415,
+        "width": 94,
+        "height": 32,
+        "top": 415,
+        "right": 471,
+        "bottom": 447,
+        "left": 377
+      },
+      "focus": true,
+      "scrollY": 538
+    },
+    "settled": {
+      "hover": false,
+      "rect": {
+        "x": 377,
+        "y": 415,
+        "width": 94,
+        "height": 32,
+        "top": 415,
+        "right": 471,
+        "bottom": 447,
+        "left": 377
+      },
+      "focus": true,
+      "scrollY": 538,
+      "color": "rgb(31, 35, 41)",
+      "events": [
+        {
+          "name": "pointermove",
+          "x": 428,
+          "y": 360,
+          "scrollY": 538,
+          "focus": true,
+          "time": 1241.7999999523163
+        },
+        {
+          "name": "mousemove",
+          "x": 428,
+          "y": 360,
+          "scrollY": 538,
+          "focus": true,
+          "time": 1241.8999998569489
+        },
+        {
+          "name": "scroll",
+          "scrollY": 538,
+          "focus": true,
+          "time": 1260.5
+        }
+      ]
+    }
+  },
+  {
+    "i": 5,
+    "bringToFront": false,
+    "before": {
+      "x": 381,
+      "y": 882,
+      "width": 94,
+      "height": 32
+    },
+    "immediate": {
+      "hover": true,
+      "rect": {
+        "x": 377,
+        "y": 415,
+        "width": 94,
+        "height": 32,
+        "top": 415,
+        "right": 471,
+        "bottom": 447,
+        "left": 377
+      },
+      "focus": true,
+      "scrollY": 538
+    },
+    "settled": {
+      "hover": false,
+      "rect": {
+        "x": 377,
+        "y": 415,
+        "width": 94,
+        "height": 32,
+        "top": 415,
+        "right": 471,
+        "bottom": 447,
+        "left": 377
+      },
+      "focus": true,
+      "scrollY": 538,
+      "color": "rgb(31, 35, 41)",
+      "events": [
+        {
+          "name": "pointermove",
+          "x": 428,
+          "y": 360,
+          "scrollY": 538,
+          "focus": true,
+          "time": 1171.1999998092651
+        },
+        {
+          "name": "mousemove",
+          "x": 428,
+          "y": 360,
+          "scrollY": 538,
+          "focus": true,
+          "time": 1171.1999998092651
+        },
+        {
+          "name": "scroll",
+          "scrollY": 538,
+          "focus": true,
+          "time": 1189.6999998092651
+        }
+      ]
+    }
+  },
+  {
+    "i": 6,
+    "bringToFront": true,
+    "before": {
+      "x": 381,
+      "y": 882,
+      "width": 94,
+      "height": 32
+    },
+    "immediate": {
+      "hover": true,
+      "rect": {
+        "x": 377,
+        "y": 415,
+        "width": 94,
+        "height": 32,
+        "top": 415,
+        "right": 471,
+        "bottom": 447,
+        "left": 377
+      },
+      "focus": true,
+      "scrollY": 538
+    },
+    "settled": {
+      "hover": false,
+      "rect": {
+        "x": 377,
+        "y": 415,
+        "width": 94,
+        "height": 32,
+        "top": 415,
+        "right": 471,
+        "bottom": 447,
+        "left": 377
+      },
+      "focus": true,
+      "scrollY": 538,
+      "color": "rgb(31, 35, 41)",
+      "events": [
+        {
+          "name": "pointermove",
+          "x": 428,
+          "y": 360,
+          "scrollY": 538,
+          "focus": true,
+          "time": 1357.9000000953674
+        },
+        {
+          "name": "mousemove",
+          "x": 428,
+          "y": 360,
+          "scrollY": 538,
+          "focus": true,
+          "time": 1357.9000000953674
+        },
+        {
+          "name": "scroll",
+          "scrollY": 538,
+          "focus": true,
+          "time": 1376.4000000953674
+        }
+      ]
+    }
+  },
+  {
+    "i": 7,
+    "bringToFront": false,
+    "before": {
+      "x": 381,
+      "y": 882,
+      "width": 94,
+      "height": 32
+    },
+    "immediate": {
+      "hover": true,
+      "rect": {
+        "x": 377,
+        "y": 688,
+        "width": 94,
+        "height": 32,
+        "top": 688,
+        "right": 471,
+        "bottom": 720,
+        "left": 377
+      },
+      "focus": true,
+      "scrollY": 265
+    },
+    "settled": {
+      "hover": true,
+      "rect": {
+        "x": 377,
+        "y": 688,
+        "width": 94,
+        "height": 32,
+        "top": 688,
+        "right": 471,
+        "bottom": 720,
+        "left": 377
+      },
+      "focus": true,
+      "scrollY": 265,
+      "color": "rgb(91, 33, 130)",
+      "events": [
+        {
+          "name": "pointermove",
+          "x": 424,
+          "y": 704,
+          "scrollY": 265,
+          "focus": true,
+          "time": 1818
+        },
+        {
+          "name": "mousemove",
+          "x": 424,
+          "y": 704,
+          "scrollY": 265,
+          "focus": true,
+          "time": 1818
+        },
+        {
+          "name": "scroll",
+          "scrollY": 265,
+          "focus": true,
+          "time": 1838.5999999046326
+        }
+      ]
+    }
+  }
+]

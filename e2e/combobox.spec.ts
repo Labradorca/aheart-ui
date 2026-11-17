@@ -3,6 +3,8 @@ import AxeBuilder from '@axe-core/playwright'
 
 test('Combobox filters, selects and dismisses while preserving native focus', async ({ page }, testInfo) => {
   await page.goto('/components/combobox')
+  // DocInteractions finishes hydration and its deferred layout before input.
+  await expect(page.locator('.docs-demo-toolbar').first()).toBeVisible()
   const input = page.getByRole('combobox', { name: '城市' })
   const list = page.getByRole('listbox', { name: '城市' })
   const next = page.getByRole('textbox', { name: '街道' })

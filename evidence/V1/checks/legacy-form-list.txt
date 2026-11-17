@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "tarballSHA256": "fdf5a2abe927aff8735bd68170aac76d287bc58e31134b276d6c1774eec17bc6",
+  "baselineGzipBytes": 24868,
+  "bundleGzipBytes": 57093,
+  "incrementalGzipBytes": 32225,
+  "output": "test-results/v1-legacy/form-list",
+  "consumerRoot": "/private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-form-list-consumer-PPVnaG"
+}

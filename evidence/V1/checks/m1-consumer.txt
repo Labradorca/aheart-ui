@@ -4,9 +4,9 @@
 
 {
   "status": "passed",
-  "consumer": "/private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-m1-consumer-Wltbud",
+  "consumer": "/private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-m1-consumer-7JPomZ",
   "tarball": "/Users/start/code/aheart-ui-wt/v1.4-entries/test-results/release-tarballs/aheart-ui-1.4.0.tgz",
-  "tarballSHA256": "1681586cdccba5506ff1632b5cf61b84be8d42b0b04e6673ca9e540ba008d3e0",
+  "tarballSHA256": "fdf5a2abe927aff8735bd68170aac76d287bc58e31134b276d6c1774eec17bc6",
   "builds": {
     "button": {
       "jsGzip": 32939,
@@ -59,7 +59,7 @@
       "parsedModules": 2117
     },
     "full": {
-      "jsGzip": 191399,
+      "jsGzip": 191357,
       "cssBytes": 177470,
       "parsedModules": 2334
     },

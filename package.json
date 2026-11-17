@@ -29,6 +29,7 @@
     "check:m1-consumer": "node scripts/m1-consumer.mjs",
     "check:m3-consumer": "node scripts/m3-consumer.mjs",
     "check:v1-consumer": "node scripts/v1-consumer.mjs",
+    "check:v1-visual-consumer": "node scripts/v1-visual-consumer.mjs",
     "check:v2-migration-consumer": "node scripts/v2-migration-consumer.mjs"
   },
   "keywords": [

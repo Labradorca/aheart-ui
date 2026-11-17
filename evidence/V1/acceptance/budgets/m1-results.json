@@ -1,0 +1,92 @@
+{
+  "status": "passed",
+  "consumer": "/private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-m1-consumer-7JPomZ",
+  "tarball": "/Users/start/code/aheart-ui-wt/v1.4-entries/test-results/release-tarballs/aheart-ui-1.4.0.tgz",
+  "tarballSHA256": "fdf5a2abe927aff8735bd68170aac76d287bc58e31134b276d6c1774eec17bc6",
+  "builds": {
+    "button": {
+      "jsGzip": 32939,
+      "cssBytes": 8520,
+      "parsedModules": 2118
+    },
+    "root-button": {
+      "jsGzip": 32941,
+      "cssBytes": 0,
+      "parsedModules": 2335
+    },
+    "combobox": {
+      "jsGzip": 40485,
+      "cssBytes": 4630,
+      "parsedModules": 28
+    },
+    "root-combobox": {
+      "jsGzip": 40485,
+      "cssBytes": 0,
+      "parsedModules": 2335
+    },
+    "select": {
+      "jsGzip": 57131,
+      "cssBytes": 10576,
+      "parsedModules": 2140
+    },
+    "root-select": {
+      "jsGzip": 57323,
+      "cssBytes": 0,
+      "parsedModules": 2335
+    },
+    "modal": {
+      "jsGzip": 41965,
+      "cssBytes": 15694,
+      "parsedModules": 2129
+    },
+    "root-modal": {
+      "jsGzip": 41985,
+      "cssBytes": 0,
+      "parsedModules": 2335
+    },
+    "bare-button": {
+      "jsGzip": 32939,
+      "cssBytes": 0,
+      "parsedModules": 2116
+    },
+    "legacy-button": {
+      "jsGzip": 32939,
+      "cssBytes": 177470,
+      "parsedModules": 2117
+    },
+    "full": {
+      "jsGzip": 191357,
+      "cssBytes": 177470,
+      "parsedModules": 2334
+    },
+    "legacy-full": {
+      "jsGzip": 188380,
+      "cssBytes": 177470,
+      "parsedModules": 2336
+    }
+  },
+  "styles": {
+    "fullBytes": 201510,
+    "themeBytes": 1767,
+    "components": {
+      "button": {
+        "bytes": 7945,
+        "fractionOfFull": 0.039427323706019556
+      },
+      "combobox": {
+        "bytes": 3572,
+        "fractionOfFull": 0.017726167435859263
+      },
+      "select": {
+        "bytes": 10472,
+        "fractionOfFull": 0.05196764428564339
+      },
+      "modal": {
+        "bytes": 16305,
+        "fractionOfFull": 0.08091409855590294
+      }
+    }
+  },
+  "node": "v24.17.0",
+  "installedVersion": "1.4.0"
+}

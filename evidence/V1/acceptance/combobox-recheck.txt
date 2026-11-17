@@ -1,0 +1,254 @@
+
+Running 50 tests using 1 worker
+
+
+(node:5453) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/50] [desktop] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:5475) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[2/50] [desktop] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:5485) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[3/50] [desktop] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:5496) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[4/50] [desktop] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:5510) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[5/50] [desktop] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:5522) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[6/50] [desktop] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:5536) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[7/50] [desktop] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:5552) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[8/50] [desktop] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:5576) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[9/50] [desktop] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:5624) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[10/50] [desktop] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:5651) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[11/50] [mobile] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:5707) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[12/50] [mobile] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:5734) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[13/50] [mobile] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:5763) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[14/50] [mobile] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:5783) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[15/50] [mobile] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:5809) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[16/50] [mobile] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:5893) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[17/50] [mobile] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:5918) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[18/50] [mobile] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:6146) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[19/50] [mobile] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:6246) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[20/50] [mobile] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:6262) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[21/50] [desktop-firefox] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:6312) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[22/50] [desktop-firefox] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:6462) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[23/50] [desktop-firefox] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:6495) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[24/50] [desktop-firefox] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:6539) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[25/50] [desktop-firefox] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:6558) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[26/50] [desktop-firefox] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:6588) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[27/50] [desktop-firefox] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:6632) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[28/50] [desktop-firefox] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:6943) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[29/50] [desktop-firefox] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:7147) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[30/50] [desktop-firefox] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:7216) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[31/50] [desktop-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:7249) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[32/50] [desktop-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:7275) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[33/50] [desktop-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:7309) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[34/50] [desktop-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:7328) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[35/50] [desktop-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:7364) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[36/50] [desktop-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:7408) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[37/50] [desktop-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:7459) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[38/50] [desktop-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:7518) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[39/50] [desktop-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:7568) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[40/50] [desktop-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:7628) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[41/50] [mobile-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:7692) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[42/50] [mobile-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:7754) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[43/50] [mobile-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:7805) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[44/50] [mobile-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:7866) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[45/50] [mobile-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:7928) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[46/50] [mobile-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:7992) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[47/50] [mobile-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:8048) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[48/50] [mobile-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:8105) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[49/50] [mobile-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+
+(node:8135) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[50/50] [mobile-webkit] › e2e/combobox.spec.ts:4:5 › Combobox filters, selects and dismisses while preserving native focus
+  50 passed (2.1m)

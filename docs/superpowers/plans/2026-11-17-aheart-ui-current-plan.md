@@ -2,7 +2,7 @@
 
 2026-11-17，初始审计基线 `735d3d33e0e5a770c5cb83f782dbe33016b4ada7`；#50 合入后的实施基线为 `287058d6395460913b8013c9201c196e9b36c2c9`。这是供单文档执行与审查的合并视图；**负责人已批准 A2 并决定 v2 Go；自 PR #51 合入 master 起，A2 优先于 A1 的对应条款；合入前仍按 A1**。原文保持原样；每条下列规则的来源随条文给出。未提及的技术细节不得用作扩大当前阶段的授权。
 
-**V1当前停止于Workbench首次CSS测量完整性纠错：补齐已有103 B规则后不回升门禁失败，原基线未改，待负责人决定；详见[V1日志](../../../evidence/V1/decision-log.md)。**
+**V1继续验收：负责人已限定授权纠正Workbench无效初测为54,212 B；所有复合基线先通过独立完整性审查才冻结。65入口门禁通过不代表完整阶段或用户验收，详见[V1日志](../../../evidence/V1/decision-log.md)。**
 
 V0已由PR#51合入master（`b1eef9b6`），对应Main CI与Pages已成功，见 [合并后回执](../../../evidence/V1/v0-postmerge/README.md)。下列V1执行口径还纳入负责人2026-11-17的直接澄清与独立授权，原始四份规范、A1、A2不改。
 
@@ -19,8 +19,9 @@ V0已由PR#51合入master（`b1eef9b6`），对应Main CI与Pages已成功，见
 | D1 | [A2-3负责人澄清](../../../evidence/V1/owner-a2-3-clarification-2026-11-17.md) | S1拒绝；叶子/复合预算、JS不变、精确导入与peer先审 |
 | D2 | [分类确认与追加限制](../../../evidence/V1/owner-classification-confirmation-2026-11-17.md) | 确认12/53及辅助/同族边界；复合先测叶子线，通过者硬门禁，Modal不降；优先于D1执行解释 |
 | D3 | [peer与本地版本授权](../../../evidence/V1/owner-peer-versions-2026-11-17.md) | AI peer ^1.4.0，本地core1.4.0/AI1.2.0/DND1.1.0组合；不授权PR/合并/Pages/npm/tag |
+| D4 | [Workbench初测纠错与冻结前审查](../../../evidence/V1/owner-workbench-baseline-correction-2026-11-17.md) | 仅两路径纠正为54,212 B；无效初测历史保留，今后所有复合基线先独立完整性审查才冻结 |
 
-效力顺序：V1先按D1–D3的对应澄清/授权（后决定覆盖前决定），再按已生效A2 → A1未替换部分 → 四份原文未替换部分。P 的产品范围、R 的技术契约、Q 的门禁、T 的输出/降级任务互相约束；冲突记录到阶段日志，由 wzfdhr 决策，不静默选宽松规则。来源：P §11、§15；A1 开头、A1-3；A2 状态说明。
+效力顺序：V1先按D1–D4的对应澄清/授权（后决定覆盖前决定），再按已生效A2 → A1未替换部分 → 四份原文未替换部分。P 的产品范围、R 的技术契约、Q 的门禁、T 的输出/降级任务互相约束；冲突记录到阶段日志，由 wzfdhr 决策，不静默选宽松规则。来源：P §11、§15；A1 开头、A1-3；A2 状态说明。
 
 ## 产品与治理（现行）
 
@@ -63,7 +64,7 @@ V0已由PR#51合入master（`b1eef9b6`），对应Main CI与Pages已成功，见
 | Q03 | P0=安装/构建失败、数据丢失、核心键盘/阅读器、严重样式、公开包、许可证/凭据；P1=推荐路径/API/SSR/iframe/核心浏览器/预算/示例失败；P2=非核心偏差。两个独立环境复现或影响两组件升级一级；安全/凭据/许可证最低 P0 | Q §2.2 |
 | Q04 | 五项目 desktop、mobile、desktop-firefox、desktop-webkit、mobile-webkit；light/dark、键盘、axe/ARIA、reduced-motion、iframe/容器/嵌套/SSR hydration 按范围执行；运行时错误与 axe 0。Node、Vue、构建器范围以冻结支持矩阵为准，不从本机版本外推 | Q §4；R §17；P §9；M1 contract |
 | Q05 | 物理 iOS Safari 已由负责人于 2026-11-16 取消，Cancelled/N/A，不是 Pass、不留设备待办。支持说明：“iOS Safari 仅经浏览器仿真验证，未经真机验证” | [v1.x 收口](../../guide/v1x-closeout.md)；A2-7 提案统一文案 |
-| Q06 | JS两类均沿用M1：gzip<full Plugin，相对root named增量≤max(512 B,1%)。53叶子仍≤25%/theme≤5%/合计≤30%；12复合先实测同一叶子线，8个已达标者（含Modal）锁定原硬门禁；仅4个实测超线者按精确声明依赖并集/不回升基线，theme5%仍保留。无声明外选择器/模块，JS-only无CSS，显式样式不被摇掉，style/full相同；V1 full.css分母与V0字节相同。逐项数值与依赖占比存evidence/V1，开PR前摘要逐条列出 | M1 contract；A2-3/A2-7；D1/D2；[冻结门禁与测量](../../../evidence/V1/composite-css-gates.md) |
+| Q06 | JS两类均沿用M1：gzip<full Plugin，相对root named增量≤max(512 B,1%)。53叶子仍≤25%/theme≤5%/合计≤30%；12复合先实测同一叶子线，8个已达标者（含Modal）锁定原硬门禁；仅4个实测超线者按精确声明依赖并集/不回升基线，theme5%仍保留。无声明外选择器/模块，JS-only无CSS，显式样式不被摇掉，style/full相同；V1 full.css分母与V0字节相同。逐项数值与依赖占比存evidence/V1，开PR前摘要逐条列出 | M1 contract；A2-3/A2-7；D1/D2/D4；所有复合基线须先通过独立完整性审查才冻结；[冻结门禁与测量](../../../evidence/V1/composite-css-gates.md) |
 | Q07 | 本次提案的跳过基线 41 调用点；后续不增加，新增理由须先登记并通过总数门禁，不能用登记本身绕过总数。发布前同一主线 SHA 连续十次、flaky<1%，沿用 QG5 双阶段机制，不拿历史其他 SHA 顶替 | A2-7 提案；[QG5](../../guide/qg5-evidence.md) |
 
 当前 G1 设计、G2 代码、G3 自动检查、G4 视觉、G5 包、G6 PR/合并、G7 主线 CI/Pages、G8 用户验收均保留；阶段只填一张表，N/A 写理由。Local、PR、Merged、Main CI、Pages、npm pack、npm published、UA 必须能分别读出。来源：Q §3/§6、A1-3。
@@ -87,7 +88,7 @@ A1 已删除原 14 天 Beta、三试点持续使用与 30/60/90 复盘；不能�
 | 阶段 / 前置 | Must 与出口 | 回滚、停止 | 来源与旧任务映射 |
 | --- | --- | --- | --- |
 | V0 无发布；已合入 | M2/M3补录与范围变更、路线图、弃用表、此合并计划、A2批准与v2 Go均已随PR#51合入。Main CI/Pages准确SHA成功；历史UA/证据缺失不补造 | 不推导V1/V2验收，不授权发布 | A2-1/A2-2；[V0日志](../../../evidence/V0/decision-log.md)、[合并后回执](../../../evidence/V1/v0-postmerge/README.md) |
-| V1 / 1.4.x additive；V0已合入 | 单清单驱动全Ready子入口/CSS/Resolver，四方漂移；开发构建诊断、生产静默；迁移表/codemod。出口：65条逻辑路径覆盖100%，Q06分类门禁，旧消费与两试点业务源码保持、strict/SSR/hydration/五项目通过、P0=P1=0；V1九行表。当前本地候选core1.4.0/AI1.2.0/DND1.1.0；未公开发布 | 叶子超线、既有复合硬门禁回退、声明外模块/选择器、复合基线增长均停报，不降预算不跳组件。开PR前逐条交12复合数值；PR、合并/Pages、npm、tag仍单独授权。当前版本仅组合验收获准 | A2-3/A2-7；D1–D3；[V1日志](../../../evidence/V1/decision-log.md) |
+| V1 / 1.4.x additive；V0已合入 | 单清单驱动全Ready子入口/CSS/Resolver，四方漂移；开发构建诊断、生产静默；迁移表/codemod。出口：65条逻辑路径覆盖100%，Q06分类门禁，旧消费与两试点业务源码保持、strict/SSR/hydration/五项目通过、P0=P1=0；V1九行表。当前本地候选core1.4.0/AI1.2.0/DND1.1.0；未公开发布 | 叶子超线、既有复合硬门禁回退、声明外模块/选择器、复合基线增长均停报，不降预算不跳组件。开PR前逐条交12复合数值；PR、合并/Pages、npm、tag仍单独授权。当前版本仅组合验收获准 | A2-3/A2-7；D1–D4；[V1日志](../../../evidence/V1/decision-log.md) |
 | V2 / 2.0-alpha；V1 Pass | 按弃用表切 root/full、dist/facade、AI optional DND；B4为回归。根图不含full/Table/DatePicker/AI/DND；无DND的chat可安装/strict/build；旧es/lib/style路径解析；files最小且确定性；两试点指南外改动0；1.3→alpha→1.3状态保留 | 只用next，latest留1.x；任一推荐路径或回退失败不进Beta。候选若新增breaking先改清单批准 | A2-4；R §7/§15/§18；T M1/M6/M8技术任务 |
 | V3 / 2.1 additive；需求触发，不阻塞2.0 | namespaced Combobox 与浮层统一data；按原Q M3 Must、12交互/8键盘a11y/SSR+iframe各1/五项目/P0P1=0/真实采用执行；普通与组合 API、数据模型/Anatomy/merge/focus/模块图齐全 | 若发现必须breaking，先回V2清单；失败保留普通API和旧Select，不冒称组合完成。按3A→3B→3C切片 | A2-5；Q 原M3；R §9/§10/§13；T M3、M4 |
 | V4 / 2.0 Beta→RC→Stable；V2 Pass | Beta：P0=0、Beta范围P1=0，两试点精确registry beta完成5–8任务；RC：P1清零、回退通过、同主线SHA十次flaky<1%；Stable：RC无新增P0/P1，迁移/日志/弃用表齐、负责人书面决定；保留全部适用G1–G8与真实npm验证 | **A2-6已替换A1-6的7天要求**，未来有真实在用项目/外部用户再恢复使用期；next用于Beta/RC，回滚dist-tag/npm deprecate，不unpublish；RC只修阻塞不加新功能 | A2-6/A2-7；Q §7、原M8；R §19 Phase8；T M8 |

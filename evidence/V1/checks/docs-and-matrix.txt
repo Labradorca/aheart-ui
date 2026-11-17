@@ -1,19 +1,19 @@
-✔ Chinese docs shell and component status copy stay localized (9.796333ms)
-✔ DnD docs use visible handles and assign physical iOS touch evidence to QG5 (1.2565ms)
-✔ docs GitHub social icon is local, labelled, and non-empty (0.723375ms)
-✔ M3 public import examples match the shared release entry contract (4.540667ms)
-✔ candidate navigation links to the migration guide and its scenario anchors (1.108125ms)
-✔ documented component and scenario subpaths have quality matrix coverage (9.0635ms)
-✔ records owner-cancelled physical acceptance and keeps optional historical evidence distinct from automation (0.551708ms)
-✔ documents the two-stage master stability gate and exposes the guide in Chinese navigation (0.065458ms)
-✔ describes always-retained and failure-only browser evidence accurately (0.162416ms)
-✔ D9 skip ledger registers every static e2e skip with owner, issue and expiry (23.443709ms)
-✔ D9 skip ledger rejects an expiry date before the execution date (3.894792ms)
-✔ quality matrix registers every Ready component exactly once with release evidence (107.011167ms)
-✔ QG4 matrix records only component-specific accessibility and visual evidence (1.904583ms)
-✔ quality matrix uses the planned mutually exclusive risk mapping (0.205125ms)
-✔ R1 records have current component evidence and product task metadata (0.151541ms)
-✔ pull request template requires product task and quality matrix review (0.728667ms)
+✔ Chinese docs shell and component status copy stay localized (15.104166ms)
+✔ DnD docs use visible handles and assign physical iOS touch evidence to QG5 (1.14425ms)
+✔ docs GitHub social icon is local, labelled, and non-empty (1.017667ms)
+✔ M3 public import examples match the shared release entry contract (4.422292ms)
+✔ candidate navigation links to the migration guide and its scenario anchors (0.987583ms)
+✔ documented component and scenario subpaths have quality matrix coverage (9.008417ms)
+✔ records owner-cancelled physical acceptance and keeps optional historical evidence distinct from automation (0.475125ms)
+✔ documents the two-stage master stability gate and exposes the guide in Chinese navigation (0.065209ms)
+✔ describes always-retained and failure-only browser evidence accurately (0.281167ms)
+✔ D9 skip ledger registers every static e2e skip with owner, issue and expiry (32.301708ms)
+✔ D9 skip ledger rejects an expiry date before the execution date (6.386125ms)
+✔ quality matrix registers every Ready component exactly once with release evidence (123.519542ms)
+✔ QG4 matrix records only component-specific accessibility and visual evidence (1.736875ms)
+✔ quality matrix uses the planned mutually exclusive risk mapping (0.163459ms)
+✔ R1 records have current component evidence and product task metadata (0.13575ms)
+✔ pull request template requires product task and quality matrix review (0.796917ms)
 ℹ tests 16
 ℹ suites 0
 ℹ pass 16
@@ -21,4 +21,4 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 172.763125
+ℹ duration_ms 197.046709

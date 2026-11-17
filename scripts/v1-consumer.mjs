@@ -11,6 +11,7 @@ import { gzipSync } from 'node:zlib'
 import { packageContracts } from './release-contract.mjs'
 import { componentStyleClosure, entryClosure } from '../packages/build/split-styles.mjs'
 import { cssUnionErrors, moduleBoundaryErrors, cssBudgetErrors, jsBudgetErrors } from './v1-entry-contract.mjs'
+import { auditPublicCss, frozenCompositeReviewErrors } from './v1-css-integrity.mjs'
 
 const root = fileURLToPath(new URL('..', import.meta.url)), run = promisify(execFile)
 const arg = name => { const index = process.argv.indexOf(name); return index < 0 ? undefined : process.argv[index + 1] }
@@ -28,10 +29,13 @@ const entries = Object.entries(packages).flatMap(([domain, packageName]) => mani
 assert.equal(new Set(entries.map(item => item.key)).size, entries.length, 'duplicate logical public entry')
 assert.deepEqual(entries.map(item => item.key).sort(), approved.entries.map(entry => `${entry.domain}/${entry.subpath}`).sort(), 'existing approved public entry coverage changed')
 const baselines = initialize ? { status: 'initial complete public CSS measurements; not full V1 acceptance', ownerDecision: 'owner-classification-confirmation-2026-11-17.md', entries: {} } : await json(baselineFile)
+if (!initialize) assert.deepEqual(frozenCompositeReviewErrors(manifest, baselines), [], 'composite baseline freeze lacks independent integrity evidence')
+const integrityReview = { schema: 'aheart-css-integrity.v1', reviewedAt: new Date().toISOString(), method: 'independent source AST traversal; no splitter imports', entries: {} }
 const consumer = await realpath(await mkdtemp(path.join(tmpdir(), 'aheart-v1-consumer-')))
 await mkdir(output, { recursive: true })
 const save = (name, value) => writeFile(path.join(output, name), JSON.stringify(value, null, 2) + '\n')
 const result = { status: 'failed', scope: stylesOnly ? 'complete public styles and initial gate selection only' : 'all 65 public entries: isolated real-tarball JS/CSS/identity/SSR gates', consumer, node: process.version, tarballs: [], installed: [], styles: {}, builds: {}, commands: [] }
+result.integrityReview = integrityReview
 const capture = async (name, command, args) => {
   const startedAt = new Date().toISOString()
   try {
@@ -83,6 +87,9 @@ try {
 
   for (const { domain, entry, key } of entries) {
     const css = await readFile(stylePath(domain, entry)), source = componentStyleClosure(domain, entry.subpath)
+    const integrity = auditPublicCss({ manifest, domain, subpath: entry.subpath, css })
+    integrityReview.entries[key] = integrity
+    assert.equal(integrity.pass, true, `${key}: independent source integrity audit failed: ${JSON.stringify({ missing: integrity.missing, extra: integrity.extra, orderPass: integrity.orderPass })}`)
     const errors = cssUnionErrors(css.toString(), source)
     assert.deepEqual(errors, [], `${key}: public style differs from own + declared dependency union`)
     assert.deepEqual(css, await readFile(stylePath(domain, entry).replace('/es/', '/lib/')), `${key}: ESM/CJS styles differ`)
@@ -110,7 +117,12 @@ try {
     assert.deepEqual(checked.errors, [], `${key}: CSS gate failed`)
     result.styles[key] = { gate: baseline.gate, bytes: css.length, fractionOfFull: css.length / full.length, themePlusBytes: css.length + theme.length, themePlusFraction: (css.length + theme.length) / full.length, firstLeafPass: baseline.firstLeafPass, dependencies, unionPass: true, cssClassCount: classNames(css.toString()).length }
   }
-  if (initialize) await writeFile(baselineFile, JSON.stringify(baselines, null, 2) + '\n')
+  if (initialize) {
+    baselines.status = 'initial composite baselines frozen only after independent integrity review; not full V1 acceptance'
+    baselines.integrityReview = { ...integrityReview, entries: Object.fromEntries(Object.entries(integrityReview.entries).filter(([key]) => { const [domain, subpath] = key.split('/'); return manifest[domain].find(entry => entry.subpath === subpath).budgetClass === 'composite' })) }
+    assert.deepEqual(frozenCompositeReviewErrors(manifest, baselines), [])
+    await writeFile(baselineFile, JSON.stringify(baselines, null, 2) + '\n')
+  }
   if (!stylesOnly) {
     await writeFile(path.join(consumer, 'entry-manifest.json'), JSON.stringify(entries))
     await writeFile(path.join(consumer, 'probe.mjs'), `
@@ -138,8 +150,16 @@ for(const {entry,packageName,key,domain} of entries){
  assert.equal(typeof await renderToString(createSSRApp({render:()=>h(esm[renderName],props)})),'string',request+' SSR')
 }
 assert.equal(typeof window,'undefined')
+const {default:AIForm,AI_FORM_FIELD_TYPES}=await import('@aheart-ui/ai/form')
+assert.deepEqual([...AI_FORM_FIELD_TYPES],['input','textarea','number','select','checkbox','radio','switch','date','date-range','time','time-range','upload','tree-select'])
+assert.deepEqual(Object.keys(AIForm.props).sort(),['modelValue','schema','disabled','submitting','submitText','submitError','validators'].sort())
+assert.deepEqual([...AIForm.emits].sort(),['update:modelValue','submit','schema-error','validation-error'].sort())
+const fields=AI_FORM_FIELD_TYPES.map((type,index)=>({key:'field'+index,label:type,type,...(['select','checkbox','radio','tree-select'].includes(type)?{options:[{label:'A',value:'a'}]}:{})}))
+const formHTML=await renderToString(createSSRApp({render:()=>h(AIForm,{schema:{version:'1',fields}})}))
+assert.ok(!formHTML.includes('表单配置无效'))
+assert.equal(formHTML.split('data-field-key=').length-1,13)
 await writeFile('entry-names.json',JSON.stringify(names))
-console.log('All 65 ESM/CJS/root/full identities and representative SSR passed')
+console.log('All 65 ESM/CJS/root/full identities and representative SSR, plus AIForm 13-field SSR and unchanged props/events passed')
 `)
     await capture('identity-ssr', process.execPath, ['probe.mjs'])
     const names = await json(path.join(consumer, 'entry-names.json'))

@@ -30,6 +30,8 @@ test('Select virtual remeasures wrapping width and font changes without clipping
   page.on('pageerror', error => errors.push(error.message))
   await page.goto('/components/select')
   await page.waitForFunction(() => Boolean((document.querySelector('#app') as any)?.__vue_app__))
+  // Deferred docs toolbars can move the trigger after Vue has mounted.
+  await expect(page.locator('.docs-demo-toolbar').first()).toBeVisible()
   const trigger = page.locator('#select-virtual-evidence')
   await trigger.click()
   await expect.poll(async () => (await evidenceState(page)).visible).toBe(true)
@@ -54,6 +56,8 @@ test('Select virtual preserves stable middle keys through insertion deletion reo
   page.on('pageerror', error => errors.push(error.message))
   await page.goto('/components/select')
   await page.waitForFunction(() => Boolean((document.querySelector('#app') as any)?.__vue_app__))
+  // Deferred docs toolbars can move the trigger after Vue has mounted.
+  await expect(page.locator('.docs-demo-toolbar').first()).toBeVisible()
   await page.locator('#select-virtual-evidence').click()
   await expect.poll(async () => (await evidenceState(page)).visible).toBe(true)
   const before = await evidenceState(page)
@@ -77,6 +81,8 @@ test('Select virtual preserves stable middle keys through insertion deletion reo
 test('Select virtual no-results message remains visible and search can recover', async ({ page }) => {
   await page.goto('/components/select')
   await page.waitForFunction(() => Boolean((document.querySelector('#app') as any)?.__vue_app__))
+  // Deferred docs toolbars can move the trigger after Vue has mounted.
+  await expect(page.locator('.docs-demo-toolbar').first()).toBeVisible()
   const input = page.locator('#select-virtual-search-demo')
   await input.click()
   await input.fill('no-match-anywhere')
@@ -112,6 +118,8 @@ test('Select virtual tail, disabled navigation, dynamic height and scroll anchor
   page.on('pageerror', error => errors.push(error.message))
   await page.goto('/components/select')
   await page.waitForFunction(() => Boolean((document.querySelector('#app') as any)?.__vue_app__))
+  // Deferred docs toolbars can move the trigger after Vue has mounted.
+  await expect(page.locator('.docs-demo-toolbar').first()).toBeVisible()
   const trigger = page.locator('#select-virtual-demo')
   await trigger.scrollIntoViewIfNeeded()
   await trigger.click()
@@ -193,6 +201,7 @@ test('Select virtual uses iframe realm and disposes after SPA unmount', async ({
   const frame = (await handle!.contentFrame())!
   await frame.locator('#app').waitFor()
   await frame.waitForFunction(() => Boolean((document.querySelector('#app') as any)?.__vue_app__))
+  await expect(frame.locator('.docs-demo-toolbar').first()).toBeVisible()
   const trigger = frame.locator('#select-virtual-demo')
   await trigger.scrollIntoViewIfNeeded()
   await trigger.click()

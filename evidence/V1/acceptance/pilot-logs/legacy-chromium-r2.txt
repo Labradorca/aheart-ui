@@ -1,0 +1,3 @@
+{"name":"clean-consumer","status":"passed","project":"/Users/start/code/aheart-ui-wt/v1.4-entries/.pilot-runs/aheart-m0-pilots-0P1kKS/clean-consumer"}
+{"name":"ai-review-gate","status":"passed","project":"/Users/start/code/aheart-ui-wt/v1.4-entries/.pilot-runs/aheart-m0-pilots-0P1kKS/ai-review-gate"}
+{"status":"passed","out":"/Users/start/code/aheart-ui-wt/v1.4-entries/test-results/v1-pilots/legacy-chromium-r2","workspace":"/Users/start/code/aheart-ui-wt/v1.4-entries/.pilot-runs/aheart-m0-pilots-0P1kKS"}

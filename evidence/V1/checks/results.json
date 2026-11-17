@@ -103,56 +103,6 @@
     "normalization": "trailing whitespace and blank lines at EOF only"
   },
   {
-    "name": "m1-consumer",
-    "command": [
-      "corepack",
-      "pnpm",
-      "check:m1-consumer"
-    ],
-    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
-    "head": "ca06147b330c70745d443590ea2a809b7a642100",
-    "scope": "recorded HEAD plus V1 working diff",
-    "workingDiffCommand": [
-      "git",
-      "diff",
-      "HEAD",
-      "--binary"
-    ],
-    "workingDiffSha256": "70b47698474a9c9a325fc41a39f4136119523884687c26b21cd1d5f50d7897e7",
-    "startedAt": "2026-11-17T15:23:46.017Z",
-    "finishedAt": "2026-11-17T15:24:19.677Z",
-    "exitCode": 0,
-    "signal": null,
-    "rawOutputSha256": "0840132f8891f1c81d4551ac9f18b18ef22aa640951fcbd6b23c2f409f08a476",
-    "output": "m1-consumer.txt",
-    "normalization": "trailing whitespace and blank lines at EOF only"
-  },
-  {
-    "name": "m3-consumer",
-    "command": [
-      "corepack",
-      "pnpm",
-      "check:m3-consumer"
-    ],
-    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
-    "head": "ca06147b330c70745d443590ea2a809b7a642100",
-    "scope": "recorded HEAD plus V1 working diff",
-    "workingDiffCommand": [
-      "git",
-      "diff",
-      "HEAD",
-      "--binary"
-    ],
-    "workingDiffSha256": "ed160365b15b0171acccc0454f25c6340ac4ec55b3aa8a7236c56057a1359a58",
-    "startedAt": "2026-11-17T15:24:19.717Z",
-    "finishedAt": "2026-11-17T15:24:51.289Z",
-    "exitCode": 0,
-    "signal": null,
-    "rawOutputSha256": "06bdd764b72d236900af36b4432e1610415d5e1e8b734923f2048f708e676a8e",
-    "output": "m3-consumer.txt",
-    "normalization": "trailing whitespace and blank lines at EOF only"
-  },
-  {
     "name": "test-ai",
     "command": [
       "corepack",
@@ -177,31 +127,6 @@
     "signal": null,
     "rawOutputSha256": "3fb0c30c345aaa17b39a6a9d3f4042c35d5b5ffd780a0e2a639d8c2d608ec3dd",
     "output": "test-ai.txt",
-    "normalization": "trailing whitespace and blank lines at EOF only"
-  },
-  {
-    "name": "drift",
-    "command": [
-      "node",
-      "--test",
-      "scripts/v1-entry-manifest.test.mjs"
-    ],
-    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
-    "head": "4e494f938c43c1fc2ec36d59c507bdd1269a0859",
-    "scope": "recorded HEAD plus V1 working diff",
-    "workingDiffCommand": [
-      "git",
-      "diff",
-      "HEAD",
-      "--binary"
-    ],
-    "workingDiffSha256": "01326d0f8d334a02287802ca52d628e5076db29cffa42c61a432f0d3e1bd9987",
-    "startedAt": "2026-11-17T15:35:43.172Z",
-    "finishedAt": "2026-11-17T15:35:43.663Z",
-    "exitCode": 0,
-    "signal": null,
-    "rawOutputSha256": "c8f898574bcd5909da7fb35324feb4ed19df16db18de5022a19136e5edba2834",
-    "output": "drift.txt",
     "normalization": "trailing whitespace and blank lines at EOF only"
   },
   {
@@ -258,32 +183,6 @@
     "normalization": "trailing whitespace and blank lines at EOF only"
   },
   {
-    "name": "v1-contract-tests",
-    "command": [
-      "node",
-      "--test",
-      "scripts/v1-entry-contract.test.mjs",
-      "scripts/aheart-v2-codemod.test.mjs"
-    ],
-    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
-    "head": "4e494f938c43c1fc2ec36d59c507bdd1269a0859",
-    "scope": "recorded HEAD plus V1 working diff",
-    "workingDiffCommand": [
-      "git",
-      "diff",
-      "HEAD",
-      "--binary"
-    ],
-    "workingDiffSha256": "1ab194c5be399a6a57f238842e7287861865a3d80030e9656a59de3420ebcffa",
-    "startedAt": "2026-11-17T16:56:39.140Z",
-    "finishedAt": "2026-11-17T16:56:39.445Z",
-    "exitCode": 0,
-    "signal": null,
-    "rawOutputSha256": "ea3e43326f7e08ab4f0c43eebd90ab9882b27da35e5ada2f52db3255a6c35b6d",
-    "output": "v1-contract-tests.txt",
-    "normalization": "trailing whitespace and blank lines at EOF only"
-  },
-  {
     "name": "unit",
     "command": [
       "corepack",
@@ -306,79 +205,6 @@
     "signal": null,
     "rawOutputSha256": "0b3614d5316afe27a7078d371867de2c669129a0e90ea96d6dca90f4fa223b32",
     "output": "unit.txt",
-    "normalization": "trailing whitespace and blank lines at EOF only"
-  },
-  {
-    "name": "strict",
-    "command": [
-      "corepack",
-      "pnpm",
-      "check:consumer-types"
-    ],
-    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
-    "head": "4e494f938c43c1fc2ec36d59c507bdd1269a0859",
-    "scope": "recorded HEAD plus V1 working diff",
-    "workingDiffCommand": [
-      "git",
-      "diff",
-      "HEAD",
-      "--binary"
-    ],
-    "workingDiffSha256": "4f3969cd743c88380468e8ad650cffbc7d320a4d2764f1a3edd02afb8139f979",
-    "startedAt": "2026-11-17T17:04:00.829Z",
-    "finishedAt": "2026-11-17T17:04:19.043Z",
-    "exitCode": 0,
-    "signal": null,
-    "rawOutputSha256": "5b15a71fbe3dbb3dd1ca944aa7f10148b74c115437db1e3523edd05f077d2521",
-    "output": "strict.txt",
-    "normalization": "trailing whitespace and blank lines at EOF only"
-  },
-  {
-    "name": "v1-consumer",
-    "command": [
-      "node",
-      "scripts/v1-consumer.mjs"
-    ],
-    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
-    "head": "4e494f938c43c1fc2ec36d59c507bdd1269a0859",
-    "scope": "recorded HEAD plus V1 working diff",
-    "workingDiffCommand": [
-      "git",
-      "diff",
-      "HEAD",
-      "--binary"
-    ],
-    "workingDiffSha256": "00911ccd4b03b3d9ce521d13db39eda6379025c0a146cb00fd1b7ba289465f5f",
-    "startedAt": "2026-11-17T17:04:19.085Z",
-    "finishedAt": "2026-11-17T17:05:34.268Z",
-    "exitCode": 0,
-    "signal": null,
-    "rawOutputSha256": "9ada0d259d2b926285eaad27ce0070cead515f188fe3f1341c1eef77bc60afbd",
-    "output": "v1-consumer.txt",
-    "normalization": "trailing whitespace and blank lines at EOF only"
-  },
-  {
-    "name": "migration-consumer",
-    "command": [
-      "node",
-      "scripts/v2-migration-consumer.mjs"
-    ],
-    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
-    "head": "4e494f938c43c1fc2ec36d59c507bdd1269a0859",
-    "scope": "recorded HEAD plus V1 working diff",
-    "workingDiffCommand": [
-      "git",
-      "diff",
-      "HEAD",
-      "--binary"
-    ],
-    "workingDiffSha256": "071a14cbdd13ea6ad5f99a694bf9c95a4c3d29255fbab95105c7a19eafa698af",
-    "startedAt": "2026-11-17T17:05:34.326Z",
-    "finishedAt": "2026-11-17T17:05:45.533Z",
-    "exitCode": 0,
-    "signal": null,
-    "rawOutputSha256": "da6cc50fefb5f66189a9724189de7e9a6c746ca07f2b53562a3fc13615ef73f3",
-    "output": "migration-consumer.txt",
     "normalization": "trailing whitespace and blank lines at EOF only"
   },
   {
@@ -434,6 +260,319 @@
     "normalization": "trailing whitespace and blank lines at EOF only"
   },
   {
+    "name": "v1-consumer",
+    "command": [
+      "node",
+      "scripts/v1-consumer.mjs"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "f20bc4986510d3cd7a4c8dd55439c297b6ad45df",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "HEAD",
+      "--binary"
+    ],
+    "workingDiffSha256": "c4ba9f1a905a19202294179d03799ef1fbbd10b1ab400c5882d9c38a29c94f1c",
+    "startedAt": "2026-11-17T23:09:22.514Z",
+    "finishedAt": "2026-11-17T23:10:51.223Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "9ada0d259d2b926285eaad27ce0070cead515f188fe3f1341c1eef77bc60afbd",
+    "output": "v1-consumer.txt",
+    "normalization": "trailing whitespace and blank lines at EOF only"
+  },
+  {
+    "name": "migration-consumer",
+    "command": [
+      "node",
+      "scripts/v2-migration-consumer.mjs"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "f20bc4986510d3cd7a4c8dd55439c297b6ad45df",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "HEAD",
+      "--binary"
+    ],
+    "workingDiffSha256": "e7ee08514df2bcd5846ccb222f8fca25190e6662de433e2973e5d683196b8f80",
+    "startedAt": "2026-11-17T23:10:51.335Z",
+    "finishedAt": "2026-11-17T23:11:04.522Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "d3302906bc0d31f4a59954ffa8ef4b19c19dadf0bffc80d5c1f66494de3a021c",
+    "output": "migration-consumer.txt",
+    "normalization": "trailing whitespace and blank lines at EOF only"
+  },
+  {
+    "name": "root-script-tests",
+    "command": [
+      "corepack",
+      "pnpm",
+      "test:release-contract"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "f20bc4986510d3cd7a4c8dd55439c297b6ad45df",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "HEAD",
+      "--binary"
+    ],
+    "workingDiffSha256": "31e322f8ce52f3cecb9c831a9afcebd28ee1543658cf574621a31666730506b2",
+    "startedAt": "2026-11-17T23:14:07.577Z",
+    "finishedAt": "2026-11-17T23:22:39.234Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "a7bef18ca70e09bd9e2f3111e749294c28cfdf76614c7979da572c093c91253b",
+    "output": "root-script-tests.txt",
+    "normalization": "trailing whitespace and blank lines at EOF only"
+  },
+  {
+    "name": "m1-consumer",
+    "command": [
+      "corepack",
+      "pnpm",
+      "check:m1-consumer"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "f20bc4986510d3cd7a4c8dd55439c297b6ad45df",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "HEAD",
+      "--binary"
+    ],
+    "workingDiffSha256": "d3fb30f4d9d4b712e2b3ec7e0dd5a7dc36cb46f0e08f65a90f2a9c5322be0f08",
+    "startedAt": "2026-11-17T23:22:39.285Z",
+    "finishedAt": "2026-11-17T23:23:03.178Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "ab258367f59f0aad36fc1df42d5f786a50451bb605002655dab5f2a2299bdcc7",
+    "output": "m1-consumer.txt",
+    "normalization": "trailing whitespace and blank lines at EOF only"
+  },
+  {
+    "name": "m3-consumer",
+    "command": [
+      "corepack",
+      "pnpm",
+      "check:m3-consumer"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "f20bc4986510d3cd7a4c8dd55439c297b6ad45df",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "HEAD",
+      "--binary"
+    ],
+    "workingDiffSha256": "c28e659af7119e490bf4526dc48dbdb51cc8c795059be104f6e4e9ee512df43f",
+    "startedAt": "2026-11-17T23:23:03.260Z",
+    "finishedAt": "2026-11-17T23:23:23.793Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "06bdd764b72d236900af36b4432e1610415d5e1e8b734923f2048f708e676a8e",
+    "output": "m3-consumer.txt",
+    "normalization": "trailing whitespace and blank lines at EOF only"
+  },
+  {
+    "name": "strict",
+    "command": [
+      "corepack",
+      "pnpm",
+      "check:consumer-types"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "f20bc4986510d3cd7a4c8dd55439c297b6ad45df",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "HEAD",
+      "--binary"
+    ],
+    "workingDiffSha256": "e97a99e454e0f37798c0c0d0819adce450edb50e846cdc07f6aacebdd635c94c",
+    "startedAt": "2026-11-17T23:23:23.845Z",
+    "finishedAt": "2026-11-17T23:23:49.337Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "5b15a71fbe3dbb3dd1ca944aa7f10148b74c115437db1e3523edd05f077d2521",
+    "output": "strict.txt",
+    "normalization": "trailing whitespace and blank lines at EOF only"
+  },
+  {
+    "name": "determinism",
+    "command": [
+      "corepack",
+      "pnpm",
+      "check:build-determinism"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "f20bc4986510d3cd7a4c8dd55439c297b6ad45df",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "HEAD",
+      "--binary"
+    ],
+    "workingDiffSha256": "eb040d1c3331da40eef780a659de4b459ecb228d6f64986a1a10c5420378d25c",
+    "startedAt": "2026-11-17T23:23:49.389Z",
+    "finishedAt": "2026-11-17T23:24:38.971Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "12b59929c242e558b82dd18272f0da38dae93b8d4c02aeb83a2774ef17af86e2",
+    "output": "determinism.txt",
+    "normalization": "trailing whitespace and blank lines at EOF only"
+  },
+  {
+    "name": "legacy-root",
+    "command": [
+      "node",
+      "scripts/root-entry-consumer.mjs",
+      "--tarball",
+      "test-results/release-tarballs/aheart-ui-1.4.0.tgz",
+      "--out",
+      "test-results/v1-legacy/root"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "f20bc4986510d3cd7a4c8dd55439c297b6ad45df",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "HEAD",
+      "--binary"
+    ],
+    "workingDiffSha256": "8c1194a237ca70cd2ab801bc40438e3b7d4844f135f95b944b2c63e13d023cd5",
+    "startedAt": "2026-11-17T23:32:16.655Z",
+    "finishedAt": "2026-11-17T23:32:33.301Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "f449e2e7bc13ff167ed2ad2ed6620ed3feccc9591b2ce3dfcf55e60481f9a5d3",
+    "output": "legacy-root.txt",
+    "normalization": "trailing whitespace and blank lines at EOF only"
+  },
+  {
+    "name": "legacy-form-list",
+    "command": [
+      "node",
+      "scripts/form-list-consumer.mjs",
+      "--tarball",
+      "test-results/release-tarballs/aheart-ui-1.4.0.tgz",
+      "--out",
+      "test-results/v1-legacy/form-list"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "f20bc4986510d3cd7a4c8dd55439c297b6ad45df",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "HEAD",
+      "--binary"
+    ],
+    "workingDiffSha256": "9be38cd0bfa70f50510144354613423a82710f4bbb032a7bc72c00efb1a6f634",
+    "startedAt": "2026-11-17T23:32:33.345Z",
+    "finishedAt": "2026-11-17T23:32:42.611Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "df23f7ca8155e6590144ba5c8e7423d90534538d1951768bfcde2b6382e0f3d0",
+    "output": "legacy-form-list.txt",
+    "normalization": "trailing whitespace and blank lines at EOF only"
+  },
+  {
+    "name": "legacy-d8",
+    "command": [
+      "node",
+      "docs/superpowers/experiments/d8-consumer/run.mjs",
+      "--components-tarball",
+      "test-results/release-tarballs/aheart-ui-1.4.0.tgz",
+      "--ai-tarball",
+      "test-results/release-tarballs/aheart-ui-ai-1.2.0.tgz",
+      "--dnd-tarball",
+      "test-results/release-tarballs/aheart-ui-dnd-1.1.0.tgz",
+      "--out",
+      "test-results/v1-legacy/d8"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "f20bc4986510d3cd7a4c8dd55439c297b6ad45df",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "HEAD",
+      "--binary"
+    ],
+    "workingDiffSha256": "8110ee6e67437b1e6df105ebf7f1383c4713ab4ba85eecc3805bb04f6fa4b994",
+    "startedAt": "2026-11-17T23:32:42.682Z",
+    "finishedAt": "2026-11-17T23:32:53.533Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "95c91f4970ca6afabbd0079e96628ae86b22069525f044101fac0fb1e6c04611",
+    "output": "legacy-d8.txt",
+    "normalization": "trailing whitespace and blank lines at EOF only"
+  },
+  {
+    "name": "v1-contract-tests",
+    "command": [
+      "node",
+      "--test",
+      "scripts/v1-entry-contract.test.mjs",
+      "scripts/v1-css-integrity.test.mjs",
+      "scripts/aheart-v2-codemod.test.mjs"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "f20bc4986510d3cd7a4c8dd55439c297b6ad45df",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "HEAD",
+      "--binary"
+    ],
+    "workingDiffSha256": "c5ece84f84514eb6e5971e3d3bdbd74cb738aa1412701aeaa076726adf01e65b",
+    "startedAt": "2026-11-17T23:43:13.620Z",
+    "finishedAt": "2026-11-17T23:43:13.964Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "65301d5535c4727d32369faa02ec166c2b7323b048f3daae10bcc715cc48621d",
+    "output": "v1-contract-tests.txt",
+    "normalization": "trailing whitespace and blank lines at EOF only"
+  },
+  {
+    "name": "drift",
+    "command": [
+      "node",
+      "--test",
+      "scripts/v1-entry-manifest.test.mjs"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "f20bc4986510d3cd7a4c8dd55439c297b6ad45df",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "HEAD",
+      "--binary"
+    ],
+    "workingDiffSha256": "879b9d61204343aae55701627371f93e6216e7a58779d7fd9ec55a4b20608ea2",
+    "startedAt": "2026-11-17T23:43:13.997Z",
+    "finishedAt": "2026-11-17T23:43:14.510Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "700c98e6d49eda62c66c4d9f9623df56beda47749e05e25080eca0b3ac2188a7",
+    "output": "drift.txt",
+    "normalization": "trailing whitespace and blank lines at EOF only"
+  },
+  {
     "name": "docs-and-matrix",
     "command": [
       "node",
@@ -446,7 +585,7 @@
       "scripts/qg5-skip-ledger.test.mjs"
     ],
     "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
-    "head": "4e494f938c43c1fc2ec36d59c507bdd1269a0859",
+    "head": "f20bc4986510d3cd7a4c8dd55439c297b6ad45df",
     "scope": "recorded HEAD plus V1 working diff",
     "workingDiffCommand": [
       "git",
@@ -454,12 +593,12 @@
       "HEAD",
       "--binary"
     ],
-    "workingDiffSha256": "443779560db387fa70f121a8c5993037c2af7744d6d6a6813dd5ff742ef1cf3e",
-    "startedAt": "2026-11-17T17:27:44.485Z",
-    "finishedAt": "2026-11-17T17:27:44.757Z",
+    "workingDiffSha256": "41ec3be76fe10b4b3899d425c1ba055ad5d81a20ad128b99a11543e2cdef6607",
+    "startedAt": "2026-11-17T23:43:14.543Z",
+    "finishedAt": "2026-11-17T23:43:14.824Z",
     "exitCode": 0,
     "signal": null,
-    "rawOutputSha256": "145e5331ba44696b9264b9bb8285c03c8e5a47fa76912f6361dc0cde9d97b1d4",
+    "rawOutputSha256": "70dda9d598866551cfcee9d8885a2cb2a4659b9efd24a37e1e87aa71cd66802f",
     "output": "docs-and-matrix.txt",
     "normalization": "trailing whitespace and blank lines at EOF only"
   },
@@ -471,7 +610,7 @@
       "docs:build"
     ],
     "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
-    "head": "4e494f938c43c1fc2ec36d59c507bdd1269a0859",
+    "head": "f20bc4986510d3cd7a4c8dd55439c297b6ad45df",
     "scope": "recorded HEAD plus V1 working diff",
     "workingDiffCommand": [
       "git",
@@ -479,12 +618,12 @@
       "HEAD",
       "--binary"
     ],
-    "workingDiffSha256": "b9e99732d08f6602da252c4608b263de755c3cab6efe62318cdf174dc8b69cc3",
-    "startedAt": "2026-11-17T17:27:44.794Z",
-    "finishedAt": "2026-11-17T17:27:52.371Z",
+    "workingDiffSha256": "447082a48400589ac62c7dfd28c3271acc73c729f08360023c6b85faf5e864b4",
+    "startedAt": "2026-11-17T23:44:12.193Z",
+    "finishedAt": "2026-11-17T23:44:20.453Z",
     "exitCode": 0,
     "signal": null,
-    "rawOutputSha256": "e7c07d79d67ad35111c0702db18fb600d0301342ab8d3ad61e9302cb8e093384",
+    "rawOutputSha256": "d24259e798784ac7cd5390804704c141a6ad5713ed8269123ebbfe4e848cb2c5",
     "output": "docs.txt",
     "normalization": "trailing whitespace and blank lines at EOF only"
   },
@@ -496,7 +635,7 @@
       "--check"
     ],
     "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
-    "head": "4e494f938c43c1fc2ec36d59c507bdd1269a0859",
+    "head": "f20bc4986510d3cd7a4c8dd55439c297b6ad45df",
     "scope": "recorded HEAD plus V1 working diff",
     "workingDiffCommand": [
       "git",
@@ -504,9 +643,9 @@
       "HEAD",
       "--binary"
     ],
-    "workingDiffSha256": "29b3b5dbf0e225f2b29d9afecd7071330322758bdcb88e7ec95b4b7863798a4a",
-    "startedAt": "2026-11-17T17:27:52.412Z",
-    "finishedAt": "2026-11-17T17:27:52.434Z",
+    "workingDiffSha256": "dbd6b905232de4bfeea1edea7ce61c7e11c910c1f1f4743e93d816778d9c6370",
+    "startedAt": "2026-11-17T23:44:20.489Z",
+    "finishedAt": "2026-11-17T23:44:20.505Z",
     "exitCode": 0,
     "signal": null,
     "rawOutputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",

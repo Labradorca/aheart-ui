@@ -1,23 +1,28 @@
-✔ codemod splits root defaults and Workbench, preserves aliases/types and is idempotent (14.847083ms)
-✔ codemod also migrates named-default imports and mixed AI defaults (2.89625ms)
-✔ codemod preserves comments, compatible named imports and string contents (3.225167ms)
-✔ codemod rewrites explicit re-exports and CommonJS/awaited default or Workbench access (3.35125ms)
-✔ codemod maps only declared equivalent legacy paths and keeps private/cross-format paths (1.439042ms)
-✔ codemod edits both Vue script blocks without touching template/style (9.14775ms)
-✔ codemod reports ambiguous namespace/dynamic usage and keeps directive imports for review (1.504791ms)
-✔ codemod respects shadowed module bindings and recognizes Node createRequire aliases (6.520833ms)
-✔ CSS union rejects extra/missing selectors, changed declarations, context and order (2.346708ms)
-✔ AIForm closure includes exact declared field styles and no Table or Workbench (9.574709ms)
-✔ module boundary rejects root barrels, undeclared base and optional packages (0.354584ms)
-✔ leaf and already-passing composites keep exact M1 hard boundaries (0.127125ms)
-✔ composite exception requires initial exceedance and freezes dependency bytes/share (0.106167ms)
-✔ JS retains strict full and root-named increment boundaries (0.050791ms)
-✔ real recorded composite baselines reject even one byte of closure growth (1.051291ms)
-ℹ tests 15
+✔ codemod splits root defaults and Workbench, preserves aliases/types and is idempotent (16.731041ms)
+✔ codemod also migrates named-default imports and mixed AI defaults (3.269334ms)
+✔ codemod preserves comments, compatible named imports and string contents (3.633292ms)
+✔ codemod rewrites explicit re-exports and CommonJS/awaited default or Workbench access (3.733125ms)
+✔ codemod maps only declared equivalent legacy paths and keeps private/cross-format paths (1.65725ms)
+✔ codemod edits both Vue script blocks without touching template/style (10.302209ms)
+✔ codemod reports ambiguous namespace/dynamic usage and keeps directive imports for review (1.579542ms)
+✔ codemod respects shadowed module bindings and recognizes Node createRequire aliases (7.353375ms)
+✔ independent audit finds cross-namespace selectors away from the first class (2.204667ms)
+✔ independent audit rejects changed values, contexts, order, duplicates and undeclared rules (0.781708ms)
+✔ all composite freezes require a matching successful independent review (0.837334ms)
+✔ recorded current composite baselines were independently reviewed before freezing (0.409625ms)
+✔ CSS union rejects extra/missing selectors, changed declarations, context and order (2.814708ms)
+✔ AIForm closure includes exact declared field styles and no Table or Workbench (13.050583ms)
+✔ cross-family selectors retain declared DND context and exclude fixtures or undeclared families (0.204583ms)
+✔ module boundary rejects root barrels, undeclared base and optional packages (0.392375ms)
+✔ leaf and already-passing composites keep exact M1 hard boundaries (0.139208ms)
+✔ composite exception requires initial exceedance and freezes dependency bytes/share (0.09775ms)
+✔ JS retains strict full and root-named increment boundaries (0.052ms)
+✔ real recorded composite baselines reject even one byte of closure growth (0.321167ms)
+ℹ tests 20
 ℹ suites 0
-ℹ pass 15
+ℹ pass 20
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 208.089208
+ℹ duration_ms 249.245375
