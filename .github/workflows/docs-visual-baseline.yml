@@ -1,0 +1,28 @@
+name: Refresh documentation visual baselines
+on:
+  push:
+    branches: ['codex/homepage-redesign']
+    paths: ['.github/workflows/docs-visual-baseline.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  snapshots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.17.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm build
+      - run: pnpm exec playwright test e2e/a11y-visual.spec.ts --project=desktop --project=mobile --grep 'surface screenshots|AI Workbench exposes' --update-snapshots --reporter=line
+      - uses: actions/upload-artifact@v4
+        with:
+          name: docs-linux-snapshots
+          path: e2e/a11y-visual.spec.ts-snapshots/*linux.png
