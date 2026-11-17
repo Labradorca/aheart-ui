@@ -4,7 +4,7 @@
       <h1 id="aheart-roadmap-title">v2 路线图</h1>
       <p>
         路线图按已批准的 A1 阶段划分。M2、M3 已公开交付，阶段验收证据待补。
-        V0–V4 为负责人已批准、待合入生效的 A2 计划，合入前仍以 A1 为准。
+        V0–V4 按负责人已批准的 A2 计划推进；A2 自 PR #51 合入 master 起生效，合入前仍以 A1 为准。
       </p>
       <aside class="aheart-roadmap__guardrail">
         公开版本：aheart-ui 1.3.0，AI/DND 1.1.0。发布不代表用户验收。
@@ -69,7 +69,7 @@ const phases = [
     items: [
       "Combobox",
       "Popover / Tooltip / Dropdown、Modal / Drawer、Select 与 Picker 族",
-      "namespaced Combobox 与 data 契约移至 V3 的方案已批准，待合入生效",
+      "namespaced Combobox 与 data 契约移至 V3 的方案已批准，随 A2 合入生效",
     ],
   },
   {
@@ -88,7 +88,7 @@ const phases = [
     key: "V0",
     title: "收口与范围决策",
     description: "补齐阶段记录、冻结弃用清单，由负责人决定是否启动 v2。",
-    status: "已决定 Go · 待合入",
+    status: "v2 Go 已确认",
     state: "planned",
     items: ["M2/M3 证据补录与合并计划", "负责人已决定启动 v2，V0 合入前不启动 V1"],
   },

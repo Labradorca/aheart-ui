@@ -1,6 +1,6 @@
-# Aheart UI v2 规范修订 A2（已批准，待合入生效）：v2 范围、路线与验收标准
+# Aheart UI v2 规范修订 A2（已批准）：v2 范围、路线与验收标准
 
-> 状态：**wzfdhr 于 2026-11-17 批准，待合入 `master` 生效**。合入前仍以 A1 为准；本次批准不包含合并或自动 Pages 部署授权。见 [负责人决定](../../../evidence/V0/owner-decisions-2026-11-17.md)。
+> 状态：**wzfdhr 于 2026-11-17 批准；自 [PR #51](https://github.com/Labradorca/aheart-ui/pull/51) 合入 `master` 起生效**。合入前仍以 A1 为准；本次批准不包含合并或自动 Pages 部署授权。见 [负责人决定](../../../evidence/V0/owner-decisions-2026-11-17.md)。
 >
 > 修订对象：[产品与技术总体方案](./2026-09-08-aheart-ui-product-and-technical-master-plan.md)、[技术 RFC](./2026-09-08-aheart-ui-v2-architecture-optimization-design.md)、[阶段验收标准](./2026-09-08-aheart-ui-v2-phase-acceptance-criteria.md)、[整体任务流程清单](./2026-09-08-aheart-ui-v2-task-flow-checklist.md)、[修订 A1](./2026-11-05-aheart-ui-v2-solo-scope-amendment.md)。
 >

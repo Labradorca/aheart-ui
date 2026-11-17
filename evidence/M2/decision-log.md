@@ -1,12 +1,12 @@
 # M2 决策与证据补录 · 2026-11-17
 
-状态：**实现已合并并公开交付；阶段验收证据未齐，Needs decision**。这份补录不改变 [2026-11-10 本地摘要](implementation-2026-11-10/summary.md) 的历史文字，不代写用户验收。规范优先级为已批准 A1；A2 已批准但尚未合入生效，以下按 A2-7 整理的一张表只是呈现方式，不降低 A1 门禁。
+状态：**实现已合并并公开交付；阶段验收证据未齐，Needs decision**。这份补录不改变 [2026-11-10 本地摘要](implementation-2026-11-10/summary.md) 的历史文字，不代写用户验收。规范优先级为已批准 A1；A2 已批准，范围变更随其合入 master 生效，以下按 A2-7 整理的一张表只是呈现方式，不降低 A1 门禁。
 
 ## 一张验收表
 
 | 项目 | 分项状态 | 证据 | SHA / 时间 | 责任人 |
 | --- | --- | --- | --- | --- |
-| G1 设计 | A1 已批准；范围缩减已随 A2 获批准，待合入生效 | [A1-4](../../docs/superpowers/specs/2026-11-05-aheart-ui-v2-solo-scope-amendment.md) 定义 Primitive 与浮层；本日志范围变更登记见下文 | 2026-11-05 / 本次补录 | wzfdhr 决策 |
+| G1 设计 | A1 已批准；范围缩减已随 A2 获批准，自其合入 master 起生效 | [A1-4](../../docs/superpowers/specs/2026-11-05-aheart-ui-v2-solo-scope-amendment.md) 定义 Primitive 与浮层；本日志范围变更登记见下文 | 2026-11-05 / 本次补录 | wzfdhr 决策 |
 | G2 代码 | Local：历史实现有记录 | [#43 diff](https://github.com/Labradorca/aheart-ui/pull/43/files)、[本地摘要](implementation-2026-11-10/summary.md)；普通 Combobox 与共享浮层已交付，namespaced/data 契约未交付 | `9889ce995e647ee6b6868bd826a973be074691b0` | 实施记录 / Codex 复核 |
 | G3 自动检查 | 历史检查有记录；本次未重跑 M2 全量运行时 | 摘要中的单测、类型、打包消费和五项目自动化；[合并主线 CI](https://github.com/Labradorca/aheart-ui/actions/runs/42963104012) success | 同合并 SHA；2026-11-11 UTC | CI |
 | G4 视觉 | 自动化/代理观察有记录；负责人视觉接受证据缺失 | 摘要记录 Combobox 筛选观察、浏览器回归；[后续 Release 证据](../V0/upstream-release/release-evidence.json) 为自动化试点，不能代替人工接受 | 本地候选 / 后续 `735d3d33` | wzfdhr 验收 |
