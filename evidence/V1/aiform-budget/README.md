@@ -1,6 +1,8 @@
-# AIForm：V1 预算停止点
+# AIForm：原 V1 预算停止点（历史证据）
 
-状态：**Fail，停止 V1 后续实现**。没有放宽比例、改变 full.css 分母、跳过 AIForm 或缩减其现有字段能力。探针命令为 `node evidence/V1/aiform-budget-probe.mjs`，实际退出码 **1**；[完整结果](results.json)、[退出码](exit-code)、[执行尝试记录](probe-attempts.json)。
+**当前状态**：负责人已给出 [A2-3 叶子/复合口径澄清](../owner-a2-3-clarification-2026-11-17.md)，并拒绝S1。这是负责人决定，不是代理放宽预算。下文保留澄清前的比例验收、数值和退出码，不再将其作为复合入口现行比例门禁。106项模块图越界仍未修复；新并集/不回升门禁未实现。当前等待 [分类候选](../../../docs/superpowers/plans/2026-11-17-aiform-on-demand-feasibility.md) 确认，V1实现仍停止。
+
+**原停止点快照**：Fail。探针命令为 `node evidence/V1/aiform-budget-probe.mjs`，实际退出码 **1**；[完整结果](results.json)、[退出码](exit-code)、[执行尝试记录](probe-attempts.json)。当时没有放宽比例、改变full.css分母、跳过AIForm或缩减字段能力。原探针代码仍保留旧比例断言，不能用重跑它代替未来新口径验收。
 
 ## 实测数值与口径
 
@@ -22,10 +24,10 @@
 - [完整必要样式](complete-required-styles.css) 仅为复现证据，不写入包产物。分母从 tarball 读取，并核对与 V0 `full.css` 摘要一致，避免通过增加分母改变门槛。
 - [真实 tarball 模块图](module-graph.json) 同时证明 AIForm 的基础依赖仍从 `aheart-ui` 根 barrel 导入，解析了 Table、Typography 等无关模块。改成公开子入口可以解决这部分图越界，但不会减少全部既有字段实际需要的样式总量。
 
-若 A2 的完整依赖预算适用于 AIForm，当前结构无法仅靠新增 exports 和拆 CSS 达标；需要评审字段适配器/控件依赖的架构方案，再验证身份兼容与完整旧用法。预算适用范围或阶段范围若要调整，必须由负责人明确决定，代理未自行豁免 AI/DND。
+原结论是：在澄清前完整依赖比例口径下，当前结构无法仅靠新增exports和拆CSS达标。负责人随后已明确区分叶子与复合预算，且拒绝S1；现行约束改为依赖并集精确性和不回升基线，模块图与JS要求仍不变。旧测量不因此自动通过新门禁。
 
 ## 分状态与未完成项
 
-Local：基础 45 家族构建、四方漂移 6 项、三包 pack 通过；AIForm 样式闭包和模块图门禁失败。PR：未开；Merged：否；Main CI：V1 缺失；Pages：V1 未部署；npm pack：本地候选通过；npm published：未发布；用户验收：缺失。
+Local：基础45家族构建、四方漂移6项、三包pack的既有成功记录保留；旧比例探针失败为历史，模块图仍未修复，新CSS门禁未验收。PR：未开；Merged：否；Main CI：V1缺失；Pages：V1未部署；npm pack：前次本地候选通过，本轮未重跑；npm published：未发布；用户验收：缺失。
 
-开发构建诊断、完整迁移表/codemod、全部子入口模块图/预算、兼容消费与两试点、strict types、SSR/hydration、五浏览器的 V1 全量验收均未完成。当前只证明声明覆盖，不据此宣称 V1 Pass 或 P0/P1 为 0。按负责人停止点，等待对后续架构/范围的明确决定。
+开发构建诊断、完整迁移表/codemod、全部子入口模块图/预算、兼容消费与两试点、strict types、SSR/hydration、五浏览器的V1全量验收均未完成。当前只证明声明覆盖，不据此宣称V1 Pass或P0/P1为0。负责人预算决定已经记录；下一停止点是复合分类确认。

@@ -1,0 +1,246 @@
+[
+  {
+    "domain": "ai",
+    "subpath": "actions",
+    "componentViews": [
+      "actions"
+    ],
+    "directBaseFamilies": []
+  },
+  {
+    "domain": "ai",
+    "subpath": "attachments",
+    "componentViews": [
+      "attachments"
+    ],
+    "directBaseFamilies": []
+  },
+  {
+    "domain": "ai",
+    "subpath": "bubble",
+    "componentViews": [
+      "attachments",
+      "bubble",
+      "process",
+      "sources"
+    ],
+    "directBaseFamilies": []
+  },
+  {
+    "domain": "ai",
+    "subpath": "conversations",
+    "componentViews": [
+      "conversations"
+    ],
+    "directBaseFamilies": []
+  },
+  {
+    "domain": "ai",
+    "subpath": "form",
+    "componentViews": [
+      "form",
+      "form-field"
+    ],
+    "directBaseFamilies": [
+      "button",
+      "checkbox",
+      "date-picker",
+      "form",
+      "input",
+      "input-number",
+      "radio",
+      "select",
+      "switch",
+      "textarea",
+      "time-picker",
+      "tree-select",
+      "upload"
+    ]
+  },
+  {
+    "domain": "ai",
+    "subpath": "process",
+    "componentViews": [
+      "process"
+    ],
+    "directBaseFamilies": []
+  },
+  {
+    "domain": "ai",
+    "subpath": "prompts",
+    "componentViews": [
+      "prompts"
+    ],
+    "directBaseFamilies": []
+  },
+  {
+    "domain": "ai",
+    "subpath": "sender",
+    "componentViews": [
+      "sender"
+    ],
+    "directBaseFamilies": []
+  },
+  {
+    "domain": "ai",
+    "subpath": "sources",
+    "componentViews": [
+      "sources"
+    ],
+    "directBaseFamilies": []
+  },
+  {
+    "domain": "ai",
+    "subpath": "thought-chain",
+    "componentViews": [
+      "process",
+      "thought-chain"
+    ],
+    "directBaseFamilies": []
+  },
+  {
+    "domain": "ai",
+    "subpath": "welcome",
+    "componentViews": [
+      "welcome"
+    ],
+    "directBaseFamilies": []
+  },
+  {
+    "domain": "ai",
+    "subpath": "chat-panel",
+    "componentViews": [
+      "attachments",
+      "bubble",
+      "chat-panel",
+      "conversations",
+      "process",
+      "prompts",
+      "sender",
+      "sources",
+      "welcome"
+    ],
+    "directBaseFamilies": []
+  },
+  {
+    "domain": "ai",
+    "subpath": "agent-workbench",
+    "componentViews": [
+      "agent-execution",
+      "agent-workbench",
+      "attachments",
+      "bubble",
+      "chat-panel",
+      "conversations",
+      "process",
+      "prompts",
+      "sender",
+      "sources",
+      "welcome"
+    ],
+    "directBaseFamilies": [
+      "button",
+      "drawer",
+      "splitter",
+      "tabs"
+    ]
+  },
+  {
+    "domain": "ai",
+    "subpath": "chat",
+    "componentViews": [
+      "actions",
+      "attachments",
+      "bubble",
+      "chat-panel",
+      "conversations",
+      "process",
+      "prompts",
+      "sender",
+      "sources",
+      "welcome"
+    ],
+    "directBaseFamilies": []
+  },
+  {
+    "domain": "ai",
+    "subpath": "agent",
+    "componentViews": [
+      "form",
+      "form-field",
+      "process",
+      "thought-chain"
+    ],
+    "directBaseFamilies": [
+      "button",
+      "checkbox",
+      "date-picker",
+      "form",
+      "input",
+      "input-number",
+      "radio",
+      "select",
+      "switch",
+      "textarea",
+      "time-picker",
+      "tree-select",
+      "upload"
+    ]
+  },
+  {
+    "domain": "ai",
+    "subpath": "workbench",
+    "componentViews": [
+      "agent-execution",
+      "agent-workbench",
+      "attachments",
+      "bubble",
+      "chat-panel",
+      "conversations",
+      "process",
+      "prompts",
+      "sender",
+      "sources",
+      "welcome"
+    ],
+    "directBaseFamilies": [
+      "button",
+      "drawer",
+      "splitter",
+      "tabs"
+    ]
+  },
+  {
+    "domain": "dnd",
+    "subpath": "draggable",
+    "componentViews": [
+      "draggable"
+    ],
+    "directBaseFamilies": []
+  },
+  {
+    "domain": "dnd",
+    "subpath": "droppable",
+    "componentViews": [
+      "drop-zone"
+    ],
+    "directBaseFamilies": []
+  },
+  {
+    "domain": "dnd",
+    "subpath": "drag-overlay",
+    "componentViews": [
+      "drag-overlay"
+    ],
+    "directBaseFamilies": []
+  },
+  {
+    "domain": "dnd",
+    "subpath": "sortable",
+    "componentViews": [
+      "sortable-item",
+      "sortable-list"
+    ],
+    "directBaseFamilies": []
+  }
+]
