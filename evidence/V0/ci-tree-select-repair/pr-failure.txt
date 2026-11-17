@@ -1,0 +1,93 @@
+browser	End-to-End Tests	2026-11-17T08:11:13.0579237Z   1) [desktop-firefox] › e2e/d4-tree-select-virtual.spec.ts:272:5 › TreeSelect lazy retry remains actionable after selecting root, closing, and reopening
+browser	End-to-End Tests	2026-11-17T08:11:13.0580696Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0581074Z     Error: expect(locator).toHaveAttribute(expected) failed
+browser	End-to-End Tests	2026-11-17T08:11:13.0581426Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0581813Z     Locator:  getByTestId('tree-select-virtual-lazy').getByRole('combobox')
+browser	End-to-End Tests	2026-11-17T08:11:13.0582456Z     Expected: "false"
+browser	End-to-End Tests	2026-11-17T08:11:13.0582866Z     Received: "true"
+browser	End-to-End Tests	2026-11-17T08:11:13.0583231Z     Timeout:  5000ms
+browser	End-to-End Tests	2026-11-17T08:11:13.0583590Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0583783Z     Call log:
+browser	End-to-End Tests	2026-11-17T08:11:13.0584230Z       - Expect "toHaveAttribute" with timeout 5000ms
+browser	End-to-End Tests	2026-11-17T08:11:13.0585333Z       - waiting for getByTestId('tree-select-virtual-lazy').getByRole('combobox')
+browser	End-to-End Tests	2026-11-17T08:11:13.0587374Z         14 × locator resolved to <div tabindex="0" role="combobox" aria-expanded="true" aria-haspopup="tree" class="aheart-tree-select__trigger" aria-labelledby="tree-select-virtual-lazy-label" aria-controls="aheart-tree-select-panel-aheart-tree-select-v-5">…</div>
+browser	End-to-End Tests	2026-11-17T08:11:13.0588835Z            - unexpected value "true"
+browser	End-to-End Tests	2026-11-17T08:11:13.0589162Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0589173Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0589357Z       281 |
+browser	End-to-End Tests	2026-11-17T08:11:13.0589737Z       282 |   await root.click()
+browser	End-to-End Tests	2026-11-17T08:11:13.0590643Z     > 283 |   await expect(trigger).toHaveAttribute('aria-expanded', 'false')
+browser	End-to-End Tests	2026-11-17T08:11:13.0591214Z           |                         ^
+browser	End-to-End Tests	2026-11-17T08:11:13.0591642Z       284 |   await trigger.click()
+browser	End-to-End Tests	2026-11-17T08:11:13.0592103Z       285 |   panel = await panelFor(page, lazy)
+browser	End-to-End Tests	2026-11-17T08:11:13.0592756Z       286 |   root = panel.locator('[role="treeitem"][data-tree-key="lazy-root"]')
+browser	End-to-End Tests	2026-11-17T08:11:13.0593610Z         at /home/runner/work/aheart-ui/aheart-ui/e2e/d4-tree-select-virtual.spec.ts:283:25
+browser	End-to-End Tests	2026-11-17T08:11:13.0594058Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0594643Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+browser	End-to-End Tests	2026-11-17T08:11:13.0595735Z     test-results/d4-tree-select-virtual-Tre-386a9--root-closing-and-reopening-desktop-firefox/test-failed-1.png
+browser	End-to-End Tests	2026-11-17T08:11:13.0596878Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+browser	End-to-End Tests	2026-11-17T08:11:13.0597303Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0597941Z     attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+browser	End-to-End Tests	2026-11-17T08:11:13.0598946Z     test-results/d4-tree-select-virtual-Tre-386a9--root-closing-and-reopening-desktop-firefox/video.webm
+browser	End-to-End Tests	2026-11-17T08:11:13.0600070Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+browser	End-to-End Tests	2026-11-17T08:11:13.0600706Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0601397Z     Error Context: test-results/d4-tree-select-virtual-Tre-386a9--root-closing-and-reopening-desktop-firefox/error-context.md
+browser	End-to-End Tests	2026-11-17T08:11:13.0602115Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0602664Z     attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+browser	End-to-End Tests	2026-11-17T08:11:13.0603806Z     test-results/d4-tree-select-virtual-Tre-386a9--root-closing-and-reopening-desktop-firefox/trace.zip
+browser	End-to-End Tests	2026-11-17T08:11:13.0604564Z     Usage:
+browser	End-to-End Tests	2026-11-17T08:11:13.0604774Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0605571Z         pnpm exec playwright show-trace test-results/d4-tree-select-virtual-Tre-386a9--root-closing-and-reopening-desktop-firefox/trace.zip
+browser	End-to-End Tests	2026-11-17T08:11:13.0606326Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0606840Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+browser	End-to-End Tests	2026-11-17T08:11:13.0607269Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0608143Z   2) [desktop-firefox] › e2e/d4-tree-select-virtual.spec.ts:312:5 › TreeSelect lazy retry text meets normal, hover, and selected-root contrast
+browser	End-to-End Tests	2026-11-17T08:11:13.0609063Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0609391Z     Error: expect(locator).toHaveAttribute(expected) failed
+browser	End-to-End Tests	2026-11-17T08:11:13.0609779Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0610525Z     Locator: locator('#aheart-tree-select-panel-aheart-tree-select-v-5').locator('[role="treeitem"][data-tree-key="lazy-root"]')
+browser	End-to-End Tests	2026-11-17T08:11:13.0611476Z     Expected: "true"
+browser	End-to-End Tests	2026-11-17T08:11:13.0611890Z     Timeout: 5000ms
+browser	End-to-End Tests	2026-11-17T08:11:13.0612349Z     Error: element(s) not found
+browser	End-to-End Tests	2026-11-17T08:11:13.0612591Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0612766Z     Call log:
+browser	End-to-End Tests	2026-11-17T08:11:13.0613173Z       - Expect "toHaveAttribute" with timeout 5000ms
+browser	End-to-End Tests	2026-11-17T08:11:13.0614385Z       - waiting for locator('#aheart-tree-select-panel-aheart-tree-select-v-5').locator('[role="treeitem"][data-tree-key="lazy-root"]')
+browser	End-to-End Tests	2026-11-17T08:11:13.0617355Z         2 × locator resolved to <div tabindex="0" aria-level="1" role="treeitem" aria-setsize="1" aria-posinset="1" aria-expanded="true" aria-selected="false" data-tree-key="lazy-root" aria-label="Lazy loading root" class="aheart-tree__node is-expanded" data-tree-token="s-6c-61-7a-79-2d-72-6f-6f-74" id="aheart-tree-select-tree-aheart-tree-select-v-5-node-s-6c-61-7a-79-2d-72-6f-6f-74">…</div>
+browser	End-to-End Tests	2026-11-17T08:11:13.0619342Z           - unexpected value "false"
+browser	End-to-End Tests	2026-11-17T08:11:13.0619607Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0619617Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0619809Z       381 |   }
+browser	End-to-End Tests	2026-11-17T08:11:13.0620871Z       382 |   const selectedRetry = selectedRoot.getByRole('button', { name: '重试加载 Lazy loading root' })
+browser	End-to-End Tests	2026-11-17T08:11:13.0621783Z     > 383 |   await expect(selectedRoot).toHaveAttribute('aria-selected', 'true')
+browser	End-to-End Tests	2026-11-17T08:11:13.0622365Z           |                              ^
+browser	End-to-End Tests	2026-11-17T08:11:13.0622891Z       384 |   await selectedRetry.hover()
+browser	End-to-End Tests	2026-11-17T08:11:13.0623481Z       385 |   await settleOwnerRealm(selectedPanel)
+browser	End-to-End Tests	2026-11-17T08:11:13.0624161Z       386 |   const selectedRetryContrast = await measure(selectedRetry)
+browser	End-to-End Tests	2026-11-17T08:11:13.0625066Z         at /home/runner/work/aheart-ui/aheart-ui/e2e/d4-tree-select-virtual.spec.ts:383:30
+browser	End-to-End Tests	2026-11-17T08:11:13.0625525Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0626077Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+browser	End-to-End Tests	2026-11-17T08:11:13.0627169Z     test-results/d4-tree-select-virtual-Tre-9e2e7--and-selected-root-contrast-desktop-firefox/test-failed-1.png
+browser	End-to-End Tests	2026-11-17T08:11:13.0628357Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+browser	End-to-End Tests	2026-11-17T08:11:13.0628839Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0629343Z     attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+browser	End-to-End Tests	2026-11-17T08:11:13.0630562Z     test-results/d4-tree-select-virtual-Tre-9e2e7--and-selected-root-contrast-desktop-firefox/video.webm
+browser	End-to-End Tests	2026-11-17T08:11:13.0631701Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+browser	End-to-End Tests	2026-11-17T08:11:13.0632124Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0632740Z     Error Context: test-results/d4-tree-select-virtual-Tre-9e2e7--and-selected-root-contrast-desktop-firefox/error-context.md
+browser	End-to-End Tests	2026-11-17T08:11:13.0633743Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0634313Z     attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+browser	End-to-End Tests	2026-11-17T08:11:13.0635373Z     test-results/d4-tree-select-virtual-Tre-9e2e7--and-selected-root-contrast-desktop-firefox/trace.zip
+browser	End-to-End Tests	2026-11-17T08:11:13.0636255Z     Usage:
+browser	End-to-End Tests	2026-11-17T08:11:13.0636461Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0637213Z         pnpm exec playwright show-trace test-results/d4-tree-select-virtual-Tre-9e2e7--and-selected-root-contrast-desktop-firefox/trace.zip
+browser	End-to-End Tests	2026-11-17T08:11:13.0637934Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0638367Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+browser	End-to-End Tests	2026-11-17T08:11:13.0638716Z
+browser	End-to-End Tests	2026-11-17T08:11:13.0638963Z   2 failed
+browser	End-to-End Tests	2026-11-17T08:11:13.0639910Z     [desktop-firefox] › e2e/d4-tree-select-virtual.spec.ts:272:5 › TreeSelect lazy retry remains actionable after selecting root, closing, and reopening
+browser	End-to-End Tests	2026-11-17T08:11:13.0641626Z     [desktop-firefox] › e2e/d4-tree-select-virtual.spec.ts:312:5 › TreeSelect lazy retry text meets normal, hover, and selected-root contrast
+browser	End-to-End Tests	2026-11-17T08:11:13.0642483Z   128 skipped
+browser	End-to-End Tests	2026-11-17T08:11:13.0642860Z   804 passed (37.8m)
+browser	End-to-End Tests	2026-11-17T08:11:14.1746175Z  ELIFECYCLE  Command failed with exit code 1.
+browser	End-to-End Tests	2026-11-17T08:11:14.2951340Z ##[error]Process completed with exit code 1.

@@ -279,7 +279,8 @@ test('TreeSelect lazy retry remains actionable after selecting root, closing, an
   await expect(root.getByRole('button', { name: '重试加载 Lazy loading root' })).toBeVisible()
   await expect(page.getByTestId('tree-select-virtual-lazy-state')).toContainText('state=error')
 
-  await root.click()
+  // The row center can land on the nested retry button with different font metrics.
+  await root.locator('.aheart-tree__title').click()
   await expect(trigger).toHaveAttribute('aria-expanded', 'false')
   await trigger.click()
   panel = await panelFor(page, lazy)
@@ -370,7 +371,8 @@ test('TreeSelect lazy retry text meets normal, hover, and selected-root contrast
   await settleOwnerRealm(panel)
   const hoverRow = await root.evaluate(element => ({ matchesHover: element.matches(':hover'), background: getComputedStyle(element).backgroundColor }))
   const hover = await measure(retry)
-  await root.click()
+  await root.locator('.aheart-tree__title').click()
+  await expect(lazy.getByRole('combobox')).toHaveAttribute('aria-expanded', 'false')
   await lazy.getByRole('combobox').click()
   const selectedPanel = await panelFor(page, lazy)
   const selectedRoot = selectedPanel.locator('[role="treeitem"][data-tree-key="lazy-root"]')

@@ -1,0 +1,143 @@
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1441039Z   1) [desktop-firefox] › e2e/d4-tree-select-virtual.spec.ts:272:5 › TreeSelect lazy retry remains actionable after selecting root, closing, and reopening
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1441707Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1441943Z     Error: expect(locator).toHaveAttribute(expected) failed
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1442216Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1442878Z     Locator:  getByTestId('tree-select-virtual-lazy').getByRole('combobox')
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1443700Z     Expected: "false"
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1447184Z     Received: "true"
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1448174Z     Timeout:  5000ms
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1448435Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1448597Z     Call log:
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1450010Z       - Expect "toHaveAttribute" with timeout 5000ms
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1450945Z       - waiting for getByTestId('tree-select-virtual-lazy').getByRole('combobox')
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1453638Z         14 × locator resolved to <div tabindex="0" role="combobox" aria-expanded="true" aria-haspopup="tree" class="aheart-tree-select__trigger" aria-labelledby="tree-select-virtual-lazy-label" aria-controls="aheart-tree-select-panel-aheart-tree-select-v-5">…</div>
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1455616Z            - unexpected value "true"
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1455819Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1455825Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1455915Z       281 |
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1456151Z       282 |   await root.click()
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1456577Z     > 283 |   await expect(trigger).toHaveAttribute('aria-expanded', 'false')
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1457006Z           |                         ^
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1457551Z       284 |   await trigger.click()
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1457972Z       285 |   panel = await panelFor(page, lazy)
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1458798Z       286 |   root = panel.locator('[role="treeitem"][data-tree-key="lazy-root"]')
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1459634Z         at /home/runner/work/aheart-ui/aheart-ui/e2e/d4-tree-select-virtual.spec.ts:283:25
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1459991Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1460440Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1461265Z     test-results/d4-tree-select-virtual-Tre-386a9--root-closing-and-reopening-desktop-firefox/test-failed-1.png
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1462107Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1462407Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1462787Z     attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1463538Z     test-results/d4-tree-select-virtual-Tre-386a9--root-closing-and-reopening-desktop-firefox/video.webm
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1464341Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1464618Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1465113Z     Error Context: test-results/d4-tree-select-virtual-Tre-386a9--root-closing-and-reopening-desktop-firefox/error-context.md
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1465647Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1466045Z     attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1466810Z     test-results/d4-tree-select-virtual-Tre-386a9--root-closing-and-reopening-desktop-firefox/trace.zip
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1467641Z     Usage:
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1467886Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1468567Z         pnpm exec playwright show-trace test-results/d4-tree-select-virtual-Tre-386a9--root-closing-and-reopening-desktop-firefox/trace.zip
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1469153Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1469510Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1469807Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1470694Z   2) [desktop-firefox] › e2e/d4-tree-select-virtual.spec.ts:312:5 › TreeSelect lazy retry text meets normal, hover, and selected-root contrast
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1471456Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1471677Z     Error: expect(locator).toHaveAttribute(expected) failed
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1471937Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1472427Z     Locator: locator('#aheart-tree-select-panel-aheart-tree-select-v-5').locator('[role="treeitem"][data-tree-key="lazy-root"]')
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1473028Z     Expected: "true"
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1473656Z     Timeout: 5000ms
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1474064Z     Error: element(s) not found
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1474349Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1474495Z     Call log:
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1474962Z       - Expect "toHaveAttribute" with timeout 5000ms
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1476239Z       - waiting for locator('#aheart-tree-select-panel-aheart-tree-select-v-5').locator('[role="treeitem"][data-tree-key="lazy-root"]')
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1480544Z         2 × locator resolved to <div tabindex="0" aria-level="1" role="treeitem" aria-setsize="1" aria-posinset="1" aria-expanded="true" aria-selected="false" data-tree-key="lazy-root" aria-label="Lazy loading root" class="aheart-tree__node is-expanded" data-tree-token="s-6c-61-7a-79-2d-72-6f-6f-74" id="aheart-tree-select-tree-aheart-tree-select-v-5-node-s-6c-61-7a-79-2d-72-6f-6f-74">…</div>
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1483264Z           - unexpected value "false"
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1483578Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1483588Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1483733Z       381 |   }
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1484734Z       382 |   const selectedRetry = selectedRoot.getByRole('button', { name: '重试加载 Lazy loading root' })
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1485877Z     > 383 |   await expect(selectedRoot).toHaveAttribute('aria-selected', 'true')
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1486620Z           |                              ^
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1487147Z       384 |   await selectedRetry.hover()
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1487912Z       385 |   await settleOwnerRealm(selectedPanel)
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1488682Z       386 |   const selectedRetryContrast = await measure(selectedRetry)
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1489692Z         at /home/runner/work/aheart-ui/aheart-ui/e2e/d4-tree-select-virtual.spec.ts:383:30
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1490311Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1491038Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1492480Z     test-results/d4-tree-select-virtual-Tre-9e2e7--and-selected-root-contrast-desktop-firefox/test-failed-1.png
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1494012Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1494528Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1495207Z     attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1496545Z     test-results/d4-tree-select-virtual-Tre-9e2e7--and-selected-root-contrast-desktop-firefox/video.webm
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1498147Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1498657Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1499812Z     Error Context: test-results/d4-tree-select-virtual-Tre-9e2e7--and-selected-root-contrast-desktop-firefox/error-context.md
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1500794Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1501518Z     attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1502874Z     test-results/d4-tree-select-virtual-Tre-9e2e7--and-selected-root-contrast-desktop-firefox/trace.zip
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1503864Z     Usage:
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1504053Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1505070Z         pnpm exec playwright show-trace test-results/d4-tree-select-virtual-Tre-9e2e7--and-selected-root-contrast-desktop-firefox/trace.zip
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1506104Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1506742Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1507430Z
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1507581Z   2 failed
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1508988Z     [desktop-firefox] › e2e/d4-tree-select-virtual.spec.ts:272:5 › TreeSelect lazy retry remains actionable after selecting root, closing, and reopening
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1511077Z     [desktop-firefox] › e2e/d4-tree-select-virtual.spec.ts:312:5 › TreeSelect lazy retry text meets normal, hover, and selected-root contrast
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1512151Z   128 skipped
+browser	UNKNOWN STEP	2026-11-17T06:47:39.1512497Z   804 passed (44.3m)
+browser	UNKNOWN STEP	2026-11-17T06:47:39.7244123Z  ELIFECYCLE  Command failed with exit code 1.
+browser	UNKNOWN STEP	2026-11-17T06:47:39.7580562Z ##[error]Process completed with exit code 1.
+browser	UNKNOWN STEP	2026-11-17T06:47:39.7798457Z ##[group]Run actions/upload-artifact@v4
+browser	UNKNOWN STEP	2026-11-17T06:47:39.7798793Z with:
+browser	UNKNOWN STEP	2026-11-17T06:47:39.7799007Z   name: e2e-evidence-44028274954-1
+browser	UNKNOWN STEP	2026-11-17T06:47:39.7799316Z   path: test-results/
+browser	UNKNOWN STEP	playwright-report/
+browser	UNKNOWN STEP
+browser	UNKNOWN STEP	2026-11-17T06:47:39.7799630Z   if-no-files-found: warn
+browser	UNKNOWN STEP	2026-11-17T06:47:39.7799876Z   compression-level: 6
+browser	UNKNOWN STEP	2026-11-17T06:47:39.7800094Z   overwrite: false
+browser	UNKNOWN STEP	2026-11-17T06:47:39.7800308Z   include-hidden-files: false
+browser	UNKNOWN STEP	2026-11-17T06:47:39.7800558Z env:
+browser	UNKNOWN STEP	2026-11-17T06:47:39.7800816Z   AHEART_EVIDENCE_SHA: 287058d6395460913b8013c9201c196e9b36c2c9
+browser	UNKNOWN STEP	2026-11-17T06:47:39.7801211Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+browser	UNKNOWN STEP	2026-11-17T06:47:39.7801520Z ##[endgroup]
+browser	UNKNOWN STEP	2026-11-17T06:47:39.9608546Z (node:38281) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+browser	UNKNOWN STEP	2026-11-17T06:47:39.9610084Z (Use `node --trace-deprecation ...` to show where the warning was created)
+browser	UNKNOWN STEP	2026-11-17T06:47:40.0237766Z Multiple search paths detected. Calculating the least common ancestor of all paths
+browser	UNKNOWN STEP	2026-11-17T06:47:40.0239295Z The least common ancestor is /home/runner/work/aheart-ui/aheart-ui. This will be the root directory of the artifact
+browser	UNKNOWN STEP	2026-11-17T06:47:40.0239971Z With the provided path, there will be 145 files uploaded
+browser	UNKNOWN STEP	2026-11-17T06:47:40.0240474Z Artifact name is valid!
+browser	UNKNOWN STEP	2026-11-17T06:47:40.0240752Z Root directory input is valid!
+browser	UNKNOWN STEP	2026-11-17T06:47:40.2259473Z Beginning upload of artifact content to blob storage
+browser	UNKNOWN STEP	2026-11-17T06:47:40.5650110Z (node:38281) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+browser	UNKNOWN STEP	2026-11-17T06:47:40.7046416Z Uploaded bytes 8388608
+browser	UNKNOWN STEP	2026-11-17T06:47:41.0197848Z Uploaded bytes 16777216
+browser	UNKNOWN STEP	2026-11-17T06:47:41.2994459Z Uploaded bytes 24914081
+browser	UNKNOWN STEP	2026-11-17T06:47:41.3117770Z Finished uploading artifact content to blob storage!
+browser	UNKNOWN STEP	2026-11-17T06:47:41.3119347Z SHA256 digest of uploaded artifact zip is b7dc364b146a3d0511f019856303ef1270353332edac651dc90885e9b2918cb7
+browser	UNKNOWN STEP	2026-11-17T06:47:41.3120753Z Finalizing artifact upload
+browser	UNKNOWN STEP	2026-11-17T06:47:41.6405389Z Artifact e2e-evidence-44028274954-1.zip successfully finalized. Artifact ID 14306012550
+browser	UNKNOWN STEP	2026-11-17T06:47:41.6406625Z Artifact e2e-evidence-44028274954-1 has been successfully uploaded! Final size is 24914081 bytes. Artifact ID is 14306012550
+browser	UNKNOWN STEP	2026-11-17T06:47:41.6412514Z Artifact download URL: https://github.com/Labradorca/aheart-ui/actions/runs/44028274954/artifacts/14306012550
+browser	UNKNOWN STEP	2026-11-17T06:47:41.6677204Z Post job cleanup.
+browser	UNKNOWN STEP	2026-11-17T06:47:41.8198146Z Pruning is unnecessary.
+browser	UNKNOWN STEP	2026-11-17T06:47:41.8355451Z Post job cleanup.
+browser	UNKNOWN STEP	2026-11-17T06:47:41.9265374Z [command]/usr/bin/git version
+browser	UNKNOWN STEP	2026-11-17T06:47:41.9311312Z git version 2.56.1
+browser	UNKNOWN STEP	2026-11-17T06:47:41.9352382Z Temporarily overriding HOME='/home/runner/work/_temp/25254bd1-a5b8-4e1a-a33c-1052d6020eb3' before making global git config changes
+browser	UNKNOWN STEP	2026-11-17T06:47:41.9354025Z Adding repository directory to the temporary git global config as a safe directory
+browser	UNKNOWN STEP	2026-11-17T06:47:41.9359061Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/aheart-ui/aheart-ui
+browser	UNKNOWN STEP	2026-11-17T06:47:41.9402081Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+browser	UNKNOWN STEP	2026-11-17T06:47:41.9439330Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+browser	UNKNOWN STEP	2026-11-17T06:47:41.9781286Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+browser	UNKNOWN STEP	2026-11-17T06:47:41.9806429Z http.https://github.com/.extraheader
+browser	UNKNOWN STEP	2026-11-17T06:47:41.9818153Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+browser	UNKNOWN STEP	2026-11-17T06:47:41.9852965Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+browser	UNKNOWN STEP	2026-11-17T06:47:42.0136130Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+browser	UNKNOWN STEP	2026-11-17T06:47:42.0169866Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+browser	UNKNOWN STEP	2026-11-17T06:47:42.0593022Z Cleaning up orphan processes
+browser	UNKNOWN STEP	2026-11-17T06:47:42.1235874Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4, pnpm/action-setup@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

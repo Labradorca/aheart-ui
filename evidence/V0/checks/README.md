@@ -13,6 +13,8 @@
 
 仓库原 .gitignore 忽略 `*.log`，故原始 stdout/stderr 存为 `.txt`，并保留独立 `.exit-code` 文件。没有放宽 docs、quality matrix 或跳过登记校验。
 
+PR 完整 browser job 暴露 master 已有的两个 Firefox 行中心误点问题后，补充两个 E2E 选择目标修正。本地五项目 10/10、具体命令与退出码 0 单独保存在 [CI 修复记录](../ci-tree-select-repair/README.md)；不据此宣称全量浏览器或修复后 Linux CI 通过。
+
 <!-- generated results -->
 
 | 检查 | 命令 | 退出码 | 输出 |

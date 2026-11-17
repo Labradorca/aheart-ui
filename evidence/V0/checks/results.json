@@ -12,10 +12,10 @@
       "scripts/qg5-skip-ledger.test.mjs"
     ],
     "baseline": "287058d6395460913b8013c9201c196e9b36c2c9",
-    "worktreeHead": "83204817713e34bb4dbdf8fcb2102c80c40e606b",
+    "worktreeHead": "2011892b3cb7cf97557e9a6b49a192a6c94f8528",
     "scope": "recorded HEAD plus V0 working diff",
-    "startedAt": "2026-11-17T07:28:41.432Z",
-    "finishedAt": "2026-11-17T07:28:41.722Z",
+    "startedAt": "2026-11-17T08:17:38.497Z",
+    "finishedAt": "2026-11-17T08:17:38.792Z",
     "exitCode": 0,
     "signal": null,
     "output": "docs-and-matrix.txt"
@@ -28,10 +28,10 @@
       "docs:build"
     ],
     "baseline": "287058d6395460913b8013c9201c196e9b36c2c9",
-    "worktreeHead": "83204817713e34bb4dbdf8fcb2102c80c40e606b",
+    "worktreeHead": "2011892b3cb7cf97557e9a6b49a192a6c94f8528",
     "scope": "recorded HEAD plus V0 working diff",
-    "startedAt": "2026-11-17T07:28:41.723Z",
-    "finishedAt": "2026-11-17T07:28:49.547Z",
+    "startedAt": "2026-11-17T08:17:38.793Z",
+    "finishedAt": "2026-11-17T08:17:46.783Z",
     "exitCode": 0,
     "signal": null,
     "output": "docs-build.txt"
@@ -44,10 +44,10 @@
       "--check"
     ],
     "baseline": "287058d6395460913b8013c9201c196e9b36c2c9",
-    "worktreeHead": "83204817713e34bb4dbdf8fcb2102c80c40e606b",
+    "worktreeHead": "2011892b3cb7cf97557e9a6b49a192a6c94f8528",
     "scope": "recorded HEAD plus V0 working diff",
-    "startedAt": "2026-11-17T07:31:37.688Z",
-    "finishedAt": "2026-11-17T07:31:37.701Z",
+    "startedAt": "2026-11-17T08:19:29.956Z",
+    "finishedAt": "2026-11-17T08:19:29.975Z",
     "exitCode": 0,
     "signal": null,
     "output": "diff-check.txt"
@@ -61,10 +61,10 @@
       "--check"
     ],
     "baseline": "287058d6395460913b8013c9201c196e9b36c2c9",
-    "worktreeHead": "83204817713e34bb4dbdf8fcb2102c80c40e606b",
+    "worktreeHead": "2011892b3cb7cf97557e9a6b49a192a6c94f8528",
     "scope": "recorded HEAD plus V0 working diff",
-    "startedAt": "2026-11-17T07:31:37.702Z",
-    "finishedAt": "2026-11-17T07:31:37.714Z",
+    "startedAt": "2026-11-17T08:19:29.976Z",
+    "finishedAt": "2026-11-17T08:19:29.990Z",
     "exitCode": 0,
     "signal": null,
     "output": "staged-diff-check.txt"

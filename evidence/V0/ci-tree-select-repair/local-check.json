@@ -1,0 +1,24 @@
+{
+  "command": [
+    "corepack",
+    "pnpm",
+    "exec",
+    "playwright",
+    "test",
+    "e2e/d4-tree-select-virtual.spec.ts",
+    "--grep",
+    "TreeSelect lazy retry",
+    "--workers=1",
+    "--reporter=line",
+    "--output=/tmp/aheart-pr51-lazy-retry-after"
+  ],
+  "environment": {
+    "AHEART_E2E_PORT": "5183"
+  },
+  "worktreeHead": "2011892b3cb7cf97557e9a6b49a192a6c94f8528",
+  "scope": "recorded HEAD plus the title-click test repair in the working diff",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "exitCode": 0,
+  "result": "10 passed (51.6s); two cases in all five configured projects",
+  "output": "local-after.txt"
+}

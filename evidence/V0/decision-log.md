@@ -27,6 +27,7 @@
 - [路线图文案](roadmap-copy.md)：负责人选定“待 #50 合入再应用”；该条件已解除，已保留 #50 布局并应用 M2/M3 版本与 V0–V4 提案状态，见 [运行证据](roadmap-after-pr50/README.md)。
 - [#50 合并前复核](coordination-recheck-2026-11-17.md) 保留历史；[合并后快照](roadmap-after-pr50/verification.json) 记录 merged、准确合并 SHA 与公开版本，41 条跳过基线不变。
 - PR 模板增加阶段日志、分状态与授权范围检查项。本轮不改运行时代码、依赖、exports、版本号、tag 或 npm。
+- CI 门禁补充：[TreeSelect E2E 修复记录](ci-tree-select-repair/README.md)。#50 后 master 与本 PR 同样两个 Firefox 用例点击行中心误中嵌套重试按钮；只把选择操作改点标题，保留全部断言并补关闭断言。Local 五项目 10/10 通过，完整 PR CI 仍按修复后的准确 head 检查。
 
 ## 一张验收表（A2-7 格式，非批准声明）
 
@@ -35,10 +36,10 @@
 | 项目 | 分项状态 | 证据 | SHA / 时间 | 责任人 |
 | --- | --- | --- | --- | --- |
 | G1 设计 | A2 已批准；v2 Go 已由负责人决定；待合入生效 | A2、合并计划、弃用表及 [直接回复](owner-decisions-2026-11-17.md)；开 PR 和合并/Pages 分开授权 | 2026-11-17 | wzfdhr |
-| G2 代码 | Local：文档/证据/PR 模板与路线图文案候选 | 本节交付清单；原规范/A1 保持原样，路线图保留 #50 布局 | 实施基线 `287058d`；路线图源提交 `17e7256` | Codex |
+| G2 代码 | Local：文档/证据/PR 模板、路线图文案及两个 E2E 选择目标修正 | 本节交付清单；原规范/A1 保持原样，路线图保留 #50 布局；不改组件运行时 | 实施基线 `287058d`；路线图源提交 `17e7256` | Codex |
 | G3 自动检查 | 见检查记录的逐项退出码 | [检查记录](checks/README.md)、[checks.json](checks/results.json)；测试仅说明此次文档范围 | 基线 + 本地 diff | Codex |
 | G4 视觉 | 代理已查看最终生效条件文案的宽/窄生产预览；操作验收仍未代填 | [最终运行与截图](roadmap-effective/README.md)、[独立 Chrome 观察](roadmap-approved/README.md)；CSS zoom 限制保留；原 M2/M3 不补造 | `83204817713e34bb4dbdf8fcb2102c80c40e606b` | Codex 观察 / wzfdhr 验收 |
-| G5 包 | npm pack：N/A（纯文档候选，未重打包） | 上游三包 Release 附件只作已有证据引用 | 已有发布基线 `735d3d33` | N/A |
+| G5 包 | npm pack：本地 N/A（文档/测试候选，未改包）；CI 以最终 head consumer job 为准 | 上游三包 Release 附件只作已有证据引用 | 已有发布基线 `735d3d33` | N/A |
 | G6 PR / 合并 | PR：Draft，待审；Merged：否 | [PR #51](https://github.com/Labradorca/aheart-ui/pull/51)；最终 head 的 PR CI 看该 PR 实时检查，不能以 PR CI 替代合并后主线 CI；合并及 Pages 另需明确授权 | 2026-11-17；创建快照见 [pr-created.json](pr-created.json) | wzfdhr |
 | G7 主线 CI / Pages | Main CI：本候选缺失；Pages：本候选未部署 | facts.json 中成功记录属于基线及历史 SHA，不能代表本候选 | 本候选缺失 | 待授权后 CI |
 | G8 用户验收 | A2 文档批准和 v2 范围决定已收到；逐条真实操作证据仍缺失 | [负责人直接回复](owner-decisions-2026-11-17.md)；不据此补造 M2/M3 或 5–8 条自用操作验收 | 2026-11-17；操作证据缺失 | wzfdhr |
@@ -53,6 +54,7 @@
 | 是否启动 v2 | 已由负责人决定 Go；来自单独回复，没有从开 PR 授权推导 |
 | M2/M3 历史缺失 | 缺失保留；后续证据只证明对应 SHA 与任务，不改写历史 UA |
 | PR / 主线与部署 | 开 PR 已获单独授权；必需 CI 全 SUCCESS 且明确授权合并及 Pages 后才合并，跟进新主线证据 |
+| 完整 browser 门禁 | `2011892` 的两个 Firefox 失败与 master 同源，证据保留；选择目标已修正，修复后的完整 CI 必须 SUCCESS，不能以本地 10/10 替代 |
 | V1 | V0 合并后从新 master 另建分支；某组件拆分/模块图/CSS预算失败立即停止报根因；不跳过、不放宽预算 |
 
-回滚本候选只需撤回文档与模板改动；没有运行时或包数据迁移。V0 正式出口仍要求文档合入、路线图落地、清单无未定处置、负责人决定有记录；本地整理不满足这些出口条件。
+回滚本候选只需撤回文档、模板与 E2E 选择目标改动；没有运行时或包数据迁移。V0 正式出口仍要求文档合入、路线图落地、清单无未定处置、负责人决定有记录；本地整理不满足这些出口条件。

@@ -1,0 +1,40 @@
+{
+  "runId": 44039432015,
+  "artifactId": 14310727648,
+  "artifactName": "e2e-evidence-44039432015-1",
+  "jobUrl": "https://github.com/Labradorca/aheart-ui/actions/runs/44039432015/job/133890265886",
+  "traceZipSha256": "bb4a630d1c045bb0f453bf9f64370da51805d209d47973f00780c0a0eb95c827",
+  "rowClick": {
+    "type": "before",
+    "callId": "call@2169",
+    "startTime": 1461670.589,
+    "class": "Frame",
+    "method": "click",
+    "params": {
+      "selector": "#aheart-tree-select-panel-aheart-tree-select-v-5 >> [role=\"treeitem\"][data-tree-key=\"lazy-root\"]",
+      "strict": true,
+      "timeout": 0
+    },
+    "stepId": "pw:api@35",
+    "pageId": "page@4a55215149f2743e6441fea243c04182",
+    "beforeSnapshot": "before@call@2169"
+  },
+  "input": {
+    "type": "input",
+    "callId": "call@2169",
+    "point": {
+      "x": 511,
+      "y": 532
+    },
+    "inputSnapshot": "input@call@2169"
+  },
+  "precedingScreenshot": {
+    "type": "screencast-frame",
+    "pageId": "page@4a55215149f2743e6441fea243c04182",
+    "sha1": "page@4a55215149f2743e6441fea243c04182-1794902264273.jpeg",
+    "width": 1280,
+    "height": 720,
+    "timestamp": 1461612.978,
+    "frameSwapWallTime": 105446.129445
+  }
+}

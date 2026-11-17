@@ -1,4 +1,4 @@
-# V0 开 PR 前差异摘要
+# V0 差异摘要（含开 PR 后的修订）
 
 初始基线：`735d3d33e0e5a770c5cb83f782dbe33016b4ada7`；#50 合入后的实施基线：`287058d6395460913b8013c9201c196e9b36c2c9`。分支：`codex/v2-a2-v0`；独立 worktree：`/Users/start/code/aheart-ui-wt/v2-a2-v0`。
 
@@ -12,6 +12,7 @@
 | 六份来源合成一份可执行计划，条款逐项注明来源和效力 | [合并计划](../../docs/superpowers/plans/2026-11-17-aheart-ui-current-plan.md) |
 | V0 按负责人回复登记 A2 批准及 v2 Go，合并/Pages 决定留空；路线图保留 #50 布局同步批准状态 | [V0 日志](decision-log.md)、[路线图文案](roadmap-copy.md)、[运行与截图](roadmap-after-pr50/README.md)、[PR 模板](../../.github/pull_request_template.md) |
 | 可复核事实快照、Release 原始 JSON/哈希副本、命令/退出码 | [核对报告](fact-check.md)、[检查记录](checks/README.md) |
+| 修正两个 TreeSelect E2E 选择目标：避开行中心的嵌套重试按钮，保留全部断言并补关闭断言；不改组件运行时 | [根因、基线失败及本地五项目 10/10](ci-tree-select-repair/README.md) |
 
 Local：在 #50 新主线上文档构建成功；相关脚本 **16/16** 通过；宽/窄实际生产预览已观察，截图有记录；diff 检查与精确命令在检查记录。补充 CSS zoom 探针有已诊断的最小宽度限制，未记为通过。superpowers 源规范/计划不在当前 VitePress 发布页面内，文档构建不等于这些提案已公开发布。
 
