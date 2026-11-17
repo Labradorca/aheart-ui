@@ -43,3 +43,15 @@ Taste 确定暖纸色、宋体主标题与组件展示画布；Impeccable 修复
 生产构建通过（保留原大 chunk 提示）；四个文档相关 Playwright 文件 82 passed / 56 按设备条件 skipped。12 类页面 × 桌面/手机 24 个布局场景：无横向溢出、单一 H1、无 pageerror。初次临时截图脚本在筛选离场动画结束前读取数量，补充等待后通过；Table 空白早截已重拍确认正文和示例。明暗 axe 抽查仅剩旧 Button 示例的已知语义色对比度，不更改组件库。
 
 共享样式 Hallmark 渲染扫描 0 FAIL / 0 REFLEX / 0 WARN；Impeccable regex 无报告项；独立视觉复查结论 ship，仅覆盖提供的代表页面，不声称所有路由逐一人工验收。packages 无改动。所有本轮修改保持本地，未推送、合并或部署。
+
+## 合并前检查 · 用户已批准合并
+
+旧 PR 完整 CI 暴露文档源码断言与 skip ledger 行号过期，以及拖拽测试未先将手柄滚入视口的问题。已保持断言语义更新检查，并维护原跳过记录。脚本定点 7 passed；TreeSelect/Table 定点桌面 3 passed；Splitter 桌面与 mobile-webkit 4 passed；移动 AI 工作台审批与截图用例通过。
+
+组件截图固定原始示例外框和字体，显式等待字体加载并对齐像素，保留像素容差。暖色文档与新版可用阅读宽度下的截图基线分别在 macOS 与 Linux 重新生成并审查；macOS 无 update 的复测 5 passed / 1 设备条件 skipped。完整跨浏览器 CI 状态仍以最终提交工作流为准。本记录不将本地定点检查写成完整 CI 通过。
+
+### 合并前 Linux 截图验证
+
+- Linux 截图刷新任务通过：https://github.com/Labradorca/aheart-ui/actions/runs/44027596532 。已同步现有 Linux 截图基线，保留原截图比较阈值。
+- macOS 正常截图复测：5 passed / 1 skipped。临时截图工作流已移除；组件库源码未改动。
+- 用户已授权合并。全量 CI 与 Pages 部署状态单独确认，不将定向验证等同于全量 CI。
