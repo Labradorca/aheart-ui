@@ -35,4 +35,4 @@ CSS zoom 的诊断：当前 VitePress `body` 本来有 `min-width: 320px`（`nod
 
 ## 当前出口
 
-#50 的同文件等待条件已解除，路线图本地应用已完成。A2 批准、负责人 v2 决定、开 PR 授权、合并及自动 Pages 部署授权仍缺失；V0 不标 Pass，V1 不启动。完整审阅入口见 [差异摘要](../diff-summary.md)。
+#50 的同文件等待条件已解除，路线图本地应用已完成。负责人其后单独授权创建 [V0 草稿 PR #51](https://github.com/Labradorca/aheart-ui/pull/51)。A2 批准、负责人 v2 决定、合并及自动 Pages 部署授权仍缺失；V0 不标 Pass，V1 不启动。完整审阅入口见 [差异摘要](../diff-summary.md)。

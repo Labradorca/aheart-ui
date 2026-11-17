@@ -14,7 +14,7 @@
 
 “是否启动 v2”可选 Go、延期（继续 1.x）或缩小范围，代理不选择。A2 两个批准框均保留未选；开 PR 前先交差异摘要。V1 的每步授权不从 V0 继承。
 
-开 PR 授权是在审阅候选 `a47058a` 的差异摘要后单独取得。当前仅推进草稿 PR 与该候选的 CI；A2 批准、v2 决定和合并/自动 Pages 部署仍留给负责人。
+开 PR 授权是在审阅候选 `a47058a` 的差异摘要后单独取得。[草稿 PR #51](https://github.com/Labradorca/aheart-ui/pull/51) 已创建，当前仅推进该 PR 与其 CI；A2 批准、v2 决定和合并/自动 Pages 部署仍留给负责人。
 
 ## 基线与交付
 
@@ -32,12 +32,12 @@
 
 | 项目 | 分项状态 | 证据 | SHA / 时间 | 责任人 |
 | --- | --- | --- | --- | --- |
-| G1 设计 | 草稿已整理；A2 批准、v2 决定缺失 | A2、合并计划、弃用表；上方决定栏为空 | 基线 + 本地 diff；2026-11-17 | wzfdhr |
+| G1 设计 | 草稿已整理；A2 批准、v2 决定缺失 | A2、合并计划、弃用表；A2 与 v2 决定栏为空，开 PR 授权单独记录 | 基线 + 本地 diff；2026-11-17 | wzfdhr |
 | G2 代码 | Local：文档/证据/PR 模板与路线图文案候选 | 本节交付清单；原规范/A1 保持原样，路线图保留 #50 布局 | 实施基线 `287058d`；路线图源提交 `17e7256` | Codex |
 | G3 自动检查 | 见检查记录的逐项退出码 | [检查记录](checks/README.md)、[checks.json](checks/results.json)；测试仅说明此次文档范围 | 基线 + 本地 diff | Codex |
 | G4 视觉 | 代理已检查实际生产预览的宽/窄视口；用户接受仍缺失 | [截图与观察](roadmap-after-pr50/README.md)；补充 CSS zoom 探针的既有最小宽度限制另记，不宣称原生缩放通过；原 M2/M3 不补造 | `17e72568e6197988fcea0df36c76c1c99e5a8bb2` | Codex 观察 / wzfdhr 验收 |
 | G5 包 | npm pack：N/A（纯文档候选，未重打包） | 上游三包 Release 附件只作已有证据引用 | 已有发布基线 `735d3d33` | N/A |
-| G6 PR / 合并 | PR：已授权，创建中；Merged：否 | 已交差异摘要并取得本对话开 PR 授权；合并及 Pages 另需明确授权 | 2026-11-17 | wzfdhr |
+| G6 PR / 合并 | PR：Draft，待审；Merged：否 | [PR #51](https://github.com/Labradorca/aheart-ui/pull/51)；最终 head 的 PR CI 看该 PR 实时检查，不能以 PR CI 替代合并后主线 CI；合并及 Pages 另需明确授权 | 2026-11-17；创建快照见 [pr-created.json](pr-created.json) | wzfdhr |
 | G7 主线 CI / Pages | Main CI：本候选缺失；Pages：本候选未部署 | facts.json 中成功记录属于基线及历史 SHA，不能代表本候选 | 本候选缺失 | 待授权后 CI |
 | G8 用户验收 | UA：缺失；未执行人工任务、不代填 | 路线图、范围、弃用表与 v2 决定待负责人审查 | 缺失 | wzfdhr |
 | npm published | N/A：V0 无版本发布 | 公开 npm 1.3.0/领域包1.1.0为已有事实；本轮未发布 | 基线 | N/A |
