@@ -1,0 +1,23 @@
+{
+  "baseRefOid": "287058d6395460913b8013c9201c196e9b36c2c9",
+  "createdAt": "2026-11-17T06:50:42Z",
+  "headRefOid": "89f78bd526508417a1370dd8d597d895ee5b6004",
+  "isDraft": true,
+  "number": 51,
+  "state": "OPEN",
+  "title": "docs: consolidate A2 and prepare the V0 scope decision",
+  "url": "https://github.com/Labradorca/aheart-ui/pull/51",
+  "recordType": "PR creation snapshot; later heads are reported by live PR checks",
+  "recordedAt": "2026-11-17T06:51:49.518788+00:00",
+  "command": [
+    "gh",
+    "pr",
+    "view",
+    "51",
+    "--repo",
+    "Labradorca/aheart-ui",
+    "--json",
+    "number,title,state,isDraft,url,headRefOid,baseRefOid,createdAt"
+  ],
+  "exitCode": 0
+}

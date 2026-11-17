@@ -1,0 +1,26 @@
+[
+  {
+    "file": "baseline-failure.txt",
+    "normalization": "trim trailing whitespace on each line",
+    "beforeSha256": "50da58414b86793b06ed9976eda22ee37f020339089ed961d7ef6dbbbc07cb3d",
+    "afterSha256": "247e0e56743ae4be9877d9e5357ba22710fbfc9228437129636fcfa5cd52cc2b"
+  },
+  {
+    "file": "pr-failure.txt",
+    "normalization": "trim trailing whitespace on each line",
+    "beforeSha256": "c89390ef85a20446115f82ee4c1ef2f9e0c9c63d283f6bf0713f683ba226b95f",
+    "afterSha256": "9b1c23b1fb1c059659b7142f74ea4815a9726b9b81eae0e1226766d6d1ecbdb8"
+  },
+  {
+    "file": "local-after.txt",
+    "normalization": "trim trailing whitespace on each line",
+    "beforeSha256": "2791c5e93363d920e8ab6393c1e9290c1ac18c87c315fe20e695227aa2ac89c2",
+    "afterSha256": "60ae458ee720e37f0346dcff39abea79ced9caba61cb3a0233cbb06b9ae1074a"
+  },
+  {
+    "file": "push-failure.txt",
+    "normalization": "trim trailing whitespace on each line",
+    "beforeSha256": "1198d2d2d66fadd545bf5d1758d2157b84d5561bd9bbd1821c142d33c594cfcf",
+    "afterSha256": "fa95708a90554cd89078bebff5360ab57f7313ebb0b00fc7c2564e741e03026c"
+  }
+]

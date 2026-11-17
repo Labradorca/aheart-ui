@@ -1,0 +1,84 @@
+
+[WebServer] (node:14250) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+[WebServer] - building client + server bundles...
+
+[WebServer]
+[WebServer] (!) Some chunks are larger than 500 kB after minification. Consider:
+[WebServer] - Using dynamic import() to code-split the application
+[WebServer] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+[WebServer] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+[WebServer] ✓ building client + server bundles...
+
+[WebServer] - rendering pages...
+
+[WebServer] ✓ rendering pages...
+
+[WebServer] (node:14603) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 10 tests using 1 worker
+
+
+(node:14605) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/10] [desktop] › e2e/d4-tree-select-virtual.spec.ts:272:5 › TreeSelect lazy retry remains actionable after selecting root, closing, and reopening
+[desktop] › e2e/d4-tree-select-virtual.spec.ts:272:5 › TreeSelect lazy retry remains actionable after selecting root, closing, and reopening
+lazy reopen retry state {"state":"state=success; attempts=2; aborts=0","expanded":"true","activeKey":"lazy-root"}
+
+[2/10] [desktop] › e2e/d4-tree-select-virtual.spec.ts:313:5 › TreeSelect lazy retry text meets normal, hover, and selected-root contrast
+[desktop] › e2e/d4-tree-select-virtual.spec.ts:313:5 › TreeSelect lazy retry text meets normal, hover, and selected-root contrast
+retry contrast normal/hover/selected {"normal":{"foreground":{"r":135.29994,"g":35.000024999999994,"b":29.100089999999998,"a":1},"background":{"r":255,"g":255,"b":255,"a":1},"rawRowBackground":"rgba(0, 0, 0, 0)","rowHovered":false,"ratio":9.156644821753183,"opacity":"1"},"hover":{"foreground":{"r":135.29994,"g":35.000024999999994,"b":29.100089999999998,"a":1},"background":{"r":250,"g":250,"b":250,"a":1},"rawRowBackground":"rgb(250, 250, 250)","rowHovered":true,"ratio":8.772705424620726,"opacity":"1"},"hoverRow":{"matchesHover":true,"background":"rgb(250, 250, 250)"},"selectedRetryContrast":{"foreground":{"r":135.29994,"g":35.000024999999994,"b":29.100089999999998,"a":1},"background":{"r":230,"g":244,"b":255,"a":1},"rawRowBackground":"rgb(230, 244, 255)","rowHovered":true,"ratio":8.175084013503094,"opacity":"1"},"selectedTitleContrast":{"foreground":{"r":23.979996,"g":100.51998,"b":207.920115,"a":1},"background":{"r":230,"g":244,"b":255,"a":1},"rawRowBackground":"rgb(230, 244, 255)","rowHovered":true,"ratio":4.94471565981886,"opacity":"1"}}
+
+
+(node:14615) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[3/10] [mobile] › e2e/d4-tree-select-virtual.spec.ts:272:5 › TreeSelect lazy retry remains actionable after selecting root, closing, and reopening
+[mobile] › e2e/d4-tree-select-virtual.spec.ts:272:5 › TreeSelect lazy retry remains actionable after selecting root, closing, and reopening
+lazy reopen retry state {"state":"state=success; attempts=2; aborts=0","expanded":"true","activeKey":"lazy-root"}
+
+[4/10] [mobile] › e2e/d4-tree-select-virtual.spec.ts:313:5 › TreeSelect lazy retry text meets normal, hover, and selected-root contrast
+[mobile] › e2e/d4-tree-select-virtual.spec.ts:313:5 › TreeSelect lazy retry text meets normal, hover, and selected-root contrast
+retry contrast normal/hover/selected {"normal":{"foreground":{"r":135.29994,"g":35.000024999999994,"b":29.100089999999998,"a":1},"background":{"r":255,"g":255,"b":255,"a":1},"rawRowBackground":"rgba(0, 0, 0, 0)","rowHovered":false,"ratio":9.156644821753183,"opacity":"1"},"hover":{"foreground":{"r":135.29994,"g":35.000024999999994,"b":29.100089999999998,"a":1},"background":{"r":250,"g":250,"b":250,"a":1},"rawRowBackground":"rgb(250, 250, 250)","rowHovered":true,"ratio":8.772705424620726,"opacity":"1"},"hoverRow":{"matchesHover":true,"background":"rgb(250, 250, 250)"},"selectedRetryContrast":{"foreground":{"r":135.29994,"g":35.000024999999994,"b":29.100089999999998,"a":1},"background":{"r":230,"g":244,"b":255,"a":1},"rawRowBackground":"rgb(230, 244, 255)","rowHovered":true,"ratio":8.175084013503094,"opacity":"1"},"selectedTitleContrast":{"foreground":{"r":23.979996,"g":100.51998,"b":207.920115,"a":1},"background":{"r":230,"g":244,"b":255,"a":1},"rawRowBackground":"rgb(230, 244, 255)","rowHovered":true,"ratio":4.94471565981886,"opacity":"1"}}
+
+
+(node:14625) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[5/10] [desktop-firefox] › e2e/d4-tree-select-virtual.spec.ts:272:5 › TreeSelect lazy retry remains actionable after selecting root, closing, and reopening
+[desktop-firefox] › e2e/d4-tree-select-virtual.spec.ts:272:5 › TreeSelect lazy retry remains actionable after selecting root, closing, and reopening
+lazy reopen retry state {"state":"state=success; attempts=2; aborts=0","expanded":"true","activeKey":"lazy-root"}
+
+[6/10] [desktop-firefox] › e2e/d4-tree-select-virtual.spec.ts:313:5 › TreeSelect lazy retry text meets normal, hover, and selected-root contrast
+[desktop-firefox] › e2e/d4-tree-select-virtual.spec.ts:313:5 › TreeSelect lazy retry text meets normal, hover, and selected-root contrast
+retry contrast normal/hover/selected {"normal":{"foreground":{"r":135.29994,"g":35.000024999999994,"b":29.100089999999998,"a":1},"background":{"r":255,"g":255,"b":255,"a":1},"rawRowBackground":"rgba(0, 0, 0, 0)","rowHovered":false,"ratio":9.156644821753183,"opacity":"1"},"hover":{"foreground":{"r":135.29994,"g":35.000024999999994,"b":29.100089999999998,"a":1},"background":{"r":250,"g":250,"b":250,"a":1},"rawRowBackground":"rgb(250, 250, 250)","rowHovered":true,"ratio":8.772705424620726,"opacity":"1"},"hoverRow":{"matchesHover":true,"background":"rgb(250, 250, 250)"},"selectedRetryContrast":{"foreground":{"r":135.29994,"g":35.000024999999994,"b":29.100089999999998,"a":1},"background":{"r":230,"g":244,"b":255,"a":1},"rawRowBackground":"rgb(230, 244, 255)","rowHovered":true,"ratio":8.175084013503094,"opacity":"1"},"selectedTitleContrast":{"foreground":{"r":23.979996,"g":100.51998,"b":207.920115,"a":1},"background":{"r":230,"g":244,"b":255,"a":1},"rawRowBackground":"rgb(230, 244, 255)","rowHovered":true,"ratio":4.94471565981886,"opacity":"1"}}
+
+
+(node:14645) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[7/10] [desktop-webkit] › e2e/d4-tree-select-virtual.spec.ts:272:5 › TreeSelect lazy retry remains actionable after selecting root, closing, and reopening
+[desktop-webkit] › e2e/d4-tree-select-virtual.spec.ts:272:5 › TreeSelect lazy retry remains actionable after selecting root, closing, and reopening
+lazy reopen retry state {"state":"state=success; attempts=2; aborts=0","expanded":"true","activeKey":"lazy-root"}
+
+[8/10] [desktop-webkit] › e2e/d4-tree-select-virtual.spec.ts:313:5 › TreeSelect lazy retry text meets normal, hover, and selected-root contrast
+[desktop-webkit] › e2e/d4-tree-select-virtual.spec.ts:313:5 › TreeSelect lazy retry text meets normal, hover, and selected-root contrast
+retry contrast normal/hover/selected {"normal":{"foreground":{"r":135.29994,"g":35.000024999999994,"b":29.100089999999998,"a":1},"background":{"r":255,"g":255,"b":255,"a":1},"rawRowBackground":"rgba(0, 0, 0, 0)","rowHovered":false,"ratio":9.156644821753183,"opacity":"1"},"hover":{"foreground":{"r":135.29994,"g":35.000024999999994,"b":29.100089999999998,"a":1},"background":{"r":250,"g":250,"b":250,"a":1},"rawRowBackground":"rgb(250, 250, 250)","rowHovered":true,"ratio":8.772705424620726,"opacity":"1"},"hoverRow":{"matchesHover":true,"background":"rgb(250, 250, 250)"},"selectedRetryContrast":{"foreground":{"r":135.29994,"g":35.000024999999994,"b":29.100089999999998,"a":1},"background":{"r":230,"g":244,"b":255,"a":1},"rawRowBackground":"rgb(230, 244, 255)","rowHovered":true,"ratio":8.175084013503094,"opacity":"1"},"selectedTitleContrast":{"foreground":{"r":23.979945,"g":100.51998,"b":207.920115,"a":1},"background":{"r":230,"g":244,"b":255,"a":1},"rawRowBackground":"rgb(230, 244, 255)","rowHovered":true,"ratio":4.9447158227321095,"opacity":"1"}}
+
+
+(node:14699) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[9/10] [mobile-webkit] › e2e/d4-tree-select-virtual.spec.ts:272:5 › TreeSelect lazy retry remains actionable after selecting root, closing, and reopening
+[mobile-webkit] › e2e/d4-tree-select-virtual.spec.ts:272:5 › TreeSelect lazy retry remains actionable after selecting root, closing, and reopening
+lazy reopen retry state {"state":"state=success; attempts=2; aborts=0","expanded":"true","activeKey":"lazy-root"}
+
+[10/10] [mobile-webkit] › e2e/d4-tree-select-virtual.spec.ts:313:5 › TreeSelect lazy retry text meets normal, hover, and selected-root contrast
+[mobile-webkit] › e2e/d4-tree-select-virtual.spec.ts:313:5 › TreeSelect lazy retry text meets normal, hover, and selected-root contrast
+retry contrast normal/hover/selected {"normal":{"foreground":{"r":135.29994,"g":35.000024999999994,"b":29.100089999999998,"a":1},"background":{"r":255,"g":255,"b":255,"a":1},"rawRowBackground":"rgba(0, 0, 0, 0)","rowHovered":false,"ratio":9.156644821753183,"opacity":"1"},"hover":{"foreground":{"r":135.29994,"g":35.000024999999994,"b":29.100089999999998,"a":1},"background":{"r":250,"g":250,"b":250,"a":1},"rawRowBackground":"rgb(250, 250, 250)","rowHovered":true,"ratio":8.772705424620726,"opacity":"1"},"hoverRow":{"matchesHover":true,"background":"rgb(250, 250, 250)"},"selectedRetryContrast":{"foreground":{"r":135.29994,"g":35.000024999999994,"b":29.100089999999998,"a":1},"background":{"r":230,"g":244,"b":255,"a":1},"rawRowBackground":"rgb(230, 244, 255)","rowHovered":true,"ratio":8.175084013503094,"opacity":"1"},"selectedTitleContrast":{"foreground":{"r":23.979945,"g":100.51998,"b":207.920115,"a":1},"background":{"r":230,"g":244,"b":255,"a":1},"rawRowBackground":"rgb(230, 244, 255)","rowHovered":true,"ratio":4.9447158227321095,"opacity":"1"}}
+
+  10 passed (51.6s)

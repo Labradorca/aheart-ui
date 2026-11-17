@@ -1,0 +1,272 @@
+{
+  "result": {
+    "sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+    "completedMeasurementRunIds": [
+      43912683775,
+      43913316827,
+      43913761547,
+      43914413493,
+      43915161909,
+      43915710177,
+      43916337272,
+      43917064661,
+      43917695256,
+      43918415893
+    ],
+    "ok": true,
+    "windowSize": 10,
+    "eligibleRuns": 10,
+    "flakyRuns": 0,
+    "flakyRate": 0,
+    "threshold": 0.01,
+    "runIds": [
+      43918415893,
+      43917695256,
+      43917064661,
+      43916337272,
+      43915710177,
+      43915161909,
+      43914413493,
+      43913761547,
+      43913316827,
+      43912683775
+    ],
+    "flakyRunIds": []
+  },
+  "evidence": {
+    "schemaVersion": "qg5-master-stability.v1",
+    "runs": [
+      {
+        "runId": 43918415893,
+        "workflow": "CI",
+        "branch": "master",
+        "event": "workflow_dispatch",
+        "sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+        "createdAt": "2026-11-16T17:26:37Z",
+        "attempts": [
+          {
+            "attempt": 1,
+            "conclusion": "success",
+            "projects": {
+              "desktop-firefox": "success",
+              "mobile": "success",
+              "mobile-webkit": "success",
+              "desktop": "success",
+              "desktop-webkit": "success"
+            }
+          }
+        ]
+      },
+      {
+        "runId": 43917695256,
+        "workflow": "CI",
+        "branch": "master",
+        "event": "workflow_dispatch",
+        "sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+        "createdAt": "2026-11-16T17:22:30Z",
+        "attempts": [
+          {
+            "attempt": 1,
+            "conclusion": "success",
+            "projects": {
+              "mobile-webkit": "success",
+              "mobile": "success",
+              "desktop-firefox": "success",
+              "desktop-webkit": "success",
+              "desktop": "success"
+            }
+          }
+        ]
+      },
+      {
+        "runId": 43917064661,
+        "workflow": "CI",
+        "branch": "master",
+        "event": "workflow_dispatch",
+        "sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+        "createdAt": "2026-11-16T17:18:55Z",
+        "attempts": [
+          {
+            "attempt": 1,
+            "conclusion": "success",
+            "projects": {
+              "mobile-webkit": "success",
+              "desktop-webkit": "success",
+              "mobile": "success",
+              "desktop": "success",
+              "desktop-firefox": "success"
+            }
+          }
+        ]
+      },
+      {
+        "runId": 43916337272,
+        "workflow": "CI",
+        "branch": "master",
+        "event": "workflow_dispatch",
+        "sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+        "createdAt": "2026-11-16T17:14:53Z",
+        "attempts": [
+          {
+            "attempt": 1,
+            "conclusion": "success",
+            "projects": {
+              "mobile": "success",
+              "desktop-webkit": "success",
+              "mobile-webkit": "success",
+              "desktop-firefox": "success",
+              "desktop": "success"
+            }
+          }
+        ]
+      },
+      {
+        "runId": 43915710177,
+        "workflow": "CI",
+        "branch": "master",
+        "event": "workflow_dispatch",
+        "sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+        "createdAt": "2026-11-16T17:11:21Z",
+        "attempts": [
+          {
+            "attempt": 1,
+            "conclusion": "success",
+            "projects": {
+              "desktop-firefox": "success",
+              "mobile-webkit": "success",
+              "desktop-webkit": "success",
+              "desktop": "success",
+              "mobile": "success"
+            }
+          }
+        ]
+      },
+      {
+        "runId": 43915161909,
+        "workflow": "CI",
+        "branch": "master",
+        "event": "workflow_dispatch",
+        "sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+        "createdAt": "2026-11-16T17:08:21Z",
+        "attempts": [
+          {
+            "attempt": 1,
+            "conclusion": "success",
+            "projects": {
+              "desktop": "success",
+              "mobile": "success",
+              "desktop-firefox": "success",
+              "desktop-webkit": "success",
+              "mobile-webkit": "success"
+            }
+          }
+        ]
+      },
+      {
+        "runId": 43914413493,
+        "workflow": "CI",
+        "branch": "master",
+        "event": "workflow_dispatch",
+        "sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+        "createdAt": "2026-11-16T17:04:18Z",
+        "attempts": [
+          {
+            "attempt": 1,
+            "conclusion": "success",
+            "projects": {
+              "mobile": "success",
+              "desktop": "success",
+              "desktop-firefox": "success",
+              "desktop-webkit": "success",
+              "mobile-webkit": "success"
+            }
+          }
+        ]
+      },
+      {
+        "runId": 43913761547,
+        "workflow": "CI",
+        "branch": "master",
+        "event": "workflow_dispatch",
+        "sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+        "createdAt": "2026-11-16T17:00:45Z",
+        "attempts": [
+          {
+            "attempt": 1,
+            "conclusion": "success",
+            "projects": {
+              "mobile-webkit": "success",
+              "desktop": "success",
+              "mobile": "success",
+              "desktop-firefox": "success",
+              "desktop-webkit": "success"
+            }
+          }
+        ]
+      },
+      {
+        "runId": 43913316827,
+        "workflow": "CI",
+        "branch": "master",
+        "event": "workflow_dispatch",
+        "sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+        "createdAt": "2026-11-16T16:58:17Z",
+        "attempts": [
+          {
+            "attempt": 1,
+            "conclusion": "success",
+            "projects": {
+              "desktop": "success",
+              "mobile-webkit": "success",
+              "desktop-webkit": "success",
+              "mobile": "success",
+              "desktop-firefox": "success"
+            }
+          }
+        ]
+      },
+      {
+        "runId": 43912683775,
+        "workflow": "CI",
+        "branch": "master",
+        "event": "workflow_dispatch",
+        "sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+        "createdAt": "2026-11-16T16:54:46Z",
+        "attempts": [
+          {
+            "attempt": 1,
+            "conclusion": "success",
+            "projects": {
+              "desktop-firefox": "success",
+              "desktop-webkit": "success",
+              "mobile": "success",
+              "mobile-webkit": "success",
+              "desktop": "success"
+            }
+          }
+        ]
+      },
+      {
+        "runId": 43912659909,
+        "workflow": "CI",
+        "branch": "master",
+        "event": "push",
+        "sha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+        "createdAt": "2026-11-16T16:54:38Z",
+        "attempts": [
+          {
+            "attempt": 1,
+            "conclusion": "success",
+            "projects": {
+              "mobile": "success",
+              "desktop-webkit": "success",
+              "desktop": "success",
+              "desktop-firefox": "success",
+              "mobile-webkit": "success"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

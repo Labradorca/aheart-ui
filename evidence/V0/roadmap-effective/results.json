@@ -1,0 +1,98 @@
+{
+  "sourceCommit": "83204817713e34bb4dbdf8fcb2102c80c40e606b",
+  "browser": "149.0.7827.55",
+  "mode": "headless Chromium; automated running-page check",
+  "url": "http://127.0.0.1:50590/roadmap/v2",
+  "results": [
+    {
+      "width": 1185,
+      "innerWidth": 1185,
+      "scrollWidth": 1185,
+      "intro": "v2 路线图\n\n路线图按已批准的 A1 阶段划分。M2、M3 已公开交付，阶段验收证据待补。 V0–V4 按负责人已批准的 A2 计划推进；A2 自 PR #51 合入 master 起生效，合入前仍以 A1 为准。\n\n公开版本：aheart-ui 1.3.0，AI/DND 1.1.0。发布不代表用户验收。 iOS Safari 仅经浏览器仿真验证，未经真机验证。",
+      "phases": [
+        {
+          "key": "M0",
+          "status": "已验收"
+        },
+        {
+          "key": "M1",
+          "status": "已验收 · 已发布 1.2.0"
+        },
+        {
+          "key": "M2",
+          "status": "已发布 1.3.0"
+        },
+        {
+          "key": "M3",
+          "status": "已发布 AI/DND 1.1.0"
+        },
+        {
+          "key": "V0",
+          "status": "v2 Go 已确认"
+        },
+        {
+          "key": "V1",
+          "status": "A2 已批准 · 未启动"
+        },
+        {
+          "key": "V2",
+          "status": "A2 已批准 · 未启动"
+        },
+        {
+          "key": "V3",
+          "status": "需求触发 · 未启动"
+        },
+        {
+          "key": "V4",
+          "status": "A2 已批准 · 未启动"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "intro": "v2 路线图\n\n路线图按已批准的 A1 阶段划分。M2、M3 已公开交付，阶段验收证据待补。 V0–V4 按负责人已批准的 A2 计划推进；A2 自 PR #51 合入 master 起生效，合入前仍以 A1 为准。\n\n公开版本：aheart-ui 1.3.0，AI/DND 1.1.0。发布不代表用户验收。 iOS Safari 仅经浏览器仿真验证，未经真机验证。",
+      "phases": [
+        {
+          "key": "M0",
+          "status": "已验收"
+        },
+        {
+          "key": "M1",
+          "status": "已验收 · 已发布 1.2.0"
+        },
+        {
+          "key": "M2",
+          "status": "已发布 1.3.0"
+        },
+        {
+          "key": "M3",
+          "status": "已发布 AI/DND 1.1.0"
+        },
+        {
+          "key": "V0",
+          "status": "v2 Go 已确认"
+        },
+        {
+          "key": "V1",
+          "status": "A2 已批准 · 未启动"
+        },
+        {
+          "key": "V2",
+          "status": "A2 已批准 · 未启动"
+        },
+        {
+          "key": "V3",
+          "status": "需求触发 · 未启动"
+        },
+        {
+          "key": "V4",
+          "status": "A2 已批准 · 未启动"
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "sourceCommit": "c70c5a53f045f8506d38533829e93c4ab5e52141",
+  "url": "http://127.0.0.1:65367/roadmap/v2",
+  "browser": "Google Chrome, driver-owned isolated profile",
+  "controller": "cua-driver 0.35.2",
+  "views": {
+    "wide": {
+      "page": {
+        "title": "Aheart UI",
+        "url": "http://127.0.0.1:65367/roadmap/v2"
+      },
+      "snapshot": {
+        "complete": true,
+        "continuation": null,
+        "format": "semantic_v2",
+        "id": "p8",
+        "node_budget": 300,
+        "omitted": {
+          "budget": 0,
+          "css_hidden": 0,
+          "no_layout": 0,
+          "offscreen": 0,
+          "page_occluded": 0,
+          "unknown": 0,
+          "unprovable_frame": 0
+        },
+        "scope": "viewport",
+        "selected_nodes": 1,
+        "total_nodes": 1
+      },
+      "viewport": {
+        "coordinate_space": "viewport_css_px",
+        "height": 822,
+        "mime_type": "image/png",
+        "pixel_to_css_scale_x": 1,
+        "pixel_to_css_scale_y": 1,
+        "scope": "viewport",
+        "source": "cdp_tab",
+        "tab_activation": "not_requested",
+        "viewport_css_height": 822,
+        "viewport_css_width": 1200,
+        "width": 1200,
+        "window_foregrounding": "not_requested"
+      },
+      "outline": ""
+    },
+    "narrow": {
+      "page": {
+        "title": "Aheart UI",
+        "url": "http://127.0.0.1:65367/roadmap/v2"
+      },
+      "snapshot": {
+        "complete": true,
+        "continuation": null,
+        "format": "semantic_v2",
+        "id": "p9",
+        "node_budget": 300,
+        "omitted": {
+          "budget": 0,
+          "css_hidden": 13,
+          "no_layout": 1,
+          "offscreen": 58,
+          "page_occluded": 0,
+          "unknown": 0,
+          "unprovable_frame": 0
+        },
+        "scope": "viewport",
+        "selected_nodes": 165,
+        "total_nodes": 165
+      },
+      "viewport": {
+        "coordinate_space": "viewport_css_px",
+        "height": 822,
+        "mime_type": "image/png",
+        "pixel_to_css_scale_x": 1,
+        "pixel_to_css_scale_y": 1,
+        "scope": "viewport",
+        "source": "cdp_tab",
+        "tab_activation": "not_requested",
+        "viewport_css_height": 822,
+        "viewport_css_width": 485,
+        "width": 485,
+        "window_foregrounding": "not_requested"
+      },
+      "outline": "- generic\n- generic [focusable=true]\n- link \"跳至正文\" [focusable=true]\n- banner\n  - generic\n- link \"Aheart UI\" [focusable=true]\n- statictext \"Aheart UI\"\n- generic\n  - button \"搜索文档\" [focusable=true]\n            - listmarker \"•\"\n            - listmarker \"•\"\n            - listmarker \"•\"\n            - listmarker \"•\"\n            - listmarker \"•\"\n            - listmarker \"•\"\n            - listmarker \"•\"\n- button \"mobile navigation\" [expanded=false,focusable=true]\n            - listmarker \"•\"\n            - listmarker \"•\"\n- generic\n            - listmarker \"•\"\n            - listmarker \"•\"\n- button \"菜单\" [expanded=false,focusable=true]\n- statictext \"菜单\"\n            - listmarker \"•\"\n- button \"返回顶部\" [focusable=true]\n            - listmarker \"•\"\n- complementary\n  - navigation \"Sidebar Navigation\" [focusable=true]\n    - generic\n      - statictext \"Sidebar Navigation\"\n            - listmarker \"•\"\n            - listmarker \"•\"\n- generic\n            - listmarker \"•\"\n            - listmarker \"•\"\n- generic\n  - generic\n  - link \"路线图\" [focusable=true]\n            - listmarker \"•\"\n    - paragraph\n      - statictext \"路线图\"\n            - listmarker \"•\"\n- generic\n- generic\n- navigation \"文档路径\"\n  - link \"Aheart UI\" [focusable=true]\n  - link \"路线图\" [focusable=true]\n- main\n  - generic\n- region \"v2 路线图\"\n  - sectionheader\n    - heading \"v2 路线图\"\n    - paragraph\n      - statictext \"路线图按已批准的 A1 阶段划分。M2、M3 已公开交付，阶段验收证据待补。 V0–V4 为负责人已批准、待合入生效的 A2 计划，合入前仍以 A1 为准。\"\n    - generic\n      - statictext \"公开版本：aheart-ui 1.3.0，AI/DND 1.1.0。发布不代表用户验收。 iOS Safari 仅经浏览器仿真验证，未经真机验证。\"\n  - list\n    - listitem\n      - article\n- heading \"产品与契约冻结\"\n- paragraph\n  - statictext \"建立版本边界和两个消费试点。\"\n- statictext \"已验收\"\n        - list\n          - listitem\n            - statictext \"clean-consumer 和 ai-review-gate\"\n    - listitem\n      - article\n- heading \"v1.2 真实按需\"\n- paragraph\n  - statictext \"建立基础包子入口与显式样式契约。\"\n- statictext \"已验收 · 已发布 1.2.0\"\n        - list\n          - listitem\n            - statictext \"Button / Modal / Select 子入口\"\n          - listitem\n            - statictext \"消费端和发布契约\"\n    - listitem\n      - article\n- heading \"Combobox 与浮层\"\n- paragraph\n  - statictext \"普通 Combobox 与共享浮层已公开交付，用户验收证据待补。\"\n- statictext \"已发布 1.3.0\"\n        - list\n          - listitem\n            - statictext \"Combobox\"\n          - listitem\n            - statictext \"Popover / Tooltip / Dropdown、Modal / Drawer、Select 与 Picker 族\"\n          - listitem\n            - statictext \"namespaced Combobox 与 data 契约移至 V3 的方案已批准，待合入生效\"\n    - listitem\n      - article\n- heading \"AI/DND 与文档\"\n- paragraph\n  - statictext \"场景入口、独立样式、Resolver 与迁移指南已公开交付。\"\n- statictext \"已发布 AI/DND 1.1.0\"\n        - list\n          - listitem\n            - statictext \"Chat / Agent / Workbench、DND Sortable\"\n          - listitem\n            - statictext \"按需导入、自动解析和回滚\"\n          - listitem\n            - statictext \"合并时主线 CI 被取消，Pages 与用户验收证据缺失\"\n    - listitem\n      - article\n- heading \"收口与范围决策\"\n- paragraph\n  - statictext \"补齐阶段记录、冻结弃用清单，由负责人决定是否启动 v2。\"\n- statictext \"已决定 Go · 待合入\"\n        - list\n          - listitem\n            - statictext \"M2/M3 证据补录与合并计划\"\n          - listitem\n            - statictext \"负责人已决定启动 v2，V0 合入前不启动 V1\"\n    - listitem\n      - article\n- heading \"1.4.x 全量按需铺路\"\n- paragraph\n  - statictext \"覆盖全部 Ready 组件的子入口、样式与 Resolver，保持 1.x 兼容。\"\n- statictext \"A2 已批准 · 未启动\"\n        - list\n          - listitem\n            - statictext \"清单漂移检查、迁移表与 codemod\"\n          - listitem\n            - statictext \"沿用 M1 模块图与 CSS 预算\"\n    - listitem\n      - article\n- heading \"2.0.0-alpha 破坏性切换\"\n- paragraph\n  - statictext \"按批准的弃用清单切换根入口、产物布局与 AI/DND 安装边界。\"\n- statictext \"A2 已批准 · 未启动\"\n        - list\n          - listitem\n            - statictext \"root/full、dist 与兼容 facade、AI optional DND\"\n          - listitem\n            - statictext \"alpha 只用 next，latest 保持 1.x\"\n    - listitem\n      - article\n- heading \"2.1.x 组合 API 与 data 契约\"\n- paragraph\n  - statictext \"按需求增加 namespaced Combobox 和浮层统一状态属性。\"\n- statictext \"需求触发 · 未启动\"\n        - list\n          - listitem\n            - statictext \"Combobox.Root / Input / Trigger / Content / Item\"\n          - listitem\n            - statictext \"不阻塞 2.0\"\n    - listitem\n      - article\n- heading \"Beta → RC → Stable\"\n- paragraph\n  - statictext \"根据试点任务、稳定性、迁移与回退证据作书面发布决定。\"\n- statictext \"A2 已批准 · 未启动\"\n        - list\n          - listitem\n            - statictext \"两个试点的自用任务清单\"\n          - listitem\n            - statictext \"同一主线 SHA 连续十次稳定性验证\"\n- contentinfo\n- link \"在 GitHub 编辑此页\" [focusable=true]\n- paragraph\n  - statictext \"最后更新:\"\n  - time\n    - statictext \"9/29/26, 1:58 PM\""
+    },
+    "go": {
+      "page": {
+        "title": "Aheart UI",
+        "url": "http://127.0.0.1:65367/roadmap/v2"
+      },
+      "snapshot": {
+        "complete": true,
+        "continuation": null,
+        "format": "semantic_v2",
+        "id": "p10",
+        "node_budget": 300,
+        "omitted": {
+          "budget": 0,
+          "css_hidden": 13,
+          "no_layout": 1,
+          "offscreen": 11,
+          "page_occluded": 0,
+          "unknown": 0,
+          "unprovable_frame": 0
+        },
+        "scope": "viewport",
+        "selected_nodes": 165,
+        "total_nodes": 165
+      },
+      "viewport": {
+        "coordinate_space": "viewport_css_px",
+        "height": 822,
+        "mime_type": "image/png",
+        "pixel_to_css_scale_x": 1,
+        "pixel_to_css_scale_y": 1,
+        "scope": "viewport",
+        "source": "cdp_tab",
+        "tab_activation": "not_requested",
+        "viewport_css_height": 822,
+        "viewport_css_width": 485,
+        "width": 485,
+        "window_foregrounding": "not_requested"
+      },
+      "outline": "- generic\n- generic [focusable=true]\n- link \"跳至正文\" [focusable=true]\n- banner\n  - generic\n- link \"Aheart UI\" [focusable=true]\n- statictext \"Aheart UI\"\n- generic\n  - button \"搜索文档\" [focusable=true]\n            - listmarker \"•\"\n            - listmarker \"•\"\n            - listmarker \"•\"\n            - listmarker \"•\"\n            - listmarker \"•\"\n            - listmarker \"•\"\n            - listmarker \"•\"\n- button \"mobile navigation\" [expanded=false,focusable=true]\n            - listmarker \"•\"\n            - listmarker \"•\"\n            - listmarker \"•\"\n- generic\n            - listmarker \"•\"\n- button \"菜单\" [expanded=false,focusable=true]\n- statictext \"菜单\"\n- button \"返回顶部\" [focusable=true]\n            - listmarker \"•\"\n            - listmarker \"•\"\n- complementary\n  - navigation \"Sidebar Navigation\" [focusable=true]\n    - generic\n      - statictext \"Sidebar Navigation\"\n            - listmarker \"•\"\n            - listmarker \"•\"\n- generic\n            - listmarker \"•\"\n            - listmarker \"•\"\n- generic\n  - generic\n  - link \"路线图\" [focusable=true]\n    - paragraph\n            - listmarker \"•\"\n      - statictext \"路线图\"\n            - listmarker \"•\"\n- generic\n- generic\n- navigation \"文档路径\"\n  - link \"Aheart UI\" [focusable=true]\n  - link \"路线图\" [focusable=true]\n- main\n  - generic\n- region \"v2 路线图\"\n  - sectionheader\n    - heading \"v2 路线图\"\n    - paragraph\n      - statictext \"路线图按已批准的 A1 阶段划分。M2、M3 已公开交付，阶段验收证据待补。 V0–V4 为负责人已批准、待合入生效的 A2 计划，合入前仍以 A1 为准。\"\n    - generic\n      - statictext \"公开版本：aheart-ui 1.3.0，AI/DND 1.1.0。发布不代表用户验收。 iOS Safari 仅经浏览器仿真验证，未经真机验证。\"\n  - list\n    - listitem\n      - article\n- heading \"产品与契约冻结\"\n- paragraph\n  - statictext \"建立版本边界和两个消费试点。\"\n- statictext \"已验收\"\n        - list\n          - listitem\n            - statictext \"clean-consumer 和 ai-review-gate\"\n    - listitem\n      - article\n- heading \"v1.2 真实按需\"\n- paragraph\n  - statictext \"建立基础包子入口与显式样式契约。\"\n- statictext \"已验收 · 已发布 1.2.0\"\n        - list\n          - listitem\n            - statictext \"Button / Modal / Select 子入口\"\n          - listitem\n            - statictext \"消费端和发布契约\"\n    - listitem\n      - article\n- heading \"Combobox 与浮层\"\n- paragraph\n  - statictext \"普通 Combobox 与共享浮层已公开交付，用户验收证据待补。\"\n- statictext \"已发布 1.3.0\"\n        - list\n          - listitem\n            - statictext \"Combobox\"\n          - listitem\n            - statictext \"Popover / Tooltip / Dropdown、Modal / Drawer、Select 与 Picker 族\"\n          - listitem\n            - statictext \"namespaced Combobox 与 data 契约移至 V3 的方案已批准，待合入生效\"\n    - listitem\n      - article\n- heading \"AI/DND 与文档\"\n- paragraph\n  - statictext \"场景入口、独立样式、Resolver 与迁移指南已公开交付。\"\n- statictext \"已发布 AI/DND 1.1.0\"\n        - list\n          - listitem\n            - statictext \"Chat / Agent / Workbench、DND Sortable\"\n          - listitem\n            - statictext \"按需导入、自动解析和回滚\"\n          - listitem\n            - statictext \"合并时主线 CI 被取消，Pages 与用户验收证据缺失\"\n    - listitem\n      - article\n- heading \"收口与范围决策\"\n- paragraph\n  - statictext \"补齐阶段记录、冻结弃用清单，由负责人决定是否启动 v2。\"\n- statictext \"已决定 Go · 待合入\"\n        - list\n          - listitem\n            - statictext \"M2/M3 证据补录与合并计划\"\n          - listitem\n            - statictext \"负责人已决定启动 v2，V0 合入前不启动 V1\"\n    - listitem\n      - article\n- heading \"1.4.x 全量按需铺路\"\n- paragraph\n  - statictext \"覆盖全部 Ready 组件的子入口、样式与 Resolver，保持 1.x 兼容。\"\n- statictext \"A2 已批准 · 未启动\"\n        - list\n          - listitem\n            - statictext \"清单漂移检查、迁移表与 codemod\"\n          - listitem\n            - statictext \"沿用 M1 模块图与 CSS 预算\"\n    - listitem\n      - article\n- heading \"2.0.0-alpha 破坏性切换\"\n- paragraph\n  - statictext \"按批准的弃用清单切换根入口、产物布局与 AI/DND 安装边界。\"\n- statictext \"A2 已批准 · 未启动\"\n        - list\n          - listitem\n            - statictext \"root/full、dist 与兼容 facade、AI optional DND\"\n          - listitem\n            - statictext \"alpha 只用 next，latest 保持 1.x\"\n    - listitem\n      - article\n- heading \"2.1.x 组合 API 与 data 契约\"\n- paragraph\n  - statictext \"按需求增加 namespaced Combobox 和浮层统一状态属性。\"\n- statictext \"需求触发 · 未启动\"\n        - list\n          - listitem\n            - statictext \"Combobox.Root / Input / Trigger / Content / Item\"\n          - listitem\n            - statictext \"不阻塞 2.0\"\n    - listitem\n      - article\n- heading \"Beta → RC → Stable\"\n- paragraph\n  - statictext \"根据试点任务、稳定性、迁移与回退证据作书面发布决定。\"\n- statictext \"A2 已批准 · 未启动\"\n        - list\n          - listitem\n            - statictext \"两个试点的自用任务清单\"\n          - listitem\n            - statictext \"同一主线 SHA 连续十次稳定性验证\"\n- contentinfo\n- link \"在 GitHub 编辑此页\" [focusable=true]\n- paragraph\n  - statictext \"最后更新:\"\n  - time\n    - statictext \"9/29/26, 1:58 PM\""
+    }
+  }
+}

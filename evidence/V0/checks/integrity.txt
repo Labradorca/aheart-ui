@@ -1,0 +1,7 @@
+All new Markdown local links resolve
+Four original specifications and A1 unchanged
+Roadmap Vue matches the inspected source commit hash
+Release digest matched: qg5-master-stability.json
+Release digest matched: release-evidence.json
+Release digest matched: SHA256SUMS
+A2 approval and v2 Go recorded from owner; merge/Pages authorization remains blank

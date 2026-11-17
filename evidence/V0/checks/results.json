@@ -1,0 +1,72 @@
+[
+  {
+    "name": "docs-and-matrix",
+    "command": [
+      "node",
+      "--test",
+      "scripts/docs-copy.test.mjs",
+      "scripts/docs-social-icon.test.mjs",
+      "scripts/qg5-evidence-docs.test.mjs",
+      "scripts/m3-doc-entries.test.mjs",
+      "scripts/quality-matrix.test.mjs",
+      "scripts/qg5-skip-ledger.test.mjs"
+    ],
+    "baseline": "287058d6395460913b8013c9201c196e9b36c2c9",
+    "worktreeHead": "2011892b3cb7cf97557e9a6b49a192a6c94f8528",
+    "scope": "recorded HEAD plus V0 working diff",
+    "startedAt": "2026-11-17T08:17:38.497Z",
+    "finishedAt": "2026-11-17T08:17:38.792Z",
+    "exitCode": 0,
+    "signal": null,
+    "output": "docs-and-matrix.txt"
+  },
+  {
+    "name": "docs-build",
+    "command": [
+      "corepack",
+      "pnpm",
+      "docs:build"
+    ],
+    "baseline": "287058d6395460913b8013c9201c196e9b36c2c9",
+    "worktreeHead": "2011892b3cb7cf97557e9a6b49a192a6c94f8528",
+    "scope": "recorded HEAD plus V0 working diff",
+    "startedAt": "2026-11-17T08:17:38.793Z",
+    "finishedAt": "2026-11-17T08:17:46.783Z",
+    "exitCode": 0,
+    "signal": null,
+    "output": "docs-build.txt"
+  },
+  {
+    "name": "diff-check",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "baseline": "287058d6395460913b8013c9201c196e9b36c2c9",
+    "worktreeHead": "2011892b3cb7cf97557e9a6b49a192a6c94f8528",
+    "scope": "recorded HEAD plus V0 working diff",
+    "startedAt": "2026-11-17T08:19:29.956Z",
+    "finishedAt": "2026-11-17T08:19:29.975Z",
+    "exitCode": 0,
+    "signal": null,
+    "output": "diff-check.txt"
+  },
+  {
+    "name": "staged-diff-check",
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "baseline": "287058d6395460913b8013c9201c196e9b36c2c9",
+    "worktreeHead": "2011892b3cb7cf97557e9a6b49a192a6c94f8528",
+    "scope": "recorded HEAD plus V0 working diff",
+    "startedAt": "2026-11-17T08:19:29.976Z",
+    "finishedAt": "2026-11-17T08:19:29.990Z",
+    "exitCode": 0,
+    "signal": null,
+    "output": "staged-diff-check.txt"
+  }
+]
