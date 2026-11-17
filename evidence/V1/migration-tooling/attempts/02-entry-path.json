@@ -1,0 +1,50 @@
+{
+  "status": "failed",
+  "scope": "current 1.4/AI1.2 tarballs validate v2 migration tooling; not a v2 implementation or release",
+  "consumer": "/private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-migration-6UHOvm",
+  "tarballs": [
+    {
+      "name": "aheart-ui",
+      "version": "1.4.0",
+      "sha256": "a9aeb4c03d6103d1b0cf1b5136692bb2e954896c646897232c56e3b092773479"
+    },
+    {
+      "name": "@aheart-ui/dnd",
+      "version": "1.1.0",
+      "sha256": "8cbc23c703b7250154c7d8afd2c18bf0e2ba3fe16f6bd6a82754967caf54747a"
+    },
+    {
+      "name": "@aheart-ui/ai",
+      "version": "1.2.0",
+      "sha256": "d51763eec9b0181118cb32d074dbd894c8bcff1307a65e85fe5884a13e96295d"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "npm",
+        "install",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "exitCode": 0,
+      "output": "install.log"
+    }
+  ],
+  "warnings": {
+    "development": [
+      "warning: [AheartUI B1] v2 removes the aheart-ui root default Plugin. Import the Plugin from aheart-ui/full; root named components/types remain supported.\n  Plugin: aheart-v2-deprecations\n  File: /private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-migration-6UHOvm/legacy.js:1:8\n  1  |  import UI, {Button} from 'aheart-ui';import {AIAgentWorkbench as Workbench} from '@aheart-ui/ai';import {Select} from 'aheart-ui/es/select/index.js';console.log(UI,Button,Workbench,Select)\n     |         ^",
+      "warning: [AheartUI B3] v2 removes Workbench from the AI root and its Plugin. Use @aheart-ui/ai/agent-workbench, or @aheart-ui/ai/full for the full Plugin; install DND explicitly in v2.\n  Plugin: aheart-v2-deprecations\n  File: /private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-migration-6UHOvm/legacy.js:1:46\n  1  |  import UI, {Button} from 'aheart-ui';import {AIAgentWorkbench as Workbench} from '@aheart-ui/ai';import {Select} from 'aheart-ui/es/select/index.js';console.log(UI,Button,Workbench,Select)\n     |                                               ^",
+      "warning: [AheartUI B1] v2 removes the aheart-ui root default Plugin. Import the Plugin from aheart-ui/full; root named components/types remain supported.\n  Plugin: aheart-v2-deprecations\n  File: /private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-migration-6UHOvm/Example.vue:1:59\n  1  |  import { defineComponent as _defineComponent } from \"vue\";\n  2  |  import UI from \"aheart-ui\";\n     |         ^\n  3  |  import { AIAgentWorkbench } from \"@aheart-ui/ai\";\n  4  |  const version = \"v1\";",
+      "warning: [AheartUI B3] v2 removes Workbench from the AI root and its Plugin. Use @aheart-ui/ai/agent-workbench, or @aheart-ui/ai/full for the full Plugin; install DND explicitly in v2.\n  Plugin: aheart-v2-deprecations\n  File: /private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-migration-6UHOvm/Example.vue:1:86\n  1  |  import { defineComponent as _defineComponent } from \"vue\";\n  2  |  import UI from \"aheart-ui\";\n  3  |  import { AIAgentWorkbench } from \"@aheart-ui/ai\";\n     |           ^\n  4  |  const version = \"v1\";\n  5  |  const _sfc_main = /* @__PURE__ */ _defineComponent({"
+    ]
+  },
+  "tools": {
+    "vue": "3.5.44",
+    "vite": "5.0.12",
+    "typescript": "5.9.3",
+    "nodeTypes": "24.10.1"
+  },
+  "error": "RollupError: Could not resolve entry module \"legacy.js\".\n    at getRollupError (file:///private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-migration-6UHOvm/node_modules/rollup/dist/es/shared/parseAst.js:355:41)\n    at error (file:///private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-migration-6UHOvm/node_modules/rollup/dist/es/shared/parseAst.js:351:42)\n    at ModuleLoader.loadEntryModule (file:///private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-migration-6UHOvm/node_modules/rollup/dist/es/shared/node-entry.js:23634:20)\n    at async Promise.all (index 0)"
+}

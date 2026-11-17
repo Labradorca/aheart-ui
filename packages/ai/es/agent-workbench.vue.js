@@ -1,5 +1,8 @@
 import { defineComponent as Be, ref as R, getCurrentInstance as Ve, useId as De, computed as I, onMounted as He, nextTick as Le, onBeforeUnmount as Ie, watch as ee, onBeforeUpdate as Pe, h as te, openBlock as h, createElementBlock as g, createElementVNode as u, toDisplayString as $, createCommentVNode as C, normalizeClass as Ne, createVNode as m, unref as y, withCtx as k, createTextVNode as P, createBlock as ae, Teleport as $e, mergeProps as Fe, renderSlot as _, createSlots as Je, withDirectives as oe, Fragment as Ze, renderList as qe, vShow as se } from "vue";
-import { Splitter as We, SplitterPanel as ne, Button as N, Tabs as Ge, Drawer as Xe } from "aheart-ui";
+import { Button as N } from "aheart-ui/button";
+import { Drawer as We } from "aheart-ui/drawer";
+import { Splitter as Ge, SplitterPanel as ne } from "aheart-ui/splitter";
+import { Tabs as Xe } from "aheart-ui/tabs";
 import { SortableList as Ye } from "@aheart-ui/dnd/sortable";
 import Ce from "./attachments.vue.js";
 import Qe from "./chat-panel.vue.js";
@@ -30,7 +33,7 @@ const tt = {
 }, yt = { class: "aheart-ai-workbench__context-list-mobile" }, wt = ["data-context-id"], It = { key: 0 }, $t = { class: "aheart-ai-workbench__move-actions" }, Ct = { class: "aheart-ai-workbench__mobile-panel" }, xt = { class: "aheart-ai-workbench__mobile-panel--chat" }, St = ["id"], At = {
   key: 0,
   class: "aheart-ai-workbench__empty"
-}, Tt = { class: "aheart-ai-workbench__mobile-panel" }, Ut = /* @__PURE__ */ Be({
+}, Tt = { class: "aheart-ai-workbench__mobile-panel" }, Dt = /* @__PURE__ */ Be({
   name: "AAIAgentWorkbench",
   __name: "agent-workbench",
   props: {
@@ -262,7 +265,7 @@ const tt = {
         ])
       ]),
       u("div", it, [
-        m(y(We), {
+        m(y(Ge), {
           sizes: l.panelSizes,
           "default-sizes": [150, "auto", 200],
           "onUpdate:sizes": e[13] || (e[13] = (a) => v("update:panelSizes", a))
@@ -427,7 +430,7 @@ const tt = {
         }, 8, ["sizes"])
       ]),
       u("div", ht, [
-        m(y(Ge), {
+        m(y(Xe), {
           items: je.value,
           "active-key": J(j.value),
           "onUpdate:activeKey": e[14] || (e[14] = (a) => j.value = String(a).split("--")[0])
@@ -509,7 +512,7 @@ const tt = {
         ], 512), [
           [se, j.value === "execution"]
         ]),
-        m(y(Xe), {
+        m(y(We), {
           open: D.value,
           "onUpdate:open": e[17] || (e[17] = (a) => D.value = a),
           title: "执行与产物",
@@ -533,5 +536,5 @@ const tt = {
   }
 });
 export {
-  Ut as default
+  Dt as default
 };

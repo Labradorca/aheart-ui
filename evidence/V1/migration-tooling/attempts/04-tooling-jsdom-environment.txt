@@ -1,0 +1,31 @@
+
+> aheart-ui@1.4.0 test /Users/start/code/aheart-ui-wt/v1.4-entries/packages/components
+> vitest run --environment jsdom "src/resolver/__tests__/diagnostics.test.ts"
+
+
+ RUN  v1.6.1 /Users/start/code/aheart-ui-wt/v1.4-entries/packages/components
+
+ ❯ src/resolver/__tests__/diagnostics.test.ts  (0 test)
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  11:52:19
+   Duration  386ms (transform 18ms, setup 0ms, collect 0ms, tests 0ms, environment 224ms, prepare 36ms)
+
+/Users/start/code/aheart-ui-wt/v1.4-entries/packages/components:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  aheart-ui@1.4.0 test: `vitest run --environment jsdom "src/resolver/__tests__/diagnostics.test.ts"`
+Exit status 1
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+[33mThe CJS build of Vite's Node API is deprecated. See https://vitejs.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/resolver/__tests__/diagnostics.test.ts [ src/resolver/__tests__/diagnostics.test.ts ]
+Error: Invariant violation: "new TextEncoder().encode("") instanceof Uint8Array" is incorrectly false
+
+This indicates that your JavaScript environment is broken. You cannot use
+esbuild in this environment because esbuild relies on this invariant. This
+is not a problem with esbuild. You need to fix your environment instead.
+
+ ❯ Object.<anonymous> ../../node_modules/.pnpm/esbuild@0.19.12/node_modules/esbuild/lib/main.js:201:9
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯

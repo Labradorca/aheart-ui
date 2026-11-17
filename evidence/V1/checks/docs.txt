@@ -9,7 +9,7 @@
 
   vitepress v1.6.4
 
-build complete in 12.98s.
+build complete in 6.74s.
 - building client + server bundles...
 
 (!) Some chunks are larger than 500 kB after minification. Consider:

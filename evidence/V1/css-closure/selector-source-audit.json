@@ -1,0 +1,30 @@
+{
+  "purpose": "independent source-rule audit includes relevant family classes at any selector position, not only the first class",
+  "checked": 971,
+  "missing": [
+    {
+      "entry": "ai/form",
+      "selector": ".d8-fixture-card .aheart-ai-form"
+    },
+    {
+      "entry": "ai/agent-workbench",
+      "selector": ".aheart-dnd-sortable-item:last-child .aheart-ai-workbench__timeline-item::before"
+    },
+    {
+      "entry": "ai/agent-workbench",
+      "selector": ".d8-fixture-card .aheart-ai-workbench"
+    },
+    {
+      "entry": "ai/agent",
+      "selector": ".d8-fixture-card .aheart-ai-form"
+    },
+    {
+      "entry": "ai/workbench",
+      "selector": ".aheart-dnd-sortable-item:last-child .aheart-ai-workbench__timeline-item::before"
+    },
+    {
+      "entry": "ai/workbench",
+      "selector": ".d8-fixture-card .aheart-ai-workbench"
+    }
+  ]
+}

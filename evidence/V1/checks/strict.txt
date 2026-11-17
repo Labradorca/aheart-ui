@@ -2,5 +2,5 @@
 > aheart-ui-workspace@1.0.0 check:consumer-types /Users/start/code/aheart-ui-wt/v1.4-entries
 > node scripts/strict-consumer.mjs
 
-✓ Vue 3.5.38: root imports, 542 declarations, and Button repro (skipLibCheck: false)
-✓ Vue 3.5.44: root imports, 542 declarations, and Button repro (skipLibCheck: false)
+✓ Vue 3.5.38: root imports, 544 declarations, and Button repro (skipLibCheck: false)
+✓ Vue 3.5.44: root imports, 544 declarations, and Button repro (skipLibCheck: false)

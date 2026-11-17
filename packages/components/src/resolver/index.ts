@@ -1,4 +1,5 @@
 import { aheartComponentEntries, type AheartDomain } from '../constant'
+export { AheartV2DeprecationDiagnostics } from './diagnostics'
 
 export interface AheartUIResolverOptions {
   domains?: readonly AheartDomain[]

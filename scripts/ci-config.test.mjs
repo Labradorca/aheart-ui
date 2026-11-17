@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import test from 'node:test'
 import { GENERATED_PATHS } from './check-generated.mjs'
+import { packageContracts } from './release-contract.mjs'
 
 const workflowSource = readFileSync(new URL('../.github/workflows/ci.yml', import.meta.url), 'utf8')
 const qualityPlanSource = readFileSync(
@@ -168,7 +169,12 @@ test('splits CI into observable unit, typecheck, build, docs, consumer and brows
   assert.match(workflowSource, /--components-tarball/)
   assert.match(workflowSource, /--dnd-tarball/)
   assert.match(workflowSource, /--ai-tarball/)
-  assert.match(workflowSource, /aheart-ui-1\.3\.0\.tgz/)
+  for (const { name, version } of packageContracts) {
+    const filename = `${name.replace(/^@/, '').replaceAll('/', '-')}-${version}.tgz`
+    assert.ok(workflowSource.includes(filename), `CI must consume the current contract tarball ${filename}`)
+  }
+  assert.match(workflowSource, /pnpm check:v1-consumer/)
+  assert.match(workflowSource, /pnpm check:v2-migration-consumer/)
   assert.doesNotMatch(workflowSource, /  verify:\n/)
 })
 

@@ -1,0 +1,16 @@
+
+> aheart-ui@1.4.0 test /Users/start/code/aheart-ui-wt/v1.4-entries/packages/components
+> vitest run --environment jsdom "src/resolver/__tests__/diagnostics.test.ts"
+
+
+ RUN  v1.6.1 /Users/start/code/aheart-ui-wt/v1.4-entries/packages/components
+
+ ✓ src/resolver/__tests__/diagnostics.test.ts  (9 tests) 6ms
+
+ Test Files  1 passed (1)
+      Tests  9 passed (9)
+   Start at  11:56:38
+   Duration  169ms (transform 18ms, setup 0ms, collect 48ms, tests 6ms, environment 0ms, prepare 24ms)
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+[33mThe CJS build of Vite's Node API is deprecated. See https://vitejs.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m

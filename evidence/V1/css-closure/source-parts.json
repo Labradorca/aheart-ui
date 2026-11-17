@@ -1,0 +1,447 @@
+{
+  "scope": "supplementary source contribution identities; packed CSS equality is checked separately",
+  "entries": [
+    {
+      "entry": "base/dropdown",
+      "bytes": 18689,
+      "parts": [
+        {
+          "sourceIdentity": "base/button/style.css",
+          "bytes": 7348,
+          "sha256": "3d593d5fb7becc2e414cc68ee9c390a722d2369cbd9d30712e4def49aa037f83"
+        },
+        {
+          "sourceIdentity": "base/icon/style.css",
+          "bytes": 597,
+          "sha256": "60bea7faca38fc2f0d7dff582377b7465ddf7a6de7de0751b5f3dcd357edef0e"
+        },
+        {
+          "sourceIdentity": "base/utils/floating.css",
+          "bytes": 1657,
+          "sha256": "f109e99ce4af9360171ab51e50cc73e4c95caa99937f06a0c5ff4590531d210d"
+        },
+        {
+          "sourceIdentity": "base/dropdown/style.css",
+          "bytes": 2282,
+          "sha256": "47934a0b0866b8452c3b7ea656b36e221207e74c19b169429be00064ce0d1c73"
+        },
+        {
+          "sourceIdentity": "base/menu/style.css",
+          "bytes": 6805,
+          "sha256": "ef0ea03ec85b9e66f29e6795ada9350e31c87d2b16583e48de4d174df33fafe9"
+        }
+      ]
+    },
+    {
+      "entry": "base/tree-select",
+      "bytes": 8867,
+      "parts": [
+        {
+          "sourceIdentity": "base/tree/style.css",
+          "bytes": 1741,
+          "sha256": "0ac0a09877b4d319da3c1bef71a3a9a044dba0cabcf7689a9d87ba3fa2218725"
+        },
+        {
+          "sourceIdentity": "base/tree-select/style.css",
+          "bytes": 4872,
+          "sha256": "e5121f5df7102572f7d8748457380422c2775da4cb43f00e752560f97fd969fb"
+        },
+        {
+          "sourceIdentity": "base/icon/style.css",
+          "bytes": 597,
+          "sha256": "60bea7faca38fc2f0d7dff582377b7465ddf7a6de7de0751b5f3dcd357edef0e"
+        },
+        {
+          "sourceIdentity": "base/utils/floating.css",
+          "bytes": 1657,
+          "sha256": "f109e99ce4af9360171ab51e50cc73e4c95caa99937f06a0c5ff4590531d210d"
+        }
+      ]
+    },
+    {
+      "entry": "base/table",
+      "bytes": 15233,
+      "parts": [
+        {
+          "sourceIdentity": "base/pagination/style.css",
+          "bytes": 4635,
+          "sha256": "fd603aae3e86b971f8b5f1576f4ba5c25e5627c272158f953e718fa23ddc15e9"
+        },
+        {
+          "sourceIdentity": "base/table/style.css",
+          "bytes": 10598,
+          "sha256": "98255bcc3d0a365c9282b7511a8320ca8c1d349b10b2b9657b327009fe1ac183"
+        }
+      ]
+    },
+    {
+      "entry": "base/modal",
+      "bytes": 16305,
+      "parts": [
+        {
+          "sourceIdentity": "base/button/style.css",
+          "bytes": 7348,
+          "sha256": "3d593d5fb7becc2e414cc68ee9c390a722d2369cbd9d30712e4def49aa037f83"
+        },
+        {
+          "sourceIdentity": "base/icon/style.css",
+          "bytes": 597,
+          "sha256": "60bea7faca38fc2f0d7dff582377b7465ddf7a6de7de0751b5f3dcd357edef0e"
+        },
+        {
+          "sourceIdentity": "base/modal/style.css",
+          "bytes": 4738,
+          "sha256": "7b5530738f6a8b2d31fb763fa8372c03158e123cb141260a23ea4ac7ff197e88"
+        },
+        {
+          "sourceIdentity": "base/skeleton/style.css",
+          "bytes": 3622,
+          "sha256": "539df90fd3820dce30b23eb95294136f3d8b1e28ba3a58a4bbdab22102ec77b3"
+        }
+      ]
+    },
+    {
+      "entry": "base/popconfirm",
+      "bytes": 12034,
+      "parts": [
+        {
+          "sourceIdentity": "base/button/style.css",
+          "bytes": 7348,
+          "sha256": "3d593d5fb7becc2e414cc68ee9c390a722d2369cbd9d30712e4def49aa037f83"
+        },
+        {
+          "sourceIdentity": "base/icon/style.css",
+          "bytes": 597,
+          "sha256": "60bea7faca38fc2f0d7dff582377b7465ddf7a6de7de0751b5f3dcd357edef0e"
+        },
+        {
+          "sourceIdentity": "base/utils/floating.css",
+          "bytes": 1657,
+          "sha256": "f109e99ce4af9360171ab51e50cc73e4c95caa99937f06a0c5ff4590531d210d"
+        },
+        {
+          "sourceIdentity": "base/popconfirm/style.css",
+          "bytes": 2432,
+          "sha256": "5c73f30e7db161112f9b8cc77253e4f4a2343ed21e435c541d767639085f23a1"
+        }
+      ]
+    },
+    {
+      "entry": "ai/bubble",
+      "bytes": 5039,
+      "parts": [
+        {
+          "sourceIdentity": "ai/scopes:attachments,bubble,process,sources",
+          "bytes": 5039,
+          "sha256": "c869b81e5c921176d86f18a78e20660226823c63b2102a935ff51ae96311d436"
+        }
+      ]
+    },
+    {
+      "entry": "ai/form",
+      "bytes": 99853,
+      "parts": [
+        {
+          "sourceIdentity": "base/button/style.css",
+          "bytes": 7348,
+          "sha256": "3d593d5fb7becc2e414cc68ee9c390a722d2369cbd9d30712e4def49aa037f83"
+        },
+        {
+          "sourceIdentity": "base/date-picker/style.css",
+          "bytes": 27982,
+          "sha256": "6b3179ce1285d1164bfc04fb112234d0434173b4139c505266af97da384e6973"
+        },
+        {
+          "sourceIdentity": "base/time-picker/style.css",
+          "bytes": 11481,
+          "sha256": "73fe93af67c2fba9febb71c9c11100a92798af9980dd941766972ecbe6ef8673"
+        },
+        {
+          "sourceIdentity": "base/upload/style.css",
+          "bytes": 2035,
+          "sha256": "2d93c23f336f7e1d7d1c99038f36b4abac9a6d24f9da9923a2b7705dc19a9253"
+        },
+        {
+          "sourceIdentity": "base/tree/style.css",
+          "bytes": 1741,
+          "sha256": "0ac0a09877b4d319da3c1bef71a3a9a044dba0cabcf7689a9d87ba3fa2218725"
+        },
+        {
+          "sourceIdentity": "base/tree-select/style.css",
+          "bytes": 4872,
+          "sha256": "e5121f5df7102572f7d8748457380422c2775da4cb43f00e752560f97fd969fb"
+        },
+        {
+          "sourceIdentity": "base/icon/style.css",
+          "bytes": 597,
+          "sha256": "60bea7faca38fc2f0d7dff582377b7465ddf7a6de7de0751b5f3dcd357edef0e"
+        },
+        {
+          "sourceIdentity": "base/utils/floating.css",
+          "bytes": 1657,
+          "sha256": "f109e99ce4af9360171ab51e50cc73e4c95caa99937f06a0c5ff4590531d210d"
+        },
+        {
+          "sourceIdentity": "base/tooltip/style.css",
+          "bytes": 1441,
+          "sha256": "0274f89c050b3ffa6bd57fa1cd4b7167125f6a8c1efa480b0b6536518401c506"
+        },
+        {
+          "sourceIdentity": "base/input/style.css",
+          "bytes": 3900,
+          "sha256": "b097a15452fad829eb8a31525924c87b434d8194abaafc33255e85bc5a4d4616"
+        },
+        {
+          "sourceIdentity": "base/textarea/style.css",
+          "bytes": 4783,
+          "sha256": "317c9d2a20cbed36c599ba66cc6d641da6abbcb5f6d5fdce2b19037a32efa0c9"
+        },
+        {
+          "sourceIdentity": "base/input-number/style.css",
+          "bytes": 6357,
+          "sha256": "9f1439e42d4b2250945795b132adefdb7bdc898ef7c83a6122333450f0a020e2"
+        },
+        {
+          "sourceIdentity": "base/checkbox/style.css",
+          "bytes": 2528,
+          "sha256": "4760d8b214cae3411200fa590c0152c808ee51830dcdebc58a1313f8e1af8c64"
+        },
+        {
+          "sourceIdentity": "base/radio/style.css",
+          "bytes": 3748,
+          "sha256": "6788d5b9c449a97e1a886bc1c92be79d0e99a1f0f906f8837964c5f8cf9121a1"
+        },
+        {
+          "sourceIdentity": "base/switch/style.css",
+          "bytes": 2115,
+          "sha256": "836c15a9a21d2025e8f68ef65898d8c3d3f04302d1d4995df460975ea05a65ff"
+        },
+        {
+          "sourceIdentity": "base/select/style.css",
+          "bytes": 8218,
+          "sha256": "57e9f5fbb73b39b81e97e937af0e40ee1685a90da653694e692153727fcd246b"
+        },
+        {
+          "sourceIdentity": "base/form/style.css",
+          "bytes": 4457,
+          "sha256": "07dc739fd672804042d4bb942b6218c49cde3e354d090f5ecfc0c70ed1785ae7"
+        },
+        {
+          "sourceIdentity": "ai/scopes:form",
+          "bytes": 4593,
+          "sha256": "86a98afd08d9d1ade04c4e8a6821e3b2456b470576c31eed8fcc61508642a2e7"
+        }
+      ]
+    },
+    {
+      "entry": "ai/chat-panel",
+      "bytes": 13095,
+      "parts": [
+        {
+          "sourceIdentity": "ai/scopes:attachments,bubble,chat-panel,conversations,process,prompts,sender,sources,visually-hidden,welcome",
+          "bytes": 13095,
+          "sha256": "e2e6a3b6db671ac7243321a8f485694050ceacf98b5def9b46ef9bea856d35b7"
+        }
+      ]
+    },
+    {
+      "entry": "ai/agent-workbench",
+      "bytes": 54109,
+      "parts": [
+        {
+          "sourceIdentity": "base/button/style.css",
+          "bytes": 7348,
+          "sha256": "3d593d5fb7becc2e414cc68ee9c390a722d2369cbd9d30712e4def49aa037f83"
+        },
+        {
+          "sourceIdentity": "base/icon/style.css",
+          "bytes": 597,
+          "sha256": "60bea7faca38fc2f0d7dff582377b7465ddf7a6de7de0751b5f3dcd357edef0e"
+        },
+        {
+          "sourceIdentity": "base/drawer/style.css",
+          "bytes": 4259,
+          "sha256": "ce19d81e200487171af67d5a8a53a0d7df31a10714e3afd6f5879eb55087e1f7"
+        },
+        {
+          "sourceIdentity": "base/skeleton/style.css",
+          "bytes": 3622,
+          "sha256": "539df90fd3820dce30b23eb95294136f3d8b1e28ba3a58a4bbdab22102ec77b3"
+        },
+        {
+          "sourceIdentity": "base/tabs/style.css",
+          "bytes": 5475,
+          "sha256": "4f883a9c518ccb163a61ad38e8b08a3b4d6669dbbb667bc9637665feec42375a"
+        },
+        {
+          "sourceIdentity": "base/splitter/style.css",
+          "bytes": 3070,
+          "sha256": "80142b4635fea48bfd835d1d869d32f13c4f44d04d82b74c30e4c734f995322a"
+        },
+        {
+          "sourceIdentity": "dnd/scopes:dragging,keyboard-compatible,keyboard-grabbed,live-region,sortable-handle,sortable-item,sortable-list",
+          "bytes": 717,
+          "sha256": "a9da93e4f70a0defbb3141d3da164345e1846034f9fe130a773ca7c0e3ea0fe6"
+        },
+        {
+          "sourceIdentity": "ai/scopes:attachments,bubble,chat-panel,conversations,process,prompts,sender,sources,visually-hidden,welcome,workbench",
+          "bytes": 29021,
+          "sha256": "1315e180cd3c9bfde900fbc4265e5a880b250ed369e999e81994a1e88074674f"
+        }
+      ]
+    },
+    {
+      "entry": "ai/chat",
+      "bytes": 13216,
+      "parts": [
+        {
+          "sourceIdentity": "ai/scopes:actions,attachments,bubble,chat-panel,conversations,process,prompts,sender,sources,visually-hidden,welcome",
+          "bytes": 13216,
+          "sha256": "fb0f1356cb54717ac35b84366af351fbf047dcb6da9825d56376b51dda389f99"
+        }
+      ]
+    },
+    {
+      "entry": "ai/agent",
+      "bytes": 100927,
+      "parts": [
+        {
+          "sourceIdentity": "base/button/style.css",
+          "bytes": 7348,
+          "sha256": "3d593d5fb7becc2e414cc68ee9c390a722d2369cbd9d30712e4def49aa037f83"
+        },
+        {
+          "sourceIdentity": "base/date-picker/style.css",
+          "bytes": 27982,
+          "sha256": "6b3179ce1285d1164bfc04fb112234d0434173b4139c505266af97da384e6973"
+        },
+        {
+          "sourceIdentity": "base/time-picker/style.css",
+          "bytes": 11481,
+          "sha256": "73fe93af67c2fba9febb71c9c11100a92798af9980dd941766972ecbe6ef8673"
+        },
+        {
+          "sourceIdentity": "base/upload/style.css",
+          "bytes": 2035,
+          "sha256": "2d93c23f336f7e1d7d1c99038f36b4abac9a6d24f9da9923a2b7705dc19a9253"
+        },
+        {
+          "sourceIdentity": "base/tree/style.css",
+          "bytes": 1741,
+          "sha256": "0ac0a09877b4d319da3c1bef71a3a9a044dba0cabcf7689a9d87ba3fa2218725"
+        },
+        {
+          "sourceIdentity": "base/tree-select/style.css",
+          "bytes": 4872,
+          "sha256": "e5121f5df7102572f7d8748457380422c2775da4cb43f00e752560f97fd969fb"
+        },
+        {
+          "sourceIdentity": "base/icon/style.css",
+          "bytes": 597,
+          "sha256": "60bea7faca38fc2f0d7dff582377b7465ddf7a6de7de0751b5f3dcd357edef0e"
+        },
+        {
+          "sourceIdentity": "base/utils/floating.css",
+          "bytes": 1657,
+          "sha256": "f109e99ce4af9360171ab51e50cc73e4c95caa99937f06a0c5ff4590531d210d"
+        },
+        {
+          "sourceIdentity": "base/tooltip/style.css",
+          "bytes": 1441,
+          "sha256": "0274f89c050b3ffa6bd57fa1cd4b7167125f6a8c1efa480b0b6536518401c506"
+        },
+        {
+          "sourceIdentity": "base/input/style.css",
+          "bytes": 3900,
+          "sha256": "b097a15452fad829eb8a31525924c87b434d8194abaafc33255e85bc5a4d4616"
+        },
+        {
+          "sourceIdentity": "base/textarea/style.css",
+          "bytes": 4783,
+          "sha256": "317c9d2a20cbed36c599ba66cc6d641da6abbcb5f6d5fdce2b19037a32efa0c9"
+        },
+        {
+          "sourceIdentity": "base/input-number/style.css",
+          "bytes": 6357,
+          "sha256": "9f1439e42d4b2250945795b132adefdb7bdc898ef7c83a6122333450f0a020e2"
+        },
+        {
+          "sourceIdentity": "base/checkbox/style.css",
+          "bytes": 2528,
+          "sha256": "4760d8b214cae3411200fa590c0152c808ee51830dcdebc58a1313f8e1af8c64"
+        },
+        {
+          "sourceIdentity": "base/radio/style.css",
+          "bytes": 3748,
+          "sha256": "6788d5b9c449a97e1a886bc1c92be79d0e99a1f0f906f8837964c5f8cf9121a1"
+        },
+        {
+          "sourceIdentity": "base/switch/style.css",
+          "bytes": 2115,
+          "sha256": "836c15a9a21d2025e8f68ef65898d8c3d3f04302d1d4995df460975ea05a65ff"
+        },
+        {
+          "sourceIdentity": "base/select/style.css",
+          "bytes": 8218,
+          "sha256": "57e9f5fbb73b39b81e97e937af0e40ee1685a90da653694e692153727fcd246b"
+        },
+        {
+          "sourceIdentity": "base/form/style.css",
+          "bytes": 4457,
+          "sha256": "07dc739fd672804042d4bb942b6218c49cde3e354d090f5ecfc0c70ed1785ae7"
+        },
+        {
+          "sourceIdentity": "ai/scopes:form,process",
+          "bytes": 5667,
+          "sha256": "10f13b6c43678481026bcc6b811b50c20f47dfb090ce57bdf681f9338a597367"
+        }
+      ]
+    },
+    {
+      "entry": "ai/workbench",
+      "bytes": 54109,
+      "parts": [
+        {
+          "sourceIdentity": "base/button/style.css",
+          "bytes": 7348,
+          "sha256": "3d593d5fb7becc2e414cc68ee9c390a722d2369cbd9d30712e4def49aa037f83"
+        },
+        {
+          "sourceIdentity": "base/icon/style.css",
+          "bytes": 597,
+          "sha256": "60bea7faca38fc2f0d7dff582377b7465ddf7a6de7de0751b5f3dcd357edef0e"
+        },
+        {
+          "sourceIdentity": "base/drawer/style.css",
+          "bytes": 4259,
+          "sha256": "ce19d81e200487171af67d5a8a53a0d7df31a10714e3afd6f5879eb55087e1f7"
+        },
+        {
+          "sourceIdentity": "base/skeleton/style.css",
+          "bytes": 3622,
+          "sha256": "539df90fd3820dce30b23eb95294136f3d8b1e28ba3a58a4bbdab22102ec77b3"
+        },
+        {
+          "sourceIdentity": "base/tabs/style.css",
+          "bytes": 5475,
+          "sha256": "4f883a9c518ccb163a61ad38e8b08a3b4d6669dbbb667bc9637665feec42375a"
+        },
+        {
+          "sourceIdentity": "base/splitter/style.css",
+          "bytes": 3070,
+          "sha256": "80142b4635fea48bfd835d1d869d32f13c4f44d04d82b74c30e4c734f995322a"
+        },
+        {
+          "sourceIdentity": "dnd/scopes:dragging,keyboard-compatible,keyboard-grabbed,live-region,sortable-handle,sortable-item,sortable-list",
+          "bytes": 717,
+          "sha256": "a9da93e4f70a0defbb3141d3da164345e1846034f9fe130a773ca7c0e3ea0fe6"
+        },
+        {
+          "sourceIdentity": "ai/scopes:attachments,bubble,chat-panel,conversations,process,prompts,sender,sources,visually-hidden,welcome,workbench",
+          "bytes": 29021,
+          "sha256": "1315e180cd3c9bfde900fbc4265e5a880b250ed369e999e81994a1e88074674f"
+        }
+      ]
+    }
+  ]
+}

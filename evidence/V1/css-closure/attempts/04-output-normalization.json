@@ -1,0 +1,16 @@
+{
+  "file": "evidence/V1/css-closure/attempts/04-ratchet-schema-test.txt",
+  "normalization": "trailing whitespace and blank EOF only; failure assertions and exit unchanged",
+  "rawSha256": "09732db86f44e44e1821651c83922e85abbb468b71e578623b1541c718ef8e16",
+  "normalizedSha256": "35bf88577b113abdc78974e5f4a2f9998c839cf58850d962599f74567036942b",
+  "precommitDiffCheck": {
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "firstExitCode": 2,
+    "reason": "two whitespace-only lines in archived failed-test output; product unchanged"
+  }
+}

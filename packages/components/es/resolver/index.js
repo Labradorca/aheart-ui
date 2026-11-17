@@ -1,4 +1,5 @@
 import { aheartComponentEntries } from "../constant/index.js";
+import { AheartV2DeprecationDiagnostics } from "./diagnostics.js";
 function AheartUIResolver({ domains = ["base"], importStyle = false } = {}) {
   const enabled = new Set(domains);
   const entries = new Map(aheartComponentEntries.filter(({ domain }) => enabled.has(domain)).map((entry) => [`A${entry.name}`, entry]));
@@ -14,5 +15,6 @@ function AheartUIResolver({ domains = ["base"], importStyle = false } = {}) {
   };
 }
 export {
-  AheartUIResolver
+  AheartUIResolver,
+  AheartV2DeprecationDiagnostics
 };

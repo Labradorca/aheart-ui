@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "scope": "current 1.4/AI1.2 tarballs validate v2 migration tooling; not a v2 implementation or release",
+  "consumer": "/private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-migration-S9cdNF",
+  "tarballs": [],
+  "commands": [],
+  "warnings": {},
+  "error": "Error: Cannot find module '@types/node/package.json'\nRequire stack:\n- /Users/start/code/aheart-ui-wt/v1.4-entries/scripts/v2-migration-consumer.mjs\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)\n    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)\n    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)\n    at Module._load (node:internal/modules/cjs/loader:1285:25)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.require (node:internal/modules/cjs/loader:1600:12)\n    at require (node:internal/modules/helpers:153:16)\n    at file:///Users/start/code/aheart-ui-wt/v1.4-entries/scripts/v2-migration-consumer.mjs:32:124"
+}
