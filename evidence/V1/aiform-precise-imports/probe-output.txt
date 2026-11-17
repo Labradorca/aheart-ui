@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "graph": {
+    "oldUnrelatedCount": 106,
+    "unrelatedBaseModules": [],
+    "baseRootBarrelParsed": false,
+    "actualBaseFamilies": [
+      "button",
+      "checkbox",
+      "config",
+      "date-picker",
+      "form",
+      "icon",
+      "input",
+      "input-number",
+      "picker-core",
+      "radio",
+      "select",
+      "switch",
+      "textarea",
+      "time-picker",
+      "tooltip",
+      "tree",
+      "tree-select",
+      "upload",
+      "utils"
+    ],
+    "sharedInfrastructureModules": [
+      "<consumer>/node_modules/aheart-ui/es/config/context.js",
+      "<consumer>/node_modules/aheart-ui/es/picker-core/calendar.js",
+      "<consumer>/node_modules/aheart-ui/es/picker-core/codec.js",
+      "<consumer>/node_modules/aheart-ui/es/picker-core/dayjs.js",
+      "<consumer>/node_modules/aheart-ui/es/picker-core/selection.js",
+      "<consumer>/node_modules/aheart-ui/es/picker-core/time-column-geometry.js",
+      "<consumer>/node_modules/aheart-ui/es/picker-core/time.js",
+      "<consumer>/node_modules/aheart-ui/es/picker-core/transaction.js",
+      "<consumer>/node_modules/aheart-ui/es/picker-core/viewport.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/floating-core.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/floating.css.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/install.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/normalize-virtual-options.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/overlay-controller.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-controllable-state.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-floating-dismiss.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-floating-layer.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-floating-position.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-motion-presence.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-overlay-portal.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-popup-viewport-budget.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-prop-presence.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-stable-id.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-teleport-ready.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-trigger-aria.js"
+    ]
+  },
+  "jsBudget": {
+    "scopedGzip": 133664,
+    "rootNamedGzip": 133614,
+    "fullPluginGzip": 187192,
+    "increment": 50,
+    "allowedIncrement": 1336.14,
+    "smallerThanFull": true,
+    "rootNamedIncrementPass": true
+  },
+  "peer": {
+    "source": "workspace:^1.1.0",
+    "packed": "^1.1.0",
+    "requiredNext": "^1.4.0",
+    "status": "unchanged; owner authorization required before adjustment; current unpublished core 1.3 candidate has new paths, published 1.3 does not"
+  }
+}

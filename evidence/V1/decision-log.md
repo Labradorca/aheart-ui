@@ -1,53 +1,53 @@
 # V1 全量按需铺路
 
-状态：**负责人已澄清 A2-3；复合入口分类候选待确认，V1 实现仍停止，未验收**。基线 `b1eef9b6f5e1b64706beee5d4d56e08891f27c26`；分支 `codex/v1.4-entries`，独立 worktree。V0 已按负责人单独授权合并，准确合并 SHA 的 Main CI 12/12 与 Pages 已 SUCCESS，见 [合并后回执](v0-postmerge/README.md)；不以这些结果代替 V1 验收。初始 [基线](baseline.json) 保留当时运行中状态。
+状态：**负责人已确认分类与边界，V1恢复至AIForm精确导入并完成局部验证；现在按约定停在peer下限修改前，未完成V1验收。** 基线 `b1eef9b6f5e1b64706beee5d4d56e08891f27c26`；分支 `codex/v1.4-entries`。V0按单独授权合并，准确SHA的Main CI 12/12与Pages SUCCESS见 [V0合并后回执](v0-postmerge/README.md)，不代替V1验收。初始 [基线](baseline.json) 保留当时状态。
 
 ## 决策与授权
 
 | 项目 | 决定 / 当前边界 |
 | --- | --- |
-| V1 范围 | 按已批准 A2-3 和原任务执行，全 Ready 子入口/CSS、Resolver、漂移测试、弃用提示、迁移表/codemod、数值与兼容验收 |
-| 旧测试能力断言与全量覆盖的冲突 | 负责人允许仅更新过时能力断言：M1 保留原四组件范围；M3 的 ATable 否定断言改为正向能力断言。预算和两试点业务源码不改，见 [直接答复](owner-decisions-2026-11-17.json) |
-| 身份兼容与有针对性的弃用提示 | 负责人选择保留对象身份，B1/B3 改用开发构建诊断；以本次直接决定调整 A2 提示方式，不把推荐路径误报弃用，见 [直接答复](owner-decisions-2026-11-17.json) |
-| AIForm 原预算停止点 | 100,048 B / 49.649% 与压缩后49.820%是澄清前比例口径的历史结果，原数据/退出码保留；不以新口径追改历史。106项模块图越界仍未修复；新复合并集/基线门禁尚未实现，见 [历史根因](aiform-budget/README.md) |
-| S1 CSS 复用试验 | **负责人明确不批准**：约69.5%基础样式减量且保持 full.css 等价/视觉不变，成功概率低。S1不再执行或请求授权，见 [直接决定](owner-a2-3-clarification-2026-11-17.md) |
-| A2-3 预算口径澄清 | **负责人决定，不是代理放宽预算**：叶子继续M1 25%/5%/30%；复合闭包必须等于自身+声明依赖样式并集、无任何额外selector，记录大小/依赖占比并冻结不回升基线，不套25%线；两类JS均保留 gzip<full、root named增量≤max(512 B,1%)。完整原指令见 [负责人记录](owner-a2-3-clarification-2026-11-17.md) |
-| AIForm 必须修复的图与兼容边界 | 改精确公开子入口，13个直接控件族及声明传递依赖之外必须为0，旧106项清零；13类字段、对象身份、props/events/expose、两试点业务源码不变。此为负责人要求，未实施 |
-| 复合入口清单 | [设计](../../docs/superpowers/plans/2026-11-17-aiform-on-demand-feasibility.md) 列12个复合逻辑入口（基础5、AI7）与53个保守叶子候选；辅助/同族边界和执行分栏明确列为待确认，不写入生产manifest；负责人确认后才恢复V1实现 |
-| peer 下限 | 当前仍 `workspace:^1.1.0`。若精确公开路径需 `^1.4.0`，先交 [影响说明](../../docs/superpowers/plans/2026-11-17-aiform-on-demand-feasibility.md#peer-下限影响说明先看未改)，再由负责人决定；本轮未改peer或版本 |
-| V1 开 PR | 未授权，候选就绪后交差异摘要并单独询问 |
-| V1 合并 / Pages | 未授权 |
-| 版本修改 | 未授权；保持三包现有版本 |
-| npm published / tag | 均未授权 |
+| V1范围 | 全Ready子入口/CSS、Resolver、漂移测试、开发构建诊断、迁移表/codemod、数值与兼容验收，未完成 |
+| 过时能力断言 | 负责人允许M1固定原四组件范围、M3将ATable否定改正向；仅这两个受保护测试改动获准，两试点业务源码不改，见 [直接答复](owner-decisions-2026-11-17.json) |
+| 身份与弃用提示 | 保留对象身份，B1/B3使用开发构建import诊断；该诊断仍未实现，见同一直接答复 |
+| S1 | **负责人明确不批准**，约69.5%减量且保持full.css/视觉等价的成功概率低；不再执行或请求S1授权 |
+| A2-3口径澄清 | **负责人决定，不是代理放宽预算**，见 [前次逐项记录](owner-a2-3-clarification-2026-11-17.md) 和 [本次确认/追加](owner-classification-confirmation-2026-11-17.md) |
+| 分类 | 12复合/53叶子、辅助依赖、同族聚合、复合不套25%/30%而theme5%保留的分栏已获确认；新增“先测叶子线、通过者锁定硬门禁”限制优先，见下节 |
+| AIForm导入与图 | 13个精确公开运行时入口已实现，产物保持external；真实tarball图原106项越界变0，基础root barrel未解析，见 [本轮回执](aiform-precise-imports/README.md) |
+| AIForm兼容 | 13类字段、对象身份、props/events/expose不变；本轮仅改import声明和必要构建external，公开声明字节不变；两试点业务不改 |
+| 原预算探针 | 原100,048 B/49.649%、压缩49.820%和exit1留为 [历史](aiform-budget/README.md)，不追改成新规则Pass；旧图106为当时事实，新图单独存档 |
+| peer下限 | 仍workspace:^1.1.0，pack为^1.1.0。精确路径需未来^1.4.0，现已到必须单独询问的停止点，见 [具体影响说明](aiform-precise-imports/peer-impact.md)；未直接改 |
+| V1开PR | 未授权；完整候选就绪后先交差异摘要，包括12个复合入口最终门禁和实测值 |
+| V1合并 / Pages | 未授权 |
+| 版本 | 未授权；基础/AI/DND仍1.3.0/1.1.0/1.1.0 |
+| npm published / tag | 均未授权、未执行 |
 
-## A2-3 负责人本轮决定（2026-11-17）
+## A2-3 分类确认与追加门禁（2026-11-17，现行）
 
-以下来自负责人本对话直接指令，**是负责人决定，不是代理放宽预算**。逐项记录另存于 [负责人澄清](owner-a2-3-clarification-2026-11-17.md)，供后续实现引用。
+以下由负责人直接决定，**不是代理放宽预算**，逐项来源为 [本轮负责人记录](owner-classification-confirmation-2026-11-17.md)。
 
-1. **不批准 S1**：去重后仍需约69.5%的基础样式减量，同时保持 full.css 等价和视觉不变，负责人判断成功概率低，不继续该试验。
-2. **CSS 分两类**：基础包只渲染自身的叶子入口沿用 M1：组件≤full 25%、theme≤5%、theme+组件≤30%。复合入口按设计依赖多个基础组件族，其闭包必须等于自身与声明依赖入口样式的并集，不含声明之外的任何选择器，不适用25%比例线；记录闭包大小、各依赖占比，作为后续版本不得回升的基线。**两类 JS 均不变**：gzip小于full Plugin，相对root named增量≤max(512 B,1%)。
-3. **AIForm 模块图必须修复**：字段渲染改精确公开子入口，不经过根barrel；只允许13个字段控件族及声明传递依赖，旧106个越界模块清零。
-4. **兼容不变**：13类字段、对象身份、props/events/expose、两个试点业务源码均保持。AI peer若需改为^1.4.0，必须先交影响说明，不直接改；影响说明已列入设计，peer仍未改。
-5. **先确认名单，再恢复实现**：[12复合/53叶子候选设计](../../docs/superpowers/plans/2026-11-17-aiform-on-demand-feasibility.md) 待负责人确认。任何叶子超25%仍停报。本决定不包含开PR、改版本或发布授权；既有其他独立授权停止点继续适用。
-
-候选名单、辅助依赖边界，以及复合采用并集/基线门禁而不套叶子30%合计线的执行解释，均明确列为待确认；不把代理整理的解释当作负责人已经确认。
+1. 确认 [分类设计](../../docs/superpowers/plans/2026-11-17-aiform-on-demand-feasibility.md) 的12复合/53叶子、辅助/同族边界和执行分栏；[approved.json](classification/approved.json) 为确认后的65条清单，proposal.json保留原候选历史。
+2. 叶子仍执行组件≤full25%、theme≤5%、theme+组件≤30%，任何叶子超线仍停止报告。复合**首先按相同25%/30%线完整测量**；达标者继续将这两条作为硬门禁，不能在后续回归时改用并集例外。Modal在M1已验收，原门槛不降。
+3. **仅实测超出叶子线的复合入口**才用精确并集/不回升门禁：闭包等于自身+声明依赖入口样式并集，无声明外选择器；闭包大小及各依赖占比记录为后续不得回升基线。该分栏不套25%和30%；theme自身5%继续执行。
+4. JS两类都不变：gzip小于full Plugin，相对root named增量≤max(512 B,1%)。AIForm只允许13个字段控件族及声明传递依赖，旧106项越界必须清零；13类字段、对象身份、props/events/expose和两个业务试点源码不变。
+5. 每个复合入口的最终门禁与数值须存入evidence/V1，并在开PR前差异摘要逐条列出。本轮 [首次测量表](composite-css-gates.md) 已锁定8项叶子硬门禁（含Modal），另4项完整跨包闭包待实现/实测，未先选并集例外；**当前不可开PR**。
+6. 已授权恢复实现，但AIForm精确导入后需要改peer时必须停下询问。本轮已到此点，停止继续其余实现；没有peer、版本、PR、合并或发布授权。S1继续不批准。
 
 ## 一张验收表（A2-7）
 
 | 项目 | 分项状态 | 证据 | SHA / 时间 | 责任人 |
 | --- | --- | --- | --- | --- |
-| G1 设计 | A2 已生效；负责人已澄清预算并拒绝S1，复合分类候选仍待确认 | [负责人澄清](owner-a2-3-clarification-2026-11-17.md)、[分类设计](../../docs/superpowers/plans/2026-11-17-aiform-on-demand-feasibility.md)、[前次答复](owner-decisions-2026-11-17.json) | 基线 `b1eef9b6` + 本轮文档 | wzfdhr |
-| G2 代码 | Local：基础 45 家族的子入口/CSS 与 named 别名已铺设；Resolver 声明 81 个组件名；未完成 V1 | [声明覆盖](entry-coverage.json)、实际 diff；[57 份保护源码核对](protected-source-check.json)，仅获准的两个过时测试改动；两试点业务与版本不变 | 基线 + 工作差异 | Codex |
-| G3 自动检查 | 原组件构建/四方漂移6项/pack成功记录保留；本轮分类覆盖65条/源码摘要116项、文档与质量矩阵16项测试、文档构建、diff检查退出0。旧比例口径探针exit1作为历史，106项图越界仍未修复；新复合并集/不回升门禁未实施/未验收 | [本轮命令与退出码](classification/checks.json)、[分类核验](classification/verification.json)、[既有实现检查](checks/results.json)、[历史探针](aiform-budget/README.md)。文档检查不代替新口径V1验收 | 基线 + 工作差异 | Codex |
-| G4 视觉 | 未取得本阶段运行证据 | 后续真实消费页面检查；不代填人工操作验收 | 缺失 | Codex 观察 / wzfdhr 验收 |
-| G5 包 | npm pack：本地三包候选通过；完整按需契约尚未通过 | [pack 输出](checks/pack.txt)、[包摘要](aiform-budget/results.json)；无 npm 发布或版本修改 | 基线 + 工作差异 | Codex |
-| G6 PR / 合并 | PR：未开；Merged：否 | 需 V1 单独授权 | 缺失 | wzfdhr |
-| G7 主线 CI / Pages | Main CI：本候选缺失；Pages：未部署 | V0 主线结果单独跟踪，不冒充 V1 | 缺失 | 待授权后 CI |
-| G8 用户验收 | 缺失；A2/Go 与 V0 合并批准不替代 V1 实际操作 | 冻结 5–8 条真实任务后由负责人验收，代理不代签 | 缺失 | wzfdhr |
-| npm published | 本轮未发布 | 现有公开版本只作基线 | 基线 | N/A |
+| G1设计 | A2已生效；负责人已确认分类并追加复合首次测量限制，S1拒绝 | [负责人决定](owner-classification-confirmation-2026-11-17.md)、[设计](../../docs/superpowers/plans/2026-11-17-aiform-on-demand-feasibility.md) | 基线 + 本轮差异 | wzfdhr |
+| G2代码 | Local：基础45家族入口/CSS、81名称Resolver、四方漂移已铺设；新增AIForm精确公开导入与external；V1未完成 | [入口覆盖](entry-coverage.json)、[AIForm回执](aiform-precise-imports/README.md)、[57份受保护源码/试点核对](aiform-precise-imports/verification.json) | 基线 + 本轮差异 | Codex |
+| G3自动检查 | AI构建、原有AI200测试、包typecheck、三包pack成功；本轮tarball局部SSR/严格消费类型、图0越界、JS预算通过；8个复合首次叶子线达标并锁定，4个完整闭包待测；全V1门禁未通过 | [构建/测试命令与退出码](checks/results.json)、[局部探针结果](aiform-precise-imports/results.json)、[复合门禁表](composite-css-gates.md)。历史文档/清单检查不代替新实现验收 | 基线 + 本轮差异 | Codex |
+| G4视觉 | 本阶段真实页面视觉/交互验收缺失 | 本次13字段SSR不代替真实运行、hydration或用户操作 | 缺失 | Codex观察 / wzfdhr验收 |
+| G5包 | npm pack：本轮本地三包候选通过；基础仍标1.3.0但含未发布新路径，不能据此声称公开1.3兼容新AI | [pack记录](checks/pack.txt)、[tarball摘要](aiform-precise-imports/results.json)、[peer影响](aiform-precise-imports/peer-impact.md)；无版本修改/发布 | 基线 + 本轮差异 | Codex |
+| G6 PR / 合并 | PR：未开；Merged：否 | V1需单独授权，当前仍未完成候选 | 缺失 | wzfdhr |
+| G7主线CI / Pages | Main CI：本候选缺失；Pages：未部署 | V0回执单独跟踪，不冒充V1 | 缺失 | 待授权后CI |
+| G8用户验收 | 缺失，未代填；分类确认不替代实际操作验收 | 完整实现后冻结5–8条真实任务，由负责人验收 | 缺失 | wzfdhr |
+| npm published | 本轮未发布 | 本地pack与npm公开状态分开 | 基线 | N/A |
 
-按负责人澄清：任何叶子超M1比例线仍停止报告；复合并集有缺失/额外selector或后续基线回升、任一类模块图/JS越界均不得宣称通过。P0/P1未完成审计，不预填为0。分类确认不替代实际验收或发布授权。
+## 当前停止点与剩余工作
 
-## 此停止点的剩余工作
+需要负责人单独决定是否允许AI peer下限升到^1.4.0，并同步对应契约/必要锁记录；详情见具体影响说明。收到答复前不继续其余V1实现。
 
-负责人预算澄清已登记；当前先等待复合分类清单确认，之后才能恢复实现。AIForm精确子入口与106项越界清零、复合样式并集/依赖占比与不回升基线、全部叶子原预算、开发构建诊断、迁移表/codemod、全量JS与兼容消费/两试点、strict types、SSR/hydration、五浏览器均未完成V1验收。没有开V1 PR，没有修改peer/版本、发布npm或打tag。
+剩余包括：四个跨包复合入口的完整公开CSS闭包及首次比例测量、适用精确并集/不回升的最终基线、全部53叶子原预算和全部JS/模块图、开发构建诊断、迁移表/codemod、原消费与两试点、完整strict、SSR/hydration、五浏览器、P0/P1审计。8个已锁定复合硬门禁不得后退，Modal原M1门槛不降。P0/P1未预填为0；V1仍不可合并。

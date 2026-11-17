@@ -21,7 +21,9 @@ S1 隔离 CSS 复用试验不再作为下一步，不执行。已完成的闭包
 
 **本决定不包含开 PR、改版本或发布的授权。** 既有 V1 合并、Pages、npm、tag 的独立授权边界继续保留。
 
-## 本轮落地范围
+## 当时落地范围（历史快照）
+
+负责人后续已 [确认分类、追加硬门禁限制并授权恢复实现](owner-classification-confirmation-2026-11-17.md)；当前已到AIForm精确导入后的peer停止点，见 [新回执](aiform-precise-imports/README.md)。下面保留前次指令当时状态，未追改成实现验收。
 
 - 已确认的是上面的负责人决定；[分类设计候选](../../docs/superpowers/plans/2026-11-17-aiform-on-demand-feasibility.md) 尚未确认，不能自行按候选清单豁免入口。
 - 本轮只更新决策日志、设计与只读分类依据，不改源码、生产 manifest、构建门禁、peer 或版本。

@@ -1,8 +1,8 @@
 # AIForm：原 V1 预算停止点（历史证据）
 
-**当前状态**：负责人已给出 [A2-3 叶子/复合口径澄清](../owner-a2-3-clarification-2026-11-17.md)，并拒绝S1。这是负责人决定，不是代理放宽预算。下文保留澄清前的比例验收、数值和退出码，不再将其作为复合入口现行比例门禁。106项模块图越界仍未修复；新并集/不回升门禁未实现。当前等待 [分类候选](../../../docs/superpowers/plans/2026-11-17-aiform-on-demand-feasibility.md) 确认，V1实现仍停止。
+**当前状态**：负责人已给出 [A2-3 叶子/复合口径澄清](../owner-a2-3-clarification-2026-11-17.md)，并拒绝S1。这是负责人决定，不是代理放宽预算。下文保留澄清前的比例验收、数值和退出码，不再将其作为复合入口现行比例门禁。负责人随后已确认分类并追加“复合先测叶子线、通过者硬门禁、Modal不降门槛”，见 [本轮决定](../owner-classification-confirmation-2026-11-17.md)。106项越界已在 [新tarball回执](../aiform-precise-imports/README.md) 清零；新完整CSS并集/不回升门禁未实施，当前按约定停在peer修改前。
 
-**原停止点快照**：Fail。探针命令为 `node evidence/V1/aiform-budget-probe.mjs`，实际退出码 **1**；[完整结果](results.json)、[退出码](exit-code)、[执行尝试记录](probe-attempts.json)。当时没有放宽比例、改变full.css分母、跳过AIForm或缩减字段能力。原探针代码仍保留旧比例断言，不能用重跑它代替未来新口径验收。
+**原停止点快照**：Fail。探针命令为 `node evidence/V1/aiform-budget-probe.mjs`，实际退出码 **1**；[完整结果](results.json)、[退出码](exit-code)、[执行尝试记录](probe-attempts.json)。当时没有放宽比例、改变full.css分母、跳过AIForm或缩减字段能力。原探针代码仍保留旧比例断言和根import解析器，只能在旧检查点4f2762a的独立worktree复现，不能在当前精确导入源码上运行，更不能重写历史结果或代替新口径验收。
 
 ## 实测数值与口径
 
@@ -28,6 +28,6 @@
 
 ## 分状态与未完成项
 
-Local：基础45家族构建、四方漂移6项、三包pack的既有成功记录保留；旧比例探针失败为历史，模块图仍未修复，新CSS门禁未验收。PR：未开；Merged：否；Main CI：V1缺失；Pages：V1未部署；npm pack：前次本地候选通过，本轮未重跑；npm published：未发布；用户验收：缺失。
+Local：基础45家族构建、四方漂移6项、三包pack的既有成功记录保留；旧比例探针失败为历史，新模块图0越界见独立回执，新完整CSS门禁未验收。PR：未开；Merged：否；Main CI：V1缺失；Pages：V1未部署；npm pack：本轮候选通过，见新回执；npm published：未发布；用户验收：缺失。
 
-开发构建诊断、完整迁移表/codemod、全部子入口模块图/预算、兼容消费与两试点、strict types、SSR/hydration、五浏览器的V1全量验收均未完成。当前只证明声明覆盖，不据此宣称V1 Pass或P0/P1为0。负责人预算决定已经记录；下一停止点是复合分类确认。
+开发构建诊断、完整迁移表/codemod、全部子入口模块图/预算、兼容消费与两试点、strict types、SSR/hydration、五浏览器的V1全量验收均未完成。当前只证明声明覆盖，不据此宣称V1 Pass或P0/P1为0。负责人预算决定已经记录；分类已确认，当前停止点为peer修改授权。

@@ -1,0 +1,49 @@
+[
+  {
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "exitCode": 2,
+    "output": "evidence/V1/checks/types-ai.txt:4: new blank line at EOF.",
+    "resolution": "Normalized captured log EOF whitespace; command result and raw-output SHA preserved, no package/test/peer changes."
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "exitCode": 0,
+    "checkedAt": "2026-11-17T15:12:23.610919+00:00",
+    "note": "After captured-log EOF normalization."
+  },
+  {
+    "command": [
+      "node",
+      "evidence/V1/aiform-precise-imports/verify-stop.mjs"
+    ],
+    "exitCode": 0,
+    "output": "verification.txt"
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "e0c6f80",
+      "--name-only",
+      "--",
+      "packages/ai/package.json",
+      "packages/components/package.json",
+      "packages/dnd/package.json",
+      "pnpm-lock.yaml",
+      ".github"
+    ],
+    "exitCode": 0,
+    "output": "",
+    "note": "No peer, package versions, root lockfile or workflow edits."
+  }
+]

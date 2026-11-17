@@ -1,0 +1,3 @@
+
+> @aheart-ui/ai@1.1.0 typecheck /Users/start/code/aheart-ui-wt/v1.4-entries/packages/ai
+> vue-tsc --noEmit -p tsconfig.json

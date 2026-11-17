@@ -6,6 +6,9 @@ const directory='evidence/V1/checks'
 mkdirSync(directory,{recursive:true})
 const checks={
   'build-components':['corepack','pnpm','build:components'],
+  'build-ai':['corepack','pnpm','--filter','@aheart-ui/ai','build'],
+  'test-ai':['corepack','pnpm','--filter','@aheart-ui/ai','test'],
+  'types-ai':['corepack','pnpm','--filter','@aheart-ui/ai','typecheck'],
   build:['corepack','pnpm','build'],
   drift:['node','--test','scripts/v1-entry-manifest.test.mjs'],
   'docs-and-matrix':['node','--test','scripts/docs-copy.test.mjs','scripts/docs-social-icon.test.mjs','scripts/qg5-evidence-docs.test.mjs','scripts/m3-doc-entries.test.mjs','scripts/quality-matrix.test.mjs','scripts/qg5-skip-ledger.test.mjs'],
@@ -30,10 +33,11 @@ for(const name of process.argv.slice(2)){
   const record={name,command,baseline:'b1eef9b6f5e1b64706beee5d4d56e08891f27c26',head:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),scope:'recorded HEAD plus V1 working diff',workingDiffCommand:['git','diff','HEAD','--binary'],workingDiffSha256:hash(execFileSync('git',['diff','HEAD','--binary'],{maxBuffer:64*1024*1024})),startedAt:new Date().toISOString()}
   const run=spawnSync(command[0],command.slice(1),{encoding:'utf8',maxBuffer:64*1024*1024})
   const raw=`${run.stdout??''}${run.stderr??''}${run.error?String(run.error):''}`
-  const output=raw.split('\n').map(line=>line.trimEnd()).join('\n')
+  const normalized=raw.split('\n').map(line=>line.trimEnd()).join('\n').trimEnd()
+  const output=normalized?`${normalized}\n`:''
   writeFileSync(`${directory}/${name}.txt`,output)
   writeFileSync(`${directory}/${name}.exit-code`,`${run.status}\n`)
-  Object.assign(record,{finishedAt:new Date().toISOString(),exitCode:run.status,signal:run.signal,rawOutputSha256:hash(raw),output:`${name}.txt`,normalization:'trailing whitespace only'})
+  Object.assign(record,{finishedAt:new Date().toISOString(),exitCode:run.status,signal:run.signal,rawOutputSha256:hash(raw),output:`${name}.txt`,normalization:'trailing whitespace and blank lines at EOF only'})
   const previous=results.findIndex(r=>r.name===name)
   if(previous>=0)results.splice(previous,1)
   results.push(record)

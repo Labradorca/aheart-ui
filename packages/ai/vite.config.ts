@@ -11,7 +11,7 @@ export default defineConfig({
     target: 'modules',
     minify: 'esbuild',
     rollupOptions: {
-      external: (id) => id === 'vue' || id.startsWith('vue/') || id === 'aheart-ui' || (id === '@aheart-ui/dnd' || id.startsWith('@aheart-ui/dnd/')),
+      external: (id) => id === 'vue' || id.startsWith('vue/') || id === 'aheart-ui' || id.startsWith('aheart-ui/') || (id === '@aheart-ui/dnd' || id.startsWith('@aheart-ui/dnd/')),
       input: entryInput(entries),
       output: [
         { format: 'es', exports: 'named', entryFileNames: '[name].js', preserveModules: true, dir: 'es', preserveModulesRoot: 'src' },

@@ -48,6 +48,87 @@
     ]
   },
   {
+    "name": "build-ai",
+    "command": [
+      "corepack",
+      "pnpm",
+      "--filter",
+      "@aheart-ui/ai",
+      "build"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "e0c6f8034fef376702abdd98a261db40c16de612",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "HEAD",
+      "--binary"
+    ],
+    "workingDiffSha256": "18cca0d4f29a809b0663bcae6fad2fef5f0f5499c9d800f319fa747b042ffe47",
+    "startedAt": "2026-11-17T14:54:46.138Z",
+    "finishedAt": "2026-11-17T14:54:53.833Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "325c4fb81592f8b3bd9780b056a131720b9bb0e89e13084e99c4806d2db6aef8",
+    "output": "build-ai.txt",
+    "normalization": "trailing whitespace only"
+  },
+  {
+    "name": "test-ai",
+    "command": [
+      "corepack",
+      "pnpm",
+      "--filter",
+      "@aheart-ui/ai",
+      "test"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "e0c6f8034fef376702abdd98a261db40c16de612",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "HEAD",
+      "--binary"
+    ],
+    "workingDiffSha256": "386e44ee99302ceab92b6cd6b8e194a77c8017cef3726d3adf4d5e486d2235e2",
+    "startedAt": "2026-11-17T14:54:53.884Z",
+    "finishedAt": "2026-11-17T14:54:57.652Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "0256c2a35d4ebbe6c025cfb8642567ec63c6f152ee91f4e440c6190c52584196",
+    "output": "test-ai.txt",
+    "normalization": "trailing whitespace only"
+  },
+  {
+    "name": "types-ai",
+    "command": [
+      "corepack",
+      "pnpm",
+      "--filter",
+      "@aheart-ui/ai",
+      "typecheck"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "e0c6f8034fef376702abdd98a261db40c16de612",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "HEAD",
+      "--binary"
+    ],
+    "workingDiffSha256": "15f94d5619bbb7d9a63d33f5b65b1d6e07ef2cd70c3940716b54c46dfbf55743",
+    "startedAt": "2026-11-17T14:54:57.680Z",
+    "finishedAt": "2026-11-17T14:54:59.680Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "1b572425617afa82f23b58a0347dca5419f796501373d1e45cd8a4061870044e",
+    "output": "types-ai.txt",
+    "normalization": "trailing whitespace and blank lines at EOF only; rawOutputSha256 unchanged"
+  },
+  {
     "name": "pack",
     "command": [
       "corepack",
@@ -57,21 +138,77 @@
       "test-results/release-tarballs"
     ],
     "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
-    "head": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "e0c6f8034fef376702abdd98a261db40c16de612",
     "scope": "recorded HEAD plus V1 working diff",
-    "workingDiffSha256": "ee3ba4f0a6f47e2eb7328ec73b8b99c6eb95359404b50060270630581ff08dc2",
-    "startedAt": "2026-11-17T10:03:11.946Z",
-    "finishedAt": "2026-11-17T10:03:13.628Z",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "HEAD",
+      "--binary"
+    ],
+    "workingDiffSha256": "9320c33ca92cc9676ca5ed8671b235f70e68d8afc1cddff1e844fdcabf2d2584",
+    "startedAt": "2026-11-17T14:54:59.710Z",
+    "finishedAt": "2026-11-17T14:55:01.123Z",
     "exitCode": 0,
     "signal": null,
     "rawOutputSha256": "bc2f45d295b1d2d260057ad405672cbe88dc8b534e0ca3cf5d17379cd31329f5",
     "output": "pack.txt",
-    "normalization": "trailing whitespace only",
+    "normalization": "trailing whitespace only"
+  },
+  {
+    "name": "docs-and-matrix",
+    "command": [
+      "node",
+      "--test",
+      "scripts/docs-copy.test.mjs",
+      "scripts/docs-social-icon.test.mjs",
+      "scripts/qg5-evidence-docs.test.mjs",
+      "scripts/m3-doc-entries.test.mjs",
+      "scripts/quality-matrix.test.mjs",
+      "scripts/qg5-skip-ledger.test.mjs"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "e0c6f8034fef376702abdd98a261db40c16de612",
+    "scope": "recorded HEAD plus V1 working diff",
     "workingDiffCommand": [
       "git",
       "diff",
+      "HEAD",
       "--binary"
-    ]
+    ],
+    "workingDiffSha256": "485acc9b4d800bd1a899e1b228760b884e913f16ef29686dd36359c6b9c9c633",
+    "startedAt": "2026-11-17T15:07:59.530Z",
+    "finishedAt": "2026-11-17T15:07:59.984Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "f7846eb1d0850e310cc593506e9070d0a7821291bd92aca02b0c0ee7512a4b54",
+    "output": "docs-and-matrix.txt",
+    "normalization": "trailing whitespace only"
+  },
+  {
+    "name": "docs",
+    "command": [
+      "corepack",
+      "pnpm",
+      "docs:build"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "e0c6f8034fef376702abdd98a261db40c16de612",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffCommand": [
+      "git",
+      "diff",
+      "HEAD",
+      "--binary"
+    ],
+    "workingDiffSha256": "a7c778d0b24d28b554d7f6e591c0c9a3657fa07a4ed83673eaa75ccdc545191e",
+    "startedAt": "2026-11-17T15:08:00.053Z",
+    "finishedAt": "2026-11-17T15:08:14.333Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "8cf7083f599f4a9ba758b9ac9ea4ce923c80f8a4c53e7b64d0ded1b73269ce46",
+    "output": "docs.txt",
+    "normalization": "trailing whitespace only"
   },
   {
     "name": "diff",
@@ -81,7 +218,7 @@
       "--check"
     ],
     "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
-    "head": "d8e419237f0b8a16a31c1909b55069b4b52e565a",
+    "head": "e0c6f8034fef376702abdd98a261db40c16de612",
     "scope": "recorded HEAD plus V1 working diff",
     "workingDiffCommand": [
       "git",
@@ -89,9 +226,9 @@
       "HEAD",
       "--binary"
     ],
-    "workingDiffSha256": "a61667e1574939a3dc2343e790e2d0787ff6324f7d9ea5a31003a2524eb4cec1",
-    "startedAt": "2026-11-17T10:23:55.453Z",
-    "finishedAt": "2026-11-17T10:23:55.470Z",
+    "workingDiffSha256": "35e84e1c6abe91af0af1c68f4f7333d4aded4a9a8cd5ee6f160a988d75eb3af5",
+    "startedAt": "2026-11-17T15:08:14.374Z",
+    "finishedAt": "2026-11-17T15:08:14.391Z",
     "exitCode": 0,
     "signal": null,
     "rawOutputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",

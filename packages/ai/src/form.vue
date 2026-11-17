@@ -66,7 +66,8 @@
 
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, toRaw, watch } from 'vue'
-import { Button as AButton, Form as AForm, FormItem as AFormItem, type FormRule } from 'aheart-ui'
+import { Button as AButton } from 'aheart-ui/button'
+import { Form as AForm, FormItem as AFormItem, type FormRule } from 'aheart-ui/form'
 import AIFormField from './form-field.vue'
 import {
   type AIFormCondition,

@@ -1,5 +1,6 @@
 import { defineComponent as Ae, computed as R, reactive as D, ref as q, onMounted as Fe, watch as k, toRaw as J, onBeforeUnmount as Ve, openBlock as c, createBlock as Q, unref as X, withCtx as W, createElementBlock as d, toDisplayString as v, createCommentVNode as V, createElementVNode as j, Fragment as K, renderList as I, resolveDynamicComponent as je, createVNode as ne, createTextVNode as we, nextTick as le } from "vue";
-import { Form as Ee, FormItem as $e, Button as Se } from "aheart-ui";
+import { Button as Ee } from "aheart-ui/button";
+import { Form as $e, FormItem as Se } from "aheart-ui/form";
 import Re from "./form-field.vue.js";
 import { validateAIFormSchema as qe } from "./form-schema.js";
 const Ce = {
@@ -18,7 +19,7 @@ const Ce = {
   key: 1,
   class: "aheart-ai-form__error",
   role: "alert"
-}, Qe = /* @__PURE__ */ Ae({
+}, Xe = /* @__PURE__ */ Ae({
   name: "AAIForm",
   __name: "form",
   props: {
@@ -279,7 +280,7 @@ const Ce = {
       }), (r = (t = _.value) == null ? void 0 : t.setFieldsErrors) == null || r.call(t, e);
     } }), Ve(() => {
       for (const e of m.values()) e.abort();
-    }), (e, t) => i.value.valid && i.value.schema ? (c(), Q(X(Ee), {
+    }), (e, t) => i.value.valid && i.value.schema ? (c(), Q(X($e), {
       key: 0,
       ref_key: "formElement",
       ref: _,
@@ -323,7 +324,7 @@ const Ce = {
                 j("span", null, v(r.group.title), 1),
                 r.group.description ? (c(), d("small", Ue, v(r.group.description), 1)) : V("", !0)
               ])) : V("", !0),
-              (c(!0), d(K, null, I(r.fields, (s) => (c(), Q(X($e), {
+              (c(!0), d(K, null, I(r.fields, (s) => (c(), Q(X(Se), {
                 key: pe(s),
                 name: s.key,
                 rules: ve(s),
@@ -349,7 +350,7 @@ const Ce = {
         }), 128)),
         p.submitError ? (c(), d("p", Be, v(p.submitError), 1)) : V("", !0),
         j("footer", De, [
-          ne(X(Se), {
+          ne(X(Ee), {
             "html-type": "submit",
             type: "primary",
             loading: p.submitting,
@@ -372,5 +373,5 @@ const Ce = {
   }
 });
 export {
-  Qe as default
+  Xe as default
 };

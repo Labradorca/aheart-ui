@@ -1,0 +1,368 @@
+{
+  "status": "passed",
+  "scope": "AIForm precise-import peer stop; not V1 acceptance or published-version compatibility",
+  "head": "e0c6f8034fef376702abdd98a261db40c16de612",
+  "consumer": "/private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-v1-precise-UQvql4",
+  "command": [
+    "node",
+    "evidence/V1/aiform-precise-imports/probe.mjs"
+  ],
+  "tarballs": [
+    {
+      "name": "aheart-ui",
+      "version": "1.3.0",
+      "sha256": "7d05ab82e5192df0bf45fc9b73ab4f36551825c89390225e211a03fef3adead5"
+    },
+    {
+      "name": "@aheart-ui/ai",
+      "version": "1.1.0",
+      "sha256": "e174ffc3079c3bf085d253f55f099228dcf13ddfe1224d96a790e19f679fa64a"
+    },
+    {
+      "name": "@aheart-ui/dnd",
+      "version": "1.1.0",
+      "sha256": "8cbc23c703b7250154c7d8afd2c18bf0e2ba3fe16f6bd6a82754967caf54747a"
+    }
+  ],
+  "requiredDirectFamilies": [
+    "button",
+    "checkbox",
+    "date-picker",
+    "form",
+    "input",
+    "input-number",
+    "radio",
+    "select",
+    "switch",
+    "textarea",
+    "time-picker",
+    "tree-select",
+    "upload"
+  ],
+  "permittedBaseFamilies": [
+    "button",
+    "checkbox",
+    "date-picker",
+    "form",
+    "icon",
+    "input",
+    "input-number",
+    "radio",
+    "select",
+    "switch",
+    "textarea",
+    "time-picker",
+    "tooltip",
+    "tree",
+    "tree-select",
+    "upload"
+  ],
+  "builds": {
+    "scoped": {
+      "jsGzip": 133664,
+      "parsedCount": 2226
+    },
+    "root-named": {
+      "jsGzip": 133614,
+      "parsedCount": 2538
+    },
+    "full": {
+      "jsGzip": 187192,
+      "parsedCount": 2538
+    }
+  },
+  "commands": [
+    {
+      "command": [
+        "npm",
+        "install",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "startedAt": "2026-11-17T15:01:52.687Z",
+      "finishedAt": "2026-11-17T15:01:56.428Z",
+      "exitCode": 0,
+      "output": "install.txt"
+    },
+    {
+      "command": [
+        "/Users/start/.nvm/versions/node/v24.17.0/bin/node",
+        "node-probe.mjs"
+      ],
+      "startedAt": "2026-11-17T15:01:56.553Z",
+      "finishedAt": "2026-11-17T15:01:56.889Z",
+      "exitCode": 0,
+      "output": "node-probe.txt"
+    },
+    {
+      "command": [
+        "/Users/start/.nvm/versions/node/v24.17.0/bin/node",
+        "node_modules/typescript/bin/tsc",
+        "-p",
+        "tsconfig.json",
+        "--pretty",
+        "false"
+      ],
+      "startedAt": "2026-11-17T15:01:56.889Z",
+      "finishedAt": "2026-11-17T15:01:58.675Z",
+      "exitCode": 0,
+      "output": "strict-types.txt"
+    }
+  ],
+  "source": [
+    {
+      "file": "packages/ai/src/form.vue",
+      "sha256": "7f7d90f7f509efcc517acdebdfc7096f51958cc811fd8f60e6c071ff05ff98a1",
+      "bodyUnchangedExceptImports": true
+    },
+    {
+      "file": "packages/ai/src/form-field.vue",
+      "sha256": "6cce00063f21f50322bb9655f4ee52db72d4a638467e8a70274fdafb6add6ea5",
+      "bodyUnchangedExceptImports": true
+    }
+  ],
+  "publicDeclarationsUnchanged": true,
+  "peer": {
+    "source": "workspace:^1.1.0",
+    "packed": "^1.1.0",
+    "requiredNext": "^1.4.0",
+    "status": "unchanged; owner authorization required before adjustment; current unpublished core 1.3 candidate has new paths, published 1.3 does not"
+  },
+  "graph": {
+    "oldUnrelatedCount": 106,
+    "unrelatedBaseModules": [],
+    "baseRootBarrelParsed": false,
+    "actualBaseFamilies": [
+      "button",
+      "checkbox",
+      "config",
+      "date-picker",
+      "form",
+      "icon",
+      "input",
+      "input-number",
+      "picker-core",
+      "radio",
+      "select",
+      "switch",
+      "textarea",
+      "time-picker",
+      "tooltip",
+      "tree",
+      "tree-select",
+      "upload",
+      "utils"
+    ],
+    "sharedInfrastructureModules": [
+      "<consumer>/node_modules/aheart-ui/es/config/context.js",
+      "<consumer>/node_modules/aheart-ui/es/picker-core/calendar.js",
+      "<consumer>/node_modules/aheart-ui/es/picker-core/codec.js",
+      "<consumer>/node_modules/aheart-ui/es/picker-core/dayjs.js",
+      "<consumer>/node_modules/aheart-ui/es/picker-core/selection.js",
+      "<consumer>/node_modules/aheart-ui/es/picker-core/time-column-geometry.js",
+      "<consumer>/node_modules/aheart-ui/es/picker-core/time.js",
+      "<consumer>/node_modules/aheart-ui/es/picker-core/transaction.js",
+      "<consumer>/node_modules/aheart-ui/es/picker-core/viewport.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/floating-core.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/floating.css.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/install.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/normalize-virtual-options.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/overlay-controller.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-controllable-state.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-floating-dismiss.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-floating-layer.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-floating-position.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-motion-presence.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-overlay-portal.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-popup-viewport-budget.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-prop-presence.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-stable-id.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-teleport-ready.js",
+      "<consumer>/node_modules/aheart-ui/es/utils/use-trigger-aria.js"
+    ]
+  },
+  "jsBudget": {
+    "scopedGzip": 133664,
+    "rootNamedGzip": 133614,
+    "fullPluginGzip": 187192,
+    "increment": 50,
+    "allowedIncrement": 1336.14,
+    "smallerThanFull": true,
+    "rootNamedIncrementPass": true
+  },
+  "css": {
+    "fullBytes": 201510,
+    "fullSha256": "bd1006443101d0335a14c0ae0bcdaf351de95d0a76cddf4239c89e76cae95c83",
+    "fullMatchesV0": true,
+    "themeBytes": 1767,
+    "themeFraction": 0.008768795593270805,
+    "themePass": true,
+    "leafHardLocked": 8,
+    "pendingCompleteFirstPass": 4,
+    "compositeEntries": [
+      {
+        "entry": "aheart-ui/dropdown",
+        "classification": "composite",
+        "packedStyle": "aheart-ui/es/dropdown/style.css",
+        "packedStyleSha256": "edad5069676fb8e4da3b9fa774de229dbc0ed6debca9a15c09b4c7f09e0bfc24",
+        "modalM1Protection": false,
+        "measurement": "complete existing public style export; no missing cross-package style dependency",
+        "componentBytes": 18689,
+        "fractionOfFull": 0.09274477693414719,
+        "themePlusBytes": 20456,
+        "themePlusFraction": 0.101513572527418,
+        "componentPass": true,
+        "themePlusPass": true,
+        "finalGate": "leaf-hard; locked by owner first-pass rule, no later union fallback"
+      },
+      {
+        "entry": "aheart-ui/tree-select",
+        "classification": "composite",
+        "packedStyle": "aheart-ui/es/tree-select/style.css",
+        "packedStyleSha256": "e79732444ca1a19021dd35ee1a7da6f3639fbca0a329f39228ddf9e745b59e8f",
+        "modalM1Protection": false,
+        "measurement": "complete existing public style export; no missing cross-package style dependency",
+        "componentBytes": 8867,
+        "fractionOfFull": 0.044002779018410994,
+        "themePlusBytes": 10634,
+        "themePlusFraction": 0.052771574611681804,
+        "componentPass": true,
+        "themePlusPass": true,
+        "finalGate": "leaf-hard; locked by owner first-pass rule, no later union fallback"
+      },
+      {
+        "entry": "aheart-ui/table",
+        "classification": "composite",
+        "packedStyle": "aheart-ui/es/table/style.css",
+        "packedStyleSha256": "705f5874005a7fcefd5853393afa6867594829149b136092b36fe5352da9b514",
+        "modalM1Protection": false,
+        "measurement": "complete existing public style export; no missing cross-package style dependency",
+        "componentBytes": 15233,
+        "fractionOfFull": 0.07559426331199444,
+        "themePlusBytes": 17000,
+        "themePlusFraction": 0.08436305890526524,
+        "componentPass": true,
+        "themePlusPass": true,
+        "finalGate": "leaf-hard; locked by owner first-pass rule, no later union fallback"
+      },
+      {
+        "entry": "aheart-ui/modal",
+        "classification": "composite",
+        "packedStyle": "aheart-ui/es/modal/style.css",
+        "packedStyleSha256": "a66710f10d435025783f054fa86047f7d6cbcd522362396b9755ba5b2bdef17b",
+        "modalM1Protection": true,
+        "measurement": "complete existing public style export; no missing cross-package style dependency",
+        "componentBytes": 16305,
+        "fractionOfFull": 0.08091409855590294,
+        "themePlusBytes": 18072,
+        "themePlusFraction": 0.08968289414917374,
+        "componentPass": true,
+        "themePlusPass": true,
+        "finalGate": "leaf-hard; locked by owner first-pass rule, no later union fallback"
+      },
+      {
+        "entry": "aheart-ui/popconfirm",
+        "classification": "composite",
+        "packedStyle": "aheart-ui/es/popconfirm/style.css",
+        "packedStyleSha256": "70352104ec252a8bd79a1d79500fd47e12792b8cbd97eb16c3a600be3bac0f51",
+        "modalM1Protection": false,
+        "measurement": "complete existing public style export; no missing cross-package style dependency",
+        "componentBytes": 12034,
+        "fractionOfFull": 0.059719120639174235,
+        "themePlusBytes": 13801,
+        "themePlusFraction": 0.06848791623244505,
+        "componentPass": true,
+        "themePlusPass": true,
+        "finalGate": "leaf-hard; locked by owner first-pass rule, no later union fallback"
+      },
+      {
+        "entry": "@aheart-ui/ai/bubble",
+        "classification": "composite",
+        "packedStyle": "@aheart-ui/ai/es/bubble/style.css",
+        "packedStyleSha256": "12191bd152b41b31bb09bfb13e5f6a891e4bf4f5d48fafb96058d3f54564113d",
+        "modalM1Protection": false,
+        "measurement": "complete existing public style export; no missing cross-package style dependency",
+        "componentBytes": 5039,
+        "fractionOfFull": 0.025006203166095975,
+        "themePlusBytes": 6806,
+        "themePlusFraction": 0.03377499875936678,
+        "componentPass": true,
+        "themePlusPass": true,
+        "finalGate": "leaf-hard; locked by owner first-pass rule, no later union fallback"
+      },
+      {
+        "entry": "@aheart-ui/ai/form",
+        "classification": "composite",
+        "packedStyle": "@aheart-ui/ai/es/form/style.css",
+        "packedStyleSha256": "4cddd7d9bb06f547de9a225fc18d3f4cb0a5e18add94f55924d3cd7340cd991e",
+        "modalM1Protection": false,
+        "firstPass": "pending complete public cross-package style closure",
+        "finalGate": "pending; no union exception selected",
+        "warning": "own/AI-local CSS alone omits required base and/or DND dependencies; not measured as complete"
+      },
+      {
+        "entry": "@aheart-ui/ai/chat-panel",
+        "classification": "composite",
+        "packedStyle": "@aheart-ui/ai/es/chat-panel/style.css",
+        "packedStyleSha256": "170c010f07c5a820c69438aee48e9f7bc238b5e026b362899e8199e54d2bb634",
+        "modalM1Protection": false,
+        "measurement": "complete existing public style export; no missing cross-package style dependency",
+        "componentBytes": 13216,
+        "fractionOfFull": 0.06558483449952857,
+        "themePlusBytes": 14983,
+        "themePlusFraction": 0.07435363009279937,
+        "componentPass": true,
+        "themePlusPass": true,
+        "finalGate": "leaf-hard; locked by owner first-pass rule, no later union fallback"
+      },
+      {
+        "entry": "@aheart-ui/ai/agent-workbench",
+        "classification": "composite",
+        "packedStyle": "@aheart-ui/ai/es/agent-workbench/style.css",
+        "packedStyleSha256": "ea1228269574a8c3582ba35739d9dd9dd59073c9d14b7b096a856fbf7206869c",
+        "modalM1Protection": false,
+        "firstPass": "pending complete public cross-package style closure",
+        "finalGate": "pending; no union exception selected",
+        "warning": "own/AI-local CSS alone omits required base and/or DND dependencies; not measured as complete"
+      },
+      {
+        "entry": "@aheart-ui/ai/chat",
+        "classification": "composite",
+        "packedStyle": "@aheart-ui/ai/es/chat/style.css",
+        "packedStyleSha256": "170c010f07c5a820c69438aee48e9f7bc238b5e026b362899e8199e54d2bb634",
+        "modalM1Protection": false,
+        "measurement": "complete existing public style export; no missing cross-package style dependency",
+        "componentBytes": 13216,
+        "fractionOfFull": 0.06558483449952857,
+        "themePlusBytes": 14983,
+        "themePlusFraction": 0.07435363009279937,
+        "componentPass": true,
+        "themePlusPass": true,
+        "finalGate": "leaf-hard; locked by owner first-pass rule, no later union fallback"
+      },
+      {
+        "entry": "@aheart-ui/ai/agent",
+        "classification": "composite",
+        "packedStyle": "@aheart-ui/ai/es/agent/style.css",
+        "packedStyleSha256": "f99d86c770fe313dfc51e9cda05af05308214706c4c64511f669469dfc61776e",
+        "modalM1Protection": false,
+        "firstPass": "pending complete public cross-package style closure",
+        "finalGate": "pending; no union exception selected",
+        "warning": "own/AI-local CSS alone omits required base and/or DND dependencies; not measured as complete"
+      },
+      {
+        "entry": "@aheart-ui/ai/workbench",
+        "classification": "composite",
+        "packedStyle": "@aheart-ui/ai/es/agent-workbench/style.css",
+        "packedStyleSha256": "ea1228269574a8c3582ba35739d9dd9dd59073c9d14b7b096a856fbf7206869c",
+        "modalM1Protection": false,
+        "firstPass": "pending complete public cross-package style closure",
+        "finalGate": "pending; no union exception selected",
+        "warning": "own/AI-local CSS alone omits required base and/or DND dependencies; not measured as complete"
+      }
+    ],
+    "status": "first-pass measurements and hard locks only; exact-union gate and four complete cross-package exports not yet implemented or accepted",
+    "nextPolicy": "measure every composite against 25%/30% first; passing composites lock leaf-hard; only measured failures are eligible for exact-union/ratchet; Modal remains leaf-hard; theme 5% unchanged"
+  }
+}
