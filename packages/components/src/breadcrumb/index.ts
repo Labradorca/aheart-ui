@@ -4,3 +4,5 @@ import { withInstall } from '../utils/install'
 const Breadcrumb = withInstall(breadcrumb, 'ABreadcrumb')
 
 export default Breadcrumb
+
+export { Breadcrumb }

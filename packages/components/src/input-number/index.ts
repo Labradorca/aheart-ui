@@ -5,3 +5,5 @@ const InputNumber = withInstall(inputNumber, 'AInputNumber')
 
 export type * from './types'
 export default InputNumber
+
+export { InputNumber }

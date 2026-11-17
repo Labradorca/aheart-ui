@@ -191,3 +191,4 @@ declare const Dropdown: DropdownComponent;
 export default Dropdown;
 export { DropdownButton as ADropdownButton };
 export type { DropdownButtonProps, DropdownButtonRender, DropdownClickInfo, DropdownMenuConfig, DropdownPlacement, DropdownProps, DropdownTrigger } from './types';
+export { Dropdown };

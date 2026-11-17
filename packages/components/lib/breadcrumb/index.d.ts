@@ -47,3 +47,4 @@ declare const Breadcrumb: import("../utils/install").SFCWithInstall<import("vue"
     readonly params: import("./types").BreadcrumbParams;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>>;
 export default Breadcrumb;
+export { Breadcrumb };

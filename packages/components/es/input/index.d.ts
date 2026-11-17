@@ -248,3 +248,4 @@ declare const Input: import("../utils/install").SFCWithInstall<{
     };
 })>;
 export default Input;
+export { Input };

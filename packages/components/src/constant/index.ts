@@ -27,7 +27,7 @@ const packageNames: Record<AheartDomain, string> = {
 export const aheartComponentEntries: readonly AheartComponentEntry[] = (Object.keys(packageNames) as AheartDomain[])
   .flatMap(domain => manifest[domain].flatMap(({ subpath, name, names = [], sideEffects = [] }) => {
     const from = `${packageNames[domain]}/${subpath}`
-    return (name ? [name] : names).map(name => ({
+    return (names.length ? names : name ? [name] : []).map(name => ({
       domain,
       name,
       from,

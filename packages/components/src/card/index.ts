@@ -40,3 +40,5 @@ export type {
   CardVariant
 } from './types'
 export default Card
+
+export { Card }

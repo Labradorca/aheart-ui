@@ -5,11 +5,11 @@ import { withInstall } from "../utils/install.js";
 const Form = withInstall(_sfc_main, "AForm");
 const FormItem = withInstall(_sfc_main$1, "AFormItem");
 const FormList = withInstall(_sfc_main$2, "AFormList");
-const Form$1 = Form;
 export {
   FormItem as AFormItem,
   FormList as AFormList,
+  Form,
   FormItem,
   FormList,
-  Form$1 as default
+  Form as default
 };

@@ -14,3 +14,5 @@ const InstalledTimePicker = withInstall(TimePicker as TimePickerComponent, 'ATim
 InstalledTimePicker.RangePicker = TimeRangePicker
 
 export default InstalledTimePicker
+
+export { InstalledTimePicker as TimePicker }

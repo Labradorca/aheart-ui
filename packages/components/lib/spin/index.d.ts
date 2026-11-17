@@ -141,3 +141,4 @@ declare const Spin: import("../utils/install").SFCWithInstall<{
 })>;
 export default Spin;
 export type { SpinClassNames, SpinIndicator, SpinPercent, SpinProps, SpinRenderable, SpinSemanticPart, SpinStyles } from './types';
+export { Spin };

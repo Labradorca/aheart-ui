@@ -7,7 +7,7 @@ const packageNames = {
 };
 const aheartComponentEntries = Object.keys(packageNames).flatMap((domain) => manifest[domain].flatMap(({ subpath, name, names = [], sideEffects = [] }) => {
   const from = `${packageNames[domain]}/${subpath}`;
-  return (name ? [name] : names).map((name2) => ({
+  return (names.length ? names : name ? [name] : []).map((name2) => ({
     domain,
     name: name2,
     from,

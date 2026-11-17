@@ -11,3 +11,5 @@ export { FormItem as AFormItem }
 export { FormList as AFormList }
 export default Form
 export type * from './types'
+
+export { Form }

@@ -360,3 +360,4 @@ export declare const TagGroup: import("../utils/install").SFCWithInstall<import(
 export { CheckableTag as ACheckableTag, TagGroup as ATagGroup };
 export type { CheckableTagProps, TagClassNames, TagColor, TagGroupClassNames, TagGroupProps, TagGroupSemanticPart, TagGroupStyles, TagGroupValue, TagIcon, TagOption, TagProps, TagRawOption, TagSemanticPart, TagStyles, TagValue, TagVariant } from './types';
 export default Tag;
+export { Tag };

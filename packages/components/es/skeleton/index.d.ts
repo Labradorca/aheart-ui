@@ -134,3 +134,4 @@ declare const Skeleton: import("../utils/install").SFCWithInstall<{
 })>;
 export default Skeleton;
 export type { SkeletonAvatarConfig, SkeletonAvatarShape, SkeletonParagraphConfig, SkeletonProps, SkeletonTitleConfig } from './types';
+export { Skeleton };

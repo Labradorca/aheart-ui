@@ -9,11 +9,11 @@ const Grid = {
     app.use(Col);
   }
 };
-const Grid$1 = Grid;
 export {
   Col as ACol,
   Row as ARow,
   Col,
+  Grid,
   Row,
-  Grid$1 as default
+  Grid as default
 };

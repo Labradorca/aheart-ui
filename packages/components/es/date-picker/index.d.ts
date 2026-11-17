@@ -14,3 +14,4 @@ declare const InstalledDatePicker: import("../utils/install").SFCWithInstall<Dat
     RangePicker: typeof DateRangePicker;
 };
 export default InstalledDatePicker;
+export { InstalledDatePicker as DatePicker };

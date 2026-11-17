@@ -1,0 +1,14 @@
+✔ all Ready families and existing domain paths agree across exports, Resolver, actual sidebar and quality matrix (4.561833ms)
+✔ entry gate rejects a missing stylesheet export (2.731334ms)
+✔ entry gate rejects missing Table Resolver support rather than hiding an uncovered Ready component (3.566208ms)
+✔ entry gate checks the generated documentation sidebar, independently from its catalogue (2.829875ms)
+✔ entry gate rejects a quality record in the wrong package (2.721792ms)
+✔ a Ready catalogue entry cannot disappear from the manifest while its exports remain (2.603625ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 789.303792

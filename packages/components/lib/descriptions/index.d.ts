@@ -132,3 +132,4 @@ declare const Descriptions: import("../utils/install").SFCWithInstall<{
 })>;
 export default Descriptions;
 export type { DescriptionItem, DescriptionItemSpan, DescriptionRenderable, DescriptionsClassNames, DescriptionsLayout, DescriptionsProps, DescriptionsSemanticPart, DescriptionsStyles } from './types';
+export { Descriptions };

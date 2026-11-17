@@ -25,3 +25,5 @@ export type {
   BadgeStyles
 } from './types'
 export default BadgeWithRibbon
+
+export { BadgeWithRibbon as Badge }

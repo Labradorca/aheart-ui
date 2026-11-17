@@ -5,3 +5,5 @@ const Drawer = withInstall(drawer, 'ADrawer')
 
 export default Drawer
 export type { DrawerPlacement, DrawerProps } from './types'
+
+export { Drawer }

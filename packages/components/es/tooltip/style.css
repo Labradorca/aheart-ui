@@ -1,0 +1,127 @@
+.aheart-floating--top,
+.aheart-floating--topLeft,
+.aheart-floating--topRight {
+  --aheart-floating-motion-x: 0;
+  --aheart-floating-motion-y: 4px;
+  --aheart-floating-transform-origin: bottom center;
+}
+
+.aheart-floating--bottom,
+.aheart-floating--bottomLeft,
+.aheart-floating--bottomRight {
+  --aheart-floating-motion-x: 0;
+  --aheart-floating-motion-y: -4px;
+  --aheart-floating-transform-origin: top center;
+}
+
+.aheart-floating--left,
+.aheart-floating--leftTop,
+.aheart-floating--leftBottom {
+  --aheart-floating-motion-x: 4px;
+  --aheart-floating-motion-y: 0;
+  --aheart-floating-transform-origin: center right;
+}
+
+.aheart-floating--right,
+.aheart-floating--rightTop,
+.aheart-floating--rightBottom {
+  --aheart-floating-motion-x: -4px;
+  --aheart-floating-motion-y: 0;
+  --aheart-floating-transform-origin: center left;
+}
+
+.aheart-floating--topLeft,
+.aheart-floating--bottomLeft {
+  --aheart-floating-transform-origin: left center;
+}
+
+.aheart-floating--topRight,
+.aheart-floating--bottomRight {
+  --aheart-floating-transform-origin: right center;
+}
+
+.aheart-floating__arrow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+  transform: rotate(45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aheart-floating--top,
+  .aheart-floating--topLeft,
+  .aheart-floating--topRight,
+  .aheart-floating--bottom,
+  .aheart-floating--bottomLeft,
+  .aheart-floating--bottomRight,
+  .aheart-floating--left,
+  .aheart-floating--leftTop,
+  .aheart-floating--leftBottom,
+  .aheart-floating--right,
+  .aheart-floating--rightTop,
+  .aheart-floating--rightBottom {
+    --aheart-floating-motion-x: 0;
+    --aheart-floating-motion-y: 0;
+  }
+}
+.aheart-tooltip {
+  position: relative;
+  display: inline-flex;
+  color: var(--aheart-color-text);
+  font-size: var(--aheart-font-size);
+  line-height: var(--aheart-line-height);
+}
+
+.aheart-tooltip__trigger {
+  display: inline-flex;
+}
+
+.aheart-tooltip__popup {
+  position: absolute;
+  z-index: 1070;
+  box-sizing: border-box;
+  max-width: 250px;
+  border-radius: var(--aheart-radius-sm);
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: var(--aheart-shadow);
+  color: #fff;
+  font-size: var(--aheart-font-size-sm);
+  overflow-wrap: break-word;
+  white-space: normal;
+  opacity: 0;
+  scale: 0.98;
+  translate: var(--aheart-floating-motion-x, 0) var(--aheart-floating-motion-y, -4px);
+  transform-origin: var(--aheart-floating-transform-origin, bottom center);
+  transition:
+    opacity var(--aheart-motion-duration-fast) var(--aheart-motion-ease-out),
+    scale var(--aheart-motion-duration-fast) var(--aheart-motion-ease-out),
+    translate var(--aheart-motion-duration-fast) var(--aheart-motion-ease-out);
+}
+
+.aheart-tooltip__popup.is-entered {
+  opacity: 1;
+  scale: 1;
+  translate: 0 0;
+}
+
+.aheart-tooltip__container {
+  display: inline-flex;
+  min-width: 0;
+  padding: 6px 8px;
+}
+
+.aheart-tooltip__content {
+  position: relative;
+  z-index: 1;
+}
+
+.aheart-tooltip__arrow--point-at-center {
+  transform: rotate(45deg) scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aheart-tooltip__popup {
+    transition-duration: 0ms;
+  }
+}

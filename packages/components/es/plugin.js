@@ -1,14 +1,14 @@
 import Alert from "./alert/index.js";
-import Badge, { BadgeRibbon } from "./badge/index.js";
+import BadgeWithRibbon, { BadgeRibbon } from "./badge/index.js";
 import Breadcrumb from "./breadcrumb/index.js";
 import Button from "./button/index.js";
 import Card, { CardGrid, CardMeta } from "./card/index.js";
-import Cascader from "./cascader/index.js";
+import { Cascader as InstalledCascader } from "./cascader/index.js";
 import Checkbox, { CheckboxGroup } from "./checkbox/index.js";
 import { Combobox } from "./combobox/index.js";
 import ConfigProvider from "./config-provider/index.js";
 import Descriptions from "./descriptions/index.js";
-import DatePicker, { DateRangePicker } from "./date-picker/index.js";
+import InstalledDatePicker, { DateRangePicker } from "./date-picker/index.js";
 import Divider from "./divider/index.js";
 import Drawer from "./drawer/index.js";
 import Dropdown, { DropdownButton } from "./dropdown/index.js";
@@ -38,27 +38,27 @@ import Splitter, { SplitterPanel } from "./splitter/index.js";
 import Table from "./table/index.js";
 import Tag, { CheckableTag, TagGroup } from "./tag/index.js";
 import Tabs from "./tabs/index.js";
-import TimePicker, { TimeRangePicker } from "./time-picker/index.js";
+import InstalledTimePicker, { TimeRangePicker } from "./time-picker/index.js";
 import Textarea from "./textarea/index.js";
-import Tree from "./tree/index.js";
-import TreeSelect from "./tree-select/index.js";
+import { Tree as InstalledTree } from "./tree/index.js";
+import { TreeSelect as InstalledTreeSelect } from "./tree-select/index.js";
 import Tooltip from "./tooltip/index.js";
 import Typography, { Title, Text, Paragraph, Link } from "./typography/index.js";
-import Upload from "./upload/index.js";
+import { Upload as InstalledUpload } from "./upload/index.js";
 const components = [
   Button,
-  Cascader,
+  InstalledCascader,
   Combobox,
   ConfigProvider,
   Space,
   Divider,
-  DatePicker,
+  InstalledDatePicker,
   DateRangePicker,
-  TimePicker,
+  InstalledTimePicker,
   TimeRangePicker,
-  Upload,
-  Tree,
-  TreeSelect,
+  InstalledUpload,
+  InstalledTree,
+  InstalledTreeSelect,
   Flex,
   Grid,
   Icon,
@@ -70,7 +70,7 @@ const components = [
   Tag,
   CheckableTag,
   TagGroup,
-  Badge,
+  BadgeWithRibbon,
   BadgeRibbon,
   Alert,
   Message,
@@ -121,21 +121,21 @@ export {
   FormList as AFormList,
   AheartUI,
   Alert,
-  Badge,
+  BadgeWithRibbon as Badge,
   BadgeRibbon,
   Breadcrumb,
   Button,
   Card,
   CardGrid,
   CardMeta,
-  Cascader,
+  InstalledCascader as Cascader,
   CheckableTag,
   Checkbox,
   CheckboxGroup,
   Col,
   Combobox,
   ConfigProvider,
-  DatePicker,
+  InstalledDatePicker as DatePicker,
   DateRangePicker,
   Descriptions,
   Divider,
@@ -178,13 +178,13 @@ export {
   TagGroup,
   Text,
   Textarea,
-  TimePicker,
+  InstalledTimePicker as TimePicker,
   TimeRangePicker,
   Title,
   Tooltip,
-  Tree,
-  TreeSelect,
+  InstalledTree as Tree,
+  InstalledTreeSelect as TreeSelect,
   Typography,
-  Upload,
+  InstalledUpload as Upload,
   AheartUI$1 as default
 };

@@ -1,0 +1,1697 @@
+[
+  {
+    "key": "button",
+    "name": "Button",
+    "names": [
+      "Button"
+    ],
+    "named": [
+      "Button"
+    ],
+    "defaultExpression": "Button",
+    "dependencies": [
+      "icon"
+    ],
+    "styles": [
+      "button/style.css",
+      "icon/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 7945,
+    "external": [
+      "@lucide/vue",
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "button/button.vue",
+      "button/index.ts",
+      "button/style.css",
+      "button/types.ts",
+      "config/context.ts",
+      "config/index.ts",
+      "icon/icon.vue",
+      "icon/icons.ts",
+      "icon/style.css",
+      "icon/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "config-provider",
+    "name": "ConfigProvider",
+    "names": [
+      "ConfigProvider"
+    ],
+    "named": [],
+    "defaultExpression": "ConfigProvider",
+    "dependencies": [],
+    "styles": [
+      "config-provider/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 101,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config-provider/config-provider.vue",
+      "config-provider/index.ts",
+      "config-provider/style.css",
+      "config-provider/types.ts",
+      "config/context.ts",
+      "config/index.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "icon",
+    "name": "Icon",
+    "names": [
+      "Icon"
+    ],
+    "named": [],
+    "defaultExpression": "Icon",
+    "dependencies": [],
+    "styles": [
+      "icon/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 597,
+    "external": [
+      "@lucide/vue",
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "icon/icon.vue",
+      "icon/icons.ts",
+      "icon/index.ts",
+      "icon/style.css",
+      "icon/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "typography",
+    "name": "Typography",
+    "names": [
+      "Typography",
+      "Title",
+      "Text",
+      "Paragraph",
+      "Link"
+    ],
+    "named": [
+      "Title",
+      "Text",
+      "Paragraph",
+      "Link"
+    ],
+    "defaultExpression": "Typography",
+    "dependencies": [],
+    "styles": [
+      "typography/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 4048,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "typography/copyable.ts",
+      "typography/index.ts",
+      "typography/link.vue",
+      "typography/paragraph.vue",
+      "typography/style.css",
+      "typography/text.vue",
+      "typography/title.vue",
+      "typography/types.ts",
+      "typography/typography.vue",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "space",
+    "name": "Space",
+    "names": [
+      "Space"
+    ],
+    "named": [],
+    "defaultExpression": "Space",
+    "dependencies": [],
+    "styles": [
+      "space/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 690,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "space/index.ts",
+      "space/space.vue",
+      "space/style.css",
+      "space/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "divider",
+    "name": "Divider",
+    "names": [
+      "Divider"
+    ],
+    "named": [],
+    "defaultExpression": "Divider",
+    "dependencies": [],
+    "styles": [
+      "divider/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 2027,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "divider/divider.vue",
+      "divider/index.ts",
+      "divider/style.css",
+      "divider/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "splitter",
+    "name": "Splitter",
+    "names": [
+      "Splitter",
+      "SplitterPanel"
+    ],
+    "named": [
+      "SplitterPanel"
+    ],
+    "defaultExpression": "Splitter",
+    "dependencies": [],
+    "styles": [
+      "splitter/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 3070,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "splitter/index.ts",
+      "splitter/solver.ts",
+      "splitter/splitter-panel.vue",
+      "splitter/splitter.vue",
+      "splitter/style.css",
+      "utils/install.ts",
+      "utils/use-pointer-drag.ts"
+    ]
+  },
+  {
+    "key": "flex",
+    "name": "Flex",
+    "names": [
+      "Flex"
+    ],
+    "named": [],
+    "defaultExpression": "Flex",
+    "dependencies": [],
+    "styles": [
+      "flex/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 1008,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "flex/flex.vue",
+      "flex/index.ts",
+      "flex/style.css",
+      "flex/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "grid",
+    "name": "Grid",
+    "names": [
+      "Row",
+      "Col"
+    ],
+    "named": [
+      "Row",
+      "Col",
+      "ARow",
+      "ACol"
+    ],
+    "defaultExpression": "Grid",
+    "dependencies": [],
+    "styles": [
+      "grid/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 7043,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "grid/col.vue",
+      "grid/index.ts",
+      "grid/row.vue",
+      "grid/style.css",
+      "grid/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "tabs",
+    "name": "Tabs",
+    "names": [
+      "Tabs"
+    ],
+    "named": [],
+    "defaultExpression": "Tabs",
+    "dependencies": [],
+    "styles": [
+      "tabs/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 5475,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "tabs/index.ts",
+      "tabs/style.css",
+      "tabs/tabs.vue",
+      "tabs/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "breadcrumb",
+    "name": "Breadcrumb",
+    "names": [
+      "Breadcrumb"
+    ],
+    "named": [],
+    "defaultExpression": "Breadcrumb",
+    "dependencies": [],
+    "styles": [
+      "breadcrumb/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 1253,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "breadcrumb/breadcrumb.vue",
+      "breadcrumb/index.ts",
+      "breadcrumb/style.css",
+      "breadcrumb/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "dropdown",
+    "name": "Dropdown",
+    "names": [
+      "DropdownButton",
+      "Dropdown"
+    ],
+    "named": [
+      "DropdownButton",
+      "ADropdownButton"
+    ],
+    "defaultExpression": "Dropdown",
+    "dependencies": [
+      "button",
+      "icon",
+      "menu"
+    ],
+    "styles": [
+      "button/style.css",
+      "icon/style.css",
+      "utils/floating.css",
+      "dropdown/style.css",
+      "menu/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 18689,
+    "external": [
+      "@floating-ui/dom",
+      "@lucide/vue",
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "button/button.vue",
+      "button/index.ts",
+      "button/style.css",
+      "button/types.ts",
+      "config/context.ts",
+      "config/index.ts",
+      "dropdown/dropdown-button.vue",
+      "dropdown/dropdown.vue",
+      "dropdown/index.ts",
+      "dropdown/style.css",
+      "dropdown/types.ts",
+      "icon/icon.vue",
+      "icon/icons.ts",
+      "icon/style.css",
+      "icon/types.ts",
+      "menu/index.ts",
+      "menu/menu-node.vue",
+      "menu/menu.vue",
+      "menu/style.css",
+      "menu/types.ts",
+      "utils/floating.css",
+      "utils/install.ts",
+      "utils/overlay-controller.ts",
+      "utils/use-floating-dismiss.ts",
+      "utils/use-floating-layer.ts",
+      "utils/use-floating-position.ts",
+      "utils/use-motion-presence.ts",
+      "utils/use-overlay-portal.ts",
+      "utils/use-teleport-ready.ts"
+    ]
+  },
+  {
+    "key": "menu",
+    "name": "Menu",
+    "names": [
+      "Menu"
+    ],
+    "named": [],
+    "defaultExpression": "Menu",
+    "dependencies": [],
+    "styles": [
+      "utils/floating.css",
+      "menu/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 8462,
+    "external": [
+      "@floating-ui/dom",
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "menu/index.ts",
+      "menu/menu-node.vue",
+      "menu/menu.vue",
+      "menu/style.css",
+      "menu/types.ts",
+      "utils/floating.css",
+      "utils/install.ts",
+      "utils/use-floating-position.ts",
+      "utils/use-motion-presence.ts"
+    ]
+  },
+  {
+    "key": "steps",
+    "name": "Steps",
+    "names": [
+      "Steps"
+    ],
+    "named": [],
+    "defaultExpression": "Steps",
+    "dependencies": [],
+    "styles": [
+      "steps/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 7335,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "steps/index.ts",
+      "steps/steps.vue",
+      "steps/style.css",
+      "steps/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "input",
+    "name": "Input",
+    "names": [
+      "Input"
+    ],
+    "named": [],
+    "defaultExpression": "Input",
+    "dependencies": [],
+    "styles": [
+      "input/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 3900,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "form/control-context.ts",
+      "input/index.ts",
+      "input/input.vue",
+      "input/style.css",
+      "input/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "date-picker",
+    "name": "DatePicker",
+    "names": [
+      "DateRangePicker",
+      "DatePicker"
+    ],
+    "named": [
+      "DateRangePicker"
+    ],
+    "defaultExpression": "InstalledDatePicker",
+    "dependencies": [
+      "icon"
+    ],
+    "styles": [
+      "date-picker/style.css",
+      "icon/style.css",
+      "utils/floating.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 30236,
+    "external": [
+      "@floating-ui/dom",
+      "@lucide/vue",
+      "dayjs",
+      "dayjs/locale/en.js",
+      "dayjs/locale/zh-cn.js",
+      "dayjs/plugin/advancedFormat.js",
+      "dayjs/plugin/customParseFormat.js",
+      "dayjs/plugin/isoWeek.js",
+      "dayjs/plugin/quarterOfYear.js",
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "date-picker/date-picker.vue",
+      "date-picker/date-range-picker.vue",
+      "date-picker/index.ts",
+      "date-picker/style.css",
+      "date-picker/types.ts",
+      "form/control-context.ts",
+      "icon/icon.vue",
+      "icon/icons.ts",
+      "icon/style.css",
+      "icon/types.ts",
+      "picker-core/calendar.ts",
+      "picker-core/codec.ts",
+      "picker-core/dayjs.ts",
+      "picker-core/selection.ts",
+      "picker-core/transaction.ts",
+      "picker-core/viewport.ts",
+      "utils/floating-core.ts",
+      "utils/floating.css",
+      "utils/install.ts",
+      "utils/overlay-controller.ts",
+      "utils/use-controllable-state.ts",
+      "utils/use-floating-dismiss.ts",
+      "utils/use-floating-layer.ts",
+      "utils/use-floating-position.ts",
+      "utils/use-motion-presence.ts",
+      "utils/use-overlay-portal.ts",
+      "utils/use-prop-presence.ts",
+      "utils/use-stable-id.ts",
+      "utils/use-teleport-ready.ts"
+    ]
+  },
+  {
+    "key": "time-picker",
+    "name": "TimePicker",
+    "names": [
+      "TimeRangePicker",
+      "TimePicker"
+    ],
+    "named": [
+      "TimeRangePicker"
+    ],
+    "defaultExpression": "InstalledTimePicker",
+    "dependencies": [
+      "icon"
+    ],
+    "styles": [
+      "time-picker/style.css",
+      "icon/style.css",
+      "utils/floating.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 13735,
+    "external": [
+      "@floating-ui/dom",
+      "@lucide/vue",
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "form/control-context.ts",
+      "icon/icon.vue",
+      "icon/icons.ts",
+      "icon/style.css",
+      "icon/types.ts",
+      "picker-core/time-column-geometry.ts",
+      "picker-core/time.ts",
+      "picker-core/transaction.ts",
+      "time-picker/index.ts",
+      "time-picker/style.css",
+      "time-picker/time-picker.vue",
+      "time-picker/time-range-picker.vue",
+      "time-picker/types.ts",
+      "utils/floating-core.ts",
+      "utils/floating.css",
+      "utils/install.ts",
+      "utils/overlay-controller.ts",
+      "utils/use-controllable-state.ts",
+      "utils/use-floating-dismiss.ts",
+      "utils/use-floating-layer.ts",
+      "utils/use-floating-position.ts",
+      "utils/use-motion-presence.ts",
+      "utils/use-overlay-portal.ts",
+      "utils/use-prop-presence.ts",
+      "utils/use-stable-id.ts",
+      "utils/use-teleport-ready.ts"
+    ]
+  },
+  {
+    "key": "upload",
+    "name": "Upload",
+    "names": [
+      "Upload"
+    ],
+    "named": [],
+    "defaultExpression": "withInstall(Upload, 'AUpload')",
+    "dependencies": [],
+    "styles": [
+      "upload/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 2035,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "form/control-context.ts",
+      "upload/index.ts",
+      "upload/style.css",
+      "upload/upload.vue",
+      "utils/install.ts",
+      "utils/use-controllable-state.ts",
+      "utils/use-prop-presence.ts"
+    ]
+  },
+  {
+    "key": "tree",
+    "name": "Tree",
+    "names": [
+      "Tree"
+    ],
+    "named": [],
+    "defaultExpression": "withInstall(Tree, 'ATree')",
+    "dependencies": [
+      "icon"
+    ],
+    "styles": [
+      "tree/style.css",
+      "icon/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 2338,
+    "external": [
+      "@lucide/vue",
+      "@tanstack/vue-virtual",
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "icon/icon.vue",
+      "icon/icons.ts",
+      "icon/style.css",
+      "icon/types.ts",
+      "tree/index.ts",
+      "tree/style.css",
+      "tree/tree-check.ts",
+      "tree/tree-focus-bridge.ts",
+      "tree/tree-index.ts",
+      "tree/tree-node.vue",
+      "tree/tree.vue",
+      "tree/types.ts",
+      "tree/use-tree-loader.ts",
+      "tree/use-tree-virtual.ts",
+      "tree/virtual-options.ts",
+      "utils/install.ts",
+      "utils/normalize-virtual-options.ts",
+      "utils/use-stable-id.ts"
+    ]
+  },
+  {
+    "key": "tree-select",
+    "name": "TreeSelect",
+    "names": [
+      "TreeSelect"
+    ],
+    "named": [],
+    "defaultExpression": "withInstall(TreeSelect, 'ATreeSelect')",
+    "dependencies": [
+      "icon",
+      "tree"
+    ],
+    "styles": [
+      "tree/style.css",
+      "tree-select/style.css",
+      "icon/style.css",
+      "utils/floating.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 8867,
+    "external": [
+      "@floating-ui/dom",
+      "@lucide/vue",
+      "@tanstack/vue-virtual",
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "form/control-context.ts",
+      "icon/icon.vue",
+      "icon/icons.ts",
+      "icon/style.css",
+      "icon/types.ts",
+      "tree-select/index.ts",
+      "tree-select/style.css",
+      "tree-select/tree-select.vue",
+      "tree-select/virtual-options.ts",
+      "tree/index.ts",
+      "tree/style.css",
+      "tree/tree-check.ts",
+      "tree/tree-focus-bridge.ts",
+      "tree/tree-index.ts",
+      "tree/tree-node.vue",
+      "tree/tree.vue",
+      "tree/types.ts",
+      "tree/use-tree-loader.ts",
+      "tree/use-tree-virtual.ts",
+      "tree/virtual-options.ts",
+      "utils/floating.css",
+      "utils/install.ts",
+      "utils/normalize-virtual-options.ts",
+      "utils/overlay-controller.ts",
+      "utils/use-controllable-state.ts",
+      "utils/use-floating-dismiss.ts",
+      "utils/use-floating-layer.ts",
+      "utils/use-floating-position.ts",
+      "utils/use-motion-presence.ts",
+      "utils/use-overlay-portal.ts",
+      "utils/use-popup-viewport-budget.ts",
+      "utils/use-prop-presence.ts",
+      "utils/use-stable-id.ts",
+      "utils/use-teleport-ready.ts"
+    ]
+  },
+  {
+    "key": "cascader",
+    "name": "Cascader",
+    "names": [
+      "Cascader"
+    ],
+    "named": [],
+    "defaultExpression": "withInstall(Cascader, 'ACascader')",
+    "dependencies": [
+      "icon"
+    ],
+    "styles": [
+      "cascader/style.css",
+      "icon/style.css",
+      "utils/floating.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 9411,
+    "external": [
+      "@floating-ui/dom",
+      "@lucide/vue",
+      "@tanstack/vue-virtual",
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "cascader/cascader-virtual-list.vue",
+      "cascader/cascader.vue",
+      "cascader/index.ts",
+      "cascader/style.css",
+      "cascader/virtual-options.ts",
+      "icon/icon.vue",
+      "icon/icons.ts",
+      "icon/style.css",
+      "icon/types.ts",
+      "utils/floating.css",
+      "utils/install.ts",
+      "utils/normalize-virtual-options.ts",
+      "utils/overlay-controller.ts",
+      "utils/use-controllable-state.ts",
+      "utils/use-floating-dismiss.ts",
+      "utils/use-floating-layer.ts",
+      "utils/use-floating-position.ts",
+      "utils/use-motion-presence.ts",
+      "utils/use-overlay-portal.ts",
+      "utils/use-popup-viewport-budget.ts",
+      "utils/use-prop-presence.ts",
+      "utils/use-stable-id.ts",
+      "utils/use-teleport-ready.ts"
+    ]
+  },
+  {
+    "key": "textarea",
+    "name": "Textarea",
+    "names": [
+      "Textarea"
+    ],
+    "named": [],
+    "defaultExpression": "Textarea",
+    "dependencies": [],
+    "styles": [
+      "textarea/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 4783,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "textarea/index.ts",
+      "textarea/style.css",
+      "textarea/textarea.vue",
+      "textarea/types.ts",
+      "utils/install.ts",
+      "utils/use-prop-presence.ts"
+    ]
+  },
+  {
+    "key": "input-number",
+    "name": "InputNumber",
+    "names": [
+      "InputNumber"
+    ],
+    "named": [],
+    "defaultExpression": "InputNumber",
+    "dependencies": [],
+    "styles": [
+      "input-number/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 6357,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "input-number/index.ts",
+      "input-number/input-number.vue",
+      "input-number/style.css",
+      "input-number/types.ts",
+      "utils/install.ts",
+      "utils/use-prop-presence.ts"
+    ]
+  },
+  {
+    "key": "checkbox",
+    "name": "Checkbox",
+    "names": [
+      "Checkbox",
+      "CheckboxGroup"
+    ],
+    "named": [
+      "CheckboxGroup",
+      "ACheckboxGroup"
+    ],
+    "defaultExpression": "Checkbox",
+    "dependencies": [],
+    "styles": [
+      "checkbox/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 2528,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "checkbox/checkbox-group.vue",
+      "checkbox/checkbox.vue",
+      "checkbox/index.ts",
+      "checkbox/style.css",
+      "checkbox/types.ts",
+      "config/context.ts",
+      "config/index.ts",
+      "utils/install.ts",
+      "utils/use-prop-presence.ts"
+    ]
+  },
+  {
+    "key": "radio",
+    "name": "Radio",
+    "names": [
+      "Radio",
+      "RadioGroup"
+    ],
+    "named": [
+      "RadioGroup",
+      "ARadioGroup"
+    ],
+    "defaultExpression": "Radio",
+    "dependencies": [],
+    "styles": [
+      "radio/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 3748,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "radio/index.ts",
+      "radio/radio-group.vue",
+      "radio/radio.vue",
+      "radio/style.css",
+      "radio/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "switch",
+    "name": "Switch",
+    "names": [
+      "Switch"
+    ],
+    "named": [],
+    "defaultExpression": "Switch",
+    "dependencies": [
+      "icon"
+    ],
+    "styles": [
+      "icon/style.css",
+      "switch/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 2712,
+    "external": [
+      "@lucide/vue",
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "icon/icon.vue",
+      "icon/icons.ts",
+      "icon/style.css",
+      "icon/types.ts",
+      "switch/index.ts",
+      "switch/style.css",
+      "switch/switch.vue",
+      "switch/types.ts",
+      "utils/install.ts",
+      "utils/use-prop-presence.ts"
+    ]
+  },
+  {
+    "key": "combobox",
+    "name": "Combobox",
+    "names": [
+      "Combobox"
+    ],
+    "named": [
+      "Combobox",
+      "ACombobox"
+    ],
+    "defaultExpression": "Combobox",
+    "dependencies": [],
+    "styles": [
+      "utils/floating.css",
+      "combobox/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 3572,
+    "external": [
+      "@floating-ui/dom",
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "combobox/combobox.vue",
+      "combobox/index.ts",
+      "combobox/style.css",
+      "utils/floating.css",
+      "utils/install.ts",
+      "utils/overlay-controller.ts",
+      "utils/use-controllable-state.ts",
+      "utils/use-floating-dismiss.ts",
+      "utils/use-floating-layer.ts",
+      "utils/use-floating-position.ts",
+      "utils/use-motion-presence.ts",
+      "utils/use-overlay-portal.ts",
+      "utils/use-prop-presence.ts",
+      "utils/use-roving-focus.ts",
+      "utils/use-stable-id.ts",
+      "utils/use-teleport-ready.ts"
+    ]
+  },
+  {
+    "key": "select",
+    "name": "Select",
+    "names": [
+      "Select"
+    ],
+    "named": [
+      "Select"
+    ],
+    "defaultExpression": "Select",
+    "dependencies": [
+      "icon"
+    ],
+    "styles": [
+      "icon/style.css",
+      "utils/floating.css",
+      "select/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 10472,
+    "external": [
+      "@floating-ui/dom",
+      "@lucide/vue",
+      "@tanstack/vue-virtual",
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "form/control-context.ts",
+      "icon/icon.vue",
+      "icon/icons.ts",
+      "icon/style.css",
+      "icon/types.ts",
+      "select/index.ts",
+      "select/select.vue",
+      "select/style.css",
+      "select/types.ts",
+      "select/use-select-virtual.ts",
+      "select/virtual-options.ts",
+      "utils/floating-core.ts",
+      "utils/floating.css",
+      "utils/install.ts",
+      "utils/overlay-controller.ts",
+      "utils/use-controllable-state.ts",
+      "utils/use-floating-dismiss.ts",
+      "utils/use-floating-layer.ts",
+      "utils/use-floating-position.ts",
+      "utils/use-motion-presence.ts",
+      "utils/use-overlay-portal.ts",
+      "utils/use-prop-presence.ts",
+      "utils/use-stable-id.ts",
+      "utils/use-teleport-ready.ts"
+    ]
+  },
+  {
+    "key": "form",
+    "name": "Form",
+    "names": [
+      "Form",
+      "FormItem",
+      "FormList"
+    ],
+    "named": [
+      "FormItem",
+      "FormList",
+      "AFormItem",
+      "AFormList"
+    ],
+    "defaultExpression": "Form",
+    "dependencies": [
+      "tooltip"
+    ],
+    "styles": [
+      "utils/floating.css",
+      "tooltip/style.css",
+      "form/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 7555,
+    "external": [
+      "@floating-ui/dom",
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "form/control-context.ts",
+      "form/form-item.vue",
+      "form/form-list.vue",
+      "form/form.vue",
+      "form/index.ts",
+      "form/internal-context.ts",
+      "form/list-context.ts",
+      "form/name-path.ts",
+      "form/style.css",
+      "form/types.ts",
+      "tooltip/style.css",
+      "tooltip/tooltip.vue",
+      "tooltip/types.ts",
+      "utils/floating-core.ts",
+      "utils/floating.css",
+      "utils/install.ts",
+      "utils/overlay-controller.ts",
+      "utils/use-floating-dismiss.ts",
+      "utils/use-floating-layer.ts",
+      "utils/use-floating-position.ts",
+      "utils/use-motion-presence.ts",
+      "utils/use-overlay-portal.ts",
+      "utils/use-stable-id.ts",
+      "utils/use-teleport-ready.ts",
+      "utils/use-trigger-aria.ts"
+    ]
+  },
+  {
+    "key": "tag",
+    "name": "Tag",
+    "names": [
+      "Tag",
+      "CheckableTag",
+      "TagGroup"
+    ],
+    "named": [
+      "CheckableTag",
+      "TagGroup",
+      "ACheckableTag",
+      "ATagGroup"
+    ],
+    "defaultExpression": "Tag",
+    "dependencies": [],
+    "styles": [
+      "tag/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 3812,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "tag/checkable-tag.vue",
+      "tag/index.ts",
+      "tag/style.css",
+      "tag/tag-group.vue",
+      "tag/tag.vue",
+      "tag/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "badge",
+    "name": "Badge",
+    "names": [
+      "Badge",
+      "BadgeRibbon"
+    ],
+    "named": [
+      "BadgeRibbon",
+      "ABadgeRibbon"
+    ],
+    "defaultExpression": "BadgeWithRibbon",
+    "dependencies": [],
+    "styles": [
+      "badge/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 2870,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "badge/badge.vue",
+      "badge/index.ts",
+      "badge/ribbon.vue",
+      "badge/style.css",
+      "badge/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "card",
+    "name": "Card",
+    "names": [
+      "CardMeta",
+      "CardGrid",
+      "Card"
+    ],
+    "named": [
+      "CardMeta",
+      "CardGrid",
+      "ACardGrid",
+      "ACardMeta"
+    ],
+    "defaultExpression": "Card",
+    "dependencies": [],
+    "styles": [
+      "card/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 5695,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "card/card.vue",
+      "card/grid.vue",
+      "card/index.ts",
+      "card/meta.vue",
+      "card/style.css",
+      "card/types.ts",
+      "config/context.ts",
+      "config/index.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "empty",
+    "name": "Empty",
+    "names": [
+      "Empty"
+    ],
+    "named": [
+      "PRESENTED_IMAGE_DEFAULT",
+      "PRESENTED_IMAGE_SIMPLE"
+    ],
+    "defaultExpression": "Empty",
+    "dependencies": [],
+    "styles": [
+      "empty/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 1086,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "empty/empty.vue",
+      "empty/index.ts",
+      "empty/style.css",
+      "empty/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "descriptions",
+    "name": "Descriptions",
+    "names": [
+      "Descriptions"
+    ],
+    "named": [],
+    "defaultExpression": "Descriptions",
+    "dependencies": [],
+    "styles": [
+      "descriptions/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 2346,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "descriptions/descriptions.vue",
+      "descriptions/index.ts",
+      "descriptions/style.css",
+      "descriptions/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "table",
+    "name": "Table",
+    "names": [
+      "Table"
+    ],
+    "named": [],
+    "defaultExpression": "Table",
+    "dependencies": [
+      "pagination"
+    ],
+    "styles": [
+      "pagination/style.css",
+      "table/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 15233,
+    "external": [
+      "@floating-ui/dom",
+      "@tanstack/vue-virtual",
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "pagination/index.ts",
+      "pagination/pagination-state.ts",
+      "pagination/pagination.vue",
+      "pagination/style.css",
+      "pagination/types.ts",
+      "table/index.ts",
+      "table/style.css",
+      "table/table.vue",
+      "table/types.ts",
+      "table/use-table-virtual.ts",
+      "table/virtual-options.ts",
+      "utils/install.ts",
+      "utils/overlay-controller.ts",
+      "utils/use-controllable-state.ts",
+      "utils/use-floating-dismiss.ts",
+      "utils/use-floating-position.ts",
+      "utils/use-stable-id.ts"
+    ]
+  },
+  {
+    "key": "pagination",
+    "name": "Pagination",
+    "names": [
+      "Pagination"
+    ],
+    "named": [],
+    "defaultExpression": "Pagination",
+    "dependencies": [],
+    "styles": [
+      "pagination/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 4635,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "config/context.ts",
+      "config/index.ts",
+      "pagination/index.ts",
+      "pagination/pagination-state.ts",
+      "pagination/pagination.vue",
+      "pagination/style.css",
+      "pagination/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "alert",
+    "name": "Alert",
+    "names": [
+      "Alert"
+    ],
+    "named": [],
+    "defaultExpression": "Alert",
+    "dependencies": [],
+    "styles": [
+      "alert/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 2266,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "alert/alert.vue",
+      "alert/index.ts",
+      "alert/style.css",
+      "alert/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "message",
+    "name": "Message",
+    "names": [
+      "Message"
+    ],
+    "named": [
+      "default",
+      "message"
+    ],
+    "dependencies": [],
+    "styles": [
+      "message/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 2295,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "message/index.ts",
+      "message/message.vue",
+      "message/public.ts",
+      "message/service.ts",
+      "message/style.css",
+      "message/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "modal",
+    "name": "Modal",
+    "names": [
+      "Modal"
+    ],
+    "named": [
+      "Modal"
+    ],
+    "defaultExpression": "Modal",
+    "dependencies": [
+      "button",
+      "icon",
+      "skeleton"
+    ],
+    "styles": [
+      "button/style.css",
+      "icon/style.css",
+      "modal/style.css",
+      "skeleton/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 16305,
+    "external": [
+      "@lucide/vue",
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "button/button.vue",
+      "button/index.ts",
+      "button/style.css",
+      "button/types.ts",
+      "config/context.ts",
+      "config/index.ts",
+      "icon/icon.vue",
+      "icon/icons.ts",
+      "icon/style.css",
+      "icon/types.ts",
+      "modal/index.ts",
+      "modal/modal.vue",
+      "modal/style.css",
+      "modal/types.ts",
+      "skeleton/index.ts",
+      "skeleton/skeleton.vue",
+      "skeleton/style.css",
+      "skeleton/types.ts",
+      "utils/install.ts",
+      "utils/overlay-controller.ts",
+      "utils/use-dialog-layer.ts",
+      "utils/use-motion-presence.ts",
+      "utils/use-overlay-portal.ts",
+      "utils/use-teleport-ready.ts"
+    ]
+  },
+  {
+    "key": "drawer",
+    "name": "Drawer",
+    "names": [
+      "Drawer"
+    ],
+    "named": [],
+    "defaultExpression": "Drawer",
+    "dependencies": [
+      "skeleton"
+    ],
+    "styles": [
+      "drawer/style.css",
+      "skeleton/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 7881,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "drawer/drawer.vue",
+      "drawer/index.ts",
+      "drawer/style.css",
+      "drawer/types.ts",
+      "skeleton/index.ts",
+      "skeleton/skeleton.vue",
+      "skeleton/style.css",
+      "skeleton/types.ts",
+      "utils/install.ts",
+      "utils/overlay-controller.ts",
+      "utils/use-dialog-layer.ts",
+      "utils/use-motion-presence.ts",
+      "utils/use-overlay-portal.ts",
+      "utils/use-pointer-drag.ts",
+      "utils/use-teleport-ready.ts"
+    ]
+  },
+  {
+    "key": "tooltip",
+    "name": "Tooltip",
+    "names": [
+      "Tooltip"
+    ],
+    "named": [],
+    "defaultExpression": "Tooltip",
+    "dependencies": [],
+    "styles": [
+      "utils/floating.css",
+      "tooltip/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 3098,
+    "external": [
+      "@floating-ui/dom",
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "tooltip/index.ts",
+      "tooltip/style.css",
+      "tooltip/tooltip.vue",
+      "tooltip/types.ts",
+      "utils/floating-core.ts",
+      "utils/floating.css",
+      "utils/install.ts",
+      "utils/overlay-controller.ts",
+      "utils/use-floating-dismiss.ts",
+      "utils/use-floating-layer.ts",
+      "utils/use-floating-position.ts",
+      "utils/use-motion-presence.ts",
+      "utils/use-overlay-portal.ts",
+      "utils/use-stable-id.ts",
+      "utils/use-teleport-ready.ts",
+      "utils/use-trigger-aria.ts"
+    ]
+  },
+  {
+    "key": "popover",
+    "name": "Popover",
+    "names": [
+      "Popover"
+    ],
+    "named": [],
+    "defaultExpression": "Popover",
+    "dependencies": [],
+    "styles": [
+      "utils/floating.css",
+      "popover/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 3432,
+    "external": [
+      "@floating-ui/dom",
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "popover/index.ts",
+      "popover/popover.vue",
+      "popover/style.css",
+      "popover/types.ts",
+      "utils/floating-core.ts",
+      "utils/floating.css",
+      "utils/install.ts",
+      "utils/overlay-controller.ts",
+      "utils/use-floating-dismiss.ts",
+      "utils/use-floating-layer.ts",
+      "utils/use-floating-position.ts",
+      "utils/use-motion-presence.ts",
+      "utils/use-overlay-portal.ts",
+      "utils/use-stable-id.ts",
+      "utils/use-teleport-ready.ts",
+      "utils/use-trigger-aria.ts"
+    ]
+  },
+  {
+    "key": "popconfirm",
+    "name": "Popconfirm",
+    "names": [
+      "Popconfirm"
+    ],
+    "named": [],
+    "defaultExpression": "Popconfirm",
+    "dependencies": [
+      "button",
+      "icon"
+    ],
+    "styles": [
+      "button/style.css",
+      "icon/style.css",
+      "utils/floating.css",
+      "popconfirm/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 12034,
+    "external": [
+      "@floating-ui/dom",
+      "@lucide/vue",
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "button/button.vue",
+      "button/index.ts",
+      "button/style.css",
+      "button/types.ts",
+      "config/context.ts",
+      "config/index.ts",
+      "icon/icon.vue",
+      "icon/icons.ts",
+      "icon/style.css",
+      "icon/types.ts",
+      "popconfirm/index.ts",
+      "popconfirm/popconfirm.vue",
+      "popconfirm/style.css",
+      "popconfirm/types.ts",
+      "utils/floating-core.ts",
+      "utils/floating.css",
+      "utils/install.ts",
+      "utils/overlay-controller.ts",
+      "utils/use-floating-dismiss.ts",
+      "utils/use-floating-position.ts",
+      "utils/use-motion-presence.ts",
+      "utils/use-stable-id.ts",
+      "utils/use-teleport-ready.ts",
+      "utils/use-trigger-aria.ts"
+    ]
+  },
+  {
+    "key": "spin",
+    "name": "Spin",
+    "names": [
+      "Spin"
+    ],
+    "named": [],
+    "defaultExpression": "Spin",
+    "dependencies": [],
+    "styles": [
+      "spin/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 1845,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "spin/index.ts",
+      "spin/spin.vue",
+      "spin/style.css",
+      "spin/types.ts",
+      "utils/install.ts"
+    ]
+  },
+  {
+    "key": "skeleton",
+    "name": "Skeleton",
+    "names": [
+      "Skeleton"
+    ],
+    "named": [],
+    "defaultExpression": "Skeleton",
+    "dependencies": [],
+    "styles": [
+      "skeleton/style.css"
+    ],
+    "unregisteredStyles": [],
+    "cssBytes": 3622,
+    "external": [
+      "vue"
+    ],
+    "unresolved": [],
+    "sourceFiles": [
+      "skeleton/index.ts",
+      "skeleton/skeleton.vue",
+      "skeleton/style.css",
+      "skeleton/types.ts",
+      "utils/install.ts"
+    ]
+  }
+]

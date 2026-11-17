@@ -5,3 +5,5 @@ const Popconfirm = withInstall(popconfirm, 'APopconfirm')
 
 export default Popconfirm
 export type { PopconfirmProps } from './types'
+
+export { Popconfirm }

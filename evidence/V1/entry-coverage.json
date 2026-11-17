@@ -1,0 +1,14 @@
+{
+  "errors": [],
+  "coverage": {
+    "ready": 49,
+    "readyCovered": 49,
+    "entries": {
+      "base": 45,
+      "ai": 16,
+      "dnd": 4
+    },
+    "resolverNames": 81,
+    "navigationReady": 49
+  }
+}

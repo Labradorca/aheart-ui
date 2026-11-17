@@ -239,3 +239,4 @@ export declare const CheckboxGroup: import("../utils/install").SFCWithInstall<im
 export { CheckboxGroup as ACheckboxGroup };
 export type { CheckboxGroupProps, CheckboxOption, CheckboxProps, CheckboxValue } from './types';
 export default Checkbox;
+export { Checkbox };

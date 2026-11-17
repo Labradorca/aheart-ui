@@ -38,3 +38,4 @@ declare const Space: import("../utils/install").SFCWithInstall<import("vue").Def
     readonly direction: import("./types").SpaceDirection;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>>;
 export default Space;
+export { Space };

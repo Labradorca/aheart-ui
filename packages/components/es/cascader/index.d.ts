@@ -1,5 +1,5 @@
 export type { CascaderKey, CascaderOption, CascaderPath, CascaderValue, CascaderLoadContext, CascaderVirtual, CascaderVirtualConfig } from './types';
-declare const _default: import("../utils/install").SFCWithInstall<import("vue").DefineComponent<import("vue").ExtractPropTypes<{
+declare const InstalledCascader: import("../utils/install").SFCWithInstall<import("vue").DefineComponent<import("vue").ExtractPropTypes<{
     open: {
         type: import("vue").PropType<boolean>;
     };
@@ -121,4 +121,5 @@ declare const _default: import("../utils/install").SFCWithInstall<import("vue").
     options: import("./types").CascaderOption[];
     autoAdjustOverflow: boolean;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>>;
-export default _default;
+export { InstalledCascader as Cascader };
+export default InstalledCascader;

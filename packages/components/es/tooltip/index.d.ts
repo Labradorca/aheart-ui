@@ -225,3 +225,4 @@ declare const Tooltip: import("../utils/install").SFCWithInstall<{
 })>;
 export default Tooltip;
 export type { TooltipProps } from './types';
+export { Tooltip };

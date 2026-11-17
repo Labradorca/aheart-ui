@@ -161,3 +161,4 @@ declare const BadgeWithRibbon: import("../utils/install").SFCWithInstall<{
 export { BadgeRibbon as ABadgeRibbon };
 export type { BadgeClassNames, BadgeOffset, BadgeProps, BadgeRenderable, BadgeRibbonClassNames, BadgeRibbonPlacement, BadgeRibbonProps, BadgeRibbonSemanticPart, BadgeRibbonStyles, BadgeSemanticPart, BadgeSize, BadgeStatus, BadgeStyles } from './types';
 export default BadgeWithRibbon;
+export { BadgeWithRibbon as Badge };

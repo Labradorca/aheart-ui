@@ -3,26 +3,539 @@ Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toString
 const base = [
   {
     name: "Button",
+    names: [
+      "Button"
+    ],
     subpath: "button",
     sourceEntry: "src/button/index.ts",
+    dependencies: [
+      "icon"
+    ],
     styles: [
       "button/style.css",
       "icon/style.css"
     ]
   },
   {
+    name: "ConfigProvider",
+    names: [
+      "ConfigProvider"
+    ],
+    subpath: "config-provider",
+    sourceEntry: "src/config-provider/index.ts",
+    dependencies: [],
+    styles: [
+      "config-provider/style.css"
+    ]
+  },
+  {
+    name: "Icon",
+    names: [
+      "Icon"
+    ],
+    subpath: "icon",
+    sourceEntry: "src/icon/index.ts",
+    dependencies: [],
+    styles: [
+      "icon/style.css"
+    ]
+  },
+  {
+    name: "Typography",
+    names: [
+      "Typography",
+      "Title",
+      "Text",
+      "Paragraph",
+      "Link"
+    ],
+    subpath: "typography",
+    sourceEntry: "src/typography/index.ts",
+    dependencies: [],
+    styles: [
+      "typography/style.css"
+    ]
+  },
+  {
+    name: "Space",
+    names: [
+      "Space"
+    ],
+    subpath: "space",
+    sourceEntry: "src/space/index.ts",
+    dependencies: [],
+    styles: [
+      "space/style.css"
+    ]
+  },
+  {
+    name: "Divider",
+    names: [
+      "Divider"
+    ],
+    subpath: "divider",
+    sourceEntry: "src/divider/index.ts",
+    dependencies: [],
+    styles: [
+      "divider/style.css"
+    ]
+  },
+  {
+    name: "Splitter",
+    names: [
+      "Splitter",
+      "SplitterPanel"
+    ],
+    subpath: "splitter",
+    sourceEntry: "src/splitter/index.ts",
+    dependencies: [],
+    styles: [
+      "splitter/style.css"
+    ]
+  },
+  {
+    name: "Flex",
+    names: [
+      "Flex"
+    ],
+    subpath: "flex",
+    sourceEntry: "src/flex/index.ts",
+    dependencies: [],
+    styles: [
+      "flex/style.css"
+    ]
+  },
+  {
+    name: "Grid",
+    names: [
+      "Row",
+      "Col"
+    ],
+    subpath: "grid",
+    sourceEntry: "src/grid/index.ts",
+    dependencies: [],
+    styles: [
+      "grid/style.css"
+    ],
+    kind: "plugin"
+  },
+  {
+    name: "Tabs",
+    names: [
+      "Tabs"
+    ],
+    subpath: "tabs",
+    sourceEntry: "src/tabs/index.ts",
+    dependencies: [],
+    styles: [
+      "tabs/style.css"
+    ]
+  },
+  {
+    name: "Breadcrumb",
+    names: [
+      "Breadcrumb"
+    ],
+    subpath: "breadcrumb",
+    sourceEntry: "src/breadcrumb/index.ts",
+    dependencies: [],
+    styles: [
+      "breadcrumb/style.css"
+    ]
+  },
+  {
+    name: "Dropdown",
+    names: [
+      "DropdownButton",
+      "Dropdown"
+    ],
+    subpath: "dropdown",
+    sourceEntry: "src/dropdown/index.ts",
+    dependencies: [
+      "button",
+      "icon",
+      "menu"
+    ],
+    styles: [
+      "button/style.css",
+      "icon/style.css",
+      "utils/floating.css",
+      "dropdown/style.css",
+      "menu/style.css"
+    ]
+  },
+  {
+    name: "Menu",
+    names: [
+      "Menu"
+    ],
+    subpath: "menu",
+    sourceEntry: "src/menu/index.ts",
+    dependencies: [],
+    styles: [
+      "utils/floating.css",
+      "menu/style.css"
+    ]
+  },
+  {
+    name: "Steps",
+    names: [
+      "Steps"
+    ],
+    subpath: "steps",
+    sourceEntry: "src/steps/index.ts",
+    dependencies: [],
+    styles: [
+      "steps/style.css"
+    ]
+  },
+  {
+    name: "Input",
+    names: [
+      "Input"
+    ],
+    subpath: "input",
+    sourceEntry: "src/input/index.ts",
+    dependencies: [],
+    styles: [
+      "input/style.css"
+    ]
+  },
+  {
+    name: "DatePicker",
+    names: [
+      "DateRangePicker",
+      "DatePicker"
+    ],
+    subpath: "date-picker",
+    sourceEntry: "src/date-picker/index.ts",
+    dependencies: [
+      "icon"
+    ],
+    styles: [
+      "date-picker/style.css",
+      "icon/style.css",
+      "utils/floating.css"
+    ]
+  },
+  {
+    name: "TimePicker",
+    names: [
+      "TimeRangePicker",
+      "TimePicker"
+    ],
+    subpath: "time-picker",
+    sourceEntry: "src/time-picker/index.ts",
+    dependencies: [
+      "icon"
+    ],
+    styles: [
+      "time-picker/style.css",
+      "icon/style.css",
+      "utils/floating.css"
+    ]
+  },
+  {
+    name: "Upload",
+    names: [
+      "Upload"
+    ],
+    subpath: "upload",
+    sourceEntry: "src/upload/index.ts",
+    dependencies: [],
+    styles: [
+      "upload/style.css"
+    ]
+  },
+  {
+    name: "Tree",
+    names: [
+      "Tree"
+    ],
+    subpath: "tree",
+    sourceEntry: "src/tree/index.ts",
+    dependencies: [
+      "icon"
+    ],
+    styles: [
+      "tree/style.css",
+      "icon/style.css"
+    ]
+  },
+  {
+    name: "TreeSelect",
+    names: [
+      "TreeSelect"
+    ],
+    subpath: "tree-select",
+    sourceEntry: "src/tree-select/index.ts",
+    dependencies: [
+      "icon",
+      "tree"
+    ],
+    styles: [
+      "tree/style.css",
+      "tree-select/style.css",
+      "icon/style.css",
+      "utils/floating.css"
+    ]
+  },
+  {
+    name: "Cascader",
+    names: [
+      "Cascader"
+    ],
+    subpath: "cascader",
+    sourceEntry: "src/cascader/index.ts",
+    dependencies: [
+      "icon"
+    ],
+    styles: [
+      "cascader/style.css",
+      "icon/style.css",
+      "utils/floating.css"
+    ]
+  },
+  {
+    name: "Textarea",
+    names: [
+      "Textarea"
+    ],
+    subpath: "textarea",
+    sourceEntry: "src/textarea/index.ts",
+    dependencies: [],
+    styles: [
+      "textarea/style.css"
+    ]
+  },
+  {
+    name: "InputNumber",
+    names: [
+      "InputNumber"
+    ],
+    subpath: "input-number",
+    sourceEntry: "src/input-number/index.ts",
+    dependencies: [],
+    styles: [
+      "input-number/style.css"
+    ]
+  },
+  {
+    name: "Checkbox",
+    names: [
+      "Checkbox",
+      "CheckboxGroup"
+    ],
+    subpath: "checkbox",
+    sourceEntry: "src/checkbox/index.ts",
+    dependencies: [],
+    styles: [
+      "checkbox/style.css"
+    ]
+  },
+  {
+    name: "Radio",
+    names: [
+      "Radio",
+      "RadioGroup"
+    ],
+    subpath: "radio",
+    sourceEntry: "src/radio/index.ts",
+    dependencies: [],
+    styles: [
+      "radio/style.css"
+    ]
+  },
+  {
+    name: "Switch",
+    names: [
+      "Switch"
+    ],
+    subpath: "switch",
+    sourceEntry: "src/switch/index.ts",
+    dependencies: [
+      "icon"
+    ],
+    styles: [
+      "icon/style.css",
+      "switch/style.css"
+    ]
+  },
+  {
     name: "Combobox",
+    names: [
+      "Combobox"
+    ],
     subpath: "combobox",
     sourceEntry: "src/combobox/index.ts",
+    dependencies: [],
     styles: [
       "utils/floating.css",
       "combobox/style.css"
     ]
   },
   {
+    name: "Select",
+    names: [
+      "Select"
+    ],
+    subpath: "select",
+    sourceEntry: "src/select/index.ts",
+    dependencies: [
+      "icon"
+    ],
+    styles: [
+      "icon/style.css",
+      "utils/floating.css",
+      "select/style.css"
+    ]
+  },
+  {
+    name: "Form",
+    names: [
+      "Form",
+      "FormItem",
+      "FormList"
+    ],
+    subpath: "form",
+    sourceEntry: "src/form/index.ts",
+    dependencies: [
+      "tooltip"
+    ],
+    styles: [
+      "utils/floating.css",
+      "tooltip/style.css",
+      "form/style.css"
+    ]
+  },
+  {
+    name: "Tag",
+    names: [
+      "Tag",
+      "CheckableTag",
+      "TagGroup"
+    ],
+    subpath: "tag",
+    sourceEntry: "src/tag/index.ts",
+    dependencies: [],
+    styles: [
+      "tag/style.css"
+    ]
+  },
+  {
+    name: "Badge",
+    names: [
+      "Badge",
+      "BadgeRibbon"
+    ],
+    subpath: "badge",
+    sourceEntry: "src/badge/index.ts",
+    dependencies: [],
+    styles: [
+      "badge/style.css"
+    ]
+  },
+  {
+    name: "Card",
+    names: [
+      "CardMeta",
+      "CardGrid",
+      "Card"
+    ],
+    subpath: "card",
+    sourceEntry: "src/card/index.ts",
+    dependencies: [],
+    styles: [
+      "card/style.css"
+    ]
+  },
+  {
+    name: "Empty",
+    names: [
+      "Empty"
+    ],
+    subpath: "empty",
+    sourceEntry: "src/empty/index.ts",
+    dependencies: [],
+    styles: [
+      "empty/style.css"
+    ]
+  },
+  {
+    name: "Descriptions",
+    names: [
+      "Descriptions"
+    ],
+    subpath: "descriptions",
+    sourceEntry: "src/descriptions/index.ts",
+    dependencies: [],
+    styles: [
+      "descriptions/style.css"
+    ]
+  },
+  {
+    name: "Table",
+    names: [
+      "Table"
+    ],
+    subpath: "table",
+    sourceEntry: "src/table/index.ts",
+    dependencies: [
+      "pagination"
+    ],
+    styles: [
+      "pagination/style.css",
+      "table/style.css"
+    ]
+  },
+  {
+    name: "Pagination",
+    names: [
+      "Pagination"
+    ],
+    subpath: "pagination",
+    sourceEntry: "src/pagination/index.ts",
+    dependencies: [],
+    styles: [
+      "pagination/style.css"
+    ]
+  },
+  {
+    name: "Alert",
+    names: [
+      "Alert"
+    ],
+    subpath: "alert",
+    sourceEntry: "src/alert/index.ts",
+    dependencies: [],
+    styles: [
+      "alert/style.css"
+    ]
+  },
+  {
+    name: "Message",
+    names: [
+      "Message"
+    ],
+    subpath: "message",
+    sourceEntry: "src/message/index.ts",
+    dependencies: [],
+    styles: [
+      "message/style.css"
+    ]
+  },
+  {
     name: "Modal",
+    names: [
+      "Modal"
+    ],
     subpath: "modal",
     sourceEntry: "src/modal/index.ts",
+    dependencies: [
+      "button",
+      "icon",
+      "skeleton"
+    ],
     styles: [
       "button/style.css",
       "icon/style.css",
@@ -31,13 +544,86 @@ const base = [
     ]
   },
   {
-    name: "Select",
-    subpath: "select",
-    sourceEntry: "src/select/index.ts",
+    name: "Drawer",
+    names: [
+      "Drawer"
+    ],
+    subpath: "drawer",
+    sourceEntry: "src/drawer/index.ts",
+    dependencies: [
+      "skeleton"
+    ],
     styles: [
+      "drawer/style.css",
+      "skeleton/style.css"
+    ]
+  },
+  {
+    name: "Tooltip",
+    names: [
+      "Tooltip"
+    ],
+    subpath: "tooltip",
+    sourceEntry: "src/tooltip/index.ts",
+    dependencies: [],
+    styles: [
+      "utils/floating.css",
+      "tooltip/style.css"
+    ]
+  },
+  {
+    name: "Popover",
+    names: [
+      "Popover"
+    ],
+    subpath: "popover",
+    sourceEntry: "src/popover/index.ts",
+    dependencies: [],
+    styles: [
+      "utils/floating.css",
+      "popover/style.css"
+    ]
+  },
+  {
+    name: "Popconfirm",
+    names: [
+      "Popconfirm"
+    ],
+    subpath: "popconfirm",
+    sourceEntry: "src/popconfirm/index.ts",
+    dependencies: [
+      "button",
+      "icon"
+    ],
+    styles: [
+      "button/style.css",
       "icon/style.css",
       "utils/floating.css",
-      "select/style.css"
+      "popconfirm/style.css"
+    ]
+  },
+  {
+    name: "Spin",
+    names: [
+      "Spin"
+    ],
+    subpath: "spin",
+    sourceEntry: "src/spin/index.ts",
+    dependencies: [],
+    styles: [
+      "spin/style.css"
+    ]
+  },
+  {
+    name: "Skeleton",
+    names: [
+      "Skeleton"
+    ],
+    subpath: "skeleton",
+    sourceEntry: "src/skeleton/index.ts",
+    dependencies: [],
+    styles: [
+      "skeleton/style.css"
     ]
   }
 ];
@@ -94,6 +680,9 @@ const ai = [
     scopes: [
       "form",
       "visually-hidden"
+    ],
+    catalogKeys: [
+      "ai-form"
     ]
   },
   {
@@ -174,6 +763,9 @@ const ai = [
       "prompts",
       "sender",
       "welcome"
+    ],
+    catalogKeys: [
+      "ai"
     ]
   },
   {
@@ -198,6 +790,9 @@ const ai = [
     ],
     sideEffects: [
       "@aheart-ui/dnd/sortable/style.css"
+    ],
+    catalogKeys: [
+      "ai-agent-workbench"
     ]
   },
   {
@@ -248,6 +843,9 @@ const dnd = [
       "keyboard-grabbed",
       "keyboard-compatible",
       "live-region"
+    ],
+    catalogKeys: [
+      "dnd"
     ]
   },
   {
@@ -262,6 +860,9 @@ const dnd = [
       "keyboard-grabbed",
       "keyboard-compatible",
       "live-region"
+    ],
+    catalogKeys: [
+      "dnd"
     ]
   },
   {
@@ -272,6 +873,9 @@ const dnd = [
     ],
     scopes: [
       "overlay"
+    ],
+    catalogKeys: [
+      "dnd"
     ]
   },
   {
@@ -289,6 +893,9 @@ const dnd = [
       "keyboard-grabbed",
       "keyboard-compatible",
       "live-region"
+    ],
+    catalogKeys: [
+      "dnd"
     ]
   }
 ];

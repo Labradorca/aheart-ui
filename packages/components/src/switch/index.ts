@@ -5,3 +5,5 @@ const Switch = withInstall(switchComponent, 'ASwitch')
 
 export type * from './types'
 export default Switch
+
+export { Switch }

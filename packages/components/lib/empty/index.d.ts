@@ -8,3 +8,4 @@ export type EmptyComponent = SFCWithInstall<typeof empty> & {
 };
 declare const Empty: EmptyComponent;
 export default Empty;
+export { Empty };

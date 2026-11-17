@@ -8,3 +8,5 @@ export const CheckboxGroup = withInstall(checkboxGroup, 'ACheckboxGroup')
 export { CheckboxGroup as ACheckboxGroup }
 export type { CheckboxGroupProps, CheckboxOption, CheckboxProps, CheckboxValue } from './types'
 export default Checkbox
+
+export { Checkbox }

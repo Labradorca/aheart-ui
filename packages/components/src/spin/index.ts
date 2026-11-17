@@ -13,3 +13,5 @@ export type {
   SpinSemanticPart,
   SpinStyles
 } from './types'
+
+export { Spin }

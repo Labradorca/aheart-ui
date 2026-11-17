@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
 const vue = require("vue");
-const index = require("../menu/index.js");
+const menu_index = require("../menu/index.js");
 const useFloatingLayer = require("../utils/use-floating-layer.js");
 const useMotionPresence = require("../utils/use-motion-presence.js");
 const types = require("./types.js");
@@ -126,7 +126,7 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
           style: menuStyle.value
         },
         [
-          vue.h(index.default, {
+          vue.h(menu_index.default, {
             items: (_a = props.menu) == null ? void 0 : _a.items,
             selectable: ((_b = props.menu) == null ? void 0 : _b.selectable) ?? false,
             selectedKeys: (_c = props.menu) == null ? void 0 : _c.selectedKeys,

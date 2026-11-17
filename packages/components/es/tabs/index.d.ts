@@ -124,3 +124,4 @@ declare const Tabs: import("../utils/install").SFCWithInstall<{
     };
 })>;
 export default Tabs;
+export { Tabs };

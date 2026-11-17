@@ -382,3 +382,4 @@ declare const Drawer: import("../utils/install").SFCWithInstall<{
 })>;
 export default Drawer;
 export type { DrawerPlacement, DrawerProps } from './types';
+export { Drawer };

@@ -23,7 +23,10 @@ assert.deepEqual(cssResolver('AAIAgentWorkbench'), {
   from: '@aheart-ui/ai/agent-workbench',
   sideEffects: ['@aheart-ui/ai/agent-workbench/style.css', '@aheart-ui/dnd/sortable/style.css']
 })
-for (const name of ['ATable', 'AMotionFade', 'AUnknown', 'toString']) assert.equal(cssResolver(name), undefined)
+assert.deepEqual(cssResolver('ATable'), {
+  name: 'Table', from: 'aheart-ui/table', sideEffects: ['aheart-ui/table/style.css']
+})
+for (const name of ['AMotionFade', 'AUnknown', 'toString']) assert.equal(cssResolver(name), undefined)
 
 for (const entry of aheartComponentEntries) {
   const esm = await import(entry.from)

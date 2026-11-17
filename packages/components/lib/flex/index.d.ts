@@ -70,3 +70,4 @@ declare const Flex: import("../utils/install").SFCWithInstall<{
     };
 })>;
 export default Flex;
+export { Flex };

@@ -5,3 +5,5 @@ const Table = withInstall(table, 'ATable')
 
 export default Table
 export type * from './types'
+
+export { Table }

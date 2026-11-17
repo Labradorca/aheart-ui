@@ -129,3 +129,4 @@ declare const Menu: import("../utils/install").SFCWithInstall<import("vue").Defi
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>>;
 export default Menu;
 export type { MenuClickInfo, MenuItem, MenuMode, MenuProps, MenuSelectInfo, MenuTheme } from './types';
+export { Menu };

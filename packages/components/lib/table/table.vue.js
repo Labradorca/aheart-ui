@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
 const vue = require("vue");
-const index = require("../pagination/index.js");
+const pagination_index = require("../pagination/index.js");
 const paginationState = require("../pagination/pagination-state.js");
 const useControllableState = require("../utils/use-controllable-state.js");
 const useFloatingDismiss = require("../utils/use-floating-dismiss.js");
@@ -219,8 +219,8 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
       const focusRow = focusButton == null ? void 0 : focusButton.closest("tr[data-aheart-virtual-logical-item]");
       if (focusRow) {
         focusButton == null ? void 0 : focusButton.focus({ preventScroll: true });
-        const index22 = Number(focusRow.dataset.aheartVirtualLogicalItem);
-        const logical2 = Number.isFinite(index22) ? pagedRows.value[index22] : void 0;
+        const index2 = Number(focusRow.dataset.aheartVirtualLogicalItem);
+        const logical2 = Number.isFinite(index2) ? pagedRows.value[index2] : void 0;
         if (logical2)
           focusedRowKey.value = logical2.key;
       }
@@ -230,8 +230,8 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
       const row = input == null ? void 0 : input.closest("tr[data-aheart-virtual-logical-item]");
       if (!row || !row.querySelector('input[type="radio"]'))
         return;
-      const index2 = Number(row == null ? void 0 : row.dataset.aheartVirtualLogicalItem);
-      const logical = Number.isFinite(index2) ? pagedRows.value[index2] : void 0;
+      const index = Number(row == null ? void 0 : row.dataset.aheartVirtualLogicalItem);
+      const logical = Number.isFinite(index) ? pagedRows.value[index] : void 0;
       if (logical)
         handleRadioClick(event, logical.record, logical.key);
     };
@@ -332,11 +332,11 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
         data.slice(0, leftStart).forEach((item) => {
           item.fixed = "left";
         });
-        data.forEach((item, index2) => {
+        data.forEach((item, index) => {
           if (item.fixed === "left") {
             item.left = left;
             left += usedWidth(item);
-          } else if (index2 >= leftStart && index2 < leftStart + leftCount)
+          } else if (index >= leftStart && index < leftStart + leftCount)
             item.fixed = void 0;
         });
       }
@@ -451,16 +451,16 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
     const tableNarrowStyle = vue.computed(() => narrowLeftConstrained.value ? { "--aheart-table-narrow-utility-width": narrowUtilityWidth.value } : void 0);
     const sortedData = vue.computed(() => getSortedRecords(activeFilters.value, activeSort.value));
     const allRows = vue.computed(
-      () => sortedData.value.map((record, index2) => ({
-        key: getRowKey(record, index2),
+      () => sortedData.value.map((record, index) => ({
+        key: getRowKey(record, index),
         record,
-        index: index2
+        index
       }))
     );
     const virtualDataValid = vue.computed(() => {
       if (props.virtual === false || props.virtual === void 0)
         return true;
-      const keys = normalizedData.value.map((record, index2) => typeof props.rowKey === "function" ? props.rowKey(record) : record[props.rowKey]);
+      const keys = normalizedData.value.map((record, index) => typeof props.rowKey === "function" ? props.rowKey(record) : record[props.rowKey]);
       const invalid = keys.some((key) => typeof key !== "string" && typeof key !== "number" || typeof key === "number" && !Number.isFinite(key)) || new Set(keys.map((key) => `${typeof key}:${String(key)}`)).size !== keys.length || normalizedColumns.value.some((column) => Object.prototype.hasOwnProperty.call(column, "rowspan"));
       if (invalid && false)
         console.warn("[ATable] virtualization is disabled for invalid/duplicate row keys or unsupported rowspan.");
@@ -492,9 +492,9 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
     });
     const rowToken = (key) => `${typeof key}:${String(key)}`;
     const virtualKeys = vue.computed(() => pagedRows.value.map((row) => rowToken(row.key)));
-    const virtualController = useTableVirtual.useTableVirtual(virtualRuntime, vue.computed(() => pagedRows.value.length), virtualScroll, (index2) => {
-      const row = pagedRows.value[index2];
-      return row ? rowToken(row.key) : `index:${index2}`;
+    const virtualController = useTableVirtual.useTableVirtual(virtualRuntime, vue.computed(() => pagedRows.value.length), virtualScroll, (index) => {
+      const row = pagedRows.value[index];
+      return row ? rowToken(row.key) : `index:${index}`;
     }, virtualKeys);
     const handleVirtualScroll = () => {
       var _a, _b, _c, _d, _e;
@@ -513,7 +513,7 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
     };
     const virtualMeasuredTotal = vue.computed(() => Array.from(virtualController.measured.value.values()).reduce((sum, value) => sum + value, 0));
     const virtualMeasuredDisplay = vue.computed(() => virtualMeasuredTotal.value);
-    const virtualMeasuredFor = (index2) => virtualController.measured.value.get(virtualKeys.value[index2]);
+    const virtualMeasuredFor = (index) => virtualController.measured.value.get(virtualKeys.value[index]);
     const virtualRenderEntries = vue.computed(() => {
       if (!virtualRuntime.value.enabled)
         return pagedRows.value.map((row) => ({ kind: "row", row, key: `row:${rowToken(row.key)}` }));
@@ -546,8 +546,8 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
       return entries;
     });
     vue.watch([focusedRowKey, pagedRows, selectedKeys, selectionType], () => {
-      const index2 = focusedRowKey.value === void 0 ? void 0 : pagedRows.value.findIndex((row) => row.key === focusedRowKey.value);
-      virtualController.setPinnedIndexes(index2 !== void 0 && index2 >= 0 ? [index2] : []);
+      const index = focusedRowKey.value === void 0 ? void 0 : pagedRows.value.findIndex((row) => row.key === focusedRowKey.value);
+      virtualController.setPinnedIndexes(index !== void 0 && index >= 0 ? [index] : []);
     }, { immediate: true, flush: "sync" });
     const visibleRows = vue.computed(() => {
       if (!virtualRuntime.value.enabled)
@@ -601,7 +601,7 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
         currentState.setState(count);
       }
     });
-    const knownRowKeys = vue.computed(() => normalizedData.value.map((record, index2) => getRowKey(record, index2)));
+    const knownRowKeys = vue.computed(() => normalizedData.value.map((record, index) => getRowKey(record, index)));
     vue.watch([knownRowKeys, () => {
       var _a;
       return (_a = props.rowSelection) == null ? void 0 : _a.preserveSelectedRowKeys;
@@ -627,9 +627,9 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
     function hasRenderableContent(value) {
       return value !== void 0 && value !== null && value !== false && value !== "";
     }
-    function getRowKey(record, index2) {
+    function getRowKey(record, index) {
       const key = typeof props.rowKey === "function" ? props.rowKey(record) : record[props.rowKey];
-      return typeof key === "string" || typeof key === "number" && Number.isFinite(key) ? key : index2;
+      return typeof key === "string" || typeof key === "number" && Number.isFinite(key) ? key : index;
     }
     function getValueByDataIndex(record, dataIndex) {
       if (dataIndex === void 0) {
@@ -685,16 +685,16 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
         return normalized;
       }, {});
     }
-    const renderCell = (column, record, index2) => {
+    const renderCell = (column, record, index) => {
       const text = getValueByDataIndex(record, column.dataIndex);
       if (column.customRender) {
-        return column.customRender({ text, record, index: index2, column });
+        return column.customRender({ text, record, index, column });
       }
       return text === void 0 || text === null ? "" : String(text);
     };
-    const renderExpanded = (record, index2) => {
+    const renderExpanded = (record, index) => {
       var _a, _b;
-      return ((_b = (_a = props.expandable) == null ? void 0 : _a.expandedRowRender) == null ? void 0 : _b.call(_a, record, index2)) ?? "";
+      return ((_b = (_a = props.expandable) == null ? void 0 : _a.expandedRowRender) == null ? void 0 : _b.call(_a, record, index)) ?? "";
     };
     const headerColumnStyle = (column) => cellLayoutStyle(columnLayout(column) ?? { id: getColumnKey(column), source: column }, true);
     const bodyColumnStyle = (column) => cellLayoutStyle(columnLayout(column) ?? { id: getColumnKey(column), source: column }, false);
@@ -971,8 +971,8 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
       if (!controls.length)
         return;
       const current = filterPopupElement.value.ownerDocument.activeElement;
-      const index2 = controls.indexOf(current);
-      const next = event.shiftKey ? index2 <= 0 ? controls.length - 1 : index2 - 1 : index2 >= controls.length - 1 ? 0 : index2 + 1;
+      const index = controls.indexOf(current);
+      const next = event.shiftKey ? index <= 0 ? controls.length - 1 : index - 1 : index >= controls.length - 1 ? 0 : index + 1;
       event.preventDefault();
       (_a = controls[next]) == null ? void 0 : _a.focus({ preventScroll: true });
       void vue.nextTick(() => {
@@ -1068,10 +1068,10 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
       const cells = Array.from(tableRoot.value.querySelectorAll("thead th"));
       const cols = Array.from(tableRoot.value.querySelectorAll("colgroup col"));
       const next = { ...widthSnapshot.value };
-      cells.forEach((cell, index2) => {
+      cells.forEach((cell, index) => {
         var _a2, _b, _c;
-        const width = cell.getBoundingClientRect().width || ((_a2 = cols[index2]) == null ? void 0 : _a2.getBoundingClientRect().width) || Number.parseFloat(((_c = (_b = tableRoot.value) == null ? void 0 : _b.ownerDocument.defaultView) == null ? void 0 : _c.getComputedStyle(cell).width) ?? "") || 0;
-        const item = layoutColumns.value[index2];
+        const width = cell.getBoundingClientRect().width || ((_a2 = cols[index]) == null ? void 0 : _a2.getBoundingClientRect().width) || Number.parseFloat(((_c = (_b = tableRoot.value) == null ? void 0 : _b.ownerDocument.defaultView) == null ? void 0 : _c.getComputedStyle(cell).width) ?? "") || 0;
+        const item = layoutColumns.value[index];
         if (item && width > 0 && !next[item.id])
           next[item.id] = `${width}px`;
       });
@@ -1159,9 +1159,9 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
             observedVirtualRows.delete(row);
             observedVirtualHeights.delete(row);
             if (row.matches("tr[data-table-expanded-row]")) {
-              const index2 = Number(row.dataset.aheartVirtualExpandedItem);
-              if (Number.isFinite(index2))
-                virtualController.clearMeasured(index2, "expanded");
+              const index = Number(row.dataset.aheartVirtualExpandedItem);
+              if (Number.isFinite(index))
+                virtualController.clearMeasured(index, "expanded");
             }
           }
         });
@@ -1197,15 +1197,15 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
           const heights = /* @__PURE__ */ new Map();
           observedVirtualHeights.forEach((height, target) => {
             const element = target;
-            const index2 = Number(element.dataset.aheartVirtualLogicalItem ?? element.dataset.aheartVirtualExpandedItem);
-            if (!Number.isFinite(index2))
+            const index = Number(element.dataset.aheartVirtualLogicalItem ?? element.dataset.aheartVirtualExpandedItem);
+            if (!Number.isFinite(index))
               return;
             const part = element.matches("tr[data-table-expanded-row]") ? "expanded" : "base";
-            const parts = heights.get(index2) ?? /* @__PURE__ */ new Map();
+            const parts = heights.get(index) ?? /* @__PURE__ */ new Map();
             parts.set(part, height);
-            heights.set(index2, parts);
+            heights.set(index, parts);
           });
-          heights.forEach((parts, index2) => parts.forEach((height, part) => virtualController.setMeasured(index2, height, part)));
+          heights.forEach((parts, index) => parts.forEach((height, part) => virtualController.setMeasured(index, height, part)));
           virtualResizeFlushedGeneration = generation;
         };
         const testScheduler = ((_b2 = (_a2 = globalThis.process) == null ? void 0 : _a2.env) == null ? void 0 : _b2.NODE_ENV) === "test";
@@ -1435,8 +1435,8 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
         return;
       const direction = event.shiftKey ? -1 : 1;
       const findCandidate = (from) => {
-        for (let index2 = from; index2 >= 0 && index2 < pagedRows.value.length; index2 += direction) {
-          const candidate2 = pagedRows.value[index2];
+        for (let index = from; index >= 0 && index < pagedRows.value.length; index += direction) {
+          const candidate2 = pagedRows.value[index];
           if (mayHaveTabbable(candidate2))
             return candidate2;
         }
@@ -1890,7 +1890,7 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
               ])
             ], 16, _hoisted_11)
           ], 44, _hoisted_5),
-          shouldShowPagination.value ? (vue.openBlock(), vue.createBlock(vue.unref(index.default), {
+          shouldShowPagination.value ? (vue.openBlock(), vue.createBlock(vue.unref(pagination_index.default), {
             key: 0,
             class: "aheart-table__pagination",
             current: currentPage.value,

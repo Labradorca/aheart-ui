@@ -1,0 +1,24 @@
+{
+  "recordedAt": "2026-11-17T04:42:13-05:00",
+  "source": "负责人对本对话 V1 预检问题的直接回答",
+  "answer": "仅更新过时能力断言；保留对象身份，弃用提示改用开发构建诊断（建议）",
+  "scope": {
+    "allow": [
+      "M1 旧四组件测试范围明确化；原预算数值不变",
+      "M3 ATable 过时否定断言替换为新能力断言",
+      "B1/B3 使用开发构建中的旧导入诊断，保留 root/full 与 scoped 对象身份"
+    ],
+    "unchanged": [
+      "两个试点业务源码",
+      "所有 M1 数值预算",
+      "三包版本"
+    ],
+    "notAuthorized": [
+      "V1 PR",
+      "V1 merge/Pages",
+      "version changes",
+      "npm publication",
+      "tag"
+    ]
+  }
+}

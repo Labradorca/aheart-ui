@@ -188,3 +188,4 @@ declare const Textarea: import("../utils/install").SFCWithInstall<{
 })>;
 export type * from './types';
 export default Textarea;
+export { Textarea };

@@ -4,3 +4,5 @@ import { withInstall } from '../utils/install'
 const Flex = withInstall(flex, 'AFlex')
 
 export default Flex
+
+export { Flex }

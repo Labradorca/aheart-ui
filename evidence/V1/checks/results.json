@@ -1,0 +1,61 @@
+[
+  {
+    "name": "build-components",
+    "command": [
+      "corepack",
+      "pnpm",
+      "build:components"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffSha256": "150c4358008712df4b73b6a65424d26c19dc9d5cddea2a2977e704be88ad9d7e",
+    "startedAt": "2026-11-17T09:45:08.955Z",
+    "finishedAt": "2026-11-17T09:45:38.794Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "0151863cacf8985629deb5fb3def4b7a42ca8716be9e8ca787a34b2a2f58345a",
+    "output": "build-components.txt",
+    "normalization": "trailing whitespace only"
+  },
+  {
+    "name": "drift",
+    "command": [
+      "node",
+      "--test",
+      "scripts/v1-entry-manifest.test.mjs"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffSha256": "ee3ba4f0a6f47e2eb7328ec73b8b99c6eb95359404b50060270630581ff08dc2",
+    "startedAt": "2026-11-17T09:50:03.931Z",
+    "finishedAt": "2026-11-17T09:50:04.910Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "4b63aea33d7fccc8204e62663efa2f97c22634c19b6e67b9391b8ee6a91d88ef",
+    "output": "drift.txt",
+    "normalization": "trailing whitespace only"
+  },
+  {
+    "name": "pack",
+    "command": [
+      "corepack",
+      "pnpm",
+      "release:pack",
+      "--pack-destination",
+      "test-results/release-tarballs"
+    ],
+    "baseline": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "head": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+    "scope": "recorded HEAD plus V1 working diff",
+    "workingDiffSha256": "ee3ba4f0a6f47e2eb7328ec73b8b99c6eb95359404b50060270630581ff08dc2",
+    "startedAt": "2026-11-17T10:03:11.946Z",
+    "finishedAt": "2026-11-17T10:03:13.628Z",
+    "exitCode": 0,
+    "signal": null,
+    "rawOutputSha256": "bc2f45d295b1d2d260057ad405672cbe88dc8b534e0ca3cf5d17379cd31329f5",
+    "output": "pack.txt",
+    "normalization": "trailing whitespace only"
+  }
+]
