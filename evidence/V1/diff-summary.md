@@ -2,6 +2,8 @@
 
 基线 `b1eef9b6f5e1b64706beee5d4d56e08891f27c26`；独立分支 `codex/v1.4-entries`。版本不改，未创建 V1 PR、合并、部署、发布 npm 或 tag。
 
+停止点之后仅按负责人要求补 [AIForm 拆分可行性设计](../../docs/superpowers/plans/2026-11-17-aiform-on-demand-feasibility.md) 和 [隔离压缩测量](aiform-design/README.md)。包/业务源码及产物保持检查点 `631b7cd`，未恢复 V1 实现；设计和后续 S1 试验均未代替实现验收。
+
 | 已做 | 证据 |
 | --- | --- |
 | 单一 manifest 从 4 扩为基础 45 Ready 家族；每个子入口和 CSS 导出、已有 AI16/DND4 路径均登记 | [声明覆盖](entry-coverage.json)、[源依赖审计](source-audit-baseline.json)；静态声明覆盖不代表样式闭包/模块图已合格 |

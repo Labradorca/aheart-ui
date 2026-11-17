@@ -1,0 +1,18 @@
+{
+  "recordedAt": "2026-11-17T05:45:26-05:00",
+  "source": "本对话负责人对预算停止点的直接回答",
+  "answer": "先出 AIForm 拆分可行性设计供评审（建议）",
+  "authorized": [
+    "AIForm 拆分可行性设计及隔离测量证据"
+  ],
+  "notAuthorized": [
+    "恢复 V1 产品实现",
+    "改变预算或组件范围",
+    "V1 PR",
+    "V1 merge/Pages",
+    "版本修改",
+    "npm publication",
+    "tag"
+  ],
+  "implementationStatus": "stopped at the existing AIForm budget gate"
+}
