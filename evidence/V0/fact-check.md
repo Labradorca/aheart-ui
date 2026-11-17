@@ -4,6 +4,8 @@
 
 只读复核命令为 `node evidence/V0/collect-facts.mjs`；完整参数数组、退出码、采集时间在 [facts.json](facts.json)，输出在 [facts.txt](checks/facts.txt)。GitHub 将旧仓库名 `wzfdhr/aheart-ui` 重定向为 `Labradorca/aheart-ui`，以下使用 API 返回的正式链接。远端状态是采集时快照，合并前须重新检查。
 
+后续 [#50 协调复核](coordination-recheck-2026-11-17.md)：#50 head 已前进到 `5c83519b`，仍开放且有同文件冲突；41 条登记和 49 个 Ready 计数未变。下表的 `f6ec14f7` 保留为首次核对事实。
+
 | 核对项 | 结果 | 证据/口径 |
 | --- | --- | --- |
 | npm latest | `aheart-ui@1.3.0`、`@aheart-ui/ai@1.1.0`、`@aheart-ui/dnd@1.1.0`；与草稿一致 | `npm view <包> version dist-tags dist.integrity gitHead --json --registry=https://registry.npmjs.org`；facts.json 的 npm |

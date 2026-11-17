@@ -23,6 +23,7 @@
 - [四项弃用处置](../../docs/superpowers/plans/2026-11-17-aheart-ui-v2-deprecations.md)：旧/替代 API、开始/移除版本、warning、示例、入口/依赖/产物依据。第四项已由 1.3 发布产物满足，只保留回归契约；前三项为 major 提案。
 - [合并计划](../../docs/superpowers/plans/2026-11-17-aheart-ui-current-plan.md)：六份来源逐条可追溯；A1 现行与 A2 提案效力分明；技术契约、V0–V4、质量、Icons/Motion 按需项与回滚集中可读。提案在 superpowers 下，当前文档站配置不发布这些源规范页面。
 - [路线图文案](roadmap-copy.md)：负责人本轮选定“待 #50 合入再应用”；`V2Roadmap.vue` 未修改。应用与页面验证仍是 V0 待办。
+- [#50 后续复核](coordination-recheck-2026-11-17.md)：head 已更新，仍未合并；跳过登记与 Ready 数量未变。保留首次事实快照，并继续等待相同的负责人决定。
 - PR 模板增加阶段日志、分状态与授权范围检查项。本轮不改运行时代码、依赖、exports、版本号、tag 或 npm。
 
 ## 一张验收表（A2-7 格式，非批准声明）

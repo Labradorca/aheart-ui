@@ -1,0 +1,128 @@
+{
+  "observedAt": "2026-11-17T06:00:01.768589+00:00",
+  "candidateHead": "962abb38e238a2930e5ec0df75e9185c2a95a8a2",
+  "masterSha": "735d3d33e0e5a770c5cb83f782dbe33016b4ada7",
+  "pr50": {
+    "number": 50,
+    "state": "open",
+    "merged": false,
+    "merged_at": null,
+    "html_url": "https://github.com/Labradorca/aheart-ui/pull/50"
+  },
+  "pr50Head": "5c83519bdc67f24378bdd28b7c7d51b801a06ee2",
+  "files": [
+    ".github/workflows/docs-visual-baseline.yml",
+    "docs/.vitepress/config.ts",
+    "docs/.vitepress/data/components.ts",
+    "docs/.vitepress/data/product-areas.ts",
+    "docs/.vitepress/theme/ButtonPlayground.vue",
+    "docs/.vitepress/theme/ComponentContext.vue",
+    "docs/.vitepress/theme/ComponentOverview.vue",
+    "docs/.vitepress/theme/DocContext.vue",
+    "docs/.vitepress/theme/DocInteractions.vue",
+    "docs/.vitepress/theme/DocsPlayground.vue",
+    "docs/.vitepress/theme/HomePage.vue",
+    "docs/.vitepress/theme/ProductAreaOverview.vue",
+    "docs/.vitepress/theme/V2Roadmap.vue",
+    "docs/.vitepress/theme/editorial.css",
+    "docs/.vitepress/theme/homepage.css",
+    "docs/.vitepress/theme/index.ts",
+    "docs/.vitepress/theme/reference.css",
+    "docs/.vitepress/theme/site.css",
+    "docs/.vitepress/theme/studio.css",
+    "docs/.vitepress/theme/style.css",
+    "docs/components/button.md",
+    "docs/guide/introduction.md",
+    "docs/index.md",
+    "docs/public/fonts/Familjen-Grotesk-OFL.txt",
+    "docs/public/fonts/familjen-grotesk-400.ttf",
+    "docs/public/fonts/familjen-grotesk-500.ttf",
+    "docs/quality/documentation-redesign-20261116.md",
+    "docs/quality/homepage-redesign-20261116.md",
+    "docs/superpowers/evidence/d9-skip-ledger.json",
+    "e2e/a11y-visual.spec.ts",
+    "e2e/dnd-splitter.spec.ts",
+    "e2e/docs-button-playground.spec.ts",
+    "e2e/docs-homepage.spec.ts",
+    "e2e/docs-information-architecture.spec.ts",
+    "e2e/fixtures/visual-hide-docs-navigation.css",
+    "scripts/docs-copy.test.mjs",
+    "scripts/m3-doc-entries.test.mjs"
+  ],
+  "skipSites": {
+    "localBaseline": 41,
+    "pr50Head": 41,
+    "idsUnchanged": true
+  },
+  "roadmap": {
+    "source": "<template>\n  <section class=\"aheart-roadmap\" aria-labelledby=\"aheart-roadmap-title\">\n    <header class=\"aheart-roadmap__hero\">\n      <h1 id=\"aheart-roadmap-title\">v2 路线图</h1>\n      <p>\n        路线图按已批准的 A1 阶段划分。M3 进入 AI/DND 按需入口、Resolver\n        与文档迁移。\n      </p>\n      <aside class=\"aheart-roadmap__guardrail\">\n        公开版本、候选包和阶段验收分别记录。候选按需入口使用本地 tarball 验证。\n      </aside>\n    </header>\n\n    <ol class=\"aheart-roadmap__timeline\">\n      <li\n        v-for=\"phase in phases\"\n        :key=\"phase.key\"\n        class=\"aheart-roadmap__phase\"\n      >\n        <div class=\"aheart-roadmap__phase-marker\" aria-hidden=\"true\">\n          {{ phase.key }}\n        </div>\n        <article>\n          <div class=\"aheart-roadmap__phase-heading\">\n            <div>\n              <h2>{{ phase.title }}</h2>\n              <p>{{ phase.description }}</p>\n            </div>\n            <span\n              class=\"aheart-status\"\n              :class=\"`aheart-status--${phase.state}`\"\n              >{{ phase.status }}</span\n            >\n          </div>\n          <ul>\n            <li v-for=\"item in phase.items\" :key=\"item\">{{ item }}</li>\n          </ul>\n        </article>\n      </li>\n    </ol>\n  </section>\n</template>\n\n<script setup lang=\"ts\">\nconst phases = [\n  {\n    key: \"M0\",\n    title: \"产品与契约冻结\",\n    description: \"建立版本边界和两个消费试点。\",\n    status: \"已验收\",\n    state: \"ready\",\n    items: [\"clean-consumer 和 ai-review-gate\"],\n  },\n  {\n    key: \"M1\",\n    title: \"v1.2 真实按需\",\n    description: \"建立基础包子入口与显式样式契约。\",\n    status: \"已验收\",\n    state: \"ready\",\n    items: [\"Button / Modal / Select 子入口\", \"消费端和发布契约\"],\n  },\n  {\n    key: \"M2\",\n    title: \"Combobox 与浮层\",\n    description: \"通过单选示例验证公共浮层和键盘操作。\",\n    status: \"已部署\",\n    state: \"ready\",\n    items: [\n      \"Combobox\",\n      \"Popover / Tooltip / Dropdown、Modal / Drawer、Select 与 Picker 族\",\n    ],\n  },\n  {\n    key: \"M3\",\n    title: \"AI/DND 与文档\",\n    description: \"拆分场景入口和样式，并提供静态 Resolver 与迁移指南。\",\n    status: \"候选\",\n    state: \"preview\",\n    items: [\n      \"Chat / Agent / Workbench、DND Sortable\",\n      \"按需导入、自动解析和回滚\",\n    ],\n  },\n  {\n    key: \"M4\",\n    title: \"v2 发布决策\",\n    description: \"根据试点反馈、主线质量和回滚证据决定发布节奏。\",\n    status: \"待评估\",\n    state: \"planned\",\n    items: [\"Beta / RC / Stable\"],\n  },\n];\n</script>\n",
+    "pr50Sha256": "6b15b4b86048a9099dba2291a2bf7280a056e5db099f005d5a88a12b80f239e7",
+    "localSha256": "e3cbf89add7a15ff39632dc19964cc0b3c3179056ce6038e74c8de2302768c6a"
+  },
+  "componentMetadata": {
+    "pr50Sha256": "d47499e126be878af0f736e91fdfd4e02ffdde08b984b81cfb9558ee8b77609f",
+    "readyCount": 49
+  },
+  "commands": [
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/pulls/50"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/pulls/50/files?per_page=100"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/contents/docs/.vitepress/theme/V2Roadmap.vue?ref=5c83519bdc67f24378bdd28b7c7d51b801a06ee2"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/contents/docs/superpowers/evidence/d9-skip-ledger.json?ref=5c83519bdc67f24378bdd28b7c7d51b801a06ee2"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/Labradorca/aheart-ui/contents/docs/.vitepress/data/components.ts?ref=5c83519bdc67f24378bdd28b7c7d51b801a06ee2"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "ls-remote",
+        "origin",
+        "refs/heads/master"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "--input-type=module",
+        "-e",
+        "import { readFileSync } from \"node:fs\"; import { parseReadyComponentKeys } from \"./scripts/quality-matrix.mjs\"; console.log(parseReadyComponentKeys(readFileSync(\"/tmp/aheart-ui-pr50-components.ts\", \"utf8\")).length)"
+      ],
+      "exitCode": 0,
+      "stdout": "49\n",
+      "sourceNote": "The temporary file was decoded from the exact-head GitHub content API recorded above."
+    }
+  ]
+}

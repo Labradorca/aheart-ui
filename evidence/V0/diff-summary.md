@@ -2,6 +2,8 @@
 
 基线：`735d3d33e0e5a770c5cb83f782dbe33016b4ada7`；分支：`codex/v2-a2-v0`；独立 worktree：`/Users/start/code/aheart-ui-wt/v2-a2-v0`。
 
+后续 [#50 协调复核](coordination-recheck-2026-11-17.md) 记录其新 head、同文件冲突和计数未变；负责人等待 #50 合入的决定继续适用。
+
 | 改动 | 审阅入口 |
 | --- | --- |
 | 复制并修订 A2；注明事实复核、41 条跳过、49 Ready / 24 子路径口径、M3 精确 SHA 缺口、显式 CSS 已满足、完整预算与 dist 内兼容 facade | [A2 草稿](../../docs/superpowers/specs/2026-11-17-aheart-ui-v2-amendment-a2-draft.md)；[相对输入草稿的 diff](a2-revision.diff) |
