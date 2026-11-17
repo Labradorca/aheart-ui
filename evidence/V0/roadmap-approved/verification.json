@@ -1,0 +1,23 @@
+{
+  "sourceCommit": "c70c5a53f045f8506d38533829e93c4ab5e52141",
+  "url": "http://127.0.0.1:65367/roadmap/v2",
+  "roadmapSha256": "ace637862358a4d881a34e787a0e8a9dc68139076ff417252b0c94f1c3d050b0",
+  "ownerDecision": "A2 approved; v2 Go; merge/Pages authorization still absent",
+  "screenshots": [
+    {
+      "path": "go.png",
+      "sha256": "1f34ce0ed7805ddea1a6344bffe0b31918b71509c43825823a89049e58276c77",
+      "capturedAt": "2026-11-17T07:06:24.640643+00:00"
+    },
+    {
+      "path": "narrow.png",
+      "sha256": "cc06398967cb12cd9976fd37048f50caeba0376c5e603e8b7bbf878c76346398",
+      "capturedAt": "2026-11-17T07:05:51.553263+00:00"
+    },
+    {
+      "path": "wide.png",
+      "sha256": "42ae9551c0b7c809f2c030db282e511b3a7c59bd8ebffb25a863e5af56328e1c",
+      "capturedAt": "2026-11-17T07:05:24.564667+00:00"
+    }
+  ]
+}

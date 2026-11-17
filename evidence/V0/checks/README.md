@@ -7,7 +7,7 @@
 | 安装 | `corepack pnpm install --frozen-lockfile` | 0 | [install.txt](install.txt)；锁文件未改 |
 | 远端事实 | `node evidence/V0/collect-facts.mjs` | 0 | [facts.txt](facts.txt)、[facts.json](../facts.json)；每个 gh/npm 命令数组与退出码在快照内 |
 | 下载已有证据 | `gh release download v1.3.0 --repo Labradorca/aheart-ui --pattern release-evidence.json --pattern qg5-master-stability.json --pattern SHA256SUMS --dir evidence/V0/upstream-release` | 0 | [release-download.txt](release-download.txt)；仅下载，不执行发布 |
-| 链接与完整性 | 一次性 Python 核对，完整命令见 [integrity-command.json](integrity-command.json) | 0 | [integrity.txt](integrity.txt)：本地链接、原文/A1 未变、路线图与运行证据 hash 一致、附件哈希、批准框与 v2 空白栏 |
+| 链接与完整性 | 一次性 Python 核对，完整命令见 [integrity-command.json](integrity-command.json) | 0 | [integrity.txt](integrity.txt)：本地链接、原文/A1 未变、路线图与运行证据 hash 一致、附件哈希、负责人 A2 批准/v2 Go 与合并/Pages 空白栏 |
 
 执行 `node evidence/V0/run-checks.mjs` 重跑下表。没有重跑全包单测、全量浏览器、SSR/hydration 或 npm pack；此次修改规范、证据、PR 模板与路线图文案，这些不能从 docs 构建推导通过。#50 合入后的实际 UI 检查及补充 CSS zoom 探针限制见 [运行报告](../roadmap-after-pr50/README.md)。
 
