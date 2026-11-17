@@ -1,6 +1,6 @@
-# Aheart UI 合并计划（现行 A1 + 待批准 A2）
+# Aheart UI 合并计划（现行 A1 + 已批准待合入 A2）
 
-2026-11-17，初始审计基线 `735d3d33e0e5a770c5cb83f782dbe33016b4ada7`；#50 合入后的实施基线为 `287058d6395460913b8013c9201c196e9b36c2c9`。这是供单文档执行与审查的合并视图；**A2 尚未批准，本文件不让 A2 提前生效，也不是 v2 Go**。原文保持原样；每条下列规则的来源随条文给出。未提及的技术细节不得用作扩大当前阶段的授权。
+2026-11-17，初始审计基线 `735d3d33e0e5a770c5cb83f782dbe33016b4ada7`；#50 合入后的实施基线为 `287058d6395460913b8013c9201c196e9b36c2c9`。这是供单文档执行与审查的合并视图；**负责人已批准 A2 并决定 v2 Go；A2 合入前仍按 A1，本文件不提前改变门禁**。原文保持原样；每条下列规则的来源随条文给出。未提及的技术细节不得用作扩大当前阶段的授权。
 
 ## 来源与优先级
 
@@ -11,7 +11,7 @@
 | Q | [2026-09-08 阶段验收标准](../specs/2026-09-08-aheart-ui-v2-phase-acceptance-criteria.md) | 已批准门禁；受 A1 修订 |
 | T | [2026-09-08 任务流程](../specs/2026-09-08-aheart-ui-v2-task-flow-checklist.md) | 任务出处与历史编号；勾选不推导阶段 Accepted |
 | A1 | [2026-11-05 修订](../specs/2026-11-05-aheart-ui-v2-solo-scope-amendment.md) | 当前最高已批准修订 |
-| A2 | [2026-11-17 草稿](../specs/2026-11-17-aheart-ui-v2-amendment-a2-draft.md) | 下列标为“提案”的替换条款；负责人批准并合入 master 后才优先于 A1 |
+| A2 | [2026-11-17 草稿](../specs/2026-11-17-aheart-ui-v2-amendment-a2-draft.md) | 已获负责人批准；下列替换条款须合入 master 后才优先于 A1 |
 
 效力顺序：A2 生效前是 A1 → 四份原文；生效后是 A2 → A1 未被替换部分 → 四份原文未被替换部分。P 的产品范围、R 的技术契约、Q 的门禁、T 的输出/降级任务互相约束；冲突记录到阶段日志，由 wzfdhr 决策，不静默选宽松规则。来源：P §11、§15；A1 开头、A1-3；A2 状态说明。
 
@@ -79,7 +79,7 @@ A1 已删除原 14 天 Beta、三试点持续使用与 30/60/90 复盘；不能�
 
 | 阶段 / 前置 | Must 与出口 | 回滚、停止 | 来源与旧任务映射 |
 | --- | --- | --- | --- |
-| V0 无发布；A2 批准后正式 Go | M2/M3 九行表、精确 PR/SHA/CI/Pages/Release；缺失照记；登记组合/data→V3；路线图与公开版本同步；四项弃用清单、此合并计划、v2 书面决定。出口为文档合入、清单无未定处置、决定已记 | Go/延期继续1.x/缩范围由用户填写；No-Go 不启动 V2/V4，additive V1 可另作决定。#50 已合入，路线图已在本地应用；负责人批准、决定与 V0 PR 合并仍未完成 | A2-1/A2-2/A2-7；T M0-DOC/原 M8 决策；[V0 日志](../../../evidence/V0/decision-log.md) |
+| V0 无发布；A2 批准后正式 Go | M2/M3 九行表、精确 PR/SHA/CI/Pages/Release；缺失照记；登记组合/data→V3；路线图与公开版本同步；四项弃用清单、此合并计划、v2 书面决定。出口为文档合入、清单无未定处置、决定已记 | Go/延期继续1.x/缩范围由用户填写；No-Go 不启动 V2/V4，additive V1 可另作决定。#50 已合入，路线图已在本地应用；负责人批准和 v2 Go 已记录，V0 PR 的 CI、合并及主线门禁仍未完成 | A2-1/A2-2/A2-7；T M0-DOC/原 M8 决策；[V0 日志](../../../evidence/V0/decision-log.md) |
 | V1 / 1.4.x additive；V0 合并后另分支 | entries.mjs 消费单一清单驱动全 Ready 子入口与 CSS；Resolver 全覆盖；exports/Resolver/nav/matrix 漂移测试；开发弃用提示、生产无输出；1.3→2.0迁移表与可机械 codemod。出口：覆盖100%，Q06预算不变，1.3消费脚本及两试点不改源码通过，strict types/SSR/hydration/五项目全通过，P0=P1=0；evidence/V1 九行表 | 拆不干净或超预算立即停报根因，不放预算、不跳组件。回退1.3与锁文件。PR、合并、改版本、npm、tag各自授权，V0授权不继承 | A2-3/A2-7；R §7/§8/§17/§18.4；T M1/M7；本轮负责人停止点 |
 | V2 / 2.0-alpha；V1 Pass | 按弃用表切 root/full、dist/facade、AI optional DND；B4为回归。根图不含full/Table/DatePicker/AI/DND；无DND的chat可安装/strict/build；旧es/lib/style路径解析；files最小且确定性；两试点指南外改动0；1.3→alpha→1.3状态保留 | 只用next，latest留1.x；任一推荐路径或回退失败不进Beta。候选若新增breaking先改清单批准 | A2-4；R §7/§15/§18；T M1/M6/M8技术任务 |
 | V3 / 2.1 additive；需求触发，不阻塞2.0 | namespaced Combobox 与浮层统一data；按原Q M3 Must、12交互/8键盘a11y/SSR+iframe各1/五项目/P0P1=0/真实采用执行；普通与组合 API、数据模型/Anatomy/merge/focus/模块图齐全 | 若发现必须breaking，先回V2清单；失败保留普通API和旧Select，不冒称组合完成。按3A→3B→3C切片 | A2-5；Q 原M3；R §9/§10/§13；T M3、M4 |
@@ -97,4 +97,4 @@ A1 已删除原 14 天 Beta、三试点持续使用与 30/60/90 复盘；不能�
 
 类型、包单测、release/export contract、确定性、consumer、docs、pack、定向E2E、五项目、空目录安装、用户prerelease验证后才作stable决定；每步保存命令/退出码/时间/SHA，按阶段关联，不能用本地通过代替主线。每次公开发布保留上一稳定tgz/锁文件/哈希/日志/回滚命令，发布后从registry复跑两试点、SSR/iframe与最小视觉。来源：R §19 Phase8；Q §7；A1-2。
 
-本轮只准备 V0：开 PR 前交差异摘要；A2 批准框和“是否启动 v2”由负责人填写；合并及自动 Pages 部署须明确授权且必需 CI 全SUCCESS。V1 必须在 V0 合并后新分支启动；其开 PR、合并、改版本、npm、tag 每步另授权。来源：本轮负责人指令；A2 状态与 A2-2。
+本轮只准备 V0：开 PR 前交差异摘要；A2 批准和“是否启动 v2”已按负责人直接回复登记；合并及自动 Pages 部署须明确授权且必需 CI 全SUCCESS。V1 必须在 V0 合并后新分支启动；其开 PR、合并、改版本、npm、tag 每步另授权。来源：本轮负责人指令；A2 状态与 A2-2。

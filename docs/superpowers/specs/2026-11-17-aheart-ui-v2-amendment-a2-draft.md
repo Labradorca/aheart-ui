@@ -1,24 +1,24 @@
-# Aheart UI v2 规范修订 A2（草稿）：v2 范围、路线与验收标准
+# Aheart UI v2 规范修订 A2（已批准，待合入生效）：v2 范围、路线与验收标准
 
-> 状态：**草稿（Draft），待 wzfdhr 批准**。批准并合入 `master` 前不生效，不改变任何现行门禁。
+> 状态：**wzfdhr 于 2026-11-17 批准，待合入 `master` 生效**。合入前仍以 A1 为准；本次批准不包含合并或自动 Pages 部署授权。见 [负责人决定](../../../evidence/V0/owner-decisions-2026-11-17.md)。
 >
 > 修订对象：[产品与技术总体方案](./2026-09-08-aheart-ui-product-and-technical-master-plan.md)、[技术 RFC](./2026-09-08-aheart-ui-v2-architecture-optimization-design.md)、[阶段验收标准](./2026-09-08-aheart-ui-v2-phase-acceptance-criteria.md)、[整体任务流程清单](./2026-09-08-aheart-ui-v2-task-flow-checklist.md)、[修订 A1](./2026-11-05-aheart-ui-v2-solo-scope-amendment.md)。
 >
 > 日期：2026-11-17。初始核对基线：`735d3d33`；当前实施基线：`287058d`；公开 npm `aheart-ui@1.3.0`、`@aheart-ui/ai@1.1.0`、`@aheart-ui/dnd@1.1.0`。
 
-## 2026-11-17 事实复核与本稿改动（未批准）
+## 2026-11-17 事实复核与批准记录
 
 核对分支 `codex/v2-a2-v0`，初始基线完整 SHA 为 `735d3d33e0e5a770c5cb83f782dbe33016b4ada7`。#50 合入后，当前实施基线更新到 `287058d6395460913b8013c9201c196e9b36c2c9`。旧检出仅作为草稿来源。详细命令与 API 快照见 [V0 事实核对](../../../evidence/V0/fact-check.md)。
 
 - npm 版本与草稿一致：基础包 1.3.0，AI/DND 各 1.1.0。
-- #43、#44 均已合并。#50 最初开放且修改 `V2Roadmap.vue`；负责人选择等其合入后应用。#50 已于 `2026-11-17T06:02:23Z` 合入 `287058d`，本分支已保留其布局并应用路线图文案；V0–V4 明确标为待批准提案，见 [运行检查](../../../evidence/V0/roadmap-after-pr50/README.md)。
+- #43、#44 均已合并。#50 最初开放且修改 `V2Roadmap.vue`；负责人选择等其合入后应用。#50 已于 `2026-11-17T06:02:23Z` 合入 `287058d`，本分支保留其布局应用路线图文案。负责人其后批准 A2 并决定 v2 Go；V0–V4 标为已批准、待合入生效的计划，未启动阶段保持未启动。
 - 补充量化基线：跳过登记 **41 条调用点**；文档/质量矩阵 **49 个 Ready 条目**（基础包 45、AI 3、DND 1）。入口 manifest 是另一口径：base 4、AI 16、DND 4，共 24 条子路径；AI/DND 中场景、别名不等同于 Ready 组件条目。
 - 修正 M3 证据表述：#44 合并 SHA 的主线 CI 为 cancelled，同 SHA Pages **缺失**；后续 1.3.0 发布 SHA 的 CI/Pages 成功，分开记录。
 - 修正第四项破坏性候选：1.3.0 发布 JS 已不隐式加载真实 CSS；V2 固化显式样式契约，不虚构新的破坏或弃用提示。
 - 明确 V1 沿用 M1 的**全部**数值限制，包括相对 root named 的 JS 增量和 theme + 单组件 CSS 合计限制。
 - 明确兼容 facade 位于 `dist/compat/`，通过 exports 保留逻辑 `es/*`、`lib/*`，使仅发布 dist 与保留旧逻辑路径的要求一致。四项处置与源码依据见 [弃用表](../plans/2026-11-17-aheart-ui-v2-deprecations.md)。
 
-这是 V0 的本地整理与决策准备，不是 A2 生效或 v2 Go。下述 A2 条款须经负责人批准并合入 master 才生效；此前按 A1 执行。
+负责人已书面批准 A2，并决定“Go，按 A2 计划推进 v2”。下述条款仍须合入 master 才生效；此前按 A1 执行。V1 依赖 V0 合入，合并和 Pages 继续等待单独授权。
 
 ## 修订原因
 
@@ -128,5 +128,5 @@ Icons、Motion 继续按 A1 作为需求触发项。
 
 ## 批准
 
-- [ ] wzfdhr 批准本修订；合入 `master` 后生效，并记入 `evidence/V0/decision-log.md`。
-- [ ] V0 的 v2 Go / 延期 / 缩小范围决定。
+- [x] wzfdhr 于 2026-11-17 明确回复“批准 A2 修订”；合入 `master` 后生效，见 [V0 决策日志](../../../evidence/V0/decision-log.md)。
+- [x] wzfdhr 于 2026-11-17 决定“Go，按 A2 计划推进 v2”，见 [负责人决定原文](../../../evidence/V0/owner-decisions-2026-11-17.md)。

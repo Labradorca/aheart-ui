@@ -4,7 +4,7 @@
       <h1 id="aheart-roadmap-title">v2 路线图</h1>
       <p>
         路线图按已批准的 A1 阶段划分。M2、M3 已公开交付，阶段验收证据待补。
-        V0–V4 为待批准的 A2 提案，批准并合入前仍以 A1 为准。
+        V0–V4 为负责人已批准、待合入生效的 A2 计划，合入前仍以 A1 为准。
       </p>
       <aside class="aheart-roadmap__guardrail">
         公开版本：aheart-ui 1.3.0，AI/DND 1.1.0。发布不代表用户验收。
@@ -69,7 +69,7 @@ const phases = [
     items: [
       "Combobox",
       "Popover / Tooltip / Dropdown、Modal / Drawer、Select 与 Picker 族",
-      "namespaced Combobox 与 data 契约拟移 V3，待 A2 批准",
+      "namespaced Combobox 与 data 契约移至 V3 的方案已批准，待合入生效",
     ],
   },
   {
@@ -88,15 +88,15 @@ const phases = [
     key: "V0",
     title: "收口与范围决策",
     description: "补齐阶段记录、冻结弃用清单，由负责人决定是否启动 v2。",
-    status: "A2 提案 · 待决定",
+    status: "已决定 Go · 待合入",
     state: "planned",
-    items: ["M2/M3 证据补录与合并计划", "Go / 延期 / 缩小范围由负责人填写"],
+    items: ["M2/M3 证据补录与合并计划", "负责人已决定启动 v2，V0 合入前不启动 V1"],
   },
   {
     key: "V1",
     title: "1.4.x 全量按需铺路",
     description: "覆盖全部 Ready 组件的子入口、样式与 Resolver，保持 1.x 兼容。",
-    status: "A2 提案 · 未启动",
+    status: "A2 已批准 · 未启动",
     state: "planned",
     items: ["清单漂移检查、迁移表与 codemod", "沿用 M1 模块图与 CSS 预算"],
   },
@@ -104,7 +104,7 @@ const phases = [
     key: "V2",
     title: "2.0.0-alpha 破坏性切换",
     description: "按批准的弃用清单切换根入口、产物布局与 AI/DND 安装边界。",
-    status: "A2 提案 · 未启动",
+    status: "A2 已批准 · 未启动",
     state: "planned",
     items: ["root/full、dist 与兼容 facade、AI optional DND", "alpha 只用 next，latest 保持 1.x"],
   },
@@ -120,7 +120,7 @@ const phases = [
     key: "V4",
     title: "Beta → RC → Stable",
     description: "根据试点任务、稳定性、迁移与回退证据作书面发布决定。",
-    status: "A2 提案 · 未启动",
+    status: "A2 已批准 · 未启动",
     state: "planned",
     items: ["两个试点的自用任务清单", "同一主线 SHA 连续十次稳定性验证"],
   },

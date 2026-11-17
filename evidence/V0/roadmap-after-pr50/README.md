@@ -2,7 +2,7 @@
 
 2026-11-17。初始 V0 基线是 `735d3d33e0e5a770c5cb83f782dbe33016b4ada7`；[PR #50](https://github.com/Labradorca/aheart-ui/pull/50) 于 `2026-11-17T06:02:23Z` 合入 `287058d6395460913b8013c9201c196e9b36c2c9`。负责人已选择“等 #50 合入后应用”，该条件解除后，本分支 rebase 到该合并提交，保留其布局和样式，仅修改路线图文案与阶段数据。准确远端状态、版本和文件 hash 见 [verification.json](verification.json)。
 
-路线图源码提交：`17e72568e6197988fcea0df36c76c1c99e5a8bb2`；文件为 [V2Roadmap.vue](../../../docs/.vitepress/theme/V2Roadmap.vue)。后续证据/草稿编辑未改此 Vue。M2 显示 1.3.0，M3 显示 AI/DND 1.1.0；M4 由 V0–V4 替换；页首与 V 阶段均保留 A2 未批准和未启动说明。M2/M3 公开交付与用户验收缺失分开。
+路线图源码提交：`17e72568e6197988fcea0df36c76c1c99e5a8bb2`；文件为 [V2Roadmap.vue](../../../docs/.vitepress/theme/V2Roadmap.vue)。本轮是审批前的历史运行快照；后续批准状态文案与新运行证据另行记录。M2 显示 1.3.0，M3 显示 AI/DND 1.1.0；M4 由 V0–V4 替换；页首与 V 阶段均保留 A2 未批准和未启动说明。M2/M3 公开交付与用户验收缺失分开。
 
 ## 运行证据
 
@@ -35,4 +35,4 @@ CSS zoom 的诊断：当前 VitePress `body` 本来有 `min-width: 320px`（`nod
 
 ## 当前出口
 
-#50 的同文件等待条件已解除，路线图本地应用已完成。负责人其后单独授权创建 [V0 草稿 PR #51](https://github.com/Labradorca/aheart-ui/pull/51)。A2 批准、负责人 v2 决定、合并及自动 Pages 部署授权仍缺失；V0 不标 Pass，V1 不启动。完整审阅入口见 [差异摘要](../diff-summary.md)。
+#50 的同文件等待条件已解除，路线图本地应用已完成。负责人其后单独授权创建 [V0 草稿 PR #51](https://github.com/Labradorca/aheart-ui/pull/51)。A2 批准与负责人 v2 Go 已在后续直接回复中收到；合并及自动 Pages 部署授权仍缺失；V0 不标 Pass，V1 不启动。完整审阅入口见 [差异摘要](../diff-summary.md)。
