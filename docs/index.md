@@ -2,7 +2,7 @@
 layout: home
 outline: false
 title: Aheart UI · Vue 3 产品组件体系
-description: 从基础组件到 AI、Motion、DND 与 Icons 的 Vue 3 产品能力目录
+description: 为产品而写的 Vue 3 组件库，包含基础与组合组件、AI 工作流和可访问拖拽。
 ---
 
 <script setup lang="ts">
