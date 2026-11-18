@@ -2,6 +2,11 @@
 
 Aheart UI 的重要变更统一记录在本文件中。
 
+## [2.0.0-beta.0] 候选
+
+- 修复 390px 视口下日期范围选择器截断起止日期的问题。全量和按需页面增加三种浏览器的视觉回归，并沿用逐字节截图门槛。[#53](https://github.com/Labradorca/aheart-ui/issues/53)
+- Core 和 AI 候选为 `2.0.0-beta.0`，DND 使用公开 `1.1.0`。预发布使用 `next`。[预发布安装与回退](docs/guide/v2-migration.md)
+
 ## [2.0.0-alpha.0] 本地候选
 
 - 核心根入口移除默认 Plugin。改用 `aheart-ui/full` 并显式导入 `aheart-ui/full.css`。根 named 组件和公开类型继续可用。

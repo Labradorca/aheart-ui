@@ -1,10 +1,10 @@
-# 从 1.x 迁移到 2.0 alpha
+# 从 1.x 迁移到 2.0 预发布版
 
-用已发布的 `aheart-ui@1.4.0`、`@aheart-ui/ai@1.2.0` 和 `@aheart-ui/dnd@1.1.0` 建立回退基线。旧应用仍可使用公开的 1.3.0，先保存原始源码、配置和锁文件。2.0 alpha 使用精确版本和 `next` 发布通道，`latest` 保持 1.x。
+用已发布的 `aheart-ui@1.4.0`、`@aheart-ui/ai@1.2.0` 和 `@aheart-ui/dnd@1.1.0` 建立回退基线。旧应用仍可使用公开的 1.3.0，先保存原始源码、配置和锁文件。2.0 预发布版使用精确版本和 `next` 通道，`latest` 保持 1.x。
 
 ## API 和产物
 
-| 1.x 用法 | 2.0 alpha | 迁移 |
+| 1.x 用法 | 2.0 预发布版 | 迁移 |
 | --- | --- | --- |
 | `import UI from 'aheart-ui'` | 核心根入口只有 named 导出 | 将 default 移到 `aheart-ui/full`，并显式导入 `aheart-ui/full.css`。根 named 组件、公开类型和对象身份继续可用 |
 | 逻辑深路径 `aheart-ui/es/*`、`aheart-ui/lib/*` | 2.x 由打包时生成的兼容 facade 提供 | 可导入等价的公开子入口。应用若读取 `node_modules` 内的绝对物理路径，改用公开子入口或解析它们。包内布局现在是 `dist/{esm,cjs,types,styles}` |
@@ -57,15 +57,21 @@ node scripts/codemods/aheart-v2.mjs --check /path/to/app/src/App.vue /path/to/ap
 
 动态 namespace、变量传播、反射、跨 ESM/CJS 的绑定语义、私有路径、带抑制指令的混合声明，以及解析失败的文件需要人工审阅。含 Workbench 的 AI 根调用应使用新子入口；确需原来的整个 Plugin 及注册集合时使用 AI full。不能从源码推断样式加载策略时，按上节选择全量或按需。
 
-依赖和锁文件由应用调整。使用本地 tarball 验收时只在独立副本改 manifest 和锁文件。公开 alpha 发布后，按需安装以下精确版本，并检查锁文件的 `resolved` 与 `integrity`。
+## 安装精确版本
+
+先用 `npm view aheart-ui dist-tags` 和 `npm view @aheart-ui/ai dist-tags` 确认公开通道。Alpha 已发布。只使用 Core 的应用可以去掉命令中的 AI 依赖。
 
 ```sh
-npm install --save-exact aheart-ui@2.0.0-alpha.0
-npm install --save-exact @aheart-ui/ai@2.0.0-alpha.0
-npm install --save-exact @aheart-ui/dnd@1.1.0
+npm install --save-exact aheart-ui@2.0.0-alpha.0 @aheart-ui/ai@2.0.0-alpha.0
 ```
 
-只安装应用使用的包。Workbench 或 AI full 构建报缺少 `@aheart-ui/dnd` 时，安装上述 DND peer，再重新构建。AI 2.0 alpha 与 core 2.0 alpha 配套使用。
+Core 和 AI 的 `next` 均指向 Beta 后，可从 Alpha 升级到以下版本。
+
+```sh
+npm install --save-exact aheart-ui@2.0.0-beta.0 @aheart-ui/ai@2.0.0-beta.0
+```
+
+核对锁文件中的精确版本、`resolved` 与 `integrity`。Workbench 和 AI full 还需要 `npm install --save-exact @aheart-ui/dnd@1.1.0`。用本地 tarball 验收时，在应用副本里更新依赖清单和锁文件。
 
 ## 验证和回退
 

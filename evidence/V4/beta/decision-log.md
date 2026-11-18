@@ -12,14 +12,14 @@
 
 ## 版本变更范围
 
-版本授权待负责人回复。按现行包清单，Core 和 AI 的版本字段及 `scripts/release-contract.mjs` 中的版本断言需要同步到 `2.0.0-beta.0`，迁移指南和 CHANGELOG 需要对应的 Beta 条目。现有 AI 的 Core peer 范围 `^2.0.0-alpha.0` 经 SemVer 校验涵盖 `2.0.0-beta.0`。发包前在实际 tarball 中复核 peer 及依赖，DND 使用公开 `1.1.0`。Core 和 AI 的包清单已配置 `next`，发布按 Core、AI 的顺序执行。
+负责人于 2026-11-18 回复「授权」，范围为将 Core 和 AI 的版本改为 `2.0.0-beta.0`。包清单、发布契约的版本断言、迁移指南和 CHANGELOG 已同步。现有 AI 的 Core peer 范围 `^2.0.0-alpha.0` 经 SemVer 校验涵盖 `2.0.0-beta.0`。发包前在实际 tarball 中复核 peer 及依赖，DND 使用公开 `1.1.0`。Core 和 AI 的包清单已配置 `next`，发布按 Core、AI 的顺序执行。
 
 ## A2-7 验收表
 
 | 门禁 | Beta 状态 |
 | --- | --- |
 | G1 设计 | 已核对 V2 Pass、缺陷分级及回滚基线，已冻结七项自用任务。[任务清单](user-tasks.md) |
-| G2 代码 | #53 已合入基线。Beta 版本修改待授权 |
+| G2 代码 | #53 已合入基线。已按授权修改 Core 和 AI 的 Beta 版本 |
 | G3 自动检查 | 待 Beta 候选 |
 | G4 视觉 | #53 在全量和按需的 390 × 844 页面均通过，保留逐字节截图门槛。待 Beta 实包复验。[前置核验](preflight.json) |
 | G5 包 | 待 Beta pack |
