@@ -13,12 +13,10 @@ import {
 } from './check-build-determinism.mjs'
 
 const generatedPaths = [
-  'packages/components/es',
-  'packages/components/lib',
+  'packages/components/dist',
   'packages/dnd/es',
   'packages/dnd/lib',
-  'packages/ai/es',
-  'packages/ai/lib'
+  'packages/ai/dist'
 ]
 
 const gateScript = resolve('scripts/check-build-determinism.mjs')
@@ -84,7 +82,7 @@ const createGateRepository = (t, { gitignore = '', buildBody = '' } = {}) => {
       buildBody
     ].join('\n')
   )
-  if (gitignore) writeFixture(root, '.gitignore', gitignore)
+  writeFixture(root, '.gitignore', generatedPaths.map(path => `/${path}/\n`).join('') + gitignore)
   for (const [index, directory] of generatedPaths.entries()) {
     writeFixture(root, `${directory}/baseline-${index}.d.ts`, `baseline-${index}\n`)
   }
@@ -195,7 +193,7 @@ test('snapshots every file in all generated directories with relative paths and 
   assert.deepEqual(GENERATED_PATHS, generatedPaths)
   assert.deepEqual(Object.keys(snapshotGeneratedFiles(root)), files.map(([path]) => path))
   assert.equal(
-    snapshotGeneratedFiles(root)['packages/components/es/nested/file-0.d.ts'],
+    snapshotGeneratedFiles(root)['packages/components/dist/nested/file-0.d.ts'],
     '8ed3f6ad685b959ead7022518e1af76cd816f8e8ec7ccdda1ed4018e8f2223f8'
   )
 })
@@ -260,20 +258,18 @@ test('mismatched snapshots throw a readable status report with paths', () => {
   )
 })
 
-test('preflight rejects a staged change even when the worktree is restored to HEAD', (t) => {
-  const generatedFile = 'packages/components/es/baseline-0.d.ts'
+test('preflight rejects staged output even when the file bytes are unchanged', (t) => {
+  const generatedFile = 'packages/components/dist/baseline-0.d.ts'
   const root = createGateRepository(t, {
     buildBody: `writeFileSync(${JSON.stringify(generatedFile)}, 'baseline-0\\n')`
   })
 
-  writeFixture(root, generatedFile, 'staged\n')
-  assert.equal(runGit(root, ['add', generatedFile]).status, 0)
-  writeFixture(root, generatedFile, 'baseline-0\n')
+  assert.equal(runGit(root, ['add', '--force', generatedFile]).status, 0)
 
   const result = runGate(root)
 
   assert.notEqual(result.status, 0, gateOutput(result))
-  assert.match(gateOutput(result), /Generated output index differs from HEAD/)
+  assert.match(gateOutput(result), /Generated files must not be tracked/)
   assert.equal(existsSync(join(root, '.build-count')), false, 'build must not run after a failed preflight')
   assert.equal(readDiagnostic(root, 'build-1.stdout.log'), '')
   assert.equal(readDiagnostic(root, 'build-1.stderr.log'), '')
@@ -298,28 +294,27 @@ test('preflight rejects a staged new file before a build can delete it', (t) => 
   const result = runGate(root)
 
   assert.notEqual(result.status, 0, gateOutput(result))
-  assert.match(gateOutput(result), /Generated output index differs from HEAD/)
+  assert.match(gateOutput(result), /Generated files must not be tracked/)
   assert.equal(existsSync(join(root, '.build-count')), false, 'build must not erase staged evidence')
 })
 
-test('preflight rejects an ignored generated file before a build can delete it', (t) => {
-  const ignoredFile = 'packages/components/es/ignored-before-build.d.ts'
+test('preflight rejects an unignored legacy file before a build can delete it', (t) => {
+  const legacyFile = 'packages/components/es/unignored-before-build.d.ts'
   const root = createGateRepository(t, {
-    gitignore: `${ignoredFile}\n`,
-    buildBody: `rmSync(${JSON.stringify(ignoredFile)}, { force: true })`
+    buildBody: `rmSync(${JSON.stringify(legacyFile)}, { force: true })`
   })
 
-  writeFixture(root, ignoredFile, 'ignored generated output\n')
+  writeFixture(root, legacyFile, 'ignored generated output\n')
 
   const result = runGate(root)
 
   assert.notEqual(result.status, 0, gateOutput(result))
-  assert.match(gateOutput(result), new RegExp(`Untracked generated files:\\s+${ignoredFile.replaceAll('.', '\\.')}`))
-  assert.equal(existsSync(join(root, '.build-count')), false, 'build must not erase ignored evidence')
+  assert.match(gateOutput(result), new RegExp(`Untracked generated files:\\s+${legacyFile.replaceAll('.', '\\.')}`))
+  assert.equal(existsSync(join(root, '.build-count')), false, 'build must not erase unignored evidence')
 })
 
 test('writes sorted SHA-256 manifests and a readable comparison when builds differ', (t) => {
-  const generatedFile = 'packages/components/es/baseline-0.d.ts'
+  const generatedFile = 'packages/components/dist/baseline-0.d.ts'
   const root = createGateRepository(t, {
     buildBody: [
       "console.log(`BUILD_${count}_STDOUT`)",
@@ -417,7 +412,7 @@ test('persists and tees build 2 failure after recording the completed first buil
 })
 
 test('reports snapshot 1 capture failure after build 1 completes successfully', (t) => {
-  const missingRoot = 'packages/ai/lib'
+  const missingRoot = 'packages/ai/dist'
   const root = createGateRepository(t, {
     buildBody: [
       "console.log('SNAPSHOT_ONE_BUILD_COMPLETED')",
@@ -512,11 +507,12 @@ test('preserves split UTF-8 stdout and stderr in both terminal mirror and artifa
 })
 
 test('reports postflight failure after two matching snapshots and preserves both build results', (t) => {
-  const generatedFile = 'packages/components/es/baseline-0.d.ts'
+  const generatedFile = 'packages/components/dist/baseline-0.d.ts'
   const root = createGateRepository(t, {
     buildBody: [
       "console.log(`POSTFLIGHT_BUILD_${count}`)",
-      `writeFileSync(${JSON.stringify(generatedFile)}, 'postflight-drift\\n')`
+      "const { execFileSync } = await import('node:child_process')",
+      `execFileSync('git', ['add', '--force', ${JSON.stringify(generatedFile)}])`
     ].join('\n')
   })
 

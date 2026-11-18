@@ -4,6 +4,12 @@
 node_modules/
 .pnpm-store/
 dist/
+/packages/components/es/
+/packages/components/lib/
+/packages/ai/es/
+/packages/ai/lib/
+/packages/dnd/es/
+/packages/dnd/lib/
 docs/.vitepress/cache/
 npm-debug.log*
 yarn-debug.log*

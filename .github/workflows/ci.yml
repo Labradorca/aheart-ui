@@ -49,6 +49,8 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps chromium firefox webkit
+      - name: Build package outputs
+        run: pnpm build
       - name: Unit and script tests
         run: pnpm test
 
@@ -70,6 +72,8 @@ jobs:
           cache: pnpm
       - name: Install
         run: pnpm install --frozen-lockfile
+      - name: Build package outputs
+        run: pnpm build
       - name: Typecheck
         run: pnpm typecheck
 
@@ -91,6 +95,8 @@ jobs:
           cache: pnpm
       - name: Install
         run: pnpm install --frozen-lockfile
+      - name: Build package outputs
+        run: pnpm build
       - name: R1 branch coverage
         run: pnpm test:coverage:r1
       - name: Upload coverage evidence
@@ -131,9 +137,7 @@ jobs:
         if: ${{ failure() && steps.build_generated.outcome == 'failure' }}
         run: |
           mkdir -p test-results/build-generated-diagnostics
-          git diff --cached HEAD -- packages/components/es packages/components/lib packages/dnd/es packages/dnd/lib packages/ai/es packages/ai/lib > test-results/build-generated-diagnostics/generated-cached.diff
-          git diff -- packages/components/es packages/components/lib packages/dnd/es packages/dnd/lib packages/ai/es packages/ai/lib > test-results/build-generated-diagnostics/generated-worktree.diff
-          git ls-files --others -- packages/components/es packages/components/lib packages/dnd/es packages/dnd/lib packages/ai/es packages/ai/lib > test-results/build-generated-diagnostics/generated-untracked.txt
+          git ls-files -- packages/components packages/ai packages/dnd | grep -E '^packages/[^/]+/(dist|es|lib)/' > test-results/build-generated-diagnostics/generated-tracked.txt || test "$?" -eq 1
       - name: Upload Build Diagnostics
         if: ${{ failure() && steps.build_generated.outcome == 'failure' }}
         uses: actions/upload-artifact@v4
@@ -188,8 +192,15 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps chromium firefox webkit
+      - name: Build package outputs
+        run: pnpm build
       - name: Verify Release Tarballs
         run: pnpm release:pack --pack-destination test-results/release-tarballs
+      - name: Verify legacy paths against the public 1.x baseline
+        run: |
+          mkdir -p test-results/v2-baseline/packs
+          npm pack --ignore-scripts --json --registry=https://registry.npmjs.org/ --pack-destination test-results/v2-baseline/packs aheart-ui@1.4.0 @aheart-ui/ai@1.2.0 @aheart-ui/dnd@1.1.0 > test-results/v2-baseline/npm-pack.json
+          node scripts/v2-legacy-consumer.mjs
       - name: Strict packed consumer types (workspace Vue and Vue 3.5.44)
         run: pnpm check:consumer-types
       - name: V1 all Ready entry JS CSS and module boundaries
@@ -251,6 +262,7 @@ jobs:
           name: consumer-evidence-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
             test-results/release-tarballs/*.tgz
+            test-results/v2-legacy-consumer/results.json
             test-results/v1-consumer/
             test-results/v1-visual-consumer/
             test-results/v1-pilot-compatibility/

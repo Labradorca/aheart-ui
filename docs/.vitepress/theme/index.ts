@@ -4,7 +4,7 @@ import DefaultTheme from "vitepress/theme";
 import AheartUI from "aheart-ui/full";
 import AheartAI from "@aheart-ui/ai";
 import AheartDnd from "@aheart-ui/dnd";
-import "aheart-ui/es/style.css";
+import "aheart-ui/full.css";
 import "@aheart-ui/ai/style.css";
 import "@aheart-ui/dnd/style.css";
 import "./style.css";

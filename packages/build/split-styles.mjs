@@ -1,4 +1,5 @@
 import { emitDistFile, emitDistModuleMetadata } from './dist-layout.mjs'
+import { emitLegacyFacades } from './legacy-facades.mjs'
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import postcss from 'postcss'
 import { getComponentEntries } from './package-entries.mjs'
@@ -94,6 +95,7 @@ export function splitPackageStyles(directory, domain, entries, { dist = false } 
         emitDistModuleMetadata(directory)
         emitDistFile(directory, 'styles/style.css', css)
         for (const [file, contents] of parts) emitDistFile(directory, `styles/${file}`, contents)
+        emitLegacyFacades(directory)
         return
       }
 

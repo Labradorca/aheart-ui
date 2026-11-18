@@ -15,8 +15,8 @@
       "require": "./dist/cjs/index.js"
     },
     "./style.css": "./dist/styles/style.css",
-    "./es/*": "./dist/esm/*",
-    "./lib/*": "./dist/cjs/*",
+    "./es/*": "./dist/compat/es/*",
+    "./lib/*": "./dist/compat/lib/*",
     "./package.json": "./package.json",
     "./actions": {
       "types": "./dist/types/actions/index.d.ts",
@@ -120,17 +120,17 @@
       "require": "./dist/cjs/index.js"
     },
     "./full.css": "./dist/styles/style.css",
-    "./es/*.d.ts": "./dist/types/*.d.ts",
-    "./es/*.css": "./dist/styles/*.css",
-    "./lib/*.d.ts": "./dist/types/*.d.ts",
-    "./lib/*.css": "./dist/styles/*.css",
+    "./es/*.d.ts": "./dist/compat/es/*.d.ts",
+    "./es/*.css": "./dist/compat/es/*.css",
+    "./lib/*.d.ts": "./dist/compat/lib/*.d.ts",
+    "./lib/*.css": "./dist/compat/lib/*.css",
     "./es/*.js": {
       "types": "./dist/types/*.d.ts",
-      "default": "./dist/esm/*.js"
+      "default": "./dist/compat/es/*.js"
     },
     "./lib/*.js": {
       "types": "./dist/types/*.d.ts",
-      "default": "./dist/cjs/*.js"
+      "default": "./dist/compat/lib/*.js"
     }
   },
   "files": [

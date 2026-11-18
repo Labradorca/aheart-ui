@@ -1,1 +1,0 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("vue"),u=require("./process.vue.js"),n=e.defineComponent({name:"AAIThoughtChain",__name:"thought-chain",props:{items:{default:()=>[]}},setup(t){return(r,s)=>(e.openBlock(),e.createBlock(u.default,{items:t.items},null,8,["items"]))}});exports.default=n;

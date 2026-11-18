@@ -6,6 +6,7 @@ import dts from 'vite-plugin-dts'
 
 import { componentEntries, fullStyleSources } from './build/entries.mjs'
 import { emitDistFile, emitDistModuleMetadata } from '../build/dist-layout.mjs'
+import { emitLegacyFacades } from '../build/legacy-facades.mjs'
 
 const directory = new URL('./', import.meta.url)
 
@@ -31,6 +32,7 @@ function deterministicStyleBundle(): Plugin {
             }
 
             emitDistModuleMetadata(directory)
+            emitLegacyFacades(directory, { root: 'compat/index', rootStyle: 'full.css' })
         }
     }
 }

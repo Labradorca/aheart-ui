@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "browser": "149.0.7827.55",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "cases": [
+    {
+      "url": "http://127.0.0.1:5276/components/combobox.html",
+      "title": "Combobox 输入选择框 已完成\n​",
+      "sourceRequest": "packages/components/src/full.ts",
+      "errors": []
+    },
+    {
+      "url": "http://127.0.0.1:5276/components/dnd.html",
+      "title": "DnD 拖拽 已完成\n​",
+      "sourceRequest": "packages/components/src/full.ts",
+      "errors": []
+    },
+    {
+      "url": "http://127.0.0.1:5276/components/ai-agent-workbench.html",
+      "title": "AI Agent 工作台 已完成\n​",
+      "sourceRequest": "packages/components/src/full.ts",
+      "errors": []
+    }
+  ]
+}

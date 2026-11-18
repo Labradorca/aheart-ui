@@ -48,18 +48,18 @@
     "./style.css": "./dist/styles/full.css",
     "./es/index.js": {
       "types": "./dist/types/compat/index.d.ts",
-      "default": "./dist/esm/compat/index.js"
+      "default": "./dist/compat/es/index.js"
     },
     "./lib/index.js": {
       "types": "./dist/types/compat/index.d.ts",
-      "default": "./dist/cjs/compat/index.js"
+      "default": "./dist/compat/lib/index.js"
     },
-    "./es/index.d.ts": "./dist/types/compat/index.d.ts",
-    "./lib/index.d.ts": "./dist/types/compat/index.d.ts",
+    "./es/index.d.ts": "./dist/compat/es/index.d.ts",
+    "./lib/index.d.ts": "./dist/compat/lib/index.d.ts",
     "./es/picker-core/*": null,
     "./lib/picker-core/*": null,
-    "./es/*": "./dist/esm/*",
-    "./lib/*": "./dist/cjs/*",
+    "./es/*": "./dist/compat/es/*",
+    "./lib/*": "./dist/compat/lib/*",
     "./package.json": "./package.json",
     "./constant": {
       "types": "./dist/types/constant/index.d.ts",
@@ -317,19 +317,19 @@
       "require": "./dist/cjs/skeleton/index.js"
     },
     "./skeleton/style.css": "./dist/styles/skeleton/style.css",
-    "./es/*.d.ts": "./dist/types/*.d.ts",
-    "./es/*.css": "./dist/styles/*.css",
-    "./es/style.css": "./dist/styles/full.css",
-    "./lib/*.d.ts": "./dist/types/*.d.ts",
-    "./lib/*.css": "./dist/styles/*.css",
-    "./lib/style.css": "./dist/styles/full.css",
+    "./es/*.d.ts": "./dist/compat/es/*.d.ts",
+    "./es/*.css": "./dist/compat/es/*.css",
+    "./es/style.css": "./dist/compat/es/style.css",
+    "./lib/*.d.ts": "./dist/compat/lib/*.d.ts",
+    "./lib/*.css": "./dist/compat/lib/*.css",
+    "./lib/style.css": "./dist/compat/lib/style.css",
     "./es/*.js": {
       "types": "./dist/types/*.d.ts",
-      "default": "./dist/esm/*.js"
+      "default": "./dist/compat/es/*.js"
     },
     "./lib/*.js": {
       "types": "./dist/types/*.d.ts",
-      "default": "./dist/cjs/*.js"
+      "default": "./dist/compat/lib/*.js"
     }
   },
   "scripts": {
