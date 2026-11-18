@@ -39,12 +39,12 @@ export function moduleBoundaryErrors(ids, closure) {
   const ai = runtime('ai'), dnd = runtime('dnd')
   return ids.filter(id => {
     const plain = id.split('?')[0]
-    const core = /\/node_modules\/aheart-ui\/es\/(.+)$/.exec(plain)
+    const core = /\/node_modules\/aheart-ui\/(?:es|dist\/esm)\/(.+)$/.exec(plain)
     if (core) {
       const file = core[1], family = file.split('/')[0]
       return !base.has(family) && !shared.has(file) && file !== '_virtual/_plugin-vue_export-helper.js'
     }
-    const optional = /\/node_modules\/@aheart-ui\/(ai|dnd)\/es\/(.+)$/.exec(plain)
+    const optional = /\/node_modules\/@aheart-ui\/(ai|dnd)\/(?:es|dist\/esm)\/(.+)$/.exec(plain)
     if (!optional) return false
     const allowed = optional[1] === 'ai' ? ai : dnd
     return !allowed.has(optional[2]) && !(allowed.size && optional[2] === '_virtual/_plugin-vue_export-helper.js')

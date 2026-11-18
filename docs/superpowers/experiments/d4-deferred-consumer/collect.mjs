@@ -222,7 +222,7 @@ async function copyCheckpointEvidence(details, destination) {
     }
     await copyRoot(path.join(details.root, 'aheart-ui.tgz'), `${label}.tgz`)
     await copyRoot(details.manifestPath, `${label}-manifest.json`)
-    await copyRoot(path.join(details.root, 'node_modules/aheart-ui/es/index.js'), label === 'candidate' ? 'module-index.js' : 'baseline-module-index.js')
+    await copyRoot(details.modulePath, label === 'candidate' ? 'module-index.js' : 'baseline-module-index.js')
     await copyRoot(path.join(details.root, 'pnpm-lock.yaml'), label === 'candidate' ? 'pnpm-lock.yaml' : 'baseline-pnpm-lock.yaml')
     const distName = label === 'candidate' ? 'dist' : 'baseline-dist'
     const distManifestPath = path.join(details.durableRoot, label === 'candidate' ? 'dist-files.json' : 'baseline-dist-files.json')
@@ -250,8 +250,14 @@ async function verifyTarball(tarball, label, root, manifestAttestation) {
   const codeFiles = names.filter(file => /\.(?:js|cjs|mjs|d\.ts)$/.test(file))
   const fsImports = []
   for (const file of codeFiles) if ((await extract(file)).includes('/@fs/')) fsImports.push(file)
-  const required = ['es/index.js', 'es/index.d.ts', 'es/style.css', 'lib/index.js', 'lib/index.d.ts', 'lib/style.css']
-  assert.deepEqual(required.filter(file => !names.includes(file)), [], `${label} missing package files`)
+  const rootExports = manifest.exports?.['.']
+  const styles = manifest.exports?.['./style.css']
+  assert.equal(rootExports?.import, `./${manifest.module}`, `${label} ESM export must match module`)
+  assert.equal(rootExports?.require, `./${manifest.main}`, `${label} CJS export must match main`)
+  assert.equal(rootExports?.types, `./${manifest.types}`, `${label} type export must match types`)
+  for (const target of [rootExports.import, rootExports.require, rootExports.types, styles]) {
+    assert(typeof target === 'string' && target.startsWith('./') && names.includes(target.slice(2)), `${label} missing package export ${target}`)
+  }
   const result = {
     path: absolute,
     exists: true,
@@ -262,10 +268,10 @@ async function verifyTarball(tarball, label, root, manifestAttestation) {
     symlinks: symlinkLines,
     workspaceLinks: JSON.stringify(manifest).match(/workspace:/g) ?? [],
     fsImports,
-    esm: manifest.exports?.['.']?.import === './es/index.js',
-    cjs: manifest.exports?.['.']?.require === './lib/index.js',
-    css: manifest.exports?.['./style.css'] === './es/style.css',
-    publicTypes: names.includes('es/index.d.ts') && names.includes('lib/index.d.ts'),
+    esm: true,
+    cjs: true,
+    css: true,
+    publicTypes: true,
     ssr: true,
     contentSha256Verified: true,
     tarballSha256Verified: true,
@@ -279,7 +285,7 @@ async function verifyTarball(tarball, label, root, manifestAttestation) {
   return result
 }
 
-async function installConsumer(root, tarball) {
+async function installConsumer(root, tarball, moduleEntry) {
   for (const file of ['package.json', 'pnpm-lock.yaml', 'shared-app.mjs', 'index.html', 'main.mjs', 'types.ts', 'tsconfig.json']) await cp(path.join(fixture, file), path.join(root, file))
   const tarballBytes = await readFile(tarball)
   const lockPath = path.join(root, 'pnpm-lock.yaml')
@@ -305,13 +311,15 @@ async function installConsumer(root, tarball) {
   const versions = { node: process.versions.node, pnpm: pnpmVersion, vue: require('vue/package.json').version, vite: require('vite/package.json').version, playwright: require('@playwright/test/package.json').version, typescript: require('typescript/package.json').version }
   for (const key of ['node', 'vue', 'vite', 'playwright', 'typescript']) assert.equal(versions[key], PINNED_VERSIONS[key], `${key} version drift in isolated consumer`)
   const packageRealpath = await realpath(path.join(root, 'node_modules/aheart-ui'))
-  const packageIndexHash = sha256(await readFile(path.join(root, 'node_modules/aheart-ui/es/index.js')))
+  const modulePath = path.join(packageRealpath, moduleEntry)
+  const packageIndexHash = sha256(await readFile(modulePath))
   return {
     lockPath,
     lockSha256: sha256(Buffer.from(generatedLock)),
     lockDependenciesSha256: sha256(Buffer.from(generatedLock.replace(/(aheart-ui@file:aheart-ui\.tgz:\n\s+resolution: \{integrity: sha512-)[^,}]+/, '$1TARBALL'))),
     versions,
     packageRealpath,
+    modulePath,
     packageIndexHash
   }
 }
@@ -399,7 +407,7 @@ async function ssrEvidence(root) {
   const renderer = require('@vue/server-renderer')
   const packageExports = require('aheart-ui')
   const { COMPONENTS: appComponents, componentProps, createCombinedConsumerApp } = await import(pathToFileURL(path.join(root, 'shared-app.mjs')).href)
-  const css = await readFile(path.join(root, 'node_modules/aheart-ui/es/style.css'), 'utf8')
+  const css = await readFile(require.resolve('aheart-ui/style.css'), 'utf8')
   const combinations = {}
   const htmlByMask = {}
   for (let mask = 0; mask < 8; mask++) {
@@ -1178,7 +1186,7 @@ async function collectSmoke(temporary) {
   const baselineRoot = await mkdtemp(path.join(temporary, 'baseline-smoke-'))
   const candidate = await verifyTarball(candidateTarball, 'candidate', candidateRoot, candidateManifest)
   const baseline = await verifyTarball(baselineTarball, 'baseline', baselineRoot, baselineManifest)
-  const install = await installConsumer(candidateRoot, candidateTarball)
+  const install = await installConsumer(candidateRoot, candidateTarball, candidate.manifest.module)
   const ssr = await ssrEvidence(candidateRoot)
   const { build, preview } = await import(pathToFileURL(path.join(candidateRoot, 'node_modules/vite/dist/node/index.js')).href)
   const previousCwd = process.cwd()
@@ -1229,7 +1237,7 @@ async function collectSmoke(temporary) {
   await cp(baselineManifestPath, path.join(durableDir, 'baseline-manifest.json'))
   await cp(path.join(candidateRoot, 'dist'), path.join(durableDir, 'dist'), { recursive: true })
   await writeFileManifest(path.join(durableDir, 'dist'), path.join(durableDir, 'dist-files.json'))
-  await cp(path.join(candidateRoot, 'node_modules/aheart-ui/es/index.js'), path.join(durableDir, 'module-index.js'))
+  await cp(install.modulePath, path.join(durableDir, 'module-index.js'))
   await cp(install.lockPath, path.join(durableDir, 'pnpm-lock.yaml'))
   report.runDir = durableRunDir
   report.artifactDirectory = durableDir
@@ -1249,18 +1257,18 @@ async function collectSmoke(temporary) {
   report.packages.candidate.sha256 = sha256(await readFile(report.packages.candidate.path))
   report.packages.baseline.sha256 = sha256(await readFile(report.packages.baseline.path))
   report.packages.candidate.moduleRealpaths = [install.packageRealpath]
-  report.packages.candidate.afterHashes = { 'es/index.js': install.packageIndexHash }
+  report.packages.candidate.afterHashes = { [candidate.manifest.module]: install.packageIndexHash }
   report.packages.candidate.versions = install.versions
   report.ssrHydration = { status: 'recorded', initialWindowDeterministic: Object.values(ssr.combinations).every(item => item.deterministic), idsDeterministic: Object.values(ssr.combinations).every(item => item.initialIdSha256), postHydrationInteraction: Object.values(ssr.combinations).every(item => item.postHydrationInteraction === true), combinations: Object.fromEntries(Object.entries(ssr.combinations).map(([key, item]) => [key, { ...item, initialHtmlSha256: item.htmlSha256 }])), count: 8, deterministicDoubleRender: true }
-  const cjsSource = path.join(candidateRoot, 'node_modules/aheart-ui/lib/index.js')
+  const cjsRequire = createRequire(path.join(candidateRoot, 'cjs-probe.cjs'))
+  const cjsSource = cjsRequire.resolve('aheart-ui')
   const cjsRecordPath = path.join(durableDir, 'aheart-ui-cjs-index.js')
   await cp(cjsSource, cjsRecordPath)
-  const cjsRequire = createRequire(path.join(candidateRoot, 'cjs-probe.cjs'))
   const cjsExports = cjsRequire('aheart-ui')
   assert(typeof cjsExports.Tree === 'object' || typeof cjsExports.Tree === 'function', 'CJS Tree export must be requireable')
   assert(typeof cjsExports.TreeSelect === 'object' || typeof cjsExports.TreeSelect === 'function', 'CJS TreeSelect export must be requireable')
   assert(typeof cjsExports.Cascader === 'object' || typeof cjsExports.Cascader === 'function', 'CJS Cascader export must be requireable')
-  const cjsRenderRecord = { exportPath: cjsRecordPath, exportSha256: sha256(await readFile(cjsRecordPath)), requireSource: cjsRequire.resolve('aheart-ui'), requireExports: ['Tree', 'TreeSelect', 'Cascader'], requireRender: true }
+  const cjsRenderRecord = { exportPath: cjsRecordPath, exportSha256: sha256(await readFile(cjsRecordPath)), requireSource: cjsSource, requireExports: ['Tree', 'TreeSelect', 'Cascader'], requireRender: true }
   for (const item of Object.values(report.ssrHydration.combinations)) item.cjsRenderRecord = cjsRenderRecord
   report.typeProbe = await durableTypeProbe(candidateRoot, durableDir)
   report.case = caseEvidence
@@ -1273,7 +1281,7 @@ async function collectSmoke(temporary) {
   report.iframe = iframe
   report.preview.screenshotPath = `${output}.png`
   await cp(path.join(candidateRoot, 'smoke.png'), `${output}.png`)
-  report.realEvidenceBinding = { tarballReopened: candidate.tarballSha256Verified === true, baselineCommit: baselineManifest.commit, baselineTarballVerified: baseline.sha256 === baselineManifest.tarballSha256, cleanStatusVerified: baselineManifest.clean === true && candidateManifest.clean === true, cleanPackVerified: candidate.clean === true && candidateManifest.clean === true, pnpmIntegrityVerified: install.lockSha256.length === 64, buildDirectory: path.join(durableDir, 'dist'), buildManifestPath: path.join(durableDir, 'dist-files.json'), buildFingerprintVerified: true, moduleFingerprintVerified: install.packageIndexHash === sha256(await readFile(path.join(candidateRoot, 'node_modules/aheart-ui/es/index.js'))), buildFingerprint: { before: buildFingerprint, after: buildFingerprint }, moduleFingerprint: { before: install.packageIndexHash, after: install.packageIndexHash }, lockFingerprint: { before: install.lockSha256, after: install.lockSha256 } }
+  report.realEvidenceBinding = { tarballReopened: candidate.tarballSha256Verified === true, baselineCommit: baselineManifest.commit, baselineTarballVerified: baseline.sha256 === baselineManifest.tarballSha256, cleanStatusVerified: baselineManifest.clean === true && candidateManifest.clean === true, cleanPackVerified: candidate.clean === true && candidateManifest.clean === true, pnpmIntegrityVerified: install.lockSha256.length === 64, buildDirectory: path.join(durableDir, 'dist'), buildManifestPath: path.join(durableDir, 'dist-files.json'), buildFingerprintVerified: true, moduleFingerprintVerified: install.packageIndexHash === sha256(await readFile(install.modulePath)), buildFingerprint: { before: buildFingerprint, after: buildFingerprint }, moduleFingerprint: { before: install.packageIndexHash, after: install.packageIndexHash }, lockFingerprint: { before: install.lockSha256, after: install.lockSha256 } }
   report.alternatingOrderConvention = 'pair-forward-reverse'
   report.failureEvidence = { persistedBeforeCleanup: true }
   report.outputDirectoryDurable = true
@@ -1300,10 +1308,10 @@ async function collectSide(tarball, label, temporary, { preflight = false, check
   const root = await mkdtemp(path.join(temporary, `${label}-consumer-`))
   const packageManifest = await verifyTarball(tarball, label, root, label === 'baseline' ? baselineManifest : candidateManifest)
   await checkpoint?.('pack', { stage: 'pack', label, root, packageManifest, manifestPath: label === 'baseline' ? baselineManifestPath : candidateManifestPath })
-  const install = await installConsumer(root, tarball)
-  await checkpoint?.('install', { stage: 'install', label, root, install, manifestPath: label === 'baseline' ? baselineManifestPath : candidateManifestPath })
+  const install = await installConsumer(root, tarball, packageManifest.manifest.module)
+  await checkpoint?.('install', { stage: 'install', label, root, modulePath: install.modulePath, install, manifestPath: label === 'baseline' ? baselineManifestPath : candidateManifestPath })
   const ssr = await ssrEvidence(root)
-  await checkpoint?.('ssr', { stage: 'ssr', label, root, ssr, manifestPath: label === 'baseline' ? baselineManifestPath : candidateManifestPath, result: ssr })
+  await checkpoint?.('ssr', { stage: 'ssr', label, root, modulePath: install.modulePath, ssr, manifestPath: label === 'baseline' ? baselineManifestPath : candidateManifestPath, result: ssr })
   const { build, preview } = await import(pathToFileURL(path.join(root, 'node_modules/vite/dist/node/index.js')).href)
   const previousCwd = process.cwd()
   process.chdir(root)
@@ -1312,18 +1320,18 @@ async function collectSide(tarball, label, temporary, { preflight = false, check
   } finally {
     process.chdir(previousCwd)
   }
-  await checkpoint?.('build', { stage: 'build', label, root, buildDirectory: path.join(root, 'dist'), manifestPath: label === 'baseline' ? baselineManifestPath : candidateManifestPath })
+  await checkpoint?.('build', { stage: 'build', label, root, modulePath: install.modulePath, buildDirectory: path.join(root, 'dist'), manifestPath: label === 'baseline' ? baselineManifestPath : candidateManifestPath })
   if (label === 'candidate' && process.env.D4_DEFERRED_FAIL_AFTER_CANDIDATE_BUILD === '1') {
     throw new Error('D4_DEFERRED_FAIL_AFTER_CANDIDATE_BUILD: injected candidate build failure after durable checkpoint')
   }
   packageManifest.lockfileSha256 = install.lockSha256
   packageManifest.lockPath = install.lockPath
-  packageManifest.modulePath = path.join(root, 'node_modules/aheart-ui/es/index.js')
+  packageManifest.modulePath = install.modulePath
   packageManifest.manifestPath = label === 'baseline' ? baselineManifestPath : candidateManifestPath
   packageManifest.manifestSha256 = sha256(await readFile(packageManifest.manifestPath))
   packageManifest.lockDependenciesSha256 = install.lockDependenciesSha256
   packageManifest.moduleRealpaths = [install.packageRealpath]
-  packageManifest.afterHashes = { 'es/index.js': install.packageIndexHash }
+  packageManifest.afterHashes = { [packageManifest.manifest.module]: install.packageIndexHash }
   packageManifest.versions = install.versions
   const cleanupCounters = sharedCleanupCounters ?? { chromiumClose: 0, previewServerClose: 0, firefoxClose: 0, webkitClose: 0 }
   const sideArtifactDir = path.join(`${output}.artifacts`, label)
@@ -1340,7 +1348,7 @@ async function collectSide(tarball, label, temporary, { preflight = false, check
       const preflightPage = await preflightBrowser.newPage({ viewport: { width: 1100, height: 800 } })
       if (process.env.D4_DEFERRED_FAIL_BROWSER_SETUP === 'chromium') throw new Error('D4_DEFERRED_FAIL_BROWSER_SETUP: injected chromium setup failure')
       await preflightPage.goto(`http://127.0.0.1:${preflightServer.httpServer.address().port}/`, { waitUntil: 'domcontentloaded' })
-      await checkpoint?.('browser', { stage: 'browser', label, root, browser: 'chromium', manifestPath: label === 'baseline' ? baselineManifestPath : candidateManifestPath })
+      await checkpoint?.('browser', { stage: 'browser', label, root, modulePath: install.modulePath, browser: 'chromium', manifestPath: label === 'baseline' ? baselineManifestPath : candidateManifestPath })
     } finally {
       if (preflightBrowser) { await preflightBrowser.close().catch(() => {}); cleanupCounters.chromiumClose += 1 }
       if (preflightServer?.httpServer) { await new Promise(resolve => preflightServer.httpServer.close(resolve)); cleanupCounters.previewServerClose += 1 }
@@ -1375,13 +1383,13 @@ async function collectSide(tarball, label, temporary, { preflight = false, check
       const record = { ...settings, alternatingOrder: [], full: { warmup: [], measured: [], scroll: [] }, virtual: { warmup: [], measured: [], scroll: [] } }
       for (const mode of ['full', 'virtual']) {
         const warmup = await measureCaseWithContext(page, settings, mode, base)
-        await checkpoint?.('warmup', { stage: 'warmup', label, root, component, count, rowMode, mode, result: warmup, manifestPath: label === 'baseline' ? baselineManifestPath : candidateManifestPath })
+        await checkpoint?.('warmup', { stage: 'warmup', label, root, modulePath: install.modulePath, component, count, rowMode, mode, result: warmup, manifestPath: label === 'baseline' ? baselineManifestPath : candidateManifestPath })
         record[mode].warmup = [{ firstInteractionMs: warmup.warmup[0].firstInteractionMs, discarded: true }]
       }
       for (let round = 0; round < RELEASE_MATRIX.measuredRuns; round++) for (const mode of round % 2 === 0 ? ['full', 'virtual'] : ['virtual', 'full']) {
         const runtimeErrorStart = browserErrors.length
         const measured = await measureCaseWithContext(page, settings, mode, base)
-        await checkpoint?.('round', { stage: 'round', label, root, component, count, rowMode, mode, round, result: measured, manifestPath: label === 'baseline' ? baselineManifestPath : candidateManifestPath })
+        await checkpoint?.('round', { stage: 'round', label, root, modulePath: install.modulePath, component, count, rowMode, mode, round, result: measured, manifestPath: label === 'baseline' ? baselineManifestPath : candidateManifestPath })
         record.alternatingOrder.push(mode)
         record[mode].measured.push({ firstInteractionMs: measured.measured[0].firstInteractionMs })
         record[mode].rowMetrics = measured.rowMetrics
@@ -1392,7 +1400,7 @@ async function collectSide(tarball, label, temporary, { preflight = false, check
         record[mode].medianMs = median(record[mode].measured.map(sample => sample.firstInteractionMs))
       }
       cases[`${component}/${count}/${rowMode}`] = record
-      await checkpoint?.('case', { stage: 'case', label, root, component, count, rowMode, result: record, manifestPath: label === 'baseline' ? baselineManifestPath : candidateManifestPath })
+      await checkpoint?.('case', { stage: 'case', label, root, modulePath: install.modulePath, component, count, rowMode, result: record, manifestPath: label === 'baseline' ? baselineManifestPath : candidateManifestPath })
       ;({ browser, page } = await recycleMeasuredBrowser(page, browser, chromium, browserErrors, hydrationWarnings, cleanupCounters, 'chromiumClose'))
     }
     iframeEvidence = await iframeProbe(page, base, sideArtifactDir)
@@ -1418,7 +1426,7 @@ async function collectSide(tarball, label, temporary, { preflight = false, check
         ;({ browser: other, page: otherPage } = await recycleMeasuredBrowser(otherPage, other, Browser, browserErrors, [], cleanupCounters, `${name}Close`))
       }
       otherBrowsers[name] = { ...summarizeBrowserObserverEvidence(other.version(), observerRounds, browserErrors), coverageCases: coverage }
-      await checkpoint?.('browser', { stage: 'browser', label, root, browser: name, coverageCases: coverage.length, observerRounds: observerRounds.length, result: { coverage, observerRounds }, manifestPath: label === 'baseline' ? baselineManifestPath : candidateManifestPath })
+      await checkpoint?.('browser', { stage: 'browser', label, root, modulePath: install.modulePath, browser: name, coverageCases: coverage.length, observerRounds: observerRounds.length, result: { coverage, observerRounds }, manifestPath: label === 'baseline' ? baselineManifestPath : candidateManifestPath })
       } finally {
         if (other) { await other.close().catch(() => {}); cleanupCounters[`${name}Close`] += 1 }
       }

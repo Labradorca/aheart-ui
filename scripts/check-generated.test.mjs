@@ -57,7 +57,7 @@ test('rejects staged tracked changes in generated directories', (t) => {
 
   assert.equal(runGit(root, ['diff', 'HEAD', '--name-only']).trim(), '')
   assert.equal(runGit(root, ['diff', '--cached', '--name-only']).trim(), generatedFile)
-  assert.throws(() => checkGeneratedOutput(root), /Generated output index differs from HEAD/)
+  assert.throws(() => checkGeneratedOutput(root), /Generated files must not be tracked/)
 })
 
 test('rejects unstaged tracked changes in generated directories', (t) => {
@@ -68,18 +68,15 @@ test('rejects unstaged tracked changes in generated directories', (t) => {
 
   assert.equal(runGit(root, ['diff', '--cached', '--name-only']).trim(), '')
   assert.equal(runGit(root, ['diff', '--name-only']).trim(), generatedFile)
-  assert.throws(() => checkGeneratedOutput(root), /Generated output worktree differs from index/)
+  assert.throws(() => checkGeneratedOutput(root), /Generated files must not be tracked/)
 })
 
-test('rejects ignored untracked files in generated directories', (t) => {
+test('allows ignored generated files outside the index', (t) => {
   const ignoredFile = 'packages/components/es/ignored.d.ts'
   const root = createGitRepository(t, { '.gitignore': `${ignoredFile}\n` })
 
   writeFixture(root, ignoredFile, 'ignored generated output\n')
 
   assert.equal(runGit(root, ['check-ignore', ignoredFile]).trim(), ignoredFile)
-  assert.throws(
-    () => checkGeneratedOutput(root),
-    new RegExp(`Untracked generated files:\\n${ignoredFile.replaceAll('.', '\\.')}`)
-  )
+  assert.doesNotThrow(() => checkGeneratedOutput(root))
 })

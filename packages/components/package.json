@@ -1,312 +1,336 @@
 {
   "name": "aheart-ui",
-  "version": "1.4.0",
+  "version": "2.0.0-alpha.0",
   "description": "Professional Vue 3 components for product interfaces.",
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "types": "es/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
   "sideEffects": [
     "**/*.css"
   ],
   "exports": {
     ".": {
-      "types": "./es/index.d.ts",
-      "import": "./es/index.js",
-      "require": "./lib/index.js"
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
     },
     "./button": {
-      "types": "./es/button/index.d.ts",
-      "import": "./es/button/index.js",
-      "require": "./lib/button/index.js"
+      "types": "./dist/types/button/index.d.ts",
+      "import": "./dist/esm/button/index.js",
+      "require": "./dist/cjs/button/index.js"
     },
     "./combobox": {
-      "types": "./es/combobox/index.d.ts",
-      "import": "./es/combobox/index.js",
-      "require": "./lib/combobox/index.js"
+      "types": "./dist/types/combobox/index.d.ts",
+      "import": "./dist/esm/combobox/index.js",
+      "require": "./dist/cjs/combobox/index.js"
     },
     "./modal": {
-      "types": "./es/modal/index.d.ts",
-      "import": "./es/modal/index.js",
-      "require": "./lib/modal/index.js"
+      "types": "./dist/types/modal/index.d.ts",
+      "import": "./dist/esm/modal/index.js",
+      "require": "./dist/cjs/modal/index.js"
     },
     "./select": {
-      "types": "./es/select/index.d.ts",
-      "import": "./es/select/index.js",
-      "require": "./lib/select/index.js"
+      "types": "./dist/types/select/index.d.ts",
+      "import": "./dist/esm/select/index.js",
+      "require": "./dist/cjs/select/index.js"
     },
     "./full": {
-      "types": "./es/full.d.ts",
-      "import": "./es/full.js",
-      "require": "./lib/full.js"
+      "types": "./dist/types/full.d.ts",
+      "import": "./dist/esm/full.js",
+      "require": "./dist/cjs/full.js"
     },
-    "./theme.css": "./es/theme.css",
-    "./full.css": "./es/full.css",
-    "./button/style.css": "./es/button/style.css",
-    "./combobox/style.css": "./es/combobox/style.css",
-    "./modal/style.css": "./es/modal/style.css",
-    "./select/style.css": "./es/select/style.css",
-    "./style.css": "./es/style.css",
+    "./theme.css": "./dist/styles/theme.css",
+    "./full.css": "./dist/styles/full.css",
+    "./button/style.css": "./dist/styles/button/style.css",
+    "./combobox/style.css": "./dist/styles/combobox/style.css",
+    "./modal/style.css": "./dist/styles/modal/style.css",
+    "./select/style.css": "./dist/styles/select/style.css",
+    "./style.css": "./dist/styles/full.css",
+    "./es/index.js": {
+      "types": "./dist/types/compat/index.d.ts",
+      "default": "./dist/compat/es/index.js"
+    },
+    "./lib/index.js": {
+      "types": "./dist/types/compat/index.d.ts",
+      "default": "./dist/compat/lib/index.js"
+    },
+    "./es/index.d.ts": "./dist/compat/es/index.d.ts",
+    "./lib/index.d.ts": "./dist/compat/lib/index.d.ts",
     "./es/picker-core/*": null,
     "./lib/picker-core/*": null,
-    "./es/*": "./es/*",
-    "./lib/*": "./lib/*",
+    "./es/*": "./dist/compat/es/*",
+    "./lib/*": "./dist/compat/lib/*",
     "./package.json": "./package.json",
     "./constant": {
-      "types": "./es/constant/index.d.ts",
-      "import": "./es/constant/index.js",
-      "require": "./lib/constant/index.js"
+      "types": "./dist/types/constant/index.d.ts",
+      "import": "./dist/esm/constant/index.js",
+      "require": "./dist/cjs/constant/index.js"
     },
     "./resolver": {
-      "types": "./es/resolver/index.d.ts",
-      "import": "./es/resolver/index.js",
-      "require": "./lib/resolver/index.js"
+      "types": "./dist/types/resolver/index.d.ts",
+      "import": "./dist/esm/resolver/index.js",
+      "require": "./dist/cjs/resolver/index.js"
     },
     "./config-provider": {
-      "types": "./es/config-provider/index.d.ts",
-      "import": "./es/config-provider/index.js",
-      "require": "./lib/config-provider/index.js"
+      "types": "./dist/types/config-provider/index.d.ts",
+      "import": "./dist/esm/config-provider/index.js",
+      "require": "./dist/cjs/config-provider/index.js"
     },
-    "./config-provider/style.css": "./es/config-provider/style.css",
+    "./config-provider/style.css": "./dist/styles/config-provider/style.css",
     "./icon": {
-      "types": "./es/icon/index.d.ts",
-      "import": "./es/icon/index.js",
-      "require": "./lib/icon/index.js"
+      "types": "./dist/types/icon/index.d.ts",
+      "import": "./dist/esm/icon/index.js",
+      "require": "./dist/cjs/icon/index.js"
     },
-    "./icon/style.css": "./es/icon/style.css",
+    "./icon/style.css": "./dist/styles/icon/style.css",
     "./typography": {
-      "types": "./es/typography/index.d.ts",
-      "import": "./es/typography/index.js",
-      "require": "./lib/typography/index.js"
+      "types": "./dist/types/typography/index.d.ts",
+      "import": "./dist/esm/typography/index.js",
+      "require": "./dist/cjs/typography/index.js"
     },
-    "./typography/style.css": "./es/typography/style.css",
+    "./typography/style.css": "./dist/styles/typography/style.css",
     "./space": {
-      "types": "./es/space/index.d.ts",
-      "import": "./es/space/index.js",
-      "require": "./lib/space/index.js"
+      "types": "./dist/types/space/index.d.ts",
+      "import": "./dist/esm/space/index.js",
+      "require": "./dist/cjs/space/index.js"
     },
-    "./space/style.css": "./es/space/style.css",
+    "./space/style.css": "./dist/styles/space/style.css",
     "./divider": {
-      "types": "./es/divider/index.d.ts",
-      "import": "./es/divider/index.js",
-      "require": "./lib/divider/index.js"
+      "types": "./dist/types/divider/index.d.ts",
+      "import": "./dist/esm/divider/index.js",
+      "require": "./dist/cjs/divider/index.js"
     },
-    "./divider/style.css": "./es/divider/style.css",
+    "./divider/style.css": "./dist/styles/divider/style.css",
     "./splitter": {
-      "types": "./es/splitter/index.d.ts",
-      "import": "./es/splitter/index.js",
-      "require": "./lib/splitter/index.js"
+      "types": "./dist/types/splitter/index.d.ts",
+      "import": "./dist/esm/splitter/index.js",
+      "require": "./dist/cjs/splitter/index.js"
     },
-    "./splitter/style.css": "./es/splitter/style.css",
+    "./splitter/style.css": "./dist/styles/splitter/style.css",
     "./flex": {
-      "types": "./es/flex/index.d.ts",
-      "import": "./es/flex/index.js",
-      "require": "./lib/flex/index.js"
+      "types": "./dist/types/flex/index.d.ts",
+      "import": "./dist/esm/flex/index.js",
+      "require": "./dist/cjs/flex/index.js"
     },
-    "./flex/style.css": "./es/flex/style.css",
+    "./flex/style.css": "./dist/styles/flex/style.css",
     "./grid": {
-      "types": "./es/grid/index.d.ts",
-      "import": "./es/grid/index.js",
-      "require": "./lib/grid/index.js"
+      "types": "./dist/types/grid/index.d.ts",
+      "import": "./dist/esm/grid/index.js",
+      "require": "./dist/cjs/grid/index.js"
     },
-    "./grid/style.css": "./es/grid/style.css",
+    "./grid/style.css": "./dist/styles/grid/style.css",
     "./tabs": {
-      "types": "./es/tabs/index.d.ts",
-      "import": "./es/tabs/index.js",
-      "require": "./lib/tabs/index.js"
+      "types": "./dist/types/tabs/index.d.ts",
+      "import": "./dist/esm/tabs/index.js",
+      "require": "./dist/cjs/tabs/index.js"
     },
-    "./tabs/style.css": "./es/tabs/style.css",
+    "./tabs/style.css": "./dist/styles/tabs/style.css",
     "./breadcrumb": {
-      "types": "./es/breadcrumb/index.d.ts",
-      "import": "./es/breadcrumb/index.js",
-      "require": "./lib/breadcrumb/index.js"
+      "types": "./dist/types/breadcrumb/index.d.ts",
+      "import": "./dist/esm/breadcrumb/index.js",
+      "require": "./dist/cjs/breadcrumb/index.js"
     },
-    "./breadcrumb/style.css": "./es/breadcrumb/style.css",
+    "./breadcrumb/style.css": "./dist/styles/breadcrumb/style.css",
     "./dropdown": {
-      "types": "./es/dropdown/index.d.ts",
-      "import": "./es/dropdown/index.js",
-      "require": "./lib/dropdown/index.js"
+      "types": "./dist/types/dropdown/index.d.ts",
+      "import": "./dist/esm/dropdown/index.js",
+      "require": "./dist/cjs/dropdown/index.js"
     },
-    "./dropdown/style.css": "./es/dropdown/style.css",
+    "./dropdown/style.css": "./dist/styles/dropdown/style.css",
     "./menu": {
-      "types": "./es/menu/index.d.ts",
-      "import": "./es/menu/index.js",
-      "require": "./lib/menu/index.js"
+      "types": "./dist/types/menu/index.d.ts",
+      "import": "./dist/esm/menu/index.js",
+      "require": "./dist/cjs/menu/index.js"
     },
-    "./menu/style.css": "./es/menu/style.css",
+    "./menu/style.css": "./dist/styles/menu/style.css",
     "./steps": {
-      "types": "./es/steps/index.d.ts",
-      "import": "./es/steps/index.js",
-      "require": "./lib/steps/index.js"
+      "types": "./dist/types/steps/index.d.ts",
+      "import": "./dist/esm/steps/index.js",
+      "require": "./dist/cjs/steps/index.js"
     },
-    "./steps/style.css": "./es/steps/style.css",
+    "./steps/style.css": "./dist/styles/steps/style.css",
     "./input": {
-      "types": "./es/input/index.d.ts",
-      "import": "./es/input/index.js",
-      "require": "./lib/input/index.js"
+      "types": "./dist/types/input/index.d.ts",
+      "import": "./dist/esm/input/index.js",
+      "require": "./dist/cjs/input/index.js"
     },
-    "./input/style.css": "./es/input/style.css",
+    "./input/style.css": "./dist/styles/input/style.css",
     "./date-picker": {
-      "types": "./es/date-picker/index.d.ts",
-      "import": "./es/date-picker/index.js",
-      "require": "./lib/date-picker/index.js"
+      "types": "./dist/types/date-picker/index.d.ts",
+      "import": "./dist/esm/date-picker/index.js",
+      "require": "./dist/cjs/date-picker/index.js"
     },
-    "./date-picker/style.css": "./es/date-picker/style.css",
+    "./date-picker/style.css": "./dist/styles/date-picker/style.css",
     "./time-picker": {
-      "types": "./es/time-picker/index.d.ts",
-      "import": "./es/time-picker/index.js",
-      "require": "./lib/time-picker/index.js"
+      "types": "./dist/types/time-picker/index.d.ts",
+      "import": "./dist/esm/time-picker/index.js",
+      "require": "./dist/cjs/time-picker/index.js"
     },
-    "./time-picker/style.css": "./es/time-picker/style.css",
+    "./time-picker/style.css": "./dist/styles/time-picker/style.css",
     "./upload": {
-      "types": "./es/upload/index.d.ts",
-      "import": "./es/upload/index.js",
-      "require": "./lib/upload/index.js"
+      "types": "./dist/types/upload/index.d.ts",
+      "import": "./dist/esm/upload/index.js",
+      "require": "./dist/cjs/upload/index.js"
     },
-    "./upload/style.css": "./es/upload/style.css",
+    "./upload/style.css": "./dist/styles/upload/style.css",
     "./tree": {
-      "types": "./es/tree/index.d.ts",
-      "import": "./es/tree/index.js",
-      "require": "./lib/tree/index.js"
+      "types": "./dist/types/tree/index.d.ts",
+      "import": "./dist/esm/tree/index.js",
+      "require": "./dist/cjs/tree/index.js"
     },
-    "./tree/style.css": "./es/tree/style.css",
+    "./tree/style.css": "./dist/styles/tree/style.css",
     "./tree-select": {
-      "types": "./es/tree-select/index.d.ts",
-      "import": "./es/tree-select/index.js",
-      "require": "./lib/tree-select/index.js"
+      "types": "./dist/types/tree-select/index.d.ts",
+      "import": "./dist/esm/tree-select/index.js",
+      "require": "./dist/cjs/tree-select/index.js"
     },
-    "./tree-select/style.css": "./es/tree-select/style.css",
+    "./tree-select/style.css": "./dist/styles/tree-select/style.css",
     "./cascader": {
-      "types": "./es/cascader/index.d.ts",
-      "import": "./es/cascader/index.js",
-      "require": "./lib/cascader/index.js"
+      "types": "./dist/types/cascader/index.d.ts",
+      "import": "./dist/esm/cascader/index.js",
+      "require": "./dist/cjs/cascader/index.js"
     },
-    "./cascader/style.css": "./es/cascader/style.css",
+    "./cascader/style.css": "./dist/styles/cascader/style.css",
     "./textarea": {
-      "types": "./es/textarea/index.d.ts",
-      "import": "./es/textarea/index.js",
-      "require": "./lib/textarea/index.js"
+      "types": "./dist/types/textarea/index.d.ts",
+      "import": "./dist/esm/textarea/index.js",
+      "require": "./dist/cjs/textarea/index.js"
     },
-    "./textarea/style.css": "./es/textarea/style.css",
+    "./textarea/style.css": "./dist/styles/textarea/style.css",
     "./input-number": {
-      "types": "./es/input-number/index.d.ts",
-      "import": "./es/input-number/index.js",
-      "require": "./lib/input-number/index.js"
+      "types": "./dist/types/input-number/index.d.ts",
+      "import": "./dist/esm/input-number/index.js",
+      "require": "./dist/cjs/input-number/index.js"
     },
-    "./input-number/style.css": "./es/input-number/style.css",
+    "./input-number/style.css": "./dist/styles/input-number/style.css",
     "./checkbox": {
-      "types": "./es/checkbox/index.d.ts",
-      "import": "./es/checkbox/index.js",
-      "require": "./lib/checkbox/index.js"
+      "types": "./dist/types/checkbox/index.d.ts",
+      "import": "./dist/esm/checkbox/index.js",
+      "require": "./dist/cjs/checkbox/index.js"
     },
-    "./checkbox/style.css": "./es/checkbox/style.css",
+    "./checkbox/style.css": "./dist/styles/checkbox/style.css",
     "./radio": {
-      "types": "./es/radio/index.d.ts",
-      "import": "./es/radio/index.js",
-      "require": "./lib/radio/index.js"
+      "types": "./dist/types/radio/index.d.ts",
+      "import": "./dist/esm/radio/index.js",
+      "require": "./dist/cjs/radio/index.js"
     },
-    "./radio/style.css": "./es/radio/style.css",
+    "./radio/style.css": "./dist/styles/radio/style.css",
     "./switch": {
-      "types": "./es/switch/index.d.ts",
-      "import": "./es/switch/index.js",
-      "require": "./lib/switch/index.js"
+      "types": "./dist/types/switch/index.d.ts",
+      "import": "./dist/esm/switch/index.js",
+      "require": "./dist/cjs/switch/index.js"
     },
-    "./switch/style.css": "./es/switch/style.css",
+    "./switch/style.css": "./dist/styles/switch/style.css",
     "./form": {
-      "types": "./es/form/index.d.ts",
-      "import": "./es/form/index.js",
-      "require": "./lib/form/index.js"
+      "types": "./dist/types/form/index.d.ts",
+      "import": "./dist/esm/form/index.js",
+      "require": "./dist/cjs/form/index.js"
     },
-    "./form/style.css": "./es/form/style.css",
+    "./form/style.css": "./dist/styles/form/style.css",
     "./tag": {
-      "types": "./es/tag/index.d.ts",
-      "import": "./es/tag/index.js",
-      "require": "./lib/tag/index.js"
+      "types": "./dist/types/tag/index.d.ts",
+      "import": "./dist/esm/tag/index.js",
+      "require": "./dist/cjs/tag/index.js"
     },
-    "./tag/style.css": "./es/tag/style.css",
+    "./tag/style.css": "./dist/styles/tag/style.css",
     "./badge": {
-      "types": "./es/badge/index.d.ts",
-      "import": "./es/badge/index.js",
-      "require": "./lib/badge/index.js"
+      "types": "./dist/types/badge/index.d.ts",
+      "import": "./dist/esm/badge/index.js",
+      "require": "./dist/cjs/badge/index.js"
     },
-    "./badge/style.css": "./es/badge/style.css",
+    "./badge/style.css": "./dist/styles/badge/style.css",
     "./card": {
-      "types": "./es/card/index.d.ts",
-      "import": "./es/card/index.js",
-      "require": "./lib/card/index.js"
+      "types": "./dist/types/card/index.d.ts",
+      "import": "./dist/esm/card/index.js",
+      "require": "./dist/cjs/card/index.js"
     },
-    "./card/style.css": "./es/card/style.css",
+    "./card/style.css": "./dist/styles/card/style.css",
     "./empty": {
-      "types": "./es/empty/index.d.ts",
-      "import": "./es/empty/index.js",
-      "require": "./lib/empty/index.js"
+      "types": "./dist/types/empty/index.d.ts",
+      "import": "./dist/esm/empty/index.js",
+      "require": "./dist/cjs/empty/index.js"
     },
-    "./empty/style.css": "./es/empty/style.css",
+    "./empty/style.css": "./dist/styles/empty/style.css",
     "./descriptions": {
-      "types": "./es/descriptions/index.d.ts",
-      "import": "./es/descriptions/index.js",
-      "require": "./lib/descriptions/index.js"
+      "types": "./dist/types/descriptions/index.d.ts",
+      "import": "./dist/esm/descriptions/index.js",
+      "require": "./dist/cjs/descriptions/index.js"
     },
-    "./descriptions/style.css": "./es/descriptions/style.css",
+    "./descriptions/style.css": "./dist/styles/descriptions/style.css",
     "./table": {
-      "types": "./es/table/index.d.ts",
-      "import": "./es/table/index.js",
-      "require": "./lib/table/index.js"
+      "types": "./dist/types/table/index.d.ts",
+      "import": "./dist/esm/table/index.js",
+      "require": "./dist/cjs/table/index.js"
     },
-    "./table/style.css": "./es/table/style.css",
+    "./table/style.css": "./dist/styles/table/style.css",
     "./pagination": {
-      "types": "./es/pagination/index.d.ts",
-      "import": "./es/pagination/index.js",
-      "require": "./lib/pagination/index.js"
+      "types": "./dist/types/pagination/index.d.ts",
+      "import": "./dist/esm/pagination/index.js",
+      "require": "./dist/cjs/pagination/index.js"
     },
-    "./pagination/style.css": "./es/pagination/style.css",
+    "./pagination/style.css": "./dist/styles/pagination/style.css",
     "./alert": {
-      "types": "./es/alert/index.d.ts",
-      "import": "./es/alert/index.js",
-      "require": "./lib/alert/index.js"
+      "types": "./dist/types/alert/index.d.ts",
+      "import": "./dist/esm/alert/index.js",
+      "require": "./dist/cjs/alert/index.js"
     },
-    "./alert/style.css": "./es/alert/style.css",
+    "./alert/style.css": "./dist/styles/alert/style.css",
     "./message": {
-      "types": "./es/message/index.d.ts",
-      "import": "./es/message/index.js",
-      "require": "./lib/message/index.js"
+      "types": "./dist/types/message/index.d.ts",
+      "import": "./dist/esm/message/index.js",
+      "require": "./dist/cjs/message/index.js"
     },
-    "./message/style.css": "./es/message/style.css",
+    "./message/style.css": "./dist/styles/message/style.css",
     "./drawer": {
-      "types": "./es/drawer/index.d.ts",
-      "import": "./es/drawer/index.js",
-      "require": "./lib/drawer/index.js"
+      "types": "./dist/types/drawer/index.d.ts",
+      "import": "./dist/esm/drawer/index.js",
+      "require": "./dist/cjs/drawer/index.js"
     },
-    "./drawer/style.css": "./es/drawer/style.css",
+    "./drawer/style.css": "./dist/styles/drawer/style.css",
     "./tooltip": {
-      "types": "./es/tooltip/index.d.ts",
-      "import": "./es/tooltip/index.js",
-      "require": "./lib/tooltip/index.js"
+      "types": "./dist/types/tooltip/index.d.ts",
+      "import": "./dist/esm/tooltip/index.js",
+      "require": "./dist/cjs/tooltip/index.js"
     },
-    "./tooltip/style.css": "./es/tooltip/style.css",
+    "./tooltip/style.css": "./dist/styles/tooltip/style.css",
     "./popover": {
-      "types": "./es/popover/index.d.ts",
-      "import": "./es/popover/index.js",
-      "require": "./lib/popover/index.js"
+      "types": "./dist/types/popover/index.d.ts",
+      "import": "./dist/esm/popover/index.js",
+      "require": "./dist/cjs/popover/index.js"
     },
-    "./popover/style.css": "./es/popover/style.css",
+    "./popover/style.css": "./dist/styles/popover/style.css",
     "./popconfirm": {
-      "types": "./es/popconfirm/index.d.ts",
-      "import": "./es/popconfirm/index.js",
-      "require": "./lib/popconfirm/index.js"
+      "types": "./dist/types/popconfirm/index.d.ts",
+      "import": "./dist/esm/popconfirm/index.js",
+      "require": "./dist/cjs/popconfirm/index.js"
     },
-    "./popconfirm/style.css": "./es/popconfirm/style.css",
+    "./popconfirm/style.css": "./dist/styles/popconfirm/style.css",
     "./spin": {
-      "types": "./es/spin/index.d.ts",
-      "import": "./es/spin/index.js",
-      "require": "./lib/spin/index.js"
+      "types": "./dist/types/spin/index.d.ts",
+      "import": "./dist/esm/spin/index.js",
+      "require": "./dist/cjs/spin/index.js"
     },
-    "./spin/style.css": "./es/spin/style.css",
+    "./spin/style.css": "./dist/styles/spin/style.css",
     "./skeleton": {
-      "types": "./es/skeleton/index.d.ts",
-      "import": "./es/skeleton/index.js",
-      "require": "./lib/skeleton/index.js"
+      "types": "./dist/types/skeleton/index.d.ts",
+      "import": "./dist/esm/skeleton/index.js",
+      "require": "./dist/cjs/skeleton/index.js"
     },
-    "./skeleton/style.css": "./es/skeleton/style.css"
+    "./skeleton/style.css": "./dist/styles/skeleton/style.css",
+    "./es/*.d.ts": "./dist/compat/es/*.d.ts",
+    "./es/*.css": "./dist/compat/es/*.css",
+    "./es/style.css": "./dist/compat/es/style.css",
+    "./lib/*.d.ts": "./dist/compat/lib/*.d.ts",
+    "./lib/*.css": "./dist/compat/lib/*.css",
+    "./lib/style.css": "./dist/compat/lib/style.css",
+    "./es/*.js": {
+      "types": "./dist/types/*.d.ts",
+      "default": "./dist/compat/es/*.js"
+    },
+    "./lib/*.js": {
+      "types": "./dist/types/*.d.ts",
+      "default": "./dist/compat/lib/*.js"
+    }
   },
   "scripts": {
     "build": "vite build",
@@ -317,8 +341,9 @@
     "test:watch": "vitest --environment jsdom"
   },
   "files": [
-    "es",
-    "lib"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "keywords": [
     "aheart-ui",
@@ -340,6 +365,7 @@
   },
   "publishConfig": {
     "access": "public",
+    "tag": "next",
     "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {

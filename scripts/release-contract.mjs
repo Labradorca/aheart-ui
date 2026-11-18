@@ -5,25 +5,32 @@ import { resolve } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { publicRuntimeExports, publicStyleExports } from '../packages/components/build/entries.mjs'
 import { getComponentEntries, optionalPackageExports } from '../packages/build/package-entries.mjs'
+import { distRuntimeExport } from '../packages/build/dist-layout.mjs'
 
 const repositoryRoot = resolve(fileURLToPath(new URL('..', import.meta.url)))
 
 const commonPackageFiles = ['README.md', 'LICENSE', 'package.json', 'es/package.json', 'es/index.js', 'es/index.d.ts', 'es/style.css', 'lib/package.json', 'lib/index.js', 'lib/index.d.ts', 'lib/style.css']
-const filesForExports = (exports) => [...new Set([...commonPackageFiles, ...Object.values(exports)
+const distPackageFiles = ['README.md', 'LICENSE', 'package.json', 'dist/esm/package.json', 'dist/cjs/package.json']
+const filesForExports = (exports, common = commonPackageFiles) => [...new Set([...common, ...Object.values(exports)
   .flatMap(value => typeof value === 'string' ? [value] : Object.values(value))
   .map(target => target.slice(2))])]
-const baseExports = { ...publicRuntimeExports, ...publicStyleExports }
+const baseExports = { '.': distRuntimeExport('index'), './style.css': './dist/styles/full.css', ...publicRuntimeExports, ...publicStyleExports }
 const dndExports = optionalPackageExports(getComponentEntries('dnd'))
-const aiExports = optionalPackageExports(getComponentEntries('ai'))
+const aiExports = {
+  '.': distRuntimeExport('index'),
+  './style.css': './dist/styles/style.css',
+  ...optionalPackageExports(getComponentEntries('ai'), { dist: true, fullEntry: 'full' })
+}
 
 export const packageContracts = [
   {
     name: 'aheart-ui',
-    version: '1.4.0',
+    version: '2.0.0-alpha.0',
     packageDir: 'packages/components',
     expectedExports: baseExports,
+    dist: true,
     cssSideEffects: true,
-    requiredFiles: filesForExports(baseExports)
+    requiredFiles: filesForExports(baseExports, distPackageFiles)
   },
   {
     name: '@aheart-ui/dnd',
@@ -39,14 +46,15 @@ export const packageContracts = [
   },
   {
     name: '@aheart-ui/ai',
-    version: '1.2.0',
+    version: '2.0.0-alpha.0',
     packageDir: 'packages/ai',
     expectedExports: aiExports,
+    dist: true,
     cssSideEffects: true,
     expectedVuePeer: '>=3.5.0 <4',
-    expectedDependencies: { '@aheart-ui/dnd': '^1.1.0' },
-    expectedPeerDependencies: { 'aheart-ui': '^1.4.0' },
-    requiredFiles: filesForExports(aiExports)
+    expectedPeerDependencies: { 'aheart-ui': '^2.0.0-alpha.0', '@aheart-ui/dnd': '^1.1.0' },
+    expectedOptionalPeers: ['@aheart-ui/dnd'],
+    requiredFiles: filesForExports(aiExports, distPackageFiles)
   }
 ]
 
@@ -75,12 +83,25 @@ export const validatePackageContract = (contract, manifest, packedFiles) => {
   if (manifest.publishConfig?.registry !== 'https://registry.npmjs.org/') {
     errors.push(`${prefix} publishConfig.registry must be https://registry.npmjs.org/`)
   }
+  if (contract.version.includes('-') && manifest.publishConfig?.tag !== 'next') {
+    errors.push(`${prefix} prereleases must use the next dist-tag`)
+  }
 
   const rootExport = manifest.exports?.['.']
-  if (rootExport?.types !== './es/index.d.ts') errors.push(`${prefix} exports["."].types must be ./es/index.d.ts`)
-  if (rootExport?.import !== './es/index.js') errors.push(`${prefix} exports["."].import must be ./es/index.js`)
-  if (rootExport?.require !== './lib/index.js') errors.push(`${prefix} exports["."].require must be ./lib/index.js`)
-  if (manifest.exports?.['./style.css'] !== './es/style.css') errors.push(`${prefix} style export must be ./es/style.css`)
+  const expectedRoot = contract.expectedExports?.['.'] ?? { types: './es/index.d.ts', import: './es/index.js', require: './lib/index.js' }
+  for (const [condition, target] of Object.entries(expectedRoot)) {
+    if (rootExport?.[condition] !== target) errors.push(`${prefix} exports["."].${condition} must be ${target}`)
+  }
+  const expectedStyle = contract.expectedExports?.['./style.css'] ?? './es/style.css'
+  if (manifest.exports?.['./style.css'] !== expectedStyle) errors.push(`${prefix} style export must be ${expectedStyle}`)
+  if (contract.dist) {
+    for (const [field, condition] of [['main', 'require'], ['module', 'import'], ['types', 'types']]) {
+      if (manifest[field] !== expectedRoot[condition].slice(2)) errors.push(`${prefix} ${field} must resolve to the dist root entry`)
+    }
+    for (const file of files) {
+      if (!file.startsWith('dist/') && !distPackageFiles.includes(file)) errors.push(`${prefix} tarball must not include ${file}`)
+    }
+  }
   if (manifest.exports?.['./package.json'] !== './package.json') errors.push(`${prefix} package.json export is required`)
   for (const [subpath, expected] of Object.entries(contract.expectedExports ?? {})) {
     if (JSON.stringify(manifest.exports?.[subpath]) !== JSON.stringify(expected)) errors.push(`${prefix} export ${subpath} must match its public entry contract`)
@@ -99,6 +120,12 @@ export const validatePackageContract = (contract, manifest, packedFiles) => {
 
   for (const [name, range] of Object.entries(contract.expectedPeerDependencies ?? {})) {
     if (manifest.peerDependencies?.[name] !== range) errors.push(`${prefix} peer dependency ${name} must be ${range}`)
+  }
+  for (const name of contract.expectedOptionalPeers ?? []) {
+    if (manifest.peerDependenciesMeta?.[name]?.optional !== true) errors.push(`${prefix} ${name} must be an optional peer`)
+    if (manifest.dependencies?.[name] || manifest.optionalDependencies?.[name]) {
+      errors.push(`${prefix} ${name} must be installed explicitly by the consumer`)
+    }
   }
 
   for (const file of contract.requiredFiles) {

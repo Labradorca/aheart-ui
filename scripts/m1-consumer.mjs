@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import { execFile } from 'node:child_process'
 import { createHash } from 'node:crypto'
 import { cp, lstat, mkdir, mkdtemp, readFile, realpath, writeFile } from 'node:fs/promises'
+import { createRequire } from 'node:module'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
@@ -20,6 +21,7 @@ const tarball = await realpath(arg('--tarball') ?? `test-results/release-tarball
 const output = path.resolve(arg('--out') ?? 'test-results/m1-consumer')
 await mkdir(output, { recursive: true })
 const consumer = await realpath(await mkdtemp(path.join(tmpdir(), 'aheart-m1-consumer-')))
+const resolveConsumer = createRequire(path.join(consumer, 'package.json')).resolve
 const hash = data => createHash('sha256').update(data).digest('hex')
 const results = { status: 'failed', consumer, tarball, tarballSHA256: hash(await readFile(tarball)), builds: {}, styles: {}, node: process.version }
 const capture = async (name, command, args) => {
@@ -47,19 +49,24 @@ import assert from 'node:assert/strict'
 import { createRequire } from 'node:module'
 import { createSSRApp, h } from 'vue'
 import { renderToString } from 'vue/server-renderer'
-import Root, { Button, Combobox, Modal, Select } from 'aheart-ui'
+import * as Root from 'aheart-ui'
+import { Button, Combobox, Modal, Select } from 'aheart-ui'
 import Full from 'aheart-ui/full'
+import LegacyFull from 'aheart-ui/es/index.js'
 const require = createRequire(import.meta.url)
-assert.equal(Full, Root)
+assert.equal(Object.hasOwn(Root, 'default'), false)
+assert.equal(Object.hasOwn(require('aheart-ui'), 'default'), false)
+assert.equal(typeof Full.install, 'function')
+assert.equal(LegacyFull, Full)
 for (const [entry, expected] of [['button', Button], ['combobox', Combobox], ['modal', Modal], ['select', Select]]) {
   const esm = await import('aheart-ui/' + entry)
   assert.equal(esm.default, expected)
   assert.equal(require('aheart-ui/' + entry).default, require('aheart-ui')[entry[0].toUpperCase() + entry.slice(1)])
-  assert.ok(require.resolve('aheart-ui/' + entry + '/style.css').endsWith('/es/' + entry + '/style.css'))
+  assert.ok(require.resolve('aheart-ui/' + entry + '/style.css').endsWith('/dist/styles/' + entry + '/style.css'))
   assert.equal((await import('aheart-ui/es/' + entry + '/index.js')).default, expected)
   assert.equal(typeof await renderToString(createSSRApp({ render: () => h(esm.default, entry === 'combobox' ? { options: [] } : {}) })), 'string')
 }
-assert.equal(require('aheart-ui/full').default, require('aheart-ui').default)
+assert.equal(require('aheart-ui/full').default, require('aheart-ui/lib/index.js').default)
 assert.equal(typeof window, 'undefined')
 console.log('ESM/CJS/default/named/legacy and SSR passed')
 `)
@@ -86,7 +93,7 @@ export default defineConfig({ build: { minify: true }, plugins: [{
   modes.push({ name: 'bare-button', code: "import C from 'aheart-ui/button'", styles: [] })
   modes.push({ name: 'legacy-button', code: "import C from 'aheart-ui/es/button/index.js'", styles: ['aheart-ui/style.css'] })
   modes.push({ name: 'full', plugin: 'aheart-ui/full', styles: ['aheart-ui/full.css'] })
-  modes.push({ name: 'legacy-full', plugin: 'aheart-ui', styles: ['aheart-ui/style.css'] })
+  modes.push({ name: 'legacy-full', plugin: 'aheart-ui/es/index.js', styles: ['aheart-ui/style.css'] })
   for (const mode of modes) {
     const source = mode.plugin
       ? `import {createApp,h,resolveComponent} from 'vue';import Plugin from '${mode.plugin}';const app=createApp({render:()=>h(resolveComponent('AButton'))});app.use(Plugin);app.mount('#app');`
@@ -102,6 +109,13 @@ export default defineConfig({ build: { minify: true }, plugins: [{
     if (mode.styles.length) assert.ok(cssBytes > 0, `${mode.name} CSS was pruned`)
     else assert.equal(cssBytes, 0, `${mode.name} runtime introduced implicit CSS`)
     results.builds[mode.name] = { jsGzip, cssBytes, parsedModules: graph.parsed.length }
+    if (mode.name.startsWith('root-')) {
+      assert.ok(!graph.parsed.some(id => /\/aheart-ui\/dist\/esm\/(full|plugin)\.js$/.test(id)), `${mode.name} resolved the full Plugin`)
+      const forbidden = graph.modules.filter(({ id, renderedLength }) => renderedLength > 0 && (
+        /\/aheart-ui\/dist\/esm\/(?:table\/|date-picker\/)/.test(id) || /\/@aheart-ui\/(?:ai|dnd)\//.test(id)
+      ))
+      assert.deepEqual(forbidden, [], `${mode.name} production bundle retained unrelated modules`)
+    }
     const allowed = {
       button: ['button', 'icon'],
       combobox: ['combobox'],
@@ -111,19 +125,19 @@ export default defineConfig({ build: { minify: true }, plugins: [{
     if (allowed) {
       const unrelated = graph.parsed.filter(id => {
         if (/\/@aheart-ui\/(ai|dnd)\//.test(id)) return true
-        const match = /\/node_modules\/aheart-ui\/es\/([^/]+)\/(.+)/.exec(id)
+        const match = /\/node_modules\/aheart-ui\/dist\/esm\/([^/]+)\/(.+)/.exec(id)
         return match && ![...allowed, 'utils', 'config'].includes(match[1]) && !(match[1] === 'form' && !match[2].includes('.vue'))
       })
       assert.deepEqual(unrelated, [], `${mode.name} parsed unrelated components`)
     }
   }
-  const full = await readFile(path.join(installed, 'es/full.css'))
-  assert.deepEqual(full, await readFile(path.join(installed, 'es/style.css')))
-  const theme = await readFile(path.join(installed, 'es/theme.css'))
+  const full = await readFile(resolveConsumer('aheart-ui/full.css'))
+  assert.deepEqual(full, await readFile(resolveConsumer('aheart-ui/style.css')))
+  const theme = await readFile(resolveConsumer('aheart-ui/theme.css'))
   assert.ok(theme.length <= full.length * 0.05)
   results.styles = { fullBytes: full.length, themeBytes: theme.length, components: {} }
   for (const { subpath } of componentEntries) {
-    const css = await readFile(path.join(installed, `es/${subpath}/style.css`))
+    const css = await readFile(resolveConsumer(`aheart-ui/${subpath}/style.css`))
     assert.ok(css.length <= full.length * 0.25)
     assert.ok(css.length + theme.length <= full.length * 0.30)
     assert.ok(!/\.aheart-(table|ai-|dnd-)/.test(css.toString()))

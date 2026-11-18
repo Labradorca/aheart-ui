@@ -1,0 +1,587 @@
+{
+  "status": "passed",
+  "candidate": "local V2 implementation at pre-versioning step",
+  "steps": {
+    "migrated-pilots": {
+      "exitCode": 0,
+      "fullResult": "test-results/v2-migrate-work/migrated-pilots/results.json",
+      "pilots": [
+        {
+          "name": "clean-consumer",
+          "packages": {
+            "aheart-ui": {
+              "version": "1.4.0",
+              "symlink": false,
+              "tarball": {
+                "path": "/Users/start/code/aheart-ui-wt/v2-alpha/test-results/v2-explicit-css/consumer-packs/aheart-ui-1.4.0.tgz",
+                "version": "1.4.0",
+                "sha256": "67c2268c508c85451c775b494584e9a49d4ece7115fa7f226b1d6c541af8a87b"
+              }
+            },
+            "vue": {
+              "version": "3.5.44",
+              "symlink": false
+            }
+          },
+          "migration": {
+            "changes": [
+              {
+                "file": "main.js",
+                "changes": [
+                  {
+                    "offset": 106,
+                    "reason": "public path replaces equivalent legacy ESM/CSS path"
+                  }
+                ],
+                "before": "0f091d6f4a767a7cf8d07c97e95cf55348ee09a8408eb75f3c29eb2b0fa2ae60",
+                "after": "987fdb337e1a06469747dacefd9e48923f487602c7b6dab320eefb1d4b861104"
+              }
+            ],
+            "manual": [],
+            "outsideGuide": 0
+          },
+          "lockSha256": "70987fcad758601f3abc35ff3b16a121a287c25fcf5ca771d6c318d6620602cc",
+          "views": [
+            {
+              "browserEngine": "chromium",
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              },
+              "status": "passed"
+            },
+            {
+              "browserEngine": "chromium",
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "name": "ai-review-gate",
+          "packages": {
+            "aheart-ui": {
+              "version": "1.4.0",
+              "symlink": false,
+              "tarball": {
+                "path": "/Users/start/code/aheart-ui-wt/v2-alpha/test-results/v2-explicit-css/consumer-packs/aheart-ui-1.4.0.tgz",
+                "version": "1.4.0",
+                "sha256": "67c2268c508c85451c775b494584e9a49d4ece7115fa7f226b1d6c541af8a87b"
+              }
+            },
+            "vue": {
+              "version": "3.5.44",
+              "symlink": false
+            },
+            "@aheart-ui/ai": {
+              "version": "1.2.0",
+              "symlink": false,
+              "tarball": {
+                "path": "/Users/start/code/aheart-ui-wt/v2-alpha/test-results/v2-explicit-css/consumer-packs/aheart-ui-ai-1.2.0.tgz",
+                "version": "1.2.0",
+                "sha256": "3971f1c56e4aebeaec2ef9766a38c2c9339224c5316b7e04b092adda5bed34fb"
+              }
+            },
+            "@aheart-ui/dnd": {
+              "version": "1.1.0",
+              "symlink": false,
+              "tarball": {
+                "path": "/Users/start/code/aheart-ui-wt/v2-alpha/test-results/v2-explicit-css/consumer-packs/aheart-ui-dnd-1.1.0.tgz",
+                "version": "1.1.0",
+                "sha256": "8cbc23c703b7250154c7d8afd2c18bf0e2ba3fe16f6bd6a82754967caf54747a"
+              }
+            }
+          },
+          "migration": {
+            "changes": [
+              {
+                "file": "app.js",
+                "changes": [
+                  {
+                    "offset": 132,
+                    "reason": "Workbench moves to explicit entry"
+                  }
+                ],
+                "before": "21683dfa77c8a7688ead0dd4424fe1a8a944fe578aa39edc2a061b0578de3383",
+                "after": "c854911cefeb732b871e1b3c8b0299916595fe953661aed1ba5f09364341a5de"
+              },
+              {
+                "file": "main.js",
+                "changes": [
+                  {
+                    "offset": 106,
+                    "reason": "public path replaces equivalent legacy ESM/CSS path"
+                  },
+                  {
+                    "offset": 135,
+                    "reason": "public path replaces equivalent legacy ESM/CSS path"
+                  },
+                  {
+                    "offset": 168,
+                    "reason": "public path replaces equivalent legacy ESM/CSS path"
+                  }
+                ],
+                "before": "6746cbff194ca2f4727e95c163a36484c08d83b7b37b86881fe541fa0c23f99d",
+                "after": "46db0dff19719bb39244b8f53dc73cd8693d021cb53f72ed2a40b51a59a8b52d"
+              },
+              {
+                "file": "types.ts",
+                "changes": [
+                  {
+                    "offset": 227,
+                    "reason": "Workbench moves to explicit entry"
+                  }
+                ],
+                "before": "e830ab15fb2043e2f50951797db623b35d6c08aa8490960af65921533254e72c",
+                "after": "db924f7fa119a9d186f42b8b91014ab2e9ed088a240a0211bca7011dd1c681d1"
+              }
+            ],
+            "manual": [],
+            "outsideGuide": 0
+          },
+          "lockSha256": "489d014fa25633d1faf5b5502aa75ebf5f0bbfd3effccf52fbebf022b29d3bd1",
+          "views": [
+            {
+              "browserEngine": "chromium",
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              },
+              "status": "passed"
+            },
+            {
+              "browserEngine": "chromium",
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "status": "passed"
+            }
+          ]
+        }
+      ]
+    },
+    "rollback-pilots": {
+      "exitCode": 0,
+      "fullResult": "test-results/v2-migrate-work/rollback-pilots/results.json",
+      "pilots": [
+        {
+          "name": "clean-consumer",
+          "packages": {
+            "aheart-ui": {
+              "version": "1.4.0",
+              "symlink": false,
+              "registry": {
+                "resolved": "https://registry.npmjs.org/aheart-ui/-/aheart-ui-1.4.0.tgz",
+                "integrity": "sha512-gehbFrCkcVp6ElhKZ3bu6SobrIgKjDrxtObz17cOXNS6Ha78jFUzO197piVLiWpfLvRxdILAvJZciDhmHbmoAA=="
+              }
+            },
+            "vue": {
+              "version": "3.5.44",
+              "symlink": false
+            }
+          },
+          "lockSha256": "94aff4b92a827a4eb4be82a92211697b37a9b93f63ca3833e5cfd4640b0c62c9",
+          "restoredLock": true,
+          "views": [
+            {
+              "browserEngine": "chromium",
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              },
+              "status": "passed"
+            },
+            {
+              "browserEngine": "chromium",
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "name": "ai-review-gate",
+          "packages": {
+            "aheart-ui": {
+              "version": "1.4.0",
+              "symlink": false,
+              "registry": {
+                "resolved": "https://registry.npmjs.org/aheart-ui/-/aheart-ui-1.4.0.tgz",
+                "integrity": "sha512-gehbFrCkcVp6ElhKZ3bu6SobrIgKjDrxtObz17cOXNS6Ha78jFUzO197piVLiWpfLvRxdILAvJZciDhmHbmoAA=="
+              }
+            },
+            "vue": {
+              "version": "3.5.44",
+              "symlink": false
+            },
+            "@aheart-ui/ai": {
+              "version": "1.2.0",
+              "symlink": false,
+              "registry": {
+                "resolved": "https://registry.npmjs.org/@aheart-ui/ai/-/ai-1.2.0.tgz",
+                "integrity": "sha512-QzCxTavbGOg4VZHjDOjVcjEXuegt+KmgpC1kAiYFwfSIZlF2QTsB+NEpnivoyaVLRlCEiWcGsBRLUSXuz9hu4g=="
+              }
+            },
+            "@aheart-ui/dnd": {
+              "version": "1.1.0",
+              "symlink": false,
+              "registry": {
+                "resolved": "https://registry.npmjs.org/@aheart-ui/dnd/-/dnd-1.1.0.tgz",
+                "integrity": "sha512-Rg64ck5Ernu3GcR6BHf0C0SwRUpRMF0WFUQdNFkqvd46+ZbbRusRU4yFZ7tr7RRMhli15v/H1Gh2DfCVnzFJTA=="
+              }
+            }
+          },
+          "lockSha256": "bd64eefe6648b256430ec07baedb6d81434c438c534fa8d4c3d9b848df77aa7a",
+          "restoredLock": true,
+          "views": [
+            {
+              "browserEngine": "chromium",
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              },
+              "status": "passed"
+            },
+            {
+              "browserEngine": "chromium",
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "status": "passed"
+            }
+          ]
+        }
+      ]
+    },
+    "a2-1.3-pilots": {
+      "exitCode": 0,
+      "fullResult": "test-results/v2-migrate-work/a2-1.3-pilots/results.json",
+      "pilots": [
+        {
+          "name": "clean-consumer",
+          "packages": {
+            "aheart-ui": {
+              "version": "1.3.0",
+              "symlink": false,
+              "registry": {
+                "resolved": "https://registry.npmjs.org/aheart-ui/-/aheart-ui-1.3.0.tgz",
+                "integrity": "sha512-w3h6Vp/+v/+4cUPtdZrn54pY4wS/mQj00zpZT62pWyXe6nVGpbiPYfSKHJ7kt9UL/HPt0JSmPhX9T+TAfK+E2Q=="
+              }
+            },
+            "vue": {
+              "version": "3.5.44",
+              "symlink": false
+            }
+          },
+          "lockSha256": "ef9f999c616880bfe3c485dc42aab1eba42279aae2900a25a545a4329cb7d708",
+          "views": [
+            {
+              "browserEngine": "chromium",
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              },
+              "status": "passed"
+            },
+            {
+              "browserEngine": "chromium",
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "name": "ai-review-gate",
+          "packages": {
+            "aheart-ui": {
+              "version": "1.3.0",
+              "symlink": false,
+              "registry": {
+                "resolved": "https://registry.npmjs.org/aheart-ui/-/aheart-ui-1.3.0.tgz",
+                "integrity": "sha512-w3h6Vp/+v/+4cUPtdZrn54pY4wS/mQj00zpZT62pWyXe6nVGpbiPYfSKHJ7kt9UL/HPt0JSmPhX9T+TAfK+E2Q=="
+              }
+            },
+            "vue": {
+              "version": "3.5.44",
+              "symlink": false
+            },
+            "@aheart-ui/ai": {
+              "version": "1.1.0",
+              "symlink": false,
+              "registry": {
+                "resolved": "https://registry.npmjs.org/@aheart-ui/ai/-/ai-1.1.0.tgz",
+                "integrity": "sha512-IFl3JfqqAL/4qE32qEujgIyndidYMEx3oxeopQ9J7Xvxr+7VeCwDNrbp0sj/5dafFTRVCfGRU5w/Psh/vqpmvw=="
+              }
+            },
+            "@aheart-ui/dnd": {
+              "version": "1.1.0",
+              "symlink": false,
+              "registry": {
+                "resolved": "https://registry.npmjs.org/@aheart-ui/dnd/-/dnd-1.1.0.tgz",
+                "integrity": "sha512-Rg64ck5Ernu3GcR6BHf0C0SwRUpRMF0WFUQdNFkqvd46+ZbbRusRU4yFZ7tr7RRMhli15v/H1Gh2DfCVnzFJTA=="
+              }
+            }
+          },
+          "lockSha256": "87d26341ec5c36337c6542cff23662f95e1403ee19f69f451466e4e770971439",
+          "views": [
+            {
+              "browserEngine": "chromium",
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              },
+              "status": "passed"
+            },
+            {
+              "browserEngine": "chromium",
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "status": "passed"
+            }
+          ]
+        }
+      ]
+    },
+    "baseline-tools": {
+      "exitCode": 0,
+      "fullResult": "test-results/v2-migrate-work/baseline-tools/results.json",
+      "productionDiagnosticCount": 0
+    },
+    "candidate-tools": {
+      "exitCode": 0,
+      "fullResult": "test-results/v2-migrate-work/candidate-tools/results.json",
+      "productionDiagnosticCount": 0
+    },
+    "form": {
+      "exitCode": 0,
+      "fullResult": "test-results/v2-migrate-work/form/results.json"
+    },
+    "d8-r2": {
+      "exitCode": 0,
+      "fullResult": "test-results/v2-migrate-work/d8-r2/results.json",
+      "initialFailure": "The v1 fixture inspected physical es/lib roots. It now validates the same files through the installed manifest and legacy exports."
+    },
+    "state": {
+      "status": "passed",
+      "restoration": "passed",
+      "stages": [
+        {
+          "name": "baseline",
+          "tasks": [
+            {
+              "id": 1,
+              "title": "核对组件样式",
+              "done": false
+            },
+            {
+              "id": 2,
+              "title": "迁移前保留任务",
+              "done": true
+            }
+          ],
+          "core": {
+            "version": "1.4.0",
+            "resolved": "https://registry.npmjs.org/aheart-ui/-/aheart-ui-1.4.0.tgz",
+            "integrity": "sha512-gehbFrCkcVp6ElhKZ3bu6SobrIgKjDrxtObz17cOXNS6Ha78jFUzO197piVLiWpfLvRxdILAvJZciDhmHbmoAA==",
+            "license": "MIT",
+            "dependencies": {
+              "@floating-ui/dom": "^1.8.0",
+              "@lucide/vue": "^1.24.0",
+              "@tanstack/vue-virtual": "3.13.36",
+              "dayjs": "^1.11.13"
+            },
+            "peerDependencies": {
+              "vue": ">=3.4.0 <4"
+            }
+          },
+          "foreground": "rgb(0, 62, 179)"
+        },
+        {
+          "name": "upgrade",
+          "tasks": [
+            {
+              "id": 1,
+              "title": "核对组件样式",
+              "done": false
+            },
+            {
+              "id": 2,
+              "title": "迁移前保留任务",
+              "done": false
+            },
+            {
+              "id": 3,
+              "title": "候选期间新增任务",
+              "done": true
+            }
+          ],
+          "core": {
+            "version": "1.4.0",
+            "resolved": "file:../../../test-results/v2-explicit-css/consumer-packs/aheart-ui-1.4.0.tgz",
+            "integrity": "sha512-JURIpqc75lB4FfUjdZ6Cx48+12d3iP2S34+LOlfSKJPIiEW0omg0JCSamdhCSp5XdvhBmR/ocdglaKX5ZzRP3A==",
+            "license": "MIT",
+            "dependencies": {
+              "@floating-ui/dom": "^1.8.0",
+              "@lucide/vue": "^1.24.0",
+              "@tanstack/vue-virtual": "3.13.36",
+              "dayjs": "^1.11.13"
+            },
+            "peerDependencies": {
+              "vue": ">=3.4.0 <4"
+            }
+          },
+          "foreground": "rgb(0, 62, 179)"
+        },
+        {
+          "name": "rollback",
+          "tasks": [
+            {
+              "id": 1,
+              "title": "核对组件样式",
+              "done": false
+            },
+            {
+              "id": 3,
+              "title": "候选期间新增任务",
+              "done": true
+            }
+          ],
+          "core": {
+            "version": "1.4.0",
+            "resolved": "https://registry.npmjs.org/aheart-ui/-/aheart-ui-1.4.0.tgz",
+            "integrity": "sha512-gehbFrCkcVp6ElhKZ3bu6SobrIgKjDrxtObz17cOXNS6Ha78jFUzO197piVLiWpfLvRxdILAvJZciDhmHbmoAA==",
+            "license": "MIT",
+            "dependencies": {
+              "@floating-ui/dom": "^1.8.0",
+              "@lucide/vue": "^1.24.0",
+              "@tanstack/vue-virtual": "3.13.36",
+              "dayjs": "^1.11.13"
+            },
+            "peerDependencies": {
+              "vue": ">=3.4.0 <4"
+            }
+          },
+          "foreground": "rgb(0, 62, 179)"
+        }
+      ],
+      "commands": [
+        {
+          "label": "baseline-install",
+          "args": [
+            "ci",
+            "--include=dev",
+            "--ignore-scripts",
+            "--no-audit",
+            "--no-fund",
+            "--registry=https://registry.npmjs.org/"
+          ],
+          "exitCode": 0
+        },
+        {
+          "label": "baseline-build",
+          "args": [
+            "run",
+            "build"
+          ],
+          "exitCode": 0
+        },
+        {
+          "label": "upgrade-lock",
+          "args": [
+            "install",
+            "--package-lock-only",
+            "--ignore-scripts",
+            "--no-audit",
+            "--no-fund",
+            "--registry=https://registry.npmjs.org/"
+          ],
+          "exitCode": 0
+        },
+        {
+          "label": "upgrade-install",
+          "args": [
+            "ci",
+            "--include=dev",
+            "--ignore-scripts",
+            "--no-audit",
+            "--no-fund",
+            "--registry=https://registry.npmjs.org/"
+          ],
+          "exitCode": 0
+        },
+        {
+          "label": "upgrade-build",
+          "args": [
+            "run",
+            "build"
+          ],
+          "exitCode": 0
+        },
+        {
+          "label": "rollback-install",
+          "args": [
+            "ci",
+            "--include=dev",
+            "--ignore-scripts",
+            "--no-audit",
+            "--no-fund",
+            "--registry=https://registry.npmjs.org/"
+          ],
+          "exitCode": 0
+        },
+        {
+          "label": "rollback-build",
+          "args": [
+            "run",
+            "build"
+          ],
+          "exitCode": 0
+        },
+        {
+          "label": "restore-install",
+          "args": [
+            "ci",
+            "--include=dev",
+            "--ignore-scripts",
+            "--no-audit",
+            "--no-fund",
+            "--registry=https://registry.npmjs.org/"
+          ],
+          "exitCode": 0
+        },
+        {
+          "label": "restore-build",
+          "args": [
+            "run",
+            "build"
+          ],
+          "exitCode": 0
+        }
+      ]
+    }
+  }
+}

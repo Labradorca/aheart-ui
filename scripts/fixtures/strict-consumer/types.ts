@@ -1,4 +1,5 @@
-import AheartUI, { Button, Card, CardMeta, CardGrid } from 'aheart-ui'
+import { Button, Card, CardMeta, CardGrid } from 'aheart-ui'
+import AheartUI from 'aheart-ui/es/index.js'
 import CardEntry, { ACardMeta, ACardGrid } from 'aheart-ui/es/card/index.js'
 import AheartDnd, { SortableItem, SortableList } from '@aheart-ui/dnd'
 import AheartAI, { AIChatPanel, AIForm } from '@aheart-ui/ai'
@@ -49,7 +50,7 @@ metaSlots.missing({})
 gridSlots.missing({})
 void rendered
 
-// M1 additive public entries must preserve root component and plugin types.
+// Root component types and the explicit full Plugin remain available.
 import SubpathButton, { Button as NamedButton, type ButtonProps } from 'aheart-ui/button'
 import SubpathModal, { Modal as NamedModal, type ModalProps } from 'aheart-ui/modal'
 import SubpathSelect, { Select as NamedSelect, type SelectProps } from 'aheart-ui/select'
@@ -62,6 +63,7 @@ export type M1ExportTypes = [
   Assert<Equal<typeof Modal, typeof NamedModal>>,
   Assert<Equal<typeof Select, typeof SubpathSelect>>,
   Assert<Equal<typeof Select, typeof NamedSelect>>,
+  Assert<Equal<'default' extends keyof typeof import('aheart-ui') ? true : false, false>>,
   Assert<Equal<typeof AheartUI, typeof FullPlugin>>
 ]
 app.use(FullPlugin).use(SubpathButton).use(SubpathModal).use(SubpathSelect)
@@ -88,7 +90,7 @@ void [publicComboboxProps, invalidCombobox]
 
 import { AIChatPanel as ChatEntry, type AITransportV2 } from '@aheart-ui/ai/chat'
 import { AIForm as AgentForm, type AIFormSchemaV1 } from '@aheart-ui/ai/agent'
-import { AIAgentWorkbench } from '@aheart-ui/ai'
+import { AIAgentWorkbench } from '@aheart-ui/ai/agent-workbench'
 import { AIAgentWorkbench as Workbench } from '@aheart-ui/ai/workbench'
 import { SortableList as SortableEntry, type SortableMoveEvent } from '@aheart-ui/dnd/sortable'
 import { AheartUIResolver, type AheartUIResolverOptions } from 'aheart-ui/resolver'
@@ -96,6 +98,7 @@ export type M3ExportTypes = [
   Assert<Equal<typeof ChatEntry, typeof AIChatPanel>>,
   Assert<Equal<typeof AgentForm, typeof AIForm>>,
   Assert<Equal<typeof Workbench, typeof AIAgentWorkbench>>,
+  Assert<Equal<'AIAgentWorkbench' extends keyof typeof import('@aheart-ui/ai') ? true : false, false>>,
   Assert<Equal<typeof SortableEntry, typeof SortableList>>,
   AITransportV2, AIFormSchemaV1, SortableMoveEvent
 ]

@@ -22,13 +22,20 @@ await mkdir(out, { recursive: false })
 const originalManifest = await readFile(path.join(project, 'package.json'))
 const originalLock = await readFile(path.join(project, 'package-lock.json'))
 const baselineVersion = arg('--baseline-version') ?? '1.1.0'
-assert.ok(['1.1.0', '1.1.1'].includes(baselineVersion), 'Use a reviewed public baseline: 1.1.0 or 1.1.1')
+const reviewedBaselines = ['1.1.0', '1.1.1', '1.3.0', '1.4.0']
+assert.ok(reviewedBaselines.includes(baselineVersion), `Use a reviewed public baseline: ${reviewedBaselines.join(', ')}`)
 const baselineLock = baselineVersion === '1.1.0'
   ? await readFile(path.join(root, 'pilots/muxu-todo/package-lock.json'))
   : originalLock
 const baselineCore = JSON.parse(baselineLock).packages['node_modules/aheart-ui']
 assert.equal(baselineCore.version, baselineVersion)
 assert.match(baselineCore.resolved, /^https:\/\/registry\.npmjs\.org\/aheart-ui\/-\//)
+if (baselineVersion === '1.4.0') {
+  const baseline = JSON.parse(await readFile(path.join(root, 'evidence/V2/baseline/registry.json'), 'utf8'))
+  const core = baseline.packages.find(pkg => pkg.name === 'aheart-ui')
+  assert.equal(baselineCore.resolved, core.tarball)
+  assert.equal(baselineCore.integrity, core.integrity)
+}
 const manifest = JSON.parse(originalManifest)
 assert.equal(manifest.name, 'aheart-pilot-muxu-todo')
 assert.equal(manifest.private, true)

@@ -2,6 +2,7 @@ import fs from "node:fs";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vitepress";
 import { serveAiAssets, writeAiAssets } from "./ai-assets";
+import { componentSourceAliases, sourceComponentStyles } from "./component-sources.mjs";
 import {
   getComponentCatalogs,
   getComponentSidebar,
@@ -67,12 +68,20 @@ export default defineConfig({
     ],
   ],
   vite: {
-    plugins: [serveAiAssets()],
+    plugins: [serveAiAssets(), sourceComponentStyles()],
+    resolve: {
+      alias: componentSourceAliases,
+    },
+    optimizeDeps: {
+      exclude: ["aheart-ui", "@aheart-ui/ai", "@aheart-ui/dnd"],
+    },
     ssr: {
       noExternal: [
+        "aheart-ui",
         "@aheart-ui/ai",
         "@aheart-ui/dnd",
         "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
       ],
     },
   },

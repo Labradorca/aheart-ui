@@ -1,11 +1,14 @@
 
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { readFileSync } from 'node:fs'
 import { defineConfig, type Plugin } from "vite";
 import vue from "@vitejs/plugin-vue"
 import dts from 'vite-plugin-dts'
 
 import { componentEntries, fullStyleSources } from './build/entries.mjs'
+import { emitDistFile, emitDistModuleMetadata } from '../build/dist-layout.mjs'
+import { emitLegacyFacades } from '../build/legacy-facades.mjs'
 
+const directory = new URL('./', import.meta.url)
 
 function deterministicStyleBundle(): Plugin {
     return {
@@ -15,32 +18,21 @@ function deterministicStyleBundle(): Plugin {
                 .map((file) => readFileSync(new URL(`./src/${file}`, import.meta.url), 'utf8').trimEnd())
                 .join('\n')}\n`
 
-            for (const directory of ['es', 'lib']) {
-                const emit = (file: string, contents: string) => {
-                    const target = new URL(`./${directory}/${file}`, import.meta.url)
-                    mkdirSync(new URL('.', target), { recursive: true })
-                    writeFileSync(target, contents)
-                }
-                emit('style.css', css)
-                emit('full.css', css)
-                emit('theme.css', readFileSync(new URL('./src/theme/index.css', import.meta.url), 'utf8'))
-                for (const entry of componentEntries) {
-                    emit(`${entry.subpath}/style.css`, `${entry.styles.map((file: string) => readFileSync(new URL(`./src/${file}`, import.meta.url), 'utf8').trimEnd()).join('\n')}\n`)
-                }
+            const emitStyle = (file: string, contents: string) => emitDistFile(directory, `styles/${file}`, contents)
+            emitStyle('full.css', css)
+            emitStyle('theme.css', readFileSync(new URL('./src/theme/index.css', import.meta.url), 'utf8'))
+            for (const entry of componentEntries) {
+                emitStyle(`${entry.subpath}/style.css`, `${entry.styles.map((file: string) => readFileSync(new URL(`./src/${file}`, import.meta.url), 'utf8').trimEnd()).join('\n')}\n`)
             }
 
             for (const source of fullStyleSources) {
                 const output = source.replace(/\.css$/, '.css.js')
-                const esTarget = new URL(`./es/${output}`, import.meta.url)
-                const libTarget = new URL(`./lib/${output}`, import.meta.url)
-                mkdirSync(new URL('.', esTarget), { recursive: true })
-                mkdirSync(new URL('.', libTarget), { recursive: true })
-                writeFileSync(esTarget, '')
-                writeFileSync(libTarget, '"use strict";\n')
+                emitDistFile(directory, `esm/${output}`, '')
+                emitDistFile(directory, `cjs/${output}`, '"use strict";\n')
             }
 
-            writeFileSync(new URL('./es/package.json', import.meta.url), '{\n  "type": "module",\n  "sideEffects": ["**/*.css"]\n}\n')
-            writeFileSync(new URL('./lib/package.json', import.meta.url), '{\n  "type": "commonjs",\n  "sideEffects": ["**/*.css"]\n}\n')
+            emitDistModuleMetadata(directory)
+            emitLegacyFacades(directory, { root: 'compat/index', rootStyle: 'full.css' })
         }
     }
 }
@@ -50,7 +42,7 @@ export default defineConfig(
         build: {
             target: 'modules',
             //打包文件目录
-            outDir: "es",
+            outDir: 'dist',
             //压缩
             minify: false,
             //css分离
@@ -61,6 +53,7 @@ export default defineConfig(
                 input: {
                     index: 'src/index.ts',
                     full: 'src/full.ts',
+                    'compat/index': 'src/compat/index.ts',
                     'constant/index': 'src/constant/index.ts',
                     'resolver/index': 'src/resolver/index.ts',
                     ...Object.fromEntries(componentEntries.map(({ subpath, sourceEntry }) => [`${subpath}/index`, sourceEntry])),
@@ -81,7 +74,7 @@ export default defineConfig(
                         //让打包目录和我们目录对应
                         preserveModules: true,
                         //配置打包根目录
-                        dir: 'es',
+                        dir: 'dist/esm',
                         preserveModulesRoot: 'src'
                     },
                     {
@@ -92,7 +85,7 @@ export default defineConfig(
                         //让打包目录和我们目录对应
                         preserveModules: true,
                         //配置打包根目录
-                        dir: 'lib',
+                        dir: 'dist/cjs',
                         preserveModulesRoot: 'src'
                     }
                 ]
@@ -104,13 +97,7 @@ export default defineConfig(
         },
         plugins: [
             vue(),
-            dts({
-              tsconfigPath: './tsconfig.json'
-            }),
-            dts({
-                outDir:'lib',
-                tsconfigPath: './tsconfig.json'
-            }),
+            dts({ outDir: 'dist/types', tsconfigPath: './tsconfig.json' }),
             deterministicStyleBundle()
         ]
     }

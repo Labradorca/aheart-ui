@@ -10,10 +10,19 @@ import { packageContracts } from './release-contract.mjs'
 import { migrateSource } from './codemods/aheart-v2.mjs'
 
 const root = fileURLToPath(new URL('..', import.meta.url)), run = promisify(execFile)
-const index = process.argv.indexOf('--out'), output = path.resolve(index < 0 ? 'test-results/v2-migration-consumer' : process.argv[index + 1])
+const arg = name => {
+  const index = process.argv.indexOf(name)
+  return index < 0 ? undefined : process.argv[index + 1]
+}
+const output = path.resolve(arg('--out') ?? 'test-results/v2-migration-consumer')
+const packDir = path.resolve(arg('--pack-dir') ?? path.join(root, 'test-results/release-tarballs'))
+const baseline = process.argv.includes('--baseline')
+const packages = baseline
+  ? JSON.parse(await readFile(path.join(root, 'evidence/V2/baseline/registry.json'), 'utf8')).packages
+  : packageContracts
 const consumer = await realpath(await mkdtemp(path.join(tmpdir(), 'aheart-migration-')))
 await mkdir(output, { recursive: true })
-const result = { status: 'failed', scope: 'current 1.4/AI1.2 tarballs validate v2 migration tooling; not a v2 implementation or release', consumer, tarballs: [], commands: [], warnings: {} }
+const result = { status: 'failed', scope: baseline ? 'published 1.x diagnostics and codemod' : 'local V2 diagnostics and migrated imports', consumer, tarballs: [], commands: [], warnings: {} }
 const hash = data => createHash('sha256').update(data).digest('hex')
 const capture = async (name, command, args) => {
   try {
@@ -32,9 +41,10 @@ try {
   // remain pinned independently to M1's Vite 5.0.12 in v1-consumer.mjs.
   const dependencies = { vue: '3.5.44', vite: '5.4.21', '@vitejs/plugin-vue': '5.0.3', typescript: '5.9.3', '@types/node': '24.10.1' }
   result.tools = { vue: dependencies.vue, vite: dependencies.vite, typescript: dependencies.typescript, nodeTypes: dependencies['@types/node'] }
-  for (const pkg of packageContracts) {
+  for (const pkg of packages) {
     const file = `${pkg.name.replace(/^@/, '').replaceAll('/', '-')}-${pkg.version}.tgz`
-    const tarball = path.join(root, 'test-results/release-tarballs', file)
+    const tarball = path.join(packDir, file)
+    if (baseline) assert.equal(hash(await readFile(tarball)), pkg.sha256)
     await cp(tarball, path.join(consumer, file))
     dependencies[pkg.name] = `file:./${file}`
     result.tarballs.push({ name: pkg.name, version: pkg.version, sha256: hash(await readFile(tarball)) })
@@ -44,7 +54,9 @@ try {
   await cp(path.join(consumer, 'package-lock.json'), path.join(output, 'package-lock.json'))
   const { createServer, build, createLogger } = await import(pathToFileURL(path.join(consumer, 'node_modules/vite/dist/node/index.js')).href)
   const { default: vue } = await import(pathToFileURL(path.join(consumer, 'node_modules/@vitejs/plugin-vue/dist/index.mjs')).href)
-  const { AheartV2DeprecationDiagnostics } = await import(pathToFileURL(path.join(consumer, 'node_modules/aheart-ui/es/resolver/index.js')).href)
+  const coreDir = path.join(consumer, 'node_modules/aheart-ui')
+  const core = JSON.parse(await readFile(path.join(coreDir, 'package.json'), 'utf8'))
+  const { AheartV2DeprecationDiagnostics } = await import(pathToFileURL(path.join(coreDir, core.exports['./resolver'].import)).href)
   const legacy = "import UI, {Button} from 'aheart-ui';import {AIAgentWorkbench as Workbench} from '@aheart-ui/ai';import {Select} from 'aheart-ui/es/select/index.js';console.log(UI,Button,Workbench,Select)"
   const migrated = migrateSource(legacy, 'fixture.js')
   assert.equal(migrated.changed, true)
@@ -71,17 +83,19 @@ try {
   } finally { await server.close() }
   const production = [], prodLogger = createLogger('silent')
   prodLogger.warn = message => production.push(message)
-  for (const file of ['legacy.js', 'migrated.js']) {
-    const bundles = await build({ root: consumer, configFile: false, customLogger: prodLogger, plugins: [AheartV2DeprecationDiagnostics()], build: { write: false, minify: true, rollupOptions: { input: path.join(consumer, file) } } })
+  const productionBuild = file => build({ root: consumer, configFile: false, customLogger: prodLogger, plugins: [AheartV2DeprecationDiagnostics()], build: { write: false, minify: true, rollupOptions: { input: path.join(consumer, file) } } })
+  for (const file of baseline ? ['legacy.js', 'migrated.js'] : ['migrated.js']) {
+    const bundles = await productionBuild(file)
     const chunks = (Array.isArray(bundles) ? bundles : [bundles]).flatMap(bundle => bundle.output).filter(asset => asset.type === 'chunk')
     assert.ok(chunks.length > 0)
     assert.ok(chunks.every(chunk => !chunk.code.includes('[AheartUI B')), 'production JS contained diagnostic messages')
   }
+  if (!baseline) await assert.rejects(productionBuild('legacy.js'), /is not exported/)
   result.warnings.production = production.filter(message => /\[AheartUI B[13]\]/.test(message))
   assert.deepEqual(result.warnings.production, [])
   const cjs = migrateSource("const UI=require('aheart-ui').default;const WB=require('@aheart-ui/ai').AIAgentWorkbench;module.exports={UI,WB}", 'before.cjs')
   await writeFile(path.join(consumer, 'migrated.cjs'), cjs.source)
-  await writeFile(path.join(consumer, 'cjs-probe.cjs'), "const assert=require('node:assert/strict'),c=require('./migrated.cjs');assert.equal(c.UI,require('aheart-ui').default);assert.equal(c.WB,require('@aheart-ui/ai').AIAgentWorkbench)")
+  await writeFile(path.join(consumer, 'cjs-probe.cjs'), "const assert=require('node:assert/strict'),c=require('./migrated.cjs');assert.equal(c.UI,require('aheart-ui/full').default);assert.equal(c.WB,require('@aheart-ui/ai/workbench').AIAgentWorkbench)")
   await capture('cjs-identity', process.execPath, ['cjs-probe.cjs'])
   await writeFile(path.join(consumer, 'plugin-types.ts'), "import {defineConfig}from'vite';import vue from'@vitejs/plugin-vue';import{AheartV2DeprecationDiagnostics}from'aheart-ui/resolver';export default defineConfig({plugins:[vue(),AheartV2DeprecationDiagnostics()]})")
   await writeFile(path.join(consumer, 'tsconfig.json'), JSON.stringify({ compilerOptions: { strict: true, skipLibCheck: false, noEmit: true, module: 'ESNext', moduleResolution: 'Bundler', target: 'ES2020', lib: ['ES2020', 'DOM'], types: ['node'], esModuleInterop: true }, files: ['plugin-types.ts'] }, null, 2))

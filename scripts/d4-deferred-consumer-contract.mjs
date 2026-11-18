@@ -381,7 +381,7 @@ export async function prepareFullArtifactBindings(report, options = {}) {
   report.packages.baseline.lockPath = baselineLockPathDurable
   report.packages.baseline.lockfileSha256 = baselineLockHash
   report.packages.baseline.lockfileAfterSha256 = baselineLockHash
-  report.packages.baseline.afterHashes = { ...(report.packages.baseline.afterHashes ?? {}), 'es/index.js': baselineModuleHash }
+  report.packages.baseline.afterHashes = { ...(report.packages.baseline.afterHashes ?? {}), [packageModuleEntry(report.packages.baseline)]: baselineModuleHash }
   report.packages.candidate.path = candidatePackagePath
   report.packages.candidate.manifestPath = candidateManifest
   report.packages.candidate.sha256 = sha256(await readFile(candidatePackagePath))
@@ -390,7 +390,7 @@ export async function prepareFullArtifactBindings(report, options = {}) {
   report.packages.candidate.lockPath = lockPath
   report.packages.candidate.lockfileSha256 = lockHash
   report.packages.candidate.lockfileAfterSha256 = lockHash
-  report.packages.candidate.afterHashes = { ...(report.packages.candidate.afterHashes ?? {}), 'es/index.js': moduleHash }
+  report.packages.candidate.afterHashes = { ...(report.packages.candidate.afterHashes ?? {}), [packageModuleEntry(report.packages.candidate)]: moduleHash }
   report.realEvidenceBinding ??= {}
   report.realEvidenceBinding.buildDirectory = buildDirectory
   report.realEvidenceBinding.buildManifestPath = buildManifestPath
@@ -409,6 +409,10 @@ export async function prepareFullArtifactBindings(report, options = {}) {
   report.gzip.consumer.moduleProvenance = { baseline: { path: baselineModulePathDurable, sha256: baselineModuleHash }, candidate: { path: modulePath, sha256: moduleHash } }
   return report
 }
+
+// Reports recorded before the dist layout hashed the original ESM root.
+const packageModuleEntry = pkg => pkg?.manifest?.module ?? 'es/index.js'
+const packageModuleHash = pkg => pkg?.afterHashes?.[packageModuleEntry(pkg)]
 
 export function buildFullReportShell({ baseline, candidate, baselineCommit, candidateCommit, runId, preflight = false, environment = {} } = {}) {
   assert(baseline?.packageManifest && candidate?.packageManifest, 'baseline and candidate side results are required')
@@ -431,7 +435,7 @@ export function buildFullReportShell({ baseline, candidate, baselineCommit, cand
     cases: {}, browsers: {}, ssrHydration: candidate.ssrHydration ?? { count: 8, combinations: {}, deterministicDoubleRender: true },
     typeProbe: candidate.typeProbe,
     iframe: preflight ? { status: 'not-run' } : candidate.iframe ?? { sameOrigin: true, ownerDocument: true, focusTransfer: true, unmountCleanup: true, postUnmountInteractions: 0 },
-    gzip: { level: 9, consumer: { components: [...COMPONENTS], publicCss: true, externalizedVue: true, minifier: 'vite/esbuild', entry: 'bundle-entry.mjs', config: { vite: PINNED_VERSIONS.vite, mode: 'production' }, moduleProvenance: { baseline: { path: baseline.packageManifest.modulePath, sha256: baseline.packageManifest.afterHashes?.['es/index.js'] }, candidate: { path: candidate.packageManifest.modulePath, sha256: candidate.packageManifest.afterHashes?.['es/index.js'] } } }, baseline: { files: [], rawBytes: 0, gzipBytes: 0 }, candidate: { files: [], rawBytes: 0, gzipBytes: 0 }, deltaBytes: 0, limitBytes: RELEASE_MATRIX.maxGzipDeltaBytes },
+    gzip: { level: 9, consumer: { components: [...COMPONENTS], publicCss: true, externalizedVue: true, minifier: 'vite/esbuild', entry: 'bundle-entry.mjs', config: { vite: PINNED_VERSIONS.vite, mode: 'production' }, moduleProvenance: { baseline: { path: baseline.packageManifest.modulePath, sha256: packageModuleHash(baseline.packageManifest) }, candidate: { path: candidate.packageManifest.modulePath, sha256: packageModuleHash(candidate.packageManifest) } } }, baseline: { files: [], rawBytes: 0, gzipBytes: 0 }, candidate: { files: [], rawBytes: 0, gzipBytes: 0 }, deltaBytes: 0, limitBytes: RELEASE_MATRIX.maxGzipDeltaBytes },
     familyCoverage: candidate.familyCoverage ?? {},
   }
 }
@@ -470,7 +474,7 @@ export async function verifyArtifactBindings(report, { reportPath } = {}) {
     await verifyHash(`${side} manifest`, pkg?.manifestPath, pkg?.manifestSha256)
     if (pkg?.modulePath) {
       const moduleFingerprint = side === 'candidate' ? report.realEvidenceBinding?.moduleFingerprint : report.realEvidenceBinding?.baselineModuleFingerprint
-      await verifyHash(`${side} module`, pkg.modulePath, pkg?.afterHashes?.['es/index.js'])
+      await verifyHash(`${side} module`, pkg.modulePath, packageModuleHash(pkg))
       if (moduleFingerprint) { const moduleHash = sha256(await readFile(resolve(pkg.modulePath))); ensure(moduleHash === moduleFingerprint.before && moduleHash === moduleFingerprint.after, `${side} module fingerprint before/after mismatch`, failures) }
     }
     if (pkg?.lockPath) {
@@ -1167,7 +1171,7 @@ export function validateReport(report, { requireRelease = false, requireSmokeChe
     for (const field of ['esm', 'cjs', 'css', 'publicTypes', 'ssr', 'contentSha256Verified', 'tarballSha256Verified']) ensure(pkg?.[field] === true, `${side} package is missing ${field} evidence`, failures)
     ensure(pkg?.sourceCommit === (side === 'baseline' ? APPROVED_BASELINE_COMMIT : report.provenance?.candidateCommit), `${side} package source commit provenance is missing`, failures)
     if (requireRelease) {
-      ensure(pkg?.path && pkg?.manifestPath && pkg?.modulePath && pkg?.lockPath && /^[a-f0-9]{64}$/i.test(pkg?.manifestSha256 ?? '') && /^[a-f0-9]{64}$/i.test(pkg?.afterHashes?.['es/index.js'] ?? '') && /^[a-f0-9]{64}$/i.test(pkg?.lockfileSha256 ?? '') && /^[a-f0-9]{64}$/i.test(pkg?.lockfileAfterSha256 ?? ''), `${side} release artifact descriptors are incomplete`, failures)
+      ensure(pkg?.path && pkg?.manifestPath && pkg?.modulePath && pkg?.lockPath && /^[a-f0-9]{64}$/i.test(pkg?.manifestSha256 ?? '') && /^[a-f0-9]{64}$/i.test(packageModuleHash(pkg) ?? '') && /^[a-f0-9]{64}$/i.test(pkg?.lockfileSha256 ?? '') && /^[a-f0-9]{64}$/i.test(pkg?.lockfileAfterSha256 ?? ''), `${side} release artifact descriptors are incomplete`, failures)
       ensure(/^[a-f0-9]{64}$/i.test(pkg?.lockfileAfterSha256 ?? ''), `${side} lockfileAfter fingerprint is required`, failures)
       if (String(report.runId).startsWith('full-')) ensure(existsSync(pkg?.path) && existsSync(pkg?.manifestPath) && existsSync(pkg?.modulePath) && existsSync(pkg?.lockPath), `${side} release artifact path does not exist`, failures)
     }
@@ -1290,7 +1294,7 @@ export function validateBoundedReleaseReport(report) {
     const pkg = report.packages?.[side]
     reopen(`${side} tarball`, pkg?.path, pkg?.sha256)
     reopen(`${side} manifest`, pkg?.manifestPath, pkg?.manifestSha256)
-    if (side === 'candidate') { reopen(`${side} module`, pkg?.modulePath, pkg?.afterHashes?.['es/index.js']); reopen(`${side} lock`, pkg?.lockPath, pkg?.lockfileSha256) }
+    if (side === 'candidate') { reopen(`${side} module`, pkg?.modulePath, packageModuleHash(pkg)); reopen(`${side} lock`, pkg?.lockPath, pkg?.lockfileSha256) }
   }
   ensure(report?.realEvidenceBinding?.tarballReopened === true, 'bounded artifact binding is missing', failures)
   ensure(report.realEvidenceBinding?.buildFingerprint?.before && report.realEvidenceBinding.buildFingerprint.before === report.realEvidenceBinding.buildFingerprint.after, 'build fingerprint mismatch', failures)

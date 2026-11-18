@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "steps": {
+    "legacy": {
+      "exitCode": 0
+    },
+    "m1": {
+      "exitCode": 0
+    },
+    "strict": {
+      "exitCode": 0,
+      "vue": [
+        {
+          "vueVersion": "3.5.38",
+          "status": "passed"
+        },
+        {
+          "vueVersion": "3.5.44",
+          "status": "passed"
+        }
+      ]
+    },
+    "v1": {
+      "exitCode": 0,
+      "coverage": {
+        "total": 65,
+        "styles": 65,
+        "js": 65
+      }
+    },
+    "docs-r2": {
+      "exitCode": 0
+    },
+    "determinism": {
+      "exitCode": 0
+    },
+    "buildGateTests": {
+      "passed": 21,
+      "exitCode": 0
+    }
+  },
+  "tarballs": [
+    {
+      "name": "aheart-ui-1.4.0.tgz",
+      "sha256": "8359e598c0e935f26c178b9848767c5993310fa51363a6a297322a1124ea3465",
+      "bytes": 710863,
+      "repackIdentical": true
+    },
+    {
+      "name": "aheart-ui-ai-1.2.0.tgz",
+      "sha256": "5d87d37b0b6becc6e7efdbaae3e7594790e7ef8c3c4996177036d0314cf38fab",
+      "bytes": 204263,
+      "repackIdentical": true
+    },
+    {
+      "name": "aheart-ui-dnd-1.1.0.tgz",
+      "sha256": "8cbc23c703b7250154c7d8afd2c18bf0e2ba3fe16f6bd6a82754967caf54747a",
+      "bytes": 28188,
+      "repackIdentical": true
+    }
+  ]
+}

@@ -12,6 +12,8 @@ import { aheartComponentEntries } from 'aheart-ui/constant'
 import { verifyBrowser } from './browser.mjs'
 
 const require = createRequire(import.meta.url)
+const ownerFor = (packageName, name) =>
+  packageName === '@aheart-ui/ai' && name === 'AIAgentWorkbench' ? `${packageName}/full` : packageName
 const cssResolver = AheartUIResolver({ domains: ['base', 'ai', 'dnd'], importStyle: 'css' })
 const jsResolver = AheartUIResolver()
 assert.deepEqual(jsResolver('ACombobox'), { name: 'Combobox', from: 'aheart-ui/combobox' })
@@ -32,11 +34,12 @@ for (const entry of aheartComponentEntries) {
   const esm = await import(entry.from)
   const cjs = require(entry.from)
   const packageName = entry.from.slice(0, entry.from.lastIndexOf('/'))
-  const root = await import(packageName)
+  const owner = ownerFor(packageName, entry.name)
+  const root = await import(owner)
   assert.ok(esm[entry.name], `${entry.from} must export ${entry.name}`)
   assert.ok(cjs[entry.name], `${entry.from} must require ${entry.name}`)
   assert.equal(esm[entry.name], root[entry.name], entry.from)
-  assert.equal(cjs[entry.name], require(packageName)[entry.name], entry.from)
+  assert.equal(cjs[entry.name], require(owner)[entry.name], entry.from)
   const component = cssResolver(`A${entry.name}`)
   assert.deepEqual(component, { name: entry.name, from: entry.from, sideEffects: entry.styles })
   for (const style of component.sideEffects) {
@@ -46,14 +49,24 @@ for (const entry of aheartComponentEntries) {
 for (const [packageName, domain] of [['@aheart-ui/ai', 'ai'], ['@aheart-ui/dnd', 'dnd']]) {
   const root = await import(packageName)
   const cjs = require(packageName)
-  const legacyApp = createApp({}).use(root.default)
-  const legacyCjsApp = createApp({}).use(cjs.default)
+  const full = await import(`${packageName}/full`)
+  const fullCjs = require(`${packageName}/full`)
+  const legacyApp = createApp({}).use(full.default)
+  const legacyCjsApp = createApp({}).use(fullCjs.default)
   for (const { name } of aheartComponentEntries.filter(entry => entry.domain === domain)) {
-    assert.equal(legacyApp.component(`A${name}`), root[name])
-    assert.equal(legacyCjsApp.component(`A${name}`), cjs[name])
+    const owner = ownerFor(packageName, name)
+    assert.equal(legacyApp.component(`A${name}`), (await import(owner))[name])
+    assert.equal(legacyCjsApp.component(`A${name}`), require(owner)[name])
   }
-  assert.equal((await import(`${packageName}/full`)).default, root.default)
-  assert.equal(require(`${packageName}/full`).default, cjs.default)
+  if (domain === 'ai') {
+    assert.equal(Object.hasOwn(root, 'AIAgentWorkbench'), false)
+    assert.equal(Object.hasOwn(cjs, 'AIAgentWorkbench'), false)
+    assert.equal(createApp({}).use(root.default).component('AAIAgentWorkbench'), undefined)
+    assert.equal(createApp({}).use(cjs.default).component('AAIAgentWorkbench'), undefined)
+  } else {
+    assert.equal(full.default, root.default)
+    assert.equal(fullCjs.default, cjs.default)
+  }
   assert.equal(require.resolve(`${packageName}/full.css`), require.resolve(`${packageName}/style.css`))
   assert.equal(await readFile(require.resolve(`${packageName}/style.css`), 'utf8'),
     await readFile(require.resolve(`${packageName}/lib/style.css`), 'utf8'))
@@ -69,12 +82,13 @@ for (const [packageName, subpath, names] of [
 ]) {
   const request = `${packageName}/${subpath}`
   const scoped = await import(request)
-  const root = await import(packageName)
   for (const name of names) {
+    const owner = ownerFor(packageName, name)
+    const root = await import(owner)
     assert.ok(scoped[name], `${request} must export ${name}`)
     assert.equal(scoped[name], root[name])
     assert.ok(require(request)[name], `${request} must require ${name}`)
-    assert.equal(require(request)[name], require(packageName)[name])
+    assert.equal(require(request)[name], require(owner)[name])
   }
 }
 
@@ -166,9 +180,9 @@ const automatic = await bundle('vite-resolver', "import { createApp } from 'vue'
   vue(),
   Components({ dts: false, resolvers: [cssResolver] })
 ])
-assert.match(automatic.modules, /aheart-ui\/es\/button\/index\.js/)
-assert.match(automatic.modules, /@aheart-ui\/ai\/es\/sender\/index\.js/)
-assert.doesNotMatch(automatic.modules, /@aheart-ui\/dnd|agent-workbench|aheart-ui\/es\/table/)
+assert.match(automatic.modules, /aheart-ui\/dist\/esm\/button\/index\.js/)
+assert.match(automatic.modules, /@aheart-ui\/ai\/dist\/esm\/sender\/index\.js/)
+assert.doesNotMatch(automatic.modules, /@aheart-ui\/dnd|agent-workbench|aheart-ui\/dist\/esm\/table/)
 assert.match(automatic.styles, /aheart-button/)
 assert.match(automatic.styles, /aheart-ai-sender/)
 

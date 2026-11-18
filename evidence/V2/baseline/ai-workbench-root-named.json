@@ -1,0 +1,26 @@
+{
+  "sourceSha": "1344017414d203f75095b01c3cc952ab7bcb178d",
+  "package": "@aheart-ui/ai@1.2.0",
+  "gzipReference": "Published root named imports, same 1.x M1/V1 Vite and Vue consumer configuration",
+  "tarballs": [
+    {
+      "name": "aheart-ui",
+      "version": "1.4.0",
+      "sha256": "2c87c1bed02b307655624f6068df0d06ca9e6d9859ff783b150d9e2d79c25474"
+    },
+    {
+      "name": "@aheart-ui/dnd",
+      "version": "1.1.0",
+      "sha256": "8cbc23c703b7250154c7d8afd2c18bf0e2ba3fe16f6bd6a82754967caf54747a"
+    },
+    {
+      "name": "@aheart-ui/ai",
+      "version": "1.2.0",
+      "sha256": "8055c52babbb0002145db1b3bb0df0eb2638f9c28239d71c4a7231ea20e62fc7"
+    }
+  ],
+  "referenceGzipBytes": {
+    "ai/agent-workbench": 90003,
+    "ai/workbench": 90003
+  }
+}

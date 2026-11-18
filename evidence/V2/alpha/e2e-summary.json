@@ -1,0 +1,43 @@
+{
+  "sourceSha": "e71d333a375febe902b50edb817be1a8a5407374",
+  "command": "AHEART_E2E_PORT=5280 PLAYWRIGHT_JSON_OUTPUT_FILE=test-results/v2-alpha/e2e-results.json corepack pnpm exec playwright test --workers=4 --reporter=line,json --output=test-results/v2-alpha/e2e-artifacts",
+  "exitCode": 0,
+  "report": "test-results/v2-alpha/e2e-results.json",
+  "sha256": "e64804b9c60cc22bb3bba6efb6d5dcd88b7d0706839e27ece3516ec8f01bc98f",
+  "staticSkipLedger": {
+    "ok": true,
+    "count": 41,
+    "missing": [],
+    "stale": []
+  },
+  "stats": {
+    "startTime": "2026-11-18T05:22:50.653Z",
+    "duration": 687681.733,
+    "expected": 868,
+    "skipped": 131,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "projects": {
+    "desktop": {
+      "passed": 277,
+      "skipped": 26
+    },
+    "mobile": {
+      "passed": 234,
+      "skipped": 69
+    },
+    "desktop-firefox": {
+      "passed": 117,
+      "skipped": 14
+    },
+    "desktop-webkit": {
+      "passed": 117,
+      "skipped": 14
+    },
+    "mobile-webkit": {
+      "passed": 123,
+      "skipped": 8
+    }
+  }
+}

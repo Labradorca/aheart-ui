@@ -60,7 +60,6 @@
 <script setup lang="ts">
 import { computed, defineComponent, onBeforeUnmount, ref, useSlots, watch, type PropType } from 'vue'
 import { getFloatingPopupStyle, normalizeFloatingTriggers, type FloatingPlacement } from '../utils/floating-core'
-import '../utils/floating.css'
 import { useFloatingLayer } from '../utils/use-floating-layer'
 import { useMotionPresence } from '../utils/use-motion-presence'
 import { useStableId } from '../utils/use-stable-id'

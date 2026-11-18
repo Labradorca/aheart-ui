@@ -1,0 +1,611 @@
+{
+  "sourceSha": "e71d333a375febe902b50edb817be1a8a5407374",
+  "staticSkipLedger": {
+    "ok": true,
+    "count": 41,
+    "missing": [],
+    "stale": []
+  },
+  "steps": {
+    "legacy": {
+      "exitCode": 0,
+      "command": "node scripts/v2-legacy-consumer.mjs --pack-dir test-results/v2-alpha/consumer-packs --out test-results/v2-alpha/legacy.json",
+      "packages": [
+        {
+          "name": "aheart-ui",
+          "paths": 1182,
+          "resolvable": 1144,
+          "private": 38,
+          "styles": 96,
+          "differences": []
+        },
+        {
+          "name": "@aheart-ui/dnd",
+          "paths": 100,
+          "resolvable": 100,
+          "private": 0,
+          "styles": 0,
+          "differences": []
+        },
+        {
+          "name": "@aheart-ui/ai",
+          "paths": 202,
+          "resolvable": 202,
+          "private": 0,
+          "styles": 32,
+          "differences": []
+        }
+      ]
+    },
+    "no-dnd": {
+      "exitCode": 0,
+      "command": "node scripts/v2-ai-optional-consumer.mjs --pack-dir test-results/v2-alpha/consumer-packs --out test-results/v2-alpha/no-dnd",
+      "dndInstalled": false,
+      "modules": 2241
+    },
+    "strict": {
+      "exitCode": 0,
+      "command": "node scripts/strict-consumer.mjs --pack-dir test-results/v2-alpha/consumer-packs --out test-results/v2-alpha/strict",
+      "vue": [
+        {
+          "vueVersion": "3.5.38",
+          "status": "passed"
+        },
+        {
+          "vueVersion": "3.5.44",
+          "status": "passed"
+        }
+      ]
+    },
+    "m1": {
+      "exitCode": 0,
+      "command": "node scripts/m1-consumer.mjs --tarball test-results/v2-alpha/consumer-packs/aheart-ui-2.0.0-alpha.0.tgz --out test-results/v2-alpha/m1"
+    },
+    "m3": {
+      "exitCode": 0,
+      "command": "node scripts/m3-consumer.mjs --pack-dir test-results/v2-alpha/consumer-packs --out test-results/v2-alpha/m3"
+    },
+    "migration": {
+      "exitCode": 0,
+      "command": "node scripts/v2-migration-consumer.mjs --pack-dir test-results/v2-alpha/consumer-packs --out test-results/v2-alpha/migration"
+    },
+    "pilot-chromium": {
+      "exitCode": 0,
+      "command": "node pilots/run-baselines.mjs --entry-mode migrated --only clean-consumer,ai-review-gate --core-tarball test-results/v2-alpha/consumer-packs/aheart-ui-2.0.0-alpha.0.tgz --ai-tarball test-results/v2-alpha/consumer-packs/aheart-ui-ai-2.0.0-alpha.0.tgz --dnd-tarball test-results/v2-alpha/consumer-packs/aheart-ui-dnd-1.1.0.tgz --browser chromium --work-dir test-results/v2-alpha --out test-results/v2-alpha/pilot-chromium",
+      "pilots": [
+        {
+          "name": "clean-consumer",
+          "status": "passed",
+          "sourceChanges": [
+            {
+              "file": "main.js",
+              "changes": [
+                {
+                  "offset": 106,
+                  "reason": "public path replaces equivalent legacy ESM/CSS path"
+                }
+              ],
+              "before": "0f091d6f4a767a7cf8d07c97e95cf55348ee09a8408eb75f3c29eb2b0fa2ae60",
+              "after": "987fdb337e1a06469747dacefd9e48923f487602c7b6dab320eefb1d4b861104"
+            }
+          ],
+          "outsideGuide": 0,
+          "packages": {
+            "aheart-ui": "2.0.0-alpha.0",
+            "vue": "3.5.44"
+          },
+          "views": [
+            {
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              },
+              "status": "passed"
+            },
+            {
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "name": "ai-review-gate",
+          "status": "passed",
+          "sourceChanges": [
+            {
+              "file": "app.js",
+              "changes": [
+                {
+                  "offset": 132,
+                  "reason": "Workbench moves to explicit entry"
+                }
+              ],
+              "before": "21683dfa77c8a7688ead0dd4424fe1a8a944fe578aa39edc2a061b0578de3383",
+              "after": "c854911cefeb732b871e1b3c8b0299916595fe953661aed1ba5f09364341a5de"
+            },
+            {
+              "file": "main.js",
+              "changes": [
+                {
+                  "offset": 106,
+                  "reason": "public path replaces equivalent legacy ESM/CSS path"
+                },
+                {
+                  "offset": 135,
+                  "reason": "public path replaces equivalent legacy ESM/CSS path"
+                },
+                {
+                  "offset": 168,
+                  "reason": "public path replaces equivalent legacy ESM/CSS path"
+                }
+              ],
+              "before": "6746cbff194ca2f4727e95c163a36484c08d83b7b37b86881fe541fa0c23f99d",
+              "after": "46db0dff19719bb39244b8f53dc73cd8693d021cb53f72ed2a40b51a59a8b52d"
+            },
+            {
+              "file": "types.ts",
+              "changes": [
+                {
+                  "offset": 227,
+                  "reason": "Workbench moves to explicit entry"
+                }
+              ],
+              "before": "e830ab15fb2043e2f50951797db623b35d6c08aa8490960af65921533254e72c",
+              "after": "db924f7fa119a9d186f42b8b91014ab2e9ed088a240a0211bca7011dd1c681d1"
+            }
+          ],
+          "outsideGuide": 0,
+          "packages": {
+            "aheart-ui": "2.0.0-alpha.0",
+            "vue": "3.5.44",
+            "@aheart-ui/ai": "2.0.0-alpha.0",
+            "@aheart-ui/dnd": "1.1.0"
+          },
+          "views": [
+            {
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              },
+              "status": "passed"
+            },
+            {
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "status": "passed"
+            }
+          ]
+        }
+      ]
+    },
+    "pilot-firefox": {
+      "exitCode": 0,
+      "command": "node pilots/run-baselines.mjs --entry-mode migrated --only clean-consumer,ai-review-gate --core-tarball test-results/v2-alpha/consumer-packs/aheart-ui-2.0.0-alpha.0.tgz --ai-tarball test-results/v2-alpha/consumer-packs/aheart-ui-ai-2.0.0-alpha.0.tgz --dnd-tarball test-results/v2-alpha/consumer-packs/aheart-ui-dnd-1.1.0.tgz --browser firefox --work-dir test-results/v2-alpha --out test-results/v2-alpha/pilot-firefox",
+      "pilots": [
+        {
+          "name": "clean-consumer",
+          "status": "passed",
+          "sourceChanges": [
+            {
+              "file": "main.js",
+              "changes": [
+                {
+                  "offset": 106,
+                  "reason": "public path replaces equivalent legacy ESM/CSS path"
+                }
+              ],
+              "before": "0f091d6f4a767a7cf8d07c97e95cf55348ee09a8408eb75f3c29eb2b0fa2ae60",
+              "after": "987fdb337e1a06469747dacefd9e48923f487602c7b6dab320eefb1d4b861104"
+            }
+          ],
+          "outsideGuide": 0,
+          "packages": {
+            "aheart-ui": "2.0.0-alpha.0",
+            "vue": "3.5.44"
+          },
+          "views": [
+            {
+              "browserVersion": "151.0",
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              },
+              "status": "passed"
+            },
+            {
+              "browserVersion": "151.0",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "name": "ai-review-gate",
+          "status": "passed",
+          "sourceChanges": [
+            {
+              "file": "app.js",
+              "changes": [
+                {
+                  "offset": 132,
+                  "reason": "Workbench moves to explicit entry"
+                }
+              ],
+              "before": "21683dfa77c8a7688ead0dd4424fe1a8a944fe578aa39edc2a061b0578de3383",
+              "after": "c854911cefeb732b871e1b3c8b0299916595fe953661aed1ba5f09364341a5de"
+            },
+            {
+              "file": "main.js",
+              "changes": [
+                {
+                  "offset": 106,
+                  "reason": "public path replaces equivalent legacy ESM/CSS path"
+                },
+                {
+                  "offset": 135,
+                  "reason": "public path replaces equivalent legacy ESM/CSS path"
+                },
+                {
+                  "offset": 168,
+                  "reason": "public path replaces equivalent legacy ESM/CSS path"
+                }
+              ],
+              "before": "6746cbff194ca2f4727e95c163a36484c08d83b7b37b86881fe541fa0c23f99d",
+              "after": "46db0dff19719bb39244b8f53dc73cd8693d021cb53f72ed2a40b51a59a8b52d"
+            },
+            {
+              "file": "types.ts",
+              "changes": [
+                {
+                  "offset": 227,
+                  "reason": "Workbench moves to explicit entry"
+                }
+              ],
+              "before": "e830ab15fb2043e2f50951797db623b35d6c08aa8490960af65921533254e72c",
+              "after": "db924f7fa119a9d186f42b8b91014ab2e9ed088a240a0211bca7011dd1c681d1"
+            }
+          ],
+          "outsideGuide": 0,
+          "packages": {
+            "aheart-ui": "2.0.0-alpha.0",
+            "vue": "3.5.44",
+            "@aheart-ui/ai": "2.0.0-alpha.0",
+            "@aheart-ui/dnd": "1.1.0"
+          },
+          "views": [
+            {
+              "browserVersion": "151.0",
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              },
+              "status": "passed"
+            },
+            {
+              "browserVersion": "151.0",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "status": "passed"
+            }
+          ]
+        }
+      ]
+    },
+    "pilot-webkit": {
+      "exitCode": 0,
+      "command": "node pilots/run-baselines.mjs --entry-mode migrated --only clean-consumer,ai-review-gate --core-tarball test-results/v2-alpha/consumer-packs/aheart-ui-2.0.0-alpha.0.tgz --ai-tarball test-results/v2-alpha/consumer-packs/aheart-ui-ai-2.0.0-alpha.0.tgz --dnd-tarball test-results/v2-alpha/consumer-packs/aheart-ui-dnd-1.1.0.tgz --browser webkit --work-dir test-results/v2-alpha --out test-results/v2-alpha/pilot-webkit",
+      "pilots": [
+        {
+          "name": "clean-consumer",
+          "status": "passed",
+          "sourceChanges": [
+            {
+              "file": "main.js",
+              "changes": [
+                {
+                  "offset": 106,
+                  "reason": "public path replaces equivalent legacy ESM/CSS path"
+                }
+              ],
+              "before": "0f091d6f4a767a7cf8d07c97e95cf55348ee09a8408eb75f3c29eb2b0fa2ae60",
+              "after": "987fdb337e1a06469747dacefd9e48923f487602c7b6dab320eefb1d4b861104"
+            }
+          ],
+          "outsideGuide": 0,
+          "packages": {
+            "aheart-ui": "2.0.0-alpha.0",
+            "vue": "3.5.44"
+          },
+          "views": [
+            {
+              "browserVersion": "26.5",
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              },
+              "status": "passed"
+            },
+            {
+              "browserVersion": "26.5",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "name": "ai-review-gate",
+          "status": "passed",
+          "sourceChanges": [
+            {
+              "file": "app.js",
+              "changes": [
+                {
+                  "offset": 132,
+                  "reason": "Workbench moves to explicit entry"
+                }
+              ],
+              "before": "21683dfa77c8a7688ead0dd4424fe1a8a944fe578aa39edc2a061b0578de3383",
+              "after": "c854911cefeb732b871e1b3c8b0299916595fe953661aed1ba5f09364341a5de"
+            },
+            {
+              "file": "main.js",
+              "changes": [
+                {
+                  "offset": 106,
+                  "reason": "public path replaces equivalent legacy ESM/CSS path"
+                },
+                {
+                  "offset": 135,
+                  "reason": "public path replaces equivalent legacy ESM/CSS path"
+                },
+                {
+                  "offset": 168,
+                  "reason": "public path replaces equivalent legacy ESM/CSS path"
+                }
+              ],
+              "before": "6746cbff194ca2f4727e95c163a36484c08d83b7b37b86881fe541fa0c23f99d",
+              "after": "46db0dff19719bb39244b8f53dc73cd8693d021cb53f72ed2a40b51a59a8b52d"
+            },
+            {
+              "file": "types.ts",
+              "changes": [
+                {
+                  "offset": 227,
+                  "reason": "Workbench moves to explicit entry"
+                }
+              ],
+              "before": "e830ab15fb2043e2f50951797db623b35d6c08aa8490960af65921533254e72c",
+              "after": "db924f7fa119a9d186f42b8b91014ab2e9ed088a240a0211bca7011dd1c681d1"
+            }
+          ],
+          "outsideGuide": 0,
+          "packages": {
+            "aheart-ui": "2.0.0-alpha.0",
+            "vue": "3.5.44",
+            "@aheart-ui/ai": "2.0.0-alpha.0",
+            "@aheart-ui/dnd": "1.1.0"
+          },
+          "views": [
+            {
+              "browserVersion": "26.5",
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              },
+              "status": "passed"
+            },
+            {
+              "browserVersion": "26.5",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "status": "passed"
+            }
+          ]
+        }
+      ]
+    },
+    "state-rollback": {
+      "exitCode": 0,
+      "command": "node pilots/check-rollback.mjs --project /Users/start/code/aheart-ui-wt/v2-alpha/.pilot-runs/aheart-m0-pilots-uZIdSF/muxu-todo --baseline-version 1.4.0 --core-tarball test-results/v2-alpha/consumer-packs/aheart-ui-2.0.0-alpha.0.tgz --out test-results/v2-alpha/state-rollback",
+      "stages": [
+        {
+          "name": "baseline",
+          "tasks": [
+            {
+              "id": 1,
+              "title": "核对组件样式",
+              "done": false
+            },
+            {
+              "id": 2,
+              "title": "迁移前保留任务",
+              "done": true
+            }
+          ],
+          "core": {
+            "version": "1.4.0",
+            "resolved": "https://registry.npmjs.org/aheart-ui/-/aheart-ui-1.4.0.tgz",
+            "integrity": "sha512-gehbFrCkcVp6ElhKZ3bu6SobrIgKjDrxtObz17cOXNS6Ha78jFUzO197piVLiWpfLvRxdILAvJZciDhmHbmoAA==",
+            "license": "MIT",
+            "dependencies": {
+              "@floating-ui/dom": "^1.8.0",
+              "@lucide/vue": "^1.24.0",
+              "@tanstack/vue-virtual": "3.13.36",
+              "dayjs": "^1.11.13"
+            },
+            "peerDependencies": {
+              "vue": ">=3.4.0 <4"
+            }
+          },
+          "foreground": "rgb(0, 62, 179)"
+        },
+        {
+          "name": "upgrade",
+          "tasks": [
+            {
+              "id": 1,
+              "title": "核对组件样式",
+              "done": false
+            },
+            {
+              "id": 2,
+              "title": "迁移前保留任务",
+              "done": false
+            },
+            {
+              "id": 3,
+              "title": "候选期间新增任务",
+              "done": true
+            }
+          ],
+          "core": {
+            "version": "2.0.0-alpha.0",
+            "resolved": "file:../../../test-results/v2-alpha/consumer-packs/aheart-ui-2.0.0-alpha.0.tgz",
+            "integrity": "sha512-gC7mqqad7/AfHW6BvkJZelZa0HLU07OLwgPmVc3A0czSdKHEFhU4Z99Hd2iLNUhZzanG8CRZkTQSCIavYkHiLg==",
+            "license": "MIT",
+            "dependencies": {
+              "@floating-ui/dom": "^1.8.0",
+              "@lucide/vue": "^1.24.0",
+              "@tanstack/vue-virtual": "3.13.36",
+              "dayjs": "^1.11.13"
+            },
+            "peerDependencies": {
+              "vue": ">=3.4.0 <4"
+            }
+          },
+          "foreground": "rgb(0, 62, 179)"
+        },
+        {
+          "name": "rollback",
+          "tasks": [
+            {
+              "id": 1,
+              "title": "核对组件样式",
+              "done": false
+            },
+            {
+              "id": 3,
+              "title": "候选期间新增任务",
+              "done": true
+            }
+          ],
+          "core": {
+            "version": "1.4.0",
+            "resolved": "https://registry.npmjs.org/aheart-ui/-/aheart-ui-1.4.0.tgz",
+            "integrity": "sha512-gehbFrCkcVp6ElhKZ3bu6SobrIgKjDrxtObz17cOXNS6Ha78jFUzO197piVLiWpfLvRxdILAvJZciDhmHbmoAA==",
+            "license": "MIT",
+            "dependencies": {
+              "@floating-ui/dom": "^1.8.0",
+              "@lucide/vue": "^1.24.0",
+              "@tanstack/vue-virtual": "3.13.36",
+              "dayjs": "^1.11.13"
+            },
+            "peerDependencies": {
+              "vue": ">=3.4.0 <4"
+            }
+          },
+          "foreground": "rgb(0, 62, 179)"
+        }
+      ],
+      "restoration": "passed"
+    },
+    "v1": {
+      "exitCode": 0,
+      "command": "node scripts/v1-consumer.mjs --pack-dir test-results/v2-alpha/consumer-packs --out test-results/v2-alpha/v1",
+      "coverage": {
+        "total": 65,
+        "styles": 65,
+        "js": 65
+      },
+      "denominator": {
+        "fullBytes": 201510,
+        "fullSha256": "bd1006443101d0335a14c0ae0bcdaf351de95d0a76cddf4239c89e76cae95c83",
+        "matchesV0": true,
+        "themeBytes": 1767,
+        "themeFraction": 0.008768795593270805
+      },
+      "workbenchReferences": {
+        "ai/agent-workbench": {
+          "package": "@aheart-ui/ai@1.2.0",
+          "jsGzip": 90003
+        },
+        "ai/workbench": {
+          "package": "@aheart-ui/ai@1.2.0",
+          "jsGzip": 90003
+        }
+      }
+    },
+    "visual": {
+      "exitCode": 0,
+      "command": "node scripts/v1-visual-consumer.mjs --consumer-results test-results/v2-alpha/v1/results.json --out test-results/v2-alpha/visual",
+      "cases": 12,
+      "comparison": "six engine/viewport pairs are byte-identical; 12 screenshots"
+    },
+    "typecheck": {
+      "exitCode": 0,
+      "command": "corepack pnpm typecheck"
+    },
+    "determinism": {
+      "exitCode": 0
+    },
+    "docs": {
+      "exitCode": 0,
+      "command": "corepack pnpm docs:build",
+      "output": "test-results/v2-alpha/docs.stdout"
+    },
+    "coverage": {
+      "exitCode": 0,
+      "command": "corepack pnpm test:coverage:r1",
+      "output": "test-results/v2-alpha/coverage.stdout",
+      "report": "evidence/V2/alpha/r1-coverage.json"
+    },
+    "unit": {
+      "command": "corepack pnpm test",
+      "exitCode": 0,
+      "output": "test-results/v2-alpha/unit-r3.stdout",
+      "outputSha256": "0eb55dbd69eba3cb807c0e0ad0b4d3cd88192ecd22237d023b7d23a4217306d0",
+      "passed": {
+        "core": 1508,
+        "dnd": 82,
+        "ai": 200,
+        "scripts": 283
+      },
+      "failed": 0,
+      "runSource": "91862fb plus the QA changes subsequently committed as 616c841"
+    },
+    "layout-tests": {
+      "command": "node --test scripts/d4-deferred-consumer.test.mjs scripts/ci-config.test.mjs scripts/overlay-focus-build.test.mjs scripts/state-kernel-build.test.mjs",
+      "exitCode": 0,
+      "output": "test-results/v2-alpha/layout-tests.stdout",
+      "passed": 106
+    },
+    "e2e": {
+      "exitCode": 0,
+      "report": "evidence/V2/alpha/e2e-summary.json"
+    },
+    "rollback-1.3": {
+      "exitCode": 0,
+      "report": "evidence/V2/alpha/rollback-1.3.json"
+    }
+  },
+  "qaSourceSha": "616c841ad0691d9ac607367505c64c9461e9c54f"
+}

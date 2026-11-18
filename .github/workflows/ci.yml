@@ -49,6 +49,8 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps chromium firefox webkit
+      - name: Build package outputs
+        run: pnpm build
       - name: Unit and script tests
         run: pnpm test
 
@@ -70,6 +72,8 @@ jobs:
           cache: pnpm
       - name: Install
         run: pnpm install --frozen-lockfile
+      - name: Build package outputs
+        run: pnpm build
       - name: Typecheck
         run: pnpm typecheck
 
@@ -91,6 +95,8 @@ jobs:
           cache: pnpm
       - name: Install
         run: pnpm install --frozen-lockfile
+      - name: Build package outputs
+        run: pnpm build
       - name: R1 branch coverage
         run: pnpm test:coverage:r1
       - name: Upload coverage evidence
@@ -131,9 +137,10 @@ jobs:
         if: ${{ failure() && steps.build_generated.outcome == 'failure' }}
         run: |
           mkdir -p test-results/build-generated-diagnostics
-          git diff --cached HEAD -- packages/components/es packages/components/lib packages/dnd/es packages/dnd/lib packages/ai/es packages/ai/lib > test-results/build-generated-diagnostics/generated-cached.diff
-          git diff -- packages/components/es packages/components/lib packages/dnd/es packages/dnd/lib packages/ai/es packages/ai/lib > test-results/build-generated-diagnostics/generated-worktree.diff
-          git ls-files --others -- packages/components/es packages/components/lib packages/dnd/es packages/dnd/lib packages/ai/es packages/ai/lib > test-results/build-generated-diagnostics/generated-untracked.txt
+          git diff --cached HEAD -- packages/components/dist packages/dnd/es packages/dnd/lib packages/ai/dist > test-results/build-generated-diagnostics/generated-cached.diff
+          git diff -- packages/components/dist packages/dnd/es packages/dnd/lib packages/ai/dist > test-results/build-generated-diagnostics/generated-worktree.diff
+          git ls-files --others -- packages/components/dist packages/dnd/es packages/dnd/lib packages/ai/dist > test-results/build-generated-diagnostics/generated-untracked.txt
+          git ls-files -- packages/components packages/ai packages/dnd | grep -E '^packages/[^/]+/(dist|es|lib)/' > test-results/build-generated-diagnostics/generated-tracked.txt || test "$?" -eq 1
       - name: Upload Build Diagnostics
         if: ${{ failure() && steps.build_generated.outcome == 'failure' }}
         uses: actions/upload-artifact@v4
@@ -188,26 +195,56 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps chromium firefox webkit
+      - name: Build package outputs
+        run: pnpm build
       - name: Verify Release Tarballs
         run: pnpm release:pack --pack-destination test-results/release-tarballs
+      - name: Verify legacy paths against the public 1.x baseline
+        run: |
+          mkdir -p test-results/v2-baseline/packs
+          npm pack --ignore-scripts --json --registry=https://registry.npmjs.org/ --pack-destination test-results/v2-baseline/packs aheart-ui@1.4.0 @aheart-ui/ai@1.2.0 @aheart-ui/dnd@1.1.0 > test-results/v2-baseline/npm-pack.json
+          cp test-results/v2-baseline/packs/aheart-ui-dnd-1.1.0.tgz test-results/release-tarballs/
+          node scripts/v2-legacy-consumer.mjs
+      - name: Verify AI Chat without DND
+        run: node scripts/v2-ai-optional-consumer.mjs
       - name: Strict packed consumer types (workspace Vue and Vue 3.5.44)
         run: pnpm check:consumer-types
       - name: V1 all Ready entry JS CSS and module boundaries
         run: pnpm check:v1-consumer
       - name: V1 packed SSR hydration and full versus scoped styles
         run: pnpm check:v1-visual-consumer
-      - name: V1 unchanged pilot compatibility
+      - name: V1 public pilot rollback
         run: |
           mkdir -p test-results/v1-pilot-compatibility
           for engine in chromium firefox webkit; do
             node pilots/run-baselines.mjs --entry-mode legacy --only clean-consumer,ai-review-gate \
-              --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz \
-              --ai-tarball test-results/release-tarballs/aheart-ui-ai-1.2.0.tgz \
-              --dnd-tarball test-results/release-tarballs/aheart-ui-dnd-1.1.0.tgz \
+              --core-version 1.4.0 --ai-version 1.2.0 --dnd-version 1.1.0 \
+              --baseline-lock-dir evidence/V2/baseline \
               --browser "$engine" --out "test-results/v1-pilot-compatibility/$engine"
           done
-      - name: V1 development diagnostics and migration codemod
-        run: pnpm check:v2-migration-consumer
+      - name: V2 codemod migration of the two pilots
+        run: |
+          core_version="$(node -p 'require("./packages/components/package.json").version')"
+          ai_version="$(node -p 'require("./packages/ai/package.json").version')"
+          mkdir -p test-results/v2-migrated-pilots
+          for engine in chromium firefox webkit; do
+            node pilots/run-baselines.mjs --entry-mode migrated --only clean-consumer,ai-review-gate \
+              --core-tarball "test-results/release-tarballs/aheart-ui-$core_version.tgz" \
+              --ai-tarball "test-results/release-tarballs/aheart-ui-ai-$ai_version.tgz" \
+              --dnd-tarball test-results/v2-baseline/packs/aheart-ui-dnd-1.1.0.tgz \
+              --browser "$engine" --out "test-results/v2-migrated-pilots/$engine"
+          done
+      - name: V1 and V2 development diagnostics and migration codemod
+        run: |
+          node scripts/v2-migration-consumer.mjs --baseline --pack-dir test-results/v2-baseline/packs --out test-results/v2-migration-baseline
+          pnpm check:v2-migration-consumer
+      - name: Preserve persisted state through upgrade and rollback
+        run: |
+          core_version="$(node -p 'require("./packages/components/package.json").version')"
+          node pilots/run-baselines.mjs --only muxu-todo --core-version 1.4.0 --out test-results/v2-state-baseline
+          project="$(node -p 'require("./test-results/v2-state-baseline/results.json").pilots[0].project')"
+          node pilots/check-rollback.mjs --project "$project" --baseline-version 1.4.0 \
+            --core-tarball "test-results/release-tarballs/aheart-ui-$core_version.tgz" --out test-results/v2-state-rollback
       - name: Pack and run isolated consumers
         run: |
           pack_dir=$(mktemp -d)
@@ -217,7 +254,7 @@ jobs:
           pnpm --dir packages/components pack --json --pack-destination "$pack_dir" > "$pack_dir/pack.json"
           pnpm --dir packages/dnd pack --json --pack-destination "$pack_dir" > "$pack_dir/dnd-pack.json"
           pnpm --dir packages/ai pack --json --pack-destination "$pack_dir" > "$pack_dir/ai-pack.json"
-          components_tarball="$pack_dir/aheart-ui-1.4.0.tgz"
+          components_tarball="$(node -p 'require(process.argv[1]).filename' "$pack_dir/pack.json")"
           dnd_tarball="$(node -p 'require(process.argv[1]).filename' "$pack_dir/dnd-pack.json")"
           ai_tarball="$(node -p 'require(process.argv[1]).filename' "$pack_dir/ai-pack.json")"
           node scripts/root-entry-consumer.mjs --tarball "$components_tarball" --out "$root_out"
@@ -231,19 +268,28 @@ jobs:
         run: pnpm check:m3-consumer
       - name: M3 packed consumer and Workbench pilot
         run: |
+          core_version="$(node -p 'require("./packages/components/package.json").version')"
+          ai_version="$(node -p 'require("./packages/ai/package.json").version')"
           node pilots/run-baselines.mjs --entry-mode subpath --only clean-consumer,ai-review-gate \
-            --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz \
-            --ai-tarball test-results/release-tarballs/aheart-ui-ai-1.2.0.tgz \
+            --core-tarball "test-results/release-tarballs/aheart-ui-$core_version.tgz" \
+            --ai-tarball "test-results/release-tarballs/aheart-ui-ai-$ai_version.tgz" \
             --dnd-tarball test-results/release-tarballs/aheart-ui-dnd-1.1.0.tgz \
             --out test-results/m3-pilots
       - name: M1 public entries, CSS and module graph
         run: pnpm check:m1-consumer
       - name: M1 split and compatibility pilot paths
         run: |
+          core_version="$(node -p 'require("./packages/components/package.json").version')"
+          ai_version="$(node -p 'require("./packages/ai/package.json").version')"
           mkdir -p test-results/m1-pilots
-          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz --entry-mode subpath --out test-results/m1-pilots/chromium
-          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz --entry-mode subpath --only clean-consumer --browser firefox --out test-results/m1-pilots/firefox
-          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz --entry-mode subpath --only clean-consumer --browser webkit --out test-results/m1-pilots/webkit
+          node pilots/run-baselines.mjs --core-tarball "test-results/release-tarballs/aheart-ui-$core_version.tgz" \
+            --ai-tarball "test-results/release-tarballs/aheart-ui-ai-$ai_version.tgz" \
+            --dnd-tarball test-results/release-tarballs/aheart-ui-dnd-1.1.0.tgz \
+            --entry-mode subpath --out test-results/m1-pilots/chromium
+          for engine in firefox webkit; do
+            node pilots/run-baselines.mjs --core-tarball "test-results/release-tarballs/aheart-ui-$core_version.tgz" \
+              --entry-mode subpath --only clean-consumer --browser "$engine" --out "test-results/m1-pilots/$engine"
+          done
       - name: Upload Consumer Evidence
         if: ${{ always() }}
         uses: actions/upload-artifact@v4
@@ -251,10 +297,16 @@ jobs:
           name: consumer-evidence-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
             test-results/release-tarballs/*.tgz
+            test-results/v2-legacy-consumer/results.json
+            test-results/v2-ai-optional-consumer/*.log
+            test-results/v2-ai-optional-consumer/results.json
             test-results/v1-consumer/
             test-results/v1-visual-consumer/
             test-results/v1-pilot-compatibility/
+            test-results/v2-migrated-pilots/
+            test-results/v2-state-rollback/
             test-results/v2-migration-consumer/
+            test-results/v2-migration-baseline/
             test-results/m1-consumer/
             test-results/m3-consumer/*.log
             test-results/m3-consumer/results.json

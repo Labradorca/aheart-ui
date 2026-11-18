@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "packages": [
+    {
+      "name": "aheart-ui",
+      "paths": 1182,
+      "resolvable": 1144,
+      "private": 38,
+      "styles": 96,
+      "differences": []
+    },
+    {
+      "name": "@aheart-ui/dnd",
+      "paths": 100,
+      "resolvable": 100,
+      "private": 0,
+      "styles": 0,
+      "differences": []
+    },
+    {
+      "name": "@aheart-ui/ai",
+      "paths": 202,
+      "resolvable": 202,
+      "private": 0,
+      "styles": 32,
+      "differences": []
+    }
+  ]
+}

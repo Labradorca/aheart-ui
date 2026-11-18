@@ -16,9 +16,9 @@ test('D1 state helpers stay internal and ship paired ESM and CommonJS files', ()
 
   for (const helper of internalHelpers) {
     assert.doesNotMatch(publicEntry, new RegExp(`utils/${helper}`))
-    for (const format of ['es', 'lib']) {
-      assert.equal(existsSync(new URL(`./packages/components/${format}/utils/${helper}.d.ts`, root)), true)
-      assert.equal(existsSync(new URL(`./packages/components/${format}/utils/${helper}.js`, root)), true)
+    assert.equal(existsSync(new URL(`./packages/components/dist/types/utils/${helper}.d.ts`, root)), true)
+    for (const format of ['esm', 'cjs']) {
+      assert.equal(existsSync(new URL(`./packages/components/dist/${format}/utils/${helper}.js`, root)), true)
     }
   }
 })

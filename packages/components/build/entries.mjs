@@ -1,4 +1,5 @@
 import { getComponentEntries } from '../../build/package-entries.mjs'
+import { distRuntimeExport } from '../../build/dist-layout.mjs'
 
 // Public component entries and their transitive visual dependencies. Runtime imports
 // and component CSS stay separate; legacy es/lib paths remain compatible.
@@ -9,12 +10,10 @@ export const publicRuntimeExports = Object.fromEntries([
   ['full', 'full'],
   ['constant', 'constant/index'],
   ['resolver', 'resolver/index']
-].map(([subpath, output]) => [`./${subpath}`, {
-  types: `./es/${output}.d.ts`, import: `./es/${output}.js`, require: `./lib/${output}.js`
-}]))
+].map(([subpath, output]) => [`./${subpath}`, distRuntimeExport(output)]))
 export const publicStyleExports = {
-  './theme.css': './es/theme.css', './full.css': './es/full.css',
-  ...Object.fromEntries(componentEntries.map(({ subpath }) => [`./${subpath}/style.css`, `./es/${subpath}/style.css`]))
+  './theme.css': './dist/styles/theme.css', './full.css': './dist/styles/full.css',
+  ...Object.fromEntries(componentEntries.map(({ subpath }) => [`./${subpath}/style.css`, `./dist/styles/${subpath}/style.css`]))
 }
 
 export const fullStyleSources = [

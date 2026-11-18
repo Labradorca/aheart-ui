@@ -1,3 +1,5 @@
+import { emitDistFile, emitDistModuleMetadata } from './dist-layout.mjs'
+import { emitLegacyFacades } from './legacy-facades.mjs'
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import postcss from 'postcss'
 import { getComponentEntries } from './package-entries.mjs'
@@ -80,7 +82,7 @@ export function selectComponentStyles(css, prefix, scopes, contexts = {}) {
   return `${root.toString().trim()}\n`
 }
 
-export function splitPackageStyles(directory, domain, entries) {
+export function splitPackageStyles(directory, domain, entries, { dist = false, legacyRoot = 'index' } = {}) {
   return {
     name: `aheart-${domain}-split-styles`,
     closeBundle() {
@@ -88,6 +90,14 @@ export function splitPackageStyles(directory, domain, entries) {
       const parts = entries.filter(({ scopes }) => scopes).map(({ subpath }) =>
         [`${subpath}/style.css`, componentStyleClosure(domain, subpath)]
       )
+
+      if (dist) {
+        emitDistModuleMetadata(directory)
+        emitDistFile(directory, 'styles/style.css', css)
+        for (const [file, contents] of parts) emitDistFile(directory, `styles/${file}`, contents)
+        emitLegacyFacades(directory, { root: legacyRoot })
+        return
+      }
 
       for (const [folder, type] of [['es', 'module'], ['lib', 'commonjs']]) {
         const emit = (file, contents) => {
