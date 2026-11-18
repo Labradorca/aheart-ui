@@ -19,7 +19,7 @@ const dndExports = optionalPackageExports(getComponentEntries('dnd'))
 const aiExports = {
   '.': distRuntimeExport('index'),
   './style.css': './dist/styles/style.css',
-  ...optionalPackageExports(getComponentEntries('ai'), { dist: true })
+  ...optionalPackageExports(getComponentEntries('ai'), { dist: true, fullEntry: 'full' })
 }
 
 export const packageContracts = [
@@ -52,8 +52,8 @@ export const packageContracts = [
     dist: true,
     cssSideEffects: true,
     expectedVuePeer: '>=3.5.0 <4',
-    expectedDependencies: { '@aheart-ui/dnd': '^1.1.0' },
-    expectedPeerDependencies: { 'aheart-ui': '^1.4.0' },
+    expectedPeerDependencies: { 'aheart-ui': '^1.4.0', '@aheart-ui/dnd': '^1.1.0' },
+    expectedOptionalPeers: ['@aheart-ui/dnd'],
     requiredFiles: filesForExports(aiExports, distPackageFiles)
   }
 ]
@@ -117,6 +117,12 @@ export const validatePackageContract = (contract, manifest, packedFiles) => {
 
   for (const [name, range] of Object.entries(contract.expectedPeerDependencies ?? {})) {
     if (manifest.peerDependencies?.[name] !== range) errors.push(`${prefix} peer dependency ${name} must be ${range}`)
+  }
+  for (const name of contract.expectedOptionalPeers ?? []) {
+    if (manifest.peerDependenciesMeta?.[name]?.optional !== true) errors.push(`${prefix} ${name} must be an optional peer`)
+    if (manifest.dependencies?.[name] || manifest.optionalDependencies?.[name]) {
+      errors.push(`${prefix} ${name} must be installed explicitly by the consumer`)
+    }
   }
 
   for (const file of contract.requiredFiles) {

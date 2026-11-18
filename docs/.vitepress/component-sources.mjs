@@ -20,6 +20,7 @@ const fullCss = '\0aheart-docs/full.css'
 const componentStyles = new Map()
 
 export const componentSourceAliases = [
+  exact('@aheart-ui/ai/full', source('ai', 'full.ts')),
   exact('aheart-ui/full', source('components', 'full.ts')),
   exact('aheart-ui/full.css', fullCss),
   exact('aheart-ui/style.css', fullCss),

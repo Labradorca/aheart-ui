@@ -26,6 +26,7 @@ const sha = value => createHash('sha256').update(value).digest('hex')
 const packages = { base: 'aheart-ui', ai: '@aheart-ui/ai', dnd: '@aheart-ui/dnd' }
 const manifest = await json(path.join(root, 'packages/components/src/constant/entries.json'))
 const approved = await json(path.join(root, 'evidence/V1/classification/approved.json'))
+const workbenchBaseline = await json(path.join(root, 'evidence/V2/baseline/ai-workbench-root-named.json'))
 const entries = Object.entries(packages).flatMap(([domain, packageName]) => manifest[domain].map(entry => ({ domain, packageName, entry, key: `${domain}/${entry.subpath}` })))
 assert.equal(new Set(entries.map(item => item.key)).size, entries.length, 'duplicate logical public entry')
 assert.deepEqual(entries.map(item => item.key).sort(), approved.entries.map(entry => `${entry.domain}/${entry.subpath}`).sort(), 'existing approved public entry coverage changed')
@@ -144,13 +145,22 @@ for(const {entry,packageName,key,domain} of entries){
  }
  // Legacy-only aliases (e.g. grid.ACol) were never root exports. Canonical
  // Resolver names must all retain their existing root/component identities.
- for(const name of entry.names??[]){assert.ok(root[name],request+' root '+name);assert.equal(esm[name],root[name]);assert.equal(cjs[name],rootCjs[name])}
+ const full=await import(packageName+'/full'), fullCjs=require(packageName+'/full')
+ for(const name of entry.names??[]){
+  const moved=domain==='ai'&&name==='AIAgentWorkbench'
+  const owner=moved?full:root, ownerCjs=moved?fullCjs:rootCjs
+  assert.ok(owner[name],request+' public '+name);assert.equal(esm[name],owner[name]);assert.equal(cjs[name],ownerCjs[name])
+ }
  if(domain==='base'){
   assert.equal(Object.hasOwn(root,'default'),false);assert.equal(Object.hasOwn(rootCjs,'default'),false)
-  assert.equal((await import(packageName+'/full')).default,(await import(packageName+'/es/index.js')).default)
-  assert.equal(require(packageName+'/full').default,require(packageName+'/lib/index.js').default)
+  assert.equal(full.default,(await import(packageName+'/es/index.js')).default)
+  assert.equal(fullCjs.default,require(packageName+'/lib/index.js').default)
+ }else if(domain==='ai'){
+  assert.equal(Object.hasOwn(root,'AIAgentWorkbench'),false);assert.equal(Object.hasOwn(rootCjs,'AIAgentWorkbench'),false)
+  assert.equal(full.default,(await import(packageName+'/es/index.js')).default)
+  assert.equal(fullCjs.default,require(packageName+'/lib/index.js').default)
  }else{
-  assert.equal((await import(packageName+'/full')).default,root.default);assert.equal(require(packageName+'/full').default,rootCjs.default)
+  assert.equal(full.default,root.default);assert.equal(fullCjs.default,rootCjs.default)
  }
  const all=Object.keys(esm).filter(name=>name!=='default'), preferred=entry.names?.length?entry.names:all
  names[key]=preferred
@@ -189,6 +199,7 @@ console.log('All 65 ESM/CJS/root/full identities and representative SSR, plus AI
     }
     const header = "import {createApp,h,resolveComponent} from 'vue';"
     const fullBuilds = {}
+    result.rootNamedReferences = {}
     result.status = 'running'
     for (const [domain, packageName] of Object.entries(packages)) {
       fullBuilds[domain] = await bundle(`${domain}/full`, `${header}import Plugin from '${packageName}/full';const app=createApp({render:()=>h(resolveComponent('${domain === 'base' ? 'AButton' : domain === 'ai' ? 'AAIChatPanel' : 'ASortableList'}'))});app.use(Plugin);app.mount('#app')`)
@@ -199,14 +210,22 @@ console.log('All 65 ESM/CJS/root/full identities and representative SSR, plus AI
         const imported = names[key], request = `${packageName}/${entry.subpath}`
         const fixture = source => `${header}import {${imported.join(',')}} from '${source}';const components=[${imported.join(',')}];console.log(components);createApp({render:()=>h(components[0])}).mount('#app')`
         const selected = await bundle(`${key}/scoped`, fixture(request))
-        const named = await bundle(`${key}/root-named`, fixture(packageName))
         assert.equal(selected.cssBytes, 0, `${key}: runtime JS introduced CSS`)
-        assert.equal(named.cssBytes, 0, `${key}: root named runtime introduced CSS`)
         assert.deepEqual(moduleBoundaryErrors(selected.ids, entryClosure(domain, entry.subpath)), [], `${key}: module graph crossed declared dependencies`)
-        const moduleDirectory = packageContracts.find(pkg => pkg.name === packageName).dist ? 'dist/esm' : 'es'
-        const pluginFile = `/node_modules/${packageName}/${moduleDirectory}/${domain === 'base' ? 'plugin.js' : 'index.js'}`
-        assert.ok(!named.modules.some(module => module.id.endsWith(pluginFile) && module.renderedLength > 0), `${key}: root named retained full Plugin`)
-        assert.deepEqual(jsBudgetErrors(selected.jsGzip, named.jsGzip, fullBuilds[domain].jsGzip), [], `${key}: unchanged JS budget failed`)
+        let rootGzip
+        if (domain === 'ai' && imported.includes('AIAgentWorkbench')) {
+          rootGzip = workbenchBaseline.referenceGzipBytes[key]
+          assert(Number.isFinite(rootGzip), `${key}: missing published root named baseline`)
+          result.rootNamedReferences[key] = { package: workbenchBaseline.package, jsGzip: rootGzip }
+        } else {
+          const named = await bundle(`${key}/root-named`, fixture(packageName))
+          assert.equal(named.cssBytes, 0, `${key}: root named runtime introduced CSS`)
+          const moduleDirectory = packageContracts.find(pkg => pkg.name === packageName).dist ? 'dist/esm' : 'es'
+          const pluginFile = `/node_modules/${packageName}/${moduleDirectory}/${domain === 'base' ? 'plugin.js' : 'index.js'}`
+          assert.ok(!named.modules.some(module => module.id.endsWith(pluginFile) && module.renderedLength > 0), `${key}: root named retained full Plugin`)
+          rootGzip = named.jsGzip
+        }
+        assert.deepEqual(jsBudgetErrors(selected.jsGzip, rootGzip, fullBuilds[domain].jsGzip), [], `${key}: unchanged JS budget failed`)
         const styles = ['aheart-ui/theme.css', `${request}/style.css`, ...(entry.sideEffects ?? [])]
         const styled = await bundle(`${key}/styles`, fixture(request) + styles.map(style => `\nimport '${style}'`).join(''))
         assert.ok(styled.cssBytes > 0, `${key}: CSS was pruned`)

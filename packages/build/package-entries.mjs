@@ -15,11 +15,11 @@ export const runtimeExport = (output) => ({
   types: `./es/${output}.d.ts`, import: `./es/${output}.js`, require: `./lib/${output}.js`
 })
 
-export function optionalPackageExports(entries, { dist = false } = {}) {
+export function optionalPackageExports(entries, { dist = false, fullEntry = 'index' } = {}) {
   const runtime = dist ? distRuntimeExport : runtimeExport
   const styles = dist ? './dist/styles' : './es'
   return {
-    './full': runtime('index'),
+    './full': runtime(fullEntry),
     './full.css': `${styles}/style.css`,
     ...Object.fromEntries(entries.flatMap(({ subpath, output, styleOutput }) => [
       [`./${subpath}`, runtime(output ?? `${subpath}/index`)],

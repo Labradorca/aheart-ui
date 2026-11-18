@@ -201,6 +201,8 @@ jobs:
           mkdir -p test-results/v2-baseline/packs
           npm pack --ignore-scripts --json --registry=https://registry.npmjs.org/ --pack-destination test-results/v2-baseline/packs aheart-ui@1.4.0 @aheart-ui/ai@1.2.0 @aheart-ui/dnd@1.1.0 > test-results/v2-baseline/npm-pack.json
           node scripts/v2-legacy-consumer.mjs
+      - name: Verify AI Chat without DND
+        run: node scripts/v2-ai-optional-consumer.mjs
       - name: Strict packed consumer types (workspace Vue and Vue 3.5.44)
         run: pnpm check:consumer-types
       - name: V1 all Ready entry JS CSS and module boundaries
@@ -263,6 +265,8 @@ jobs:
           path: |
             test-results/release-tarballs/*.tgz
             test-results/v2-legacy-consumer/results.json
+            test-results/v2-ai-optional-consumer/*.log
+            test-results/v2-ai-optional-consumer/results.json
             test-results/v1-consumer/
             test-results/v1-visual-consumer/
             test-results/v1-pilot-compatibility/

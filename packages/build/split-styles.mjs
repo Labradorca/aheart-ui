@@ -82,7 +82,7 @@ export function selectComponentStyles(css, prefix, scopes, contexts = {}) {
   return `${root.toString().trim()}\n`
 }
 
-export function splitPackageStyles(directory, domain, entries, { dist = false } = {}) {
+export function splitPackageStyles(directory, domain, entries, { dist = false, legacyRoot = 'index' } = {}) {
   return {
     name: `aheart-${domain}-split-styles`,
     closeBundle() {
@@ -95,7 +95,7 @@ export function splitPackageStyles(directory, domain, entries, { dist = false } 
         emitDistModuleMetadata(directory)
         emitDistFile(directory, 'styles/style.css', css)
         for (const [file, contents] of parts) emitDistFile(directory, `styles/${file}`, contents)
-        emitLegacyFacades(directory)
+        emitLegacyFacades(directory, { root: legacyRoot })
         return
       }
 

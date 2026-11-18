@@ -1,0 +1,98 @@
+{
+  "status": "passed",
+  "tarballs": [
+    {
+      "name": "aheart-ui",
+      "version": "1.4.0",
+      "sha256": "8359e598c0e935f26c178b9848767c5993310fa51363a6a297322a1124ea3465"
+    },
+    {
+      "name": "@aheart-ui/ai",
+      "version": "1.2.0",
+      "sha256": "b359f32d19fd0beec62c4cc150662540249a858d923e9aa9a5c431f0249b0108"
+    }
+  ],
+  "commands": [
+    {
+      "name": "install",
+      "command": [
+        "npm",
+        "install",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "--registry=https://registry.npmjs.org/"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "strict-types",
+      "command": [
+        "/Users/start/.nvm/versions/node/v24.17.0/bin/node",
+        "node_modules/typescript/bin/tsc",
+        "-p",
+        "tsconfig.json"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "ssr-and-missing-peer",
+      "command": [
+        "/Users/start/.nvm/versions/node/v24.17.0/bin/node",
+        "probe.mjs"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "production-build",
+      "command": [
+        "/Users/start/.nvm/versions/node/v24.17.0/bin/node",
+        "node_modules/vite/bin/vite.js",
+        "build"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "modules": 2242,
+  "dndInstalled": false,
+  "missingPeerIdentifiesPackage": [
+    "@aheart-ui/ai/workbench",
+    "@aheart-ui/ai/full"
+  ],
+  "initialProbeCorrections": [
+    "Chat uses the existing named export.",
+    "The isolation directory now sits outside the workspace so the Node loader cannot find DND in a parent node_modules."
+  ],
+  "additionalChecks": {
+    "legacy": {
+      "exitCode": 0
+    },
+    "m3": {
+      "exitCode": 0
+    },
+    "strict": {
+      "exitCode": 0
+    },
+    "v1": {
+      "exitCode": 0,
+      "coverage": {
+        "total": 65,
+        "styles": 65,
+        "js": 65
+      },
+      "workbenchReferences": {
+        "ai/agent-workbench": {
+          "package": "@aheart-ui/ai@1.2.0",
+          "jsGzip": 90003
+        },
+        "ai/workbench": {
+          "package": "@aheart-ui/ai@1.2.0",
+          "jsGzip": 90003
+        }
+      }
+    },
+    "docs": {
+      "exitCode": 0
+    }
+  }
+}

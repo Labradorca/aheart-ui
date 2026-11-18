@@ -115,9 +115,9 @@
     },
     "./workbench/style.css": "./dist/styles/agent-workbench/style.css",
     "./full": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js"
+      "types": "./dist/types/full.d.ts",
+      "import": "./dist/esm/full.js",
+      "require": "./dist/cjs/full.js"
     },
     "./full.css": "./dist/styles/style.css",
     "./es/*.d.ts": "./dist/compat/es/*.d.ts",
@@ -131,6 +131,14 @@
     "./lib/*.js": {
       "types": "./dist/types/*.d.ts",
       "default": "./dist/compat/lib/*.js"
+    },
+    "./es/index.js": {
+      "types": "./dist/types/full.d.ts",
+      "default": "./dist/compat/es/index.js"
+    },
+    "./lib/index.js": {
+      "types": "./dist/types/full.d.ts",
+      "default": "./dist/compat/lib/index.js"
     }
   },
   "files": [
@@ -169,12 +177,11 @@
   },
   "peerDependencies": {
     "aheart-ui": "workspace:^1.4.0",
-    "vue": ">=3.5.0 <4"
-  },
-  "dependencies": {
+    "vue": ">=3.5.0 <4",
     "@aheart-ui/dnd": "workspace:^1.1.0"
   },
   "devDependencies": {
+    "@aheart-ui/dnd": "workspace:^1.1.0",
     "@vitejs/plugin-vue": "^5.0.3",
     "@vitest/coverage-v8": "1.6.1",
     "@vue/test-utils": "^2.4.6",
@@ -184,5 +191,10 @@
     "vitest": "^1.6.1",
     "vue": "^3.5.38",
     "vue-tsc": "^2.0.29"
+  },
+  "peerDependenciesMeta": {
+    "@aheart-ui/dnd": {
+      "optional": true
+    }
   }
 }

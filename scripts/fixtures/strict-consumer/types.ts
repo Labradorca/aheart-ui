@@ -90,7 +90,7 @@ void [publicComboboxProps, invalidCombobox]
 
 import { AIChatPanel as ChatEntry, type AITransportV2 } from '@aheart-ui/ai/chat'
 import { AIForm as AgentForm, type AIFormSchemaV1 } from '@aheart-ui/ai/agent'
-import { AIAgentWorkbench } from '@aheart-ui/ai'
+import { AIAgentWorkbench } from '@aheart-ui/ai/agent-workbench'
 import { AIAgentWorkbench as Workbench } from '@aheart-ui/ai/workbench'
 import { SortableList as SortableEntry, type SortableMoveEvent } from '@aheart-ui/dnd/sortable'
 import { AheartUIResolver, type AheartUIResolverOptions } from 'aheart-ui/resolver'
@@ -98,6 +98,7 @@ export type M3ExportTypes = [
   Assert<Equal<typeof ChatEntry, typeof AIChatPanel>>,
   Assert<Equal<typeof AgentForm, typeof AIForm>>,
   Assert<Equal<typeof Workbench, typeof AIAgentWorkbench>>,
+  Assert<Equal<'AIAgentWorkbench' extends keyof typeof import('@aheart-ui/ai') ? true : false, false>>,
   Assert<Equal<typeof SortableEntry, typeof SortableList>>,
   AITransportV2, AIFormSchemaV1, SortableMoveEvent
 ]
