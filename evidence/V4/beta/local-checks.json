@@ -1,0 +1,389 @@
+{
+  "sourceSha": "af5f8ef7c53dd003fe6e51b5021e8c321438ea8b",
+  "commands": [
+    {
+      "name": "build",
+      "command": "corepack pnpm build",
+      "exitCode": 0
+    },
+    {
+      "name": "docs-build",
+      "command": "corepack pnpm docs:build",
+      "exitCode": 0
+    },
+    {
+      "name": "release-pack",
+      "command": "corepack pnpm release:pack --pack-destination test-results/v4-beta/local-packs",
+      "exitCode": 0
+    },
+    {
+      "name": "public-1x-packs",
+      "command": "npm pack --ignore-scripts --json --registry=https://registry.npmjs.org/ --pack-destination test-results/v4-beta/public-1x aheart-ui@1.4.0 @aheart-ui/ai@1.2.0 @aheart-ui/dnd@1.1.0",
+      "exitCode": 0
+    },
+    {
+      "name": "typecheck",
+      "command": "corepack pnpm typecheck",
+      "exitCode": 0
+    },
+    {
+      "name": "strict",
+      "command": "node scripts/strict-consumer.mjs --pack-dir test-results/v4-beta/consumer-packs --out test-results/v4-beta/strict",
+      "exitCode": 0
+    },
+    {
+      "name": "legacy",
+      "command": "node scripts/v2-legacy-consumer.mjs --baseline-dir test-results/v4-beta/public-1x --pack-dir test-results/v4-beta/consumer-packs --out test-results/v4-beta/legacy/results.json",
+      "exitCode": 0
+    },
+    {
+      "name": "ai-optional",
+      "command": "node scripts/v2-ai-optional-consumer.mjs --pack-dir test-results/v4-beta/consumer-packs --out test-results/v4-beta/ai-optional",
+      "exitCode": 0
+    },
+    {
+      "name": "migration",
+      "command": "node scripts/v2-migration-consumer.mjs --pack-dir test-results/v4-beta/consumer-packs --out test-results/v4-beta/migration",
+      "exitCode": 0
+    },
+    {
+      "name": "consumer",
+      "command": "node scripts/v1-consumer.mjs --pack-dir test-results/v4-beta/consumer-packs --out test-results/v4-beta/consumer",
+      "exitCode": 0
+    },
+    {
+      "name": "visual",
+      "command": "node scripts/v1-visual-consumer.mjs --consumer-results test-results/v4-beta/consumer/results.json --out test-results/v4-beta/visual",
+      "exitCode": 0
+    },
+    {
+      "name": "pilots-chromium",
+      "command": "node pilots/run-baselines.mjs --entry-mode migrated --only clean-consumer\\,ai-review-gate --core-tarball test-results/v4-beta/consumer-packs/aheart-ui-2.0.0-beta.0.tgz --ai-tarball test-results/v4-beta/consumer-packs/aheart-ui-ai-2.0.0-beta.0.tgz --dnd-tarball test-results/v4-beta/consumer-packs/aheart-ui-dnd-1.1.0.tgz --browser chromium --out test-results/v4-beta/pilots/chromium",
+      "exitCode": 0
+    },
+    {
+      "name": "pilots-firefox",
+      "command": "node pilots/run-baselines.mjs --entry-mode migrated --only clean-consumer\\,ai-review-gate --core-tarball test-results/v4-beta/consumer-packs/aheart-ui-2.0.0-beta.0.tgz --ai-tarball test-results/v4-beta/consumer-packs/aheart-ui-ai-2.0.0-beta.0.tgz --dnd-tarball test-results/v4-beta/consumer-packs/aheart-ui-dnd-1.1.0.tgz --browser firefox --out test-results/v4-beta/pilots/firefox",
+      "exitCode": 0
+    },
+    {
+      "name": "pilots-webkit",
+      "command": "node pilots/run-baselines.mjs --entry-mode migrated --only clean-consumer\\,ai-review-gate --core-tarball test-results/v4-beta/consumer-packs/aheart-ui-2.0.0-beta.0.tgz --ai-tarball test-results/v4-beta/consumer-packs/aheart-ui-ai-2.0.0-beta.0.tgz --dnd-tarball test-results/v4-beta/consumer-packs/aheart-ui-dnd-1.1.0.tgz --browser webkit --out test-results/v4-beta/pilots/webkit",
+      "exitCode": 0
+    },
+    {
+      "name": "tests",
+      "command": "corepack pnpm test",
+      "exitCode": 0
+    }
+  ],
+  "testCounts": {
+    "components": 1790,
+    "scripts": 283,
+    "total": 2073
+  },
+  "tarballs": [
+    {
+      "filename": "aheart-ui-2.0.0-beta.0.tgz",
+      "name": "aheart-ui",
+      "version": "2.0.0-beta.0",
+      "sha256": "0f6bba0f09c8950967ec57ef066cb14502fa62899b1246ca7bb01c613b6119e7",
+      "integrity": "sha512-r+3wa3QNiZmGlJ6b0NXF6F4ww4QdoazgOlE5cBQrG41/pUYLXnKH5nV8h4exV6xvm3mtRxTl/PMeBRz4oNVctQ==",
+      "publishTag": "next",
+      "bytes": 709478,
+      "peerDependencies": {
+        "vue": ">=3.4.0 <4"
+      },
+      "unchangedPackageMembers": 2103,
+      "changedBeyondManifest": []
+    },
+    {
+      "filename": "aheart-ui-ai-2.0.0-beta.0.tgz",
+      "name": "@aheart-ui/ai",
+      "version": "2.0.0-beta.0",
+      "sha256": "9b8bc9350a373d3519c2f02128bcb95179b5fcbe4404803b836ed0de0486619a",
+      "integrity": "sha512-3lE5Pr5+gYR3TAuE9/QTU1bugfeZIFcW17s40EEbqroDbD6veeW4Q6xlvBhX9cVJGVrl2upGdMLdXha084swyQ==",
+      "publishTag": "next",
+      "bytes": 195494,
+      "peerDependencies": {
+        "aheart-ui": "^2.0.0-alpha.0",
+        "vue": ">=3.5.0 <4",
+        "@aheart-ui/dnd": "^1.1.0"
+      },
+      "unchangedPackageMembers": 362,
+      "changedBeyondManifest": []
+    },
+    {
+      "filename": "aheart-ui-dnd-1.1.0.tgz",
+      "name": "@aheart-ui/dnd",
+      "version": "1.1.0",
+      "sha256": "8cbc23c703b7250154c7d8afd2c18bf0e2ba3fe16f6bd6a82754967caf54747a",
+      "integrity": "sha512-Rg64ck5Ernu3GcR6BHf0C0SwRUpRMF0WFUQdNFkqvd46+ZbbRusRU4yFZ7tr7RRMhli15v/H1Gh2DfCVnzFJTA==",
+      "publishTag": null,
+      "bytes": 28188,
+      "peerDependencies": {
+        "vue": ">=3.4.0 <4"
+      }
+    }
+  ],
+  "readyCoverage": {
+    "total": 65,
+    "styles": 65,
+    "js": 65
+  },
+  "cssDenominator": {
+    "fullBytes": 201510,
+    "fullSha256": "bd1006443101d0335a14c0ae0bcdaf351de95d0a76cddf4239c89e76cae95c83",
+    "matchesV0": true,
+    "themeBytes": 1767,
+    "themeFraction": 0.008768795593270805
+  },
+  "visual": {
+    "fullPagePairsByteIdentical": 6,
+    "dateRangePairsByteIdentical": 3,
+    "dateRangeCases": [
+      {
+        "engine": "chromium",
+        "browserVersion": "149.0.7827.55",
+        "mode": "full",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "inputs": [
+          {
+            "part": "start",
+            "value": "2026-11-17",
+            "visibleWidth": 112,
+            "scrollWidth": 112,
+            "requiredWidth": 82,
+            "unobscured": true
+          },
+          {
+            "part": "end",
+            "value": "2026-11-18",
+            "visibleWidth": 112,
+            "scrollWidth": 112,
+            "requiredWidth": 83,
+            "unobscured": true
+          }
+        ],
+        "screenshotSha256": "caa1eede1194ce804421b35140f2b09e9be781422d670e2b9ed8c0996ebd4472"
+      },
+      {
+        "engine": "chromium",
+        "browserVersion": "149.0.7827.55",
+        "mode": "scoped",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "inputs": [
+          {
+            "part": "start",
+            "value": "2026-11-17",
+            "visibleWidth": 112,
+            "scrollWidth": 112,
+            "requiredWidth": 82,
+            "unobscured": true
+          },
+          {
+            "part": "end",
+            "value": "2026-11-18",
+            "visibleWidth": 112,
+            "scrollWidth": 112,
+            "requiredWidth": 83,
+            "unobscured": true
+          }
+        ],
+        "screenshotSha256": "caa1eede1194ce804421b35140f2b09e9be781422d670e2b9ed8c0996ebd4472"
+      },
+      {
+        "engine": "firefox",
+        "browserVersion": "151.0",
+        "mode": "full",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "inputs": [
+          {
+            "part": "start",
+            "value": "2026-11-17",
+            "visibleWidth": 104,
+            "scrollWidth": 104,
+            "requiredWidth": 82,
+            "unobscured": true
+          },
+          {
+            "part": "end",
+            "value": "2026-11-18",
+            "visibleWidth": 104,
+            "scrollWidth": 104,
+            "requiredWidth": 83,
+            "unobscured": true
+          }
+        ],
+        "screenshotSha256": "4759b68799ca7ec3dddbae36a9b8a14a5c73c6cc379bed6d97ccded805ec67b1"
+      },
+      {
+        "engine": "firefox",
+        "browserVersion": "151.0",
+        "mode": "scoped",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "inputs": [
+          {
+            "part": "start",
+            "value": "2026-11-17",
+            "visibleWidth": 104,
+            "scrollWidth": 104,
+            "requiredWidth": 82,
+            "unobscured": true
+          },
+          {
+            "part": "end",
+            "value": "2026-11-18",
+            "visibleWidth": 104,
+            "scrollWidth": 104,
+            "requiredWidth": 83,
+            "unobscured": true
+          }
+        ],
+        "screenshotSha256": "4759b68799ca7ec3dddbae36a9b8a14a5c73c6cc379bed6d97ccded805ec67b1"
+      },
+      {
+        "engine": "webkit",
+        "browserVersion": "26.5",
+        "mode": "full",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "inputs": [
+          {
+            "part": "start",
+            "value": "2026-11-17",
+            "visibleWidth": 112,
+            "scrollWidth": 112,
+            "requiredWidth": 82,
+            "unobscured": true
+          },
+          {
+            "part": "end",
+            "value": "2026-11-18",
+            "visibleWidth": 112,
+            "scrollWidth": 112,
+            "requiredWidth": 83,
+            "unobscured": true
+          }
+        ],
+        "screenshotSha256": "f7b56d4faee95ba023fc77c3e3b4a49849ab6fb6abb2708688f824804948566f"
+      },
+      {
+        "engine": "webkit",
+        "browserVersion": "26.5",
+        "mode": "scoped",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "inputs": [
+          {
+            "part": "start",
+            "value": "2026-11-17",
+            "visibleWidth": 112,
+            "scrollWidth": 112,
+            "requiredWidth": 82,
+            "unobscured": true
+          },
+          {
+            "part": "end",
+            "value": "2026-11-18",
+            "visibleWidth": 112,
+            "scrollWidth": 112,
+            "requiredWidth": 83,
+            "unobscured": true
+          }
+        ],
+        "screenshotSha256": "f7b56d4faee95ba023fc77c3e3b4a49849ab6fb6abb2708688f824804948566f"
+      }
+    ]
+  },
+  "automatedLocalTarballPilots": [
+    {
+      "engine": "chromium",
+      "name": "clean-consumer",
+      "versions": {
+        "aheart-ui": "2.0.0-beta.0",
+        "vue": "3.5.44"
+      },
+      "outsideGuideEdits": 0
+    },
+    {
+      "engine": "chromium",
+      "name": "ai-review-gate",
+      "versions": {
+        "aheart-ui": "2.0.0-beta.0",
+        "vue": "3.5.44",
+        "@aheart-ui/ai": "2.0.0-beta.0",
+        "@aheart-ui/dnd": "1.1.0"
+      },
+      "outsideGuideEdits": 0
+    },
+    {
+      "engine": "firefox",
+      "name": "clean-consumer",
+      "versions": {
+        "aheart-ui": "2.0.0-beta.0",
+        "vue": "3.5.44"
+      },
+      "outsideGuideEdits": 0
+    },
+    {
+      "engine": "firefox",
+      "name": "ai-review-gate",
+      "versions": {
+        "aheart-ui": "2.0.0-beta.0",
+        "vue": "3.5.44",
+        "@aheart-ui/ai": "2.0.0-beta.0",
+        "@aheart-ui/dnd": "1.1.0"
+      },
+      "outsideGuideEdits": 0
+    },
+    {
+      "engine": "webkit",
+      "name": "clean-consumer",
+      "versions": {
+        "aheart-ui": "2.0.0-beta.0",
+        "vue": "3.5.44"
+      },
+      "outsideGuideEdits": 0
+    },
+    {
+      "engine": "webkit",
+      "name": "ai-review-gate",
+      "versions": {
+        "aheart-ui": "2.0.0-beta.0",
+        "vue": "3.5.44",
+        "@aheart-ui/ai": "2.0.0-beta.0",
+        "@aheart-ui/dnd": "1.1.0"
+      },
+      "outsideGuideEdits": 0
+    }
+  ],
+  "retries": [
+    {
+      "check": "pilots-chromium",
+      "firstExitCode": 1,
+      "cause": "The output parent directory was missing before any trial ran."
+    },
+    {
+      "check": "visual",
+      "firstExitCode": 137,
+      "cause": "The process received SIGKILL after the Chromium captures. The same candidate passed on a separate run."
+    }
+  ]
+}

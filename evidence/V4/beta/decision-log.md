@@ -19,13 +19,15 @@
 | 门禁 | Beta 状态 |
 | --- | --- |
 | G1 设计 | 已核对 V2 Pass、缺陷分级及回滚基线，已冻结七项自用任务。[任务清单](user-tasks.md) |
-| G2 代码 | #53 已合入基线。已按授权修改 Core 和 AI 的 Beta 版本 |
-| G3 自动检查 | 待 Beta 候选 |
-| G4 视觉 | #53 在全量和按需的 390 × 844 页面均通过，保留逐字节截图门槛。待 Beta 实包复验。[前置核验](preflight.json) |
-| G5 包 | 待 Beta pack |
+| G2 代码 | #53 已合入基线。已按授权修改 Core 和 AI 的 Beta 版本，源码验证于 `af5f8ef7` |
+| G3 自动检查 | 2,073 项单元与脚本测试、构建、文档、严格类型、旧路径、无 DND 的 AI 和迁移诊断通过。65 个入口的模块图及 JS/CSS 预算通过。[本地核验](local-checks.json) |
+| G4 视觉 | Beta 实包在 Chromium、Firefox、WebKit 通过。六对整页截图及三对 390 × 844 日期框截图逐字节一致。[本地核验](local-checks.json) |
+| G5 包 | Core、AI 的 Beta 试包及 DND 本地打包通过。Core 和 AI 与 #53 修复候选相比，包内差异仅为 manifest 版本。两个 Beta 包配置 `next`，消费试点使用公开 DND 1.1.0。[包摘要](local-checks.json) |
 | G6 PR / 合并 | 待 Beta PR 和单独合并授权 |
 | G7 Main CI / Pages | 待 Beta 合入后分别核对 |
 | G8 用户验收 | 待两个试点从公开 registry 精确安装。U3、U4 由负责人本人实测，其他任务按清单记录委托代理复测 |
 | npm published | 待 Beta 发布授权与 MFA |
 
 Beta Go 待缺陷复查、两试点逐项验收及负责人书面决定。
+
+本地实包的双试点在三个浏览器自动回归通过，指南外改动为 0。Beta G8 的公开 registry 验收待发布后执行。[本地实包回执](local-checks.json)
