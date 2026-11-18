@@ -174,6 +174,8 @@ test('splits CI into observable unit, typecheck, build, docs, consumer and brows
     assert.ok(workflowSource.includes(filename), `CI must consume the current contract tarball ${filename}`)
   }
   assert.match(workflowSource, /pnpm check:v1-consumer/)
+  const consumerJob = workflowSource.match(/\n  consumer:\n[\s\S]*?(?=\n  [\w-]+:\n|$)/)?.[0]
+  assert.match(consumerJob ?? '', /name: Checkout\n        uses: actions\/checkout@v4\n        with:\n(?:          #[^\n]*\n)*          fetch-depth: 0\n/, 'consumer needs the frozen V0 CSS commit')
   assert.match(workflowSource, /pnpm check:v1-visual-consumer/)
   assert.ok(getStep('V1 unchanged pilot compatibility')?.includes('--entry-mode legacy'))
   assert.match(workflowSource, /pnpm check:v2-migration-consumer/)
