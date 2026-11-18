@@ -1,6 +1,6 @@
 # V1 全量按需铺路
 
-状态：**V1 本地技术验收通过，停在开 PR 授权点。G8 负责人操作、PR 审查及远端 CI 仍待确认。** 基线`b1eef9b6f5e1b64706beee5d4d56e08891f27c26`；分支`codex/v1.4-entries`。V0的PR#51/主线/Pages回执单独存于[V0合并后记录](v0-postmerge/README.md)，不代替V1。
+状态：**V1 本地技术验收通过，停在开 PR 授权点。G8 已收到 U6 自报通过，完整操作证据、PR 审查及远端 CI 仍待确认。** 基线`b1eef9b6f5e1b64706beee5d4d56e08891f27c26`；分支`codex/v1.4-entries`。V0的PR#51/主线/Pages回执单独存于[V0合并后记录](v0-postmerge/README.md)，不代替V1。
 
 ## 决策与授权
 
@@ -17,7 +17,7 @@
 | PR | 未授权、未开；已提交包含 12 个复合入口最终门禁及数值的本地差异摘要，等待单独授权 |
 | 合并 / Pages | V1未授权、未执行 |
 | npm published / tag | 未授权、未执行 |
-| 用户验收 | 缺失；不以分类/版本确认代替用户验收 |
+| 用户验收 | 负责人报告 U6 通过，本人操作附件待补。U1–U5 待验 |
 
 ## A2-3现行执行口径（负责人直接决定）
 
@@ -47,7 +47,7 @@ AIForm精确公开导入与external已实现，旧106越界变0；[原局部探�
 | G5包 | npm pack 通过。core 1.4.0、AI 1.2.0、DND 1.1.0。AI pack 的 core peer 为 `^1.4.0` | [准确组合](peer-version-combination/README.md)、[当前包摘要](acceptance/provenance.json) | 本地三包 | Codex |
 | G6 PR / 合并 | PR 未开，Merged 否 | [开 PR 前差异摘要](diff-summary.md)，推送与开 PR 待单独授权 | 缺失 | wzfdhr |
 | G7主线 CI / Pages | Main CI 缺失，V1 Pages 未部署 | [V0 回执](v0-postmerge/README.md)仅涵盖 V0 合并 SHA | 缺失 | CI |
-| G8用户验收 | 缺失，六项任务等待负责人操作与证据 | [G8 任务清单](user-tasks.md) | 缺失 | wzfdhr |
+| G8用户验收 | U6 负责人报告通过，待补本人操作记录及候选 SHA。U1–U5 未填写实际结果及证据 | [任务清单与负责人回执](user-tasks.md) | 2026-11-17，本人操作 SHA 待补 | wzfdhr |
 | npm published | V1 未发布，未打 tag | 公开 `latest` 为 core 1.3.0、AI 1.1.0、DND 1.1.0 | 本地核验 | N/A |
 
 ## 本地候选缺陷审计
@@ -57,7 +57,7 @@ AIForm精确公开导入与external已实现，旧106越界变0；[原局部探�
 | P1-V1-001，Workbench CSS 初测闭包缺规则 | 已关闭。补回跨 DND/AI 规则，保留初测 54,109 B 及失败记录，按授权纠正两个路径至 54,212 B。独立审查与实际包不回升门禁通过。[审查回执](css-integrity/README.md) |
 | V1 首轮 E2E 的 4 处失败 | 已关闭。原因是文档工具栏延迟插入导致交互提前，Button hover、Combobox、Select virtual 测试各加入就绪等待。原断言与超时保留。复验同一 999 项，逐项核对仍跳过相同 131 项，原 4 个失败用例均通过。[首轮失败](acceptance/first-full/summary.json)、[复验](acceptance/final-full/summary.json) |
 
-本地已验证范围内未解决 P0 = 0、P1 = 0。这个结论覆盖实际 tarball、旧消费、两试点、布局回归与本地浏览器项目。PR 审查、远端 CI 和 G8 尚无本候选证据。
+本地已验证范围内未解决 P0 = 0、P1 = 0。这个结论覆盖实际 tarball、旧消费、两试点、布局回归与本地浏览器项目。PR 审查与远端 CI 尚待开启，G8 待补负责人证据。
 
 ## 当前还差什么 / 需要决定什么
 

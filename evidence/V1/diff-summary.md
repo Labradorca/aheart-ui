@@ -43,6 +43,6 @@ full.css 为 201,510 B，theme.css 为 1,767 B（0.877%）。8 个复合入口�
 | Pages | 未部署 |
 | npm pack | 本地三包成功 |
 | npm published | 未发布 |
-| 用户验收 | [六项 G8 待填写](user-tasks.md) |
+| 用户验收 | [U6 负责人报告通过，附件待补。U1–U5 待验](user-tasks.md) |
 
 本地已满足送审条件。下一步需要负责人单独授权推送 V1 分支并创建草稿 PR。合并及 Pages、npm 发布、tag 分别决定。
