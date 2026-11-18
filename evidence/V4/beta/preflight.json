@@ -1,0 +1,388 @@
+{
+  "issue": 53,
+  "candidateSha": "6b98ec4d31ccd4f8ef11e676923d9c2b9d638935",
+  "mergeSha": "202aa62271ad762413cb6ef2f590bbfcd8503656",
+  "issues": {
+    "querySince": "updated:>=2026-11-18",
+    "open": [],
+    "recent": [
+      {
+        "closedAt": "2026-11-18T14:12:34Z",
+        "createdAt": "2026-11-18T02:58:22Z",
+        "labels": [
+          {
+            "id": "LA_kwDOS8_QwM8AAAACnv_Q5Q",
+            "name": "bug",
+            "description": "Something isn't working",
+            "color": "d73a4a"
+          }
+        ],
+        "number": 53,
+        "state": "CLOSED",
+        "title": "[P2] 390px 视口的日期范围输入框截断日期文字",
+        "updatedAt": "2026-11-18T14:12:34Z",
+        "url": "https://github.com/Labradorca/aheart-ui/issues/53"
+      }
+    ]
+  },
+  "pr": {
+    "url": "https://github.com/Labradorca/aheart-ui/pull/55",
+    "passed": 24
+  },
+  "mainCI": {
+    "url": "https://github.com/Labradorca/aheart-ui/actions/runs/44321743961",
+    "passed": 12
+  },
+  "pages": {
+    "url": "https://github.com/Labradorca/aheart-ui/actions/runs/44330048116",
+    "passed": 2,
+    "deploymentId": 7886930488,
+    "publicUrl": "https://labradorca.github.io/aheart-ui/components/date-picker.html",
+    "httpStatus": 200,
+    "markup": {
+      "sha256": "e5c008122ae72109e1724f2af837acca8dc8a35d19ebec750bd2d59188038eec",
+      "rangeSelectors": 3,
+      "prefixFirst": 3
+    }
+  },
+  "before": [
+    {
+      "engine": "chromium",
+      "browserVersion": "149.0.7827.55",
+      "mode": "full",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "inputs": [
+        {
+          "part": "start",
+          "value": "2026-11-17",
+          "visibleWidth": 62,
+          "scrollWidth": 82,
+          "requiredWidth": 82,
+          "unobscured": true
+        },
+        {
+          "part": "end",
+          "value": "2026-11-18",
+          "visibleWidth": 28,
+          "scrollWidth": 83,
+          "requiredWidth": 83,
+          "unobscured": true
+        }
+      ],
+      "screenshotSha256": "e6f07fc85188676cb54091faeff19a01fffae2296a0be79d7a454b06429738c7"
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "149.0.7827.55",
+      "mode": "scoped",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "inputs": [
+        {
+          "part": "start",
+          "value": "2026-11-17",
+          "visibleWidth": 62,
+          "scrollWidth": 82,
+          "requiredWidth": 82,
+          "unobscured": true
+        },
+        {
+          "part": "end",
+          "value": "2026-11-18",
+          "visibleWidth": 28,
+          "scrollWidth": 83,
+          "requiredWidth": 83,
+          "unobscured": true
+        }
+      ],
+      "screenshotSha256": "e6f07fc85188676cb54091faeff19a01fffae2296a0be79d7a454b06429738c7"
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "151.0",
+      "mode": "full",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "inputs": [
+        {
+          "part": "start",
+          "value": "2026-11-17",
+          "visibleWidth": 54,
+          "scrollWidth": 74,
+          "requiredWidth": 82,
+          "unobscured": true
+        },
+        {
+          "part": "end",
+          "value": "2026-11-18",
+          "visibleWidth": 20,
+          "scrollWidth": 75,
+          "requiredWidth": 83,
+          "unobscured": true
+        }
+      ],
+      "screenshotSha256": "94422a00b5541984c08c71e0faa005e29e9ee752fd5e33de8ea7df27e73ded81"
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "151.0",
+      "mode": "scoped",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "inputs": [
+        {
+          "part": "start",
+          "value": "2026-11-17",
+          "visibleWidth": 54,
+          "scrollWidth": 74,
+          "requiredWidth": 82,
+          "unobscured": true
+        },
+        {
+          "part": "end",
+          "value": "2026-11-18",
+          "visibleWidth": 20,
+          "scrollWidth": 75,
+          "requiredWidth": 83,
+          "unobscured": true
+        }
+      ],
+      "screenshotSha256": "94422a00b5541984c08c71e0faa005e29e9ee752fd5e33de8ea7df27e73ded81"
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "mode": "full",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "inputs": [
+        {
+          "part": "start",
+          "value": "2026-11-17",
+          "visibleWidth": 62,
+          "scrollWidth": 84,
+          "requiredWidth": 82,
+          "unobscured": true
+        },
+        {
+          "part": "end",
+          "value": "2026-11-18",
+          "visibleWidth": 28,
+          "scrollWidth": 85,
+          "requiredWidth": 83,
+          "unobscured": true
+        }
+      ],
+      "screenshotSha256": "6e2d98f8dba600cc8817a38f63bb40cc8fa59aef91fc674dfcbba5203e413c9c"
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "mode": "scoped",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "inputs": [
+        {
+          "part": "start",
+          "value": "2026-11-17",
+          "visibleWidth": 62,
+          "scrollWidth": 84,
+          "requiredWidth": 82,
+          "unobscured": true
+        },
+        {
+          "part": "end",
+          "value": "2026-11-18",
+          "visibleWidth": 28,
+          "scrollWidth": 85,
+          "requiredWidth": 83,
+          "unobscured": true
+        }
+      ],
+      "screenshotSha256": "6e2d98f8dba600cc8817a38f63bb40cc8fa59aef91fc674dfcbba5203e413c9c"
+    }
+  ],
+  "after": [
+    {
+      "engine": "chromium",
+      "browserVersion": "149.0.7827.55",
+      "mode": "full",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "inputs": [
+        {
+          "part": "start",
+          "value": "2026-11-17",
+          "visibleWidth": 112,
+          "scrollWidth": 112,
+          "requiredWidth": 82,
+          "unobscured": true
+        },
+        {
+          "part": "end",
+          "value": "2026-11-18",
+          "visibleWidth": 112,
+          "scrollWidth": 112,
+          "requiredWidth": 83,
+          "unobscured": true
+        }
+      ],
+      "screenshotSha256": "caa1eede1194ce804421b35140f2b09e9be781422d670e2b9ed8c0996ebd4472"
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "149.0.7827.55",
+      "mode": "scoped",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "inputs": [
+        {
+          "part": "start",
+          "value": "2026-11-17",
+          "visibleWidth": 112,
+          "scrollWidth": 112,
+          "requiredWidth": 82,
+          "unobscured": true
+        },
+        {
+          "part": "end",
+          "value": "2026-11-18",
+          "visibleWidth": 112,
+          "scrollWidth": 112,
+          "requiredWidth": 83,
+          "unobscured": true
+        }
+      ],
+      "screenshotSha256": "caa1eede1194ce804421b35140f2b09e9be781422d670e2b9ed8c0996ebd4472"
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "151.0",
+      "mode": "full",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "inputs": [
+        {
+          "part": "start",
+          "value": "2026-11-17",
+          "visibleWidth": 104,
+          "scrollWidth": 104,
+          "requiredWidth": 82,
+          "unobscured": true
+        },
+        {
+          "part": "end",
+          "value": "2026-11-18",
+          "visibleWidth": 104,
+          "scrollWidth": 104,
+          "requiredWidth": 83,
+          "unobscured": true
+        }
+      ],
+      "screenshotSha256": "4759b68799ca7ec3dddbae36a9b8a14a5c73c6cc379bed6d97ccded805ec67b1"
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "151.0",
+      "mode": "scoped",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "inputs": [
+        {
+          "part": "start",
+          "value": "2026-11-17",
+          "visibleWidth": 104,
+          "scrollWidth": 104,
+          "requiredWidth": 82,
+          "unobscured": true
+        },
+        {
+          "part": "end",
+          "value": "2026-11-18",
+          "visibleWidth": 104,
+          "scrollWidth": 104,
+          "requiredWidth": 83,
+          "unobscured": true
+        }
+      ],
+      "screenshotSha256": "4759b68799ca7ec3dddbae36a9b8a14a5c73c6cc379bed6d97ccded805ec67b1"
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "mode": "full",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "inputs": [
+        {
+          "part": "start",
+          "value": "2026-11-17",
+          "visibleWidth": 112,
+          "scrollWidth": 112,
+          "requiredWidth": 82,
+          "unobscured": true
+        },
+        {
+          "part": "end",
+          "value": "2026-11-18",
+          "visibleWidth": 112,
+          "scrollWidth": 112,
+          "requiredWidth": 83,
+          "unobscured": true
+        }
+      ],
+      "screenshotSha256": "f7b56d4faee95ba023fc77c3e3b4a49849ab6fb6abb2708688f824804948566f"
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "mode": "scoped",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "inputs": [
+        {
+          "part": "start",
+          "value": "2026-11-17",
+          "visibleWidth": 112,
+          "scrollWidth": 112,
+          "requiredWidth": 82,
+          "unobscured": true
+        },
+        {
+          "part": "end",
+          "value": "2026-11-18",
+          "visibleWidth": 112,
+          "scrollWidth": 112,
+          "requiredWidth": 83,
+          "unobscured": true
+        }
+      ],
+      "screenshotSha256": "f7b56d4faee95ba023fc77c3e3b4a49849ab6fb6abb2708688f824804948566f"
+    }
+  ]
+}
