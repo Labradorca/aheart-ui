@@ -78,7 +78,8 @@ try {
   result.tools = { vite: (await json(path.join(consumer, 'node_modules/vite/package.json'))).version, vue: (await json(path.join(consumer, 'node_modules/vue/package.json'))).version, minify: true, sourceAlias: false, workspaceSymlink: false }
   assert.equal(result.tools.vite, '5.0.12')
   assert.equal(result.tools.vue, '3.5.44')
-  assert.equal(result.installed.find(pkg => pkg.name === '@aheart-ui/ai').corePeer, '^1.4.0')
+  const aiContract = packageContracts.find(pkg => pkg.name === '@aheart-ui/ai')
+  assert.equal(result.installed.find(pkg => pkg.name === aiContract.name).corePeer, aiContract.expectedPeerDependencies['aheart-ui'])
   const full = await readFile(resolveConsumer('aheart-ui/full.css'))
   const theme = await readFile(resolveConsumer('aheart-ui/theme.css'))
   const frozen = (await run('git', ['show', 'b1eef9b6:packages/components/es/full.css'], { cwd: root, encoding: 'buffer' })).stdout

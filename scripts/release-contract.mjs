@@ -25,7 +25,7 @@ const aiExports = {
 export const packageContracts = [
   {
     name: 'aheart-ui',
-    version: '1.4.0',
+    version: '2.0.0-alpha.0',
     packageDir: 'packages/components',
     expectedExports: baseExports,
     dist: true,
@@ -46,13 +46,13 @@ export const packageContracts = [
   },
   {
     name: '@aheart-ui/ai',
-    version: '1.2.0',
+    version: '2.0.0-alpha.0',
     packageDir: 'packages/ai',
     expectedExports: aiExports,
     dist: true,
     cssSideEffects: true,
     expectedVuePeer: '>=3.5.0 <4',
-    expectedPeerDependencies: { 'aheart-ui': '^1.4.0', '@aheart-ui/dnd': '^1.1.0' },
+    expectedPeerDependencies: { 'aheart-ui': '^2.0.0-alpha.0', '@aheart-ui/dnd': '^1.1.0' },
     expectedOptionalPeers: ['@aheart-ui/dnd'],
     requiredFiles: filesForExports(aiExports, distPackageFiles)
   }
@@ -82,6 +82,9 @@ export const validatePackageContract = (contract, manifest, packedFiles) => {
   if (manifest.publishConfig?.access !== 'public') errors.push(`${prefix} publishConfig.access must be public`)
   if (manifest.publishConfig?.registry !== 'https://registry.npmjs.org/') {
     errors.push(`${prefix} publishConfig.registry must be https://registry.npmjs.org/`)
+  }
+  if (contract.version.includes('-') && manifest.publishConfig?.tag !== 'next') {
+    errors.push(`${prefix} prereleases must use the next dist-tag`)
   }
 
   const rootExport = manifest.exports?.['.']

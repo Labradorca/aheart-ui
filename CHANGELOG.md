@@ -2,13 +2,21 @@
 
 Aheart UI 的重要变更统一记录在本文件中。
 
-## 本地候选（未发布）- 2026-11-17
+## [2.0.0-alpha.0] 本地候选
 
-- 经负责人单独授权，为新 peer 版本组合验收将本地版本设为 `aheart-ui@1.4.0`、`@aheart-ui/ai@1.2.0`；`@aheart-ui/dnd@1.1.0` 保持不变。
+- 核心根入口移除默认 Plugin。改用 `aheart-ui/full` 并显式导入 `aheart-ui/full.css`。根 named 组件和公开类型继续可用。
+- core 和 AI 发布产物迁到 `dist/{esm,cjs,types,styles}`，Git 不再跟踪生成的 es/lib。旧逻辑深路径保留兼容 facade。直接读取包内部文件的应用须改用公开入口。
+- AI 根导出和根 Plugin 移除 Workbench，改用 `@aheart-ui/ai/workbench`。需要原全量注册时使用 `@aheart-ui/ai/full`。两种用法都应显式安装可选 DND peer。Chat、Agent 和 AIForm 无需安装 DND。
+- 运行时 JS 不加载 CSS。显式导入 theme 和组件样式，或使用 full.css。Resolver 的 CSS 模式只注入组件及其声明依赖样式。旧 style.css 保留。
+- core 和 AI 候选均为 `2.0.0-alpha.0`，DND 沿用公开 `1.1.0`。预发布仅使用 `next`，公开 `latest` 保持 1.x。[迁移与回退指南](docs/guide/v2-migration.md)
+
+## [1.4.0] - 2026-11-17
+
+- `aheart-ui@1.4.0` 和 `@aheart-ui/ai@1.2.0` 已发布，`@aheart-ui/dnd@1.1.0` 保持不变。
 - **AI 1.2.0 需要 aheart-ui ≥ 1.4.0**（peer 为 `^1.4.0`，即兼容的 1.x）。AIForm 改用精确公开子入口；公开 1.3 及更早版本缺少这些路径。
 - 全部Ready组件的子入口/CSS与Resolver由同一清单驱动；复合AI样式包含声明依赖闭包，模块图/JS预算与分类CSS门禁进入独立tarball消费检查。
 - 新增可选Vite开发import诊断，以及1.3→2.0迁移表与codemod；生产构建不输出弃用诊断，旧对象身份和兼容入口保留。
-- 本节只记录本地候选，不表示已开 PR、合并、部署、发布 npm 或打 tag；V1 全量验收仍在进行。
+- V1 公开精确版本双试点通过，tag 与发布附件见 [v1.4.0 Release](https://github.com/Labradorca/aheart-ui/releases/tag/v1.4.0)。
 
 ## [1.3.0] - 2026-11-16
 

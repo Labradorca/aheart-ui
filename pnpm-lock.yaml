@@ -58,7 +58,7 @@ importers:
   packages/ai:
     dependencies:
       aheart-ui:
-        specifier: workspace:^1.4.0
+        specifier: workspace:^2.0.0-alpha.0
         version: link:../components
     devDependencies:
       '@aheart-ui/dnd':

@@ -200,6 +200,7 @@ jobs:
         run: |
           mkdir -p test-results/v2-baseline/packs
           npm pack --ignore-scripts --json --registry=https://registry.npmjs.org/ --pack-destination test-results/v2-baseline/packs aheart-ui@1.4.0 @aheart-ui/ai@1.2.0 @aheart-ui/dnd@1.1.0 > test-results/v2-baseline/npm-pack.json
+          cp test-results/v2-baseline/packs/aheart-ui-dnd-1.1.0.tgz test-results/release-tarballs/
           node scripts/v2-legacy-consumer.mjs
       - name: Verify AI Chat without DND
         run: node scripts/v2-ai-optional-consumer.mjs
@@ -264,19 +265,28 @@ jobs:
         run: pnpm check:m3-consumer
       - name: M3 packed consumer and Workbench pilot
         run: |
+          core_version="$(node -p 'require("./packages/components/package.json").version')"
+          ai_version="$(node -p 'require("./packages/ai/package.json").version')"
           node pilots/run-baselines.mjs --entry-mode subpath --only clean-consumer,ai-review-gate \
-            --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz \
-            --ai-tarball test-results/release-tarballs/aheart-ui-ai-1.2.0.tgz \
+            --core-tarball "test-results/release-tarballs/aheart-ui-$core_version.tgz" \
+            --ai-tarball "test-results/release-tarballs/aheart-ui-ai-$ai_version.tgz" \
             --dnd-tarball test-results/release-tarballs/aheart-ui-dnd-1.1.0.tgz \
             --out test-results/m3-pilots
       - name: M1 public entries, CSS and module graph
         run: pnpm check:m1-consumer
       - name: M1 split and compatibility pilot paths
         run: |
+          core_version="$(node -p 'require("./packages/components/package.json").version')"
+          ai_version="$(node -p 'require("./packages/ai/package.json").version')"
           mkdir -p test-results/m1-pilots
-          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz --entry-mode subpath --out test-results/m1-pilots/chromium
-          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz --entry-mode subpath --only clean-consumer --browser firefox --out test-results/m1-pilots/firefox
-          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz --entry-mode subpath --only clean-consumer --browser webkit --out test-results/m1-pilots/webkit
+          node pilots/run-baselines.mjs --core-tarball "test-results/release-tarballs/aheart-ui-$core_version.tgz" \
+            --ai-tarball "test-results/release-tarballs/aheart-ui-ai-$ai_version.tgz" \
+            --dnd-tarball test-results/release-tarballs/aheart-ui-dnd-1.1.0.tgz \
+            --entry-mode subpath --out test-results/m1-pilots/chromium
+          for engine in firefox webkit; do
+            node pilots/run-baselines.mjs --core-tarball "test-results/release-tarballs/aheart-ui-$core_version.tgz" \
+              --entry-mode subpath --only clean-consumer --browser "$engine" --out "test-results/m1-pilots/$engine"
+          done
       - name: Upload Consumer Evidence
         if: ${{ always() }}
         uses: actions/upload-artifact@v4
