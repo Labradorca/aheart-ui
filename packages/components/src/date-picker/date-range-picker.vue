@@ -1,7 +1,10 @@
 <template>
   <span ref="rootRef" class="aheart-date-range-picker" :class="rootClass">
     <span ref="triggerRef" class="aheart-date-range-picker__selector" @mousedown="handleSelectorMouseDown" @focusout="handleControlBlur">
-      <span v-if="hasPrefix" class="aheart-date-range-picker__prefix"><slot name="prefix"><ARenderNode :node="prefix" /></slot></span>
+      <!-- Reserve the first grid column even when no prefix is provided. -->
+      <span class="aheart-date-range-picker__prefix">
+        <slot name="prefix"><ARenderNode v-if="prefix !== undefined" :node="prefix" /></slot>
+      </span>
       <span class="aheart-date-range-picker__field" :class="{ 'is-active': activePart === 'start' && mergedOpen }">
         <input
           ref="startInputRef"
@@ -157,7 +160,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineComponent, h, isVNode, nextTick, onBeforeUnmount, onMounted, ref, toRaw, useAttrs, useSlots, watch, type Component, type PropType, type VNodeChild } from 'vue'
+import { computed, defineComponent, h, isVNode, nextTick, onBeforeUnmount, onMounted, ref, toRaw, useAttrs, watch, type Component, type PropType, type VNodeChild } from 'vue'
 import { resolveConfigValue, useAheartConfig, zhCN } from '../config'
 import { formAriaInvalid, mergeAriaIds, useFormControl } from '../form/control-context'
 import AIcon from '../icon/icon.vue'
@@ -180,7 +183,6 @@ defineOptions({ name: 'ADateRangePicker' })
 const props = defineProps(dateRangePickerProps)
 const emit = defineEmits(dateRangePickerEmits)
 const pickerTransaction = createPickerTransaction<RangePickerValue>({ needConfirm: () => effectiveNeedConfirm.value })
-const slots = useSlots()
 const config = useAheartConfig()
 const formControl = useFormControl()
 const attrs = useAttrs()
@@ -251,7 +253,6 @@ const resolvedPlaceholders = computed<[string, string]>(() => props.placeholder 
 const isDisabled = computed(() => resolveConfigValue(props.disabled, config.value.disabled, false))
 const resolvedSize = computed(() => resolveConfigValue(props.size, config.value.size, 'middle'))
 const resolvedVariant = computed(() => props.variant ?? config.value.variant ?? 'outlined')
-const hasPrefix = computed(() => props.prefix !== undefined || Boolean(slots.prefix))
 const hasValue = computed(() => Boolean(mergedValue.value?.[0] || mergedValue.value?.[1]))
 const rangeComplete = computed(() => Boolean(
   (draftValue.value?.[0] || props.allowEmpty[0])
