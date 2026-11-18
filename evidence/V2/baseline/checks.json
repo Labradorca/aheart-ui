@@ -1,0 +1,319 @@
+{
+  "sourceSha": "1344017414d203f75095b01c3cc952ab7bcb178d",
+  "status": "passed",
+  "steps": {
+    "pilots": {
+      "command": "node pilots/run-baselines.mjs --only clean-consumer,ai-review-gate --entry-mode legacy --browser chromium --strict-types pass --core-version 1.4.0 --ai-version 1.2.0 --dnd-version 1.1.0 --work-dir test-results/v2-baseline --out test-results/v2-baseline/pilots",
+      "exitCode": 0,
+      "status": "passed",
+      "fullResult": "test-results/v2-baseline/pilots/results.json",
+      "pilots": [
+        {
+          "name": "clean-consumer",
+          "status": "passed",
+          "packages": {
+            "aheart-ui": {
+              "version": "1.4.0",
+              "symlink": false,
+              "registry": {
+                "resolved": "https://registry.npmjs.org/aheart-ui/-/aheart-ui-1.4.0.tgz",
+                "integrity": "sha512-gehbFrCkcVp6ElhKZ3bu6SobrIgKjDrxtObz17cOXNS6Ha78jFUzO197piVLiWpfLvRxdILAvJZciDhmHbmoAA=="
+              }
+            },
+            "vue": {
+              "version": "3.5.44",
+              "symlink": false
+            }
+          },
+          "lockFile": "clean-consumer-lock.json",
+          "lockSha256": "94aff4b92a827a4eb4be82a92211697b37a9b93f63ca3833e5cfd4640b0c62c9",
+          "views": [
+            {
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              },
+              "status": "passed",
+              "checks": [
+                "SSR hydration",
+                "independent native radio/editor/details/composite Tab oracle and containment",
+                "counter",
+                "Select",
+                "Modal Tab trap/Escape/focus restore",
+                "explicit Button hover",
+                "axe WCAG A/AA"
+              ]
+            },
+            {
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "status": "passed",
+              "checks": [
+                "SSR hydration",
+                "independent native radio/editor/details/composite Tab oracle and containment",
+                "counter",
+                "Select",
+                "Modal Tab trap/Escape/focus restore",
+                "explicit Button hover",
+                "axe WCAG A/AA"
+              ]
+            }
+          ],
+          "iframe": "passed"
+        },
+        {
+          "name": "ai-review-gate",
+          "status": "passed",
+          "packages": {
+            "aheart-ui": {
+              "version": "1.4.0",
+              "symlink": false,
+              "registry": {
+                "resolved": "https://registry.npmjs.org/aheart-ui/-/aheart-ui-1.4.0.tgz",
+                "integrity": "sha512-gehbFrCkcVp6ElhKZ3bu6SobrIgKjDrxtObz17cOXNS6Ha78jFUzO197piVLiWpfLvRxdILAvJZciDhmHbmoAA=="
+              }
+            },
+            "vue": {
+              "version": "3.5.44",
+              "symlink": false
+            },
+            "@aheart-ui/ai": {
+              "version": "1.2.0",
+              "symlink": false,
+              "registry": {
+                "resolved": "https://registry.npmjs.org/@aheart-ui/ai/-/ai-1.2.0.tgz",
+                "integrity": "sha512-QzCxTavbGOg4VZHjDOjVcjEXuegt+KmgpC1kAiYFwfSIZlF2QTsB+NEpnivoyaVLRlCEiWcGsBRLUSXuz9hu4g=="
+              }
+            },
+            "@aheart-ui/dnd": {
+              "version": "1.1.0",
+              "symlink": false,
+              "registry": {
+                "resolved": "https://registry.npmjs.org/@aheart-ui/dnd/-/dnd-1.1.0.tgz",
+                "integrity": "sha512-Rg64ck5Ernu3GcR6BHf0C0SwRUpRMF0WFUQdNFkqvd46+ZbbRusRU4yFZ7tr7RRMhli15v/H1Gh2DfCVnzFJTA=="
+              }
+            }
+          },
+          "lockFile": "ai-review-gate-lock.json",
+          "lockSha256": "bd64eefe6648b256430ec07baedb6d81434c438c534fa8d4c3d9b848df77aa7a",
+          "views": [
+            {
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              },
+              "status": "passed",
+              "checks": [
+                "SSR hydration",
+                "Workbench task reorder",
+                "checklist gate",
+                "Modal preview",
+                "local chat lifecycle",
+                "approval",
+                "repeat prevention",
+                "explicit Button hover",
+                "axe WCAG A/AA"
+              ]
+            },
+            {
+              "browserVersion": "149.0.7827.55",
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "status": "passed",
+              "checks": [
+                "SSR hydration",
+                "Workbench task reorder",
+                "checklist gate",
+                "Modal preview",
+                "local chat lifecycle",
+                "approval",
+                "repeat prevention",
+                "explicit Button hover",
+                "axe WCAG A/AA"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "m1": {
+      "command": "node scripts/m1-consumer.mjs --tarball test-results/v2-baseline/packs/aheart-ui-1.4.0.tgz --out test-results/v2-baseline/m1",
+      "exitCode": 0,
+      "status": "passed",
+      "fullResult": "test-results/v2-baseline/m1/results.json",
+      "tarballSHA256": "2c87c1bed02b307655624f6068df0d06ca9e6d9859ff783b150d9e2d79c25474",
+      "styles": {
+        "fullBytes": 201510,
+        "themeBytes": 1767,
+        "components": {
+          "button": {
+            "bytes": 7945,
+            "fractionOfFull": 0.039427323706019556
+          },
+          "combobox": {
+            "bytes": 3572,
+            "fractionOfFull": 0.017726167435859263
+          },
+          "select": {
+            "bytes": 10472,
+            "fractionOfFull": 0.05196764428564339
+          },
+          "modal": {
+            "bytes": 16305,
+            "fractionOfFull": 0.08091409855590294
+          }
+        }
+      },
+      "bundles": {
+        "button": {
+          "jsGzip": 32939,
+          "cssBytes": 8520,
+          "parsedModules": 2118
+        },
+        "root-button": {
+          "jsGzip": 32941,
+          "cssBytes": 0,
+          "parsedModules": 2335
+        },
+        "combobox": {
+          "jsGzip": 40485,
+          "cssBytes": 4630,
+          "parsedModules": 28
+        },
+        "root-combobox": {
+          "jsGzip": 40485,
+          "cssBytes": 0,
+          "parsedModules": 2335
+        },
+        "select": {
+          "jsGzip": 57131,
+          "cssBytes": 10576,
+          "parsedModules": 2140
+        },
+        "root-select": {
+          "jsGzip": 57323,
+          "cssBytes": 0,
+          "parsedModules": 2335
+        },
+        "modal": {
+          "jsGzip": 41965,
+          "cssBytes": 15694,
+          "parsedModules": 2129
+        },
+        "root-modal": {
+          "jsGzip": 41985,
+          "cssBytes": 0,
+          "parsedModules": 2335
+        },
+        "bare-button": {
+          "jsGzip": 32939,
+          "cssBytes": 0,
+          "parsedModules": 2116
+        },
+        "legacy-button": {
+          "jsGzip": 32939,
+          "cssBytes": 177470,
+          "parsedModules": 2117
+        },
+        "full": {
+          "jsGzip": 191357,
+          "cssBytes": 177470,
+          "parsedModules": 2334
+        },
+        "legacy-full": {
+          "jsGzip": 188380,
+          "cssBytes": 177470,
+          "parsedModules": 2336
+        }
+      }
+    },
+    "m3": {
+      "command": "node scripts/m3-consumer.mjs --pack-dir test-results/v2-baseline/packs --out test-results/v2-baseline/m3",
+      "exitCode": 0,
+      "status": "passed",
+      "fullResult": "test-results/v2-baseline/m3/results.json"
+    },
+    "v1": {
+      "command": "node scripts/v1-consumer.mjs --pack-dir test-results/v2-baseline/packs --out test-results/v2-baseline/v1",
+      "exitCode": 0,
+      "status": "passed",
+      "fullResult": "test-results/v2-baseline/v1/results.json",
+      "tarballs": [
+        {
+          "name": "aheart-ui",
+          "version": "1.4.0",
+          "sha256": "2c87c1bed02b307655624f6068df0d06ca9e6d9859ff783b150d9e2d79c25474"
+        },
+        {
+          "name": "@aheart-ui/dnd",
+          "version": "1.1.0",
+          "sha256": "8cbc23c703b7250154c7d8afd2c18bf0e2ba3fe16f6bd6a82754967caf54747a"
+        },
+        {
+          "name": "@aheart-ui/ai",
+          "version": "1.2.0",
+          "sha256": "8055c52babbb0002145db1b3bb0df0eb2638f9c28239d71c4a7231ea20e62fc7"
+        }
+      ],
+      "coverage": {
+        "total": 65,
+        "styles": 65,
+        "js": 65
+      },
+      "denominator": {
+        "fullBytes": 201510,
+        "fullSha256": "bd1006443101d0335a14c0ae0bcdaf351de95d0a76cddf4239c89e76cae95c83",
+        "matchesV0": true,
+        "themeBytes": 1767,
+        "themeFraction": 0.008768795593270805
+      }
+    },
+    "strict": {
+      "command": "node scripts/strict-consumer.mjs --pack-dir test-results/v2-baseline/packs --out test-results/v2-baseline/strict",
+      "exitCode": 0,
+      "status": "passed",
+      "fullResult": "test-results/v2-baseline/strict/results.json",
+      "vue": [
+        {
+          "vueVersion": "3.5.38",
+          "status": "passed",
+          "checks": {
+            "roots": 0,
+            "all-declarations": 0,
+            "repro": 0
+          }
+        },
+        {
+          "vueVersion": "3.5.44",
+          "status": "passed",
+          "checks": {
+            "roots": 0,
+            "all-declarations": 0,
+            "repro": 0
+          }
+        }
+      ]
+    },
+    "migration": {
+      "command": "node scripts/v2-migration-consumer.mjs --out test-results/v2-baseline/migration",
+      "exitCode": 0,
+      "status": "passed",
+      "fullResult": "test-results/v2-baseline/migration/results.json"
+    },
+    "visual": {
+      "command": "node scripts/v1-visual-consumer.mjs --consumer-results test-results/v2-baseline/v1/results.json --out test-results/v2-baseline/visual",
+      "exitCode": 0,
+      "status": "passed",
+      "fullResult": "test-results/v2-baseline/visual/results.json",
+      "screenshots": 12,
+      "pixelComparison": "six engine/viewport pairs are byte-identical; 12 screenshots"
+    }
+  }
+}

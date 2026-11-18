@@ -1,0 +1,40 @@
+{
+  "assets": [
+    {
+      "browser_download_url": "https://github.com/Labradorca/aheart-ui/releases/download/v1.4.0/aheart-ui-1.4.0.tgz",
+      "digest": "sha256:2c87c1bed02b307655624f6068df0d06ca9e6d9859ff783b150d9e2d79c25474",
+      "name": "aheart-ui-1.4.0.tgz",
+      "size": 665756,
+      "state": "uploaded"
+    },
+    {
+      "browser_download_url": "https://github.com/Labradorca/aheart-ui/releases/download/v1.4.0/aheart-ui-ai-1.2.0.tgz",
+      "digest": "sha256:8055c52babbb0002145db1b3bb0df0eb2638f9c28239d71c4a7231ea20e62fc7",
+      "name": "aheart-ui-ai-1.2.0.tgz",
+      "size": 149181,
+      "state": "uploaded"
+    },
+    {
+      "browser_download_url": "https://github.com/Labradorca/aheart-ui/releases/download/v1.4.0/release-evidence.json",
+      "digest": "sha256:d36f1b8df15d30c49460677442a5be74020f8e8f5c22a0ca06e2740a0fe30f7f",
+      "name": "release-evidence.json",
+      "size": 10851,
+      "state": "uploaded"
+    },
+    {
+      "browser_download_url": "https://github.com/Labradorca/aheart-ui/releases/download/v1.4.0/SHA256SUMS",
+      "digest": "sha256:395343e395b9fbaa7b61f8a3dea8cd49e01984ee88fbb3eace73e31681bc8289",
+      "name": "SHA256SUMS",
+      "size": 175,
+      "state": "uploaded"
+    }
+  ],
+  "draft": false,
+  "html_url": "https://github.com/Labradorca/aheart-ui/releases/tag/v1.4.0",
+  "id": 449520478,
+  "name": "Aheart UI v1.4.0",
+  "prerelease": false,
+  "published_at": "2026-11-18T04:21:03Z",
+  "tag_name": "v1.4.0",
+  "target_commitish": "1344017414d203f75095b01c3cc952ab7bcb178d"
+}
