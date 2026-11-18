@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-11-18T15:04:40.957Z",
+  "registry": "https://registry.npmjs.org/",
+  "sourceSha": "0797fc51b9ee78317ad5a95b9b272ce2980c216b",
+  "tags": [
+    {
+      "name": "aheart-ui",
+      "tag": "latest",
+      "version": "1.4.0",
+      "tarball": "https://registry.npmjs.org/aheart-ui/-/aheart-ui-1.4.0.tgz",
+      "integrity": "sha512-gehbFrCkcVp6ElhKZ3bu6SobrIgKjDrxtObz17cOXNS6Ha78jFUzO197piVLiWpfLvRxdILAvJZciDhmHbmoAA==",
+      "sha256": "2c87c1bed02b307655624f6068df0d06ca9e6d9859ff783b150d9e2d79c25474",
+      "size": 665756
+    },
+    {
+      "name": "aheart-ui",
+      "tag": "next",
+      "version": "2.0.0-alpha.0",
+      "tarball": "https://registry.npmjs.org/aheart-ui/-/aheart-ui-2.0.0-alpha.0.tgz",
+      "integrity": "sha512-3a2CFVNkvQs6vZBrcZ7mK2ema2s5vNPwpt0aCxfbmIFeJry/SVgh3bbTkSxCEQjDirTH+/QtdFhrHtPKaxeJsA==",
+      "sha256": "012546bb74df810bf08dcab44c183bc318a37b9bd232dfa04497f2e0c46cc4ea",
+      "size": 709554
+    },
+    {
+      "name": "@aheart-ui/ai",
+      "tag": "latest",
+      "version": "1.2.0",
+      "tarball": "https://registry.npmjs.org/@aheart-ui/ai/-/ai-1.2.0.tgz",
+      "integrity": "sha512-QzCxTavbGOg4VZHjDOjVcjEXuegt+KmgpC1kAiYFwfSIZlF2QTsB+NEpnivoyaVLRlCEiWcGsBRLUSXuz9hu4g==",
+      "sha256": "8055c52babbb0002145db1b3bb0df0eb2638f9c28239d71c4a7231ea20e62fc7",
+      "size": 149181
+    },
+    {
+      "name": "@aheart-ui/ai",
+      "tag": "next",
+      "version": "2.0.0-alpha.0",
+      "tarball": "https://registry.npmjs.org/@aheart-ui/ai/-/ai-2.0.0-alpha.0.tgz",
+      "integrity": "sha512-5GrOJ5pYB/pFZVqqqqWIUqStMazrhEp+yVbQTqNmnOCBxcvIe/Kmk60l44RRzOahMzDQ9xypNE7v9DAOJCYjaw==",
+      "sha256": "17fcd7120fc94bdf89bccb8ada689975d30a8c51033c8fd97683c276b50df812",
+      "size": 195489
+    },
+    {
+      "name": "@aheart-ui/dnd",
+      "tag": "latest",
+      "version": "1.1.0",
+      "tarball": "https://registry.npmjs.org/@aheart-ui/dnd/-/dnd-1.1.0.tgz",
+      "integrity": "sha512-Rg64ck5Ernu3GcR6BHf0C0SwRUpRMF0WFUQdNFkqvd46+ZbbRusRU4yFZ7tr7RRMhli15v/H1Gh2DfCVnzFJTA==",
+      "sha256": "8cbc23c703b7250154c7d8afd2c18bf0e2ba3fe16f6bd6a82754967caf54747a",
+      "size": 28188
+    },
+    {
+      "name": "@aheart-ui/dnd",
+      "tag": "next",
+      "version": null
+    }
+  ]
+}
