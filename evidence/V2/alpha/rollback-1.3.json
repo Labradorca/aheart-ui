@@ -1,0 +1,169 @@
+{
+  "sourceSha": "e71d333a375febe902b50edb817be1a8a5407374",
+  "status": "passed",
+  "commands": {
+    "rollback-1.3-pilots": {
+      "command": "node pilots/run-baselines.mjs --entry-mode legacy --only clean-consumer,ai-review-gate --core-version 1.3.0 --ai-version 1.1.0 --dnd-version 1.1.0 --baseline-lock-dir test-results/v2-alpha/rollback-1.3-locks --work-dir test-results/v2-alpha --out test-results/v2-alpha/rollback-1.3-pilots",
+      "exitCode": 0
+    },
+    "state-rollback-1.3": {
+      "command": "node pilots/check-rollback.mjs --project /Users/start/code/aheart-ui-wt/v2-alpha/.pilot-runs/aheart-m0-pilots-2fM8rT/muxu-todo --baseline-version 1.3.0 --core-tarball test-results/v2-alpha/consumer-packs/aheart-ui-2.0.0-alpha.0.tgz --out test-results/v2-alpha/state-rollback-1.3",
+      "exitCode": 0
+    }
+  },
+  "originalPath": "test-results/v2-migrate-work/a2-1.3-pilots/results.json",
+  "alphaPath": "test-results/v2-alpha/pilot-chromium/results.json",
+  "restoredPath": "test-results/v2-alpha/rollback-1.3-pilots/results.json",
+  "pilots": [
+    {
+      "name": "clean-consumer",
+      "packages": {
+        "aheart-ui": {
+          "version": "1.3.0",
+          "resolved": "https://registry.npmjs.org/aheart-ui/-/aheart-ui-1.3.0.tgz",
+          "integrity": "sha512-w3h6Vp/+v/+4cUPtdZrn54pY4wS/mQj00zpZT62pWyXe6nVGpbiPYfSKHJ7kt9UL/HPt0JSmPhX9T+TAfK+E2Q=="
+        }
+      },
+      "originalLockSha256": "ef9f999c616880bfe3c485dc42aab1eba42279aae2900a25a545a4329cb7d708",
+      "rollbackLockSha256": "ef9f999c616880bfe3c485dc42aab1eba42279aae2900a25a545a4329cb7d708",
+      "originalSourceHashesRestored": true,
+      "guideExternalChanges": 0,
+      "restoredBrowsers": [
+        {
+          "browserEngine": "chromium",
+          "browserVersion": "149.0.7827.55",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "status": "passed"
+        },
+        {
+          "browserEngine": "chromium",
+          "browserVersion": "149.0.7827.55",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "name": "ai-review-gate",
+      "packages": {
+        "aheart-ui": {
+          "version": "1.3.0",
+          "resolved": "https://registry.npmjs.org/aheart-ui/-/aheart-ui-1.3.0.tgz",
+          "integrity": "sha512-w3h6Vp/+v/+4cUPtdZrn54pY4wS/mQj00zpZT62pWyXe6nVGpbiPYfSKHJ7kt9UL/HPt0JSmPhX9T+TAfK+E2Q=="
+        },
+        "@aheart-ui/ai": {
+          "version": "1.1.0",
+          "resolved": "https://registry.npmjs.org/@aheart-ui/ai/-/ai-1.1.0.tgz",
+          "integrity": "sha512-IFl3JfqqAL/4qE32qEujgIyndidYMEx3oxeopQ9J7Xvxr+7VeCwDNrbp0sj/5dafFTRVCfGRU5w/Psh/vqpmvw=="
+        },
+        "@aheart-ui/dnd": {
+          "version": "1.1.0",
+          "resolved": "https://registry.npmjs.org/@aheart-ui/dnd/-/dnd-1.1.0.tgz",
+          "integrity": "sha512-Rg64ck5Ernu3GcR6BHf0C0SwRUpRMF0WFUQdNFkqvd46+ZbbRusRU4yFZ7tr7RRMhli15v/H1Gh2DfCVnzFJTA=="
+        }
+      },
+      "originalLockSha256": "87d26341ec5c36337c6542cff23662f95e1403ee19f69f451466e4e770971439",
+      "rollbackLockSha256": "87d26341ec5c36337c6542cff23662f95e1403ee19f69f451466e4e770971439",
+      "originalSourceHashesRestored": true,
+      "guideExternalChanges": 0,
+      "restoredBrowsers": [
+        {
+          "browserEngine": "chromium",
+          "browserVersion": "149.0.7827.55",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "status": "passed"
+        },
+        {
+          "browserEngine": "chromium",
+          "browserVersion": "149.0.7827.55",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "status": "passed"
+        }
+      ]
+    }
+  ],
+  "state": {
+    "report": "test-results/v2-alpha/state-rollback-1.3/results.json",
+    "baseline": "aheart-ui@1.3.0",
+    "originalLockSha256": "ed62d98813da94139fbc6386383b3447d508586ac9269618218144e39ef52956",
+    "rollbackLockSha256": "ed62d98813da94139fbc6386383b3447d508586ac9269618218144e39ef52956",
+    "candidate": {
+      "version": "2.0.0-alpha.0",
+      "sha256": "bdf6415f1c26f11f5601b280b42b2bed0a307fbbf5d921791bc442bc336abb95"
+    },
+    "stages": [
+      {
+        "name": "baseline",
+        "version": "1.3.0",
+        "resolved": "https://registry.npmjs.org/aheart-ui/-/aheart-ui-1.3.0.tgz",
+        "integrity": "sha512-w3h6Vp/+v/+4cUPtdZrn54pY4wS/mQj00zpZT62pWyXe6nVGpbiPYfSKHJ7kt9UL/HPt0JSmPhX9T+TAfK+E2Q==",
+        "tasks": [
+          {
+            "id": 1,
+            "title": "核对组件样式",
+            "done": false
+          },
+          {
+            "id": 2,
+            "title": "迁移前保留任务",
+            "done": true
+          }
+        ]
+      },
+      {
+        "name": "upgrade",
+        "version": "2.0.0-alpha.0",
+        "resolved": "file:../../../test-results/v2-alpha/consumer-packs/aheart-ui-2.0.0-alpha.0.tgz",
+        "integrity": "sha512-gC7mqqad7/AfHW6BvkJZelZa0HLU07OLwgPmVc3A0czSdKHEFhU4Z99Hd2iLNUhZzanG8CRZkTQSCIavYkHiLg==",
+        "tasks": [
+          {
+            "id": 1,
+            "title": "核对组件样式",
+            "done": false
+          },
+          {
+            "id": 2,
+            "title": "迁移前保留任务",
+            "done": false
+          },
+          {
+            "id": 3,
+            "title": "候选期间新增任务",
+            "done": true
+          }
+        ]
+      },
+      {
+        "name": "rollback",
+        "version": "1.3.0",
+        "resolved": "https://registry.npmjs.org/aheart-ui/-/aheart-ui-1.3.0.tgz",
+        "integrity": "sha512-w3h6Vp/+v/+4cUPtdZrn54pY4wS/mQj00zpZT62pWyXe6nVGpbiPYfSKHJ7kt9UL/HPt0JSmPhX9T+TAfK+E2Q==",
+        "tasks": [
+          {
+            "id": 1,
+            "title": "核对组件样式",
+            "done": false
+          },
+          {
+            "id": 3,
+            "title": "候选期间新增任务",
+            "done": true
+          }
+        ]
+      }
+    ],
+    "restoration": "passed"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "verifiedAt": "2026-11-18T05:45:42.348Z",
+  "repository": "Labradorca/aheart-ui",
+  "mainSha": "1344017414d203f75095b01c3cc952ab7bcb178d",
+  "openCandidatePulls": [],
+  "registry": "https://registry.npmjs.org/",
+  "packages": [
+    {
+      "name": "aheart-ui",
+      "latest": "1.4.0",
+      "alphaStatus": 404
+    },
+    {
+      "name": "@aheart-ui/ai",
+      "latest": "1.2.0",
+      "alphaStatus": 404
+    },
+    {
+      "name": "@aheart-ui/dnd",
+      "latest": "1.1.0"
+    }
+  ],
+  "openIssues": [
+    {
+      "number": 53,
+      "title": "[P2] 390px 视口的日期范围输入框截断日期文字",
+      "url": "https://github.com/Labradorca/aheart-ui/issues/53"
+    }
+  ],
+  "openP0": 0,
+  "openP1": 0
+}

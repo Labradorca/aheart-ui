@@ -1,0 +1,53 @@
+{
+  "sourceSha": "e71d333a375febe902b50edb817be1a8a5407374",
+  "packages": [
+    {
+      "name": "aheart-ui",
+      "version": "2.0.0-alpha.0",
+      "filename": "aheart-ui-2.0.0-alpha.0.tgz",
+      "sha256": "bdf6415f1c26f11f5601b280b42b2bed0a307fbbf5d921791bc442bc336abb95",
+      "bytes": 709554,
+      "separatePackRunsMatched": true,
+      "localRepackSha256": "bdf6415f1c26f11f5601b280b42b2bed0a307fbbf5d921791bc442bc336abb95",
+      "usePublishedArtifact": false,
+      "distTag": "next",
+      "peerDependencies": {
+        "vue": ">=3.4.0 <4"
+      }
+    },
+    {
+      "name": "@aheart-ui/ai",
+      "version": "2.0.0-alpha.0",
+      "filename": "aheart-ui-ai-2.0.0-alpha.0.tgz",
+      "sha256": "9151ab017e1e14a3d8ec84863fbdb7d53b8d92b9885bc89451e11cf81faad1ee",
+      "bytes": 195489,
+      "separatePackRunsMatched": true,
+      "localRepackSha256": "9151ab017e1e14a3d8ec84863fbdb7d53b8d92b9885bc89451e11cf81faad1ee",
+      "usePublishedArtifact": false,
+      "distTag": "next",
+      "peerDependencies": {
+        "aheart-ui": "^2.0.0-alpha.0",
+        "vue": ">=3.5.0 <4",
+        "@aheart-ui/dnd": "^1.1.0"
+      },
+      "peerDependenciesMeta": {
+        "@aheart-ui/dnd": {
+          "optional": true
+        }
+      }
+    },
+    {
+      "name": "@aheart-ui/dnd",
+      "version": "1.1.0",
+      "filename": "aheart-ui-dnd-1.1.0.tgz",
+      "sha256": "8cbc23c703b7250154c7d8afd2c18bf0e2ba3fe16f6bd6a82754967caf54747a",
+      "bytes": 28188,
+      "separatePackRunsMatched": true,
+      "localRepackSha256": "df94695732375ceb2ccddb11f05bb66d85c101b54e433ff94e01ecb49061e81b",
+      "usePublishedArtifact": true,
+      "peerDependencies": {
+        "vue": ">=3.4.0 <4"
+      }
+    }
+  ]
+}

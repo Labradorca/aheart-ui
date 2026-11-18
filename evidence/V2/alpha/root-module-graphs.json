@@ -1,0 +1,41 @@
+{
+  "sourceSha": "e71d333a375febe902b50edb817be1a8a5407374",
+  "graphs": {
+    "button": {
+      "path": "test-results/v2-alpha/m1/root-button-module-graph.json",
+      "sha256": "410744b1d75dff412f17c77a3979d1f6916b4826dd621459d26afed69141bb67",
+      "renderedCount": 45,
+      "parsedCount": 2332,
+      "fullPluginResolved": [],
+      "unrelatedRetained": [],
+      "unusedTableDatePickerParsedCount": 9
+    },
+    "combobox": {
+      "path": "test-results/v2-alpha/m1/root-combobox-module-graph.json",
+      "sha256": "3166bf256e1ec4aae27028993b570add2eb1d3e7cb20969133f3603e278cc258",
+      "renderedCount": 24,
+      "parsedCount": 2332,
+      "fullPluginResolved": [],
+      "unrelatedRetained": [],
+      "unusedTableDatePickerParsedCount": 9
+    },
+    "modal": {
+      "path": "test-results/v2-alpha/m1/root-modal-module-graph.json",
+      "sha256": "9a8ffde39cde443df16a9c8f37586e444e420d9eb45ad50917623c00c4c1984c",
+      "renderedCount": 56,
+      "parsedCount": 2332,
+      "fullPluginResolved": [],
+      "unrelatedRetained": [],
+      "unusedTableDatePickerParsedCount": 9
+    },
+    "select": {
+      "path": "test-results/v2-alpha/m1/root-select-module-graph.json",
+      "sha256": "4847a85f197846ac90d4d54de0997393f44d434b3302079b280b719d222ee711",
+      "renderedCount": 67,
+      "parsedCount": 2332,
+      "fullPluginResolved": [],
+      "unrelatedRetained": [],
+      "unusedTableDatePickerParsedCount": 9
+    }
+  }
+}
