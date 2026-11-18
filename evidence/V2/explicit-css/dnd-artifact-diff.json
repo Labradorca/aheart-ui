@@ -1,0 +1,8 @@
+{
+  "changed": [
+    "package/es/index.js",
+    "package/lib/index.js"
+  ],
+  "onlyEmptyCssPlaceholders": true,
+  "publicDndVersion": "1.1.0"
+}

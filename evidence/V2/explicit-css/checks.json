@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "runtimeStyleImports": 0,
+  "checks": {
+    "v1": {
+      "exitCode": 0,
+      "coverage": {
+        "total": 65,
+        "styles": 65,
+        "js": 65
+      },
+      "denominator": {
+        "fullBytes": 201510,
+        "fullSha256": "bd1006443101d0335a14c0ae0bcdaf351de95d0a76cddf4239c89e76cae95c83",
+        "matchesV0": true,
+        "themeBytes": 1767,
+        "themeFraction": 0.008768795593270805
+      }
+    },
+    "m3": {
+      "exitCode": 0
+    },
+    "legacy": {
+      "exitCode": 0
+    },
+    "manifest": {
+      "exitCode": 0
+    },
+    "no-dnd": {
+      "exitCode": 0
+    },
+    "docs": {
+      "exitCode": 0
+    },
+    "script-tests": {
+      "exitCode": 0
+    },
+    "visual": {
+      "exitCode": 0,
+      "screenshots": 12,
+      "comparison": "six engine/viewport pairs are byte-identical; 12 screenshots"
+    }
+  },
+  "tarballs": [
+    {
+      "name": "aheart-ui",
+      "version": "1.4.0",
+      "sha256": "67c2268c508c85451c775b494584e9a49d4ece7115fa7f226b1d6c541af8a87b"
+    },
+    {
+      "name": "@aheart-ui/dnd",
+      "version": "1.1.0",
+      "sha256": "8cbc23c703b7250154c7d8afd2c18bf0e2ba3fe16f6bd6a82754967caf54747a"
+    },
+    {
+      "name": "@aheart-ui/ai",
+      "version": "1.2.0",
+      "sha256": "3971f1c56e4aebeaec2ef9766a38c2c9339224c5316b7e04b092adda5bed34fb"
+    }
+  ]
+}

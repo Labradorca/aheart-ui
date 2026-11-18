@@ -1,5 +1,4 @@
 import type { App, Plugin } from 'vue'
-import './style.css'
 import Draggable from './draggable.vue'
 import DropZone from './drop-zone.vue'
 import DragOverlay from './drag-overlay.vue'

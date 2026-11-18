@@ -37,6 +37,7 @@ export function validateEntrySnapshot(snapshot){
   const errors=[],covered=new Set(),globals=new Set(),expectedConstant=[]
   const ready=new Map(catalog.map(component=>[component.key,component]))
   const matrix=new Map(qualityMatrix.map(record=>[record.component,record]))
+  const globalStyles = new Set(['aheart-ui/theme.css', ...Object.values(domainPackages).flatMap(name => [`${name}/style.css`, `${name}/full.css`])])
   const validExtras=new Set(['.','./full','./constant','./resolver','./theme.css','./full.css','./style.css','./package.json',
     ...['es','lib'].flatMap(folder => ['*','*.d.ts','*.css','*.js','picker-core/*','index.js','index.d.ts','style.css'].map(file => `./${folder}/${file}`))])
   for(const [domain,packageName] of Object.entries(domainPackages)){
@@ -72,6 +73,7 @@ export function validateEntrySnapshot(snapshot){
       if(domain==='base'&&!names.length)errors.push(`${request}: no Resolver component names`)
       for(const name of names){
         const globalName=`A${name}`,styles=[`${request}/style.css`,...(entry.sideEffects??[])]
+        if(styles.some(style=>globalStyles.has(style)))errors.push(`${request}: Resolver must not inject global styles`)
         if(globals.has(globalName))errors.push(`${globalName}: duplicate Resolver name`)
         globals.add(globalName)
         expectedConstant.push({domain,name,from:request,styles})
