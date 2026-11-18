@@ -1,4 +1,5 @@
 import { readFileSync } from 'node:fs'
+import { distRuntimeExport } from './dist-layout.mjs'
 
 const manifest = JSON.parse(readFileSync(new URL('../components/src/constant/entries.json', import.meta.url), 'utf8'))
 
@@ -14,13 +15,15 @@ export const runtimeExport = (output) => ({
   types: `./es/${output}.d.ts`, import: `./es/${output}.js`, require: `./lib/${output}.js`
 })
 
-export function optionalPackageExports(entries) {
+export function optionalPackageExports(entries, { dist = false } = {}) {
+  const runtime = dist ? distRuntimeExport : runtimeExport
+  const styles = dist ? './dist/styles' : './es'
   return {
-    './full': runtimeExport('index'),
-    './full.css': './es/style.css',
+    './full': runtime('index'),
+    './full.css': `${styles}/style.css`,
     ...Object.fromEntries(entries.flatMap(({ subpath, output, styleOutput }) => [
-      [`./${subpath}`, runtimeExport(output ?? `${subpath}/index`)],
-      [`./${subpath}/style.css`, `./es/${styleOutput ?? `${subpath}/style.css`}`]
+      [`./${subpath}`, runtime(output ?? `${subpath}/index`)],
+      [`./${subpath}/style.css`, `${styles}/${styleOutput ?? `${subpath}/style.css`}`]
     ]))
   }
 }

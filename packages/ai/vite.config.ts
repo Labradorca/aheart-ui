@@ -8,17 +8,18 @@ const entries = getComponentEntries('ai')
 
 export default defineConfig({
   build: {
+    outDir: 'dist',
     target: 'modules',
     minify: 'esbuild',
     rollupOptions: {
       external: (id) => id === 'vue' || id.startsWith('vue/') || id === 'aheart-ui' || id.startsWith('aheart-ui/') || (id === '@aheart-ui/dnd' || id.startsWith('@aheart-ui/dnd/')),
       input: entryInput(entries),
       output: [
-        { format: 'es', exports: 'named', entryFileNames: '[name].js', preserveModules: true, dir: 'es', preserveModulesRoot: 'src' },
-        { format: 'cjs', exports: 'named', entryFileNames: '[name].js', preserveModules: true, dir: 'lib', preserveModulesRoot: 'src' }
+        { format: 'es', exports: 'named', entryFileNames: '[name].js', preserveModules: true, dir: 'dist/esm', preserveModulesRoot: 'src' },
+        { format: 'cjs', exports: 'named', entryFileNames: '[name].js', preserveModules: true, dir: 'dist/cjs', preserveModulesRoot: 'src' }
       ]
     },
     lib: { entry: './src/index.ts', name: 'AheartAI' }
   },
-  plugins: [vue(), dts({ outDir: 'es', tsconfigPath: './tsconfig.json' }), dts({ outDir: 'lib', tsconfigPath: './tsconfig.json' }), splitPackageStyles(new URL('./', import.meta.url), 'ai', entries)]
+  plugins: [vue(), dts({ outDir: 'dist/types', tsconfigPath: './tsconfig.json' }), splitPackageStyles(new URL('./', import.meta.url), 'ai', entries, { dist: true })]
 })

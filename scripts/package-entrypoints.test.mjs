@@ -24,15 +24,15 @@ test('Card exports preserve consumer prop, slot, alias and install types', async
     // with TS 5.9, including Vue's NoInfer intrinsic (added in TS 5.4).
     skipLibCheck: true,
     paths: {
-      'aheart-ui': [path.join(workspaceRoot, 'packages/components/es/index.d.ts')],
-      'aheart-ui/button': [path.join(workspaceRoot, 'packages/components/es/button/index.d.ts')],
-      'aheart-ui/modal': [path.join(workspaceRoot, 'packages/components/es/modal/index.d.ts')],
-      'aheart-ui/select': [path.join(workspaceRoot, 'packages/components/es/select/index.d.ts')],
-      'aheart-ui/full': [path.join(workspaceRoot, 'packages/components/es/full.d.ts')],
-      'aheart-ui/es/index.js': [path.join(workspaceRoot, 'packages/components/es/compat/index.d.ts')],
-      'aheart-ui/es/*': [path.join(workspaceRoot, 'packages/components/es/*')],
+      'aheart-ui': [path.join(workspaceRoot, 'packages/components/dist/types/index.d.ts')],
+      'aheart-ui/button': [path.join(workspaceRoot, 'packages/components/dist/types/button/index.d.ts')],
+      'aheart-ui/modal': [path.join(workspaceRoot, 'packages/components/dist/types/modal/index.d.ts')],
+      'aheart-ui/select': [path.join(workspaceRoot, 'packages/components/dist/types/select/index.d.ts')],
+      'aheart-ui/full': [path.join(workspaceRoot, 'packages/components/dist/types/full.d.ts')],
+      'aheart-ui/es/index.js': [path.join(workspaceRoot, 'packages/components/dist/types/compat/index.d.ts')],
+      'aheart-ui/es/*': [path.join(workspaceRoot, 'packages/components/dist/types/*')],
       '@aheart-ui/dnd': [path.join(workspaceRoot, 'packages/dnd/es/index.d.ts')],
-      '@aheart-ui/ai': [path.join(workspaceRoot, 'packages/ai/es/index.d.ts')],
+      '@aheart-ui/ai': [path.join(workspaceRoot, 'packages/ai/dist/types/index.d.ts')],
       vue: [path.join(workspaceRoot, 'packages/components/node_modules/vue/dist/vue.d.ts')]
     }
   })
@@ -46,8 +46,9 @@ test('Card exports preserve consumer prop, slot, alias and install types', async
 
 for (const packageDir of packages) {
   test(`${packageDir} loads through ESM and CommonJS entrypoints`, async () => {
-    const esm = await import(`../packages/${packageDir}/es/index.js`)
-    const cjs = require(`../packages/${packageDir}/lib/index.js`)
+    const manifest = require(`../packages/${packageDir}/package.json`)
+    const esm = await import(`../packages/${packageDir}/${manifest.module}`)
+    const cjs = require(`../packages/${packageDir}/${manifest.main}`)
 
     assert.ok(Object.keys(esm).length > 0)
     assert.ok(Object.keys(cjs).length > 0)
@@ -58,8 +59,8 @@ for (const packageDir of packages) {
 }
 
 test('components generated module roots retain CSS side effects while JavaScript can tree shake', async () => {
-  const esmPackage = JSON.parse(await readFile(path.join(workspaceRoot, 'packages/components/es/package.json'), 'utf8'))
-  const cjsPackage = JSON.parse(await readFile(path.join(workspaceRoot, 'packages/components/lib/package.json'), 'utf8'))
+  const esmPackage = JSON.parse(await readFile(path.join(workspaceRoot, 'packages/components/dist/esm/package.json'), 'utf8'))
+  const cjsPackage = JSON.parse(await readFile(path.join(workspaceRoot, 'packages/components/dist/cjs/package.json'), 'utf8'))
   assert.deepEqual(esmPackage.sideEffects, ['**/*.css'])
   assert.deepEqual(cjsPackage.sideEffects, ['**/*.css'])
 })

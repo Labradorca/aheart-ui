@@ -71,7 +71,8 @@ try {
         assert.equal((await lstat(installed)).isSymbolicLink(), false, `${contract.name} must be installed from its tarball`)
         assert.equal(await realpath(installed), installed, `${contract.name} must not resolve into the workspace`)
         const ignoredMetadata = []
-        const files = [...await collectDeclarations(path.join(installed, 'es'), ignoredMetadata), ...await collectDeclarations(path.join(installed, 'lib'), ignoredMetadata)]
+        const directories = contract.dist ? ['dist/types'] : ['es', 'lib']
+        const files = (await Promise.all(directories.map(directory => collectDeclarations(path.join(installed, directory), ignoredMetadata)))).flat()
         assert.ok(files.length > 0, `${contract.name} must contain declarations`)
         const manifest = JSON.parse(await readFile(path.join(installed, 'package.json'), 'utf8'))
         assert.equal(manifest.version, contract.version)

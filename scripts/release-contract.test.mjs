@@ -136,5 +136,5 @@ test('M1 rejects missing component styles, export condition drift and CSS prunin
   wrongExport.exports['./button'].require = './es/button/index.js'
   assert.ok(validatePackageContract(core, wrongExport, core.requiredFiles).some(error => error.includes('export ./button')))
   assert.ok(validatePackageContract(core, { ...source, sideEffects: false }, core.requiredFiles).some(error => error.includes('sideEffects')))
-  assert.ok(validatePackageContract(core, source, core.requiredFiles.filter(file => file !== 'es/modal/style.css')).some(error => error.includes('es/modal/style.css')))
+  assert.ok(validatePackageContract(core, source, core.requiredFiles.filter(file => file !== 'dist/styles/modal/style.css')).some(error => error.includes('dist/styles/modal/style.css')))
 })

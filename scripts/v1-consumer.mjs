@@ -3,6 +3,7 @@ import { execFile } from 'node:child_process'
 import { createHash } from 'node:crypto'
 import { cp, lstat, mkdir, mkdtemp, readFile, realpath, writeFile } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
+import { createRequire } from 'node:module'
 import path from 'node:path'
 import { tmpdir } from 'node:os'
 import { fileURLToPath, pathToFileURL } from 'node:url'
@@ -32,6 +33,7 @@ const baselines = initialize ? { status: 'initial complete public CSS measuremen
 if (!initialize) assert.deepEqual(frozenCompositeReviewErrors(manifest, baselines), [], 'composite baseline freeze lacks independent integrity evidence')
 const integrityReview = { schema: 'aheart-css-integrity.v1', reviewedAt: new Date().toISOString(), method: 'independent source AST traversal; no splitter imports', entries: {} }
 const consumer = await realpath(await mkdtemp(path.join(tmpdir(), 'aheart-v1-consumer-')))
+const resolveConsumer = createRequire(path.join(consumer, 'package.json')).resolve
 await mkdir(output, { recursive: true })
 const save = (name, value) => writeFile(path.join(output, name), JSON.stringify(value, null, 2) + '\n')
 const result = { status: 'failed', scope: stylesOnly ? 'complete public styles and initial gate selection only' : 'all 65 public entries: isolated real-tarball JS/CSS/identity/SSR gates', consumer, node: process.version, tarballs: [], installed: [], styles: {}, builds: {}, commands: [] }
@@ -50,7 +52,7 @@ const capture = async (name, command, args) => {
   }
 }
 const canonical = (domain, entry) => entry.sourceEntry ? entry : manifest[domain].find(candidate => `${candidate.subpath}/index` === entry.output)
-const stylePath = (domain, entry) => path.join(consumer, 'node_modules', packages[domain], 'es', entry.styleOutput ?? `${entry.subpath}/style.css`)
+const stylePath = (domain, entry) => resolveConsumer(`${packages[domain]}/${entry.subpath}/style.css`)
 const classNames = css => [...new Set(css.match(/\.aheart-[\w-]+/g) ?? [])].sort()
 try {
   const dependencies = { vue: '3.5.44', vite: '5.0.12' }
@@ -76,11 +78,11 @@ try {
   assert.equal(result.tools.vite, '5.0.12')
   assert.equal(result.tools.vue, '3.5.44')
   assert.equal(result.installed.find(pkg => pkg.name === '@aheart-ui/ai').corePeer, '^1.4.0')
-  const full = await readFile(path.join(consumer, 'node_modules/aheart-ui/es/full.css'))
-  const theme = await readFile(path.join(consumer, 'node_modules/aheart-ui/es/theme.css'))
+  const full = await readFile(resolveConsumer('aheart-ui/full.css'))
+  const theme = await readFile(resolveConsumer('aheart-ui/theme.css'))
   const frozen = (await run('git', ['show', 'b1eef9b6:packages/components/es/full.css'], { cwd: root, encoding: 'buffer' })).stdout
   assert.equal(sha(full), sha(frozen), 'M1 full.css denominator changed')
-  assert.deepEqual(full, await readFile(path.join(consumer, 'node_modules/aheart-ui/es/style.css')))
+  assert.deepEqual(full, await readFile(resolveConsumer('aheart-ui/style.css')))
   result.denominator = { fullBytes: full.length, fullSha256: sha(full), matchesV0: true, themeBytes: theme.length, themeFraction: theme.length / full.length }
   assert.ok(theme.length <= full.length * 0.05)
   if (initialize) Object.assign(baselines, { measuredAt: new Date().toISOString(), denominator: result.denominator, tarballs: result.tarballs })
@@ -92,7 +94,8 @@ try {
     assert.equal(integrity.pass, true, `${key}: independent source integrity audit failed: ${JSON.stringify({ missing: integrity.missing, extra: integrity.extra, orderPass: integrity.orderPass })}`)
     const errors = cssUnionErrors(css.toString(), source)
     assert.deepEqual(errors, [], `${key}: public style differs from own + declared dependency union`)
-    assert.deepEqual(css, await readFile(stylePath(domain, entry).replace('/es/', '/lib/')), `${key}: ESM/CJS styles differ`)
+    const legacyStyle = entry.styleOutput ?? `${entry.subpath}/style.css`
+    assert.deepEqual(css, await readFile(resolveConsumer(`${packages[domain]}/lib/${legacyStyle}`)), `${key}: legacy CSS differs`)
     const dependencies = []
     for (const dependency of canonical(domain, entry).dependencies ?? []) {
       const [targetDomain, subpath] = dependency.includes('/') ? dependency.split('/') : [domain, dependency]
@@ -200,7 +203,8 @@ console.log('All 65 ESM/CJS/root/full identities and representative SSR, plus AI
         assert.equal(selected.cssBytes, 0, `${key}: runtime JS introduced CSS`)
         assert.equal(named.cssBytes, 0, `${key}: root named runtime introduced CSS`)
         assert.deepEqual(moduleBoundaryErrors(selected.ids, entryClosure(domain, entry.subpath)), [], `${key}: module graph crossed declared dependencies`)
-        const pluginFile = `/node_modules/${packageName}/es/${domain === 'base' ? 'plugin.js' : 'index.js'}`
+        const moduleDirectory = packageContracts.find(pkg => pkg.name === packageName).dist ? 'dist/esm' : 'es'
+        const pluginFile = `/node_modules/${packageName}/${moduleDirectory}/${domain === 'base' ? 'plugin.js' : 'index.js'}`
         assert.ok(!named.modules.some(module => module.id.endsWith(pluginFile) && module.renderedLength > 0), `${key}: root named retained full Plugin`)
         assert.deepEqual(jsBudgetErrors(selected.jsGzip, named.jsGzip, fullBuilds[domain].jsGzip), [], `${key}: unchanged JS budget failed`)
         const styles = ['aheart-ui/theme.css', `${request}/style.css`, ...(entry.sideEffects ?? [])]

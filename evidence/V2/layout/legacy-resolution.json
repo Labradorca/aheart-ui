@@ -1,0 +1,23 @@
+[
+  {
+    "package": "aheart-ui",
+    "checked": 1182,
+    "allowed": 1144,
+    "blocked": 38,
+    "changes": []
+  },
+  {
+    "package": "@aheart-ui/ai",
+    "checked": 202,
+    "allowed": 202,
+    "blocked": 0,
+    "changes": []
+  },
+  {
+    "package": "@aheart-ui/dnd",
+    "checked": 100,
+    "allowed": 100,
+    "blocked": 0,
+    "changes": []
+  }
+]

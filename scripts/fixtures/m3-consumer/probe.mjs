@@ -166,9 +166,9 @@ const automatic = await bundle('vite-resolver', "import { createApp } from 'vue'
   vue(),
   Components({ dts: false, resolvers: [cssResolver] })
 ])
-assert.match(automatic.modules, /aheart-ui\/es\/button\/index\.js/)
-assert.match(automatic.modules, /@aheart-ui\/ai\/es\/sender\/index\.js/)
-assert.doesNotMatch(automatic.modules, /@aheart-ui\/dnd|agent-workbench|aheart-ui\/es\/table/)
+assert.match(automatic.modules, /aheart-ui\/dist\/esm\/button\/index\.js/)
+assert.match(automatic.modules, /@aheart-ui\/ai\/dist\/esm\/sender\/index\.js/)
+assert.doesNotMatch(automatic.modules, /@aheart-ui\/dnd|agent-workbench|aheart-ui\/dist\/esm\/table/)
 assert.match(automatic.styles, /aheart-button/)
 assert.match(automatic.styles, /aheart-ai-sender/)
 

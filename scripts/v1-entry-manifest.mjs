@@ -3,12 +3,13 @@ import path from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import ts from 'typescript'
 import { loadConfigFromFile } from 'vite'
+import { runtimeExport } from '../packages/build/package-entries.mjs'
+import { distRuntimeExport } from '../packages/build/dist-layout.mjs'
 
 const root=fileURLToPath(new URL('..',import.meta.url))
 export const domainPackages={base:'aheart-ui',ai:'@aheart-ui/ai',dnd:'@aheart-ui/dnd'}
 const packageDirs={base:'components',ai:'ai',dnd:'dnd'}
 const componentNames=entry=>entry.names?.length?entry.names:entry.name?[entry.name]:[]
-const runtimeTarget=output=>({types:`./es/${output}.d.ts`,import:`./es/${output}.js`,require:`./lib/${output}.js`})
 const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b)
 
 export async function loadEntrySnapshot(){
@@ -26,8 +27,8 @@ export async function loadEntrySnapshot(){
   }
   collect(configuration.config.locales.root.themeConfig.sidebar)
   const {qualityMatrix}=await import('../docs/.vitepress/data/quality-matrix.mjs')
-  const {AheartUIResolver}=await import('../packages/components/es/resolver/index.js')
-  const {aheartComponentEntries}=await import('../packages/components/es/constant/index.js')
+  const {AheartUIResolver}=await import('../packages/components/dist/esm/resolver/index.js')
+  const {aheartComponentEntries}=await import('../packages/components/dist/esm/constant/index.js')
   return {root,manifest,packages,catalog,navigationLinks:[...links],qualityMatrix,componentEntries:aheartComponentEntries,resolver:AheartUIResolver}
 }
 
@@ -36,9 +37,12 @@ export function validateEntrySnapshot(snapshot){
   const errors=[],covered=new Set(),globals=new Set(),expectedConstant=[]
   const ready=new Map(catalog.map(component=>[component.key,component]))
   const matrix=new Map(qualityMatrix.map(record=>[record.component,record]))
-  const validExtras=new Set(['.','./full','./constant','./resolver','./theme.css','./full.css','./style.css','./package.json','./es/*','./lib/*','./es/picker-core/*','./lib/picker-core/*'])
+  const validExtras=new Set(['.','./full','./constant','./resolver','./theme.css','./full.css','./style.css','./package.json',
+    ...['es','lib'].flatMap(folder => ['*','*.d.ts','*.css','*.js','picker-core/*','index.js','index.d.ts','style.css'].map(file => `./${folder}/${file}`))])
   for(const [domain,packageName] of Object.entries(domainPackages)){
     const entries=manifest[domain],paths=new Set(),expectedExports=new Set()
+    const runtimeTarget=domain==='dnd'?runtimeExport:distRuntimeExport
+    const styleFolder=domain==='dnd'?'./es':'./dist/styles'
     const cssResolver=resolver({domains:[domain],importStyle:'css'}),plainResolver=resolver({domains:[domain]})
     if(!entries?.length){errors.push(`${domain}: empty entry manifest`);continue}
     for(const entry of entries){
@@ -50,7 +54,7 @@ export function validateEntrySnapshot(snapshot){
       const runtimeKey=`./${entry.subpath}`,styleKey=`${runtimeKey}/style.css`
       expectedExports.add(runtimeKey);expectedExports.add(styleKey)
       if(!same(packages[domain].exports[runtimeKey],runtimeTarget(output)))errors.push(`${request}: runtime exports drift`)
-      if(packages[domain].exports[styleKey]!==`./es/${styleOutput}`)errors.push(`${request}: stylesheet export drift`)
+      if(packages[domain].exports[styleKey]!==`${styleFolder}/${styleOutput}`)errors.push(`${request}: stylesheet export drift`)
       if(entry.sourceEntry&&!existsSync(path.join(snapshot.root,`packages/${packageDirs[domain]}`,entry.sourceEntry)))errors.push(`${request}: source entry missing`)
       if(domain==='base'){
         if(!entry.styles?.length)errors.push(`${request}: component stylesheet sources missing`)
