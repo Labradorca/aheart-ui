@@ -137,6 +137,9 @@ jobs:
         if: ${{ failure() && steps.build_generated.outcome == 'failure' }}
         run: |
           mkdir -p test-results/build-generated-diagnostics
+          git diff --cached HEAD -- packages/components/dist packages/dnd/es packages/dnd/lib packages/ai/dist > test-results/build-generated-diagnostics/generated-cached.diff
+          git diff -- packages/components/dist packages/dnd/es packages/dnd/lib packages/ai/dist > test-results/build-generated-diagnostics/generated-worktree.diff
+          git ls-files --others -- packages/components/dist packages/dnd/es packages/dnd/lib packages/ai/dist > test-results/build-generated-diagnostics/generated-untracked.txt
           git ls-files -- packages/components packages/ai packages/dnd | grep -E '^packages/[^/]+/(dist|es|lib)/' > test-results/build-generated-diagnostics/generated-tracked.txt || test "$?" -eq 1
       - name: Upload Build Diagnostics
         if: ${{ failure() && steps.build_generated.outcome == 'failure' }}

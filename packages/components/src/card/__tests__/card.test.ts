@@ -1,7 +1,8 @@
 import { mount } from '@vue/test-utils'
 import { createApp, h } from 'vue'
 import { describe, expect, it } from 'vitest'
-import AheartUI, { CardGrid as RootCardGrid } from '../../index'
+import AheartUI from '../../full'
+import { CardGrid as RootCardGrid } from '../../index'
 import ConfigProvider from '../../config-provider/config-provider.vue'
 import Card, { CardGrid, CardMeta } from '../index'
 
@@ -522,7 +523,7 @@ describe('Card', () => {
     expect(Card.Grid).toBe(CardGrid)
   })
 
-  it('installs CardGrid from the root plugin', () => {
+  it('installs CardGrid from the full plugin', () => {
     const app = createApp({})
 
     app.use(AheartUI)

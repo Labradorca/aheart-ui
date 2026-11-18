@@ -169,15 +169,24 @@ test('splits CI into observable unit, typecheck, build, docs, consumer and brows
   assert.match(workflowSource, /--components-tarball/)
   assert.match(workflowSource, /--dnd-tarball/)
   assert.match(workflowSource, /--ai-tarball/)
-  for (const { name, version } of packageContracts) {
-    const filename = `${name.replace(/^@/, '').replaceAll('/', '-')}-${version}.tgz`
-    assert.ok(workflowSource.includes(filename), `CI must consume the current contract tarball ${filename}`)
+  for (const { name, version, packageDir } of packageContracts) {
+    const manifest = JSON.parse(readFileSync(new URL(`../${packageDir}/package.json`, import.meta.url), 'utf8'))
+    assert.equal(version, manifest.version, `${name} contract must match the package version used by CI`)
   }
+  const migrated = getStep('V2 codemod migration of the two pilots')
+  assert.ok(migrated?.includes('--entry-mode migrated'))
+  assert.ok(migrated.includes('require("./packages/components/package.json").version'))
+  assert.ok(migrated.includes('require("./packages/ai/package.json").version'))
+  assert.ok(migrated.includes('release-tarballs/aheart-ui-$core_version.tgz'))
+  assert.ok(migrated.includes('release-tarballs/aheart-ui-ai-$ai_version.tgz'))
+  assert.ok(migrated.includes('v2-baseline/packs/aheart-ui-dnd-1.1.0.tgz'))
   assert.match(workflowSource, /pnpm check:v1-consumer/)
   const consumerJob = workflowSource.match(/\n  consumer:\n[\s\S]*?(?=\n  [\w-]+:\n|$)/)?.[0]
   assert.match(consumerJob ?? '', /name: Checkout\n        uses: actions\/checkout@v4\n        with:\n(?:          #[^\n]*\n)*          fetch-depth: 0\n/, 'consumer needs the frozen V0 CSS commit')
   assert.match(workflowSource, /pnpm check:v1-visual-consumer/)
-  assert.ok(getStep('V1 unchanged pilot compatibility')?.includes('--entry-mode legacy'))
+  const rollback = getStep('V1 public pilot rollback')
+  assert.ok(rollback?.includes('--entry-mode legacy'))
+  assert.ok(rollback.includes('--baseline-lock-dir evidence/V2/baseline'))
   assert.match(workflowSource, /pnpm check:v2-migration-consumer/)
   assert.doesNotMatch(workflowSource, /  verify:\n/)
 })
