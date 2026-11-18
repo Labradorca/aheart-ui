@@ -11,7 +11,9 @@ const run = promisify(execFile)
 const root = fileURLToPath(new URL('..', import.meta.url))
 const arg = name => { const i = process.argv.indexOf(name); return i < 0 ? undefined : process.argv[i + 1] }
 const entryMode = arg('--entry-mode') || 'legacy'
-assert.ok(['legacy', 'subpath'].includes(entryMode), '--entry-mode must be legacy or subpath')
+assert.ok(['legacy', 'subpath', 'migrated'].includes(entryMode), '--entry-mode must be legacy, subpath or migrated')
+const lockDirectory = arg('--baseline-lock-dir')
+const migrateSource = entryMode === 'migrated' ? (await import('../scripts/codemods/aheart-v2.mjs')).migrateSource : undefined
 const browserEngine = arg('--browser') || 'chromium'
 assert.ok(['chromium', 'firefox', 'webkit'].includes(browserEngine), '--browser must be chromium, firefox or webkit')
 const strictTypesPolicy = arg('--strict-types') || 'pass'
@@ -36,6 +38,7 @@ for (const [short, name] of [['core', 'aheart-ui'], ['ai', '@aheart-ui/ai'], ['d
   }
 }
 assert.ok(!candidatePackages.size || !registryVersions.size, 'Choose tarballs or exact registry versions for this run')
+if (lockDirectory) assert.ok(entryMode === 'legacy' && registryVersions.size, 'A baseline lock requires exact registry versions and original sources')
 const candidate = candidatePackages.get('aheart-ui')
 const selectedPackages = new Map([
   ...[...candidatePackages].map(([name, { path: tarballPath, version }]) => [name, { specifier: `file:${tarballPath}`, version }]),
@@ -95,6 +98,33 @@ try {
         if ((await lstat(path.join(source, file))).isFile()) record.sourceFiles[file] = createHash('sha256').update(await readFile(path.join(source, file))).digest('hex')
       }
       record.entryStrategy = name === 'clean-consumer' && entryMode === 'subpath' ? 'public-component-subpaths' : 'legacy-root-compatibility'
+      if (migrateSource) {
+        record.entryStrategy = 'codemod'
+        record.migration = { changes: [], manual: [] }
+        for (const relative of await readdir(project, { recursive: true })) {
+          if (!/\.(?:[cm]?[jt]sx?|vue)$/.test(relative)) continue
+          const target = path.join(project, relative)
+          const before = await readFile(target, 'utf8')
+          const transformed = migrateSource(before, relative)
+          record.migration.manual.push(...transformed.manual.map(location => ({ file: relative, ...location })))
+          if (!transformed.changed) continue
+          const secondPass = migrateSource(transformed.source, relative)
+          assert.equal(secondPass.changed, false, relative + ' is not idempotent')
+          assert.deepEqual(secondPass.manual, [], relative + ' needs manual review')
+          await writeFile(target, transformed.source)
+          const evidenceFile = path.join(directory, 'consumed-source', relative)
+          await mkdir(path.dirname(evidenceFile), { recursive: true })
+          await cp(target, evidenceFile)
+          record.migration.changes.push({
+            file: relative,
+            changes: transformed.changes,
+            before: createHash('sha256').update(before).digest('hex'),
+            after: createHash('sha256').update(transformed.source).digest('hex')
+          })
+        }
+        assert.deepEqual(record.migration.manual, [], 'Pilot requires undocumented source changes')
+        record.migration.outsideGuide = 0
+      }
       if (record.entryStrategy === 'public-component-subpaths') {
         const imports = "import Button from 'aheart-ui/button'\nimport Modal from 'aheart-ui/modal'\nimport Select from 'aheart-ui/select'"
         for (const file of ['app.js', 'types.ts']) {
@@ -132,10 +162,16 @@ try {
           dependencies[pkg] = specifier
         }
         await writeFile(path.join(project, 'package.json'), JSON.stringify({ ...manifest, dependencies }, null, 2) + '\n')
-        await capture(record, registryVersions.size ? 'registry-lock' : 'candidate-lock', 'npm', ['install', '--package-lock-only', '--ignore-scripts', '--no-audit', '--no-fund', '--prefer-online', '--cache=' + path.join(project, '.npm-cache'), '--registry=https://registry.npmjs.org/'], project, directory)
+        if (lockDirectory) {
+          await cp(path.join(lockDirectory, `${name}-lock.json`), path.join(project, 'package-lock.json'))
+          record.restoredLock = true
+        } else {
+          await capture(record, registryVersions.size ? 'registry-lock' : 'candidate-lock', 'npm', ['install', '--package-lock-only', '--ignore-scripts', '--no-audit', '--no-fund', '--prefer-online', '--cache=' + path.join(project, '.npm-cache'), '--registry=https://registry.npmjs.org/'], project, directory)
+        }
       }
       await capture(record, 'install', 'npm', ['ci', '--include=dev', '--ignore-scripts', '--no-audit', '--no-fund', '--registry=https://registry.npmjs.org/'], project, directory)
       const lock = await readFile(path.join(project, 'package-lock.json'))
+      if (lockDirectory) assert.deepEqual(lock, await readFile(path.join(lockDirectory, `${name}-lock.json`)), 'Rollback must preserve the original lockfile')
       const lockedPackages = JSON.parse(lock).packages
       for (const [pkg, expected] of Object.entries(manifest.dependencies)) {
         const installed = path.join(project, 'node_modules', pkg)

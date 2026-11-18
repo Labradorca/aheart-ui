@@ -75,11 +75,11 @@ const main = async () => {
     assert.equal(typeof cjs.FormList, 'object')
     assert.equal(cjs.AFormList, cjs.FormList)
     record.checks.cjs = true
-    const esm = await import(pathToFileURL(path.join(consumerRoot, 'node_modules/aheart-ui/es/index.js')).href)
+    const esm = await import(pathToFileURL(consumerRequire.resolve('aheart-ui/es/index.js')).href)
     assert.equal(typeof esm.FormList, 'object')
     assert.equal(esm.AFormList, esm.FormList)
     record.checks.esm = true
-    const css = await readFile(path.join(consumerRoot, 'node_modules/aheart-ui/es/style.css'), 'utf8')
+    const css = await readFile(consumerRequire.resolve('aheart-ui/style.css'), 'utf8')
     assert.match(css, /aheart-form-item/)
     record.checks.css = true
 

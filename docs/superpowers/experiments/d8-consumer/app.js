@@ -1,5 +1,6 @@
 import { defineComponent, h, nextTick, ref } from 'vue'
-import { AIAgentWorkbench, AIForm } from '@aheart-ui/ai'
+import { AIForm } from '@aheart-ui/ai'
+import { AIAgentWorkbench } from '@aheart-ui/ai/workbench'
 import { createAIStreamReducer } from '@aheart-ui/ai'
 
 const wait = () => new Promise(resolve => setTimeout(resolve, 0))

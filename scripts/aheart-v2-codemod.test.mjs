@@ -3,6 +3,26 @@ import test from 'node:test'
 import ts from 'typescript'
 import { migrateSource } from './codemods/aheart-v2.mjs'
 
+test('codemod migrates equivalent legacy root and explicit CSS paths', () => {
+  const result = migrateSource(`
+import UI, { Button } from 'aheart-ui/es/index.js';
+import AIFull, { AIForm } from '@aheart-ui/ai/es/index.js';
+import { AheartUIResolver } from 'aheart-ui/es/resolver/index.js';
+import 'aheart-ui/es/theme.css';
+import '@aheart-ui/ai/style.css';
+const Plugin = require('aheart-ui/lib/index.js').default;
+`)
+  assert.deepEqual(result.manual, [])
+  assert.match(result.source, /import UI from ["']aheart-ui\/full["']/)
+  assert.match(result.source, /import \{ Button \} from ["']aheart-ui["']/)
+  assert.match(result.source, /AIFull, \{ AIForm \} from ['"]@aheart-ui\/ai\/full['"]/)
+  assert.match(result.source, /from ['"]aheart-ui\/resolver['"]/)
+  assert.match(result.source, /import ['"]aheart-ui\/theme.css['"]/)
+  assert.match(result.source, /import ['"]@aheart-ui\/ai\/full.css['"]/)
+  assert.match(result.source, /require\('aheart-ui\/full'\)\.default/)
+  assert.equal(migrateSource(result.source).changed, false)
+})
+
 const valid = code => assert.equal(ts.createSourceFile('fixture.ts', code, ts.ScriptTarget.Latest, true).parseDiagnostics.length, 0)
 test('codemod splits root defaults and Workbench, preserves aliases/types and is idempotent', () => {
   const result = migrateSource("import UI, { Button, type ButtonProps } from 'aheart-ui'\nimport AI, { AIAgentWorkbench as Workbench, AISender } from '@aheart-ui/ai'\n")
@@ -10,7 +30,7 @@ test('codemod splits root defaults and Workbench, preserves aliases/types and is
   assert.match(result.source, /import UI from ["']aheart-ui\/full["']/)
   assert.match(result.source, /Button, type ButtonProps/)
   assert.match(result.source, /import AI from ["']@aheart-ui\/ai\/full["']/)
-  assert.match(result.source, /AIAgentWorkbench as Workbench.*@aheart-ui\/ai\/agent-workbench/)
+  assert.match(result.source, /AIAgentWorkbench as Workbench.*@aheart-ui\/ai\/workbench/)
   assert.match(result.source, /AISender.*@aheart-ui\/ai["']/)
   assert.equal(migrateSource(result.source).source, result.source)
 })
@@ -20,7 +40,7 @@ test('codemod also migrates named-default imports and mixed AI defaults', () => 
   valid(result.source)
   assert.match(result.source, /default as UI.*aheart-ui\/full/)
   assert.match(result.source, /import AI, \{ default as OtherAI \}.*@aheart-ui\/ai\/full/)
-  assert.match(result.source, /AIAgentWorkbench as WB.*@aheart-ui\/ai\/agent-workbench/)
+  assert.match(result.source, /AIAgentWorkbench as WB.*@aheart-ui\/ai\/workbench/)
   assert.equal(migrateSource(result.source).changed, false)
 })
 test('codemod preserves comments, compatible named imports and string contents', () => {
@@ -37,7 +57,7 @@ test('codemod rewrites explicit re-exports and CommonJS/awaited default or Workb
   valid(result.source)
   assert.match(result.source, /default as UI.*aheart-ui\/full/)
   assert.match(result.source, /require\('aheart-ui\/full'\)\.default/)
-  assert.match(result.source, /require\('@aheart-ui\/ai\/agent-workbench'\)\.AIAgentWorkbench/)
+  assert.match(result.source, /require\('@aheart-ui\/ai\/workbench'\)\.AIAgentWorkbench/)
   assert.match(result.source, /import\('aheart-ui\/full'\)/)
 })
 test('codemod maps only declared equivalent legacy paths and keeps private/cross-format paths', () => {
@@ -54,7 +74,7 @@ test('codemod edits both Vue script blocks without touching template/style', () 
   const result = migrateSource(input, 'App.vue')
   assert.match(result.source, /<template><pre>import UI from 'aheart-ui'<\/pre><\/template>/)
   assert.match(result.source, /aheart-ui\/full/)
-  assert.match(result.source, /@aheart-ui\/ai\/agent-workbench/)
+  assert.match(result.source, /@aheart-ui\/ai\/workbench/)
   assert.ok(result.source.endsWith('<style>.x{content:"aheart-ui"}</style>'))
   const typed = migrateSource('<script setup lang="ts" generic="T extends Record<string, unknown>">import UI from "aheart-ui"</script>', 'Generic.vue')
   assert.match(typed.source, /generic="T extends Record<string, unknown>"/)

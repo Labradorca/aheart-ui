@@ -209,18 +209,38 @@ jobs:
         run: pnpm check:v1-consumer
       - name: V1 packed SSR hydration and full versus scoped styles
         run: pnpm check:v1-visual-consumer
-      - name: V1 unchanged pilot compatibility
+      - name: V1 public pilot rollback
         run: |
           mkdir -p test-results/v1-pilot-compatibility
           for engine in chromium firefox webkit; do
             node pilots/run-baselines.mjs --entry-mode legacy --only clean-consumer,ai-review-gate \
-              --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz \
-              --ai-tarball test-results/release-tarballs/aheart-ui-ai-1.2.0.tgz \
-              --dnd-tarball test-results/release-tarballs/aheart-ui-dnd-1.1.0.tgz \
+              --core-version 1.4.0 --ai-version 1.2.0 --dnd-version 1.1.0 \
+              --baseline-lock-dir evidence/V2/baseline \
               --browser "$engine" --out "test-results/v1-pilot-compatibility/$engine"
           done
-      - name: V1 development diagnostics and migration codemod
-        run: pnpm check:v2-migration-consumer
+      - name: V2 codemod migration of the two pilots
+        run: |
+          core_version="$(node -p 'require("./packages/components/package.json").version')"
+          ai_version="$(node -p 'require("./packages/ai/package.json").version')"
+          mkdir -p test-results/v2-migrated-pilots
+          for engine in chromium firefox webkit; do
+            node pilots/run-baselines.mjs --entry-mode migrated --only clean-consumer,ai-review-gate \
+              --core-tarball "test-results/release-tarballs/aheart-ui-$core_version.tgz" \
+              --ai-tarball "test-results/release-tarballs/aheart-ui-ai-$ai_version.tgz" \
+              --dnd-tarball test-results/v2-baseline/packs/aheart-ui-dnd-1.1.0.tgz \
+              --browser "$engine" --out "test-results/v2-migrated-pilots/$engine"
+          done
+      - name: V1 and V2 development diagnostics and migration codemod
+        run: |
+          node scripts/v2-migration-consumer.mjs --baseline --pack-dir test-results/v2-baseline/packs --out test-results/v2-migration-baseline
+          pnpm check:v2-migration-consumer
+      - name: Preserve persisted state through upgrade and rollback
+        run: |
+          core_version="$(node -p 'require("./packages/components/package.json").version')"
+          node pilots/run-baselines.mjs --only muxu-todo --core-version 1.4.0 --out test-results/v2-state-baseline
+          project="$(node -p 'require("./test-results/v2-state-baseline/results.json").pilots[0].project')"
+          node pilots/check-rollback.mjs --project "$project" --baseline-version 1.4.0 \
+            --core-tarball "test-results/release-tarballs/aheart-ui-$core_version.tgz" --out test-results/v2-state-rollback
       - name: Pack and run isolated consumers
         run: |
           pack_dir=$(mktemp -d)
@@ -230,7 +250,7 @@ jobs:
           pnpm --dir packages/components pack --json --pack-destination "$pack_dir" > "$pack_dir/pack.json"
           pnpm --dir packages/dnd pack --json --pack-destination "$pack_dir" > "$pack_dir/dnd-pack.json"
           pnpm --dir packages/ai pack --json --pack-destination "$pack_dir" > "$pack_dir/ai-pack.json"
-          components_tarball="$pack_dir/aheart-ui-1.4.0.tgz"
+          components_tarball="$(node -p 'require(process.argv[1]).filename' "$pack_dir/pack.json")"
           dnd_tarball="$(node -p 'require(process.argv[1]).filename' "$pack_dir/dnd-pack.json")"
           ai_tarball="$(node -p 'require(process.argv[1]).filename' "$pack_dir/ai-pack.json")"
           node scripts/root-entry-consumer.mjs --tarball "$components_tarball" --out "$root_out"
@@ -270,7 +290,10 @@ jobs:
             test-results/v1-consumer/
             test-results/v1-visual-consumer/
             test-results/v1-pilot-compatibility/
+            test-results/v2-migrated-pilots/
+            test-results/v2-state-rollback/
             test-results/v2-migration-consumer/
+            test-results/v2-migration-baseline/
             test-results/m1-consumer/
             test-results/m3-consumer/*.log
             test-results/m3-consumer/results.json

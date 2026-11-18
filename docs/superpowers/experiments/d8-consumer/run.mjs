@@ -72,8 +72,9 @@ else {
       const info = await packageInfo(consumerRoot, name)
       record.symlink ||= info.symlink
       assert.equal(info.symlink, false, `${name} is a workspace symlink`)
-      assert.ok(info.entries.includes('es/index.js') || info.entries.includes('es/index.d.ts'), `${name} missing ESM files`)
-      assert.ok(info.entries.includes('lib/index.js'), `${name} missing CJS files`)
+      for (const [field, label] of [['module', 'ESM'], ['main', 'CJS'], ['types', 'types']]) {
+        assert.ok(info.entries.includes(info.packageJson[field]), `${name} missing ${label} files`)
+      }
       assert.ok(info.entries.some(entry => entry.endsWith('style.css')), `${name} missing CSS`)
     }
     record.packageFiles = true
@@ -82,7 +83,7 @@ else {
     record.typecheck = true
 
     const consumerRequire = createRequire(path.join(consumerRoot, 'probe.cjs'))
-    const cjs = consumerRequire('@aheart-ui/ai')
+    const cjs = consumerRequire('@aheart-ui/ai/full')
     const cjsComponents = consumerRequire('aheart-ui')
     const cjsDnd = consumerRequire('@aheart-ui/dnd')
     assert.equal(typeof cjs.AIForm, 'object')
@@ -92,16 +93,16 @@ else {
     assert.equal(typeof cjsComponents.Pagination, 'object')
     assert.equal(typeof cjsDnd.Draggable, 'object')
     assert.equal(typeof cjsDnd.SortableList, 'object')
-    const esm = await import(pathToFileURL(path.join(consumerRoot, 'node_modules/@aheart-ui/ai/es/index.js')).href)
-    const esmComponents = await import(pathToFileURL(path.join(consumerRoot, 'node_modules/aheart-ui/es/index.js')).href)
-    const esmDnd = await import(pathToFileURL(path.join(consumerRoot, 'node_modules/@aheart-ui/dnd/es/index.js')).href)
+    const esm = await import(pathToFileURL(consumerRequire.resolve('@aheart-ui/ai/es/index.js')).href)
+    const esmComponents = await import(pathToFileURL(consumerRequire.resolve('aheart-ui/es/index.js')).href)
+    const esmDnd = await import(pathToFileURL(consumerRequire.resolve('@aheart-ui/dnd/es/index.js')).href)
     assert.equal(typeof esm.AIChatPanel, 'object')
     assert.equal(typeof esm.createAIStreamReducer, 'function')
     assert.equal(typeof esmComponents.Table, 'object')
     assert.equal(typeof esmComponents.Pagination, 'object')
     assert.equal(typeof esmDnd.Draggable, 'object')
     assert.equal(typeof esmDnd.SortableList, 'object')
-    const css = await readFile(path.join(consumerRoot, 'node_modules/@aheart-ui/ai/es/style.css'), 'utf8')
+    const css = await readFile(consumerRequire.resolve('@aheart-ui/ai/full.css'), 'utf8')
     assert.match(css, /aheart-ai-workbench/)
     assert.match(css, /aheart-ai-chat-panel/)
     record.imports = true

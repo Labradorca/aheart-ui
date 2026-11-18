@@ -1,5 +1,6 @@
 import { h } from 'vue'
-import { AIAgentWorkbench, AIChatPanel, AIForm, createAIStreamReducer, reduceAIStreamEvent } from '@aheart-ui/ai'
+import { AIChatPanel, AIForm, createAIStreamReducer, reduceAIStreamEvent } from '@aheart-ui/ai'
+import { AIAgentWorkbench } from '@aheart-ui/ai/workbench'
 import type {
   AIAgentActionHandler, AIAgentOperationRequest, AIAgentTask, AIChatRequestV2, AIStreamEventV2,
   AIStreamReducer, AIToolCallDisplay, AITransportV2
