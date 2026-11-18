@@ -45,7 +45,6 @@ import { FormItem, FormList, default as default40, FormItem as FormItem2, FormLi
 import { default as default41 } from "./table/index.js";
 import { floatingPlacements, floatingTriggers, getFloatingPopupStyle, isFloatingPlacement, isFloatingTrigger, isFloatingTriggerProp, normalizeFloatingTriggers } from "./utils/floating-core.js";
 import "./theme/index.css.js";
-import { default as default42 } from "./plugin.js";
 import { message } from "./message/service.js";
 import { enUS, zhCN } from "./config/context.js";
 import { fromFloatingUIPlacement, getFloatingArrowStaticSide, toFloatingUIPlacement, useFloatingPosition } from "./utils/use-floating-position.js";
@@ -120,7 +119,6 @@ export {
   TreeSelect,
   default11 as Typography,
   Upload,
-  default42 as default,
   enUS,
   floatingPlacements,
   floatingTriggers,

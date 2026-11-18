@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "consumers": {
+    "m1": {
+      "exitCode": 0,
+      "status": "passed",
+      "command": "node scripts/m1-consumer.mjs --tarball test-results/v2-root-split/packs/aheart-ui-1.4.0.tgz --out test-results/v2-root-split/m1",
+      "styles": {
+        "fullBytes": 201510,
+        "themeBytes": 1767,
+        "components": {
+          "button": {
+            "bytes": 7945,
+            "fractionOfFull": 0.039427323706019556
+          },
+          "combobox": {
+            "bytes": 3572,
+            "fractionOfFull": 0.017726167435859263
+          },
+          "select": {
+            "bytes": 10472,
+            "fractionOfFull": 0.05196764428564339
+          },
+          "modal": {
+            "bytes": 16305,
+            "fractionOfFull": 0.08091409855590294
+          }
+        }
+      }
+    },
+    "strict": {
+      "exitCode": 0,
+      "status": "passed",
+      "command": "node scripts/strict-consumer.mjs --pack-dir test-results/v2-root-split/packs --out test-results/v2-root-split/strict",
+      "vue": [
+        {
+          "vueVersion": "3.5.38",
+          "status": "passed"
+        },
+        {
+          "vueVersion": "3.5.44",
+          "status": "passed"
+        }
+      ]
+    },
+    "v1": {
+      "exitCode": 0,
+      "status": "passed",
+      "command": "node scripts/v1-consumer.mjs --pack-dir test-results/v2-root-split/packs --out test-results/v2-root-split/v1",
+      "coverage": {
+        "total": 65,
+        "styles": 65,
+        "js": 65
+      },
+      "tarballs": [
+        {
+          "name": "aheart-ui",
+          "version": "1.4.0",
+          "sha256": "0477d61b6bcce2b28d3fa9cdc848649ec883c3f03492d89793ea7ef384ae74e3"
+        },
+        {
+          "name": "@aheart-ui/dnd",
+          "version": "1.1.0",
+          "sha256": "8cbc23c703b7250154c7d8afd2c18bf0e2ba3fe16f6bd6a82754967caf54747a"
+        },
+        {
+          "name": "@aheart-ui/ai",
+          "version": "1.2.0",
+          "sha256": "8055c52babbb0002145db1b3bb0df0eb2638f9c28239d71c4a7231ea20e62fc7"
+        }
+      ]
+    }
+  },
+  "scriptTests": {
+    "command": "node --test scripts/package-entrypoints.test.mjs scripts/release-contract.test.mjs scripts/v1-entry-contract.test.mjs scripts/docs-copy.test.mjs",
+    "exitCode": 0,
+    "passed": 24,
+    "initialFailure": "The workspace type fixture mapped the old root path to the newly named-only declaration; it now resolves through the same compatibility declaration as package exports."
+  }
+}

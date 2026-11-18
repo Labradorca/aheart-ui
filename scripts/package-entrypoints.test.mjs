@@ -29,6 +29,7 @@ test('Card exports preserve consumer prop, slot, alias and install types', async
       'aheart-ui/modal': [path.join(workspaceRoot, 'packages/components/es/modal/index.d.ts')],
       'aheart-ui/select': [path.join(workspaceRoot, 'packages/components/es/select/index.d.ts')],
       'aheart-ui/full': [path.join(workspaceRoot, 'packages/components/es/full.d.ts')],
+      'aheart-ui/es/index.js': [path.join(workspaceRoot, 'packages/components/es/compat/index.d.ts')],
       'aheart-ui/es/*': [path.join(workspaceRoot, 'packages/components/es/*')],
       '@aheart-ui/dnd': [path.join(workspaceRoot, 'packages/dnd/es/index.d.ts')],
       '@aheart-ui/ai': [path.join(workspaceRoot, 'packages/ai/es/index.d.ts')],

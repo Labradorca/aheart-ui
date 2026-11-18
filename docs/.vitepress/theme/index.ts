@@ -1,7 +1,7 @@
 import { h } from "vue";
 import type { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
-import AheartUI from "aheart-ui";
+import AheartUI from "aheart-ui/full";
 import AheartAI from "@aheart-ui/ai";
 import AheartDnd from "@aheart-ui/dnd";
 import "aheart-ui/es/style.css";

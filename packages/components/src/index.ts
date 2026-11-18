@@ -88,4 +88,3 @@ export * from './message'
 export * from './utils/floating-core'
 
 import './theme/index.css'
-export { default } from './plugin'

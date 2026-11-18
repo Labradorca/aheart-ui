@@ -142,7 +142,13 @@ for(const {entry,packageName,key,domain} of entries){
  // Legacy-only aliases (e.g. grid.ACol) were never root exports. Canonical
  // Resolver names must all retain their existing root/component identities.
  for(const name of entry.names??[]){assert.ok(root[name],request+' root '+name);assert.equal(esm[name],root[name]);assert.equal(cjs[name],rootCjs[name])}
- assert.equal((await import(packageName+'/full')).default,root.default);assert.equal(require(packageName+'/full').default,rootCjs.default)
+ if(domain==='base'){
+  assert.equal(Object.hasOwn(root,'default'),false);assert.equal(Object.hasOwn(rootCjs,'default'),false)
+  assert.equal((await import(packageName+'/full')).default,(await import(packageName+'/es/index.js')).default)
+  assert.equal(require(packageName+'/full').default,require(packageName+'/lib/index.js').default)
+ }else{
+  assert.equal((await import(packageName+'/full')).default,root.default);assert.equal(require(packageName+'/full').default,rootCjs.default)
+ }
  const all=Object.keys(esm).filter(name=>name!=='default'), preferred=entry.names?.length?entry.names:all
  names[key]=preferred
  const renderName=entry.name&&preferred.includes(entry.name)?entry.name:({chat:'AIChatPanel',agent:'AIForm',workbench:'AIAgentWorkbench'}[entry.subpath]??preferred[0])

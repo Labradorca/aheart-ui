@@ -66,4 +66,3 @@ export type * from './table';
 export { enUS, zhCN } from './config';
 export * from './message';
 export * from './utils/floating-core';
-export { default } from './plugin';

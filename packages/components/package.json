@@ -46,6 +46,16 @@
     "./modal/style.css": "./es/modal/style.css",
     "./select/style.css": "./es/select/style.css",
     "./style.css": "./es/style.css",
+    "./es/index.js": {
+      "types": "./es/compat/index.d.ts",
+      "default": "./es/compat/index.js"
+    },
+    "./lib/index.js": {
+      "types": "./lib/compat/index.d.ts",
+      "default": "./lib/compat/index.js"
+    },
+    "./es/index.d.ts": "./es/compat/index.d.ts",
+    "./lib/index.d.ts": "./lib/compat/index.d.ts",
     "./es/picker-core/*": null,
     "./lib/picker-core/*": null,
     "./es/*": "./es/*",
