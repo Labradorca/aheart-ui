@@ -14,3 +14,4 @@ declare const InstalledTimePicker: import("../utils/install").SFCWithInstall<Tim
     RangePicker: typeof TimeRangePicker;
 };
 export default InstalledTimePicker;
+export { InstalledTimePicker as TimePicker };

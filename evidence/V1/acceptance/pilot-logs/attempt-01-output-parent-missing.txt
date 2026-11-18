@@ -1,0 +1,14 @@
+node:internal/fs/promises:859
+  return await PromisePrototypeThen(
+         ^
+
+Error: ENOENT: no such file or directory, mkdir '/Users/start/code/aheart-ui-wt/v1.4-entries/test-results/v1-pilots/legacy-chromium-r1'
+    at async mkdir (node:internal/fs/promises:859:10)
+    at async file:///Users/start/code/aheart-ui-wt/v1.4-entries/pilots/run-baselines.mjs:55:1 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'mkdir',
+  path: '/Users/start/code/aheart-ui-wt/v1.4-entries/test-results/v1-pilots/legacy-chromium-r1'
+}
+
+Node.js v24.17.0

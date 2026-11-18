@@ -5,3 +5,5 @@ const Skeleton = withInstall(skeleton, 'ASkeleton')
 
 export default Skeleton
 export type { SkeletonAvatarConfig, SkeletonAvatarShape, SkeletonParagraphConfig, SkeletonProps, SkeletonTitleConfig } from './types'
+
+export { Skeleton }

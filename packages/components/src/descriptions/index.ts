@@ -14,3 +14,5 @@ export type {
   DescriptionsSemanticPart,
   DescriptionsStyles
 } from './types'
+
+export { Descriptions }

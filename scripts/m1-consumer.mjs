@@ -6,7 +6,11 @@ import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { promisify } from 'node:util'
-import { componentEntries } from '../packages/components/build/entries.mjs'
+import { componentEntries as publicComponentEntries } from '../packages/components/build/entries.mjs'
+
+// This historical contract retains its original four-component scope. V1's
+// separate consumer gate measures every Ready entry with the same budgets.
+const componentEntries = publicComponentEntries.filter(({ subpath }) => ['button', 'combobox', 'modal', 'select'].includes(subpath))
 
 const run = promisify(execFile)
 const root = fileURLToPath(new URL('..', import.meta.url))

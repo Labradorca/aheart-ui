@@ -108,3 +108,4 @@ declare const Table: import("../utils/install").SFCWithInstall<import("vue").Def
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>>;
 export default Table;
 export type * from './types';
+export { Table };

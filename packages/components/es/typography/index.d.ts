@@ -338,3 +338,4 @@ declare const Link: import("../utils/install").SFCWithInstall<{
 export { Title, Text, Paragraph, Link };
 export default Typography;
 export type { LinkProps, ParagraphProps, TextProps, TitleProps, TypographyActionPlacement, TypographyActionsConfig, TypographyClassNames, TypographyCopyable, TypographyCopyableConfig, TypographyCopyableIcon, TypographyCopyableTooltip, TypographyEllipsis, TypographyEllipsisConfig, TypographyProps, TypographySemanticClassNames, TypographySemanticInfo, TypographySemanticPart, TypographySemanticStyles, TypographyStyles, TypographyType } from './types';
+export { Typography };

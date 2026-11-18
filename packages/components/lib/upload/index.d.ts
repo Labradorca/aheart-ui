@@ -1,5 +1,5 @@
 export type { UploadFile, UploadRequest, UploadRequestOption, UploadStatus } from './types';
-declare const _default: import("../utils/install").SFCWithInstall<{
+declare const InstalledUpload: import("../utils/install").SFCWithInstall<{
     new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<import("vue").ExtractPropTypes<{
         multiple: {
             type: import("vue").PropType<boolean>;
@@ -142,4 +142,5 @@ declare const _default: import("../utils/install").SFCWithInstall<{
         default?(_: {}): any;
     };
 })>;
-export default _default;
+export { InstalledUpload as Upload };
+export default InstalledUpload;

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
 const vue = require("vue");
-const index = require("../skeleton/index.js");
+const skeleton_index = require("../skeleton/index.js");
 const usePointerDrag = require("../utils/use-pointer-drag.js");
 const useMotionPresence = require("../utils/use-motion-presence.js");
 const useDialogLayer = require("../utils/use-dialog-layer.js");
@@ -563,7 +563,7 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
                   class: vue.normalizeClass(bodyClass.value),
                   style: vue.normalizeStyle(mergedBodyStyle.value)
                 }, [
-                  _ctx.loading ? (vue.openBlock(), vue.createBlock(vue.unref(index.default), {
+                  _ctx.loading ? (vue.openBlock(), vue.createBlock(vue.unref(skeleton_index.default), {
                     key: 0,
                     active: "",
                     paragraph: { rows: 4 }

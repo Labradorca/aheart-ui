@@ -1,0 +1,76 @@
+{
+  "stats": {
+    "startTime": "2026-11-17T23:10:05.738Z",
+    "duration": 1704470.774,
+    "expected": 864,
+    "skipped": 131,
+    "unexpected": 4,
+    "flaky": 0
+  },
+  "projects": {
+    "desktop": {
+      "expected": 276,
+      "skipped": 26,
+      "unexpected": 1
+    },
+    "mobile": {
+      "expected": 233,
+      "skipped": 69,
+      "unexpected": 1
+    },
+    "desktop-firefox": {
+      "expected": 117,
+      "skipped": 14
+    },
+    "desktop-webkit": {
+      "unexpected": 2,
+      "expected": 115,
+      "skipped": 14
+    },
+    "mobile-webkit": {
+      "expected": 123,
+      "skipped": 8
+    }
+  },
+  "failures": [
+    {
+      "project": "desktop",
+      "file": "button-hover-contrast.spec.ts",
+      "line": 28,
+      "title": "hover text token can be themed separately from the button border",
+      "errors": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.aheart-demo-panel').first().getByRole('button', { name: '默认按钮', exact: true })\nExpected: \u001b[32m\"rgb(\u001b[7m9\u001b[27m1, 3\u001b[7m3\u001b[27m, 1\u001b[7m30\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(\u001b[7m3\u001b[27m1, 3\u001b[7m5\u001b[27m, \u001b[7m4\u001b[27m1)\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.aheart-demo-panel').first().getByRole('button', { name: '默认按钮', exact: true })\u001b[22m\n\u001b[2m    14 × locator resolved to <button type=\"button\" aria-busy=\"false\" class=\"aheart-button aheart-button--default aheart-button--normal aheart-button--color-default aheart-button--variant-outlined\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"rgb(31, 35, 41)\"\u001b[22m\n"
+      ]
+    },
+    {
+      "project": "mobile",
+      "file": "button-hover-contrast.spec.ts",
+      "line": 28,
+      "title": "hover text token can be themed separately from the button border",
+      "errors": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.aheart-demo-panel').first().getByRole('button', { name: '默认按钮', exact: true })\nExpected: \u001b[32m\"rgb(\u001b[7m9\u001b[27m1, 3\u001b[7m3\u001b[27m, 1\u001b[7m30\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(\u001b[7m3\u001b[27m1, 3\u001b[7m5\u001b[27m, \u001b[7m4\u001b[27m1)\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.aheart-demo-panel').first().getByRole('button', { name: '默认按钮', exact: true })\u001b[22m\n\u001b[2m    14 × locator resolved to <button type=\"button\" aria-busy=\"false\" class=\"aheart-button aheart-button--default aheart-button--normal aheart-button--color-default aheart-button--variant-outlined\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"rgb(31, 35, 41)\"\u001b[22m\n"
+      ]
+    },
+    {
+      "project": "desktop-webkit",
+      "file": "combobox.spec.ts",
+      "line": 4,
+      "title": "Combobox filters, selects and dismisses while preserving native focus",
+      "errors": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('listbox', { name: '城市' }).getByRole('option')\nExpected: \u001b[32m4\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('listbox', { name: '城市' }).getByRole('option')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n"
+      ]
+    },
+    {
+      "project": "desktop-webkit",
+      "file": "d4-select-virtual.spec.ts",
+      "line": 52,
+      "title": "Select virtual preserves stable middle keys through insertion deletion reorder and active removal",
+      "errors": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate"
+      ]
+    }
+  ],
+  "rawReport": "results.json.gz",
+  "rawSha256": "6b31ba2b38dff995bec86d30dbee1d0828e7b06822319c657e678de944f27db7",
+  "note": "first full suite failed; evidence retained; readiness fixes require a fresh complete run"
+}

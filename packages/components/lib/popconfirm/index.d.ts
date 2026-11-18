@@ -344,3 +344,4 @@ declare const Popconfirm: import("../utils/install").SFCWithInstall<{
 })>;
 export default Popconfirm;
 export type { PopconfirmProps } from './types';
+export { Popconfirm };

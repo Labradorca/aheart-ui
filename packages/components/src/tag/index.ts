@@ -27,3 +27,5 @@ export type {
   TagVariant
 } from './types'
 export default Tag
+
+export { Tag }

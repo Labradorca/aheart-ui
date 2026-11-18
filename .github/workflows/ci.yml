@@ -172,6 +172,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # The V1 CSS check reads full.css from the frozen V0 commit.
+          fetch-depth: 0
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
@@ -189,6 +192,22 @@ jobs:
         run: pnpm release:pack --pack-destination test-results/release-tarballs
       - name: Strict packed consumer types (workspace Vue and Vue 3.5.44)
         run: pnpm check:consumer-types
+      - name: V1 all Ready entry JS CSS and module boundaries
+        run: pnpm check:v1-consumer
+      - name: V1 packed SSR hydration and full versus scoped styles
+        run: pnpm check:v1-visual-consumer
+      - name: V1 unchanged pilot compatibility
+        run: |
+          mkdir -p test-results/v1-pilot-compatibility
+          for engine in chromium firefox webkit; do
+            node pilots/run-baselines.mjs --entry-mode legacy --only clean-consumer,ai-review-gate \
+              --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz \
+              --ai-tarball test-results/release-tarballs/aheart-ui-ai-1.2.0.tgz \
+              --dnd-tarball test-results/release-tarballs/aheart-ui-dnd-1.1.0.tgz \
+              --browser "$engine" --out "test-results/v1-pilot-compatibility/$engine"
+          done
+      - name: V1 development diagnostics and migration codemod
+        run: pnpm check:v2-migration-consumer
       - name: Pack and run isolated consumers
         run: |
           pack_dir=$(mktemp -d)
@@ -198,7 +217,7 @@ jobs:
           pnpm --dir packages/components pack --json --pack-destination "$pack_dir" > "$pack_dir/pack.json"
           pnpm --dir packages/dnd pack --json --pack-destination "$pack_dir" > "$pack_dir/dnd-pack.json"
           pnpm --dir packages/ai pack --json --pack-destination "$pack_dir" > "$pack_dir/ai-pack.json"
-          components_tarball="$pack_dir/aheart-ui-1.3.0.tgz"
+          components_tarball="$pack_dir/aheart-ui-1.4.0.tgz"
           dnd_tarball="$(node -p 'require(process.argv[1]).filename' "$pack_dir/dnd-pack.json")"
           ai_tarball="$(node -p 'require(process.argv[1]).filename' "$pack_dir/ai-pack.json")"
           node scripts/root-entry-consumer.mjs --tarball "$components_tarball" --out "$root_out"
@@ -213,8 +232,8 @@ jobs:
       - name: M3 packed consumer and Workbench pilot
         run: |
           node pilots/run-baselines.mjs --entry-mode subpath --only clean-consumer,ai-review-gate \
-            --core-tarball test-results/release-tarballs/aheart-ui-1.3.0.tgz \
-            --ai-tarball test-results/release-tarballs/aheart-ui-ai-1.1.0.tgz \
+            --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz \
+            --ai-tarball test-results/release-tarballs/aheart-ui-ai-1.2.0.tgz \
             --dnd-tarball test-results/release-tarballs/aheart-ui-dnd-1.1.0.tgz \
             --out test-results/m3-pilots
       - name: M1 public entries, CSS and module graph
@@ -222,9 +241,9 @@ jobs:
       - name: M1 split and compatibility pilot paths
         run: |
           mkdir -p test-results/m1-pilots
-          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.3.0.tgz --entry-mode subpath --out test-results/m1-pilots/chromium
-          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.3.0.tgz --entry-mode subpath --only clean-consumer --browser firefox --out test-results/m1-pilots/firefox
-          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.3.0.tgz --entry-mode subpath --only clean-consumer --browser webkit --out test-results/m1-pilots/webkit
+          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz --entry-mode subpath --out test-results/m1-pilots/chromium
+          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz --entry-mode subpath --only clean-consumer --browser firefox --out test-results/m1-pilots/firefox
+          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz --entry-mode subpath --only clean-consumer --browser webkit --out test-results/m1-pilots/webkit
       - name: Upload Consumer Evidence
         if: ${{ always() }}
         uses: actions/upload-artifact@v4
@@ -232,6 +251,10 @@ jobs:
           name: consumer-evidence-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
             test-results/release-tarballs/*.tgz
+            test-results/v1-consumer/
+            test-results/v1-visual-consumer/
+            test-results/v1-pilot-compatibility/
+            test-results/v2-migration-consumer/
             test-results/m1-consumer/
             test-results/m3-consumer/*.log
             test-results/m3-consumer/results.json

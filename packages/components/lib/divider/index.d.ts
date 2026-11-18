@@ -145,3 +145,4 @@ declare const Divider: import("../utils/install").SFCWithInstall<{
     };
 })>;
 export default Divider;
+export { Divider };

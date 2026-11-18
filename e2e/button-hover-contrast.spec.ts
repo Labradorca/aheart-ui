@@ -5,6 +5,9 @@ test('default outlined, dashed, link and text buttons keep AA text contrast when
   test.setTimeout(60_000)
   await page.emulateMedia({ reducedMotion: 'reduce' })
   await page.goto('/components/button')
+  // DocInteractions inserts its toolbar and hides source blocks after mount.
+  // Wait for that layout change before moving the pointer onto the demo.
+  await expect(page.locator('.docs-demo-toolbar').first()).toBeVisible()
   const demo = page.locator('.aheart-demo-panel').first()
 
   for (const label of ['默认按钮', '虚线按钮', '链接按钮', '文本按钮']) {
@@ -28,6 +31,9 @@ test('default outlined, dashed, link and text buttons keep AA text contrast when
 test('hover text token can be themed separately from the button border', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' })
   await page.goto('/components/button')
+  // DocInteractions inserts its toolbar and hides source blocks after mount.
+  // Wait for that layout change before moving the pointer onto the demo.
+  await expect(page.locator('.docs-demo-toolbar').first()).toBeVisible()
   const demo = page.locator('.aheart-demo-panel').first()
   await demo.evaluate(element => {
     const style = (element as HTMLElement).style

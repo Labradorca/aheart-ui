@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "warnings": {
+    "development": [
+      "warning: [AheartUI B1] v2 removes the aheart-ui root default Plugin. Import the Plugin from aheart-ui/full; root named components/types remain supported.\n  Plugin: aheart-v2-deprecations\n  File: /private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-migration-P8ZkYx/legacy.js:1:8\n  1  |  import UI, {Button} from 'aheart-ui';import {AIAgentWorkbench as Workbench} from '@aheart-ui/ai';import {Select} from 'aheart-ui/es/select/index.js';console.log(UI,Button,Workbench,Select)\n     |         ^",
+      "warning: [AheartUI B3] v2 removes Workbench from the AI root and its Plugin. Use @aheart-ui/ai/agent-workbench, or @aheart-ui/ai/full for the full Plugin; install DND explicitly in v2.\n  Plugin: aheart-v2-deprecations\n  File: /private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-migration-P8ZkYx/legacy.js:1:46\n  1  |  import UI, {Button} from 'aheart-ui';import {AIAgentWorkbench as Workbench} from '@aheart-ui/ai';import {Select} from 'aheart-ui/es/select/index.js';console.log(UI,Button,Workbench,Select)\n     |                                               ^",
+      "warning: [AheartUI B1] v2 removes the aheart-ui root default Plugin. Import the Plugin from aheart-ui/full; root named components/types remain supported.\n  Plugin: aheart-v2-deprecations\n  File: /private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-migration-P8ZkYx/Example.vue:1:59\n  1  |  import { defineComponent as _defineComponent } from \"vue\";\n  2  |  import UI from \"aheart-ui\";\n     |         ^\n  3  |  import { AIAgentWorkbench } from \"@aheart-ui/ai\";\n  4  |  const version = \"v1\";",
+      "warning: [AheartUI B3] v2 removes Workbench from the AI root and its Plugin. Use @aheart-ui/ai/agent-workbench, or @aheart-ui/ai/full for the full Plugin; install DND explicitly in v2.\n  Plugin: aheart-v2-deprecations\n  File: /private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-migration-P8ZkYx/Example.vue:1:86\n  1  |  import { defineComponent as _defineComponent } from \"vue\";\n  2  |  import UI from \"aheart-ui\";\n  3  |  import { AIAgentWorkbench } from \"@aheart-ui/ai\";\n     |           ^\n  4  |  const version = \"v1\";\n  5  |  const _sfc_main = /* @__PURE__ */ _defineComponent({"
+    ],
+    "production": []
+  }
+}

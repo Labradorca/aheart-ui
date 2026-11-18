@@ -1,0 +1,555 @@
+
+> aheart-ui-workspace@1.0.0 test /Users/start/code/aheart-ui-wt/v1.4-entries
+> corepack pnpm --filter ./packages/components test && corepack pnpm --filter @aheart-ui/dnd test && corepack pnpm --filter @aheart-ui/ai test && node --test scripts/*.test.mjs
+
+
+> aheart-ui@1.4.0 test /Users/start/code/aheart-ui-wt/v1.4-entries/packages/components
+> vitest run --environment jsdom
+
+
+ RUN  v1.6.1 /Users/start/code/aheart-ui-wt/v1.4-entries/packages/components
+
+ ✓ src/input-number/__tests__/input-number.test.ts  (57 tests) 202ms
+ ✓ src/drawer/__tests__/drawer.test.ts  (52 tests) 498ms
+ ✓ src/form/__tests__/form.test.ts  (39 tests) 338ms
+ ✓ src/popconfirm/__tests__/popconfirm.test.ts  (26 tests) 666ms
+ ✓ src/modal/__tests__/modal.test.ts  (70 tests) 967ms
+ ✓ src/form/__tests__/form-list.test.ts  (24 tests) 159ms
+ ✓ src/dropdown/__tests__/dropdown.test.ts  (32 tests) 1118ms
+ ✓ src/select/__tests__/select.test.ts  (39 tests) 647ms
+ ✓ src/tooltip/__tests__/tooltip.test.ts  (26 tests) 629ms
+ ✓ src/table/__tests__/table.test.ts  (29 tests) 311ms
+ ✓ src/popover/__tests__/popover.test.ts  (22 tests) 729ms
+ ✓ src/card/__tests__/card.test.ts  (26 tests) 135ms
+ ✓ src/upload/__tests__/upload.test.ts  (24 tests) 140ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery10.test.ts  (12 tests) 605ms
+ ✓ src/cascader/__tests__/cascader.test.ts  (25 tests) 1216ms
+ ✓ src/date-picker/__tests__/date-picker.test.ts  (50 tests) 1446ms
+ ✓ src/cascader/__tests__/cascader-virtual-lifecycle.test.ts  (27 tests) 2755ms
+ ✓ src/table/__tests__/table-d5-contracts.test.ts  (23 tests) 370ms
+ ✓ src/splitter/__tests__/splitter.test.ts  (17 tests) 109ms
+ ✓ src/tree/__tests__/tree-virtual-lazy-retry.test.ts  (20 tests) 408ms
+ ✓ src/button/__tests__/button.test.ts  (26 tests) 136ms
+ ✓ src/config-provider/__tests__/config-provider.test.ts  (10 tests) 98ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery11.test.ts  (3 tests) 187ms
+ ✓ src/tree/__tests__/tree.test.ts  (21 tests) 196ms
+ ✓ src/message/__tests__/message.test.ts  (20 tests) 105ms
+ ✓ src/table/__tests__/table-d5c-virtualization.test.ts  (19 tests) 445ms
+ ✓ src/utils/__tests__/use-floating-position-lifecycle.test.ts  (7 tests) 108ms
+ ✓ src/time-picker/__tests__/time-picker.test.ts  (26 tests) 1498ms
+ ✓ src/menu/__tests__/menu.test.ts  (16 tests) 227ms
+ ✓ src/date-picker/__tests__/date-range-picker.test.ts  (28 tests) 1738ms
+ ✓ src/pagination/__tests__/pagination.test.ts  (18 tests) 92ms
+ ✓ src/input/__tests__/input.test.ts  (19 tests) 63ms
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > updates popup budget on same-placement owner-window resize without visualViewport
+window resize budget { treeHeight: 42, popupHeight: 42 }
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > does not turn a zero internal budget into the public 320 default
+zero internal budget Tree props/style { height: 256, estimateSize: 28, overscan: 4 } max-block-size: 0px; overflow-y: auto;
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > does not steal later external focus after a rejected controlled opening is accepted
+focus after externally opening following rejected request <button>outside</button>
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > ArrowUp from an empty search enters the last visible collapsed root
+empty query ArrowUp focus <div class="aheart-tree__node" id="aheart-tree-select-tree-aheart-tree-select-v-0-node-s-72-6f-6f-74" role="treeitem" aria-label="Root" aria-selected="false" aria-expanded="false" aria-level="1" aria-posinset="1" aria-setsize="1" data-tree-key="root" data-tree-token="s-72-6f-6f-74" tabindex="0"><button class="aheart-tree__switcher" type="button" tabindex="-1" aria-label="Expand node">+</button><!--v-if--><span class="aheart-tree__title">Root</span><!--v-if--></div>
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > keeps Home as native text editing in default nonvirtual search
+nonvirtual Home defaultPrevented false
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > transfers actual focus to the tree on initial virtual keyboard opening
+initial keyboard focus <div class="aheart-tree__node" id="aheart-tree-select-tree-aheart-tree-select-v-0-node-s-61" role="treeitem" aria-label="A" aria-selected="false" aria-level="1" aria-posinset="1" aria-setsize="1" data-tree-key="a" data-tree-token="s-61" tabindex="0"><span class="aheart-tree__switcher aheart-tree__switcher--empty" aria-hidden="true"></span><!--v-if--><span class="aheart-tree__title">A</span><!--v-if--></div>
+
+ ✓ src/cascader/__tests__/cascader-virtual.test.ts  (17 tests) 2184ms
+ ✓ src/tree-select/__tests__/tree-select-virtual-lifecycle.test.ts  (5 tests) 322ms
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > cancels virtual opening focus when focus moves outside before mount
+premount external focus <button></button>
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > cancels in-flight search focus when controlled close is accepted
+controlled closed focus INPUT null false
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > ArrowUp follows the actual visible endpoint after manually expanding the root
+expanded empty-query endpoint leaf
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > does not install the private budget capture-scroll observer in default nonvirtual mode
+budget capture scroll listener count default nonvirtual 0
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > does not install the private budget capture-scroll observer in disabled virtual mode
+budget capture scroll listener count disabled virtual 0
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > cancels pending search navigation when a new query retains the target key
+changed query same pending key focus INPUT null
+
+ ✓ src/tree-select/__tests__/tree-select-virtual-recovery.test.ts  (14 tests) 393ms
+ ✓ src/radio/__tests__/radio.test.ts  (17 tests) 103ms
+ ✓ src/tree-select/__tests__/tree-select.test.ts  (15 tests) 447ms
+ ✓ src/textarea/__tests__/textarea.test.ts  (20 tests) 122ms
+ ✓ src/checkbox/__tests__/checkbox.test.ts  (17 tests) 88ms
+ ✓ src/time-picker/__tests__/time-range-picker.test.ts  (17 tests) 1202ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery.test.ts  (11 tests) 609ms
+ ✓ src/table/__tests__/table-d5b-review-regressions.test.ts  (11 tests) 425ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery9.test.ts  (13 tests) 616ms
+ ✓ src/tabs/__tests__/tabs.test.ts  (13 tests) 97ms
+stdout | src/tree/__tests__/tree-virtual-recovery.test.ts > Tree virtual implementation recovery RED > disconnects the active observer set when virtualization is disabled
+DISABLED_ACTIVE_OBSERVERS 0 VIRTUALIZER_ENABLED true
+
+stdout | src/tree/__tests__/tree-virtual-recovery.test.ts > Tree virtual implementation recovery RED > retains measured mounted row dimensions when estimateSize changes
+ESTIMATE_CHANGE 56 56 ROWS_OBS 11
+
+stdout | src/tree/__tests__/tree-virtual-recovery.test.ts > Tree virtual implementation recovery RED > invalidates a same-key replacement instead of retaining an offscreen measurement
+REPLACED_OFFSCREEN_CACHE 28
+
+stdout | src/tree/__tests__/tree-virtual-recovery.test.ts > Tree virtual implementation recovery RED > does not restore focus to a parent after the child explicitly blurred before collapse
+EXPLICIT_BLUR_COLLAPSE null
+
+stdout | src/tree/__tests__/tree-virtual-recovery.test.ts > Tree virtual implementation recovery RED > retains measured geometry for same-key mounted content when only the title changes
+MOUNTED_SAME_GEOMETRY 56 56
+
+stdout | src/tree/__tests__/tree-virtual-recovery.test.ts > Tree virtual implementation recovery RED > cancels every queued navigation frame when End is immediately followed by disable
+DISABLED_PENDING_RAF 0
+
+ ✓ src/tree/__tests__/tree-virtual-recovery.test.ts  (7 tests) 215ms
+ ✓ src/form/__tests__/engine.test.ts  (20 tests) 108ms
+ ✓ src/tree-select/__tests__/tree-select-virtual.test.ts  (9 tests) 612ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery3.test.ts  (7 tests) 342ms
+ ✓ src/table/__tests__/table-d5b-layout-state.test.ts  (11 tests) 205ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery4.test.ts  (4 tests) 247ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery5.test.ts  (3 tests) 71ms
+ ✓ src/alert/__tests__/alert.test.ts  (12 tests) 65ms
+ ✓ src/typography/__tests__/typography.test.ts  (14 tests) 81ms
+ ✓ src/utils/__tests__/use-floating-dismiss.test.ts  (8 tests) 83ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery2.test.ts  (8 tests) 560ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery12.test.ts  (4 tests) 284ms
+ ✓ src/steps/__tests__/steps.test.ts  (12 tests) 107ms
+ ✓ src/descriptions/__tests__/descriptions.test.ts  (7 tests) 76ms
+ ✓ src/utils/__tests__/use-floating-position.test.ts  (20 tests) 12ms
+ ✓ src/breadcrumb/__tests__/breadcrumb.test.ts  (8 tests) 62ms
+ ✓ src/switch/__tests__/switch.test.ts  (16 tests) 86ms
+ ✓ src/tree/__tests__/tree-lazy.test.ts  (10 tests) 156ms
+ ✓ src/tag/__tests__/tag.test.ts  (9 tests) 65ms
+ ✓ src/badge/__tests__/badge.test.ts  (12 tests) 72ms
+ ✓ src/table/__tests__/table-d5b-filter.test.ts  (7 tests) 296ms
+ ✓ src/spin/__tests__/spin.test.ts  (10 tests) 90ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery6.test.ts  (2 tests) 52ms
+ ✓ src/utils/__tests__/use-pointer-drag.test.ts  (10 tests) 89ms
+ ✓ src/empty/__tests__/empty.test.ts  (13 tests) 71ms
+ ✓ src/skeleton/__tests__/skeleton.test.ts  (6 tests) 44ms
+ ✓ src/table/__tests__/table-d5-pagination-matrix.test.ts  (8 tests) 139ms
+ ✓ src/space/__tests__/space.test.ts  (7 tests) 49ms
+ ✓ src/tree-select/__tests__/tree-select-virtual-retry-focus.test.ts  (5 tests) 222ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery8.test.ts  (4 tests) 282ms
+ ✓ src/input/__tests__/form-integration.test.ts  (6 tests) 202ms
+ ✓ src/utils/__tests__/overlay-controller.test.ts  (6 tests) 17ms
+stdout | src/cascader/__tests__/cascader-virtual-recovery13.test.ts > Cascader stale reveal ownership > does not let an older pending reposition hide the parent after ArrowLeft restores focus
+late reveal after Left { focused: 'root', scroll: 0, writes: [ 0 ], behavior: 'smooth' }
+
+stdout | src/cascader/__tests__/cascader-virtual-recovery13.test.ts > Cascader stale reveal ownership > cancels an older pending reveal on close
+pending reveal cancellation { action: 'close', writes: [] }
+
+ ✓ src/utils/__tests__/virtual-options.test.ts  (15 tests) 6ms
+stdout | src/cascader/__tests__/cascader-virtual-recovery13.test.ts > Cascader stale reveal ownership > cancels an older pending reveal on options
+pending reveal cancellation { action: 'options', writes: [] }
+
+stdout | src/cascader/__tests__/cascader-virtual-recovery13.test.ts > Cascader stale reveal ownership > cancels an older pending reveal on search
+pending reveal cancellation { action: 'search', writes: [] }
+
+ ✓ src/cascader/__tests__/cascader-virtual-recovery13.test.ts  (4 tests) 197ms
+ ✓ src/select/__tests__/select-virtual.test.ts  (8 tests) 1161ms
+ ✓ src/icon/__tests__/icon.test.ts  (10 tests) 46ms
+ ✓ src/picker-core/__tests__/codec.test.ts  (10 tests) 8ms
+ ✓ src/utils/__tests__/use-controllable-state.test.ts  (5 tests) 22ms
+ ✓ src/select/__tests__/select-virtual-tags.test.ts  (3 tests) 269ms
+ ✓ src/utils/__tests__/use-floating-position-realm.test.ts  (2 tests) 22ms
+ ✓ src/utils/__tests__/use-async-task.test.ts  (5 tests) 10ms
+ ✓ src/divider/__tests__/divider.test.ts  (6 tests) 48ms
+ ✓ src/tree/__tests__/tree-index.test.ts  (7 tests) 14ms
+ ✓ src/pagination/__tests__/pagination-state.test.ts  (5 tests) 40ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery7.test.ts  (1 test) 659ms
+ ✓ src/flex/__tests__/flex.test.ts  (4 tests) 35ms
+ ✓ src/picker-core/__tests__/selection.test.ts  (9 tests) 5ms
+ ✓ src/form/__tests__/form-item-protocol.test.ts  (4 tests) 50ms
+ ✓ src/tree/__tests__/tree-check.test.ts  (5 tests) 39ms
+ ✓ src/utils/__tests__/use-stable-id.test.ts  (4 tests) 12ms
+ ✓ src/select/__tests__/virtual-options.test.ts  (7 tests) 20ms
+ ✓ src/picker-core/__tests__/transaction.test.ts  (5 tests) 3ms
+ ✓ src/utils/__tests__/use-roving-focus.test.ts  (3 tests) 4ms
+ ✓ src/form/__tests__/form-list.ssr.test.ts  (2 tests) 19ms
+ ✓ src/grid/__tests__/grid.test.ts  (6 tests) 28ms
+ ✓ src/tree-select/__tests__/tree-checkable.test.ts  (3 tests) 146ms
+ ✓ src/tree/__tests__/tree-linked.test.ts  (3 tests) 66ms
+ ✓ src/picker-core/__tests__/time-column-geometry.test.ts  (4 tests) 3ms
+ ✓ src/utils/__tests__/use-collection.test.ts  (2 tests) 2ms
+ ✓ src/splitter/__tests__/solver.test.ts  (5 tests) 3ms
+ ✓ src/picker-core/__tests__/calendar.test.ts  (3 tests) 6ms
+ ✓ src/combobox/__tests__/combobox.test.ts  (3 tests) 99ms
+ ✓ src/date-picker/__tests__/date-picker.ssr.test.ts  (3 tests) 32ms
+ ✓ src/utils/__tests__/use-trigger-aria.test.ts  (2 tests) 15ms
+ ✓ src/cascader/__tests__/cascader-virtual-performance.test.ts  (1 test) 4ms
+ ✓ src/resolver/__tests__/diagnostics.test.ts  (9 tests) 6ms
+ ✓ src/upload/__tests__/upload.ssr.test.ts  (1 test) 5ms
+ ✓ src/date-picker/__tests__/date-utils.test.ts  (3 tests) 4ms
+ ✓ src/utils/__tests__/use-floating-position.ssr.test.ts  (1 test) 4ms
+ ✓ src/utils/__tests__/use-prop-presence.test.ts  (1 test) 15ms
+ ✓ src/table/__tests__/table-radio-rejection.test.ts  (1 test) 55ms
+ ✓ src/select/__tests__/select-virtual.ssr.test.ts  (3 tests) 41ms
+ ✓ src/time-picker/__tests__/time-picker.ssr.test.ts  (1 test) 11ms
+ ✓ src/cascader/__tests__/overlay-controls.ssr.test.ts  (2 tests) 12ms
+ ✓ src/tree/__tests__/tree-virtual.test.ts  (19 tests) 10851ms
+
+ Test Files  119 passed (119)
+      Tests  1508 passed (1508)
+   Start at  11:56:40
+   Duration  11.94s (transform 4.18s, setup 4ms, collect 16.65s, tests 44.11s, environment 25.45s, prepare 5.25s)
+
+
+> @aheart-ui/dnd@1.1.0 test /Users/start/code/aheart-ui-wt/v1.4-entries/packages/dnd
+> vitest run --environment jsdom
+
+
+ RUN  v1.6.1 /Users/start/code/aheart-ui-wt/v1.4-entries/packages/dnd
+
+ ✓ src/__tests__/d7-dnd-contract.test.ts  (8 tests) 61ms
+ ✓ src/__tests__/sortable-list-live-region.test.ts  (5 tests) 73ms
+ ✓ src/__tests__/dnd.test.ts  (42 tests) 133ms
+ ✓ src/__tests__/d7-dnd-regression.test.ts  (11 tests) 154ms
+ ✓ src/__tests__/d7-dnd-resource.test.ts  (16 tests) 250ms
+
+ Test Files  5 passed (5)
+      Tests  82 passed (82)
+   Start at  11:56:52
+   Duration  780ms (transform 429ms, setup 0ms, collect 1.23s, tests 671ms, environment 862ms, prepare 183ms)
+
+
+> @aheart-ui/ai@1.2.0 test /Users/start/code/aheart-ui-wt/v1.4-entries/packages/ai
+> vitest run --environment jsdom
+
+
+ RUN  v1.6.1 /Users/start/code/aheart-ui-wt/v1.4-entries/packages/ai
+
+ ✓ src/__tests__/form-schema.test.ts  (10 tests) 3ms
+ ✓ src/__tests__/qg4-a11y-guardrails.test.ts  (4 tests) 3ms
+ ✓ src/__tests__/primitives.test.ts  (5 tests) 34ms
+ ✓ src/__tests__/chat-panel.test.ts  (10 tests) 93ms
+ ✓ src/__tests__/package.test.ts  (1 test)
+ ✓ src/__tests__/agent-workbench.test.ts  (15 tests) 276ms
+ ✓ src/__tests__/form.test.ts  (21 tests) 201ms
+ ✓ src/__tests__/d8-chat-stream.test.ts  (44 tests) 526ms
+ ✓ src/__tests__/d8-form-tool-ssr.test.ts  (54 tests) 287ms
+ ✓ src/__tests__/d8-workbench.test.ts  (36 tests) 501ms
+
+ Test Files  10 passed (10)
+      Tests  200 passed (200)
+   Start at  11:56:53
+   Duration  1.36s (transform 965ms, setup 0ms, collect 3.09s, tests 1.92s, environment 2.39s, prepare 521ms)
+
+✔ codemod splits root defaults and Workbench, preserves aliases/types and is idempotent (29.465667ms)
+✔ codemod also migrates named-default imports and mixed AI defaults (5.254625ms)
+✔ codemod preserves comments, compatible named imports and string contents (8.698292ms)
+✔ codemod rewrites explicit re-exports and CommonJS/awaited default or Workbench access (9.5235ms)
+✔ codemod maps only declared equivalent legacy paths and keeps private/cross-format paths (3.959292ms)
+✔ codemod edits both Vue script blocks without touching template/style (20.041584ms)
+✔ codemod reports ambiguous namespace/dynamic usage and keeps directive imports for review (3.415875ms)
+✔ codemod respects shadowed module bindings and recognizes Node createRequire aliases (14.726834ms)
+✔ temporary gate repository pins the workspace package manager (198.234833ms)
+✔ real orchestration runs both builds with the installed workspace pnpm while Corepack is cold and offline (1095.87125ms)
+✔ snapshots every file in all generated directories with relative paths and SHA-256 (4.279042ms)
+✔ identical snapshots produce no differences regardless of insertion order (0.177292ms)
+✔ identifies added, removed, and changed files in deterministic order (0.160125ms)
+✔ mismatched snapshots throw a readable status report with paths (0.283375ms)
+✔ preflight rejects a staged change even when the worktree is restored to HEAD (236.915333ms)
+✔ preflight rejects a staged new file before a build can delete it (255.576ms)
+✔ preflight rejects an ignored generated file before a build can delete it (223.680916ms)
+✔ writes sorted SHA-256 manifests and a readable comparison when builds differ (802.9865ms)
+✔ persists and tees build 1 stdout, stderr, exit status, and accurate failure stage (660.989959ms)
+✔ persists and tees build 2 failure after recording the completed first build (937.343ms)
+✔ reports snapshot 1 capture failure after build 1 completes successfully (638.256292ms)
+✔ reports snapshot 2 capture failure after both builds complete successfully (902.728042ms)
+✔ preserves split UTF-8 stdout and stderr in both terminal mirror and artifacts (444.702875ms)
+✔ reports postflight failure after two matching snapshots and preserves both build results (981.185958ms)
+✔ accepts an empty generated-file list (0.367625ms)
+✔ rejects untracked generated files (0.161375ms)
+✔ rejects staged tracked changes in generated directories (359.805292ms)
+✔ rejects unstaged tracked changes in generated directories (358.88925ms)
+✔ rejects ignored untracked files in generated directories (336.149958ms)
+✔ uploads both tracked diff layers and build manifests on build gate failure (1.537167ms)
+✔ keeps the quality plan entry point aligned with the four-role gate (0.137333ms)
+✔ retains uniquely named e2e evidence for successful and failed runs (0.208292ms)
+✔ runs QG5 production specs in independent browser project shards (0.1605ms)
+✔ always uploads per-project QG5 Playwright evidence with run identity (0.077667ms)
+✔ allows repeatable QG5 baseline collection on master without weakening push and PR checks (0.060167ms)
+✔ QG5-only dispatch is opt-in and keeps push and PR jobs enabled (0.351416ms)
+✔ splits CI into observable unit, typecheck, build, docs, consumer and browser jobs (0.153ms)
+✔ exposes dedicated QG5 evidence commands without adding them to the ordinary unit test entry point (0.069333ms)
+✔ exposes the dedicated R1 coverage gate and evidence manifest (0.098084ms)
+✔ declaration audit skips verified AppleDouble companions and records them (9.956584ms)
+✔ filename prefixes alone cannot suppress declarations or malformed source (4.234416ms)
+✔ default danger token remains readable when used as text (4.063417ms)
+✔ packed production smoke has an absolute preview baseURL and authentic collector output (96525.896834ms)
+✔ bounded SSR records bind full server/hydrated DOM and teleport snapshots, not only ID counts (11.757833ms)
+▶ authentic SSR RED directly checks exact nodes, independent captures, selectors, normalization and pollution
+  ✔ capture phase and exact six node contract (1.81225ms)
+  ✔ selector re-query and normalized raw bindings (28.31625ms)
+  ✔ capture artifacts reopen and bind every snapshot field (187.852459ms)
+✔ authentic SSR RED directly checks exact nodes, independent captures, selectors, normalization and pollution (95594.950417ms)
+✔ bounded SSR hydration records have all three component actions and honest virtual row windows (0.170333ms)
+✔ bounded SSR validator rejects forged accessibility IDs, teleport hashes and component action records (6046.55975ms)
+✔ bounded SSR validator rejects copied hydrated snapshots, extra nodes and teleport diagnostics (3038.196208ms)
+▶ real bounded iframe lifecycle evidence has authentic realm, popup, unmount and late-loader records
+  ✔ scenario matrix, surface descriptors and raw artifact (1.241042ms)
+  ✔ resource constructor events are raw and drained (0.250375ms)
+  ✔ popup focus Teleport unmount and late loader events are real (0.217333ms)
+✔ real bounded iframe lifecycle evidence has authentic realm, popup, unmount and late-loader records (2.124875ms)
+✔ iframe lifecycle artifact mutation is rejected by reopened hash binding (356.032666ms)
+▶ bounded metadata cannot bypass capture artifacts or validator identity
+  ✔ copied snapshot with forged capture metadata (328.617291ms)
+  ✔ forged bounded run identity (636.896042ms)
+  ✔ forged bounded validator marker (632.977583ms)
+✔ bounded metadata cannot bypass capture artifacts or validator identity (2188.638417ms)
+▶ bounded artifact and SSR status metadata are mandatory
+  ✔ copied snapshot without artifact directory (329.059084ms)
+  ✔ copied snapshot without SSR recorded status (333.617417ms)
+  ✔ bounded report without artifact directory (334.0455ms)
+✔ bounded artifact and SSR status metadata are mandatory (1584.212542ms)
+✔ real bounded family events use one normalized clock domain and stay inside each scenario (0.183208ms)
+✔ real bounded geometry cannot retain coverage flags after rowRects move offscreen (1224.428291ms)
+✔ real bounded artifact paths must exist for both baseline and candidate tarballs (921.59875ms)
+✔ real bounded collector provenance rejects a forged collector source hash (927.667708ms)
+✔ real bounded artifact, manifest, build, module and lock hashes are independently bound (4614.836125ms)
+✔ real bounded actionability and observer summaries are recomputed from raw geometry/style/entries (2475.858334ms)
+✔ real bounded build fingerprint must be reopened from the durable dist artifact (939.027083ms)
+✔ real bounded build fingerprint cannot hide a missing manifest behind matching zero hashes (929.58075ms)
+✔ real bounded build manifest rejects empty, missing, extra and hash-wrong recursive dist evidence (3906.842209ms)
+✔ real bounded module fingerprint must be reopened from the durable module artifact (938.188292ms)
+✔ real bounded lock fingerprint must be reopened from the durable lock artifact (934.765209ms)
+✔ real preflight-full runs both artifact sides without benchmark and saves a strict durable report (79253.497625ms)
+✔ durable consumer type probe binds a real types.ts file, tsc result and positive/negative virtual API checks (82.094ms)
+✔ preflight validator rejects any benchmark execution marker or non-empty benchmark evidence (33.838458ms)
+✔ shared full report shell binds tarball provenance and gzip module paths to both package sides (0.077084ms)
+✔ preflight browser launch/page/setup failure hooks expose real close counters (0.483458ms)
+✔ preflight candidate-build failure preserves durable partial raw/checkpoint evidence after temporary cleanup (74847.662666ms)
+✔ preflight browser launch/page/setup failure injections report actual close counters (0.446292ms)
+✔ preflight browser-page injection executes the failing CLI and persists closed browser/server counters (35824.79325ms)
+✔ real bounded Tree family coverage preserves raw flat and expanded logical datasets (3.36075ms)
+✔ real bounded TreeSelect family coverage recomputes the 5000-match query and controlled rejection (0.456042ms)
+✔ real bounded Cascader family coverage preserves deep columns, search paths, lazy state and controlled rejection (4.543958ms)
+✔ real Cascader coverage keeps deep, search and lazy component inputs as separate authentic records (1.700375ms)
+✔ real bounded measured rows retain computed fixed/coarse/dynamic heights and raw actionability probes (0.261833ms)
+✔ bounded validator rejects forged row-mode geometry and Cascader column evidence after control pass (7343.31125ms)
+✔ family coverage recomputation rejects a componentInput hash mismatch (952.523834ms)
+✔ bounded actionability validator rejects raw hit-target or focus-probe forgery (2122.182375ms)
+✔ the contract exposes the frozen release matrix (0.794041ms)
+✔ a complete deterministic fixture is accepted only after evidence is recomputed (21.498083ms)
+✔ fabricated medians and gzip totals are rejected (6.423417ms)
+✔ the release matrix cannot be made complete by dropping one count or row mode (5.183625ms)
+✔ unsupported Firefox and WebKit observer metrics are explicit, never fake zero (12.303791ms)
+✔ smoke reports are explicitly ineligible for release (1.915541ms)
+✔ require-release rejects nonexistent or synthetic tarball provenance (5.325917ms)
+✔ baseline commit and package hash must match the approved baseline provenance (3.945167ms)
+✔ scroll evidence rejects repeated offsets, missing endpoint and non-positive timings (2.678208ms)
+✔ environment evidence rejects empty CPU/browser and impossible concurrency (5.849375ms)
+✔ row budget is recomputed from every virtual scroll sample, not a trusted summary (4.91375ms)
+✔ SSR combinations must be eight distinct false/true assignments (4.086875ms)
+✔ raw observer entries, timestamps and package resources are required (4.320375ms)
+▶ full observer evidence validates all 270 measured rounds and derives metric support from raw entry types
+  ✔ missing round (3.24975ms)
+  ✔ duplicate observer run (3.119333ms)
+  ✔ undisconnected round (2.986292ms)
+  ✔ round runtime error (2.417542ms)
+  ✔ forged unsupported status (2.117916ms)
+  ✔ entry outside its round (2.377125ms)
+✔ full observer evidence validates all 270 measured rounds and derives metric support from raw entry types (25.885333ms)
+✔ full collector persists every observer round and records actual PerformanceObserver support (11.424917ms)
+✔ gzip provenance includes all components, CSS, nested chunks and unique assets (5.754791ms)
+✔ smoke failures cannot be reported as installed/verified success (2.890792ms)
+✔ smoke requires an explicit approved baseline and rejects the old fallback path (236.671583ms)
+✔ bounded validator is a distinct ineligible release-format gate (2.939875ms)
+✔ release validation rejects synthetic fixture even when syntheticEvidence is toggled false (4.375833ms)
+✔ release validation rejects arbitrary collected source/run/fingerprint strings (3.922417ms)
+✔ full release descriptor contract rejects pending validator status (3.206458ms)
+✔ full release descriptor contract rejects missing collectorSourcePath (3.104667ms)
+✔ full release descriptor contract requires a durable artifactDirectory (3.866459ms)
+✔ full release descriptor contract requires a real build fingerprint (3.539375ms)
+✔ full release descriptor contract requires a real module fingerprint (3.713875ms)
+✔ full release descriptor contract requires a real lock descriptor and fingerprint (5.045ms)
+✔ full release descriptor contract rejects missing build manifest and lockfileAfter (4.771834ms)
+✔ full finalization accepts collected/validating input but only saved passed reports satisfy release validation (7.8425ms)
+✔ full finalization helper saves passed and reopens a minimal readable report without benchmark work (115.138542ms)
+✔ collector resolves its workspace root to the repository and avoids docs/docs default output (0.807542ms)
+✔ full and preflight collection share artifact preparation/report-shell helpers (0.505625ms)
+▶ full release SSR/types contract rejects missing snapshots, actions, capture artifacts and public type probe
+  ✔ full SSR snapshots (20.381167ms)
+  ✔ full SSR actions (18.684084ms)
+  ✔ full SSR capture evidence (16.7525ms)
+  ✔ full public type probe (12.984167ms)
+✔ full release SSR/types contract rejects missing snapshots, actions, capture artifacts and public type probe (69.324625ms)
+✔ full release remains full and reports all four missing SSR/types evidence classes together (4.818791ms)
+▶ full SSR semantic parity rejects malformed IDs, ARIA refs, selectors, actions and row windows
+  ✔ duplicate or unsorted SSR IDs (13.695334ms)
+  ✔ unrecorded ARIA reference (16.17525ms)
+  ✔ wrong selector component pattern (15.408667ms)
+  ✔ wrong hydration action components (12.032834ms)
+  ✔ virtual initial row window over budget (16.78725ms)
+✔ full SSR semantic parity rejects malformed IDs, ARIA refs, selectors, actions and row windows (74.8ms)
+✔ full collection reuses smoke SSR capture helper and returns candidate type probe (46.286834ms)
+✔ bounded and full validation share one SSR semantic validator (27.742875ms)
+✔ hydration evidence mapping preserves non-zero runtime values across all combinations (27.197ms)
+▶ contradictory preflight reports are ineligible and legal preflight shells stay non-acceptance
+  ✔ ordinary validation (12.614167ms)
+  ✔ release validation (14.240541ms)
+✔ contradictory preflight reports are ineligible and legal preflight shells stay non-acceptance (27.334666ms)
+▶ iframe lifecycle validator rejects forged raw resource, popup, focus, unmount and late-loader evidence
+  ✔ resource balance/realm (13.042083ms)
+  ✔ Teleport ownership/residual (16.352916ms)
+  ✔ parent document residual (18.229334ms)
+  ✔ owner observation residual (14.883875ms)
+  ✔ focus restore/close (12.797333ms)
+  ✔ unmount ordering/frame alive (19.286ms)
+  ✔ late update/hash (11.087625ms)
+  ✔ late DOM hash mismatch (13.317125ms)
+  ✔ post-unmount mutation (15.052875ms)
+  ✔ post-unmount consumed (13.557208ms)
+  ✔ summary-only mutation (13.702708ms)
+  ✔ events empty with successful summary (11.349458ms)
+  ✔ raw lifecycle missing (11.414ms)
+✔ iframe lifecycle validator rejects forged raw resource, popup, focus, unmount and late-loader evidence (185.473042ms)
+✔ iframe raw lifecycle uses one recomputable summary and dedicated validator (24.386375ms)
+✔ iframe raw resource completion, probe locking and late hashes are recomputed from events (7.739458ms)
+✔ iframe probe source preserves owner APIs, focus measurement and non-silent proxy installation (16.059083ms)
+✔ iframe ResizeObserver target state distinguishes unobserve from disconnect (2.837ms)
+✔ iframe resource model treats ResizeObserver unobserve as target state and allows re-observe (1.218042ms)
+✔ iframe resource model rejects timeout creation after unmount completion (1.019041ms)
+✔ full collector failure persistence keeps partial raw evidence and appends failure metadata (0.753792ms)
+✔ full checkpoint index stays bounded and references compressed raw payload artifacts (0.777125ms)
+✔ full and virtual scroll evidence requires the same bounded viewport and real nonzero offsets (10.440917ms)
+✔ collector bounds full-mode Tree viewport and serializes visible geometry only (1.693ms)
+✔ Tree visual fixture contains wide trees inside its horizontal scroll owner (0.67725ms)
+✔ full collector recycles instrumented pages between matrix cases (1.276916ms)
+✔ measureCase failures persist page readiness and resource diagnostics (0.513333ms)
+✔ dynamic-row action probes hit the visible row intersection, not a clipped row center (0.353084ms)
+✔ collectSide browser launch/page failures must close Firefox and WebKit in per-browser finally blocks (0.4225ms)
+✔ preflight candidate-build failure injection preserves raw checkpoints and cleanup counters (0.417083ms)
+✔ Cascader test sources never depend on a developer or CI checkout path (3.303334ms)
+✔ D4 integration tests rebuild the approved baseline from repository history (1.035291ms)
+✔ consumer gzip bundle preserves component entry exports (0.452917ms)
+✔ gzip validation rejects an empty JavaScript entry (1.997958ms)
+✔ gzip validation rejects nonempty JS without component exports despite valid hashes (1.8675ms)
+✔ candidate public type probe is persisted before long browser collection (0.584959ms)
+✔ release validation accepts the pair-forward-reverse order and rejects any other order (4.052916ms)
+✔ raw mutation cases reject row geometry, event records, SSR IDs and artifact binding (4.966875ms)
+✔ gzip recollection fixes CommonJS wrapping and requires repeat-build equality (4.208375ms)
+✔ gzip artifacts are reopened with exact asset sets and embedded bytes (28.314916ms)
+✔ R1 state-machine files each meet the 80% branch threshold (2.9475ms)
+✔ Chinese docs shell and component status copy stay localized (13.677166ms)
+✔ DnD docs use visible handles and assign physical iOS touch evidence to QG5 (1.036833ms)
+✔ docs GitHub social icon is local, labelled, and non-empty (0.874917ms)
+✔ M3 public import examples match the shared release entry contract (6.911542ms)
+✔ candidate navigation links to the migration guide and its scenario anchors (1.243209ms)
+✔ documented component and scenario subpaths have quality matrix coverage (12.249667ms)
+✔ D2 overlay helpers stay internal and ship paired ESM and CommonJS files (1.511625ms)
+✔ Card exports preserve consumer prop, slot, alias and install types (879.34475ms)
+✔ components loads through ESM and CommonJS entrypoints (169.09475ms)
+✔ dnd loads through ESM and CommonJS entrypoints (16.924666ms)
+✔ ai loads through ESM and CommonJS entrypoints (12.417166ms)
+✔ components generated module roots retain CSS side effects while JavaScript can tree shake (1.308084ms)
+✔ dnd package exports resolve consumer types for business records and standalone values (479.789417ms)
+✔ Pages deploys only an exact master SHA whose full push CI workflow succeeded (5.916125ms)
+✔ manual CI completion cannot cancel a push-triggered Pages deployment (0.575ms)
+✔ picker core loads through native ESM with external Dayjs plugins (11.163084ms)
+✔ public picker types do not expose internal Dayjs helpers (0.727375ms)
+✔ builds the docs and serves the production preview on the requested port (0.597375ms)
+✔ uses AHEART_E2E_PORT with 5173 as the default everywhere (0.143167ms)
+✔ never reuses an unknown local server for production verification (0.065709ms)
+✔ ordinary browser verification can exclude the dedicated QG5 specs (0.066333ms)
+✔ runs the QG5 production suite in Firefox, desktop WebKit, and mobile WebKit (0.415458ms)
+✔ routes the Form.List browser suite through all five configured browsers (0.103833ms)
+✔ routes the Cascader virtual browser suite through all five configured browsers (0.074125ms)
+✔ routes the Tree virtual browser suite through all five configured browsers (0.089625ms)
+✔ routes the TreeSelect virtual browser suite through all five configured browsers (0.094ms)
+✔ gives the production preview enough time to build before readiness checks (0.095333ms)
+✔ retains failure diagnostics and uses the HTML reporter (0.093167ms)
+✔ disables the macOS system proxy for local Firefox verification (0.057042ms)
+✔ CI installs all browsers and uploads test results and the Playwright report (0.190209ms)
+✔ records owner-cancelled physical acceptance and keeps optional historical evidence distinct from automation (0.983042ms)
+✔ documents the two-stage master stability gate and exposes the guide in Chinese navigation (0.148375ms)
+✔ describes always-retained and failure-only browser evidence accurately (0.211ms)
+✔ accepts complete physical iOS Safari evidence bound to the reviewed commit (9.147375ms)
+✔ rejects simulator and scripted touch evidence (1.580292ms)
+✔ rejects evidence for another commit and missing artifact integrity (2.8115ms)
+✔ rejects incomplete observable task outcomes (1.473542ms)
+✔ requires before and after screenshots plus a session video for every physical task (1.413791ms)
+✔ rejects duplicate before and after media references (1.520709ms)
+✔ rejects symlinks that can escape the evidence directory (2.667583ms)
+✔ binds evidence to the expected repository and branch (2.108833ms)
+✔ rejects artifact MIME metadata that does not match its evidence kind and extension (2.410833ms)
+✔ rejects evidence IDs that can escape the JSON evidence directory (2.135125ms)
+✔ normalizes GitHub workflow runs and preserves every attempt for flaky detection (1.522584ms)
+✔ keeps missing QG5 project evidence observable instead of silently dropping a run (0.1995ms)
+✔ collects paginated runs and jobs while filtering to the requested master SHA (0.576625ms)
+✔ retries transient GitHub failures with a bounded attempt count (3.779167ms)
+✔ accepts ten consecutive healthy master runs with zero flaky reruns (1.913042ms)
+✔ rejects an insufficient post-QG5 master window (0.249875ms)
+✔ rejects a run with a missing or failed browser project (0.281583ms)
+✔ counts a failed attempt followed by success as one flaky run (0.154958ms)
+✔ filters non-master and pre-QG5 runs instead of treating them as passing evidence (0.092459ms)
+✔ rejects incomplete historical attempts instead of hiding them as stable (0.153167ms)
+✔ only accepts runs for the expected master SHA (0.092667ms)
+✔ rejects duplicate or non-contiguous attempt numbers (0.119291ms)
+✔ QG5 production suite guards resources, hydration, overlays, and viewport containment (0.692959ms)
+✔ collects production errors through a teardown fixture that always attaches evidence (0.169708ms)
+✔ settles prefetch work before navigation and never hides generic cancelled resource failures (0.112958ms)
+✔ normalizes route paths before ownership checks (0.855125ms)
+✔ VitePress cancellation classifier requires trace-backed prefetch evidence (0.674208ms)
+✔ D9 skip ledger registers every static e2e skip with owner, issue and expiry (61.100625ms)
+✔ D9 skip ledger rejects an expiry date before the execution date (14.781959ms)
+✔ quality matrix registers every Ready component exactly once with release evidence (191.770083ms)
+✔ QG4 matrix records only component-specific accessibility and visual evidence (3.009833ms)
+✔ quality matrix uses the planned mutually exclusive risk mapping (0.279667ms)
+✔ R1 records have current component evidence and product task metadata (0.185708ms)
+✔ pull request template requires product task and quality matrix review (1.196ms)
+✔ accepts a complete packed package contract (1.3385ms)
+✔ accepts and enforces a package-specific Vue peer floor (0.187167ms)
+✔ reports missing public metadata and required files (0.084416ms)
+✔ rejects unresolved workspace dependency protocols (0.073709ms)
+✔ rejects unexpected packed dependency ranges (0.06925ms)
+✔ rejects Pragmatic DnD auto-scroll dependency drift (0.705041ms)
+✔ rejects source and test files from the tarball (0.111125ms)
+✔ M1 rejects missing component styles, export condition drift and CSS pruning (5.993625ms)
+✔ D1 state helpers stay internal and ship paired ESM and CommonJS files (0.620833ms)
+✔ CSS union rejects extra/missing selectors, changed declarations, context and order (4.001708ms)
+✔ AIForm closure includes exact declared field styles and no Table or Workbench (15.0955ms)
+✔ module boundary rejects root barrels, undeclared base and optional packages (0.83075ms)
+✔ leaf and already-passing composites keep exact M1 hard boundaries (0.257792ms)
+✔ composite exception requires initial exceedance and freezes dependency bytes/share (0.220083ms)
+✔ JS retains strict full and root-named increment boundaries (0.107625ms)
+✔ real recorded composite baselines reject even one byte of closure growth (1.806375ms)
+✔ all Ready families and existing domain paths agree across exports, Resolver, actual sidebar and quality matrix (5.273208ms)
+✔ entry gate rejects a missing stylesheet export (2.264667ms)
+✔ entry gate rejects missing Table Resolver support rather than hiding an uncovered Ready component (2.345792ms)
+✔ entry gate checks the generated documentation sidebar, independently from its catalogue (2.7395ms)
+✔ entry gate rejects a quality record in the wrong package (2.390791ms)
+✔ a Ready catalogue entry cannot disappear from the manifest while its exports remain (1.1885ms)
+ℹ tests 277
+ℹ suites 0
+ℹ pass 277
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 424100.689791
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+[33mThe CJS build of Vite's Node API is deprecated. See https://vitejs.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+stderr | src/form/__tests__/form-list.test.ts > Form.List optimization > adds, inserts, removes unique indices and moves in one stable-key list
+[AFormList] remove ignored duplicate or out-of-range indices
+
+stderr | src/form/__tests__/form-list.test.ts > Form.List optimization > treats a defined non-array model value and invalid indices as safe no-ops
+[AFormList] model path s:users must contain an array
+[AFormList] add ignored because the model value is not an array
+[AFormList] remove ignored because the model value is not an array
+[AFormList] move ignored because the model value is not an array
+
+stderr | src/tree/__tests__/tree-virtual.test.ts > Tree virtual contract > supports true and config forms with per-field defaults without changing the caller object
+[ATree] virtual.height must be a positive number; using the default.
+[ATree] virtual.estimateSize must be a positive number; using the default.
+[ATree] virtual.overscan must be a non-negative safe integer; using the default.
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m

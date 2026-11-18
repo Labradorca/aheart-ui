@@ -124,3 +124,4 @@ declare const Pagination: import("../utils/install").SFCWithInstall<import("vue"
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>>;
 export default Pagination;
 export type * from './types';
+export { Pagination };

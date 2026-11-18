@@ -1,0 +1,33 @@
+{
+  "status": "measurement only; baseline unchanged",
+  "entries": [
+    {
+      "entry": "@aheart-ui/ai/form",
+      "baselineBytes": 99853,
+      "correctedSourceClosureBytes": 99853,
+      "delta": 0,
+      "nonIncreasePass": true
+    },
+    {
+      "entry": "@aheart-ui/ai/agent-workbench",
+      "baselineBytes": 54109,
+      "correctedSourceClosureBytes": 54212,
+      "delta": 103,
+      "nonIncreasePass": false
+    },
+    {
+      "entry": "@aheart-ui/ai/agent",
+      "baselineBytes": 100927,
+      "correctedSourceClosureBytes": 100927,
+      "delta": 0,
+      "nonIncreasePass": true
+    },
+    {
+      "entry": "@aheart-ui/ai/workbench",
+      "baselineBytes": 54109,
+      "correctedSourceClosureBytes": 54212,
+      "delta": 103,
+      "nonIncreasePass": false
+    }
+  ]
+}

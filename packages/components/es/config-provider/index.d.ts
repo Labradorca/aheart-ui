@@ -46,3 +46,4 @@ declare const ConfigProvider: import("../utils/install").SFCWithInstall<{
     };
 })>;
 export default ConfigProvider;
+export { ConfigProvider };

@@ -322,7 +322,6 @@
 
 .aheart-ai-chat-panel__message-actions button,
 .aheart-ai-chat-panel__editing button,
-.aheart-ai-actions button,
 .aheart-ai-attachments button {
   min-block-size: 28px;
   padding: 3px 8px;
@@ -339,8 +338,6 @@
 .aheart-ai-chat-panel__message-actions button:focus-visible,
 .aheart-ai-chat-panel__editing button:hover,
 .aheart-ai-chat-panel__editing button:focus-visible,
-.aheart-ai-actions button:hover,
-.aheart-ai-actions button:focus-visible,
 .aheart-ai-attachments button:hover,
 .aheart-ai-attachments button:focus-visible {
   border-color: #b9c2cf;
@@ -429,7 +426,6 @@
 }
 
 .aheart-ai-conversations,
-.aheart-ai-actions,
 .aheart-ai-sources,
 .aheart-ai-process,
 .aheart-ai-attachments {

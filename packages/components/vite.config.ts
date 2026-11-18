@@ -64,7 +64,6 @@ export default defineConfig(
                     'constant/index': 'src/constant/index.ts',
                     'resolver/index': 'src/resolver/index.ts',
                     ...Object.fromEntries(componentEntries.map(({ subpath, sourceEntry }) => [`${subpath}/index`, sourceEntry])),
-                    'message/index': 'src/message/index.ts',
                     'utils/floating': 'src/utils/floating.ts',
                     'utils/use-async-task': 'src/utils/use-async-task.ts',
                     'utils/use-collection': 'src/utils/use-collection.ts',

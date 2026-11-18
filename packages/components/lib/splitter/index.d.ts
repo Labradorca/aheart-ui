@@ -78,3 +78,4 @@ declare const SplitterPanel: import("../utils/install").SFCWithInstall<{
 export { SplitterPanel };
 export type { SplitterLayout, SplitterPanelConstraint, SplitterProps, SplitterSize } from './types';
 export default Splitter;
+export { Splitter };

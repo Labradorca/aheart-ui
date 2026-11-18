@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-17T05:48:38-05:00",
+  "implementationBaseline": "631b7cd2ac696017c3b940e3c6325704f96aa898",
+  "implementationDiffCommand": [
+    "git",
+    "diff",
+    "631b7cd",
+    "--",
+    "packages",
+    "scripts",
+    "pnpm-lock.yaml",
+    ".github"
+  ],
+  "implementationUnchanged": true,
+  "localLinks": "passed",
+  "measurementExitCode": 0,
+  "budgetConclusion": "failed; not V1 Pass",
+  "designStatus": "Proposed; owner review pending"
+}

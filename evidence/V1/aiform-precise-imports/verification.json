@@ -1,0 +1,60 @@
+{
+  "checkedAt": "2026-11-17T15:10:59.706Z",
+  "head": "e0c6f8034fef376702abdd98a261db40c16de612",
+  "status": "peer-stop verification passed; V1 still incomplete; peer modification requires owner decision",
+  "command": [
+    "node",
+    "evidence/V1/aiform-precise-imports/verify-stop.mjs"
+  ],
+  "protectedSourceCount": 57,
+  "protectedChangesSinceE0": [],
+  "changedFromInitial": [
+    "scripts/fixtures/m3-consumer/probe.mjs",
+    "scripts/m1-consumer.mjs"
+  ],
+  "businessPilotChanges": [],
+  "versions": {
+    "components": "1.3.0",
+    "ai": "1.1.0",
+    "dnd": "1.1.0"
+  },
+  "sourcePeer": "workspace:^1.1.0",
+  "approvedClassification": {
+    "composite": 12,
+    "leaf": 53
+  },
+  "cssFirstPass": {
+    "leafHardLocked": 8,
+    "pending": 4,
+    "modalM1Preserved": true
+  },
+  "aiModules": [
+    "form-field.vue.js",
+    "form-schema.js",
+    "form.vue.js",
+    "form/index.js"
+  ],
+  "unrelatedBaseModules": 0,
+  "localLinksChecked": 119,
+  "documentsSha256": {
+    "docs/superpowers/plans/2026-11-17-aiform-on-demand-feasibility.md": "ba185b16184fc21214af325e8da4223891104aecb6b24c095f0ee5a84bf1ecbc",
+    "evidence/V1/decision-log.md": "41d152a839cadd6de6b568350c97ec74ad1b2c3f616dc4a63ea9970883aecf93",
+    "evidence/V1/diff-summary.md": "a67e0f05d95c384d49e11514ada16956d9c9a5bcd3dde10c0b83e11893b5a503",
+    "evidence/V1/owner-classification-confirmation-2026-11-17.md": "cf7559804aff094bdc0a8c5a448e082beec7bc104ed6fef3e9bdf81a6dfb07ff",
+    "evidence/V1/owner-a2-3-clarification-2026-11-17.md": "b6f7baf7b26fc4f8375457d481ae5b3f877712963ceb54c24910ccf27ca52e8c",
+    "evidence/V1/classification/README.md": "5e3584cbd948e1be99db63b923b1f1a548a85e297c58937064cdb56c0bb969ca",
+    "evidence/V1/aiform-budget/README.md": "dfc3049b8b7156773b9098ab4d38200bca1a19fb383c65e6bdf59e896bedf238",
+    "evidence/V1/aiform-design/README.md": "50befd5146212b1dda5d16df7aea66b43accbaf8e8571bef5f826e67fb13e614",
+    "evidence/V1/composite-css-gates.md": "9a06586d2bcde7b3687ae4b95082cd2ec7a2f49ab24606ebf745d2face273fec",
+    "evidence/V1/aiform-precise-imports/README.md": "245da370c029fb18b4c6c1718512231e56d034589fbb3879ba7f02dc9d368673",
+    "evidence/V1/aiform-precise-imports/peer-impact.md": "9d4ce4c19aaa8e73e468162cd21cfde6ad920d9a492738d2b1a3f458b26e7df8"
+  },
+  "artifactSha256": {
+    "probe.mjs": "1db5a023c85ed8af597a506a7d62cfe89b6f1dc8990ade282e29181cb109edc0",
+    "results.json": "9977fc137a2bff241b81f29dac1cb5241cacf6a05d065f8fa4c381f2d242e183",
+    "scoped-module-graph.json": "1bf109141871494b1c11ae6ffe5c4a25a55cad3171eb9f9cd2c85f9ab33bccd2",
+    "root-named-module-graph.json": "3903524aeb8f2092310a214c0fb335791806dc357dfa11e04d9685dedbea988a",
+    "full-module-graph.json": "1c6448905b8c683f53967cec7d184046bd1261450584c90bd51e3549c581c37d",
+    "composite-css-first-pass.json": "014e4678659a03a5ffe38f529c90ca1d39f8b3c12002bbc15fb91fc4c1a242c9"
+  }
+}

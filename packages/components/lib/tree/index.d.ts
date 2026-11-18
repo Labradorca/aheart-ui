@@ -1,5 +1,5 @@
 export type { TreeKey, TreeNodeData, TreeLoadContext, TreeLoadData, TreeCheckInfo, TreeVirtual, TreeVirtualConfig } from './types';
-declare const _default: import("../utils/install").SFCWithInstall<import("vue").DefineComponent<import("vue").ExtractPropTypes<{
+declare const InstalledTree: import("../utils/install").SFCWithInstall<import("vue").DefineComponent<import("vue").ExtractPropTypes<{
     treeData: {
         type: import("vue").PropType<import("./types").TreeNodeData[]>;
         default: () => never[];
@@ -106,4 +106,5 @@ declare const _default: import("../utils/install").SFCWithInstall<import("vue").
     defaultExpandAll: boolean;
     checkStrictly: boolean;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>>;
-export default _default;
+export { InstalledTree as Tree };
+export default InstalledTree;

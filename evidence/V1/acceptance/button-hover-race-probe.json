@@ -1,0 +1,230 @@
+[
+  {
+    "i": 0,
+    "immediate": {
+      "hover": true,
+      "color": "rgb(91, 33, 130)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":688,\"width\":94,\"height\":32,\"top\":688,\"right\":471,\"bottom\":720,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    },
+    "settled": {
+      "hover": true,
+      "color": "rgb(91, 33, 130)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":688,\"width\":94,\"height\":32,\"top\":688,\"right\":471,\"bottom\":720,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    }
+  },
+  {
+    "i": 1,
+    "immediate": {
+      "hover": false,
+      "color": "rgb(31, 35, 41)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":415,\"width\":94,\"height\":32,\"top\":415,\"right\":471,\"bottom\":447,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    },
+    "settled": {
+      "hover": false,
+      "color": "rgb(31, 35, 41)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":415,\"width\":94,\"height\":32,\"top\":415,\"right\":471,\"bottom\":447,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    }
+  },
+  {
+    "i": 2,
+    "immediate": {
+      "hover": true,
+      "color": "rgb(91, 33, 130)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":415,\"width\":94,\"height\":32,\"top\":415,\"right\":471,\"bottom\":447,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    },
+    "settled": {
+      "hover": false,
+      "color": "rgb(31, 35, 41)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":415,\"width\":94,\"height\":32,\"top\":415,\"right\":471,\"bottom\":447,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    }
+  },
+  {
+    "i": 3,
+    "immediate": {
+      "hover": true,
+      "color": "rgb(91, 33, 130)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":415,\"width\":94,\"height\":32,\"top\":415,\"right\":471,\"bottom\":447,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    },
+    "settled": {
+      "hover": false,
+      "color": "rgb(31, 35, 41)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":415,\"width\":94,\"height\":32,\"top\":415,\"right\":471,\"bottom\":447,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    }
+  },
+  {
+    "i": 4,
+    "immediate": {
+      "hover": true,
+      "color": "rgb(91, 33, 130)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":688,\"width\":94,\"height\":32,\"top\":688,\"right\":471,\"bottom\":720,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    },
+    "settled": {
+      "hover": true,
+      "color": "rgb(91, 33, 130)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":688,\"width\":94,\"height\":32,\"top\":688,\"right\":471,\"bottom\":720,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    }
+  },
+  {
+    "i": 5,
+    "immediate": {
+      "hover": true,
+      "color": "rgb(91, 33, 130)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":415,\"width\":94,\"height\":32,\"top\":415,\"right\":471,\"bottom\":447,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    },
+    "settled": {
+      "hover": false,
+      "color": "rgb(31, 35, 41)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":415,\"width\":94,\"height\":32,\"top\":415,\"right\":471,\"bottom\":447,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    }
+  },
+  {
+    "i": 6,
+    "immediate": {
+      "hover": true,
+      "color": "rgb(91, 33, 130)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":688,\"width\":94,\"height\":32,\"top\":688,\"right\":471,\"bottom\":720,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    },
+    "settled": {
+      "hover": true,
+      "color": "rgb(91, 33, 130)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":688,\"width\":94,\"height\":32,\"top\":688,\"right\":471,\"bottom\":720,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    }
+  },
+  {
+    "i": 7,
+    "immediate": {
+      "hover": true,
+      "color": "rgb(91, 33, 130)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":688,\"width\":94,\"height\":32,\"top\":688,\"right\":471,\"bottom\":720,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    },
+    "settled": {
+      "hover": true,
+      "color": "rgb(91, 33, 130)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":688,\"width\":94,\"height\":32,\"top\":688,\"right\":471,\"bottom\":720,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    }
+  },
+  {
+    "i": 8,
+    "immediate": {
+      "hover": false,
+      "color": "rgb(31, 35, 41)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":415,\"width\":94,\"height\":32,\"top\":415,\"right\":471,\"bottom\":447,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    },
+    "settled": {
+      "hover": false,
+      "color": "rgb(31, 35, 41)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":415,\"width\":94,\"height\":32,\"top\":415,\"right\":471,\"bottom\":447,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    }
+  },
+  {
+    "i": 9,
+    "immediate": {
+      "hover": true,
+      "color": "rgb(91, 33, 130)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":415,\"width\":94,\"height\":32,\"top\":415,\"right\":471,\"bottom\":447,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    },
+    "settled": {
+      "hover": false,
+      "color": "rgb(31, 35, 41)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":415,\"width\":94,\"height\":32,\"top\":415,\"right\":471,\"bottom\":447,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    }
+  },
+  {
+    "i": 10,
+    "immediate": {
+      "hover": true,
+      "color": "rgb(91, 33, 130)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":415,\"width\":94,\"height\":32,\"top\":415,\"right\":471,\"bottom\":447,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    },
+    "settled": {
+      "hover": false,
+      "color": "rgb(31, 35, 41)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":415,\"width\":94,\"height\":32,\"top\":415,\"right\":471,\"bottom\":447,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    }
+  },
+  {
+    "i": 11,
+    "immediate": {
+      "hover": true,
+      "color": "rgb(91, 33, 130)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":415,\"width\":94,\"height\":32,\"top\":415,\"right\":471,\"bottom\":447,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    },
+    "settled": {
+      "hover": false,
+      "color": "rgb(31, 35, 41)",
+      "token": "#5b2182",
+      "box": "{\"x\":377,\"y\":415,\"width\":94,\"height\":32,\"top\":415,\"right\":471,\"bottom\":447,\"left\":377}",
+      "fonts": "loaded",
+      "ready": "complete"
+    }
+  }
+]

@@ -1,0 +1,16 @@
+✔ accepts a complete packed package contract (1.623291ms)
+✔ accepts and enforces a package-specific Vue peer floor (0.190208ms)
+✔ reports missing public metadata and required files (0.090417ms)
+✔ rejects unresolved workspace dependency protocols (0.1495ms)
+✔ rejects unexpected packed dependency ranges (0.11725ms)
+✔ rejects Pragmatic DnD auto-scroll dependency drift (0.118167ms)
+✔ rejects source and test files from the tarball (0.092041ms)
+✔ M1 rejects missing component styles, export condition drift and CSS pruning (6.181083ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 75.393791

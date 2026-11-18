@@ -3,7 +3,7 @@ Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toString
 const vue = require("vue");
 const icon_vue_vue_type_script_setup_true_lang = require("../icon/icon.vue.js");
 const controlContext = require("../form/control-context.js");
-const index = require("../tree/index.js");
+const tree_index = require("../tree/index.js");
 const treeFocusBridge = require("../tree/tree-focus-bridge.js");
 const useTreeLoader = require("../tree/use-tree-loader.js");
 const treeCheck = require("../tree/tree-check.js");
@@ -430,7 +430,7 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
             }, null, 544)), [
               [vue.vModelText, searchText.value]
             ]) : vue.createCommentVNode("", true),
-            vue.createVNode(vue.unref(index.default), {
+            vue.createVNode(vue.unref(tree_index.Tree), {
               id: treeId,
               "tree-data": filteredTreeData.value,
               "selected-keys": __props.treeCheckable ? [] : selectedKeys.value,

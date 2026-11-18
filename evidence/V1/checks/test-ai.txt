@@ -1,0 +1,24 @@
+
+> @aheart-ui/ai@1.2.0 test /Users/start/code/aheart-ui-wt/v1.4-entries/packages/ai
+> vitest run --environment jsdom
+
+
+ RUN  v1.6.1 /Users/start/code/aheart-ui-wt/v1.4-entries/packages/ai
+
+ ✓ src/__tests__/qg4-a11y-guardrails.test.ts  (4 tests) 9ms
+ ✓ src/__tests__/form-schema.test.ts  (10 tests) 6ms
+ ✓ src/__tests__/primitives.test.ts  (5 tests) 37ms
+ ✓ src/__tests__/chat-panel.test.ts  (10 tests) 130ms
+ ✓ src/__tests__/package.test.ts  (1 test) 1ms
+ ✓ src/__tests__/agent-workbench.test.ts  (15 tests) 318ms
+ ✓ src/__tests__/d8-chat-stream.test.ts  (44 tests) 601ms
+ ✓ src/__tests__/form.test.ts  (21 tests) 282ms
+ ✓ src/__tests__/d8-form-tool-ssr.test.ts  (54 tests) 320ms
+ ✓ src/__tests__/d8-workbench.test.ts  (36 tests) 588ms
+
+ Test Files  10 passed (10)
+      Tests  200 passed (200)
+   Start at  10:35:41
+   Duration  1.79s (transform 1.19s, setup 1ms, collect 4.10s, tests 2.29s, environment 3.54s, prepare 727ms)
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m

@@ -5,3 +5,5 @@ const Popover = withInstall(popover, 'APopover')
 
 export default Popover
 export type { PopoverProps } from './types'
+
+export { Popover }

@@ -1,0 +1,73 @@
+base/button: module graph / JS / CSS passed
+base/config-provider: module graph / JS / CSS passed
+base/icon: module graph / JS / CSS passed
+base/typography: module graph / JS / CSS passed
+base/space: module graph / JS / CSS passed
+base/divider: module graph / JS / CSS passed
+base/splitter: module graph / JS / CSS passed
+base/flex: module graph / JS / CSS passed
+base/grid: module graph / JS / CSS passed
+base/tabs: module graph / JS / CSS passed
+base/breadcrumb: module graph / JS / CSS passed
+base/dropdown: module graph / JS / CSS passed
+base/menu: module graph / JS / CSS passed
+base/steps: module graph / JS / CSS passed
+base/input: module graph / JS / CSS passed
+base/date-picker: module graph / JS / CSS passed
+base/time-picker: module graph / JS / CSS passed
+base/upload: module graph / JS / CSS passed
+base/tree: module graph / JS / CSS passed
+base/tree-select: module graph / JS / CSS passed
+base/cascader: module graph / JS / CSS passed
+base/textarea: module graph / JS / CSS passed
+base/input-number: module graph / JS / CSS passed
+base/checkbox: module graph / JS / CSS passed
+base/radio: module graph / JS / CSS passed
+base/switch: module graph / JS / CSS passed
+base/combobox: module graph / JS / CSS passed
+base/select: module graph / JS / CSS passed
+base/form: module graph / JS / CSS passed
+base/tag: module graph / JS / CSS passed
+base/badge: module graph / JS / CSS passed
+base/card: module graph / JS / CSS passed
+base/empty: module graph / JS / CSS passed
+base/descriptions: module graph / JS / CSS passed
+base/table: module graph / JS / CSS passed
+base/pagination: module graph / JS / CSS passed
+base/alert: module graph / JS / CSS passed
+base/message: module graph / JS / CSS passed
+base/modal: module graph / JS / CSS passed
+base/drawer: module graph / JS / CSS passed
+base/tooltip: module graph / JS / CSS passed
+base/popover: module graph / JS / CSS passed
+base/popconfirm: module graph / JS / CSS passed
+base/spin: module graph / JS / CSS passed
+base/skeleton: module graph / JS / CSS passed
+ai/actions: module graph / JS / CSS passed
+ai/attachments: module graph / JS / CSS passed
+ai/bubble: module graph / JS / CSS passed
+ai/conversations: module graph / JS / CSS passed
+ai/form: module graph / JS / CSS passed
+ai/process: module graph / JS / CSS passed
+ai/prompts: module graph / JS / CSS passed
+ai/sender: module graph / JS / CSS passed
+ai/sources: module graph / JS / CSS passed
+ai/thought-chain: module graph / JS / CSS passed
+ai/welcome: module graph / JS / CSS passed
+ai/chat-panel: module graph / JS / CSS passed
+ai/agent-workbench: module graph / JS / CSS passed
+ai/chat: module graph / JS / CSS passed
+ai/agent: module graph / JS / CSS passed
+ai/workbench: module graph / JS / CSS passed
+dnd/draggable: module graph / JS / CSS passed
+dnd/droppable: module graph / JS / CSS passed
+dnd/drag-overlay: module graph / JS / CSS passed
+dnd/sortable: module graph / JS / CSS passed
+{
+  "status": "passed",
+  "coverage": {
+    "total": 65,
+    "styles": 65,
+    "js": 65
+  }
+}

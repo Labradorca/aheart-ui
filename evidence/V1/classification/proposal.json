@@ -1,0 +1,834 @@
+{
+  "recordedAt": "2026-11-17T06:44:04-05:00",
+  "sourceHead": "4f2762a2d13535a551d0969394b525ba5bca5c18",
+  "ownerDecision": "../owner-a2-3-clarification-2026-11-17.md",
+  "status": "proposal only; not applied to production manifest or tests",
+  "criteriaProposal": "Built-in composition across public component families is composite; same-family subcomponents/forwarders and declared Icon/Skeleton/Tooltip/infrastructure-only helpers retain the stricter leaf gate. Non-base primitives also retain leaf limits provisionally. Owner confirmation required.",
+  "summary": {
+    "base": {
+      "leaf": 40,
+      "composite": 5
+    },
+    "ai": {
+      "leaf": 9,
+      "composite": 7
+    },
+    "dnd": {
+      "leaf": 4,
+      "composite": 0
+    }
+  },
+  "entries": [
+    {
+      "domain": "base",
+      "subpath": "button",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "button",
+      "auxiliaryBoundary": [
+        "icon"
+      ],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Button"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "config-provider",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "config-provider",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "ConfigProvider"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "icon",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "icon",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Icon"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "typography",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "typography",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Typography",
+        "Title",
+        "Text",
+        "Paragraph",
+        "Link"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "space",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "space",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Space"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "divider",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "divider",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Divider"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "splitter",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "splitter",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Splitter",
+        "SplitterPanel"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "flex",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "flex",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Flex"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "grid",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "grid",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Row",
+        "Col"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "tabs",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "tabs",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Tabs"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "breadcrumb",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "breadcrumb",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Breadcrumb"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "dropdown",
+      "proposedClass": "composite",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "dropdown",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "DropdownButton",
+        "Dropdown"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "menu",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "menu",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Menu"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "steps",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "steps",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Steps"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "input",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "input",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Input"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "date-picker",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "date-picker",
+      "auxiliaryBoundary": [
+        "icon"
+      ],
+      "sameFamilyBoundary": false,
+      "names": [
+        "DateRangePicker",
+        "DatePicker"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "time-picker",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "time-picker",
+      "auxiliaryBoundary": [
+        "icon"
+      ],
+      "sameFamilyBoundary": false,
+      "names": [
+        "TimeRangePicker",
+        "TimePicker"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "upload",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "upload",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Upload"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "tree",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "tree",
+      "auxiliaryBoundary": [
+        "icon"
+      ],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Tree"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "tree-select",
+      "proposedClass": "composite",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "tree-select",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "TreeSelect"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "cascader",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "cascader",
+      "auxiliaryBoundary": [
+        "icon"
+      ],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Cascader"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "textarea",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "textarea",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Textarea"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "input-number",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "input-number",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "InputNumber"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "checkbox",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "checkbox",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Checkbox",
+        "CheckboxGroup"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "radio",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "radio",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Radio",
+        "RadioGroup"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "switch",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "switch",
+      "auxiliaryBoundary": [
+        "icon"
+      ],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Switch"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "combobox",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "combobox",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Combobox"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "select",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "select",
+      "auxiliaryBoundary": [
+        "icon"
+      ],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Select"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "form",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "form",
+      "auxiliaryBoundary": [
+        "tooltip"
+      ],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Form",
+        "FormItem",
+        "FormList"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "tag",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "tag",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Tag",
+        "CheckableTag",
+        "TagGroup"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "badge",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "badge",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Badge",
+        "BadgeRibbon"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "card",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "card",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "CardMeta",
+        "CardGrid",
+        "Card"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "empty",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "empty",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Empty"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "descriptions",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "descriptions",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Descriptions"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "table",
+      "proposedClass": "composite",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "table",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Table"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "pagination",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "pagination",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Pagination"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "alert",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "alert",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Alert"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "message",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "message",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Message"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "modal",
+      "proposedClass": "composite",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "modal",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Modal"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "drawer",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "drawer",
+      "auxiliaryBoundary": [
+        "skeleton"
+      ],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Drawer"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "tooltip",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "tooltip",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Tooltip"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "popover",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "popover",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Popover"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "popconfirm",
+      "proposedClass": "composite",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "popconfirm",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Popconfirm"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "spin",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "spin",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Spin"
+      ]
+    },
+    {
+      "domain": "base",
+      "subpath": "skeleton",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "skeleton",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Skeleton"
+      ]
+    },
+    {
+      "domain": "ai",
+      "subpath": "actions",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "actions",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIActions"
+      ]
+    },
+    {
+      "domain": "ai",
+      "subpath": "attachments",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "attachments",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIAttachments"
+      ]
+    },
+    {
+      "domain": "ai",
+      "subpath": "bubble",
+      "proposedClass": "composite",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "bubble",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIBubble"
+      ]
+    },
+    {
+      "domain": "ai",
+      "subpath": "conversations",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "conversations",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIConversations"
+      ]
+    },
+    {
+      "domain": "ai",
+      "subpath": "form",
+      "proposedClass": "composite",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "form",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIForm"
+      ]
+    },
+    {
+      "domain": "ai",
+      "subpath": "process",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "process",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIProcess"
+      ]
+    },
+    {
+      "domain": "ai",
+      "subpath": "prompts",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "prompts",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIPrompts"
+      ]
+    },
+    {
+      "domain": "ai",
+      "subpath": "sender",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "sender",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AISender"
+      ]
+    },
+    {
+      "domain": "ai",
+      "subpath": "sources",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "sources",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AISources"
+      ]
+    },
+    {
+      "domain": "ai",
+      "subpath": "thought-chain",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "thought-chain",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": true,
+      "names": [
+        "AIThoughtChain"
+      ]
+    },
+    {
+      "domain": "ai",
+      "subpath": "welcome",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "welcome",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIWelcome"
+      ]
+    },
+    {
+      "domain": "ai",
+      "subpath": "chat-panel",
+      "proposedClass": "composite",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "chat-panel",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIChatPanel"
+      ]
+    },
+    {
+      "domain": "ai",
+      "subpath": "agent-workbench",
+      "proposedClass": "composite",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "agent-workbench",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIAgentWorkbench"
+      ]
+    },
+    {
+      "domain": "ai",
+      "subpath": "chat",
+      "proposedClass": "composite",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "chat",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": []
+    },
+    {
+      "domain": "ai",
+      "subpath": "agent",
+      "proposedClass": "composite",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "agent",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": []
+    },
+    {
+      "domain": "ai",
+      "subpath": "workbench",
+      "proposedClass": "composite",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "agent-workbench",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": []
+    },
+    {
+      "domain": "dnd",
+      "subpath": "draggable",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "draggable",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Draggable"
+      ]
+    },
+    {
+      "domain": "dnd",
+      "subpath": "droppable",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "droppable",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "DropZone"
+      ]
+    },
+    {
+      "domain": "dnd",
+      "subpath": "drag-overlay",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "drag-overlay",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "DragOverlay"
+      ]
+    },
+    {
+      "domain": "dnd",
+      "subpath": "sortable",
+      "proposedClass": "leaf",
+      "status": "pending_owner_confirmation",
+      "canonicalSubpath": "sortable",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "SortableList",
+        "SortableItem"
+      ]
+    }
+  ]
+}

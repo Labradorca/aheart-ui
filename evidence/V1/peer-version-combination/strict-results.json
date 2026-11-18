@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "typescriptVersion": "5.9.3",
+  "tarballs": {
+    "aheart-ui": {
+      "tarball": "/Users/start/code/aheart-ui-wt/v1.4-entries/test-results/release-tarballs/aheart-ui-1.4.0.tgz",
+      "sha256": "1681586cdccba5506ff1632b5cf61b84be8d42b0b04e6673ca9e540ba008d3e0"
+    },
+    "@aheart-ui/dnd": {
+      "tarball": "/Users/start/code/aheart-ui-wt/v1.4-entries/test-results/release-tarballs/aheart-ui-dnd-1.1.0.tgz",
+      "sha256": "8cbc23c703b7250154c7d8afd2c18bf0e2ba3fe16f6bd6a82754967caf54747a"
+    },
+    "@aheart-ui/ai": {
+      "tarball": "/Users/start/code/aheart-ui-wt/v1.4-entries/test-results/release-tarballs/aheart-ui-ai-1.2.0.tgz",
+      "sha256": "de047dc77f2c0c035f7604ff4a2a585627868da8d5f28136eae3f5660ca451db"
+    }
+  },
+  "consumers": [
+    {
+      "vueVersion": "3.5.38",
+      "consumerRoot": "/Users/start/code/aheart-ui-wt/v1.4-entries/test-results/d9-consumers/strict/vue-3.5.38-h0kbcr",
+      "status": "passed",
+      "packages": {
+        "aheart-ui": {
+          "version": "1.4.0",
+          "symlink": false,
+          "declarations": 432,
+          "ignoredMetadata": []
+        },
+        "@aheart-ui/dnd": {
+          "version": "1.1.0",
+          "symlink": false,
+          "declarations": 40,
+          "ignoredMetadata": []
+        },
+        "@aheart-ui/ai": {
+          "version": "1.2.0",
+          "symlink": false,
+          "declarations": 70,
+          "ignoredMetadata": []
+        }
+      },
+      "checks": {
+        "roots": 0,
+        "all-declarations": 0,
+        "repro": 0
+      }
+    },
+    {
+      "vueVersion": "3.5.44",
+      "consumerRoot": "/Users/start/code/aheart-ui-wt/v1.4-entries/test-results/d9-consumers/strict/vue-3.5.44-2Ys9CG",
+      "status": "passed",
+      "packages": {
+        "aheart-ui": {
+          "version": "1.4.0",
+          "symlink": false,
+          "declarations": 432,
+          "ignoredMetadata": []
+        },
+        "@aheart-ui/dnd": {
+          "version": "1.1.0",
+          "symlink": false,
+          "declarations": 40,
+          "ignoredMetadata": []
+        },
+        "@aheart-ui/ai": {
+          "version": "1.2.0",
+          "symlink": false,
+          "declarations": 70,
+          "ignoredMetadata": []
+        }
+      },
+      "checks": {
+        "roots": 0,
+        "all-declarations": 0,
+        "repro": 0
+      }
+    }
+  ]
+}

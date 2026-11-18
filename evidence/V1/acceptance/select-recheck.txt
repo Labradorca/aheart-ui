@@ -1,0 +1,49 @@
+
+Running 25 tests using 1 worker
+
+
+(node:9530) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/25] [desktop] › e2e/d4-select-virtual.spec.ts:28:5 › Select virtual remeasures wrapping width and font changes without clipping active content
+[2/25] [desktop] › e2e/d4-select-virtual.spec.ts:54:5 › Select virtual preserves stable middle keys through insertion deletion reorder and active removal
+[3/25] [desktop] › e2e/d4-select-virtual.spec.ts:81:5 › Select virtual no-results message remains visible and search can recover
+[4/25] [desktop] › e2e/d4-select-virtual.spec.ts:116:5 › Select virtual tail, disabled navigation, dynamic height and scroll anchoring
+[5/25] [desktop] › e2e/d4-select-virtual.spec.ts:191:5 › Select virtual uses iframe realm and disposes after SPA unmount
+
+(node:9557) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[6/25] [mobile] › e2e/d4-select-virtual.spec.ts:28:5 › Select virtual remeasures wrapping width and font changes without clipping active content
+[7/25] [mobile] › e2e/d4-select-virtual.spec.ts:54:5 › Select virtual preserves stable middle keys through insertion deletion reorder and active removal
+[8/25] [mobile] › e2e/d4-select-virtual.spec.ts:81:5 › Select virtual no-results message remains visible and search can recover
+[9/25] [mobile] › e2e/d4-select-virtual.spec.ts:116:5 › Select virtual tail, disabled navigation, dynamic height and scroll anchoring
+[10/25] [mobile] › e2e/d4-select-virtual.spec.ts:191:5 › Select virtual uses iframe realm and disposes after SPA unmount
+
+(node:9574) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[11/25] [desktop-firefox] › e2e/d4-select-virtual.spec.ts:28:5 › Select virtual remeasures wrapping width and font changes without clipping active content
+[12/25] [desktop-firefox] › e2e/d4-select-virtual.spec.ts:54:5 › Select virtual preserves stable middle keys through insertion deletion reorder and active removal
+[13/25] [desktop-firefox] › e2e/d4-select-virtual.spec.ts:81:5 › Select virtual no-results message remains visible and search can recover
+[14/25] [desktop-firefox] › e2e/d4-select-virtual.spec.ts:116:5 › Select virtual tail, disabled navigation, dynamic height and scroll anchoring
+[15/25] [desktop-firefox] › e2e/d4-select-virtual.spec.ts:191:5 › Select virtual uses iframe realm and disposes after SPA unmount
+
+(node:9604) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[16/25] [desktop-webkit] › e2e/d4-select-virtual.spec.ts:28:5 › Select virtual remeasures wrapping width and font changes without clipping active content
+[17/25] [desktop-webkit] › e2e/d4-select-virtual.spec.ts:54:5 › Select virtual preserves stable middle keys through insertion deletion reorder and active removal
+[18/25] [desktop-webkit] › e2e/d4-select-virtual.spec.ts:81:5 › Select virtual no-results message remains visible and search can recover
+[19/25] [desktop-webkit] › e2e/d4-select-virtual.spec.ts:116:5 › Select virtual tail, disabled navigation, dynamic height and scroll anchoring
+[20/25] [desktop-webkit] › e2e/d4-select-virtual.spec.ts:191:5 › Select virtual uses iframe realm and disposes after SPA unmount
+
+(node:9652) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[21/25] [mobile-webkit] › e2e/d4-select-virtual.spec.ts:28:5 › Select virtual remeasures wrapping width and font changes without clipping active content
+[22/25] [mobile-webkit] › e2e/d4-select-virtual.spec.ts:54:5 › Select virtual preserves stable middle keys through insertion deletion reorder and active removal
+[23/25] [mobile-webkit] › e2e/d4-select-virtual.spec.ts:81:5 › Select virtual no-results message remains visible and search can recover
+[24/25] [mobile-webkit] › e2e/d4-select-virtual.spec.ts:116:5 › Select virtual tail, disabled navigation, dynamic height and scroll anchoring
+[25/25] [mobile-webkit] › e2e/d4-select-virtual.spec.ts:191:5 › Select virtual uses iframe realm and disposes after SPA unmount
+  25 passed (1.4m)

@@ -19,7 +19,7 @@ const aiExports = optionalPackageExports(getComponentEntries('ai'))
 export const packageContracts = [
   {
     name: 'aheart-ui',
-    version: '1.3.0',
+    version: '1.4.0',
     packageDir: 'packages/components',
     expectedExports: baseExports,
     cssSideEffects: true,
@@ -39,13 +39,13 @@ export const packageContracts = [
   },
   {
     name: '@aheart-ui/ai',
-    version: '1.1.0',
+    version: '1.2.0',
     packageDir: 'packages/ai',
     expectedExports: aiExports,
     cssSideEffects: true,
     expectedVuePeer: '>=3.5.0 <4',
     expectedDependencies: { '@aheart-ui/dnd': '^1.1.0' },
-    expectedPeerDependencies: { 'aheart-ui': '^1.1.0' },
+    expectedPeerDependencies: { 'aheart-ui': '^1.4.0' },
     requiredFiles: filesForExports(aiExports)
   }
 ]

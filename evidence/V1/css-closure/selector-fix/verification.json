@@ -1,0 +1,1517 @@
+{
+  "scope": "independent post-extraction source-selector audit and actual installed tarball measurements; budget failure is not suppressed",
+  "gateExitCode": 1,
+  "consumer": "/private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-v1-consumer-vo5HrP",
+  "tarballs": [
+    {
+      "name": "aheart-ui",
+      "version": "1.4.0",
+      "sha256": "fdf5a2abe927aff8735bd68170aac76d287bc58e31134b276d6c1774eec17bc6"
+    },
+    {
+      "name": "@aheart-ui/dnd",
+      "version": "1.1.0",
+      "sha256": "8cbc23c703b7250154c7d8afd2c18bf0e2ba3fe16f6bd6a82754967caf54747a"
+    },
+    {
+      "name": "@aheart-ui/ai",
+      "version": "1.2.0",
+      "sha256": "be22efd9b1adcfb435608a5fa76715eda57702ef53e8f5319fc011a4f274aebe"
+    }
+  ],
+  "denominator": {
+    "fullBytes": 201510,
+    "fullSha256": "bd1006443101d0335a14c0ae0bcdaf351de95d0a76cddf4239c89e76cae95c83",
+    "matchesV0": true,
+    "themeBytes": 1767,
+    "themeFraction": 0.008768795593270805
+  },
+  "entries": [
+    {
+      "key": "base/button",
+      "initialBytes": 7945,
+      "packedBytes": 7945,
+      "delta": 0,
+      "sha256": "9dababe87f16133f35a965208b8a317a79805010a5b2f2fcc279e1437f7d6983",
+      "unchanged": true,
+      "componentFraction": 0.039427323706019556,
+      "themePlusFraction": 0.04819611929929036,
+      "dependencies": [
+        {
+          "entry": "base/icon",
+          "bytes": 597,
+          "fraction": 0.07514159848961612
+        }
+      ]
+    },
+    {
+      "key": "base/config-provider",
+      "initialBytes": 101,
+      "packedBytes": 101,
+      "delta": 0,
+      "sha256": "bc75a3259ee4629b3cf9097326360b470193c280d23fbd685c876a9696eac80b",
+      "unchanged": true,
+      "componentFraction": 0.0005012158205548112,
+      "themePlusFraction": 0.009270011413825616,
+      "dependencies": []
+    },
+    {
+      "key": "base/icon",
+      "initialBytes": 597,
+      "packedBytes": 597,
+      "delta": 0,
+      "sha256": "8efb0585061ac97e2d2a9c956dfec5fee58b38a1afa32d30d7d2ae600d9e6d20",
+      "unchanged": true,
+      "componentFraction": 0.0029626321274378443,
+      "themePlusFraction": 0.01173142772070865,
+      "dependencies": []
+    },
+    {
+      "key": "base/typography",
+      "initialBytes": 4048,
+      "packedBytes": 4048,
+      "delta": 0,
+      "sha256": "1a846b4afee9e559e06e1976e28b44be8e21f287ec53d937fbf8d4ae1782c1c8",
+      "unchanged": true,
+      "componentFraction": 0.02008833308520669,
+      "themePlusFraction": 0.028857128678477496,
+      "dependencies": []
+    },
+    {
+      "key": "base/space",
+      "initialBytes": 690,
+      "packedBytes": 690,
+      "delta": 0,
+      "sha256": "6e059f748d77f45e04dd0715ca56a54dd6d67fb16656c4ffadcbdb38501a4401",
+      "unchanged": true,
+      "componentFraction": 0.003424147684978413,
+      "themePlusFraction": 0.012192943278249218,
+      "dependencies": []
+    },
+    {
+      "key": "base/divider",
+      "initialBytes": 2027,
+      "packedBytes": 2027,
+      "delta": 0,
+      "sha256": "163b7b1b8133710adcb9fa1ea5ae470006981d49c36eb051e5309596769394ed",
+      "unchanged": true,
+      "componentFraction": 0.010059054141233686,
+      "themePlusFraction": 0.018827849734504493,
+      "dependencies": []
+    },
+    {
+      "key": "base/splitter",
+      "initialBytes": 3070,
+      "packedBytes": 3070,
+      "delta": 0,
+      "sha256": "80f011fd8cc153d2254df323c65b4e6039be877d2f9f5b618d370404807f6e9e",
+      "unchanged": true,
+      "componentFraction": 0.015234975931715548,
+      "themePlusFraction": 0.024003771524986353,
+      "dependencies": []
+    },
+    {
+      "key": "base/flex",
+      "initialBytes": 1008,
+      "packedBytes": 1008,
+      "delta": 0,
+      "sha256": "e94c605ff011c383442ee813243e67639a97ab2a718da76c680e6584e0ef4f06",
+      "unchanged": true,
+      "componentFraction": 0.005002233139794551,
+      "themePlusFraction": 0.013771028733065356,
+      "dependencies": []
+    },
+    {
+      "key": "base/grid",
+      "initialBytes": 7043,
+      "packedBytes": 7043,
+      "delta": 0,
+      "sha256": "eb1862b78b3a1172390928b4f916ed42be4ffb5091f6ea347119cdf9251ca648",
+      "unchanged": true,
+      "componentFraction": 0.034951119051163715,
+      "themePlusFraction": 0.04371991464443452,
+      "dependencies": []
+    },
+    {
+      "key": "base/tabs",
+      "initialBytes": 5475,
+      "packedBytes": 5475,
+      "delta": 0,
+      "sha256": "79902f2dd98cb603eef5fe7048b8462b7d1051b2b108d1daf466b7dfcab1a1bf",
+      "unchanged": true,
+      "componentFraction": 0.02716986750037219,
+      "themePlusFraction": 0.035938663093643,
+      "dependencies": []
+    },
+    {
+      "key": "base/breadcrumb",
+      "initialBytes": 1253,
+      "packedBytes": 1253,
+      "delta": 0,
+      "sha256": "652409fa69b9d2c6f2be99300931169f6e22a93f963c103fdbeefe3ba5bace0a",
+      "unchanged": true,
+      "componentFraction": 0.0062180536946057265,
+      "themePlusFraction": 0.014986849287876532,
+      "dependencies": []
+    },
+    {
+      "key": "base/dropdown",
+      "initialBytes": 18689,
+      "packedBytes": 18689,
+      "delta": 0,
+      "sha256": "edad5069676fb8e4da3b9fa774de229dbc0ed6debca9a15c09b4c7f09e0bfc24",
+      "unchanged": true,
+      "componentFraction": 0.09274477693414719,
+      "themePlusFraction": 0.101513572527418,
+      "dependencies": [
+        {
+          "entry": "base/button",
+          "bytes": 7945,
+          "fraction": 0.42511637861843865
+        },
+        {
+          "entry": "base/icon",
+          "bytes": 597,
+          "fraction": 0.03194392423350634
+        },
+        {
+          "entry": "base/menu",
+          "bytes": 8462,
+          "fraction": 0.4527797099898336
+        }
+      ]
+    },
+    {
+      "key": "base/menu",
+      "initialBytes": 8462,
+      "packedBytes": 8462,
+      "delta": 0,
+      "sha256": "1fc82f3ffb0766482a628fe8ad2a83b28bcef0b65294364d1f75efee578bf699",
+      "unchanged": true,
+      "componentFraction": 0.04199295320331497,
+      "themePlusFraction": 0.05076174879658578,
+      "dependencies": []
+    },
+    {
+      "key": "base/steps",
+      "initialBytes": 7335,
+      "packedBytes": 7335,
+      "delta": 0,
+      "sha256": "087b2f27d891b7abb425ff3446034dec4cad2452520011aedbe7a17816cec167",
+      "unchanged": true,
+      "componentFraction": 0.036400178651183564,
+      "themePlusFraction": 0.04516897424445437,
+      "dependencies": []
+    },
+    {
+      "key": "base/input",
+      "initialBytes": 3900,
+      "packedBytes": 3900,
+      "delta": 0,
+      "sha256": "b54a4678db3754023aee6a84568aeb87144fe6c3b28dd8fae952b1b123974e68",
+      "unchanged": true,
+      "componentFraction": 0.019353878219443205,
+      "themePlusFraction": 0.028122673812714008,
+      "dependencies": []
+    },
+    {
+      "key": "base/date-picker",
+      "initialBytes": 30236,
+      "packedBytes": 30236,
+      "delta": 0,
+      "sha256": "c08b482fcbe2effdca79928662d5d18307f567cd53e7195f5a57b4ad0a1879b6",
+      "unchanged": true,
+      "componentFraction": 0.1500471440623294,
+      "themePlusFraction": 0.15881593965560023,
+      "dependencies": [
+        {
+          "entry": "base/icon",
+          "bytes": 597,
+          "fraction": 0.01974467522159016
+        }
+      ]
+    },
+    {
+      "key": "base/time-picker",
+      "initialBytes": 13735,
+      "packedBytes": 13735,
+      "delta": 0,
+      "sha256": "49a365075fb884903dee30b60c28505a29099e44fa3442ae0a69449c74dab9b6",
+      "unchanged": true,
+      "componentFraction": 0.06816038906257754,
+      "themePlusFraction": 0.07692918465584835,
+      "dependencies": [
+        {
+          "entry": "base/icon",
+          "bytes": 597,
+          "fraction": 0.04346559883509283
+        }
+      ]
+    },
+    {
+      "key": "base/upload",
+      "initialBytes": 2035,
+      "packedBytes": 2035,
+      "delta": 0,
+      "sha256": "a1a94a89d7e792f7d2074cdbcc97a6ddd4453eac645117fe3d6ae0384747f6fa",
+      "unchanged": true,
+      "componentFraction": 0.010098754404247928,
+      "themePlusFraction": 0.018867549997518735,
+      "dependencies": []
+    },
+    {
+      "key": "base/tree",
+      "initialBytes": 2338,
+      "packedBytes": 2338,
+      "delta": 0,
+      "sha256": "5d6572f2fae84b09689eaf1f0b1ff1a58192fc0650cf6d4d1edf34c8121e2647",
+      "unchanged": true,
+      "componentFraction": 0.011602401865912361,
+      "themePlusFraction": 0.020371197459183168,
+      "dependencies": [
+        {
+          "entry": "base/icon",
+          "bytes": 597,
+          "fraction": 0.2553464499572284
+        }
+      ]
+    },
+    {
+      "key": "base/tree-select",
+      "initialBytes": 8867,
+      "packedBytes": 8867,
+      "delta": 0,
+      "sha256": "e79732444ca1a19021dd35ee1a7da6f3639fbca0a329f39228ddf9e745b59e8f",
+      "unchanged": true,
+      "componentFraction": 0.044002779018410994,
+      "themePlusFraction": 0.052771574611681804,
+      "dependencies": [
+        {
+          "entry": "base/icon",
+          "bytes": 597,
+          "fraction": 0.06732829592872448
+        },
+        {
+          "entry": "base/tree",
+          "bytes": 2338,
+          "fraction": 0.2636742979587234
+        }
+      ]
+    },
+    {
+      "key": "base/cascader",
+      "initialBytes": 9411,
+      "packedBytes": 9411,
+      "delta": 0,
+      "sha256": "5b401c1bb1ef4d3e98f177c3f0825e227e73b0a306c9221d158c98d1956de350",
+      "unchanged": true,
+      "componentFraction": 0.04670239690337948,
+      "themePlusFraction": 0.05547119249665029,
+      "dependencies": [
+        {
+          "entry": "base/icon",
+          "bytes": 597,
+          "fraction": 0.06343640420784188
+        }
+      ]
+    },
+    {
+      "key": "base/textarea",
+      "initialBytes": 4783,
+      "packedBytes": 4783,
+      "delta": 0,
+      "sha256": "0b9d69e3bd5b023e1dbc0613292ee7bfbda279ed33e4008883f30516a4411023",
+      "unchanged": true,
+      "componentFraction": 0.023735794749640216,
+      "themePlusFraction": 0.03250459034291102,
+      "dependencies": []
+    },
+    {
+      "key": "base/input-number",
+      "initialBytes": 6357,
+      "packedBytes": 6357,
+      "delta": 0,
+      "sha256": "4add389ba1789925733b857253e6134b995e13b169429c30e52b28165031cbdd",
+      "unchanged": true,
+      "componentFraction": 0.031546821497692425,
+      "themePlusFraction": 0.04031561709096323,
+      "dependencies": []
+    },
+    {
+      "key": "base/checkbox",
+      "initialBytes": 2528,
+      "packedBytes": 2528,
+      "delta": 0,
+      "sha256": "6127e6d508fc714dd2b39a17ebef2d0015d3c025d8e3a3dfec244693ea0a2470",
+      "unchanged": true,
+      "componentFraction": 0.01254528311250062,
+      "themePlusFraction": 0.021314078705771424,
+      "dependencies": []
+    },
+    {
+      "key": "base/radio",
+      "initialBytes": 3748,
+      "packedBytes": 3748,
+      "delta": 0,
+      "sha256": "371ad03f5101368a9cb985a35711d487604c09444e08cbbc915334e4f361819c",
+      "unchanged": true,
+      "componentFraction": 0.018599573222172597,
+      "themePlusFraction": 0.0273683688154434,
+      "dependencies": []
+    },
+    {
+      "key": "base/switch",
+      "initialBytes": 2712,
+      "packedBytes": 2712,
+      "delta": 0,
+      "sha256": "99bafd04cec32de1455c3360615c21b4254a71123a4efbfedb92dc2fb0859953",
+      "unchanged": true,
+      "componentFraction": 0.013458389161828198,
+      "themePlusFraction": 0.022227184755099,
+      "dependencies": [
+        {
+          "entry": "base/icon",
+          "bytes": 597,
+          "fraction": 0.22013274336283187
+        }
+      ]
+    },
+    {
+      "key": "base/combobox",
+      "initialBytes": 3572,
+      "packedBytes": 3572,
+      "delta": 0,
+      "sha256": "878d5ff02f64d4f7c32c400dea64ca7d1651e61d10ed1aaa68858fb5e340def9",
+      "unchanged": true,
+      "componentFraction": 0.017726167435859263,
+      "themePlusFraction": 0.026494963029130066,
+      "dependencies": []
+    },
+    {
+      "key": "base/select",
+      "initialBytes": 10472,
+      "packedBytes": 10472,
+      "delta": 0,
+      "sha256": "e3437f4f653e74b35f0a59600d14d8f3bc2cf68c80c7afe838587a1a1ffa46d3",
+      "unchanged": true,
+      "componentFraction": 0.05196764428564339,
+      "themePlusFraction": 0.060736439878914195,
+      "dependencies": [
+        {
+          "entry": "base/icon",
+          "bytes": 597,
+          "fraction": 0.05700916730328495
+        }
+      ]
+    },
+    {
+      "key": "base/form",
+      "initialBytes": 7555,
+      "packedBytes": 7555,
+      "delta": 0,
+      "sha256": "19fd56d5d4c611b687d359da30d55652cd8d53a8119c1e4689c31ca120d2eac2",
+      "unchanged": true,
+      "componentFraction": 0.037491935884075234,
+      "themePlusFraction": 0.04626073147734604,
+      "dependencies": [
+        {
+          "entry": "base/tooltip",
+          "bytes": 3098,
+          "fraction": 0.4100595632031767
+        }
+      ]
+    },
+    {
+      "key": "base/tag",
+      "initialBytes": 3812,
+      "packedBytes": 3812,
+      "delta": 0,
+      "sha256": "b320c6dc24ab1075a2f357109505ecf9a43f5cde62cd2b9a6b79cac6979ff839",
+      "unchanged": true,
+      "componentFraction": 0.018917175326286537,
+      "themePlusFraction": 0.02768597091955734,
+      "dependencies": []
+    },
+    {
+      "key": "base/badge",
+      "initialBytes": 2870,
+      "packedBytes": 2870,
+      "delta": 0,
+      "sha256": "89716b6c5a5c3b7fcc4a8adc410bc5c3ea437964ef77829c86de297d279b9664",
+      "unchanged": true,
+      "componentFraction": 0.014242469356359486,
+      "themePlusFraction": 0.02301126494963029,
+      "dependencies": []
+    },
+    {
+      "key": "base/card",
+      "initialBytes": 5695,
+      "packedBytes": 5695,
+      "delta": 0,
+      "sha256": "03082cdfef1d81fe5ddade3bd56ddf10f64f438465b6284467a140985708d2c9",
+      "unchanged": true,
+      "componentFraction": 0.02826162473326386,
+      "themePlusFraction": 0.03703042032653466,
+      "dependencies": []
+    },
+    {
+      "key": "base/empty",
+      "initialBytes": 1086,
+      "packedBytes": 1086,
+      "delta": 0,
+      "sha256": "cb5a2c88cfbdf036ab57a63b0acb4c1b16b45c8af347dc64a5a676d0d2b673fd",
+      "unchanged": true,
+      "componentFraction": 0.005389310704183415,
+      "themePlusFraction": 0.014158106297454221,
+      "dependencies": []
+    },
+    {
+      "key": "base/descriptions",
+      "initialBytes": 2346,
+      "packedBytes": 2346,
+      "delta": 0,
+      "sha256": "4e63e4c5fa1492587d4d47fc4d8b2564af6afbc7c3b7a6a8d7f277dc4ea88227",
+      "unchanged": true,
+      "componentFraction": 0.011642102128926603,
+      "themePlusFraction": 0.02041089772219741,
+      "dependencies": []
+    },
+    {
+      "key": "base/table",
+      "initialBytes": 15233,
+      "packedBytes": 15233,
+      "delta": 0,
+      "sha256": "705f5874005a7fcefd5853393afa6867594829149b136092b36fe5352da9b514",
+      "unchanged": true,
+      "componentFraction": 0.07559426331199444,
+      "themePlusFraction": 0.08436305890526524,
+      "dependencies": [
+        {
+          "entry": "base/pagination",
+          "bytes": 4635,
+          "fraction": 0.30427361649051404
+        }
+      ]
+    },
+    {
+      "key": "base/pagination",
+      "initialBytes": 4635,
+      "packedBytes": 4635,
+      "delta": 0,
+      "sha256": "be909c80fa4fccc44a1fe538498f2d4bf6dbf160b0403b7bbfa753269867db4f",
+      "unchanged": true,
+      "componentFraction": 0.02300133988387673,
+      "themePlusFraction": 0.031770135477147535,
+      "dependencies": []
+    },
+    {
+      "key": "base/alert",
+      "initialBytes": 2266,
+      "packedBytes": 2266,
+      "delta": 0,
+      "sha256": "bf6b3d3aaf45dae0e6016fb95186b6125e2106c754de4db316a3b1b54e9351e3",
+      "unchanged": true,
+      "componentFraction": 0.011245099498784179,
+      "themePlusFraction": 0.020013895092054985,
+      "dependencies": []
+    },
+    {
+      "key": "base/message",
+      "initialBytes": 2295,
+      "packedBytes": 2295,
+      "delta": 0,
+      "sha256": "7b32bda5ddafb52675e794c259cefa25d8553663955fd4a4e29a56e23279d0c7",
+      "unchanged": true,
+      "componentFraction": 0.011389012952210809,
+      "themePlusFraction": 0.020157808545481614,
+      "dependencies": []
+    },
+    {
+      "key": "base/modal",
+      "initialBytes": 16305,
+      "packedBytes": 16305,
+      "delta": 0,
+      "sha256": "a66710f10d435025783f054fa86047f7d6cbcd522362396b9755ba5b2bdef17b",
+      "unchanged": true,
+      "componentFraction": 0.08091409855590294,
+      "themePlusFraction": 0.08968289414917374,
+      "dependencies": [
+        {
+          "entry": "base/button",
+          "bytes": 7945,
+          "fraction": 0.48727384237963817
+        },
+        {
+          "entry": "base/icon",
+          "bytes": 597,
+          "fraction": 0.036614535418583255
+        },
+        {
+          "entry": "base/skeleton",
+          "bytes": 3622,
+          "fraction": 0.2221404477154247
+        }
+      ]
+    },
+    {
+      "key": "base/drawer",
+      "initialBytes": 7881,
+      "packedBytes": 7881,
+      "delta": 0,
+      "sha256": "00f963867dbe53610264477e8414fab543d9c5236597790ca9bfe4174b6062a9",
+      "unchanged": true,
+      "componentFraction": 0.039109721601905616,
+      "themePlusFraction": 0.04787851719517642,
+      "dependencies": [
+        {
+          "entry": "base/skeleton",
+          "bytes": 3622,
+          "fraction": 0.4595863469102906
+        }
+      ]
+    },
+    {
+      "key": "base/tooltip",
+      "initialBytes": 3098,
+      "packedBytes": 3098,
+      "delta": 0,
+      "sha256": "b77af43a59bb67687841b8b26380deb690634cab2c40c54ab2531ecada2da3ae",
+      "unchanged": true,
+      "componentFraction": 0.015373926852265397,
+      "themePlusFraction": 0.0241427224455362,
+      "dependencies": []
+    },
+    {
+      "key": "base/popover",
+      "initialBytes": 3432,
+      "packedBytes": 3432,
+      "delta": 0,
+      "sha256": "b22f14c4a33d1df3326b1e056501f06eb130f4b304b5bfbdc3037146826bc58e",
+      "unchanged": true,
+      "componentFraction": 0.017031412833110018,
+      "themePlusFraction": 0.025800208426380825,
+      "dependencies": []
+    },
+    {
+      "key": "base/popconfirm",
+      "initialBytes": 12034,
+      "packedBytes": 12034,
+      "delta": 0,
+      "sha256": "70352104ec252a8bd79a1d79500fd47e12792b8cbd97eb16c3a600be3bac0f51",
+      "unchanged": true,
+      "componentFraction": 0.059719120639174235,
+      "themePlusFraction": 0.06848791623244505,
+      "dependencies": [
+        {
+          "entry": "base/button",
+          "bytes": 7945,
+          "fraction": 0.6602127305966429
+        },
+        {
+          "entry": "base/icon",
+          "bytes": 597,
+          "fraction": 0.049609439920226026
+        }
+      ]
+    },
+    {
+      "key": "base/spin",
+      "initialBytes": 1845,
+      "packedBytes": 1845,
+      "delta": 0,
+      "sha256": "da2b595c2d658710e4ae39223682f2b0d5e8a78d069cd7424d8296456a613ff3",
+      "unchanged": true,
+      "componentFraction": 0.00915587315765967,
+      "themePlusFraction": 0.017924668750930475,
+      "dependencies": []
+    },
+    {
+      "key": "base/skeleton",
+      "initialBytes": 3622,
+      "packedBytes": 3622,
+      "delta": 0,
+      "sha256": "01f61f0493234cbb4f3281519f8514b261a1492740b72abf33c7d042939d3113",
+      "unchanged": true,
+      "componentFraction": 0.017974294079698278,
+      "themePlusFraction": 0.026743089672969084,
+      "dependencies": []
+    },
+    {
+      "key": "ai/actions",
+      "initialBytes": 908,
+      "packedBytes": 908,
+      "delta": 0,
+      "sha256": "be332dda766b01de4e5d0d99bbea08a5b8dfebd200238ea484c19042cedcb6ea",
+      "unchanged": true,
+      "componentFraction": 0.00450597985211652,
+      "themePlusFraction": 0.013274775445387325,
+      "dependencies": []
+    },
+    {
+      "key": "ai/attachments",
+      "initialBytes": 1412,
+      "packedBytes": 1412,
+      "delta": 0,
+      "sha256": "fb6bcee6c41d6eb3f96f66af1de083af47de24f1a875892643eb9917a8772360",
+      "unchanged": true,
+      "componentFraction": 0.007007096422013795,
+      "themePlusFraction": 0.0157758920152846,
+      "dependencies": []
+    },
+    {
+      "key": "ai/bubble",
+      "initialBytes": 5039,
+      "packedBytes": 5039,
+      "delta": 0,
+      "sha256": "12191bd152b41b31bb09bfb13e5f6a891e4bf4f5d48fafb96058d3f54564113d",
+      "unchanged": true,
+      "componentFraction": 0.025006203166095975,
+      "themePlusFraction": 0.03377499875936678,
+      "dependencies": [
+        {
+          "entry": "ai/attachments",
+          "bytes": 1412,
+          "fraction": 0.2802143282397301
+        },
+        {
+          "entry": "ai/process",
+          "bytes": 1388,
+          "fraction": 0.27545147846795
+        },
+        {
+          "entry": "ai/sources",
+          "bytes": 1052,
+          "fraction": 0.20877158166302837
+        }
+      ]
+    },
+    {
+      "key": "ai/conversations",
+      "initialBytes": 1032,
+      "packedBytes": 1032,
+      "delta": 0,
+      "sha256": "eb6cc5f2887796218d35f78946df47057ac89a5efed8fe3a14d3780f484cf3a0",
+      "unchanged": true,
+      "componentFraction": 0.005121333928837278,
+      "themePlusFraction": 0.013890129522108084,
+      "dependencies": []
+    },
+    {
+      "key": "ai/form",
+      "initialBytes": 99853,
+      "packedBytes": 99853,
+      "delta": 0,
+      "sha256": "84c4b1ab3dd1bb91858095534054c117011553476720a8cfc066bbb98a89c628",
+      "unchanged": true,
+      "componentFraction": 0.4955237953451442,
+      "themePlusFraction": 0.5042925909384149,
+      "dependencies": [
+        {
+          "entry": "base/button",
+          "bytes": 7945,
+          "fraction": 0.07956696343625129
+        },
+        {
+          "entry": "base/checkbox",
+          "bytes": 2528,
+          "fraction": 0.02531721630797272
+        },
+        {
+          "entry": "base/date-picker",
+          "bytes": 30236,
+          "fraction": 0.30280512353159145
+        },
+        {
+          "entry": "base/form",
+          "bytes": 7555,
+          "fraction": 0.07566122199633461
+        },
+        {
+          "entry": "base/input",
+          "bytes": 3900,
+          "fraction": 0.039057414399166775
+        },
+        {
+          "entry": "base/input-number",
+          "bytes": 6357,
+          "fraction": 0.06366358547064184
+        },
+        {
+          "entry": "base/radio",
+          "bytes": 3748,
+          "fraction": 0.03753517670976335
+        },
+        {
+          "entry": "base/select",
+          "bytes": 10472,
+          "fraction": 0.10487416502258319
+        },
+        {
+          "entry": "base/switch",
+          "bytes": 2712,
+          "fraction": 0.027159925089882127
+        },
+        {
+          "entry": "base/textarea",
+          "bytes": 4783,
+          "fraction": 0.04790041360800377
+        },
+        {
+          "entry": "base/time-picker",
+          "bytes": 13735,
+          "fraction": 0.13755220173655272
+        },
+        {
+          "entry": "base/tree-select",
+          "bytes": 8867,
+          "fraction": 0.08880053678907995
+        },
+        {
+          "entry": "base/upload",
+          "bytes": 2035,
+          "fraction": 0.020379958539052407
+        }
+      ]
+    },
+    {
+      "key": "ai/process",
+      "initialBytes": 1388,
+      "packedBytes": 1388,
+      "delta": 0,
+      "sha256": "81743680f88996a1db79255c6da5f20cb6601c1152b509707c1b6753e2bb12d0",
+      "unchanged": true,
+      "componentFraction": 0.006887995632971069,
+      "themePlusFraction": 0.015656791226241872,
+      "dependencies": []
+    },
+    {
+      "key": "ai/prompts",
+      "initialBytes": 1566,
+      "packedBytes": 1566,
+      "delta": 0,
+      "sha256": "483ee8f9c8358a25438a49d2ebc7c311d6cf26375af6a3c6739d17f74e2928e7",
+      "unchanged": true,
+      "componentFraction": 0.007771326485037963,
+      "themePlusFraction": 0.01654012207830877,
+      "dependencies": []
+    },
+    {
+      "key": "ai/sender",
+      "initialBytes": 1970,
+      "packedBytes": 1970,
+      "delta": 0,
+      "sha256": "566330127421e5ac64fecda9227036003c747e8a097db06893b38cbf698c671d",
+      "unchanged": true,
+      "componentFraction": 0.009776189767257209,
+      "themePlusFraction": 0.018544985360528014,
+      "dependencies": []
+    },
+    {
+      "key": "ai/sources",
+      "initialBytes": 1052,
+      "packedBytes": 1052,
+      "delta": 0,
+      "sha256": "7a38970af1c424996bae5bdef703380bb8401e980e18e7b2a81f1f22711e7334",
+      "unchanged": true,
+      "componentFraction": 0.005220584586372885,
+      "themePlusFraction": 0.01398938017964369,
+      "dependencies": []
+    },
+    {
+      "key": "ai/thought-chain",
+      "initialBytes": 1388,
+      "packedBytes": 1388,
+      "delta": 0,
+      "sha256": "81743680f88996a1db79255c6da5f20cb6601c1152b509707c1b6753e2bb12d0",
+      "unchanged": true,
+      "componentFraction": 0.006887995632971069,
+      "themePlusFraction": 0.015656791226241872,
+      "dependencies": [
+        {
+          "entry": "ai/process",
+          "bytes": 1388,
+          "fraction": 1
+        }
+      ]
+    },
+    {
+      "key": "ai/welcome",
+      "initialBytes": 673,
+      "packedBytes": 673,
+      "delta": 0,
+      "sha256": "d5b22fd4457d029249c176f8b552d41abdc4c46596b89d3964c4e12f8b514bdc",
+      "unchanged": true,
+      "componentFraction": 0.003339784626073148,
+      "themePlusFraction": 0.012108580219343953,
+      "dependencies": []
+    },
+    {
+      "key": "ai/chat-panel",
+      "initialBytes": 13095,
+      "packedBytes": 13095,
+      "delta": 0,
+      "sha256": "a4791bb47e175f5247115d05139794bf9bb7dc9b5460d0e152013ac09592c24c",
+      "unchanged": true,
+      "componentFraction": 0.06498436802143814,
+      "themePlusFraction": 0.07375316361470895,
+      "dependencies": [
+        {
+          "entry": "ai/attachments",
+          "bytes": 1412,
+          "fraction": 0.10782741504390989
+        },
+        {
+          "entry": "ai/bubble",
+          "bytes": 5039,
+          "fraction": 0.384803360061092
+        },
+        {
+          "entry": "ai/conversations",
+          "bytes": 1032,
+          "fraction": 0.07880870561282932
+        },
+        {
+          "entry": "ai/prompts",
+          "bytes": 1566,
+          "fraction": 0.11958762886597939
+        },
+        {
+          "entry": "ai/sender",
+          "bytes": 1970,
+          "fraction": 0.15043909889270715
+        },
+        {
+          "entry": "ai/welcome",
+          "bytes": 673,
+          "fraction": 0.051393661702940054
+        }
+      ]
+    },
+    {
+      "key": "ai/agent-workbench",
+      "initialBytes": 54109,
+      "packedBytes": 54212,
+      "delta": 103,
+      "sha256": "28ab9bfb95081528b44122525b98365334070235cced53e8f21be251cbf72c16",
+      "unchanged": false,
+      "componentFraction": 0.2690288323160141,
+      "themePlusFraction": 0.2777976279092849,
+      "dependencies": [
+        {
+          "entry": "base/button",
+          "bytes": 7945,
+          "fraction": 0.1465542684276544
+        },
+        {
+          "entry": "base/drawer",
+          "bytes": 7881,
+          "fraction": 0.14537371799601564
+        },
+        {
+          "entry": "base/splitter",
+          "bytes": 3070,
+          "fraction": 0.05662952851767136
+        },
+        {
+          "entry": "base/tabs",
+          "bytes": 5475,
+          "fraction": 0.10099240020659632
+        },
+        {
+          "entry": "ai/chat-panel",
+          "bytes": 13095,
+          "fraction": 0.24155168597358517
+        },
+        {
+          "entry": "ai/attachments",
+          "bytes": 1412,
+          "fraction": 0.026045893898029956
+        },
+        {
+          "entry": "ai/conversations",
+          "bytes": 1032,
+          "fraction": 0.019036375710174868
+        },
+        {
+          "entry": "ai/sources",
+          "bytes": 1052,
+          "fraction": 0.019405297720061977
+        },
+        {
+          "entry": "dnd/sortable",
+          "bytes": 717,
+          "fraction": 0.013225854054452889
+        }
+      ]
+    },
+    {
+      "key": "ai/chat",
+      "initialBytes": 13216,
+      "packedBytes": 13216,
+      "delta": 0,
+      "sha256": "170c010f07c5a820c69438aee48e9f7bc238b5e026b362899e8199e54d2bb634",
+      "unchanged": true,
+      "componentFraction": 0.06558483449952857,
+      "themePlusFraction": 0.07435363009279937,
+      "dependencies": [
+        {
+          "entry": "ai/chat-panel",
+          "bytes": 13095,
+          "fraction": 0.9908444309927361
+        },
+        {
+          "entry": "ai/actions",
+          "bytes": 908,
+          "fraction": 0.0687046004842615
+        },
+        {
+          "entry": "ai/attachments",
+          "bytes": 1412,
+          "fraction": 0.10684019370460049
+        },
+        {
+          "entry": "ai/bubble",
+          "bytes": 5039,
+          "fraction": 0.38128026634382567
+        },
+        {
+          "entry": "ai/conversations",
+          "bytes": 1032,
+          "fraction": 0.07808716707021791
+        },
+        {
+          "entry": "ai/prompts",
+          "bytes": 1566,
+          "fraction": 0.11849273607748184
+        },
+        {
+          "entry": "ai/sender",
+          "bytes": 1970,
+          "fraction": 0.14906174334140435
+        },
+        {
+          "entry": "ai/sources",
+          "bytes": 1052,
+          "fraction": 0.07960048426150121
+        },
+        {
+          "entry": "ai/welcome",
+          "bytes": 673,
+          "fraction": 0.050923123486682806
+        }
+      ]
+    },
+    {
+      "key": "ai/agent",
+      "initialBytes": 100927,
+      "packedBytes": 100927,
+      "delta": 0,
+      "sha256": "cd7a5464a93ad02fd17182812027649936c98e27805eb038ca336b536be935d0",
+      "unchanged": true,
+      "componentFraction": 0.5008535556548062,
+      "themePlusFraction": 0.509622351248077,
+      "dependencies": [
+        {
+          "entry": "ai/form",
+          "bytes": 99853,
+          "fraction": 0.9893586453575356
+        },
+        {
+          "entry": "ai/process",
+          "bytes": 1388,
+          "fraction": 0.013752514193426933
+        },
+        {
+          "entry": "ai/thought-chain",
+          "bytes": 1388,
+          "fraction": 0.013752514193426933
+        }
+      ]
+    },
+    {
+      "key": "ai/workbench",
+      "initialBytes": 54109,
+      "packedBytes": 54212,
+      "delta": 103,
+      "sha256": "28ab9bfb95081528b44122525b98365334070235cced53e8f21be251cbf72c16",
+      "unchanged": false,
+      "componentFraction": 0.2690288323160141,
+      "themePlusFraction": 0.2777976279092849,
+      "dependencies": [
+        {
+          "entry": "base/button",
+          "bytes": 7945,
+          "fraction": 0.1465542684276544
+        },
+        {
+          "entry": "base/drawer",
+          "bytes": 7881,
+          "fraction": 0.14537371799601564
+        },
+        {
+          "entry": "base/splitter",
+          "bytes": 3070,
+          "fraction": 0.05662952851767136
+        },
+        {
+          "entry": "base/tabs",
+          "bytes": 5475,
+          "fraction": 0.10099240020659632
+        },
+        {
+          "entry": "ai/chat-panel",
+          "bytes": 13095,
+          "fraction": 0.24155168597358517
+        },
+        {
+          "entry": "ai/attachments",
+          "bytes": 1412,
+          "fraction": 0.026045893898029956
+        },
+        {
+          "entry": "ai/conversations",
+          "bytes": 1032,
+          "fraction": 0.019036375710174868
+        },
+        {
+          "entry": "ai/sources",
+          "bytes": 1052,
+          "fraction": 0.019405297720061977
+        },
+        {
+          "entry": "dnd/sortable",
+          "bytes": 717,
+          "fraction": 0.013225854054452889
+        }
+      ]
+    },
+    {
+      "key": "dnd/draggable",
+      "initialBytes": 438,
+      "packedBytes": 438,
+      "delta": 0,
+      "sha256": "21a5c332dc6ad8715748b4817c6eb3c67ed9030f0da230173d98e135391168ec",
+      "unchanged": true,
+      "componentFraction": 0.002173589400029775,
+      "themePlusFraction": 0.01094238499330058,
+      "dependencies": []
+    },
+    {
+      "key": "dnd/droppable",
+      "initialBytes": 445,
+      "packedBytes": 445,
+      "delta": 0,
+      "sha256": "cb0be2dcfd179ffc88050cd8865a1e49aa712fa3f6bf6d452d7285be93d81d92",
+      "unchanged": true,
+      "componentFraction": 0.002208327130167237,
+      "themePlusFraction": 0.010977122723438043,
+      "dependencies": []
+    },
+    {
+      "key": "dnd/drag-overlay",
+      "initialBytes": 304,
+      "packedBytes": 304,
+      "delta": 0,
+      "sha256": "06d7d14d19d5d436631440857a77d481ef38ede75174bdf7f2b4f02ebdb02387",
+      "unchanged": true,
+      "componentFraction": 0.0015086099945412139,
+      "themePlusFraction": 0.01027740558781202,
+      "dependencies": []
+    },
+    {
+      "key": "dnd/sortable",
+      "initialBytes": 717,
+      "packedBytes": 717,
+      "delta": 0,
+      "sha256": "64c21f858539adaea56e0c18471db6b08504cb0ef146d0517953ef0b7dbee11f",
+      "unchanged": true,
+      "componentFraction": 0.003558136072651481,
+      "themePlusFraction": 0.012326931665922287,
+      "dependencies": []
+    }
+  ],
+  "sourceAudit": {
+    "checked": 967,
+    "excludedFixtures": [
+      {
+        "entry": "ai/form",
+        "selector": ".d8-fixture-card .aheart-ai-form"
+      },
+      {
+        "entry": "ai/agent-workbench",
+        "selector": ".d8-fixture-card .aheart-ai-workbench"
+      },
+      {
+        "entry": "ai/agent",
+        "selector": ".d8-fixture-card .aheart-ai-form"
+      },
+      {
+        "entry": "ai/workbench",
+        "selector": ".d8-fixture-card .aheart-ai-workbench"
+      }
+    ],
+    "missing": []
+  },
+  "fullStyles": [
+    {
+      "file": "packages/components/es/full.css",
+      "sha256": "bd1006443101d0335a14c0ae0bcdaf351de95d0a76cddf4239c89e76cae95c83",
+      "unchangedFromV0": true
+    },
+    {
+      "file": "packages/ai/src/style.css",
+      "sha256": "2d7624533fcb12a14cbb49d3a83eab85e7e6bf53591f8db41f57286b6120a4ba",
+      "unchangedFromV0": true
+    },
+    {
+      "file": "packages/dnd/src/style.css",
+      "sha256": "eaeb7b1075d475071272eb3727fdcbdec7970209a5d69f4b5b9522c10ab92f5a",
+      "unchangedFromV0": true
+    }
+  ],
+  "protectedSource": [
+    {
+      "file": "pilots/README.md",
+      "sha256": "ad223d423634fd98059a40f171f68fa3bf8d450d55082e3f0a879a8af3d304d2",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/ai-review-gate/README.md",
+      "sha256": "d52513a77b29bbb6748f1dec9b72292a9c1bea184669f167635494913048e5fe",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/ai-review-gate/app.js",
+      "sha256": "21683dfa77c8a7688ead0dd4424fe1a8a944fe578aa39edc2a061b0578de3383",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/ai-review-gate/iframe.html",
+      "sha256": "9823e0c1b758eda2aa7a5807975dbe682f60f5879a33d46fd7c7886b6e8988bf",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/ai-review-gate/index.html",
+      "sha256": "f755c8d3e951476cc7c2685dc9675850e0fb2127a017d466241700ca894b4d0a",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/ai-review-gate/main.js",
+      "sha256": "6746cbff194ca2f4727e95c163a36484c08d83b7b37b86881fe541fa0c23f99d",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/ai-review-gate/package-lock.json",
+      "sha256": "a16c79fa9faa2c01798e57d03765094e5c913498a96dda34bb346dea9a411289",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/ai-review-gate/package.json",
+      "sha256": "629eab69f1861215981ebab2a8a935b51bcfaf33744858cdd460fe640ec3eb59",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/ai-review-gate/ssr.mjs",
+      "sha256": "86d69046205bdfa484c43ada30e10fc2bb6144ad808190aca68c5983785951a9",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/ai-review-gate/style.css",
+      "sha256": "a47e9e8dbec279ad42809b2ecc57357ff2e8ef37eab9b13fe151f785757ab98a",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/ai-review-gate/tsconfig.json",
+      "sha256": "c59094b325081757c582e3f683f0401f7feb59d3649427fa3f94e4568f76244a",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/ai-review-gate/tsconfig.strict.json",
+      "sha256": "b33f818a882c93c36add9ac4d8bb1510df539030ba3cba4a51cae417c2908928",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/ai-review-gate/types.ts",
+      "sha256": "e830ab15fb2043e2f50951797db623b35d6c08aa8490960af65921533254e72c",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/ai-review-gate/vite.config.js",
+      "sha256": "e75f2f3c572aa3312b1ec0af91c08b13d4e7e6b1f2fcb8ed684d5ace38514571",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/check-rollback.mjs",
+      "sha256": "832e8ee834e4bffa0fb36c066da4756756b61aa21741292a2c31933dbcf7a0ee",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/clean-consumer/README.md",
+      "sha256": "b7f313f8de251333ead210d8bdd7f91f6b80cdcc56921d83788a765f0c7987bd",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/clean-consumer/app.js",
+      "sha256": "9bac9aa1a2fb4facea8a2905bd6e4952d7d5db250ff752e8a83c1e4f81aea316",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/clean-consumer/iframe.html",
+      "sha256": "9823e0c1b758eda2aa7a5807975dbe682f60f5879a33d46fd7c7886b6e8988bf",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/clean-consumer/index.html",
+      "sha256": "00f16e66916a3080664748baa1c7604b3e74451584c4c00fbaf430ea67ba0611",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/clean-consumer/main.js",
+      "sha256": "0f091d6f4a767a7cf8d07c97e95cf55348ee09a8408eb75f3c29eb2b0fa2ae60",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/clean-consumer/package-lock.json",
+      "sha256": "52981d00bcb721c6cd13e6b79d7e209a20a7f841bcec59c54e6f6213902a8ff6",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/clean-consumer/package.json",
+      "sha256": "f2c18cefa49c598829b01321fe7de2330673618f25160ab7db5343c48189bbc7",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/clean-consumer/ssr.mjs",
+      "sha256": "86d69046205bdfa484c43ada30e10fc2bb6144ad808190aca68c5983785951a9",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/clean-consumer/style.css",
+      "sha256": "a47e9e8dbec279ad42809b2ecc57357ff2e8ef37eab9b13fe151f785757ab98a",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/clean-consumer/tsconfig.json",
+      "sha256": "c59094b325081757c582e3f683f0401f7feb59d3649427fa3f94e4568f76244a",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/clean-consumer/tsconfig.strict.json",
+      "sha256": "b33f818a882c93c36add9ac4d8bb1510df539030ba3cba4a51cae417c2908928",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/clean-consumer/types.ts",
+      "sha256": "627d5854fa47508efecd3e25fb3148f509e3d49f40adc431b854423561c0230b",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/clean-consumer/vite.config.js",
+      "sha256": "e75f2f3c572aa3312b1ec0af91c08b13d4e7e6b1f2fcb8ed684d5ace38514571",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/muxu-todo/README.md",
+      "sha256": "4b7bd5d94d9cc24a66a7da1018cf967b08856410fd4916e47d861f19b0f25163",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/muxu-todo/app.js",
+      "sha256": "a3e4c764c24f95409c69949969d5b2d64faa885bbed0ac240b247c713aeec34e",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/muxu-todo/iframe.html",
+      "sha256": "9823e0c1b758eda2aa7a5807975dbe682f60f5879a33d46fd7c7886b6e8988bf",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/muxu-todo/index.html",
+      "sha256": "49723fd60c0f31874cb06b66afa3433379a8f19ea566ff738281b4b42be0a833",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/muxu-todo/main.js",
+      "sha256": "0f091d6f4a767a7cf8d07c97e95cf55348ee09a8408eb75f3c29eb2b0fa2ae60",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/muxu-todo/package-lock.json",
+      "sha256": "23b7856dc6cc5a1c0c74b46f6fd339ca532515d11ac6e1805abb075cab9ca12a",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/muxu-todo/package.json",
+      "sha256": "38987b1e1654a7e53531b18570f6436e90c987d0a70dbf1575485bdafdeb6051",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/muxu-todo/ssr.mjs",
+      "sha256": "86d69046205bdfa484c43ada30e10fc2bb6144ad808190aca68c5983785951a9",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/muxu-todo/style.css",
+      "sha256": "a47e9e8dbec279ad42809b2ecc57357ff2e8ef37eab9b13fe151f785757ab98a",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/muxu-todo/tsconfig.json",
+      "sha256": "c59094b325081757c582e3f683f0401f7feb59d3649427fa3f94e4568f76244a",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/muxu-todo/tsconfig.strict.json",
+      "sha256": "b33f818a882c93c36add9ac4d8bb1510df539030ba3cba4a51cae417c2908928",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/muxu-todo/types.ts",
+      "sha256": "627d5854fa47508efecd3e25fb3148f509e3d49f40adc431b854423561c0230b",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/muxu-todo/vite.config.js",
+      "sha256": "e75f2f3c572aa3312b1ec0af91c08b13d4e7e6b1f2fcb8ed684d5ace38514571",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/run-baselines.mjs",
+      "sha256": "c6e839665691f277d87fc3c60be631aacbd4ab538f4e57dd8d5e389e88241ab3",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/serve-baselines.mjs",
+      "sha256": "e5ea697f58ac8bf628e00dda2387f81e165c7fe80f172e119a3e393490f7e3f0",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/tooling/package-lock.json",
+      "sha256": "63837282a22e59fe155449d023d67096153a526b72b768b816b53f117c5105c1",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "pilots/tooling/package.json",
+      "sha256": "ae9dfe8799bacbd3b75d3fc70ad9fe98ca67b37de827caa73f55da1b4eae8992",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "scripts/fixtures/m3-consumer/browser.mjs",
+      "sha256": "8dc752116a6c31059d9a39c5bae792c9c95ee8276e47330a9bcd9e212b0f83be",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "scripts/fixtures/m3-consumer/index.html",
+      "sha256": "fb75cca5ab2c0570f292e2143ac2af0d673cf162643da2fc7d774b08bd6113cc",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "scripts/fixtures/m3-consumer/probe.mjs",
+      "sha256": "801491de9798482efea0bd0908660bae06f4e6abec6bb8dac2a1871f113de477",
+      "unchanged": false,
+      "ownerApprovedAssertionChange": true
+    },
+    {
+      "file": "scripts/fixtures/m3-consumer/scenes.js",
+      "sha256": "a52cfd7839aa54a79354dac576d2d31c2537702a65c59cd3c547cf807e9d0c5e",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "scripts/fixtures/strict-consumer/README.md",
+      "sha256": "cbe79c6dceed05a913aaf10ec61888dabc4b219e9e8b9126bfece3eca97bf495",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "scripts/fixtures/strict-consumer/tsconfig.json",
+      "sha256": "f07e6f4b2841409a710a36e0808085ee18a9ed489f3abf895fcf6f538c027f65",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "scripts/fixtures/strict-consumer/types.ts",
+      "sha256": "d014612f355218dfd12b05687f3ff535c196084c561364aa2ffdc52fc2dc093f",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "scripts/form-list-consumer.mjs",
+      "sha256": "27bfa5a7cc1de8c2c2feecf122f621f8d49b708ce78b75b80d8785a560f9a1f4",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "scripts/m1-consumer.mjs",
+      "sha256": "b9d5cbea411ed7c6bb4d02ae6bb052aaf18f479ef079d44f40055280da462034",
+      "unchanged": false,
+      "ownerApprovedAssertionChange": true
+    },
+    {
+      "file": "scripts/m3-consumer.mjs",
+      "sha256": "a0dc52c3449fd1abd23f5be809d047124a8c4940b7a827d6676c7546c5e4bcf1",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "scripts/root-entry-consumer.mjs",
+      "sha256": "46b16c6d7d5293175e72a98d69ab007163a7dd6db726b1a5cccaa6128f09b00b",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    },
+    {
+      "file": "scripts/strict-consumer.mjs",
+      "sha256": "af63a581bbe66e14bcb1b9108a2fb6af6cae204b7598437cfe80e5379f8f2714",
+      "unchanged": true,
+      "ownerApprovedAssertionChange": false
+    }
+  ],
+  "status": "selector fix verified; CSS non-increase gate fails; baseline unchanged"
+}

@@ -5,11 +5,11 @@ import { withInstall } from "../utils/install.js";
 const Tag = withInstall(_sfc_main, "ATag");
 const CheckableTag = withInstall(_sfc_main$1, "ACheckableTag");
 const TagGroup = withInstall(_sfc_main$2, "ATagGroup");
-const Tag$1 = Tag;
 export {
   CheckableTag as ACheckableTag,
   TagGroup as ATagGroup,
   CheckableTag,
+  Tag,
   TagGroup,
-  Tag$1 as default
+  Tag as default
 };

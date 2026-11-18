@@ -35,3 +35,5 @@ export type {
   TypographyStyles,
   TypographyType
 } from './types'
+
+export { Typography }

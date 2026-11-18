@@ -3,41 +3,1073 @@ Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toString
 const base = [
   {
     name: "Button",
+    names: [
+      "Button"
+    ],
     subpath: "button",
     sourceEntry: "src/button/index.ts",
+    dependencies: [
+      "icon"
+    ],
     styles: [
       "button/style.css",
       "icon/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "ConfigProvider",
+    names: [
+      "ConfigProvider"
+    ],
+    subpath: "config-provider",
+    sourceEntry: "src/config-provider/index.ts",
+    dependencies: [],
+    styles: [
+      "config-provider/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Icon",
+    names: [
+      "Icon"
+    ],
+    subpath: "icon",
+    sourceEntry: "src/icon/index.ts",
+    dependencies: [],
+    styles: [
+      "icon/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Typography",
+    names: [
+      "Typography",
+      "Title",
+      "Text",
+      "Paragraph",
+      "Link"
+    ],
+    subpath: "typography",
+    sourceEntry: "src/typography/index.ts",
+    dependencies: [],
+    styles: [
+      "typography/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Space",
+    names: [
+      "Space"
+    ],
+    subpath: "space",
+    sourceEntry: "src/space/index.ts",
+    dependencies: [],
+    styles: [
+      "space/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Divider",
+    names: [
+      "Divider"
+    ],
+    subpath: "divider",
+    sourceEntry: "src/divider/index.ts",
+    dependencies: [],
+    styles: [
+      "divider/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Splitter",
+    names: [
+      "Splitter",
+      "SplitterPanel"
+    ],
+    subpath: "splitter",
+    sourceEntry: "src/splitter/index.ts",
+    dependencies: [],
+    styles: [
+      "splitter/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "utils/install.js",
+      "utils/use-pointer-drag.js"
+    ]
+  },
+  {
+    name: "Flex",
+    names: [
+      "Flex"
+    ],
+    subpath: "flex",
+    sourceEntry: "src/flex/index.ts",
+    dependencies: [],
+    styles: [
+      "flex/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Grid",
+    names: [
+      "Row",
+      "Col"
+    ],
+    subpath: "grid",
+    sourceEntry: "src/grid/index.ts",
+    dependencies: [],
+    styles: [
+      "grid/style.css"
+    ],
+    kind: "plugin",
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Tabs",
+    names: [
+      "Tabs"
+    ],
+    subpath: "tabs",
+    sourceEntry: "src/tabs/index.ts",
+    dependencies: [],
+    styles: [
+      "tabs/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Breadcrumb",
+    names: [
+      "Breadcrumb"
+    ],
+    subpath: "breadcrumb",
+    sourceEntry: "src/breadcrumb/index.ts",
+    dependencies: [],
+    styles: [
+      "breadcrumb/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Dropdown",
+    names: [
+      "DropdownButton",
+      "Dropdown"
+    ],
+    subpath: "dropdown",
+    sourceEntry: "src/dropdown/index.ts",
+    dependencies: [
+      "button",
+      "icon",
+      "menu"
+    ],
+    styles: [
+      "button/style.css",
+      "icon/style.css",
+      "utils/floating.css",
+      "dropdown/style.css",
+      "menu/style.css"
+    ],
+    budgetClass: "composite",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/floating.css.js",
+      "utils/install.js",
+      "utils/overlay-controller.js",
+      "utils/use-floating-dismiss.js",
+      "utils/use-floating-layer.js",
+      "utils/use-floating-position.js",
+      "utils/use-motion-presence.js",
+      "utils/use-overlay-portal.js",
+      "utils/use-teleport-ready.js"
+    ]
+  },
+  {
+    name: "Menu",
+    names: [
+      "Menu"
+    ],
+    subpath: "menu",
+    sourceEntry: "src/menu/index.ts",
+    dependencies: [],
+    styles: [
+      "utils/floating.css",
+      "menu/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/floating.css.js",
+      "utils/install.js",
+      "utils/use-floating-position.js",
+      "utils/use-motion-presence.js"
+    ]
+  },
+  {
+    name: "Steps",
+    names: [
+      "Steps"
+    ],
+    subpath: "steps",
+    sourceEntry: "src/steps/index.ts",
+    dependencies: [],
+    styles: [
+      "steps/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Input",
+    names: [
+      "Input"
+    ],
+    subpath: "input",
+    sourceEntry: "src/input/index.ts",
+    dependencies: [],
+    styles: [
+      "input/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "form/control-context.js",
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "DatePicker",
+    names: [
+      "DateRangePicker",
+      "DatePicker"
+    ],
+    subpath: "date-picker",
+    sourceEntry: "src/date-picker/index.ts",
+    dependencies: [
+      "icon"
+    ],
+    styles: [
+      "date-picker/style.css",
+      "icon/style.css",
+      "utils/floating.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "form/control-context.js",
+      "picker-core/calendar.js",
+      "picker-core/codec.js",
+      "picker-core/dayjs.js",
+      "picker-core/selection.js",
+      "picker-core/transaction.js",
+      "picker-core/viewport.js",
+      "utils/floating-core.js",
+      "utils/floating.css.js",
+      "utils/install.js",
+      "utils/overlay-controller.js",
+      "utils/use-controllable-state.js",
+      "utils/use-floating-dismiss.js",
+      "utils/use-floating-layer.js",
+      "utils/use-floating-position.js",
+      "utils/use-motion-presence.js",
+      "utils/use-overlay-portal.js",
+      "utils/use-prop-presence.js",
+      "utils/use-stable-id.js",
+      "utils/use-teleport-ready.js"
+    ]
+  },
+  {
+    name: "TimePicker",
+    names: [
+      "TimeRangePicker",
+      "TimePicker"
+    ],
+    subpath: "time-picker",
+    sourceEntry: "src/time-picker/index.ts",
+    dependencies: [
+      "icon"
+    ],
+    styles: [
+      "time-picker/style.css",
+      "icon/style.css",
+      "utils/floating.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "form/control-context.js",
+      "picker-core/time-column-geometry.js",
+      "picker-core/time.js",
+      "picker-core/transaction.js",
+      "utils/floating-core.js",
+      "utils/floating.css.js",
+      "utils/install.js",
+      "utils/overlay-controller.js",
+      "utils/use-controllable-state.js",
+      "utils/use-floating-dismiss.js",
+      "utils/use-floating-layer.js",
+      "utils/use-floating-position.js",
+      "utils/use-motion-presence.js",
+      "utils/use-overlay-portal.js",
+      "utils/use-prop-presence.js",
+      "utils/use-stable-id.js",
+      "utils/use-teleport-ready.js"
+    ]
+  },
+  {
+    name: "Upload",
+    names: [
+      "Upload"
+    ],
+    subpath: "upload",
+    sourceEntry: "src/upload/index.ts",
+    dependencies: [],
+    styles: [
+      "upload/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "form/control-context.js",
+      "utils/install.js",
+      "utils/use-controllable-state.js",
+      "utils/use-prop-presence.js"
+    ]
+  },
+  {
+    name: "Tree",
+    names: [
+      "Tree"
+    ],
+    subpath: "tree",
+    sourceEntry: "src/tree/index.ts",
+    dependencies: [
+      "icon"
+    ],
+    styles: [
+      "tree/style.css",
+      "icon/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/install.js",
+      "utils/normalize-virtual-options.js",
+      "utils/use-stable-id.js"
+    ]
+  },
+  {
+    name: "TreeSelect",
+    names: [
+      "TreeSelect"
+    ],
+    subpath: "tree-select",
+    sourceEntry: "src/tree-select/index.ts",
+    dependencies: [
+      "icon",
+      "tree"
+    ],
+    styles: [
+      "tree/style.css",
+      "tree-select/style.css",
+      "icon/style.css",
+      "utils/floating.css"
+    ],
+    budgetClass: "composite",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "form/control-context.js",
+      "utils/floating.css.js",
+      "utils/install.js",
+      "utils/normalize-virtual-options.js",
+      "utils/overlay-controller.js",
+      "utils/use-controllable-state.js",
+      "utils/use-floating-dismiss.js",
+      "utils/use-floating-layer.js",
+      "utils/use-floating-position.js",
+      "utils/use-motion-presence.js",
+      "utils/use-overlay-portal.js",
+      "utils/use-popup-viewport-budget.js",
+      "utils/use-prop-presence.js",
+      "utils/use-stable-id.js",
+      "utils/use-teleport-ready.js"
+    ]
+  },
+  {
+    name: "Cascader",
+    names: [
+      "Cascader"
+    ],
+    subpath: "cascader",
+    sourceEntry: "src/cascader/index.ts",
+    dependencies: [
+      "icon"
+    ],
+    styles: [
+      "cascader/style.css",
+      "icon/style.css",
+      "utils/floating.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "utils/floating.css.js",
+      "utils/install.js",
+      "utils/normalize-virtual-options.js",
+      "utils/overlay-controller.js",
+      "utils/use-controllable-state.js",
+      "utils/use-floating-dismiss.js",
+      "utils/use-floating-layer.js",
+      "utils/use-floating-position.js",
+      "utils/use-motion-presence.js",
+      "utils/use-overlay-portal.js",
+      "utils/use-popup-viewport-budget.js",
+      "utils/use-prop-presence.js",
+      "utils/use-stable-id.js",
+      "utils/use-teleport-ready.js"
+    ]
+  },
+  {
+    name: "Textarea",
+    names: [
+      "Textarea"
+    ],
+    subpath: "textarea",
+    sourceEntry: "src/textarea/index.ts",
+    dependencies: [],
+    styles: [
+      "textarea/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/install.js",
+      "utils/use-prop-presence.js"
+    ]
+  },
+  {
+    name: "InputNumber",
+    names: [
+      "InputNumber"
+    ],
+    subpath: "input-number",
+    sourceEntry: "src/input-number/index.ts",
+    dependencies: [],
+    styles: [
+      "input-number/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/install.js",
+      "utils/use-prop-presence.js"
+    ]
+  },
+  {
+    name: "Checkbox",
+    names: [
+      "Checkbox",
+      "CheckboxGroup"
+    ],
+    subpath: "checkbox",
+    sourceEntry: "src/checkbox/index.ts",
+    dependencies: [],
+    styles: [
+      "checkbox/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/install.js",
+      "utils/use-prop-presence.js"
+    ]
+  },
+  {
+    name: "Radio",
+    names: [
+      "Radio",
+      "RadioGroup"
+    ],
+    subpath: "radio",
+    sourceEntry: "src/radio/index.ts",
+    dependencies: [],
+    styles: [
+      "radio/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Switch",
+    names: [
+      "Switch"
+    ],
+    subpath: "switch",
+    sourceEntry: "src/switch/index.ts",
+    dependencies: [
+      "icon"
+    ],
+    styles: [
+      "icon/style.css",
+      "switch/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/install.js",
+      "utils/use-prop-presence.js"
     ]
   },
   {
     name: "Combobox",
+    names: [
+      "Combobox"
+    ],
     subpath: "combobox",
     sourceEntry: "src/combobox/index.ts",
+    dependencies: [],
     styles: [
       "utils/floating.css",
       "combobox/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "utils/floating.css.js",
+      "utils/install.js",
+      "utils/overlay-controller.js",
+      "utils/use-controllable-state.js",
+      "utils/use-floating-dismiss.js",
+      "utils/use-floating-layer.js",
+      "utils/use-floating-position.js",
+      "utils/use-motion-presence.js",
+      "utils/use-overlay-portal.js",
+      "utils/use-prop-presence.js",
+      "utils/use-roving-focus.js",
+      "utils/use-stable-id.js",
+      "utils/use-teleport-ready.js"
+    ]
+  },
+  {
+    name: "Select",
+    names: [
+      "Select"
+    ],
+    subpath: "select",
+    sourceEntry: "src/select/index.ts",
+    dependencies: [
+      "icon"
+    ],
+    styles: [
+      "icon/style.css",
+      "utils/floating.css",
+      "select/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "form/control-context.js",
+      "utils/floating-core.js",
+      "utils/floating.css.js",
+      "utils/install.js",
+      "utils/overlay-controller.js",
+      "utils/use-controllable-state.js",
+      "utils/use-floating-dismiss.js",
+      "utils/use-floating-layer.js",
+      "utils/use-floating-position.js",
+      "utils/use-motion-presence.js",
+      "utils/use-overlay-portal.js",
+      "utils/use-prop-presence.js",
+      "utils/use-stable-id.js",
+      "utils/use-teleport-ready.js"
+    ]
+  },
+  {
+    name: "Form",
+    names: [
+      "Form",
+      "FormItem",
+      "FormList"
+    ],
+    subpath: "form",
+    sourceEntry: "src/form/index.ts",
+    dependencies: [
+      "tooltip"
+    ],
+    styles: [
+      "utils/floating.css",
+      "tooltip/style.css",
+      "form/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/floating-core.js",
+      "utils/floating.css.js",
+      "utils/install.js",
+      "utils/overlay-controller.js",
+      "utils/use-floating-dismiss.js",
+      "utils/use-floating-layer.js",
+      "utils/use-floating-position.js",
+      "utils/use-motion-presence.js",
+      "utils/use-overlay-portal.js",
+      "utils/use-stable-id.js",
+      "utils/use-teleport-ready.js",
+      "utils/use-trigger-aria.js"
+    ]
+  },
+  {
+    name: "Tag",
+    names: [
+      "Tag",
+      "CheckableTag",
+      "TagGroup"
+    ],
+    subpath: "tag",
+    sourceEntry: "src/tag/index.ts",
+    dependencies: [],
+    styles: [
+      "tag/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Badge",
+    names: [
+      "Badge",
+      "BadgeRibbon"
+    ],
+    subpath: "badge",
+    sourceEntry: "src/badge/index.ts",
+    dependencies: [],
+    styles: [
+      "badge/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Card",
+    names: [
+      "CardMeta",
+      "CardGrid",
+      "Card"
+    ],
+    subpath: "card",
+    sourceEntry: "src/card/index.ts",
+    dependencies: [],
+    styles: [
+      "card/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Empty",
+    names: [
+      "Empty"
+    ],
+    subpath: "empty",
+    sourceEntry: "src/empty/index.ts",
+    dependencies: [],
+    styles: [
+      "empty/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Descriptions",
+    names: [
+      "Descriptions"
+    ],
+    subpath: "descriptions",
+    sourceEntry: "src/descriptions/index.ts",
+    dependencies: [],
+    styles: [
+      "descriptions/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Table",
+    names: [
+      "Table"
+    ],
+    subpath: "table",
+    sourceEntry: "src/table/index.ts",
+    dependencies: [
+      "pagination"
+    ],
+    styles: [
+      "pagination/style.css",
+      "table/style.css"
+    ],
+    budgetClass: "composite",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/install.js",
+      "utils/overlay-controller.js",
+      "utils/use-controllable-state.js",
+      "utils/use-floating-dismiss.js",
+      "utils/use-floating-position.js",
+      "utils/use-stable-id.js"
+    ]
+  },
+  {
+    name: "Pagination",
+    names: [
+      "Pagination"
+    ],
+    subpath: "pagination",
+    sourceEntry: "src/pagination/index.ts",
+    dependencies: [],
+    styles: [
+      "pagination/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Alert",
+    names: [
+      "Alert"
+    ],
+    subpath: "alert",
+    sourceEntry: "src/alert/index.ts",
+    dependencies: [],
+    styles: [
+      "alert/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Message",
+    names: [
+      "Message"
+    ],
+    subpath: "message",
+    sourceEntry: "src/message/index.ts",
+    dependencies: [],
+    styles: [
+      "message/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "utils/install.js"
     ]
   },
   {
     name: "Modal",
+    names: [
+      "Modal"
+    ],
     subpath: "modal",
     sourceEntry: "src/modal/index.ts",
+    dependencies: [
+      "button",
+      "icon",
+      "skeleton"
+    ],
     styles: [
       "button/style.css",
       "icon/style.css",
       "modal/style.css",
       "skeleton/style.css"
+    ],
+    budgetClass: "composite",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/install.js",
+      "utils/overlay-controller.js",
+      "utils/use-dialog-layer.js",
+      "utils/use-motion-presence.js",
+      "utils/use-overlay-portal.js",
+      "utils/use-teleport-ready.js"
     ]
   },
   {
-    name: "Select",
-    subpath: "select",
-    sourceEntry: "src/select/index.ts",
+    name: "Drawer",
+    names: [
+      "Drawer"
+    ],
+    subpath: "drawer",
+    sourceEntry: "src/drawer/index.ts",
+    dependencies: [
+      "skeleton"
+    ],
     styles: [
+      "drawer/style.css",
+      "skeleton/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "utils/install.js",
+      "utils/overlay-controller.js",
+      "utils/use-dialog-layer.js",
+      "utils/use-motion-presence.js",
+      "utils/use-overlay-portal.js",
+      "utils/use-pointer-drag.js",
+      "utils/use-teleport-ready.js"
+    ]
+  },
+  {
+    name: "Tooltip",
+    names: [
+      "Tooltip"
+    ],
+    subpath: "tooltip",
+    sourceEntry: "src/tooltip/index.ts",
+    dependencies: [],
+    styles: [
+      "utils/floating.css",
+      "tooltip/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "utils/floating-core.js",
+      "utils/floating.css.js",
+      "utils/install.js",
+      "utils/overlay-controller.js",
+      "utils/use-floating-dismiss.js",
+      "utils/use-floating-layer.js",
+      "utils/use-floating-position.js",
+      "utils/use-motion-presence.js",
+      "utils/use-overlay-portal.js",
+      "utils/use-stable-id.js",
+      "utils/use-teleport-ready.js",
+      "utils/use-trigger-aria.js"
+    ]
+  },
+  {
+    name: "Popover",
+    names: [
+      "Popover"
+    ],
+    subpath: "popover",
+    sourceEntry: "src/popover/index.ts",
+    dependencies: [],
+    styles: [
+      "utils/floating.css",
+      "popover/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "utils/floating-core.js",
+      "utils/floating.css.js",
+      "utils/install.js",
+      "utils/overlay-controller.js",
+      "utils/use-floating-dismiss.js",
+      "utils/use-floating-layer.js",
+      "utils/use-floating-position.js",
+      "utils/use-motion-presence.js",
+      "utils/use-overlay-portal.js",
+      "utils/use-stable-id.js",
+      "utils/use-teleport-ready.js",
+      "utils/use-trigger-aria.js"
+    ]
+  },
+  {
+    name: "Popconfirm",
+    names: [
+      "Popconfirm"
+    ],
+    subpath: "popconfirm",
+    sourceEntry: "src/popconfirm/index.ts",
+    dependencies: [
+      "button",
+      "icon"
+    ],
+    styles: [
+      "button/style.css",
       "icon/style.css",
       "utils/floating.css",
-      "select/style.css"
+      "popconfirm/style.css"
+    ],
+    budgetClass: "composite",
+    cssGate: "leaf",
+    sharedModules: [
+      "config/context.js",
+      "config/index.js",
+      "utils/floating-core.js",
+      "utils/floating.css.js",
+      "utils/install.js",
+      "utils/overlay-controller.js",
+      "utils/use-floating-dismiss.js",
+      "utils/use-floating-position.js",
+      "utils/use-motion-presence.js",
+      "utils/use-stable-id.js",
+      "utils/use-teleport-ready.js",
+      "utils/use-trigger-aria.js"
+    ]
+  },
+  {
+    name: "Spin",
+    names: [
+      "Spin"
+    ],
+    subpath: "spin",
+    sourceEntry: "src/spin/index.ts",
+    dependencies: [],
+    styles: [
+      "spin/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "utils/install.js"
+    ]
+  },
+  {
+    name: "Skeleton",
+    names: [
+      "Skeleton"
+    ],
+    subpath: "skeleton",
+    sourceEntry: "src/skeleton/index.ts",
+    dependencies: [],
+    styles: [
+      "skeleton/style.css"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    sharedModules: [
+      "utils/install.js"
     ]
   }
 ];
@@ -50,6 +1082,13 @@ const ai = [
     ],
     scopes: [
       "actions"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    dependencies: [],
+    runtimeModules: [
+      "actions.vue.js",
+      "actions/index.js"
     ]
   },
   {
@@ -60,6 +1099,14 @@ const ai = [
     ],
     scopes: [
       "attachments"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    dependencies: [],
+    runtimeModules: [
+      "attachments.vue.js",
+      "attachments/index.js",
+      "safe-markdown.js"
     ]
   },
   {
@@ -73,6 +1120,21 @@ const ai = [
       "attachments",
       "process",
       "sources"
+    ],
+    budgetClass: "composite",
+    cssGate: "leaf",
+    dependencies: [
+      "ai/attachments",
+      "ai/process",
+      "ai/sources"
+    ],
+    runtimeModules: [
+      "attachments.vue.js",
+      "bubble.vue.js",
+      "bubble/index.js",
+      "process.vue.js",
+      "safe-markdown.js",
+      "sources.vue.js"
     ]
   },
   {
@@ -83,6 +1145,13 @@ const ai = [
     ],
     scopes: [
       "conversations"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    dependencies: [],
+    runtimeModules: [
+      "conversations.vue.js",
+      "conversations/index.js"
     ]
   },
   {
@@ -92,8 +1161,33 @@ const ai = [
       "AIForm"
     ],
     scopes: [
-      "form",
-      "visually-hidden"
+      "form"
+    ],
+    catalogKeys: [
+      "ai-form"
+    ],
+    budgetClass: "composite",
+    cssGate: "union-ratchet",
+    dependencies: [
+      "base/button",
+      "base/checkbox",
+      "base/date-picker",
+      "base/form",
+      "base/input",
+      "base/input-number",
+      "base/radio",
+      "base/select",
+      "base/switch",
+      "base/textarea",
+      "base/time-picker",
+      "base/tree-select",
+      "base/upload"
+    ],
+    runtimeModules: [
+      "form-field.vue.js",
+      "form-schema.js",
+      "form.vue.js",
+      "form/index.js"
     ]
   },
   {
@@ -104,6 +1198,13 @@ const ai = [
     ],
     scopes: [
       "process"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    dependencies: [],
+    runtimeModules: [
+      "process.vue.js",
+      "process/index.js"
     ]
   },
   {
@@ -114,6 +1215,13 @@ const ai = [
     ],
     scopes: [
       "prompts"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    dependencies: [],
+    runtimeModules: [
+      "prompts.vue.js",
+      "prompts/index.js"
     ]
   },
   {
@@ -124,6 +1232,13 @@ const ai = [
     ],
     scopes: [
       "sender"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    dependencies: [],
+    runtimeModules: [
+      "sender.vue.js",
+      "sender/index.js"
     ]
   },
   {
@@ -134,6 +1249,14 @@ const ai = [
     ],
     scopes: [
       "sources"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    dependencies: [],
+    runtimeModules: [
+      "safe-markdown.js",
+      "sources.vue.js",
+      "sources/index.js"
     ]
   },
   {
@@ -144,6 +1267,16 @@ const ai = [
     ],
     scopes: [
       "process"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    dependencies: [
+      "ai/process"
+    ],
+    runtimeModules: [
+      "process.vue.js",
+      "thought-chain.vue.js",
+      "thought-chain/index.js"
     ]
   },
   {
@@ -154,6 +1287,13 @@ const ai = [
     ],
     scopes: [
       "welcome"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    dependencies: [],
+    runtimeModules: [
+      "welcome.vue.js",
+      "welcome/index.js"
     ]
   },
   {
@@ -165,7 +1305,6 @@ const ai = [
     scopes: [
       "chat-panel",
       "visually-hidden",
-      "actions",
       "attachments",
       "bubble",
       "process",
@@ -174,6 +1313,33 @@ const ai = [
       "prompts",
       "sender",
       "welcome"
+    ],
+    catalogKeys: [
+      "ai"
+    ],
+    budgetClass: "composite",
+    cssGate: "leaf",
+    dependencies: [
+      "ai/attachments",
+      "ai/bubble",
+      "ai/conversations",
+      "ai/prompts",
+      "ai/sender",
+      "ai/welcome"
+    ],
+    runtimeModules: [
+      "attachments.vue.js",
+      "bubble.vue.js",
+      "chat-panel.vue.js",
+      "chat-panel/index.js",
+      "conversations.vue.js",
+      "process.vue.js",
+      "prompts.vue.js",
+      "safe-markdown.js",
+      "sender.vue.js",
+      "sources.vue.js",
+      "stream-reducer.js",
+      "welcome.vue.js"
     ]
   },
   {
@@ -186,7 +1352,6 @@ const ai = [
       "workbench",
       "chat-panel",
       "visually-hidden",
-      "actions",
       "attachments",
       "bubble",
       "process",
@@ -198,6 +1363,38 @@ const ai = [
     ],
     sideEffects: [
       "@aheart-ui/dnd/sortable/style.css"
+    ],
+    catalogKeys: [
+      "ai-agent-workbench"
+    ],
+    budgetClass: "composite",
+    cssGate: "union-ratchet",
+    dependencies: [
+      "base/button",
+      "base/drawer",
+      "base/splitter",
+      "base/tabs",
+      "ai/chat-panel",
+      "ai/attachments",
+      "ai/conversations",
+      "ai/sources",
+      "dnd/sortable"
+    ],
+    runtimeModules: [
+      "agent-execution.vue.js",
+      "agent-workbench.vue.js",
+      "agent-workbench/index.js",
+      "attachments.vue.js",
+      "bubble.vue.js",
+      "chat-panel.vue.js",
+      "conversations.vue.js",
+      "process.vue.js",
+      "prompts.vue.js",
+      "safe-markdown.js",
+      "sender.vue.js",
+      "sources.vue.js",
+      "stream-reducer.js",
+      "welcome.vue.js"
     ]
   },
   {
@@ -216,6 +1413,34 @@ const ai = [
       "prompts",
       "sender",
       "welcome"
+    ],
+    budgetClass: "composite",
+    cssGate: "leaf",
+    dependencies: [
+      "ai/chat-panel",
+      "ai/actions",
+      "ai/attachments",
+      "ai/bubble",
+      "ai/conversations",
+      "ai/prompts",
+      "ai/sender",
+      "ai/sources",
+      "ai/welcome"
+    ],
+    runtimeModules: [
+      "actions.vue.js",
+      "attachments.vue.js",
+      "bubble.vue.js",
+      "chat-panel.vue.js",
+      "chat/index.js",
+      "conversations.vue.js",
+      "process.vue.js",
+      "prompts.vue.js",
+      "safe-markdown.js",
+      "sender.vue.js",
+      "sources.vue.js",
+      "stream-reducer.js",
+      "welcome.vue.js"
     ]
   },
   {
@@ -224,15 +1449,31 @@ const ai = [
     names: [],
     scopes: [
       "process",
-      "form",
-      "visually-hidden"
+      "form"
+    ],
+    budgetClass: "composite",
+    cssGate: "union-ratchet",
+    dependencies: [
+      "ai/form",
+      "ai/process",
+      "ai/thought-chain"
+    ],
+    runtimeModules: [
+      "agent/index.js",
+      "form-field.vue.js",
+      "form-schema.js",
+      "form.vue.js",
+      "process.vue.js",
+      "thought-chain.vue.js"
     ]
   },
   {
     subpath: "workbench",
     output: "agent-workbench/index",
     styleOutput: "agent-workbench/style.css",
-    names: []
+    names: [],
+    budgetClass: "composite",
+    cssGate: "union-ratchet"
   }
 ];
 const dnd = [
@@ -248,6 +1489,19 @@ const dnd = [
       "keyboard-grabbed",
       "keyboard-compatible",
       "live-region"
+    ],
+    catalogKeys: [
+      "dnd"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    runtimeModules: [
+      "dnd-announcer.js",
+      "drag-state.js",
+      "draggable.vue.js",
+      "draggable/index.js",
+      "keyboard-service.js",
+      "use-draggable.js"
     ]
   },
   {
@@ -262,6 +1516,19 @@ const dnd = [
       "keyboard-grabbed",
       "keyboard-compatible",
       "live-region"
+    ],
+    catalogKeys: [
+      "dnd"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    runtimeModules: [
+      "dnd-announcer.js",
+      "drag-state.js",
+      "drop-zone.vue.js",
+      "droppable/index.js",
+      "keyboard-service.js",
+      "use-droppable.js"
     ]
   },
   {
@@ -272,6 +1539,16 @@ const dnd = [
     ],
     scopes: [
       "overlay"
+    ],
+    catalogKeys: [
+      "dnd"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    runtimeModules: [
+      "drag-overlay.vue.js",
+      "drag-overlay/index.js",
+      "drag-state.js"
     ]
   },
   {
@@ -289,6 +1566,24 @@ const dnd = [
       "keyboard-grabbed",
       "keyboard-compatible",
       "live-region"
+    ],
+    catalogKeys: [
+      "dnd"
+    ],
+    budgetClass: "leaf",
+    cssGate: "leaf",
+    runtimeModules: [
+      "dnd-announcer.js",
+      "drag-state.js",
+      "sortable-auto-scroll.js",
+      "sortable-context.js",
+      "sortable-item.vue.js",
+      "sortable-list.vue.js",
+      "sortable-registry.js",
+      "sortable/index.js",
+      "use-draggable.js",
+      "use-droppable.js",
+      "use-sortable.js"
     ]
   }
 ];

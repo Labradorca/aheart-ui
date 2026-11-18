@@ -26,3 +26,5 @@ export type {
   RowProps
 } from './types'
 export default Grid
+
+export { Grid }

@@ -154,3 +154,4 @@ declare const Alert: import("../utils/install").SFCWithInstall<{
     };
 })>;
 export default Alert;
+export { Alert };

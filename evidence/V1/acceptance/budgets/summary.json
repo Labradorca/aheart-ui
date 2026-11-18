@@ -1,0 +1,429 @@
+{
+  "total": {
+    "total": 65,
+    "styles": 65,
+    "js": 65
+  },
+  "tools": {
+    "vite": "5.0.12",
+    "vue": "3.5.44",
+    "minify": true,
+    "sourceAlias": false,
+    "workspaceSymlink": false
+  },
+  "denominator": {
+    "fullBytes": 201510,
+    "fullSha256": "bd1006443101d0335a14c0ae0bcdaf351de95d0a76cddf4239c89e76cae95c83",
+    "matchesV0": true,
+    "themeBytes": 1767,
+    "themeFraction": 0.008768795593270805
+  },
+  "leafHardCount": 61,
+  "leafMax": [
+    [
+      "base/date-picker",
+      {
+        "gate": "leaf",
+        "bytes": 30236,
+        "fractionOfFull": 0.1500471440623294,
+        "themePlusBytes": 32003,
+        "themePlusFraction": 0.15881593965560023,
+        "firstLeafPass": true,
+        "dependencies": [
+          {
+            "entry": "base/icon",
+            "bytes": 597,
+            "fraction": 0.01974467522159016,
+            "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+          }
+        ],
+        "unionPass": true,
+        "cssClassCount": 75
+      }
+    ],
+    [
+      "base/dropdown",
+      {
+        "gate": "leaf",
+        "bytes": 18689,
+        "fractionOfFull": 0.09274477693414719,
+        "themePlusBytes": 20456,
+        "themePlusFraction": 0.101513572527418,
+        "firstLeafPass": true,
+        "dependencies": [
+          {
+            "entry": "base/button",
+            "bytes": 7945,
+            "fraction": 0.42511637861843865,
+            "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+          },
+          {
+            "entry": "base/icon",
+            "bytes": 597,
+            "fraction": 0.03194392423350634,
+            "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+          },
+          {
+            "entry": "base/menu",
+            "bytes": 8462,
+            "fraction": 0.4527797099898336,
+            "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+          }
+        ],
+        "unionPass": true,
+        "cssClassCount": 71
+      }
+    ],
+    [
+      "base/modal",
+      {
+        "gate": "leaf",
+        "bytes": 16305,
+        "fractionOfFull": 0.08091409855590294,
+        "themePlusBytes": 18072,
+        "themePlusFraction": 0.08968289414917374,
+        "firstLeafPass": true,
+        "dependencies": [
+          {
+            "entry": "base/button",
+            "bytes": 7945,
+            "fraction": 0.48727384237963817,
+            "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+          },
+          {
+            "entry": "base/icon",
+            "bytes": 597,
+            "fraction": 0.036614535418583255,
+            "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+          },
+          {
+            "entry": "base/skeleton",
+            "bytes": 3622,
+            "fraction": 0.2221404477154247,
+            "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+          }
+        ],
+        "unionPass": true,
+        "cssClassCount": 57
+      }
+    ]
+  ],
+  "union": [
+    {
+      "key": "ai/form",
+      "gate": "union-ratchet",
+      "bytes": 99853,
+      "fractionOfFull": 0.4955237953451442,
+      "themePlusBytes": 101620,
+      "themePlusFraction": 0.5042925909384149,
+      "firstLeafPass": false,
+      "dependencies": [
+        {
+          "entry": "base/button",
+          "bytes": 7945,
+          "fraction": 0.07956696343625129,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "base/checkbox",
+          "bytes": 2528,
+          "fraction": 0.02531721630797272,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "base/date-picker",
+          "bytes": 30236,
+          "fraction": 0.30280512353159145,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "base/form",
+          "bytes": 7555,
+          "fraction": 0.07566122199633461,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "base/input",
+          "bytes": 3900,
+          "fraction": 0.039057414399166775,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "base/input-number",
+          "bytes": 6357,
+          "fraction": 0.06366358547064184,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "base/radio",
+          "bytes": 3748,
+          "fraction": 0.03753517670976335,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "base/select",
+          "bytes": 10472,
+          "fraction": 0.10487416502258319,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "base/switch",
+          "bytes": 2712,
+          "fraction": 0.027159925089882127,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "base/textarea",
+          "bytes": 4783,
+          "fraction": 0.04790041360800377,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "base/time-picker",
+          "bytes": 13735,
+          "fraction": 0.13755220173655272,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "base/tree-select",
+          "bytes": 8867,
+          "fraction": 0.08880053678907995,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "base/upload",
+          "bytes": 2035,
+          "fraction": 0.020379958539052407,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        }
+      ],
+      "unionPass": true,
+      "cssClassCount": 319,
+      "js": {
+        "jsGzip": 133622,
+        "cssBytes": 0,
+        "parsedModules": 2226
+      },
+      "rootNamed": {
+        "jsGzip": 133660,
+        "cssBytes": 0,
+        "parsedModules": 2440
+      },
+      "full": {
+        "jsGzip": 187227,
+        "cssBytes": 0,
+        "parsedModules": 2440
+      }
+    },
+    {
+      "key": "ai/agent-workbench",
+      "gate": "union-ratchet",
+      "bytes": 54212,
+      "fractionOfFull": 0.2690288323160141,
+      "themePlusBytes": 55979,
+      "themePlusFraction": 0.2777976279092849,
+      "firstLeafPass": false,
+      "dependencies": [
+        {
+          "entry": "base/button",
+          "bytes": 7945,
+          "fraction": 0.1465542684276544,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "base/drawer",
+          "bytes": 7881,
+          "fraction": 0.14537371799601564,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "base/splitter",
+          "bytes": 3070,
+          "fraction": 0.05662952851767136,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "base/tabs",
+          "bytes": 5475,
+          "fraction": 0.10099240020659632,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "ai/chat-panel",
+          "bytes": 13095,
+          "fraction": 0.24155168597358517,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "ai/attachments",
+          "bytes": 1412,
+          "fraction": 0.026045893898029956,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "ai/conversations",
+          "bytes": 1032,
+          "fraction": 0.019036375710174868,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "ai/sources",
+          "bytes": 1052,
+          "fraction": 0.019405297720061977,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "dnd/sortable",
+          "bytes": 717,
+          "fraction": 0.013225854054452889,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        }
+      ],
+      "unionPass": true,
+      "cssClassCount": 166,
+      "js": {
+        "jsGzip": 89249,
+        "cssBytes": 0,
+        "parsedModules": 2334
+      },
+      "rootNamed": {
+        "jsGzip": 90003,
+        "cssBytes": 0,
+        "parsedModules": 2440
+      },
+      "full": {
+        "jsGzip": 187227,
+        "cssBytes": 0,
+        "parsedModules": 2440
+      }
+    },
+    {
+      "key": "ai/agent",
+      "gate": "union-ratchet",
+      "bytes": 100927,
+      "fractionOfFull": 0.5008535556548062,
+      "themePlusBytes": 102694,
+      "themePlusFraction": 0.509622351248077,
+      "firstLeafPass": false,
+      "dependencies": [
+        {
+          "entry": "ai/form",
+          "bytes": 99853,
+          "fraction": 0.9893586453575356,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "ai/process",
+          "bytes": 1388,
+          "fraction": 0.013752514193426933,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "ai/thought-chain",
+          "bytes": 1388,
+          "fraction": 0.013752514193426933,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        }
+      ],
+      "unionPass": true,
+      "cssClassCount": 320,
+      "js": {
+        "jsGzip": 133864,
+        "cssBytes": 0,
+        "parsedModules": 2228
+      },
+      "rootNamed": {
+        "jsGzip": 133864,
+        "cssBytes": 0,
+        "parsedModules": 2440
+      },
+      "full": {
+        "jsGzip": 187227,
+        "cssBytes": 0,
+        "parsedModules": 2440
+      }
+    },
+    {
+      "key": "ai/workbench",
+      "gate": "union-ratchet",
+      "bytes": 54212,
+      "fractionOfFull": 0.2690288323160141,
+      "themePlusBytes": 55979,
+      "themePlusFraction": 0.2777976279092849,
+      "firstLeafPass": false,
+      "dependencies": [
+        {
+          "entry": "base/button",
+          "bytes": 7945,
+          "fraction": 0.1465542684276544,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "base/drawer",
+          "bytes": 7881,
+          "fraction": 0.14537371799601564,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "base/splitter",
+          "bytes": 3070,
+          "fraction": 0.05662952851767136,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "base/tabs",
+          "bytes": 5475,
+          "fraction": 0.10099240020659632,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "ai/chat-panel",
+          "bytes": 13095,
+          "fraction": 0.24155168597358517,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "ai/attachments",
+          "bytes": 1412,
+          "fraction": 0.026045893898029956,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "ai/conversations",
+          "bytes": 1032,
+          "fraction": 0.019036375710174868,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "ai/sources",
+          "bytes": 1052,
+          "fraction": 0.019405297720061977,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        },
+        {
+          "entry": "dnd/sortable",
+          "bytes": 717,
+          "fraction": 0.013225854054452889,
+          "accounting": "inclusive public dependency bytes; overlaps are reported, not added as disjoint shares"
+        }
+      ],
+      "unionPass": true,
+      "cssClassCount": 166,
+      "js": {
+        "jsGzip": 89249,
+        "cssBytes": 0,
+        "parsedModules": 2334
+      },
+      "rootNamed": {
+        "jsGzip": 90003,
+        "cssBytes": 0,
+        "parsedModules": 2440
+      },
+      "full": {
+        "jsGzip": 187227,
+        "cssBytes": 0,
+        "parsedModules": 2440
+      }
+    }
+  ]
+}

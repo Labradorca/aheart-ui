@@ -1,0 +1,34 @@
+{
+  "command": [
+    "node",
+    "evidence/V1/aiform-budget-probe.mjs"
+  ],
+  "attempts": [
+    {
+      "exitCode": 1,
+      "classification": "probe infrastructure error before graph capture",
+      "reason": "Vite root realpath mismatch on macOS /var vs /private/var; corrected with realpath, as in the M1 consumer",
+      "cssFactsRetained": {
+        "denominator": "aheart-ui/full.css, the same common baseline used by evidence/M1/contract.md",
+        "fullBytes": 201510,
+        "fullSha256": "bd1006443101d0335a14c0ae0bcdaf351de95d0a76cddf4239c89e76cae95c83",
+        "fullMatchesV0": true,
+        "themeBytes": 1767,
+        "aiOwnBytes": 4788,
+        "completeClosureBytes": 100048,
+        "fractionOfFull": 0.4964914892561163,
+        "componentLimit": 50377.5,
+        "themeAndComponentLimit": 60453,
+        "componentPass": false,
+        "themeAndComponentPass": false,
+        "note": "Optimistic complete closure deduplicates identical base stylesheet sources; comparing only AIForm own CSS would omit required base controls. No package output was changed by this probe."
+      }
+    },
+    {
+      "exitCode": 1,
+      "classification": "actual CSS budget stop point",
+      "reason": "V1 stop point: AIForm complete static stylesheet closure exceeds the unchanged M1 CSS budgets.",
+      "results": "results.json"
+    }
+  ]
+}

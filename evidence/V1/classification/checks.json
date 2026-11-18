@@ -1,0 +1,81 @@
+[
+  {
+    "name": "source-audit",
+    "command": [
+      "node",
+      "evidence/V1/classification/collect-source.mjs"
+    ],
+    "startedAt": "2026-11-17T11:55:17.235Z",
+    "finishedAt": "2026-11-17T11:55:17.536Z",
+    "exitCode": 0,
+    "signal": null,
+    "output": "source-audit.txt",
+    "normalization": "trailing whitespace only",
+    "scope": "owner clarification and pending classification documentation; not V1 acceptance"
+  },
+  {
+    "name": "review",
+    "command": [
+      "node",
+      "evidence/V1/classification/verify-review.mjs"
+    ],
+    "startedAt": "2026-11-17T11:55:17.537Z",
+    "finishedAt": "2026-11-17T11:56:05.507Z",
+    "exitCode": 0,
+    "signal": null,
+    "output": "review.txt",
+    "normalization": "trailing whitespace only",
+    "scope": "owner clarification and pending classification documentation; not V1 acceptance",
+    "note": "Rechecked after the decision-log regression-check receipt was added; unchanged implementation."
+  },
+  {
+    "name": "docs-and-matrix",
+    "command": [
+      "node",
+      "--test",
+      "scripts/docs-copy.test.mjs",
+      "scripts/docs-social-icon.test.mjs",
+      "scripts/qg5-evidence-docs.test.mjs",
+      "scripts/m3-doc-entries.test.mjs",
+      "scripts/quality-matrix.test.mjs",
+      "scripts/qg5-skip-ledger.test.mjs"
+    ],
+    "startedAt": "2026-11-17T11:55:17.686Z",
+    "finishedAt": "2026-11-17T11:55:17.941Z",
+    "exitCode": 0,
+    "signal": null,
+    "output": "docs-and-matrix.txt",
+    "normalization": "trailing whitespace only",
+    "scope": "owner clarification and pending classification documentation; not V1 acceptance"
+  },
+  {
+    "name": "docs-build",
+    "command": [
+      "corepack",
+      "pnpm",
+      "docs:build"
+    ],
+    "startedAt": "2026-11-17T11:55:17.942Z",
+    "finishedAt": "2026-11-17T11:55:28.403Z",
+    "exitCode": 0,
+    "signal": null,
+    "output": "docs-build.txt",
+    "normalization": "trailing whitespace only",
+    "scope": "owner clarification and pending classification documentation; not V1 acceptance"
+  },
+  {
+    "name": "diff",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "startedAt": "2026-11-17T11:55:28.404Z",
+    "finishedAt": "2026-11-17T11:55:28.420Z",
+    "exitCode": 0,
+    "signal": null,
+    "output": "diff.txt",
+    "normalization": "trailing whitespace only",
+    "scope": "owner clarification and pending classification documentation; not V1 acceptance"
+  }
+]

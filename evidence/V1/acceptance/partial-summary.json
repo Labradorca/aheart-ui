@@ -1,0 +1,198 @@
+{
+  "status": "pilot and scoped visual gates passed; full five-project E2E still running with hover harness race under investigation",
+  "pilots": [
+    {
+      "engine": "chromium",
+      "pilot": "clean-consumer",
+      "entryStrategy": "legacy-root-compatibility",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "sourceFiles": {
+        "README.md": "b7f313f8de251333ead210d8bdd7f91f6b80cdcc56921d83788a765f0c7987bd",
+        "app.js": "9bac9aa1a2fb4facea8a2905bd6e4952d7d5db250ff752e8a83c1e4f81aea316",
+        "iframe.html": "9823e0c1b758eda2aa7a5807975dbe682f60f5879a33d46fd7c7886b6e8988bf",
+        "index.html": "00f16e66916a3080664748baa1c7604b3e74451584c4c00fbaf430ea67ba0611",
+        "main.js": "0f091d6f4a767a7cf8d07c97e95cf55348ee09a8408eb75f3c29eb2b0fa2ae60",
+        "package-lock.json": "52981d00bcb721c6cd13e6b79d7e209a20a7f841bcec59c54e6f6213902a8ff6",
+        "package.json": "f2c18cefa49c598829b01321fe7de2330673618f25160ab7db5343c48189bbc7",
+        "ssr.mjs": "86d69046205bdfa484c43ada30e10fc2bb6144ad808190aca68c5983785951a9",
+        "style.css": "a47e9e8dbec279ad42809b2ecc57357ff2e8ef37eab9b13fe151f785757ab98a",
+        "tsconfig.json": "c59094b325081757c582e3f683f0401f7feb59d3649427fa3f94e4568f76244a",
+        "tsconfig.strict.json": "b33f818a882c93c36add9ac4d8bb1510df539030ba3cba4a51cae417c2908928",
+        "types.ts": "627d5854fa47508efecd3e25fb3148f509e3d49f40adc431b854423561c0230b",
+        "vite.config.js": "e75f2f3c572aa3312b1ec0af91c08b13d4e7e6b1f2fcb8ed684d5ace38514571"
+      },
+      "strictTypes": "passed",
+      "userAcceptance": "not-run"
+    },
+    {
+      "engine": "chromium",
+      "pilot": "ai-review-gate",
+      "entryStrategy": "legacy-root-compatibility",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "sourceFiles": {
+        "README.md": "d52513a77b29bbb6748f1dec9b72292a9c1bea184669f167635494913048e5fe",
+        "app.js": "21683dfa77c8a7688ead0dd4424fe1a8a944fe578aa39edc2a061b0578de3383",
+        "iframe.html": "9823e0c1b758eda2aa7a5807975dbe682f60f5879a33d46fd7c7886b6e8988bf",
+        "index.html": "f755c8d3e951476cc7c2685dc9675850e0fb2127a017d466241700ca894b4d0a",
+        "main.js": "6746cbff194ca2f4727e95c163a36484c08d83b7b37b86881fe541fa0c23f99d",
+        "package-lock.json": "a16c79fa9faa2c01798e57d03765094e5c913498a96dda34bb346dea9a411289",
+        "package.json": "629eab69f1861215981ebab2a8a935b51bcfaf33744858cdd460fe640ec3eb59",
+        "ssr.mjs": "86d69046205bdfa484c43ada30e10fc2bb6144ad808190aca68c5983785951a9",
+        "style.css": "a47e9e8dbec279ad42809b2ecc57357ff2e8ef37eab9b13fe151f785757ab98a",
+        "tsconfig.json": "c59094b325081757c582e3f683f0401f7feb59d3649427fa3f94e4568f76244a",
+        "tsconfig.strict.json": "b33f818a882c93c36add9ac4d8bb1510df539030ba3cba4a51cae417c2908928",
+        "types.ts": "e830ab15fb2043e2f50951797db623b35d6c08aa8490960af65921533254e72c",
+        "vite.config.js": "e75f2f3c572aa3312b1ec0af91c08b13d4e7e6b1f2fcb8ed684d5ace38514571"
+      },
+      "strictTypes": "passed",
+      "userAcceptance": "not-run"
+    },
+    {
+      "engine": "firefox",
+      "pilot": "clean-consumer",
+      "entryStrategy": "legacy-root-compatibility",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "sourceFiles": {
+        "README.md": "b7f313f8de251333ead210d8bdd7f91f6b80cdcc56921d83788a765f0c7987bd",
+        "app.js": "9bac9aa1a2fb4facea8a2905bd6e4952d7d5db250ff752e8a83c1e4f81aea316",
+        "iframe.html": "9823e0c1b758eda2aa7a5807975dbe682f60f5879a33d46fd7c7886b6e8988bf",
+        "index.html": "00f16e66916a3080664748baa1c7604b3e74451584c4c00fbaf430ea67ba0611",
+        "main.js": "0f091d6f4a767a7cf8d07c97e95cf55348ee09a8408eb75f3c29eb2b0fa2ae60",
+        "package-lock.json": "52981d00bcb721c6cd13e6b79d7e209a20a7f841bcec59c54e6f6213902a8ff6",
+        "package.json": "f2c18cefa49c598829b01321fe7de2330673618f25160ab7db5343c48189bbc7",
+        "ssr.mjs": "86d69046205bdfa484c43ada30e10fc2bb6144ad808190aca68c5983785951a9",
+        "style.css": "a47e9e8dbec279ad42809b2ecc57357ff2e8ef37eab9b13fe151f785757ab98a",
+        "tsconfig.json": "c59094b325081757c582e3f683f0401f7feb59d3649427fa3f94e4568f76244a",
+        "tsconfig.strict.json": "b33f818a882c93c36add9ac4d8bb1510df539030ba3cba4a51cae417c2908928",
+        "types.ts": "627d5854fa47508efecd3e25fb3148f509e3d49f40adc431b854423561c0230b",
+        "vite.config.js": "e75f2f3c572aa3312b1ec0af91c08b13d4e7e6b1f2fcb8ed684d5ace38514571"
+      },
+      "strictTypes": "passed",
+      "userAcceptance": "not-run"
+    },
+    {
+      "engine": "firefox",
+      "pilot": "ai-review-gate",
+      "entryStrategy": "legacy-root-compatibility",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "sourceFiles": {
+        "README.md": "d52513a77b29bbb6748f1dec9b72292a9c1bea184669f167635494913048e5fe",
+        "app.js": "21683dfa77c8a7688ead0dd4424fe1a8a944fe578aa39edc2a061b0578de3383",
+        "iframe.html": "9823e0c1b758eda2aa7a5807975dbe682f60f5879a33d46fd7c7886b6e8988bf",
+        "index.html": "f755c8d3e951476cc7c2685dc9675850e0fb2127a017d466241700ca894b4d0a",
+        "main.js": "6746cbff194ca2f4727e95c163a36484c08d83b7b37b86881fe541fa0c23f99d",
+        "package-lock.json": "a16c79fa9faa2c01798e57d03765094e5c913498a96dda34bb346dea9a411289",
+        "package.json": "629eab69f1861215981ebab2a8a935b51bcfaf33744858cdd460fe640ec3eb59",
+        "ssr.mjs": "86d69046205bdfa484c43ada30e10fc2bb6144ad808190aca68c5983785951a9",
+        "style.css": "a47e9e8dbec279ad42809b2ecc57357ff2e8ef37eab9b13fe151f785757ab98a",
+        "tsconfig.json": "c59094b325081757c582e3f683f0401f7feb59d3649427fa3f94e4568f76244a",
+        "tsconfig.strict.json": "b33f818a882c93c36add9ac4d8bb1510df539030ba3cba4a51cae417c2908928",
+        "types.ts": "e830ab15fb2043e2f50951797db623b35d6c08aa8490960af65921533254e72c",
+        "vite.config.js": "e75f2f3c572aa3312b1ec0af91c08b13d4e7e6b1f2fcb8ed684d5ace38514571"
+      },
+      "strictTypes": "passed",
+      "userAcceptance": "not-run"
+    },
+    {
+      "engine": "webkit",
+      "pilot": "clean-consumer",
+      "entryStrategy": "legacy-root-compatibility",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "sourceFiles": {
+        "README.md": "b7f313f8de251333ead210d8bdd7f91f6b80cdcc56921d83788a765f0c7987bd",
+        "app.js": "9bac9aa1a2fb4facea8a2905bd6e4952d7d5db250ff752e8a83c1e4f81aea316",
+        "iframe.html": "9823e0c1b758eda2aa7a5807975dbe682f60f5879a33d46fd7c7886b6e8988bf",
+        "index.html": "00f16e66916a3080664748baa1c7604b3e74451584c4c00fbaf430ea67ba0611",
+        "main.js": "0f091d6f4a767a7cf8d07c97e95cf55348ee09a8408eb75f3c29eb2b0fa2ae60",
+        "package-lock.json": "52981d00bcb721c6cd13e6b79d7e209a20a7f841bcec59c54e6f6213902a8ff6",
+        "package.json": "f2c18cefa49c598829b01321fe7de2330673618f25160ab7db5343c48189bbc7",
+        "ssr.mjs": "86d69046205bdfa484c43ada30e10fc2bb6144ad808190aca68c5983785951a9",
+        "style.css": "a47e9e8dbec279ad42809b2ecc57357ff2e8ef37eab9b13fe151f785757ab98a",
+        "tsconfig.json": "c59094b325081757c582e3f683f0401f7feb59d3649427fa3f94e4568f76244a",
+        "tsconfig.strict.json": "b33f818a882c93c36add9ac4d8bb1510df539030ba3cba4a51cae417c2908928",
+        "types.ts": "627d5854fa47508efecd3e25fb3148f509e3d49f40adc431b854423561c0230b",
+        "vite.config.js": "e75f2f3c572aa3312b1ec0af91c08b13d4e7e6b1f2fcb8ed684d5ace38514571"
+      },
+      "strictTypes": "passed",
+      "userAcceptance": "not-run"
+    },
+    {
+      "engine": "webkit",
+      "pilot": "ai-review-gate",
+      "entryStrategy": "legacy-root-compatibility",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "sourceFiles": {
+        "README.md": "d52513a77b29bbb6748f1dec9b72292a9c1bea184669f167635494913048e5fe",
+        "app.js": "21683dfa77c8a7688ead0dd4424fe1a8a944fe578aa39edc2a061b0578de3383",
+        "iframe.html": "9823e0c1b758eda2aa7a5807975dbe682f60f5879a33d46fd7c7886b6e8988bf",
+        "index.html": "f755c8d3e951476cc7c2685dc9675850e0fb2127a017d466241700ca894b4d0a",
+        "main.js": "6746cbff194ca2f4727e95c163a36484c08d83b7b37b86881fe541fa0c23f99d",
+        "package-lock.json": "a16c79fa9faa2c01798e57d03765094e5c913498a96dda34bb346dea9a411289",
+        "package.json": "629eab69f1861215981ebab2a8a935b51bcfaf33744858cdd460fe640ec3eb59",
+        "ssr.mjs": "86d69046205bdfa484c43ada30e10fc2bb6144ad808190aca68c5983785951a9",
+        "style.css": "a47e9e8dbec279ad42809b2ecc57357ff2e8ef37eab9b13fe151f785757ab98a",
+        "tsconfig.json": "c59094b325081757c582e3f683f0401f7feb59d3649427fa3f94e4568f76244a",
+        "tsconfig.strict.json": "b33f818a882c93c36add9ac4d8bb1510df539030ba3cba4a51cae417c2908928",
+        "types.ts": "e830ab15fb2043e2f50951797db623b35d6c08aa8490960af65921533254e72c",
+        "vite.config.js": "e75f2f3c572aa3312b1ec0af91c08b13d4e7e6b1f2fcb8ed684d5ace38514571"
+      },
+      "strictTypes": "passed",
+      "userAcceptance": "not-run"
+    }
+  ],
+  "visual": "six engine/viewport pairs are byte-identical; 12 screenshots"
+}

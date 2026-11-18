@@ -8,3 +8,5 @@ const SplitterPanel = withInstall(splitterPanel, 'ASplitterPanel')
 export { SplitterPanel }
 export type { SplitterLayout, SplitterPanelConstraint, SplitterProps, SplitterSize } from './types'
 export default Splitter
+
+export { Splitter }

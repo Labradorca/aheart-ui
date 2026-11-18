@@ -1,0 +1,38 @@
+✔ CSS union rejects extra/missing selectors, changed declarations, context and order (3.111333ms)
+✔ AIForm closure includes exact declared field styles and no Table or Workbench (10.454541ms)
+✔ module boundary rejects root barrels, undeclared base and optional packages (0.405083ms)
+✔ leaf and already-passing composites keep exact M1 hard boundaries (0.143333ms)
+✔ composite exception requires initial exceedance and freezes dependency bytes/share (0.112292ms)
+✔ JS retains strict full and root-named increment boundaries (0.053833ms)
+✖ real recorded composite baselines reject even one byte of closure growth (4.752333ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 6
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 83.192583
+
+✖ failing tests:
+
+test at scripts/v1-entry-contract.test.mjs:54:1
+✖ real recorded composite baselines reject even one byte of closure growth (4.752333ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok(cssBudgetErrors(args).errors.includes('composite closure exceeds non-increase baseline'))
+
+      at TestContext.<anonymous> (file:///Users/start/code/aheart-ui-wt/v1.4-entries/scripts/v1-entry-contract.test.mjs:58:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

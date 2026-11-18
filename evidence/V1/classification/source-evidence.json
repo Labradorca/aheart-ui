@@ -1,0 +1,2121 @@
+{
+  "head": "4f2762a2d13535a551d0969394b525ba5bca5c18",
+  "scope": "source-only audit; classification remains an unapproved proposal",
+  "entries": [
+    {
+      "domain": "ai",
+      "subpath": "actions",
+      "canonicalSubpath": "actions",
+      "componentViews": [
+        "actions"
+      ],
+      "directBaseFamilies": [],
+      "baseFamiliesWithDeclaredTransitives": [],
+      "externalImports": [],
+      "imports": [
+        {
+          "file": "packages/ai/src/actions/index.ts",
+          "sourceLine": 1,
+          "specifier": "../actions.vue",
+          "names": []
+        }
+      ],
+      "sourceSha256": {
+        "packages/ai/src/actions.vue": "e56022fe5caaa53aca442c266eb0168b7e1bd51c2c2538488b3142e337f05caa",
+        "packages/ai/src/actions/index.ts": "1d6ddc085eacdee522b0e02b4873aff5cbdf824f7594dbaef2d7c4d9c0921c39"
+      }
+    },
+    {
+      "domain": "ai",
+      "subpath": "attachments",
+      "canonicalSubpath": "attachments",
+      "componentViews": [
+        "attachments"
+      ],
+      "directBaseFamilies": [],
+      "baseFamiliesWithDeclaredTransitives": [],
+      "externalImports": [
+        "vue"
+      ],
+      "imports": [
+        {
+          "file": "packages/ai/src/attachments/index.ts",
+          "sourceLine": 1,
+          "specifier": "../attachments.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/attachments.vue",
+          "sourceLine": 13,
+          "specifier": "./safe-markdown",
+          "names": [
+            "getSafeUrl"
+          ]
+        },
+        {
+          "file": "packages/ai/src/safe-markdown.ts",
+          "sourceLine": 1,
+          "specifier": "vue",
+          "names": [
+            "h"
+          ]
+        }
+      ],
+      "sourceSha256": {
+        "packages/ai/src/attachments.vue": "c907e12b88efb2d63f6de474e1ba71020ce8027ac9dbf196b80aec54335f9a0f",
+        "packages/ai/src/attachments/index.ts": "3572d79a0c6595bb5538363c334fee4fe96501ecb3787eca85894d51dc6cb612",
+        "packages/ai/src/safe-markdown.ts": "3bbff2080237e36c35581dc96f13791192de177836408d83a20c9976996f1258"
+      }
+    },
+    {
+      "domain": "ai",
+      "subpath": "bubble",
+      "canonicalSubpath": "bubble",
+      "componentViews": [
+        "attachments",
+        "bubble",
+        "process",
+        "sources"
+      ],
+      "directBaseFamilies": [],
+      "baseFamiliesWithDeclaredTransitives": [],
+      "externalImports": [
+        "vue"
+      ],
+      "imports": [
+        {
+          "file": "packages/ai/src/bubble/index.ts",
+          "sourceLine": 1,
+          "specifier": "../bubble.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 29,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "defineComponent"
+          ]
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 30,
+          "specifier": "./attachments.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/attachments.vue",
+          "sourceLine": 13,
+          "specifier": "./safe-markdown",
+          "names": [
+            "getSafeUrl"
+          ]
+        },
+        {
+          "file": "packages/ai/src/safe-markdown.ts",
+          "sourceLine": 1,
+          "specifier": "vue",
+          "names": [
+            "h"
+          ]
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 31,
+          "specifier": "./process.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 32,
+          "specifier": "./sources.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/sources.vue",
+          "sourceLine": 16,
+          "specifier": "./safe-markdown",
+          "names": [
+            "getSafeUrl"
+          ]
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 33,
+          "specifier": "./safe-markdown",
+          "names": [
+            "renderSafeMarkdown"
+          ]
+        }
+      ],
+      "sourceSha256": {
+        "packages/ai/src/attachments.vue": "c907e12b88efb2d63f6de474e1ba71020ce8027ac9dbf196b80aec54335f9a0f",
+        "packages/ai/src/bubble.vue": "4ffabc8d175f856510a66af24e8e9526d22a1ce0629244bdbc0d84cd8879aeba",
+        "packages/ai/src/bubble/index.ts": "c1161ce76bd8dbc417a39f189a8daf8db82279b3c172a79fddaf274b019cc3e2",
+        "packages/ai/src/process.vue": "b0e12e9e41682c2c9e1f1dc5f503f18103d21105a444a77124625e84fdb8c896",
+        "packages/ai/src/safe-markdown.ts": "3bbff2080237e36c35581dc96f13791192de177836408d83a20c9976996f1258",
+        "packages/ai/src/sources.vue": "5295e56879285b01b747d3caece32e767e2088db1349cdbb536832ac3bf47fd6"
+      }
+    },
+    {
+      "domain": "ai",
+      "subpath": "conversations",
+      "canonicalSubpath": "conversations",
+      "componentViews": [
+        "conversations"
+      ],
+      "directBaseFamilies": [],
+      "baseFamiliesWithDeclaredTransitives": [],
+      "externalImports": [],
+      "imports": [
+        {
+          "file": "packages/ai/src/conversations/index.ts",
+          "sourceLine": 1,
+          "specifier": "../conversations.vue",
+          "names": []
+        }
+      ],
+      "sourceSha256": {
+        "packages/ai/src/conversations.vue": "d8072d3b4311ca8c2d9d3b21b127fb16956e757285e537a80062e016f1e3d7b4",
+        "packages/ai/src/conversations/index.ts": "04304931ca36b5a1622f0fc6befa0978d364d5f2a4c5d432ec9010eeec89dfb2"
+      }
+    },
+    {
+      "domain": "ai",
+      "subpath": "form",
+      "canonicalSubpath": "form",
+      "componentViews": [
+        "form",
+        "form-field"
+      ],
+      "directBaseFamilies": [
+        "button",
+        "checkbox",
+        "date-picker",
+        "form",
+        "input",
+        "input-number",
+        "radio",
+        "select",
+        "switch",
+        "textarea",
+        "time-picker",
+        "tree-select",
+        "upload"
+      ],
+      "baseFamiliesWithDeclaredTransitives": [
+        "button",
+        "checkbox",
+        "date-picker",
+        "form",
+        "icon",
+        "input",
+        "input-number",
+        "radio",
+        "select",
+        "switch",
+        "textarea",
+        "time-picker",
+        "tooltip",
+        "tree",
+        "tree-select",
+        "upload"
+      ],
+      "externalImports": [
+        "aheart-ui",
+        "vue"
+      ],
+      "imports": [
+        {
+          "file": "packages/ai/src/form/index.ts",
+          "sourceLine": 1,
+          "specifier": "../form.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/form.vue",
+          "sourceLine": 68,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "nextTick",
+            "onBeforeUnmount",
+            "onMounted",
+            "reactive",
+            "ref",
+            "toRaw",
+            "watch"
+          ]
+        },
+        {
+          "file": "packages/ai/src/form.vue",
+          "sourceLine": 69,
+          "specifier": "aheart-ui",
+          "names": [
+            "Button",
+            "Form",
+            "FormItem"
+          ]
+        },
+        {
+          "file": "packages/ai/src/form.vue",
+          "sourceLine": 70,
+          "specifier": "./form-field.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/form-field.vue",
+          "sourceLine": 140,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "ref"
+          ]
+        },
+        {
+          "file": "packages/ai/src/form-field.vue",
+          "sourceLine": 157,
+          "specifier": "aheart-ui",
+          "names": [
+            "CheckboxGroup",
+            "DatePicker",
+            "DateRangePicker",
+            "Input",
+            "InputNumber",
+            "RadioGroup",
+            "Select",
+            "Switch",
+            "Textarea",
+            "TimePicker",
+            "TimeRangePicker",
+            "TreeSelect",
+            "Upload"
+          ]
+        },
+        {
+          "file": "packages/ai/src/form.vue",
+          "sourceLine": 78,
+          "specifier": "./form-schema",
+          "names": [
+            "validateAIFormSchema"
+          ]
+        },
+        {
+          "file": "packages/ai/src/form/index.ts",
+          "sourceLine": 3,
+          "specifier": "../form-schema",
+          "names": []
+        }
+      ],
+      "sourceSha256": {
+        "packages/ai/src/form-field.vue": "23514bdf29820ff5cb8385828707e688598263e40ce05cf240651c1773fb2634",
+        "packages/ai/src/form-schema.ts": "afca95b3efb70f7d1143df9da50ccaacb9b8b3dee6f47a20c264d809ddc648aa",
+        "packages/ai/src/form.vue": "9391059f0de877084d482bf70c65a78570ae18021fb38f745034fb85b21cc58c",
+        "packages/ai/src/form/index.ts": "4958a0b270652c6dd0d9b48757cd27bf6c4698458206b68ae0ea34169fe7c67c"
+      }
+    },
+    {
+      "domain": "ai",
+      "subpath": "process",
+      "canonicalSubpath": "process",
+      "componentViews": [
+        "process"
+      ],
+      "directBaseFamilies": [],
+      "baseFamiliesWithDeclaredTransitives": [],
+      "externalImports": [],
+      "imports": [
+        {
+          "file": "packages/ai/src/process/index.ts",
+          "sourceLine": 1,
+          "specifier": "../process.vue",
+          "names": []
+        }
+      ],
+      "sourceSha256": {
+        "packages/ai/src/process.vue": "b0e12e9e41682c2c9e1f1dc5f503f18103d21105a444a77124625e84fdb8c896",
+        "packages/ai/src/process/index.ts": "70574a41515eea236d6324d9a9c52b57a2fdda0037a86b884a78ec23dd2fa2f5"
+      }
+    },
+    {
+      "domain": "ai",
+      "subpath": "prompts",
+      "canonicalSubpath": "prompts",
+      "componentViews": [
+        "prompts"
+      ],
+      "directBaseFamilies": [],
+      "baseFamiliesWithDeclaredTransitives": [],
+      "externalImports": [],
+      "imports": [
+        {
+          "file": "packages/ai/src/prompts/index.ts",
+          "sourceLine": 1,
+          "specifier": "../prompts.vue",
+          "names": []
+        }
+      ],
+      "sourceSha256": {
+        "packages/ai/src/prompts.vue": "bebef27029e5d085659a1f2365e7fec57856f85e16bb9b0490b4faa0c0628c15",
+        "packages/ai/src/prompts/index.ts": "fb7c1a157944ce669509f0df9366924275a26ef41ed23199ce0ef94bf3a3b693"
+      }
+    },
+    {
+      "domain": "ai",
+      "subpath": "sender",
+      "canonicalSubpath": "sender",
+      "componentViews": [
+        "sender"
+      ],
+      "directBaseFamilies": [],
+      "baseFamiliesWithDeclaredTransitives": [],
+      "externalImports": [],
+      "imports": [
+        {
+          "file": "packages/ai/src/sender/index.ts",
+          "sourceLine": 1,
+          "specifier": "../sender.vue",
+          "names": []
+        }
+      ],
+      "sourceSha256": {
+        "packages/ai/src/sender.vue": "ac2b42ae668c648a2cb14feb97b7284e16a7b3b14069e3c276baac3102c6c17d",
+        "packages/ai/src/sender/index.ts": "e8a6a5426e5926061832350c5b9c23931fa4215d84e5ca336f081644f201fcf2"
+      }
+    },
+    {
+      "domain": "ai",
+      "subpath": "sources",
+      "canonicalSubpath": "sources",
+      "componentViews": [
+        "sources"
+      ],
+      "directBaseFamilies": [],
+      "baseFamiliesWithDeclaredTransitives": [],
+      "externalImports": [
+        "vue"
+      ],
+      "imports": [
+        {
+          "file": "packages/ai/src/sources/index.ts",
+          "sourceLine": 1,
+          "specifier": "../sources.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/sources.vue",
+          "sourceLine": 16,
+          "specifier": "./safe-markdown",
+          "names": [
+            "getSafeUrl"
+          ]
+        },
+        {
+          "file": "packages/ai/src/safe-markdown.ts",
+          "sourceLine": 1,
+          "specifier": "vue",
+          "names": [
+            "h"
+          ]
+        }
+      ],
+      "sourceSha256": {
+        "packages/ai/src/safe-markdown.ts": "3bbff2080237e36c35581dc96f13791192de177836408d83a20c9976996f1258",
+        "packages/ai/src/sources.vue": "5295e56879285b01b747d3caece32e767e2088db1349cdbb536832ac3bf47fd6",
+        "packages/ai/src/sources/index.ts": "313b8dd0534af2cb39247ac304d47ae9d0335945843826c7dadecad2c930eccb"
+      }
+    },
+    {
+      "domain": "ai",
+      "subpath": "thought-chain",
+      "canonicalSubpath": "thought-chain",
+      "componentViews": [
+        "process",
+        "thought-chain"
+      ],
+      "directBaseFamilies": [],
+      "baseFamiliesWithDeclaredTransitives": [],
+      "externalImports": [],
+      "imports": [
+        {
+          "file": "packages/ai/src/thought-chain/index.ts",
+          "sourceLine": 1,
+          "specifier": "../thought-chain.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/thought-chain.vue",
+          "sourceLine": 6,
+          "specifier": "./process.vue",
+          "names": []
+        }
+      ],
+      "sourceSha256": {
+        "packages/ai/src/process.vue": "b0e12e9e41682c2c9e1f1dc5f503f18103d21105a444a77124625e84fdb8c896",
+        "packages/ai/src/thought-chain.vue": "6af42136c849f64ba3b66a3e993a08de56ae93a642667d72852b68382753e105",
+        "packages/ai/src/thought-chain/index.ts": "5dffdecdbcf894f443e7ba4d2951590291b47fbc6a61df63c9298b2879193687"
+      }
+    },
+    {
+      "domain": "ai",
+      "subpath": "welcome",
+      "canonicalSubpath": "welcome",
+      "componentViews": [
+        "welcome"
+      ],
+      "directBaseFamilies": [],
+      "baseFamiliesWithDeclaredTransitives": [],
+      "externalImports": [],
+      "imports": [
+        {
+          "file": "packages/ai/src/welcome/index.ts",
+          "sourceLine": 1,
+          "specifier": "../welcome.vue",
+          "names": []
+        }
+      ],
+      "sourceSha256": {
+        "packages/ai/src/welcome.vue": "09bf8f71f777b4be8b6a281826fd1fd1b5c8f3a544cf50926979133627b2aa4e",
+        "packages/ai/src/welcome/index.ts": "a86214330a4a554a946c4c8417074b48a758e23cd30fae96637c7774cae30cea"
+      }
+    },
+    {
+      "domain": "ai",
+      "subpath": "chat-panel",
+      "canonicalSubpath": "chat-panel",
+      "componentViews": [
+        "attachments",
+        "bubble",
+        "chat-panel",
+        "conversations",
+        "process",
+        "prompts",
+        "sender",
+        "sources",
+        "welcome"
+      ],
+      "directBaseFamilies": [],
+      "baseFamiliesWithDeclaredTransitives": [],
+      "externalImports": [
+        "vue"
+      ],
+      "imports": [
+        {
+          "file": "packages/ai/src/chat-panel/index.ts",
+          "sourceLine": 1,
+          "specifier": "../chat-panel.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 88,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "getCurrentInstance",
+            "onBeforeUnmount",
+            "onBeforeUpdate",
+            "ref",
+            "watch"
+          ]
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 89,
+          "specifier": "./attachments.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/attachments.vue",
+          "sourceLine": 13,
+          "specifier": "./safe-markdown",
+          "names": [
+            "getSafeUrl"
+          ]
+        },
+        {
+          "file": "packages/ai/src/safe-markdown.ts",
+          "sourceLine": 1,
+          "specifier": "vue",
+          "names": [
+            "h"
+          ]
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 90,
+          "specifier": "./bubble.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 29,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "defineComponent"
+          ]
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 30,
+          "specifier": "./attachments.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 31,
+          "specifier": "./process.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 32,
+          "specifier": "./sources.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/sources.vue",
+          "sourceLine": 16,
+          "specifier": "./safe-markdown",
+          "names": [
+            "getSafeUrl"
+          ]
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 33,
+          "specifier": "./safe-markdown",
+          "names": [
+            "renderSafeMarkdown"
+          ]
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 91,
+          "specifier": "./conversations.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 92,
+          "specifier": "./prompts.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 93,
+          "specifier": "./sender.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 94,
+          "specifier": "./welcome.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 110,
+          "specifier": "./stream-reducer",
+          "names": [
+            "createAIStreamReducer"
+          ]
+        },
+        {
+          "file": "packages/ai/src/chat-panel/index.ts",
+          "sourceLine": 3,
+          "specifier": "../stream-reducer",
+          "names": []
+        }
+      ],
+      "sourceSha256": {
+        "packages/ai/src/attachments.vue": "c907e12b88efb2d63f6de474e1ba71020ce8027ac9dbf196b80aec54335f9a0f",
+        "packages/ai/src/bubble.vue": "4ffabc8d175f856510a66af24e8e9526d22a1ce0629244bdbc0d84cd8879aeba",
+        "packages/ai/src/chat-panel.vue": "3cc5a12a2dab25c572f50b539d8f922c9b8fe6fb95aa0a676744d6d4e262cb49",
+        "packages/ai/src/chat-panel/index.ts": "902487d3ccbe9e6b6058c775dfbbd7beca49b30c70a770ed8721d9145b3ad484",
+        "packages/ai/src/conversations.vue": "d8072d3b4311ca8c2d9d3b21b127fb16956e757285e537a80062e016f1e3d7b4",
+        "packages/ai/src/process.vue": "b0e12e9e41682c2c9e1f1dc5f503f18103d21105a444a77124625e84fdb8c896",
+        "packages/ai/src/prompts.vue": "bebef27029e5d085659a1f2365e7fec57856f85e16bb9b0490b4faa0c0628c15",
+        "packages/ai/src/safe-markdown.ts": "3bbff2080237e36c35581dc96f13791192de177836408d83a20c9976996f1258",
+        "packages/ai/src/sender.vue": "ac2b42ae668c648a2cb14feb97b7284e16a7b3b14069e3c276baac3102c6c17d",
+        "packages/ai/src/sources.vue": "5295e56879285b01b747d3caece32e767e2088db1349cdbb536832ac3bf47fd6",
+        "packages/ai/src/stream-reducer.ts": "b0b433823b79c8376f76b5e09d3f4f6e100d57cb3510fb325637f5b267896ade",
+        "packages/ai/src/welcome.vue": "09bf8f71f777b4be8b6a281826fd1fd1b5c8f3a544cf50926979133627b2aa4e"
+      }
+    },
+    {
+      "domain": "ai",
+      "subpath": "agent-workbench",
+      "canonicalSubpath": "agent-workbench",
+      "componentViews": [
+        "agent-execution",
+        "agent-workbench",
+        "attachments",
+        "bubble",
+        "chat-panel",
+        "conversations",
+        "process",
+        "prompts",
+        "sender",
+        "sources",
+        "welcome"
+      ],
+      "directBaseFamilies": [
+        "button",
+        "drawer",
+        "splitter",
+        "tabs"
+      ],
+      "baseFamiliesWithDeclaredTransitives": [
+        "button",
+        "drawer",
+        "icon",
+        "skeleton",
+        "splitter",
+        "tabs"
+      ],
+      "externalImports": [
+        "@aheart-ui/dnd/sortable",
+        "aheart-ui",
+        "vue"
+      ],
+      "imports": [
+        {
+          "file": "packages/ai/src/agent-workbench/index.ts",
+          "sourceLine": 1,
+          "specifier": "../agent-workbench.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/agent-workbench.vue",
+          "sourceLine": 144,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "getCurrentInstance",
+            "h",
+            "nextTick",
+            "onBeforeUnmount",
+            "onBeforeUpdate",
+            "onMounted",
+            "ref",
+            "useId",
+            "watch"
+          ]
+        },
+        {
+          "file": "packages/ai/src/agent-workbench.vue",
+          "sourceLine": 145,
+          "specifier": "aheart-ui",
+          "names": [
+            "Button",
+            "Drawer",
+            "Splitter",
+            "SplitterPanel",
+            "Tabs"
+          ]
+        },
+        {
+          "file": "packages/ai/src/agent-workbench.vue",
+          "sourceLine": 146,
+          "specifier": "@aheart-ui/dnd/sortable",
+          "names": [
+            "SortableList"
+          ]
+        },
+        {
+          "file": "packages/ai/src/agent-workbench.vue",
+          "sourceLine": 147,
+          "specifier": "./attachments.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/attachments.vue",
+          "sourceLine": 13,
+          "specifier": "./safe-markdown",
+          "names": [
+            "getSafeUrl"
+          ]
+        },
+        {
+          "file": "packages/ai/src/safe-markdown.ts",
+          "sourceLine": 1,
+          "specifier": "vue",
+          "names": [
+            "h"
+          ]
+        },
+        {
+          "file": "packages/ai/src/agent-workbench.vue",
+          "sourceLine": 148,
+          "specifier": "./chat-panel.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 88,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "getCurrentInstance",
+            "onBeforeUnmount",
+            "onBeforeUpdate",
+            "ref",
+            "watch"
+          ]
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 89,
+          "specifier": "./attachments.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 90,
+          "specifier": "./bubble.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 29,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "defineComponent"
+          ]
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 30,
+          "specifier": "./attachments.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 31,
+          "specifier": "./process.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 32,
+          "specifier": "./sources.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/sources.vue",
+          "sourceLine": 16,
+          "specifier": "./safe-markdown",
+          "names": [
+            "getSafeUrl"
+          ]
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 33,
+          "specifier": "./safe-markdown",
+          "names": [
+            "renderSafeMarkdown"
+          ]
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 91,
+          "specifier": "./conversations.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 92,
+          "specifier": "./prompts.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 93,
+          "specifier": "./sender.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 94,
+          "specifier": "./welcome.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 110,
+          "specifier": "./stream-reducer",
+          "names": [
+            "createAIStreamReducer"
+          ]
+        },
+        {
+          "file": "packages/ai/src/agent-workbench.vue",
+          "sourceLine": 149,
+          "specifier": "./conversations.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/agent-workbench.vue",
+          "sourceLine": 150,
+          "specifier": "./sources.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/agent-workbench.vue",
+          "sourceLine": 151,
+          "specifier": "./agent-execution.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/agent-execution.vue",
+          "sourceLine": 227,
+          "specifier": "vue",
+          "names": [
+            "computed"
+          ]
+        },
+        {
+          "file": "packages/ai/src/agent-execution.vue",
+          "sourceLine": 228,
+          "specifier": "aheart-ui",
+          "names": [
+            "Button"
+          ]
+        },
+        {
+          "file": "packages/ai/src/agent-execution.vue",
+          "sourceLine": 229,
+          "specifier": "@aheart-ui/dnd/sortable",
+          "names": [
+            "SortableList"
+          ]
+        },
+        {
+          "file": "packages/ai/src/agent-execution.vue",
+          "sourceLine": 230,
+          "specifier": "./safe-markdown",
+          "names": [
+            "getSafeUrl"
+          ]
+        }
+      ],
+      "sourceSha256": {
+        "packages/ai/src/agent-execution.vue": "5e394fd2cbc8946b4b0e9b7eb22fbf4c2d481c0bff87db5b2b8c96a178f08fa6",
+        "packages/ai/src/agent-workbench.vue": "f3a75a622e380524943f572c4b488d358be707a71d958a796afc7121390a5c3d",
+        "packages/ai/src/agent-workbench/index.ts": "982a91465ef21bf37a2a0bb96d57a063c30dcf9f87f9755db248c8e4cc93a37c",
+        "packages/ai/src/attachments.vue": "c907e12b88efb2d63f6de474e1ba71020ce8027ac9dbf196b80aec54335f9a0f",
+        "packages/ai/src/bubble.vue": "4ffabc8d175f856510a66af24e8e9526d22a1ce0629244bdbc0d84cd8879aeba",
+        "packages/ai/src/chat-panel.vue": "3cc5a12a2dab25c572f50b539d8f922c9b8fe6fb95aa0a676744d6d4e262cb49",
+        "packages/ai/src/conversations.vue": "d8072d3b4311ca8c2d9d3b21b127fb16956e757285e537a80062e016f1e3d7b4",
+        "packages/ai/src/process.vue": "b0e12e9e41682c2c9e1f1dc5f503f18103d21105a444a77124625e84fdb8c896",
+        "packages/ai/src/prompts.vue": "bebef27029e5d085659a1f2365e7fec57856f85e16bb9b0490b4faa0c0628c15",
+        "packages/ai/src/safe-markdown.ts": "3bbff2080237e36c35581dc96f13791192de177836408d83a20c9976996f1258",
+        "packages/ai/src/sender.vue": "ac2b42ae668c648a2cb14feb97b7284e16a7b3b14069e3c276baac3102c6c17d",
+        "packages/ai/src/sources.vue": "5295e56879285b01b747d3caece32e767e2088db1349cdbb536832ac3bf47fd6",
+        "packages/ai/src/stream-reducer.ts": "b0b433823b79c8376f76b5e09d3f4f6e100d57cb3510fb325637f5b267896ade",
+        "packages/ai/src/welcome.vue": "09bf8f71f777b4be8b6a281826fd1fd1b5c8f3a544cf50926979133627b2aa4e"
+      }
+    },
+    {
+      "domain": "ai",
+      "subpath": "chat",
+      "canonicalSubpath": "chat",
+      "componentViews": [
+        "actions",
+        "attachments",
+        "bubble",
+        "chat-panel",
+        "conversations",
+        "process",
+        "prompts",
+        "sender",
+        "sources",
+        "welcome"
+      ],
+      "directBaseFamilies": [],
+      "baseFamiliesWithDeclaredTransitives": [],
+      "externalImports": [
+        "vue"
+      ],
+      "imports": [
+        {
+          "file": "packages/ai/src/chat/index.ts",
+          "sourceLine": 1,
+          "specifier": "../chat-panel.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 88,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "getCurrentInstance",
+            "onBeforeUnmount",
+            "onBeforeUpdate",
+            "ref",
+            "watch"
+          ]
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 89,
+          "specifier": "./attachments.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/attachments.vue",
+          "sourceLine": 13,
+          "specifier": "./safe-markdown",
+          "names": [
+            "getSafeUrl"
+          ]
+        },
+        {
+          "file": "packages/ai/src/safe-markdown.ts",
+          "sourceLine": 1,
+          "specifier": "vue",
+          "names": [
+            "h"
+          ]
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 90,
+          "specifier": "./bubble.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 29,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "defineComponent"
+          ]
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 30,
+          "specifier": "./attachments.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 31,
+          "specifier": "./process.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 32,
+          "specifier": "./sources.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/sources.vue",
+          "sourceLine": 16,
+          "specifier": "./safe-markdown",
+          "names": [
+            "getSafeUrl"
+          ]
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 33,
+          "specifier": "./safe-markdown",
+          "names": [
+            "renderSafeMarkdown"
+          ]
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 91,
+          "specifier": "./conversations.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 92,
+          "specifier": "./prompts.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 93,
+          "specifier": "./sender.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 94,
+          "specifier": "./welcome.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 110,
+          "specifier": "./stream-reducer",
+          "names": [
+            "createAIStreamReducer"
+          ]
+        },
+        {
+          "file": "packages/ai/src/chat/index.ts",
+          "sourceLine": 2,
+          "specifier": "../actions.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat/index.ts",
+          "sourceLine": 3,
+          "specifier": "../attachments.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat/index.ts",
+          "sourceLine": 4,
+          "specifier": "../bubble.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat/index.ts",
+          "sourceLine": 5,
+          "specifier": "../conversations.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat/index.ts",
+          "sourceLine": 6,
+          "specifier": "../prompts.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat/index.ts",
+          "sourceLine": 7,
+          "specifier": "../sender.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat/index.ts",
+          "sourceLine": 8,
+          "specifier": "../sources.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat/index.ts",
+          "sourceLine": 9,
+          "specifier": "../welcome.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat/index.ts",
+          "sourceLine": 11,
+          "specifier": "../stream-reducer",
+          "names": []
+        }
+      ],
+      "sourceSha256": {
+        "packages/ai/src/actions.vue": "e56022fe5caaa53aca442c266eb0168b7e1bd51c2c2538488b3142e337f05caa",
+        "packages/ai/src/attachments.vue": "c907e12b88efb2d63f6de474e1ba71020ce8027ac9dbf196b80aec54335f9a0f",
+        "packages/ai/src/bubble.vue": "4ffabc8d175f856510a66af24e8e9526d22a1ce0629244bdbc0d84cd8879aeba",
+        "packages/ai/src/chat-panel.vue": "3cc5a12a2dab25c572f50b539d8f922c9b8fe6fb95aa0a676744d6d4e262cb49",
+        "packages/ai/src/chat/index.ts": "01c7a1854fd25e73503953d03063788b6d91ac58d5a02b86c151f495d718a51d",
+        "packages/ai/src/conversations.vue": "d8072d3b4311ca8c2d9d3b21b127fb16956e757285e537a80062e016f1e3d7b4",
+        "packages/ai/src/process.vue": "b0e12e9e41682c2c9e1f1dc5f503f18103d21105a444a77124625e84fdb8c896",
+        "packages/ai/src/prompts.vue": "bebef27029e5d085659a1f2365e7fec57856f85e16bb9b0490b4faa0c0628c15",
+        "packages/ai/src/safe-markdown.ts": "3bbff2080237e36c35581dc96f13791192de177836408d83a20c9976996f1258",
+        "packages/ai/src/sender.vue": "ac2b42ae668c648a2cb14feb97b7284e16a7b3b14069e3c276baac3102c6c17d",
+        "packages/ai/src/sources.vue": "5295e56879285b01b747d3caece32e767e2088db1349cdbb536832ac3bf47fd6",
+        "packages/ai/src/stream-reducer.ts": "b0b433823b79c8376f76b5e09d3f4f6e100d57cb3510fb325637f5b267896ade",
+        "packages/ai/src/welcome.vue": "09bf8f71f777b4be8b6a281826fd1fd1b5c8f3a544cf50926979133627b2aa4e"
+      }
+    },
+    {
+      "domain": "ai",
+      "subpath": "agent",
+      "canonicalSubpath": "agent",
+      "componentViews": [
+        "form",
+        "form-field",
+        "process",
+        "thought-chain"
+      ],
+      "directBaseFamilies": [
+        "button",
+        "checkbox",
+        "date-picker",
+        "form",
+        "input",
+        "input-number",
+        "radio",
+        "select",
+        "switch",
+        "textarea",
+        "time-picker",
+        "tree-select",
+        "upload"
+      ],
+      "baseFamiliesWithDeclaredTransitives": [
+        "button",
+        "checkbox",
+        "date-picker",
+        "form",
+        "icon",
+        "input",
+        "input-number",
+        "radio",
+        "select",
+        "switch",
+        "textarea",
+        "time-picker",
+        "tooltip",
+        "tree",
+        "tree-select",
+        "upload"
+      ],
+      "externalImports": [
+        "aheart-ui",
+        "vue"
+      ],
+      "imports": [
+        {
+          "file": "packages/ai/src/agent/index.ts",
+          "sourceLine": 1,
+          "specifier": "../process.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/agent/index.ts",
+          "sourceLine": 2,
+          "specifier": "../thought-chain.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/thought-chain.vue",
+          "sourceLine": 6,
+          "specifier": "./process.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/agent/index.ts",
+          "sourceLine": 3,
+          "specifier": "../form.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/form.vue",
+          "sourceLine": 68,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "nextTick",
+            "onBeforeUnmount",
+            "onMounted",
+            "reactive",
+            "ref",
+            "toRaw",
+            "watch"
+          ]
+        },
+        {
+          "file": "packages/ai/src/form.vue",
+          "sourceLine": 69,
+          "specifier": "aheart-ui",
+          "names": [
+            "Button",
+            "Form",
+            "FormItem"
+          ]
+        },
+        {
+          "file": "packages/ai/src/form.vue",
+          "sourceLine": 70,
+          "specifier": "./form-field.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/form-field.vue",
+          "sourceLine": 140,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "ref"
+          ]
+        },
+        {
+          "file": "packages/ai/src/form-field.vue",
+          "sourceLine": 157,
+          "specifier": "aheart-ui",
+          "names": [
+            "CheckboxGroup",
+            "DatePicker",
+            "DateRangePicker",
+            "Input",
+            "InputNumber",
+            "RadioGroup",
+            "Select",
+            "Switch",
+            "Textarea",
+            "TimePicker",
+            "TimeRangePicker",
+            "TreeSelect",
+            "Upload"
+          ]
+        },
+        {
+          "file": "packages/ai/src/form.vue",
+          "sourceLine": 78,
+          "specifier": "./form-schema",
+          "names": [
+            "validateAIFormSchema"
+          ]
+        },
+        {
+          "file": "packages/ai/src/agent/index.ts",
+          "sourceLine": 5,
+          "specifier": "../form-schema",
+          "names": []
+        }
+      ],
+      "sourceSha256": {
+        "packages/ai/src/agent/index.ts": "519b0369e877fed38bdb1860f99f0f01a4ca0d40270e95c73e41cbdbb1200dc9",
+        "packages/ai/src/form-field.vue": "23514bdf29820ff5cb8385828707e688598263e40ce05cf240651c1773fb2634",
+        "packages/ai/src/form-schema.ts": "afca95b3efb70f7d1143df9da50ccaacb9b8b3dee6f47a20c264d809ddc648aa",
+        "packages/ai/src/form.vue": "9391059f0de877084d482bf70c65a78570ae18021fb38f745034fb85b21cc58c",
+        "packages/ai/src/process.vue": "b0e12e9e41682c2c9e1f1dc5f503f18103d21105a444a77124625e84fdb8c896",
+        "packages/ai/src/thought-chain.vue": "6af42136c849f64ba3b66a3e993a08de56ae93a642667d72852b68382753e105"
+      }
+    },
+    {
+      "domain": "ai",
+      "subpath": "workbench",
+      "canonicalSubpath": "agent-workbench",
+      "componentViews": [
+        "agent-execution",
+        "agent-workbench",
+        "attachments",
+        "bubble",
+        "chat-panel",
+        "conversations",
+        "process",
+        "prompts",
+        "sender",
+        "sources",
+        "welcome"
+      ],
+      "directBaseFamilies": [
+        "button",
+        "drawer",
+        "splitter",
+        "tabs"
+      ],
+      "baseFamiliesWithDeclaredTransitives": [
+        "button",
+        "drawer",
+        "icon",
+        "skeleton",
+        "splitter",
+        "tabs"
+      ],
+      "externalImports": [
+        "@aheart-ui/dnd/sortable",
+        "aheart-ui",
+        "vue"
+      ],
+      "imports": [
+        {
+          "file": "packages/ai/src/agent-workbench/index.ts",
+          "sourceLine": 1,
+          "specifier": "../agent-workbench.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/agent-workbench.vue",
+          "sourceLine": 144,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "getCurrentInstance",
+            "h",
+            "nextTick",
+            "onBeforeUnmount",
+            "onBeforeUpdate",
+            "onMounted",
+            "ref",
+            "useId",
+            "watch"
+          ]
+        },
+        {
+          "file": "packages/ai/src/agent-workbench.vue",
+          "sourceLine": 145,
+          "specifier": "aheart-ui",
+          "names": [
+            "Button",
+            "Drawer",
+            "Splitter",
+            "SplitterPanel",
+            "Tabs"
+          ]
+        },
+        {
+          "file": "packages/ai/src/agent-workbench.vue",
+          "sourceLine": 146,
+          "specifier": "@aheart-ui/dnd/sortable",
+          "names": [
+            "SortableList"
+          ]
+        },
+        {
+          "file": "packages/ai/src/agent-workbench.vue",
+          "sourceLine": 147,
+          "specifier": "./attachments.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/attachments.vue",
+          "sourceLine": 13,
+          "specifier": "./safe-markdown",
+          "names": [
+            "getSafeUrl"
+          ]
+        },
+        {
+          "file": "packages/ai/src/safe-markdown.ts",
+          "sourceLine": 1,
+          "specifier": "vue",
+          "names": [
+            "h"
+          ]
+        },
+        {
+          "file": "packages/ai/src/agent-workbench.vue",
+          "sourceLine": 148,
+          "specifier": "./chat-panel.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 88,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "getCurrentInstance",
+            "onBeforeUnmount",
+            "onBeforeUpdate",
+            "ref",
+            "watch"
+          ]
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 89,
+          "specifier": "./attachments.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 90,
+          "specifier": "./bubble.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 29,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "defineComponent"
+          ]
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 30,
+          "specifier": "./attachments.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 31,
+          "specifier": "./process.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 32,
+          "specifier": "./sources.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/sources.vue",
+          "sourceLine": 16,
+          "specifier": "./safe-markdown",
+          "names": [
+            "getSafeUrl"
+          ]
+        },
+        {
+          "file": "packages/ai/src/bubble.vue",
+          "sourceLine": 33,
+          "specifier": "./safe-markdown",
+          "names": [
+            "renderSafeMarkdown"
+          ]
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 91,
+          "specifier": "./conversations.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 92,
+          "specifier": "./prompts.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 93,
+          "specifier": "./sender.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 94,
+          "specifier": "./welcome.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/chat-panel.vue",
+          "sourceLine": 110,
+          "specifier": "./stream-reducer",
+          "names": [
+            "createAIStreamReducer"
+          ]
+        },
+        {
+          "file": "packages/ai/src/agent-workbench.vue",
+          "sourceLine": 149,
+          "specifier": "./conversations.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/agent-workbench.vue",
+          "sourceLine": 150,
+          "specifier": "./sources.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/agent-workbench.vue",
+          "sourceLine": 151,
+          "specifier": "./agent-execution.vue",
+          "names": []
+        },
+        {
+          "file": "packages/ai/src/agent-execution.vue",
+          "sourceLine": 227,
+          "specifier": "vue",
+          "names": [
+            "computed"
+          ]
+        },
+        {
+          "file": "packages/ai/src/agent-execution.vue",
+          "sourceLine": 228,
+          "specifier": "aheart-ui",
+          "names": [
+            "Button"
+          ]
+        },
+        {
+          "file": "packages/ai/src/agent-execution.vue",
+          "sourceLine": 229,
+          "specifier": "@aheart-ui/dnd/sortable",
+          "names": [
+            "SortableList"
+          ]
+        },
+        {
+          "file": "packages/ai/src/agent-execution.vue",
+          "sourceLine": 230,
+          "specifier": "./safe-markdown",
+          "names": [
+            "getSafeUrl"
+          ]
+        }
+      ],
+      "sourceSha256": {
+        "packages/ai/src/agent-execution.vue": "5e394fd2cbc8946b4b0e9b7eb22fbf4c2d481c0bff87db5b2b8c96a178f08fa6",
+        "packages/ai/src/agent-workbench.vue": "f3a75a622e380524943f572c4b488d358be707a71d958a796afc7121390a5c3d",
+        "packages/ai/src/agent-workbench/index.ts": "982a91465ef21bf37a2a0bb96d57a063c30dcf9f87f9755db248c8e4cc93a37c",
+        "packages/ai/src/attachments.vue": "c907e12b88efb2d63f6de474e1ba71020ce8027ac9dbf196b80aec54335f9a0f",
+        "packages/ai/src/bubble.vue": "4ffabc8d175f856510a66af24e8e9526d22a1ce0629244bdbc0d84cd8879aeba",
+        "packages/ai/src/chat-panel.vue": "3cc5a12a2dab25c572f50b539d8f922c9b8fe6fb95aa0a676744d6d4e262cb49",
+        "packages/ai/src/conversations.vue": "d8072d3b4311ca8c2d9d3b21b127fb16956e757285e537a80062e016f1e3d7b4",
+        "packages/ai/src/process.vue": "b0e12e9e41682c2c9e1f1dc5f503f18103d21105a444a77124625e84fdb8c896",
+        "packages/ai/src/prompts.vue": "bebef27029e5d085659a1f2365e7fec57856f85e16bb9b0490b4faa0c0628c15",
+        "packages/ai/src/safe-markdown.ts": "3bbff2080237e36c35581dc96f13791192de177836408d83a20c9976996f1258",
+        "packages/ai/src/sender.vue": "ac2b42ae668c648a2cb14feb97b7284e16a7b3b14069e3c276baac3102c6c17d",
+        "packages/ai/src/sources.vue": "5295e56879285b01b747d3caece32e767e2088db1349cdbb536832ac3bf47fd6",
+        "packages/ai/src/stream-reducer.ts": "b0b433823b79c8376f76b5e09d3f4f6e100d57cb3510fb325637f5b267896ade",
+        "packages/ai/src/welcome.vue": "09bf8f71f777b4be8b6a281826fd1fd1b5c8f3a544cf50926979133627b2aa4e"
+      }
+    },
+    {
+      "domain": "dnd",
+      "subpath": "draggable",
+      "canonicalSubpath": "draggable",
+      "componentViews": [
+        "draggable"
+      ],
+      "directBaseFamilies": [],
+      "baseFamiliesWithDeclaredTransitives": [],
+      "externalImports": [
+        "@atlaskit/pragmatic-drag-and-drop/element/adapter",
+        "vue"
+      ],
+      "imports": [
+        {
+          "file": "packages/dnd/src/draggable/index.ts",
+          "sourceLine": 1,
+          "specifier": "../draggable.vue",
+          "names": []
+        },
+        {
+          "file": "packages/dnd/src/draggable.vue",
+          "sourceLine": 8,
+          "specifier": "vue",
+          "names": [
+            "ref",
+            "watch",
+            "watchEffect"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/draggable.vue",
+          "sourceLine": 9,
+          "specifier": "./use-draggable",
+          "names": [
+            "useDraggable"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/use-draggable.ts",
+          "sourceLine": 1,
+          "specifier": "@atlaskit/pragmatic-drag-and-drop/element/adapter",
+          "names": [
+            "draggable"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/use-draggable.ts",
+          "sourceLine": 2,
+          "specifier": "vue",
+          "names": [
+            "ref",
+            "toValue",
+            "watchEffect"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/use-draggable.ts",
+          "sourceLine": 3,
+          "specifier": "./drag-state",
+          "names": [
+            "cancelNativeDrag",
+            "endDrag",
+            "startDrag"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/drag-state.ts",
+          "sourceLine": 1,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "shallowRef"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/draggable.vue",
+          "sourceLine": 11,
+          "specifier": "./keyboard-service",
+          "names": [
+            "cancelKeyboardScope",
+            "registerKeyboardSource"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/keyboard-service.ts",
+          "sourceLine": 2,
+          "specifier": "./dnd-announcer",
+          "names": [
+            "acquireDndLiveRegion",
+            "announceDnd",
+            "disposeDndLiveRegion"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/draggable.vue",
+          "sourceLine": 12,
+          "specifier": "./dnd-announcer",
+          "names": [
+            "announceDnd"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/draggable.vue",
+          "sourceLine": 13,
+          "specifier": "./drag-state",
+          "names": [
+            "endDrag",
+            "startDrag"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/draggable/index.ts",
+          "sourceLine": 2,
+          "specifier": "../use-draggable",
+          "names": []
+        }
+      ],
+      "sourceSha256": {
+        "packages/dnd/src/dnd-announcer.ts": "13d8b23a77ae54547564ac8291b3328d28a15fea81b278cd1f57cccb7ec3df30",
+        "packages/dnd/src/drag-state.ts": "3e14105d7386d6bfcc2e088e8793c5fe5c794db9e997056a0bf9e20bc21b6a68",
+        "packages/dnd/src/draggable.vue": "c1b7ff9644de96e4df7e3339fd55a8a3e8abb79c9351a0a70c498cdb8ff84167",
+        "packages/dnd/src/draggable/index.ts": "f46bc82539f16010fd83775a0a4236322174f0d173c2226a25957007d6bee1ed",
+        "packages/dnd/src/keyboard-service.ts": "c5328003963b18237d758e08839a73e84e4cfced331dccca53d2c0856e670cc8",
+        "packages/dnd/src/use-draggable.ts": "b4b172e19a5970091e13ddfaf3949ad8ec1250d33adcf65c924cc29fd52af6ec"
+      }
+    },
+    {
+      "domain": "dnd",
+      "subpath": "droppable",
+      "canonicalSubpath": "droppable",
+      "componentViews": [
+        "drop-zone"
+      ],
+      "directBaseFamilies": [],
+      "baseFamiliesWithDeclaredTransitives": [],
+      "externalImports": [
+        "@atlaskit/pragmatic-drag-and-drop/element/adapter",
+        "vue"
+      ],
+      "imports": [
+        {
+          "file": "packages/dnd/src/droppable/index.ts",
+          "sourceLine": 1,
+          "specifier": "../drop-zone.vue",
+          "names": []
+        },
+        {
+          "file": "packages/dnd/src/drop-zone.vue",
+          "sourceLine": 8,
+          "specifier": "vue",
+          "names": [
+            "ref",
+            "watch",
+            "watchEffect"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/drop-zone.vue",
+          "sourceLine": 9,
+          "specifier": "./use-droppable",
+          "names": [
+            "useDroppable"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/use-droppable.ts",
+          "sourceLine": 1,
+          "specifier": "@atlaskit/pragmatic-drag-and-drop/element/adapter",
+          "names": [
+            "dropTargetForElements"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/use-droppable.ts",
+          "sourceLine": 2,
+          "specifier": "vue",
+          "names": [
+            "toValue",
+            "watchEffect"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/drop-zone.vue",
+          "sourceLine": 11,
+          "specifier": "./keyboard-service",
+          "names": [
+            "cancelKeyboardScope",
+            "registerKeyboardZone"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/keyboard-service.ts",
+          "sourceLine": 2,
+          "specifier": "./dnd-announcer",
+          "names": [
+            "acquireDndLiveRegion",
+            "announceDnd",
+            "disposeDndLiveRegion"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/drop-zone.vue",
+          "sourceLine": 12,
+          "specifier": "./drag-state",
+          "names": [
+            "endDrag"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/drag-state.ts",
+          "sourceLine": 1,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "shallowRef"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/droppable/index.ts",
+          "sourceLine": 2,
+          "specifier": "../use-droppable",
+          "names": []
+        }
+      ],
+      "sourceSha256": {
+        "packages/dnd/src/dnd-announcer.ts": "13d8b23a77ae54547564ac8291b3328d28a15fea81b278cd1f57cccb7ec3df30",
+        "packages/dnd/src/drag-state.ts": "3e14105d7386d6bfcc2e088e8793c5fe5c794db9e997056a0bf9e20bc21b6a68",
+        "packages/dnd/src/drop-zone.vue": "ab0d0c4284211ebf12b9aa8cf06a2a1f88d9dce4b76080ebf2c186ef3d81af6c",
+        "packages/dnd/src/droppable/index.ts": "e8a892764e990875bfe33e3d1e07bb8f5554f66ed7a24b575396836b5dfd2db6",
+        "packages/dnd/src/keyboard-service.ts": "c5328003963b18237d758e08839a73e84e4cfced331dccca53d2c0856e670cc8",
+        "packages/dnd/src/use-droppable.ts": "822f07799d5ea84cb421ef2311b22ab0896a1e588ac982655685031520972856"
+      }
+    },
+    {
+      "domain": "dnd",
+      "subpath": "drag-overlay",
+      "canonicalSubpath": "drag-overlay",
+      "componentViews": [
+        "drag-overlay"
+      ],
+      "directBaseFamilies": [],
+      "baseFamiliesWithDeclaredTransitives": [],
+      "externalImports": [
+        "vue"
+      ],
+      "imports": [
+        {
+          "file": "packages/dnd/src/drag-overlay/index.ts",
+          "sourceLine": 1,
+          "specifier": "../drag-overlay.vue",
+          "names": []
+        },
+        {
+          "file": "packages/dnd/src/drag-overlay.vue",
+          "sourceLine": 10,
+          "specifier": "./drag-state",
+          "names": [
+            "currentDragData",
+            "isDragActive"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/drag-state.ts",
+          "sourceLine": 1,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "shallowRef"
+          ]
+        }
+      ],
+      "sourceSha256": {
+        "packages/dnd/src/drag-overlay.vue": "28bf96c4d3defb818d6eb4fe349172393e6fb22b158fc47abba0d954482eb1fb",
+        "packages/dnd/src/drag-overlay/index.ts": "74de1b495a097fbfab3d96a0d76475533e5314050071fc2f511d63fd1a0549b4",
+        "packages/dnd/src/drag-state.ts": "3e14105d7386d6bfcc2e088e8793c5fe5c794db9e997056a0bf9e20bc21b6a68"
+      }
+    },
+    {
+      "domain": "dnd",
+      "subpath": "sortable",
+      "canonicalSubpath": "sortable",
+      "componentViews": [
+        "sortable-item",
+        "sortable-list"
+      ],
+      "directBaseFamilies": [],
+      "baseFamiliesWithDeclaredTransitives": [],
+      "externalImports": [
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll/element",
+        "@atlaskit/pragmatic-drag-and-drop/element/adapter",
+        "vue"
+      ],
+      "imports": [
+        {
+          "file": "packages/dnd/src/sortable/index.ts",
+          "sourceLine": 1,
+          "specifier": "../sortable-list.vue",
+          "names": []
+        },
+        {
+          "file": "packages/dnd/src/sortable-list.vue",
+          "sourceLine": 27,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "onBeforeUnmount",
+            "onMounted",
+            "provide",
+            "ref",
+            "watch"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/sortable-list.vue",
+          "sourceLine": 28,
+          "specifier": "./sortable-item.vue",
+          "names": []
+        },
+        {
+          "file": "packages/dnd/src/sortable-item.vue",
+          "sourceLine": 21,
+          "specifier": "@atlaskit/pragmatic-drag-and-drop/element/adapter",
+          "names": [
+            "draggable"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/sortable-item.vue",
+          "sourceLine": 22,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "inject",
+            "nextTick",
+            "onBeforeUnmount",
+            "ref",
+            "watch",
+            "watchEffect"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/sortable-item.vue",
+          "sourceLine": 23,
+          "specifier": "./drag-state",
+          "names": [
+            "cancelNativeDrag",
+            "endDrag",
+            "startDrag"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/drag-state.ts",
+          "sourceLine": 1,
+          "specifier": "vue",
+          "names": [
+            "computed",
+            "shallowRef"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/sortable-item.vue",
+          "sourceLine": 24,
+          "specifier": "./sortable-context",
+          "names": [
+            "sortableContextKey"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/sortable-item.vue",
+          "sourceLine": 25,
+          "specifier": "./sortable-registry",
+          "names": [
+            "beginSortableSession",
+            "closeSortableSession",
+            "findAdjacentSortableList",
+            "moveSortableItem"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/sortable-registry.ts",
+          "sourceLine": 1,
+          "specifier": "vue",
+          "names": [
+            "nextTick"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/sortable-item.vue",
+          "sourceLine": 26,
+          "specifier": "./use-droppable",
+          "names": [
+            "useDroppable"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/use-droppable.ts",
+          "sourceLine": 1,
+          "specifier": "@atlaskit/pragmatic-drag-and-drop/element/adapter",
+          "names": [
+            "dropTargetForElements"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/use-droppable.ts",
+          "sourceLine": 2,
+          "specifier": "vue",
+          "names": [
+            "toValue",
+            "watchEffect"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/sortable-list.vue",
+          "sourceLine": 29,
+          "specifier": "./sortable-context",
+          "names": [
+            "sortableContextKey"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/sortable-list.vue",
+          "sourceLine": 30,
+          "specifier": "./sortable-registry",
+          "names": [
+            "beginSortableSession",
+            "closeSortableSessionsForList",
+            "invalidateSortableRevision",
+            "invalidateSortableScope",
+            "moveSortableItem",
+            "registerSortableList"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/sortable-list.vue",
+          "sourceLine": 31,
+          "specifier": "./use-droppable",
+          "names": [
+            "useDroppable"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/sortable-list.vue",
+          "sourceLine": 32,
+          "specifier": "./sortable-auto-scroll",
+          "names": [
+            "registerSortableAutoScroll"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/sortable-auto-scroll.ts",
+          "sourceLine": 1,
+          "specifier": "@atlaskit/pragmatic-drag-and-drop-auto-scroll/element",
+          "names": [
+            "autoScrollForElements",
+            "autoScrollWindowForElements"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/sortable-auto-scroll.ts",
+          "sourceLine": 2,
+          "specifier": "./drag-state",
+          "names": [
+            "isDragActiveFor"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/sortable-list.vue",
+          "sourceLine": 33,
+          "specifier": "./dnd-announcer",
+          "names": [
+            "acquireDndLiveRegion",
+            "announceDnd",
+            "announceDndNow",
+            "disposeDndLiveRegion",
+            "replayDnd"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/sortable/index.ts",
+          "sourceLine": 2,
+          "specifier": "../sortable-item.vue",
+          "names": []
+        },
+        {
+          "file": "packages/dnd/src/sortable/index.ts",
+          "sourceLine": 3,
+          "specifier": "../use-sortable",
+          "names": []
+        },
+        {
+          "file": "packages/dnd/src/use-sortable.ts",
+          "sourceLine": 2,
+          "specifier": "./use-draggable",
+          "names": [
+            "useDraggable"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/use-draggable.ts",
+          "sourceLine": 1,
+          "specifier": "@atlaskit/pragmatic-drag-and-drop/element/adapter",
+          "names": [
+            "draggable"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/use-draggable.ts",
+          "sourceLine": 2,
+          "specifier": "vue",
+          "names": [
+            "ref",
+            "toValue",
+            "watchEffect"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/use-draggable.ts",
+          "sourceLine": 3,
+          "specifier": "./drag-state",
+          "names": [
+            "cancelNativeDrag",
+            "endDrag",
+            "startDrag"
+          ]
+        },
+        {
+          "file": "packages/dnd/src/use-sortable.ts",
+          "sourceLine": 3,
+          "specifier": "./use-droppable",
+          "names": [
+            "useDroppable"
+          ]
+        }
+      ],
+      "sourceSha256": {
+        "packages/dnd/src/dnd-announcer.ts": "13d8b23a77ae54547564ac8291b3328d28a15fea81b278cd1f57cccb7ec3df30",
+        "packages/dnd/src/drag-state.ts": "3e14105d7386d6bfcc2e088e8793c5fe5c794db9e997056a0bf9e20bc21b6a68",
+        "packages/dnd/src/sortable-auto-scroll.ts": "7b2d8f2781236ebc32a4f1688c243c5039103df728f0bb76864d7784cd484575",
+        "packages/dnd/src/sortable-context.ts": "92c89f25b5c630d22afb07671ab9570a129f8ec035acc19c6afe4c8e440ed48c",
+        "packages/dnd/src/sortable-item.vue": "7c443c1e99a014de6f211cac86cad6997213ebd4e0229a53e9827ce161538042",
+        "packages/dnd/src/sortable-list.vue": "35f926c05f0d83839d5119eeb202f7f132f26b283906c25760a42e68497b934a",
+        "packages/dnd/src/sortable-registry.ts": "b0e6a7e618911054006e7458d48724fcb0dffecb1a51b9c6bacd7fd5d78be76a",
+        "packages/dnd/src/sortable/index.ts": "199ac5d0706ede899cbdd4889aa96231891503a03ad1fcfa6c5663b960ce55f7",
+        "packages/dnd/src/use-draggable.ts": "b4b172e19a5970091e13ddfaf3949ad8ec1250d33adcf65c924cc29fd52af6ec",
+        "packages/dnd/src/use-droppable.ts": "822f07799d5ea84cb421ef2311b22ab0896a1e588ac982655685031520972856",
+        "packages/dnd/src/use-sortable.ts": "d8a2ce3729eb72b3abf6a5937f451958c2df6ec2111f5082c8f02ea9a3500f31"
+      }
+    }
+  ]
+}

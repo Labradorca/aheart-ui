@@ -5,3 +5,5 @@ const Tooltip = withInstall(tooltip, 'ATooltip')
 
 export default Tooltip
 export type { TooltipProps } from './types'
+
+export { Tooltip }

@@ -28,3 +28,5 @@ const InstalledDatePicker = withInstall(DatePicker as unknown as DatePickerCompo
 InstalledDatePicker.RangePicker = DateRangePicker
 
 export default InstalledDatePicker
+
+export { InstalledDatePicker as DatePicker }

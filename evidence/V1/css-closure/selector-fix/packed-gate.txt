@@ -1,0 +1,4 @@
+{
+  "status": "failed",
+  "error": "AssertionError [ERR_ASSERTION]: ai/agent-workbench: CSS gate failed\n+ actual - expected\n\n+ [\n+   'composite closure exceeds non-increase baseline'\n+ ]\n- []\n\n    at file:///Users/start/code/aheart-ui-wt/v1.4-entries/scripts/v1-consumer.mjs:110:12"
+}

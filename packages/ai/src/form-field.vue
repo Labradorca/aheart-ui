@@ -138,23 +138,18 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import {
-  CheckboxGroup as ACheckboxGroup,
-  DatePicker as ADatePicker,
-  DateRangePicker as ADateRangePicker,
-  Input as AInput,
-  InputNumber as AInputNumber,
-  RadioGroup as ARadioGroup,
-  Select as ASelect,
-  Switch as ASwitch,
-  Textarea as ATextarea,
-  TimePicker as ATimePicker,
-  TimeRangePicker as ATimeRangePicker,
-  TreeSelect as ATreeSelect,
-  Upload as AUpload,
-  type TreeNodeData,
-  type UploadFile
-} from 'aheart-ui'
+import { CheckboxGroup as ACheckboxGroup } from 'aheart-ui/checkbox'
+import { DatePicker as ADatePicker, DateRangePicker as ADateRangePicker } from 'aheart-ui/date-picker'
+import { Input as AInput } from 'aheart-ui/input'
+import { InputNumber as AInputNumber } from 'aheart-ui/input-number'
+import { RadioGroup as ARadioGroup } from 'aheart-ui/radio'
+import { Select as ASelect } from 'aheart-ui/select'
+import { Switch as ASwitch } from 'aheart-ui/switch'
+import { Textarea as ATextarea } from 'aheart-ui/textarea'
+import { TimePicker as ATimePicker, TimeRangePicker as ATimeRangePicker } from 'aheart-ui/time-picker'
+import { TreeSelect as ATreeSelect } from 'aheart-ui/tree-select'
+import { Upload as AUpload, type UploadFile } from 'aheart-ui/upload'
+import type { TreeNodeData } from 'aheart-ui/tree'
 import type { AIFormFieldV1 } from './form-schema'
 
 const props = defineProps<{

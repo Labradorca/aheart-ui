@@ -1,0 +1,119 @@
+
+> @aheart-ui/ai@1.1.0 build /Users/start/code/aheart-ui-wt/v1.4-entries/packages/ai
+> vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 51 modules transformed.
+rendering chunks...
+
+[vite:dts] Start generate declaration files...
+
+[vite:dts] Start generate declaration files...
+computing gzip size...
+es/style.css                 29.00 kB │ gzip: 5.15 kB
+es/form.vue2.js               0.06 kB │ gzip: 0.08 kB
+es/bubble.vue2.js             0.06 kB │ gzip: 0.08 kB
+es/sender.vue2.js             0.06 kB │ gzip: 0.08 kB
+es/prompts.vue2.js            0.06 kB │ gzip: 0.08 kB
+es/process.vue2.js            0.06 kB │ gzip: 0.08 kB
+es/sources.vue2.js            0.06 kB │ gzip: 0.08 kB
+es/actions.vue2.js            0.06 kB │ gzip: 0.08 kB
+es/welcome.vue2.js            0.06 kB │ gzip: 0.08 kB
+es/chat-panel.vue2.js         0.06 kB │ gzip: 0.08 kB
+es/form-field.vue2.js         0.06 kB │ gzip: 0.08 kB
+es/attachments.vue2.js        0.07 kB │ gzip: 0.08 kB
+es/conversations.vue2.js      0.07 kB │ gzip: 0.08 kB
+es/thought-chain.vue2.js      0.07 kB │ gzip: 0.08 kB
+es/agent-workbench.vue2.js    0.07 kB │ gzip: 0.09 kB
+es/agent-execution.vue2.js    0.07 kB │ gzip: 0.09 kB
+es/sender/index.js            0.11 kB │ gzip: 0.10 kB
+es/bubble/index.js            0.11 kB │ gzip: 0.10 kB
+es/actions/index.js           0.11 kB │ gzip: 0.10 kB
+es/process/index.js           0.11 kB │ gzip: 0.10 kB
+es/prompts/index.js           0.11 kB │ gzip: 0.10 kB
+es/sources/index.js           0.11 kB │ gzip: 0.10 kB
+es/welcome/index.js           0.11 kB │ gzip: 0.10 kB
+es/attachments/index.js       0.12 kB │ gzip: 0.11 kB
+es/thought-chain/index.js     0.12 kB │ gzip: 0.11 kB
+es/conversations/index.js     0.12 kB │ gzip: 0.11 kB
+es/agent-workbench/index.js   0.12 kB │ gzip: 0.11 kB
+es/chat-panel/index.js        0.27 kB │ gzip: 0.17 kB
+es/form/index.js              0.32 kB │ gzip: 0.19 kB
+es/thought-chain.vue.js       0.37 kB │ gzip: 0.26 kB
+es/agent/index.js             0.44 kB │ gzip: 0.22 kB
+es/safe-markdown.js           0.74 kB │ gzip: 0.45 kB
+es/actions.vue.js             0.78 kB │ gzip: 0.50 kB
+es/chat/index.js              0.80 kB │ gzip: 0.28 kB
+es/welcome.vue.js             0.84 kB │ gzip: 0.48 kB
+es/process.vue.js             0.90 kB │ gzip: 0.53 kB
+es/conversations.vue.js       0.97 kB │ gzip: 0.55 kB
+es/prompts.vue.js             1.00 kB │ gzip: 0.56 kB
+es/sources.vue.js             1.12 kB │ gzip: 0.61 kB
+es/attachments.vue.js         1.23 kB │ gzip: 0.67 kB
+es/sender.vue.js              1.54 kB │ gzip: 0.74 kB
+es/index.js                   1.58 kB │ gzip: 0.58 kB
+es/bubble.vue.js              3.34 kB │ gzip: 1.20 kB
+es/stream-reducer.js          7.80 kB │ gzip: 2.22 kB
+es/form-field.vue.js          8.06 kB │ gzip: 1.80 kB
+es/form-schema.js             8.78 kB │ gzip: 2.92 kB
+es/chat-panel.vue.js         15.72 kB │ gzip: 4.75 kB
+es/form.vue.js               18.42 kB │ gzip: 5.48 kB
+es/agent-execution.vue.js    21.63 kB │ gzip: 5.31 kB
+es/agent-workbench.vue.js    27.31 kB │ gzip: 7.15 kB
+[vite:dts] Declaration files built in 3862ms.
+
+[vite:dts] Declaration files built in 1834ms.
+
+lib/style.css                 29.00 kB │ gzip: 5.15 kB
+lib/form.vue2.js               0.17 kB │ gzip: 0.16 kB
+lib/bubble.vue2.js             0.17 kB │ gzip: 0.16 kB
+lib/sender.vue2.js             0.17 kB │ gzip: 0.16 kB
+lib/prompts.vue2.js            0.17 kB │ gzip: 0.16 kB
+lib/process.vue2.js            0.17 kB │ gzip: 0.16 kB
+lib/sources.vue2.js            0.17 kB │ gzip: 0.16 kB
+lib/actions.vue2.js            0.17 kB │ gzip: 0.16 kB
+lib/welcome.vue2.js            0.17 kB │ gzip: 0.16 kB
+lib/chat-panel.vue2.js         0.17 kB │ gzip: 0.16 kB
+lib/form-field.vue2.js         0.17 kB │ gzip: 0.16 kB
+lib/attachments.vue2.js        0.18 kB │ gzip: 0.16 kB
+lib/conversations.vue2.js      0.18 kB │ gzip: 0.16 kB
+lib/thought-chain.vue2.js      0.18 kB │ gzip: 0.16 kB
+lib/agent-workbench.vue2.js    0.18 kB │ gzip: 0.16 kB
+lib/agent-execution.vue2.js    0.18 kB │ gzip: 0.16 kB
+lib/sender/index.js            0.20 kB │ gzip: 0.17 kB
+lib/bubble/index.js            0.20 kB │ gzip: 0.17 kB
+lib/actions/index.js           0.20 kB │ gzip: 0.17 kB
+lib/process/index.js           0.20 kB │ gzip: 0.17 kB
+lib/prompts/index.js           0.20 kB │ gzip: 0.17 kB
+lib/sources/index.js           0.20 kB │ gzip: 0.17 kB
+lib/welcome/index.js           0.20 kB │ gzip: 0.17 kB
+lib/attachments/index.js       0.21 kB │ gzip: 0.17 kB
+lib/thought-chain/index.js     0.21 kB │ gzip: 0.18 kB
+lib/conversations/index.js     0.21 kB │ gzip: 0.17 kB
+lib/agent-workbench/index.js   0.22 kB │ gzip: 0.18 kB
+lib/chat-panel/index.js        0.34 kB │ gzip: 0.22 kB
+lib/thought-chain.vue.js       0.38 kB │ gzip: 0.28 kB
+lib/form/index.js              0.39 kB │ gzip: 0.24 kB
+lib/agent/index.js             0.47 kB │ gzip: 0.26 kB
+lib/safe-markdown.js           0.65 kB │ gzip: 0.44 kB
+lib/actions.vue.js             0.71 kB │ gzip: 0.47 kB
+lib/chat/index.js              0.78 kB │ gzip: 0.31 kB
+lib/welcome.vue.js             0.82 kB │ gzip: 0.47 kB
+lib/conversations.vue.js       0.87 kB │ gzip: 0.51 kB
+lib/process.vue.js             0.87 kB │ gzip: 0.50 kB
+lib/prompts.vue.js             0.90 kB │ gzip: 0.51 kB
+lib/sources.vue.js             1.09 kB │ gzip: 0.56 kB
+lib/attachments.vue.js         1.13 kB │ gzip: 0.61 kB
+lib/sender.vue.js              1.28 kB │ gzip: 0.69 kB
+lib/index.js                   1.80 kB │ gzip: 0.60 kB
+lib/bubble.vue.js              3.28 kB │ gzip: 1.07 kB
+lib/stream-reducer.js          6.47 kB │ gzip: 2.04 kB
+lib/form-field.vue.js          6.51 kB │ gzip: 1.61 kB
+lib/form-schema.js             7.33 kB │ gzip: 2.75 kB
+lib/chat-panel.vue.js         11.39 kB │ gzip: 4.18 kB
+lib/form.vue.js               13.88 kB │ gzip: 4.79 kB
+lib/agent-execution.vue.js    16.49 kB │ gzip: 4.61 kB
+lib/agent-workbench.vue.js    19.55 kB │ gzip: 6.21 kB
+✓ built in 4.12s
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m

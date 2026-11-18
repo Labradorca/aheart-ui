@@ -1,0 +1,143 @@
+{
+  "status": "selector fix verified; CSS non-increase gate fails; baseline unchanged",
+  "entries": 65,
+  "changed": [
+    {
+      "key": "ai/agent-workbench",
+      "initialBytes": 54109,
+      "packedBytes": 54212,
+      "delta": 103,
+      "sha256": "28ab9bfb95081528b44122525b98365334070235cced53e8f21be251cbf72c16",
+      "unchanged": false,
+      "componentFraction": 0.2690288323160141,
+      "themePlusFraction": 0.2777976279092849,
+      "dependencies": [
+        {
+          "entry": "base/button",
+          "bytes": 7945,
+          "fraction": 0.1465542684276544
+        },
+        {
+          "entry": "base/drawer",
+          "bytes": 7881,
+          "fraction": 0.14537371799601564
+        },
+        {
+          "entry": "base/splitter",
+          "bytes": 3070,
+          "fraction": 0.05662952851767136
+        },
+        {
+          "entry": "base/tabs",
+          "bytes": 5475,
+          "fraction": 0.10099240020659632
+        },
+        {
+          "entry": "ai/chat-panel",
+          "bytes": 13095,
+          "fraction": 0.24155168597358517
+        },
+        {
+          "entry": "ai/attachments",
+          "bytes": 1412,
+          "fraction": 0.026045893898029956
+        },
+        {
+          "entry": "ai/conversations",
+          "bytes": 1032,
+          "fraction": 0.019036375710174868
+        },
+        {
+          "entry": "ai/sources",
+          "bytes": 1052,
+          "fraction": 0.019405297720061977
+        },
+        {
+          "entry": "dnd/sortable",
+          "bytes": 717,
+          "fraction": 0.013225854054452889
+        }
+      ]
+    },
+    {
+      "key": "ai/workbench",
+      "initialBytes": 54109,
+      "packedBytes": 54212,
+      "delta": 103,
+      "sha256": "28ab9bfb95081528b44122525b98365334070235cced53e8f21be251cbf72c16",
+      "unchanged": false,
+      "componentFraction": 0.2690288323160141,
+      "themePlusFraction": 0.2777976279092849,
+      "dependencies": [
+        {
+          "entry": "base/button",
+          "bytes": 7945,
+          "fraction": 0.1465542684276544
+        },
+        {
+          "entry": "base/drawer",
+          "bytes": 7881,
+          "fraction": 0.14537371799601564
+        },
+        {
+          "entry": "base/splitter",
+          "bytes": 3070,
+          "fraction": 0.05662952851767136
+        },
+        {
+          "entry": "base/tabs",
+          "bytes": 5475,
+          "fraction": 0.10099240020659632
+        },
+        {
+          "entry": "ai/chat-panel",
+          "bytes": 13095,
+          "fraction": 0.24155168597358517
+        },
+        {
+          "entry": "ai/attachments",
+          "bytes": 1412,
+          "fraction": 0.026045893898029956
+        },
+        {
+          "entry": "ai/conversations",
+          "bytes": 1032,
+          "fraction": 0.019036375710174868
+        },
+        {
+          "entry": "ai/sources",
+          "bytes": 1052,
+          "fraction": 0.019405297720061977
+        },
+        {
+          "entry": "dnd/sortable",
+          "bytes": 717,
+          "fraction": 0.013225854054452889
+        }
+      ]
+    }
+  ],
+  "sourceAudit": {
+    "checked": 967,
+    "excludedFixtures": [
+      {
+        "entry": "ai/form",
+        "selector": ".d8-fixture-card .aheart-ai-form"
+      },
+      {
+        "entry": "ai/agent-workbench",
+        "selector": ".d8-fixture-card .aheart-ai-workbench"
+      },
+      {
+        "entry": "ai/agent",
+        "selector": ".d8-fixture-card .aheart-ai-form"
+      },
+      {
+        "entry": "ai/workbench",
+        "selector": ".d8-fixture-card .aheart-ai-workbench"
+      }
+    ],
+    "missing": []
+  },
+  "protectedUnchanged": 55
+}

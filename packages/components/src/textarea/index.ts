@@ -5,3 +5,5 @@ const Textarea = withInstall(textarea, 'ATextarea')
 
 export type * from './types'
 export default Textarea
+
+export { Textarea }

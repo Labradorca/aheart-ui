@@ -4,12 +4,12 @@
 
 | ID / 旧 API | 替代 API | 开始弃用版本（计划） | 预计移除版本（计划） | 是否有运行时 warning | 迁移示例 | 处置 |
 | --- | --- | --- | --- | --- | --- | --- |
-| B1：`import AheartUI from 'aheart-ui'` 根默认 Plugin | `import AheartUI from 'aheart-ui/full'`；根 named/components/types 继续保留 | `aheart-ui@1.4.0` | 根 default 在 `aheart-ui@2.0.0-alpha` 移除，2.0 stable 不再提供 | V1 增加开发环境、使用旧 Plugin 时的一次性提示；生产不输出；本轮未实施 | 示例 1 | major 破坏；`/full` 已存在 |
+| B1：`import AheartUI from 'aheart-ui'` 根默认 Plugin | `import AheartUI from 'aheart-ui/full'`；根 named/components/types 继续保留 | `aheart-ui@1.4.0` | 根 default 在 `aheart-ui@2.0.0-alpha` 移除，2.0 stable 不再提供 | V1 按负责人澄清实现opt-in开发构建import诊断；每文件/编号一次；生产禁用；不包装组件对象 | 示例 1 | major 破坏；`/full` 已存在 |
 | B2：以 Git 中 `es/`、`lib/` 为主产物，或依赖其物理目录；逻辑深路径继续兼容 | `dist/{esm,cjs,types,styles}`；公开组件 subpath；在 `dist/compat/{es,lib}` 生成 facade 并以 exports 映射旧逻辑路径 | `aheart-ui@1.4.0` 文档标 legacy | Git 生成目录和主产物布局在 2.0-alpha 切换；`aheart-ui/es/*`、`lib/*` 保留整个 2.x，3.0 才删除 | 物理目录无运行时 API，N/A；保留的逻辑路径不伪报在 2.0 删除。V1 对实际改变的旧入口按适用性加开发提示 | 示例 2 | major 布局切换；tarball `files` 保持 dist + README/LICENSE/必要元数据 |
-| B3：AI 根入口的 `AIAgentWorkbench` 与强制 `dependencies.@aheart-ui/dnd` | `@aheart-ui/ai/agent-workbench`（已有 `/workbench` 别名保留）；DND 为 optional peer，Workbench 和 `/full` 用户显式安装 | `@aheart-ui/ai@1.2.0`（兼容 minor 目标） | `@aheart-ui/ai@2.0.0-alpha` 从根删除 Workbench；peer 变更同 major | V1 对实际受影响旧用法给开发提示，生产不输出；V2 缺 DND 使用 Workbench/full 时应给可操作错误，不影响 Chat | 示例 3 | major 破坏；DND 无 breaking 时不强制升 major |
+| B3：AI 根入口的 `AIAgentWorkbench` 与强制 `dependencies.@aheart-ui/dnd` | `@aheart-ui/ai/agent-workbench`（已有 `/workbench` 别名保留）；DND 为 optional peer，Workbench 和 `/full` 用户显式安装 | `@aheart-ui/ai@1.2.0`（兼容 minor 目标） | `@aheart-ui/ai@2.0.0-alpha` 从根删除 Workbench；peer 变更同 major | V1 opt-in开发构建诊断根Workbench/AI默认Plugin，生产禁用；V2 缺DND使用Workbench/full时须给可操作错误，不影响Chat | 示例 3 | major 破坏；DND 无 breaking 时不强制升 major |
 | B4：依赖运行时 JS 自动带入真实 CSS 的假设 | 显式 theme + 组件 CSS，或 full.css；Resolver 仅注入组件 CSS | N/A：1.3.0 发布 JS 已无真实 CSS import | N/A：保留 `style.css → full.css`，不新增入口删除 | N/A：当前产物已满足，无可弃用的隐式 CSS 行为；不加虚假 warning | 示例 4 | 从新增破坏降为回归契约 |
 
-AI 的 1.2.0 只是独立版本目标提案；RFC §18.3 要求领域包独立版本，V1 实际改版本仍需负责人单独授权。本轮不改 package.json 或发布版本。
+RFC §18.3要求领域包独立版本。负责人已单独授权本地core1.4.0/AI1.2.0/DND1.1.0及AI core peer ^1.4.0，仅组合验收，未授权发布。B1/B3不包装组件、不破坏对象身份，采用开发构建诊断；[负责人原答复](../../../evidence/V1/owner-decisions-2026-11-17.json)、[本轮工具证据](../../../evidence/V1/migration-tooling/README.md)。
 
 ## 每项源码依据
 
@@ -63,6 +63,6 @@ import 'aheart-ui/theme.css'
 import 'aheart-ui/button/style.css'
 ```
 
-Resolver 的 `importStyle: 'css'` 只注入组件 CSS，theme 由应用导入一次；使用手动样式或 Resolver 其中一种。完整 1.3 → 2.0 迁移表和可机械改写部分的 codemod 在 V1 实现并从实际 tarball 验证。
+Resolver 的 `importStyle: 'css'` 只注入组件 CSS，theme 由应用导入一次；使用手动样式或 Resolver 其中一种。完整[1.3 → 2.0迁移表](../../guide/v2-migration.md)与codemod已在V1本地实现并由实际tarball验证，完整V1仍待验收；[工具分项证据](../../../evidence/V1/migration-tooling/README.md)。
 
 V2 只能用 `next` 发布 alpha；`latest` 保持 1.x。两试点从 1.3 升级到 alpha 后，codemod 之外的改动必须逐项写进指南，指南外改动数为 0；回退到 1.3 及锁文件并保留业务状态。来源：RFC §7、§15.2、§18；总体方案 §13.2；A2-3、A2-4。

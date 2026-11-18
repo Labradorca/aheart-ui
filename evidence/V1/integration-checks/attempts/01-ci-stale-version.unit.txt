@@ -1,0 +1,811 @@
+
+> aheart-ui-workspace@1.0.0 test /Users/start/code/aheart-ui-wt/v1.4-entries
+> corepack pnpm --filter ./packages/components test && corepack pnpm --filter @aheart-ui/dnd test && corepack pnpm --filter @aheart-ui/ai test && node --test scripts/*.test.mjs
+
+
+> aheart-ui@1.4.0 test /Users/start/code/aheart-ui-wt/v1.4-entries/packages/components
+> vitest run --environment jsdom
+
+
+ RUN  v1.6.1 /Users/start/code/aheart-ui-wt/v1.4-entries/packages/components
+
+ ✓ src/input-number/__tests__/input-number.test.ts  (57 tests) 235ms
+ ✓ src/drawer/__tests__/drawer.test.ts  (52 tests) 484ms
+ ✓ src/form/__tests__/form.test.ts  (39 tests) 417ms
+ ✓ src/popconfirm/__tests__/popconfirm.test.ts  (26 tests) 933ms
+ ✓ src/modal/__tests__/modal.test.ts  (70 tests) 1217ms
+ ✓ src/dropdown/__tests__/dropdown.test.ts  (32 tests) 1135ms
+ ✓ src/form/__tests__/form-list.test.ts  (24 tests) 214ms
+ ✓ src/select/__tests__/select.test.ts  (39 tests) 610ms
+ ✓ src/tooltip/__tests__/tooltip.test.ts  (26 tests) 709ms
+ ✓ src/table/__tests__/table.test.ts  (29 tests) 321ms
+ ✓ src/upload/__tests__/upload.test.ts  (24 tests) 137ms
+ ✓ src/card/__tests__/card.test.ts  (26 tests) 140ms
+ ✓ src/popover/__tests__/popover.test.ts  (22 tests) 752ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery10.test.ts  (12 tests) 616ms
+ ✓ src/cascader/__tests__/cascader.test.ts  (25 tests) 1462ms
+ ✓ src/cascader/__tests__/cascader-virtual-lifecycle.test.ts  (27 tests) 3215ms
+ ✓ src/date-picker/__tests__/date-picker.test.ts  (50 tests) 1701ms
+ ✓ src/table/__tests__/table-d5-contracts.test.ts  (23 tests) 343ms
+ ✓ src/tree/__tests__/tree-virtual-lazy-retry.test.ts  (20 tests) 380ms
+ ✓ src/splitter/__tests__/splitter.test.ts  (17 tests) 113ms
+ ✓ src/button/__tests__/button.test.ts  (26 tests) 115ms
+ ✓ src/config-provider/__tests__/config-provider.test.ts  (10 tests) 86ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery11.test.ts  (3 tests) 222ms
+ ✓ src/tree/__tests__/tree.test.ts  (21 tests) 236ms
+ ✓ src/message/__tests__/message.test.ts  (20 tests) 128ms
+ ✓ src/utils/__tests__/use-floating-position-lifecycle.test.ts  (7 tests) 139ms
+ ✓ src/table/__tests__/table-d5c-virtualization.test.ts  (19 tests) 532ms
+ ✓ src/menu/__tests__/menu.test.ts  (16 tests) 251ms
+ ✓ src/time-picker/__tests__/time-picker.test.ts  (26 tests) 1875ms
+ ✓ src/date-picker/__tests__/date-range-picker.test.ts  (28 tests) 2081ms
+ ✓ src/pagination/__tests__/pagination.test.ts  (18 tests) 140ms
+ ✓ src/cascader/__tests__/cascader-virtual.test.ts  (17 tests) 2375ms
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > updates popup budget on same-placement owner-window resize without visualViewport
+window resize budget { treeHeight: 42, popupHeight: 42 }
+
+ ✓ src/input/__tests__/input.test.ts  (19 tests) 115ms
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > does not turn a zero internal budget into the public 320 default
+zero internal budget Tree props/style { height: 256, estimateSize: 28, overscan: 4 } max-block-size: 0px; overflow-y: auto;
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > does not steal later external focus after a rejected controlled opening is accepted
+focus after externally opening following rejected request <button>outside</button>
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > ArrowUp from an empty search enters the last visible collapsed root
+empty query ArrowUp focus <div class="aheart-tree__node" id="aheart-tree-select-tree-aheart-tree-select-v-0-node-s-72-6f-6f-74" role="treeitem" aria-label="Root" aria-selected="false" aria-expanded="false" aria-level="1" aria-posinset="1" aria-setsize="1" data-tree-key="root" data-tree-token="s-72-6f-6f-74" tabindex="0"><button class="aheart-tree__switcher" type="button" tabindex="-1" aria-label="Expand node">+</button><!--v-if--><span class="aheart-tree__title">Root</span><!--v-if--></div>
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > keeps Home as native text editing in default nonvirtual search
+nonvirtual Home defaultPrevented false
+
+ ✓ src/tree-select/__tests__/tree-select-virtual-lifecycle.test.ts  (5 tests) 407ms
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > transfers actual focus to the tree on initial virtual keyboard opening
+initial keyboard focus <div class="aheart-tree__node" id="aheart-tree-select-tree-aheart-tree-select-v-0-node-s-61" role="treeitem" aria-label="A" aria-selected="false" aria-level="1" aria-posinset="1" aria-setsize="1" data-tree-key="a" data-tree-token="s-61" tabindex="0"><span class="aheart-tree__switcher aheart-tree__switcher--empty" aria-hidden="true"></span><!--v-if--><span class="aheart-tree__title">A</span><!--v-if--></div>
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > cancels virtual opening focus when focus moves outside before mount
+premount external focus <button></button>
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > cancels in-flight search focus when controlled close is accepted
+controlled closed focus INPUT null false
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > ArrowUp follows the actual visible endpoint after manually expanding the root
+expanded empty-query endpoint leaf
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > does not install the private budget capture-scroll observer in default nonvirtual mode
+budget capture scroll listener count default nonvirtual 0
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > does not install the private budget capture-scroll observer in disabled virtual mode
+budget capture scroll listener count disabled virtual 0
+
+stdout | src/tree-select/__tests__/tree-select-virtual-recovery.test.ts > TreeSelect virtual independent recovery > cancels pending search navigation when a new query retains the target key
+changed query same pending key focus INPUT null
+
+ ✓ src/tree-select/__tests__/tree-select-virtual-recovery.test.ts  (14 tests) 490ms
+ ✓ src/radio/__tests__/radio.test.ts  (17 tests) 83ms
+ ✓ src/textarea/__tests__/textarea.test.ts  (20 tests) 140ms
+ ✓ src/tree-select/__tests__/tree-select.test.ts  (15 tests) 580ms
+ ✓ src/time-picker/__tests__/time-range-picker.test.ts  (17 tests) 1450ms
+ ✓ src/checkbox/__tests__/checkbox.test.ts  (17 tests) 99ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery.test.ts  (11 tests) 722ms
+ ✓ src/table/__tests__/table-d5b-review-regressions.test.ts  (11 tests) 396ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery9.test.ts  (13 tests) 775ms
+ ✓ src/tabs/__tests__/tabs.test.ts  (13 tests) 107ms
+ ✓ src/form/__tests__/engine.test.ts  (20 tests) 91ms
+ ✓ src/tree-select/__tests__/tree-select-virtual.test.ts  (9 tests) 617ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery3.test.ts  (7 tests) 388ms
+ ✓ src/tree/__tests__/tree-virtual-recovery.test.ts  (7 tests) 195ms
+stdout | src/tree/__tests__/tree-virtual-recovery.test.ts > Tree virtual implementation recovery RED > disconnects the active observer set when virtualization is disabled
+DISABLED_ACTIVE_OBSERVERS 0 VIRTUALIZER_ENABLED true
+
+stdout | src/tree/__tests__/tree-virtual-recovery.test.ts > Tree virtual implementation recovery RED > retains measured mounted row dimensions when estimateSize changes
+ESTIMATE_CHANGE 56 56 ROWS_OBS 11
+
+stdout | src/tree/__tests__/tree-virtual-recovery.test.ts > Tree virtual implementation recovery RED > invalidates a same-key replacement instead of retaining an offscreen measurement
+REPLACED_OFFSCREEN_CACHE 28
+
+stdout | src/tree/__tests__/tree-virtual-recovery.test.ts > Tree virtual implementation recovery RED > does not restore focus to a parent after the child explicitly blurred before collapse
+EXPLICIT_BLUR_COLLAPSE null
+
+stdout | src/tree/__tests__/tree-virtual-recovery.test.ts > Tree virtual implementation recovery RED > retains measured geometry for same-key mounted content when only the title changes
+MOUNTED_SAME_GEOMETRY 56 56
+
+stdout | src/tree/__tests__/tree-virtual-recovery.test.ts > Tree virtual implementation recovery RED > cancels every queued navigation frame when End is immediately followed by disable
+DISABLED_PENDING_RAF 0
+
+ ✓ src/table/__tests__/table-d5b-layout-state.test.ts  (11 tests) 236ms
+ ✓ src/alert/__tests__/alert.test.ts  (12 tests) 57ms
+ ✓ src/typography/__tests__/typography.test.ts  (14 tests) 69ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery5.test.ts  (3 tests) 58ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery4.test.ts  (4 tests) 260ms
+ ✓ src/utils/__tests__/use-floating-dismiss.test.ts  (8 tests) 102ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery2.test.ts  (8 tests) 655ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery12.test.ts  (4 tests) 343ms
+ ✓ src/steps/__tests__/steps.test.ts  (12 tests) 111ms
+ ✓ src/descriptions/__tests__/descriptions.test.ts  (7 tests) 53ms
+ ✓ src/breadcrumb/__tests__/breadcrumb.test.ts  (8 tests) 43ms
+ ✓ src/utils/__tests__/use-floating-position.test.ts  (20 tests) 15ms
+ ✓ src/switch/__tests__/switch.test.ts  (16 tests) 74ms
+ ✓ src/tree/__tests__/tree-lazy.test.ts  (10 tests) 300ms
+ ✓ src/tag/__tests__/tag.test.ts  (9 tests) 90ms
+ ✓ src/badge/__tests__/badge.test.ts  (12 tests) 88ms
+ ✓ src/table/__tests__/table-d5b-filter.test.ts  (7 tests) 409ms
+ ✓ src/spin/__tests__/spin.test.ts  (10 tests) 86ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery6.test.ts  (2 tests) 50ms
+ ✓ src/utils/__tests__/use-pointer-drag.test.ts  (10 tests) 66ms
+ ✓ src/empty/__tests__/empty.test.ts  (13 tests) 64ms
+ ✓ src/table/__tests__/table-d5-pagination-matrix.test.ts  (8 tests) 148ms
+ ✓ src/skeleton/__tests__/skeleton.test.ts  (6 tests) 41ms
+ ✓ src/space/__tests__/space.test.ts  (7 tests) 61ms
+ ✓ src/tree-select/__tests__/tree-select-virtual-retry-focus.test.ts  (5 tests) 290ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery8.test.ts  (4 tests) 270ms
+ ✓ src/utils/__tests__/overlay-controller.test.ts  (6 tests) 22ms
+ ✓ src/input/__tests__/form-integration.test.ts  (6 tests) 257ms
+stdout | src/cascader/__tests__/cascader-virtual-recovery13.test.ts > Cascader stale reveal ownership > does not let an older pending reposition hide the parent after ArrowLeft restores focus
+late reveal after Left { focused: 'root', scroll: 0, writes: [ 0 ], behavior: 'smooth' }
+
+stdout | src/cascader/__tests__/cascader-virtual-recovery13.test.ts > Cascader stale reveal ownership > cancels an older pending reveal on close
+pending reveal cancellation { action: 'close', writes: [] }
+
+stdout | src/cascader/__tests__/cascader-virtual-recovery13.test.ts > Cascader stale reveal ownership > cancels an older pending reveal on options
+pending reveal cancellation { action: 'options', writes: [] }
+
+stdout | src/cascader/__tests__/cascader-virtual-recovery13.test.ts > Cascader stale reveal ownership > cancels an older pending reveal on search
+pending reveal cancellation { action: 'search', writes: [] }
+
+ ✓ src/cascader/__tests__/cascader-virtual-recovery13.test.ts  (4 tests) 233ms
+ ✓ src/utils/__tests__/virtual-options.test.ts  (15 tests) 7ms
+ ✓ src/utils/__tests__/use-controllable-state.test.ts  (5 tests) 23ms
+ ✓ src/select/__tests__/select-virtual-tags.test.ts  (3 tests) 272ms
+ ✓ src/icon/__tests__/icon.test.ts  (10 tests) 87ms
+ ✓ src/utils/__tests__/use-floating-position-realm.test.ts  (2 tests) 17ms
+ ✓ src/picker-core/__tests__/codec.test.ts  (10 tests) 12ms
+ ✓ src/select/__tests__/select-virtual.test.ts  (8 tests) 1497ms
+ ✓ src/utils/__tests__/use-async-task.test.ts  (5 tests) 20ms
+ ✓ src/cascader/__tests__/cascader-virtual-recovery7.test.ts  (1 test) 689ms
+ ✓ src/tree/__tests__/tree-index.test.ts  (7 tests) 13ms
+ ✓ src/divider/__tests__/divider.test.ts  (6 tests) 41ms
+ ✓ src/pagination/__tests__/pagination-state.test.ts  (5 tests) 37ms
+ ✓ src/form/__tests__/form-item-protocol.test.ts  (4 tests) 72ms
+ ✓ src/flex/__tests__/flex.test.ts  (4 tests) 36ms
+ ✓ src/picker-core/__tests__/selection.test.ts  (9 tests) 5ms
+ ✓ src/tree/__tests__/tree-check.test.ts  (5 tests) 67ms
+ ✓ src/select/__tests__/virtual-options.test.ts  (7 tests) 17ms
+ ✓ src/grid/__tests__/grid.test.ts  (6 tests) 24ms
+ ✓ src/utils/__tests__/use-roving-focus.test.ts  (3 tests) 12ms
+ ✓ src/form/__tests__/form-list.ssr.test.ts  (2 tests) 31ms
+ ✓ src/picker-core/__tests__/transaction.test.ts  (5 tests) 6ms
+ ✓ src/utils/__tests__/use-stable-id.test.ts  (4 tests) 13ms
+ ✓ src/tree-select/__tests__/tree-checkable.test.ts  (3 tests) 216ms
+ ✓ src/picker-core/__tests__/time-column-geometry.test.ts  (4 tests) 4ms
+ ✓ src/utils/__tests__/use-collection.test.ts  (2 tests) 5ms
+ ✓ src/combobox/__tests__/combobox.test.ts  (3 tests) 107ms
+ ✓ src/tree/__tests__/tree-linked.test.ts  (3 tests) 71ms
+ ✓ src/splitter/__tests__/solver.test.ts  (5 tests) 2ms
+ ✓ src/picker-core/__tests__/calendar.test.ts  (3 tests) 5ms
+ ✓ src/date-picker/__tests__/date-picker.ssr.test.ts  (3 tests) 44ms
+ ✓ src/cascader/__tests__/cascader-virtual-performance.test.ts  (1 test) 6ms
+ ✓ src/utils/__tests__/use-trigger-aria.test.ts  (2 tests) 13ms
+ ✓ src/upload/__tests__/upload.ssr.test.ts  (1 test) 17ms
+ ✓ src/date-picker/__tests__/date-utils.test.ts  (3 tests) 6ms
+ ✓ src/utils/__tests__/use-floating-position.ssr.test.ts  (1 test) 3ms
+ ✓ src/utils/__tests__/use-prop-presence.test.ts  (1 test) 8ms
+ ✓ src/table/__tests__/table-radio-rejection.test.ts  (1 test) 50ms
+ ✓ src/select/__tests__/select-virtual.ssr.test.ts  (3 tests) 33ms
+ ✓ src/time-picker/__tests__/time-picker.ssr.test.ts  (1 test) 8ms
+ ✓ src/cascader/__tests__/overlay-controls.ssr.test.ts  (2 tests) 13ms
+ ✓ src/tree/__tests__/tree-virtual.test.ts  (19 tests) 12855ms
+
+ Test Files  118 passed (118)
+      Tests  1499 passed (1499)
+   Start at  11:36:24
+   Duration  14.11s (transform 4.59s, setup 4ms, collect 19.61s, tests 50.98s, environment 31.58s, prepare 5.89s)
+
+
+> @aheart-ui/dnd@1.1.0 test /Users/start/code/aheart-ui-wt/v1.4-entries/packages/dnd
+> vitest run --environment jsdom
+
+
+ RUN  v1.6.1 /Users/start/code/aheart-ui-wt/v1.4-entries/packages/dnd
+
+ ✓ src/__tests__/sortable-list-live-region.test.ts  (5 tests) 66ms
+ ✓ src/__tests__/d7-dnd-contract.test.ts  (8 tests) 76ms
+ ✓ src/__tests__/d7-dnd-regression.test.ts  (11 tests) 160ms
+ ✓ src/__tests__/dnd.test.ts  (42 tests) 150ms
+ ✓ src/__tests__/d7-dnd-resource.test.ts  (16 tests) 268ms
+
+ Test Files  5 passed (5)
+      Tests  82 passed (82)
+   Start at  11:36:39
+   Duration  858ms (transform 419ms, setup 1ms, collect 1.32s, tests 720ms, environment 927ms, prepare 208ms)
+
+
+> @aheart-ui/ai@1.2.0 test /Users/start/code/aheart-ui-wt/v1.4-entries/packages/ai
+> vitest run --environment jsdom
+
+
+ RUN  v1.6.1 /Users/start/code/aheart-ui-wt/v1.4-entries/packages/ai
+
+ ✓ src/__tests__/qg4-a11y-guardrails.test.ts  (4 tests) 6ms
+ ✓ src/__tests__/form-schema.test.ts  (10 tests) 6ms
+ ✓ src/__tests__/primitives.test.ts  (5 tests) 24ms
+ ✓ src/__tests__/chat-panel.test.ts  (10 tests) 116ms
+ ✓ src/__tests__/package.test.ts  (1 test) 1ms
+ ✓ src/__tests__/agent-workbench.test.ts  (15 tests) 316ms
+ ✓ src/__tests__/d8-chat-stream.test.ts  (44 tests) 562ms
+ ✓ src/__tests__/form.test.ts  (21 tests) 242ms
+ ✓ src/__tests__/d8-form-tool-ssr.test.ts  (54 tests) 305ms
+ ✓ src/__tests__/d8-workbench.test.ts  (36 tests) 549ms
+
+ Test Files  10 passed (10)
+      Tests  200 passed (200)
+   Start at  11:36:40
+   Duration  1.51s (transform 1.01s, setup 0ms, collect 3.48s, tests 2.13s, environment 2.74s, prepare 593ms)
+
+✔ codemod splits root defaults and Workbench, preserves aliases/types and is idempotent (7.998208ms)
+✔ codemod also migrates named-default imports and mixed AI defaults (0.709417ms)
+✔ codemod preserves comments, compatible named imports and string contents (1.6095ms)
+✔ codemod rewrites explicit re-exports and CommonJS/awaited default or Workbench access (1.684166ms)
+✔ codemod maps only declared equivalent legacy paths and keeps private/cross-format paths (0.262916ms)
+✔ codemod edits both Vue script blocks without touching template/style (8.426ms)
+✔ codemod reports ambiguous namespace/dynamic usage and keeps directive imports for review (0.546375ms)
+✔ temporary gate repository pins the workspace package manager (207.440584ms)
+✔ real orchestration runs both builds with the installed workspace pnpm while Corepack is cold and offline (1338.628916ms)
+✔ snapshots every file in all generated directories with relative paths and SHA-256 (4.889708ms)
+✔ identical snapshots produce no differences regardless of insertion order (0.186ms)
+✔ identifies added, removed, and changed files in deterministic order (0.130791ms)
+✔ mismatched snapshots throw a readable status report with paths (0.221958ms)
+✔ preflight rejects a staged change even when the worktree is restored to HEAD (309.089709ms)
+✔ preflight rejects a staged new file before a build can delete it (241.297ms)
+✔ preflight rejects an ignored generated file before a build can delete it (256.946375ms)
+✔ writes sorted SHA-256 manifests and a readable comparison when builds differ (822.235875ms)
+✔ persists and tees build 1 stdout, stderr, exit status, and accurate failure stage (729.606583ms)
+✔ persists and tees build 2 failure after recording the completed first build (1020.176167ms)
+✔ reports snapshot 1 capture failure after build 1 completes successfully (677.727958ms)
+✔ reports snapshot 2 capture failure after both builds complete successfully (951.164416ms)
+✔ preserves split UTF-8 stdout and stderr in both terminal mirror and artifacts (481.794791ms)
+✔ reports postflight failure after two matching snapshots and preserves both build results (1066.881834ms)
+✔ accepts an empty generated-file list (0.800875ms)
+✔ rejects untracked generated files (0.342375ms)
+✔ rejects staged tracked changes in generated directories (367.551ms)
+✔ rejects unstaged tracked changes in generated directories (393.265458ms)
+✔ rejects ignored untracked files in generated directories (355.898458ms)
+✔ uploads both tracked diff layers and build manifests on build gate failure (0.753083ms)
+✔ keeps the quality plan entry point aligned with the four-role gate (0.086292ms)
+✔ retains uniquely named e2e evidence for successful and failed runs (0.164292ms)
+✔ runs QG5 production specs in independent browser project shards (0.13275ms)
+✔ always uploads per-project QG5 Playwright evidence with run identity (0.071208ms)
+✔ allows repeatable QG5 baseline collection on master without weakening push and PR checks (0.054791ms)
+✔ QG5-only dispatch is opt-in and keeps push and PR jobs enabled (0.3115ms)
+✖ splits CI into observable unit, typecheck, build, docs, consumer and browser jobs (0.781042ms)
+✔ exposes dedicated QG5 evidence commands without adding them to the ordinary unit test entry point (0.210333ms)
+✔ exposes the dedicated R1 coverage gate and evidence manifest (0.297ms)
+✔ declaration audit skips verified AppleDouble companions and records them (8.813ms)
+✔ filename prefixes alone cannot suppress declarations or malformed source (5.19925ms)
+✔ default danger token remains readable when used as text (4.522583ms)
+✔ packed production smoke has an absolute preview baseURL and authentic collector output (102572.6595ms)
+✔ bounded SSR records bind full server/hydrated DOM and teleport snapshots, not only ID counts (28.97575ms)
+▶ authentic SSR RED directly checks exact nodes, independent captures, selectors, normalization and pollution
+  ✔ capture phase and exact six node contract (2.195833ms)
+  ✔ selector re-query and normalized raw bindings (30.9185ms)
+  ✔ capture artifacts reopen and bind every snapshot field (210.810667ms)
+✔ authentic SSR RED directly checks exact nodes, independent captures, selectors, normalization and pollution (100200.255292ms)
+✔ bounded SSR hydration records have all three component actions and honest virtual row windows (0.2265ms)
+✔ bounded SSR validator rejects forged accessibility IDs, teleport hashes and component action records (6511.537083ms)
+✔ bounded SSR validator rejects copied hydrated snapshots, extra nodes and teleport diagnostics (3364.786459ms)
+▶ real bounded iframe lifecycle evidence has authentic realm, popup, unmount and late-loader records
+  ✔ scenario matrix, surface descriptors and raw artifact (1.425916ms)
+  ✔ resource constructor events are raw and drained (0.292709ms)
+  ✔ popup focus Teleport unmount and late loader events are real (0.245584ms)
+✔ real bounded iframe lifecycle evidence has authentic realm, popup, unmount and late-loader records (2.493083ms)
+✔ iframe lifecycle artifact mutation is rejected by reopened hash binding (400.31475ms)
+▶ bounded metadata cannot bypass capture artifacts or validator identity
+  ✔ copied snapshot with forged capture metadata (349.403708ms)
+  ✔ forged bounded run identity (673.761916ms)
+  ✔ forged bounded validator marker (674.213ms)
+✔ bounded metadata cannot bypass capture artifacts or validator identity (2310.581875ms)
+▶ bounded artifact and SSR status metadata are mandatory
+  ✔ copied snapshot without artifact directory (350.130709ms)
+  ✔ copied snapshot without SSR recorded status (363.997459ms)
+  ✔ bounded report without artifact directory (370.66925ms)
+✔ bounded artifact and SSR status metadata are mandatory (1699.860833ms)
+✔ real bounded family events use one normalized clock domain and stay inside each scenario (0.186375ms)
+✔ real bounded geometry cannot retain coverage flags after rowRects move offscreen (1256.650125ms)
+✔ real bounded artifact paths must exist for both baseline and candidate tarballs (963.828625ms)
+✔ real bounded collector provenance rejects a forged collector source hash (983.294041ms)
+✔ real bounded artifact, manifest, build, module and lock hashes are independently bound (4882.869833ms)
+✔ real bounded actionability and observer summaries are recomputed from raw geometry/style/entries (2610.866375ms)
+✔ real bounded build fingerprint must be reopened from the durable dist artifact (954.459833ms)
+✔ real bounded build fingerprint cannot hide a missing manifest behind matching zero hashes (957.656ms)
+✔ real bounded build manifest rejects empty, missing, extra and hash-wrong recursive dist evidence (3882.795792ms)
+✔ real bounded module fingerprint must be reopened from the durable module artifact (953.745166ms)
+✔ real bounded lock fingerprint must be reopened from the durable lock artifact (960.479ms)
+✔ real preflight-full runs both artifact sides without benchmark and saves a strict durable report (81365.9245ms)
+✔ durable consumer type probe binds a real types.ts file, tsc result and positive/negative virtual API checks (94.352917ms)
+✔ preflight validator rejects any benchmark execution marker or non-empty benchmark evidence (34.943958ms)
+✔ shared full report shell binds tarball provenance and gzip module paths to both package sides (0.092542ms)
+✔ preflight browser launch/page/setup failure hooks expose real close counters (0.6425ms)
+✔ preflight candidate-build failure preserves durable partial raw/checkpoint evidence after temporary cleanup (80798.249167ms)
+✔ preflight browser launch/page/setup failure injections report actual close counters (0.837875ms)
+✔ preflight browser-page injection executes the failing CLI and persists closed browser/server counters (39455.002083ms)
+✔ real bounded Tree family coverage preserves raw flat and expanded logical datasets (4.226459ms)
+✔ real bounded TreeSelect family coverage recomputes the 5000-match query and controlled rejection (0.424917ms)
+✔ real bounded Cascader family coverage preserves deep columns, search paths, lazy state and controlled rejection (5.299291ms)
+✔ real Cascader coverage keeps deep, search and lazy component inputs as separate authentic records (2.067916ms)
+✔ real bounded measured rows retain computed fixed/coarse/dynamic heights and raw actionability probes (0.302334ms)
+✔ bounded validator rejects forged row-mode geometry and Cascader column evidence after control pass (7732.201959ms)
+✔ family coverage recomputation rejects a componentInput hash mismatch (982.13825ms)
+✔ bounded actionability validator rejects raw hit-target or focus-probe forgery (2427.479ms)
+✔ the contract exposes the frozen release matrix (1.056834ms)
+✔ a complete deterministic fixture is accepted only after evidence is recomputed (26.09825ms)
+✔ fabricated medians and gzip totals are rejected (9.698583ms)
+✔ the release matrix cannot be made complete by dropping one count or row mode (5.465ms)
+✔ unsupported Firefox and WebKit observer metrics are explicit, never fake zero (9.531875ms)
+✔ smoke reports are explicitly ineligible for release (1.562833ms)
+✔ require-release rejects nonexistent or synthetic tarball provenance (6.353166ms)
+✔ baseline commit and package hash must match the approved baseline provenance (2.993584ms)
+✔ scroll evidence rejects repeated offsets, missing endpoint and non-positive timings (2.814625ms)
+✔ environment evidence rejects empty CPU/browser and impossible concurrency (7.171625ms)
+✔ row budget is recomputed from every virtual scroll sample, not a trusted summary (6.943041ms)
+✔ SSR combinations must be eight distinct false/true assignments (3.915166ms)
+✔ raw observer entries, timestamps and package resources are required (2.1785ms)
+▶ full observer evidence validates all 270 measured rounds and derives metric support from raw entry types
+  ✔ missing round (3.337417ms)
+  ✔ duplicate observer run (3.179375ms)
+  ✔ undisconnected round (3.216334ms)
+  ✔ round runtime error (3.034584ms)
+  ✔ forged unsupported status (2.263625ms)
+  ✔ entry outside its round (1.383291ms)
+✔ full observer evidence validates all 270 measured rounds and derives metric support from raw entry types (24.67675ms)
+✔ full collector persists every observer round and records actual PerformanceObserver support (8.662125ms)
+✔ gzip provenance includes all components, CSS, nested chunks and unique assets (4.233541ms)
+✔ smoke failures cannot be reported as installed/verified success (2.691583ms)
+✔ smoke requires an explicit approved baseline and rejects the old fallback path (271.480625ms)
+✔ bounded validator is a distinct ineligible release-format gate (2.815416ms)
+✔ release validation rejects synthetic fixture even when syntheticEvidence is toggled false (5.127375ms)
+✔ release validation rejects arbitrary collected source/run/fingerprint strings (2.524167ms)
+✔ full release descriptor contract rejects pending validator status (1.962542ms)
+✔ full release descriptor contract rejects missing collectorSourcePath (3.401625ms)
+✔ full release descriptor contract requires a durable artifactDirectory (4.748291ms)
+✔ full release descriptor contract requires a real build fingerprint (3.321584ms)
+✔ full release descriptor contract requires a real module fingerprint (2.95ms)
+✔ full release descriptor contract requires a real lock descriptor and fingerprint (3.428ms)
+✔ full release descriptor contract rejects missing build manifest and lockfileAfter (5.587959ms)
+✔ full finalization accepts collected/validating input but only saved passed reports satisfy release validation (11.015292ms)
+✔ full finalization helper saves passed and reopens a minimal readable report without benchmark work (126.822875ms)
+✔ collector resolves its workspace root to the repository and avoids docs/docs default output (1.138833ms)
+✔ full and preflight collection share artifact preparation/report-shell helpers (0.695042ms)
+▶ full release SSR/types contract rejects missing snapshots, actions, capture artifacts and public type probe
+  ✔ full SSR snapshots (25.945833ms)
+  ✔ full SSR actions (25.382792ms)
+  ✔ full SSR capture evidence (16.022167ms)
+  ✔ full public type probe (12.53925ms)
+✔ full release SSR/types contract rejects missing snapshots, actions, capture artifacts and public type probe (80.464875ms)
+✔ full release remains full and reports all four missing SSR/types evidence classes together (5.99425ms)
+▶ full SSR semantic parity rejects malformed IDs, ARIA refs, selectors, actions and row windows
+  ✔ duplicate or unsorted SSR IDs (19.701333ms)
+  ✔ unrecorded ARIA reference (21.289541ms)
+  ✔ wrong selector component pattern (17.375917ms)
+  ✔ wrong hydration action components (19.912042ms)
+  ✔ virtual initial row window over budget (19.620958ms)
+✔ full SSR semantic parity rejects malformed IDs, ARIA refs, selectors, actions and row windows (98.417042ms)
+✔ full collection reuses smoke SSR capture helper and returns candidate type probe (72.700209ms)
+✔ bounded and full validation share one SSR semantic validator (27.092875ms)
+✔ hydration evidence mapping preserves non-zero runtime values across all combinations (33.052292ms)
+▶ contradictory preflight reports are ineligible and legal preflight shells stay non-acceptance
+  ✔ ordinary validation (11.172625ms)
+  ✔ release validation (7.205041ms)
+✔ contradictory preflight reports are ineligible and legal preflight shells stay non-acceptance (18.766417ms)
+▶ iframe lifecycle validator rejects forged raw resource, popup, focus, unmount and late-loader evidence
+  ✔ resource balance/realm (21.719166ms)
+  ✔ Teleport ownership/residual (15.458417ms)
+  ✔ parent document residual (15.571875ms)
+  ✔ owner observation residual (13.847958ms)
+  ✔ focus restore/close (14.846041ms)
+  ✔ unmount ordering/frame alive (14.073667ms)
+  ✔ late update/hash (11.8235ms)
+  ✔ late DOM hash mismatch (14.750666ms)
+  ✔ post-unmount mutation (17.2175ms)
+  ✔ post-unmount consumed (19.36925ms)
+  ✔ summary-only mutation (12.417417ms)
+  ✔ events empty with successful summary (11.145875ms)
+  ✔ raw lifecycle missing (14.253875ms)
+✔ iframe lifecycle validator rejects forged raw resource, popup, focus, unmount and late-loader evidence (199.063417ms)
+✔ iframe raw lifecycle uses one recomputable summary and dedicated validator (25.50275ms)
+✔ iframe raw resource completion, probe locking and late hashes are recomputed from events (2.319584ms)
+✔ iframe probe source preserves owner APIs, focus measurement and non-silent proxy installation (17.45125ms)
+✔ iframe ResizeObserver target state distinguishes unobserve from disconnect (1.425875ms)
+✔ iframe resource model treats ResizeObserver unobserve as target state and allows re-observe (1.510167ms)
+✔ iframe resource model rejects timeout creation after unmount completion (1.035209ms)
+✔ full collector failure persistence keeps partial raw evidence and appends failure metadata (0.658583ms)
+✔ full checkpoint index stays bounded and references compressed raw payload artifacts (0.43475ms)
+✔ full and virtual scroll evidence requires the same bounded viewport and real nonzero offsets (12.397333ms)
+✔ collector bounds full-mode Tree viewport and serializes visible geometry only (1.120667ms)
+✔ Tree visual fixture contains wide trees inside its horizontal scroll owner (1.424291ms)
+✔ full collector recycles instrumented pages between matrix cases (1.761834ms)
+✔ measureCase failures persist page readiness and resource diagnostics (0.759917ms)
+✔ dynamic-row action probes hit the visible row intersection, not a clipped row center (0.368375ms)
+✔ collectSide browser launch/page failures must close Firefox and WebKit in per-browser finally blocks (0.943625ms)
+✔ preflight candidate-build failure injection preserves raw checkpoints and cleanup counters (0.663667ms)
+✔ Cascader test sources never depend on a developer or CI checkout path (5.274708ms)
+✔ D4 integration tests rebuild the approved baseline from repository history (0.926125ms)
+✔ consumer gzip bundle preserves component entry exports (0.376667ms)
+✔ gzip validation rejects an empty JavaScript entry (3.4535ms)
+✔ gzip validation rejects nonempty JS without component exports despite valid hashes (2.601792ms)
+✔ candidate public type probe is persisted before long browser collection (2.89275ms)
+✔ release validation accepts the pair-forward-reverse order and rejects any other order (4.401ms)
+✔ raw mutation cases reject row geometry, event records, SSR IDs and artifact binding (4.968958ms)
+✔ gzip recollection fixes CommonJS wrapping and requires repeat-build equality (3.78575ms)
+✔ gzip artifacts are reopened with exact asset sets and embedded bytes (30.304958ms)
+✔ R1 state-machine files each meet the 80% branch threshold (3.789917ms)
+✔ Chinese docs shell and component status copy stay localized (15.244375ms)
+✔ DnD docs use visible handles and assign physical iOS touch evidence to QG5 (5.559667ms)
+✔ docs GitHub social icon is local, labelled, and non-empty (1.540125ms)
+✔ M3 public import examples match the shared release entry contract (7.762166ms)
+✔ candidate navigation links to the migration guide and its scenario anchors (3.758208ms)
+✔ documented component and scenario subpaths have quality matrix coverage (11.410334ms)
+✔ D2 overlay helpers stay internal and ship paired ESM and CommonJS files (1.011ms)
+✔ Card exports preserve consumer prop, slot, alias and install types (1034.77275ms)
+✔ components loads through ESM and CommonJS entrypoints (172.680333ms)
+✔ dnd loads through ESM and CommonJS entrypoints (17.892542ms)
+✔ ai loads through ESM and CommonJS entrypoints (18.65525ms)
+✔ components generated module roots retain CSS side effects while JavaScript can tree shake (1.687542ms)
+✔ dnd package exports resolve consumer types for business records and standalone values (999.943459ms)
+✔ Pages deploys only an exact master SHA whose full push CI workflow succeeded (4.089625ms)
+✔ manual CI completion cannot cancel a push-triggered Pages deployment (2.248459ms)
+✔ picker core loads through native ESM with external Dayjs plugins (14.051375ms)
+✔ public picker types do not expose internal Dayjs helpers (0.457833ms)
+✔ builds the docs and serves the production preview on the requested port (1.1485ms)
+✔ uses AHEART_E2E_PORT with 5173 as the default everywhere (0.301708ms)
+✔ never reuses an unknown local server for production verification (0.119542ms)
+✔ ordinary browser verification can exclude the dedicated QG5 specs (0.142166ms)
+✔ runs the QG5 production suite in Firefox, desktop WebKit, and mobile WebKit (0.446583ms)
+✔ routes the Form.List browser suite through all five configured browsers (0.110709ms)
+✔ routes the Cascader virtual browser suite through all five configured browsers (0.073292ms)
+✔ routes the Tree virtual browser suite through all five configured browsers (0.089792ms)
+✔ routes the TreeSelect virtual browser suite through all five configured browsers (0.087291ms)
+✔ gives the production preview enough time to build before readiness checks (0.093583ms)
+✔ retains failure diagnostics and uses the HTML reporter (0.098375ms)
+✔ disables the macOS system proxy for local Firefox verification (0.058792ms)
+✔ CI installs all browsers and uploads test results and the Playwright report (0.210875ms)
+✔ records owner-cancelled physical acceptance and keeps optional historical evidence distinct from automation (1.079084ms)
+✔ documents the two-stage master stability gate and exposes the guide in Chinese navigation (0.147792ms)
+✔ describes always-retained and failure-only browser evidence accurately (0.2425ms)
+✔ accepts complete physical iOS Safari evidence bound to the reviewed commit (7.523083ms)
+✔ rejects simulator and scripted touch evidence (2.151292ms)
+✔ rejects evidence for another commit and missing artifact integrity (2.36775ms)
+✔ rejects incomplete observable task outcomes (1.348875ms)
+✔ requires before and after screenshots plus a session video for every physical task (1.547292ms)
+✔ rejects duplicate before and after media references (2.066125ms)
+✔ rejects symlinks that can escape the evidence directory (2.665ms)
+✔ binds evidence to the expected repository and branch (2.736ms)
+✔ rejects artifact MIME metadata that does not match its evidence kind and extension (1.587375ms)
+✔ rejects evidence IDs that can escape the JSON evidence directory (1.914958ms)
+✔ normalizes GitHub workflow runs and preserves every attempt for flaky detection (2.259458ms)
+✔ keeps missing QG5 project evidence observable instead of silently dropping a run (0.173833ms)
+✔ collects paginated runs and jobs while filtering to the requested master SHA (0.502667ms)
+✔ retries transient GitHub failures with a bounded attempt count (4.331417ms)
+✔ accepts ten consecutive healthy master runs with zero flaky reruns (2.640375ms)
+✔ rejects an insufficient post-QG5 master window (0.449167ms)
+✔ rejects a run with a missing or failed browser project (0.439417ms)
+✔ counts a failed attempt followed by success as one flaky run (0.321666ms)
+✔ filters non-master and pre-QG5 runs instead of treating them as passing evidence (0.195583ms)
+✔ rejects incomplete historical attempts instead of hiding them as stable (0.20625ms)
+✔ only accepts runs for the expected master SHA (0.142291ms)
+✔ rejects duplicate or non-contiguous attempt numbers (0.21275ms)
+✔ QG5 production suite guards resources, hydration, overlays, and viewport containment (0.422458ms)
+✔ collects production errors through a teardown fixture that always attaches evidence (0.176ms)
+✔ settles prefetch work before navigation and never hides generic cancelled resource failures (0.094459ms)
+✔ normalizes route paths before ownership checks (0.444208ms)
+✔ VitePress cancellation classifier requires trace-backed prefetch evidence (0.32125ms)
+✔ D9 skip ledger registers every static e2e skip with owner, issue and expiry (83.603209ms)
+✔ D9 skip ledger rejects an expiry date before the execution date (23.478625ms)
+✔ quality matrix registers every Ready component exactly once with release evidence (238.911958ms)
+✔ QG4 matrix records only component-specific accessibility and visual evidence (1.707ms)
+✔ quality matrix uses the planned mutually exclusive risk mapping (0.354375ms)
+✔ R1 records have current component evidence and product task metadata (0.339375ms)
+✔ pull request template requires product task and quality matrix review (1.449375ms)
+✔ accepts a complete packed package contract (1.539291ms)
+✔ accepts and enforces a package-specific Vue peer floor (0.247125ms)
+✔ reports missing public metadata and required files (0.151208ms)
+✔ rejects unresolved workspace dependency protocols (0.161875ms)
+✔ rejects unexpected packed dependency ranges (0.149167ms)
+✔ rejects Pragmatic DnD auto-scroll dependency drift (0.19075ms)
+✔ rejects source and test files from the tarball (0.196083ms)
+✔ M1 rejects missing component styles, export condition drift and CSS pruning (9.399084ms)
+✔ D1 state helpers stay internal and ship paired ESM and CommonJS files (0.585333ms)
+✔ CSS union rejects extra/missing selectors, changed declarations, context and order (4.316541ms)
+✔ AIForm closure includes exact declared field styles and no Table or Workbench (18.627667ms)
+✔ module boundary rejects root barrels, undeclared base and optional packages (0.79275ms)
+✔ leaf and already-passing composites keep exact M1 hard boundaries (0.347917ms)
+✔ composite exception requires initial exceedance and freezes dependency bytes/share (0.242291ms)
+✔ JS retains strict full and root-named increment boundaries (0.148708ms)
+✔ real recorded composite baselines reject even one byte of closure growth (2.275916ms)
+✔ all Ready families and existing domain paths agree across exports, Resolver, actual sidebar and quality matrix (4.554292ms)
+✔ entry gate rejects a missing stylesheet export (1.347916ms)
+✔ entry gate rejects missing Table Resolver support rather than hiding an uncovered Ready component (1.307875ms)
+✔ entry gate checks the generated documentation sidebar, independently from its catalogue (1.519708ms)
+✔ entry gate rejects a quality record in the wrong package (2.342167ms)
+✔ a Ready catalogue entry cannot disappear from the manifest while its exports remain (3.117625ms)
+✔ development diagnostics detect affected imports/re-exports once per file and code (2.007542ms)
+✔ recommended named/full/scoped imports never produce deprecation warnings (1.328667ms)
+✔ namespace and direct dynamic/CommonJS accesses respect lexical shadowing (1.208417ms)
+✔ production build and production-mode serving never emit diagnostics (0.090083ms)
+ℹ tests 280
+ℹ suites 0
+ℹ pass 279
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 448910.319125
+
+✖ failing tests:
+
+test at scripts/ci-config.test.mjs:156:1
+✖ splits CI into observable unit, typecheck, build, docs, consumer and browser jobs (0.781042ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /aheart-ui-1\.3\.0\.tgz/. Input:
+
+  'name: CI\n' +
+    '\n' +
+    'env:\n' +
+    '  AHEART_EVIDENCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}\n' +
+    '\n' +
+    'permissions:\n' +
+    '  contents: read\n' +
+    '\n' +
+    'concurrency:\n' +
+    "  group: ci-${{ github.workflow }}-${{ github.ref }}-${{ github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master' && inputs.qg5_only && 'qg5' || 'full' }}\n" +
+    '  cancel-in-progress: true\n' +
+    '\n' +
+    'on:\n' +
+    '  workflow_dispatch:\n' +
+    '    inputs:\n' +
+    '      qg5_only:\n' +
+    '        description: Run only the five QG5 browser projects for stability evidence\n' +
+    '        type: boolean\n' +
+    '        required: false\n' +
+    '        default: false\n' +
+    '  push:\n' +
+    '    branches:\n' +
+    '      - master\n' +
+    "      - 'codex/**'\n" +
+    '  pull_request:\n' +
+    '    branches:\n' +
+    '      - master\n' +
+    '\n' +
+    'jobs:\n' +
+    '  unit:\n' +
+    "    name: ${{ github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master' && inputs.qg5_only && 'unit (not requested)' || 'unit' }}\n" +
+    "    if: ${{ github.event_name != 'workflow_dispatch' || github.ref != 'refs/heads/master' || !inputs.qg5_only }}\n" +
+    '    runs-on: ubuntu-latest\n' +
+    '    steps:\n' +
+    '      - name: Checkout\n' +
+    '        uses: actions/checkout@v4\n' +
+    '        with:\n' +
+    '          fetch-depth: 0\n' +
+    '      - name: Setup pnpm\n' +
+    '        uses: pnpm/action-setup@v4\n' +
+    '        with:\n' +
+    '          version: 9.15.4\n' +
+    '      - name: Setup Node\n' +
+    '        uses: actions/setup-node@v4\n' +
+    '        with:\n' +
+    '          node-version: 24.17.0\n' +
+    '          cache: pnpm\n' +
+    '      - name: Install\n' +
+    '        run: pnpm install --frozen-lockfile\n' +
+    '      - name: Install Playwright Browsers\n' +
+    '        run: pnpm exec playwright install --with-deps chromium firefox webkit\n' +
+    '      - name: Unit and script tests\n' +
+    '        run: pnpm test\n' +
+    '\n' +
+    '  typecheck:\n' +
+    "    name: ${{ github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master' && inputs.qg5_only && 'typecheck (not requested)' || 'typecheck' }}\n" +
+    "    if: ${{ github.event_name != 'workflow_dispatch' || github.ref != 'refs/heads/master' || !inputs.qg5_only }}\n" +
+    '    runs-on: ubuntu-latest\n' +
+    '    steps:\n' +
+    '      - name: Checkout\n' +
+    '        uses: actions/checkout@v4\n' +
+    '      - name: Setup pnpm\n' +
+    '        uses: pnpm/action-setup@v4\n' +
+    '        with:\n' +
+    '          version: 9.15.4\n' +
+    '      - name: Setup Node\n' +
+    '        uses: actions/setup-node@v4\n' +
+    '        with:\n' +
+    '          node-version: 24.17.0\n' +
+    '          cache: pnpm\n' +
+    '      - name: Install\n' +
+    '        run: pnpm install --frozen-lockfile\n' +
+    '      - name: Typecheck\n' +
+    '        run: pnpm typecheck\n' +
+    '\n' +
+    '  coverage:\n' +
+    "    name: ${{ github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master' && inputs.qg5_only && 'coverage (not requested)' || 'coverage' }}\n" +
+    "    if: ${{ github.event_name != 'workflow_dispatch' || github.ref != 'refs/heads/master' || !inputs.qg5_only }}\n" +
+    '    runs-on: ubuntu-latest\n' +
+    '    steps:\n' +
+    '      - name: Checkout\n' +
+    '        uses: actions/checkout@v4\n' +
+    '      - name: Setup pnpm\n' +
+    '        uses: pnpm/action-setup@v4\n' +
+    '        with:\n' +
+    '          version: 9.15.4\n' +
+    '      - name: Setup Node\n' +
+    '        uses: actions/setup-node@v4\n' +
+    '        with:\n' +
+    '          node-version: 24.17.0\n' +
+    '          cache: pnpm\n' +
+    '      - name: Install\n' +
+    '        run: pnpm install --frozen-lockfile\n' +
+    '      - name: R1 branch coverage\n' +
+    '        run: pnpm test:coverage:r1\n' +
+    '      - name: Upload coverage evidence\n' +
+    '        if: ${{ always() }}\n' +
+    '        uses: actions/upload-artifact@v4\n' +
+    '        with:\n' +
+    '          name: d9-r1-coverage-${{ github.run_id }}-${{ github.run_attempt }}\n' +
+    '          path: |\n' +
+    '            packages/components/coverage/\n' +
+    '            packages/dnd/coverage/\n' +
+    '            packages/ai/coverage/\n' +
+    '          if-no-files-found: error\n' +
+    '\n' +
+    '  build-generated:\n' +
+    "    name: ${{ github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master' && inputs.qg5_only && 'build-generated (not requested)' || 'build-generated' }}\n" +
+    "    if: ${{ github.event_name != 'workflow_dispatch' || github.ref != 'refs/heads/master' || !inputs.qg5_only }}\n" +
+    '    runs-on: ubuntu-latest\n' +
+    '    steps:\n' +
+    '      - name: Checkout\n' +
+    '        uses: actions/checkout@v4\n' +
+    '        with:\n' +
+    '          fetch-depth: 0\n' +
+    '      - name: Setup pnpm\n' +
+    '        uses: pnpm/action-setup@v4\n' +
+    '        with:\n' +
+    '          version: 9.15.4\n' +
+    '      - name: Setup Node\n' +
+    '        uses: actions/setup-node@v4\n' +
+    '        with:\n' +
+    '          node-version: 24.17.0\n' +
+    '          cache: pnpm\n' +
+    '      - name: Install\n' +
+    '        run: pnpm install --frozen-lockfile\n' +
+    '      - name: Check Build Determinism and Generated Output\n' +
+    '        id: build_generated\n' +
+    '        run: pnpm check:build-determinism\n' +
+    '      - name: Capture Build Diagnostics\n' +
+    "        if: ${{ failure() && steps.build_generated.outcome == 'failure' }}\n" +
+    '        run: |\n' +
+    '          mkdir -p test-results/build-generated-diagnostics\n' +
+    '          git diff --cached HEAD -- packages/components/es packages/components/lib packages/dnd/es packages/dnd/lib packages/ai/es packages/ai/lib > test-results/build-generated-diagnostics/generated-cached.diff\n' +
+    '          git diff -- packages/components/es packages/components/lib packages/dnd/es packages/dnd/lib packages/ai/es packages/ai/lib > test-results/build-generated-diagnostics/generated-worktree.diff\n' +
+    '          git ls-files --others -- packages/components/es packages/components/lib packages/dnd/es packages/dnd/lib packages/ai/es packages/ai/lib > test-results/build-generated-diagnostics/generated-untracked.txt\n' +
+    '      - name: Upload Build Diagnostics\n' +
+    "        if: ${{ failure() && steps.build_generated.outcome == 'failure' }}\n" +
+    '        uses: actions/upload-artifact@v4\n' +
+    '        with:\n' +
+    '          name: build-generated-diagnostics-${{ github.run_id }}-${{ github.run_attempt }}\n' +
+    '          path: test-results/build-generated-diagnostics/\n' +
+    '          if-no-files-found: error\n' +
+    '      - name: Check Whitespace\n' +
+    '        run: git diff --check\n' +
+    '\n' +
+    '  docs:\n' +
+    "    name: ${{ github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master' && inputs.qg5_only && 'docs (not requested)' || 'docs' }}\n" +
+    "    if: ${{ github.event_name != 'workflow_dispatch' || github.ref != 'refs/heads/master' || !inputs.qg5_only }}\n" +
+    '    runs-on: ubuntu-latest\n' +
+    '    steps:\n' +
+    '      - name: Checkout\n' +
+    '        uses: actions/checkout@v4\n' +
+    '      - name: Setup pnpm\n' +
+    '        uses: pnpm/action-setup@v4\n' +
+    '        with:\n' +
+    '          version: 9.15.4\n' +
+    '      - name: Setup Node\n' +
+    '        uses: actions/setup-node@v4\n' +
+    '        with:\n' +
+    '          node-version: 24.17.0\n' +
+    '          cache: pnpm\n' +
+    '      - name: Install\n' +
+    '        run: pnpm install --frozen-lockfile\n' +
+    '      - name: Build Docs\n' +
+    '        run: pnpm docs:build\n' +
+    '\n' +
+    '  consumer:\n' +
+    "    name: ${{ github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master' && inputs.qg5_only && 'consumer (not requested)' || 'consumer' }}\n" +
+    "    if: ${{ github.event_name != 'workflow_dispatch' || github.ref != 'refs/heads/master' || !inputs.qg5_only }}\n" +
+    '    runs-on: ubuntu-latest\n' +
+    '    steps:\n' +
+    '      - name: Checkout\n' +
+    '        uses: actions/checkout@v4\n' +
+    '      - name: Setup pnpm\n' +
+    '        uses: pnpm/action-setup@v4\n' +
+    '        with:\n' +
+    '          version: 9.15.4\n' +
+    '      - name: Setup Node\n' +
+    '        uses: actions/setup-node@v4\n' +
+    '        with:\n' +
+    '          node-version: 24.17.0\n' +
+    '          cache: pnpm\n' +
+    '      - name: Install\n' +
+    '        run: pnpm install --frozen-lockfile\n' +
+    '      - name: Install Playwright Browsers\n' +
+    '        run: pnpm exec playwright install --with-deps chromium firefox webkit\n' +
+    '      - name: Verify Release Tarballs\n' +
+    '        run: pnpm release:pack --pack-destination test-results/release-tarballs\n' +
+    '      - name: Strict packed consumer types (workspace Vue and Vue 3.5.44)\n' +
+    '        run: pnpm check:consumer-types\n' +
+    '      - name: V1 all Ready entry JS CSS and module boundaries\n' +
+    '        run: pnpm check:v1-consumer\n' +
+    '      - name: V1 development diagnostics and migration codemod\n' +
+    '        run: pnpm check:v2-migration-consumer\n' +
+    '      - name: Pack and run isolated consumers\n' +
+    '        run: |\n' +
+    '          pack_dir=$(mktemp -d)\n' +
+    '          root_out=$(mktemp -d)\n' +
+    '          form_out=$(mktemp -d)\n' +
+    '          d8_out=$(mktemp -d)\n' +
+    '          pnpm --dir packages/components pack --json --pack-destination "$pack_dir" > "$pack_dir/pack.json"\n' +
+    '          pnpm --dir packages/dnd pack --json --pack-destination "$pack_dir" > "$pack_dir/dnd-pack.json"\n' +
+    '          pnpm --dir packages/ai pack --json --pack-destination "$pack_dir" > "$pack_dir/ai-pack.json"\n' +
+    '          components_tarball="$pack_dir/aheart-ui-1.4.0.tgz"\n' +
+    `          dnd_tarball="$(node -p 'require(process.argv[1]).filename' "$pack_dir/dnd-pack.json")"\n` +
+    `          ai_tarball="$(node -p 'require(process.argv[1]).filename' "$pack_dir/ai-pack.json")"\n` +
+    '          node scripts/root-entry-consumer.mjs --tarball "$components_tarball" --out "$root_out"\n' +
+    '          node scripts/form-list-consumer.mjs --tarball "$components_tarball" --out "$form_out"\n' +
+    '          node docs/superpowers/experiments/d8-consumer/run.mjs --out "$d8_out" --components-tarball "$components_tarball" --dnd-tarball "$dnd_tarball" --ai-tarball "$ai_tarball"\n' +
+    '          mkdir -p test-results/d9-consumers\n' +
+    '          cp "$root_out/results.json" test-results/d9-consumers/root-results.json\n' +
+    '          cp "$form_out/results.json" test-results/d9-consumers/form-results.json\n' +
+    '          cp "$d8_out/results.json" test-results/d9-consumers/d8-results.json\n' +
+    '      - name: M3 scoped entries, CSS and resolver\n' +
+    '        run: pnpm check:m3-consumer\n' +
+    '      - name: M3 packed consumer and Workbench pilot\n' +
+    '        run: |\n' +
+    '          node pilots/run-baselines.mjs --entry-mode subpath --only clean-consumer,ai-review-gate \\\n' +
+    '            --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz \\\n' +
+    '            --ai-tarball test-results/release-tarballs/aheart-ui-ai-1.2.0.tgz \\\n' +
+    '            --dnd-tarball test-results/release-tarballs/aheart-ui-dnd-1.1.0.tgz \\\n' +
+    '            --out test-results/m3-pilots\n' +
+    '      - name: M1 public entries, CSS and module graph\n' +
+    '        run: pnpm check:m1-consumer\n' +
+    '      - name: M1 split and compatibility pilot paths\n' +
+    '        run: |\n' +
+    '          mkdir -p test-results/m1-pilots\n' +
+    '          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz --entry-mode subpath --out test-results/m1-pilots/chromium\n' +
+    '          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz --entry-mode subpath --only clean-consumer --browser firefox --out test-results/m1-pilots/firefox\n' +
+    '          node pilots/run-baselines.mjs --core-tarball test-results/rele'... 3430 more characters
+
+      at TestContext.<anonymous> (file:///Users/start/code/aheart-ui-wt/v1.4-entries/scripts/ci-config.test.mjs:171:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'name: CI\n\nenv:\n  AHEART_EVIDENCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}\n\npermissions:\n  contents: read\n\nconcurrency:\n  group: ci-${{ github.workflow }}-${{ github.ref }}-${{ github.event_name == \'workflow_dispatch\' && github.ref == \'refs/heads/master\' && inputs.qg5_only && \'qg5\' || \'full\' }}\n  cancel-in-progress: true\n\non:\n  workflow_dispatch:\n    inputs:\n      qg5_only:\n        description: Run only the five QG5 browser projects for stability evidence\n        type: boolean\n        required: false\n        default: false\n  push:\n    branches:\n      - master\n      - \'codex/**\'\n  pull_request:\n    branches:\n      - master\n\njobs:\n  unit:\n    name: ${{ github.event_name == \'workflow_dispatch\' && github.ref == \'refs/heads/master\' && inputs.qg5_only && \'unit (not requested)\' || \'unit\' }}\n    if: ${{ github.event_name != \'workflow_dispatch\' || github.ref != \'refs/heads/master\' || !inputs.qg5_only }}\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v4\n        with:\n          fetch-depth: 0\n      - name: Setup pnpm\n        uses: pnpm/action-setup@v4\n        with:\n          version: 9.15.4\n      - name: Setup Node\n        uses: actions/setup-node@v4\n        with:\n          node-version: 24.17.0\n          cache: pnpm\n      - name: Install\n        run: pnpm install --frozen-lockfile\n      - name: Install Playwright Browsers\n        run: pnpm exec playwright install --with-deps chromium firefox webkit\n      - name: Unit and script tests\n        run: pnpm test\n\n  typecheck:\n    name: ${{ github.event_name == \'workflow_dispatch\' && github.ref == \'refs/heads/master\' && inputs.qg5_only && \'typecheck (not requested)\' || \'typecheck\' }}\n    if: ${{ github.event_name != \'workflow_dispatch\' || github.ref != \'refs/heads/master\' || !inputs.qg5_only }}\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v4\n      - name: Setup pnpm\n        uses: pnpm/action-setup@v4\n        with:\n          version: 9.15.4\n      - name: Setup Node\n        uses: actions/setup-node@v4\n        with:\n          node-version: 24.17.0\n          cache: pnpm\n      - name: Install\n        run: pnpm install --frozen-lockfile\n      - name: Typecheck\n        run: pnpm typecheck\n\n  coverage:\n    name: ${{ github.event_name == \'workflow_dispatch\' && github.ref == \'refs/heads/master\' && inputs.qg5_only && \'coverage (not requested)\' || \'coverage\' }}\n    if: ${{ github.event_name != \'workflow_dispatch\' || github.ref != \'refs/heads/master\' || !inputs.qg5_only }}\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v4\n      - name: Setup pnpm\n        uses: pnpm/action-setup@v4\n        with:\n          version: 9.15.4\n      - name: Setup Node\n        uses: actions/setup-node@v4\n        with:\n          node-version: 24.17.0\n          cache: pnpm\n      - name: Install\n        run: pnpm install --frozen-lockfile\n      - name: R1 branch coverage\n        run: pnpm test:coverage:r1\n      - name: Upload coverage evidence\n        if: ${{ always() }}\n        uses: actions/upload-artifact@v4\n        with:\n          name: d9-r1-coverage-${{ github.run_id }}-${{ github.run_attempt }}\n          path: |\n            packages/components/coverage/\n            packages/dnd/coverage/\n            packages/ai/coverage/\n          if-no-files-found: error\n\n  build-generated:\n    name: ${{ github.event_name == \'workflow_dispatch\' && github.ref == \'refs/heads/master\' && inputs.qg5_only && \'build-generated (not requested)\' || \'build-generated\' }}\n    if: ${{ github.event_name != \'workflow_dispatch\' || github.ref != \'refs/heads/master\' || !inputs.qg5_only }}\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v4\n        with:\n          fetch-depth: 0\n      - name: Setup pnpm\n        uses: pnpm/action-setup@v4\n        with:\n          version: 9.15.4\n      - name: Setup Node\n        uses: actions/setup-node@v4\n        with:\n          node-version: 24.17.0\n          cache: pnpm\n      - name: Install\n        run: pnpm install --frozen-lockfile\n      - name: Check Build Determinism and Generated Output\n        id: build_generated\n        run: pnpm check:build-determinism\n      - name: Capture Build Diagnostics\n        if: ${{ failure() && steps.build_generated.outcome == \'failure\' }}\n        run: |\n          mkdir -p test-results/build-generated-diagnostics\n          git diff --cached HEAD -- packages/components/es packages/components/lib packages/dnd/es packages/dnd/lib packages/ai/es packages/ai/lib > test-results/build-generated-diagnostics/generated-cached.diff\n          git diff -- packages/components/es packages/components/lib packages/dnd/es packages/dnd/lib packages/ai/es packages/ai/lib > test-results/build-generated-diagnostics/generated-worktree.diff\n          git ls-files --others -- packages/components/es packages/components/lib packages/dnd/es packages/dnd/lib packages/ai/es packages/ai/lib > test-results/build-generated-diagnostics/generated-untracked.txt\n      - name: Upload Build Diagnostics\n        if: ${{ failure() && steps.build_generated.outcome == \'failure\' }}\n        uses: actions/upload-artifact@v4\n        with:\n          name: build-generated-diagnostics-${{ github.run_id }}-${{ github.run_attempt }}\n          path: test-results/build-generated-diagnostics/\n          if-no-files-found: error\n      - name: Check Whitespace\n        run: git diff --check\n\n  docs:\n    name: ${{ github.event_name == \'workflow_dispatch\' && github.ref == \'refs/heads/master\' && inputs.qg5_only && \'docs (not requested)\' || \'docs\' }}\n    if: ${{ github.event_name != \'workflow_dispatch\' || github.ref != \'refs/heads/master\' || !inputs.qg5_only }}\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v4\n      - name: Setup pnpm\n        uses: pnpm/action-setup@v4\n        with:\n          version: 9.15.4\n      - name: Setup Node\n        uses: actions/setup-node@v4\n        with:\n          node-version: 24.17.0\n          cache: pnpm\n      - name: Install\n        run: pnpm install --frozen-lockfile\n      - name: Build Docs\n        run: pnpm docs:build\n\n  consumer:\n    name: ${{ github.event_name == \'workflow_dispatch\' && github.ref == \'refs/heads/master\' && inputs.qg5_only && \'consumer (not requested)\' || \'consumer\' }}\n    if: ${{ github.event_name != \'workflow_dispatch\' || github.ref != \'refs/heads/master\' || !inputs.qg5_only }}\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v4\n      - name: Setup pnpm\n        uses: pnpm/action-setup@v4\n        with:\n          version: 9.15.4\n      - name: Setup Node\n        uses: actions/setup-node@v4\n        with:\n          node-version: 24.17.0\n          cache: pnpm\n      - name: Install\n        run: pnpm install --frozen-lockfile\n      - name: Install Playwright Browsers\n        run: pnpm exec playwright install --with-deps chromium firefox webkit\n      - name: Verify Release Tarballs\n        run: pnpm release:pack --pack-destination test-results/release-tarballs\n      - name: Strict packed consumer types (workspace Vue and Vue 3.5.44)\n        run: pnpm check:consumer-types\n      - name: V1 all Ready entry JS CSS and module boundaries\n        run: pnpm check:v1-consumer\n      - name: V1 development diagnostics and migration codemod\n        run: pnpm check:v2-migration-consumer\n      - name: Pack and run isolated consumers\n        run: |\n          pack_dir=$(mktemp -d)\n          root_out=$(mktemp -d)\n          form_out=$(mktemp -d)\n          d8_out=$(mktemp -d)\n          pnpm --dir packages/components pack --json --pack-destination "$pack_dir" > "$pack_dir/pack.json"\n          pnpm --dir packages/dnd pack --json --pack-destination "$pack_dir" > "$pack_dir/dnd-pack.json"\n          pnpm --dir packages/ai pack --json --pack-destination "$pack_dir" > "$pack_dir/ai-pack.json"\n          components_tarball="$pack_dir/aheart-ui-1.4.0.tgz"\n          dnd_tarball="$(node -p \'require(process.argv[1]).filename\' "$pack_dir/dnd-pack.json")"\n          ai_tarball="$(node -p \'require(process.argv[1]).filename\' "$pack_dir/ai-pack.json")"\n          node scripts/root-entry-consumer.mjs --tarball "$components_tarball" --out "$root_out"\n          node scripts/form-list-consumer.mjs --tarball "$components_tarball" --out "$form_out"\n          node docs/superpowers/experiments/d8-consumer/run.mjs --out "$d8_out" --components-tarball "$components_tarball" --dnd-tarball "$dnd_tarball" --ai-tarball "$ai_tarball"\n          mkdir -p test-results/d9-consumers\n          cp "$root_out/results.json" test-results/d9-consumers/root-results.json\n          cp "$form_out/results.json" test-results/d9-consumers/form-results.json\n          cp "$d8_out/results.json" test-results/d9-consumers/d8-results.json\n      - name: M3 scoped entries, CSS and resolver\n        run: pnpm check:m3-consumer\n      - name: M3 packed consumer and Workbench pilot\n        run: |\n          node pilots/run-baselines.mjs --entry-mode subpath --only clean-consumer,ai-review-gate \\\n            --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz \\\n            --ai-tarball test-results/release-tarballs/aheart-ui-ai-1.2.0.tgz \\\n            --dnd-tarball test-results/release-tarballs/aheart-ui-dnd-1.1.0.tgz \\\n            --out test-results/m3-pilots\n      - name: M1 public entries, CSS and module graph\n        run: pnpm check:m1-consumer\n      - name: M1 split and compatibility pilot paths\n        run: |\n          mkdir -p test-results/m1-pilots\n          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz --entry-mode subpath --out test-results/m1-pilots/chromium\n          node pilots/run-baselines.mjs --core-tarball test-results/release-tarballs/aheart-ui-1.4.0.tgz --entry-mode subpath --only clean-consumer --browser firefox --out test-results/m1-pilots/firefox\n          node pilots/run-baselines.mjs --core-tarball test-results/rele'... 3430 more characters,
+    expected: /aheart-ui-1\.3\.0\.tgz/,
+    operator: 'match',
+    diff: 'simple'
+  }
+ ELIFECYCLE  Test failed. See above for more details.
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+[33mThe CJS build of Vite's Node API is deprecated. See https://vitejs.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+stderr | src/form/__tests__/form-list.test.ts > Form.List optimization > adds, inserts, removes unique indices and moves in one stable-key list
+[AFormList] remove ignored duplicate or out-of-range indices
+
+stderr | src/form/__tests__/form-list.test.ts > Form.List optimization > treats a defined non-array model value and invalid indices as safe no-ops
+[AFormList] model path s:users must contain an array
+[AFormList] add ignored because the model value is not an array
+[AFormList] remove ignored because the model value is not an array
+[AFormList] move ignored because the model value is not an array
+
+stderr | src/tree/__tests__/tree-virtual.test.ts > Tree virtual contract > supports true and config forms with per-field defaults without changing the caller object
+[ATree] virtual.height must be a positive number; using the default.
+[ATree] virtual.estimateSize must be a positive number; using the default.
+[ATree] virtual.overscan must be a non-negative safe integer; using the default.
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m

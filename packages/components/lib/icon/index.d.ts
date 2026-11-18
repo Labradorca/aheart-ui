@@ -40,3 +40,4 @@ declare const Icon: import("../utils/install").SFCWithInstall<{
     };
 })>;
 export default Icon;
+export { Icon };

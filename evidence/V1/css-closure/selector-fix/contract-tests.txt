@@ -1,0 +1,16 @@
+✔ CSS union rejects extra/missing selectors, changed declarations, context and order (1.984208ms)
+✔ AIForm closure includes exact declared field styles and no Table or Workbench (6.520625ms)
+✔ cross-family selectors retain declared DND context and exclude fixtures or undeclared families (0.223417ms)
+✔ module boundary rejects root barrels, undeclared base and optional packages (0.420291ms)
+✔ leaf and already-passing composites keep exact M1 hard boundaries (0.128792ms)
+✔ composite exception requires initial exceedance and freezes dependency bytes/share (0.105708ms)
+✔ JS retains strict full and root-named increment boundaries (0.051625ms)
+✔ real recorded composite baselines reject even one byte of closure growth (0.289292ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 55.938291

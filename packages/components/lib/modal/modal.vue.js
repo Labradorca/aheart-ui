@@ -2,7 +2,7 @@
 Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
 const vue = require("vue");
 const button_index = require("../button/index.js");
-const index = require("../skeleton/index.js");
+const skeleton_index = require("../skeleton/index.js");
 const useMotionPresence = require("../utils/use-motion-presence.js");
 const useDialogLayer = require("../utils/use-dialog-layer.js");
 const types = require("./types.js");
@@ -440,8 +440,8 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
       const next = current < 0 ? event.shiftKey ? elements.length - 1 : 0 : (current + direction + elements.length) % elements.length;
       const recover = () => {
         for (let offset = 0; offset < elements.length; offset += 1) {
-          const index2 = (next + offset * direction + elements.length) % elements.length;
-          const target = elements[index2];
+          const index = (next + offset * direction + elements.length) % elements.length;
+          const target = elements[index];
           if (target.isConnected && dialog.contains(target) && isFocusableElementAvailable(target) && focusElement(target))
             return;
         }
@@ -571,7 +571,7 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
                     class: vue.normalizeClass(bodyClass.value),
                     style: vue.normalizeStyle(semanticStyle("body"))
                   }, [
-                    _ctx.loading ? (vue.openBlock(), vue.createBlock(vue.unref(index.default), {
+                    _ctx.loading ? (vue.openBlock(), vue.createBlock(vue.unref(skeleton_index.default), {
                       key: 0,
                       active: "",
                       paragraph: { rows: 3 }

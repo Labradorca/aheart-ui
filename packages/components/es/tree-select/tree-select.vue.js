@@ -1,7 +1,7 @@
 import { defineComponent, useAttrs, ref, watch, provide, computed, openBlock, createElementBlock, normalizeClass, createElementVNode, Fragment, renderList, unref, toDisplayString, withModifiers, createVNode, createCommentVNode, createBlock, Teleport, withDirectives, normalizeStyle, vModelText, vShow, nextTick } from "vue";
 import _sfc_main$1 from "../icon/icon.vue.js";
 import { useFormControl, mergeAriaIds } from "../form/control-context.js";
-import Tree from "../tree/index.js";
+import { Tree as InstalledTree } from "../tree/index.js";
 import { createTreeFocusBridge, treeFocusBridgeKey, treeVirtualViewportHeightKey } from "../tree/tree-focus-bridge.js";
 import { useTreeLoader, treeModelKey } from "../tree/use-tree-loader.js";
 import { deriveTreeCheckState, toggleTreeCheck } from "../tree/tree-check.js";
@@ -428,7 +428,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             }, null, 544)), [
               [vModelText, searchText.value]
             ]) : createCommentVNode("", true),
-            createVNode(unref(Tree), {
+            createVNode(unref(InstalledTree), {
               id: treeId,
               "tree-data": filteredTreeData.value,
               "selected-keys": __props.treeCheckable ? [] : selectedKeys.value,

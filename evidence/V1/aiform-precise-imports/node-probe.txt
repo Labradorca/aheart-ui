@@ -1,0 +1,1 @@
+ESM/CJS/root/full/scoped/legacy object identity, unchanged props/events and all 13 fields SSR passed

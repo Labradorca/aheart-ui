@@ -138,6 +138,7 @@ export default defineConfig({
                 { text: "AI 接入", link: "/guide/ai-integration" },
                 { text: "1.2 按需候选", link: "/guide/on-demand" },
                 { text: "M3 按需迁移", link: "/guide/m3-migration" },
+                { text: "1.3 → 2.0 迁移", link: "/guide/v2-migration" },
                 { text: "主题 Token", link: "/guide/theme" },
                 { text: "质量矩阵", link: "/guide/quality-matrix" },
                 { text: "QG5 证据", link: "/guide/qg5-evidence" },

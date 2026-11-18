@@ -22,3 +22,5 @@ export type {
   DropdownProps,
   DropdownTrigger
 } from './types'
+
+export { Dropdown }

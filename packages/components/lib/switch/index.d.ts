@@ -216,3 +216,4 @@ declare const Switch: import("../utils/install").SFCWithInstall<{
 })>;
 export type * from './types';
 export default Switch;
+export { Switch };

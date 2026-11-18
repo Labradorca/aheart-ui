@@ -241,3 +241,4 @@ declare const Popover: import("../utils/install").SFCWithInstall<{
 })>;
 export default Popover;
 export type { PopoverProps } from './types';
+export { Popover };

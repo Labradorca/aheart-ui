@@ -1,0 +1,29 @@
+{
+  "scope": "independent known component-family ownership check for every declared base CSS source; intrinsic helpers listed separately",
+  "entries": 65,
+  "foreign": [],
+  "helpers": {
+    "utils/floating.css": [
+      "aheart-floating--top",
+      "aheart-floating--topLeft",
+      "aheart-floating--topRight",
+      "aheart-floating--bottom",
+      "aheart-floating--bottomLeft",
+      "aheart-floating--bottomRight",
+      "aheart-floating--left",
+      "aheart-floating--leftTop",
+      "aheart-floating--leftBottom",
+      "aheart-floating--right",
+      "aheart-floating--rightTop",
+      "aheart-floating--rightBottom",
+      "aheart-floating__arrow"
+    ],
+    "badge/style.css": [
+      "aheart-ribbon-wrapper",
+      "aheart-ribbon__indicator",
+      "aheart-ribbon--start",
+      "aheart-ribbon__content",
+      "aheart-ribbon__corner"
+    ]
+  }
+}

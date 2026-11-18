@@ -1,0 +1,65 @@
+{
+  "scope": "design-only CSS minification experiment; not a V1 acceptance run",
+  "command": [
+    "node",
+    "evidence/V1/aiform-design/measure-css.mjs"
+  ],
+  "viteVersion": "5.0.12",
+  "configuration": {
+    "configFile": false,
+    "root": "isolated realpath temporary directory",
+    "build": {
+      "minify": true,
+      "write": false
+    },
+    "mode": "production"
+  },
+  "temporary": "/private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-aiform-css-design-jzJFio",
+  "cases": {
+    "full": {
+      "rawBytes": 201510,
+      "rawSha256": "bd1006443101d0335a14c0ae0bcdaf351de95d0a76cddf4239c89e76cae95c83",
+      "minifiedBytes": 177470,
+      "minifiedSha256": "bfbcea07ff98c7f1b3e285b06dd464db6af1676ac391f885dc42064a70285587",
+      "assetCount": 1
+    },
+    "closure": {
+      "rawBytes": 100048,
+      "rawSha256": "a74311f9f391f47c4548fa92d1f16e873cce200de8cc9e8482829f7de1b73f0a",
+      "minifiedBytes": 88415,
+      "minifiedSha256": "530f38f1d4384268e2b8d0f085f534731a534256071f423c7ff6df0ec391963b",
+      "assetCount": 1
+    },
+    "theme": {
+      "rawBytes": 1767,
+      "rawSha256": "401250d0c659cc3aa3eef6f5c2ce988b34343abf478a8b87b44d50b9b92c5b6f",
+      "minifiedBytes": 1454,
+      "minifiedSha256": "d6b5981226943c19b0b76825e54eeaad31e357bfd00ddbe9e4fb370dc804659d",
+      "assetCount": 1
+    },
+    "aiOwn": {
+      "rawBytes": 4788,
+      "rawSha256": "4cddd7d9bb06f547de9a225fc18d3f4cb0a5e18add94f55924d3cd7340cd991e",
+      "minifiedBytes": 4025,
+      "minifiedSha256": "5bf54ed2f221e71de8bfc980d7e12bd001b4681693381d0cc350ce2cd80ff690",
+      "assetCount": 1
+    }
+  },
+  "minifiedBudget": {
+    "fullBytes": 177470,
+    "componentBytes": 88415,
+    "themeBytes": 1454,
+    "fraction": 0.49819687834563586,
+    "componentPass": false,
+    "themeAndComponentPass": false
+  },
+  "requiredReduction": {
+    "fixedFullBaseline": 49670.5,
+    "sharedBaseOnly": 66227.33333333333,
+    "sharedBaseOnlyIntegerMinimum": 66228,
+    "baseClosureBytes": 95260,
+    "fractionOfBaseClosure": 0.6952270977675135,
+    "assumption": "A byte removed from shared base styles reduces both the AIForm closure and full.css by one byte; AI own styles remain unchanged. Ratios are always recomputed against the same-format candidate full.css."
+  },
+  "conclusion": "Conventional minification is insufficient when both numerator and denominator use identical build settings. Entry/file splitting alone does not reduce the complete CSS dependency closure."
+}

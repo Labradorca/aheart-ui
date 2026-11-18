@@ -260,3 +260,4 @@ export declare const RadioGroup: import("../utils/install").SFCWithInstall<impor
 export { RadioGroup as ARadioGroup };
 export type { RadioButtonStyle, RadioGroupProps, RadioOption, RadioOptionType, RadioProps, RadioValue } from './types';
 export default Radio;
+export { Radio };

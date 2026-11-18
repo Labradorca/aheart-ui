@@ -1,0 +1,21 @@
+{
+  "logicalEntries": 65,
+  "counts": {
+    "base": {
+      "composite": 5,
+      "leaf": 40
+    },
+    "ai": {
+      "composite": 7,
+      "leaf": 9
+    },
+    "dnd": {
+      "composite": 0,
+      "leaf": 4
+    }
+  },
+  "sourceHashesChecked": 116,
+  "localLinksChecked": 79,
+  "implementationUnchanged": true,
+  "aiPeerUnchanged": true
+}

@@ -3,5 +3,5 @@ Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toString
 const descriptions_vue_vue_type_script_setup_true_lang = require("./descriptions.vue.js");
 const install = require("../utils/install.js");
 const Descriptions = install.withInstall(descriptions_vue_vue_type_script_setup_true_lang.default, "ADescriptions");
-const Descriptions$1 = Descriptions;
-exports.default = Descriptions$1;
+exports.Descriptions = Descriptions;
+exports.default = Descriptions;

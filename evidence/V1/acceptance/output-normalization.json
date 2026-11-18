@@ -1,0 +1,90 @@
+{
+  "normalization": "trailing whitespace and blank EOF only; all assertion content/exit codes retained",
+  "files": [
+    {
+      "file": "evidence/V1/acceptance/coverage-r1.txt",
+      "rawSha256": "fc974f784f5b460fda0bf8572880e0ddac61150dd253aa6244bb784df9f4b6da",
+      "normalizedSha256": "7a1a20691e2d63d891f026bcea7a839a7a0b63003e02e7bf94f19e68e67dd6ea"
+    },
+    {
+      "file": "evidence/V1/acceptance/e2e-five-projects.txt",
+      "rawSha256": "041c38f60efb51e3ee0d5c5c9859eef12bac73038ead7c548e50bc9d752177f5",
+      "normalizedSha256": "e5d8add0a04b2f3a48e4e936ffbb4c4ba8ab1d86694a49952a36277d2ea9ba18"
+    },
+    {
+      "file": "evidence/V1/acceptance/pilots/chromium/ai-review-gate/strict-types.log",
+      "rawSha256": "3d5b5793c05c13b79f59119b8ce14edd6dca87648bd73c101951e541ed308f03",
+      "normalizedSha256": "312f34860142572bc4c1cdd481c3f0acb191c966aa97d04e9e47d96bd69e1590"
+    },
+    {
+      "file": "evidence/V1/acceptance/pilots/chromium/ai-review-gate/typecheck.log",
+      "rawSha256": "f8fd2069ed39d7a52346f19584de2521e70e4f3ae7a97881e798ef52f7d990e1",
+      "normalizedSha256": "a3724ce1e52d8a51e720263d05123be20837c5084b77d378a29a12af77fe0441"
+    },
+    {
+      "file": "evidence/V1/acceptance/pilots/chromium/clean-consumer/strict-types.log",
+      "rawSha256": "2ec4f908bccb04c41cc68235ca98e4e4523159eeb564c53b1c7c5eaeba4ce101",
+      "normalizedSha256": "0e96760cce36cb41eab4d56bf33c6a4ad0ce27498c54b4c746dbe62b37e0580f"
+    },
+    {
+      "file": "evidence/V1/acceptance/pilots/chromium/clean-consumer/typecheck.log",
+      "rawSha256": "ab337baba6cbfc99d4c60202df61114a8208e9ab5e88788bfd7abb4550947e17",
+      "normalizedSha256": "1a263471ba75605f2b424072061532b37bb5788284093228e4abd7b533b922a8"
+    },
+    {
+      "file": "evidence/V1/acceptance/pilots/firefox/ai-review-gate/strict-types.log",
+      "rawSha256": "3d5b5793c05c13b79f59119b8ce14edd6dca87648bd73c101951e541ed308f03",
+      "normalizedSha256": "312f34860142572bc4c1cdd481c3f0acb191c966aa97d04e9e47d96bd69e1590"
+    },
+    {
+      "file": "evidence/V1/acceptance/pilots/firefox/ai-review-gate/typecheck.log",
+      "rawSha256": "f8fd2069ed39d7a52346f19584de2521e70e4f3ae7a97881e798ef52f7d990e1",
+      "normalizedSha256": "a3724ce1e52d8a51e720263d05123be20837c5084b77d378a29a12af77fe0441"
+    },
+    {
+      "file": "evidence/V1/acceptance/pilots/firefox/clean-consumer/strict-types.log",
+      "rawSha256": "2ec4f908bccb04c41cc68235ca98e4e4523159eeb564c53b1c7c5eaeba4ce101",
+      "normalizedSha256": "0e96760cce36cb41eab4d56bf33c6a4ad0ce27498c54b4c746dbe62b37e0580f"
+    },
+    {
+      "file": "evidence/V1/acceptance/pilots/firefox/clean-consumer/typecheck.log",
+      "rawSha256": "ab337baba6cbfc99d4c60202df61114a8208e9ab5e88788bfd7abb4550947e17",
+      "normalizedSha256": "1a263471ba75605f2b424072061532b37bb5788284093228e4abd7b533b922a8"
+    },
+    {
+      "file": "evidence/V1/acceptance/pilots/webkit/ai-review-gate/strict-types.log",
+      "rawSha256": "3d5b5793c05c13b79f59119b8ce14edd6dca87648bd73c101951e541ed308f03",
+      "normalizedSha256": "312f34860142572bc4c1cdd481c3f0acb191c966aa97d04e9e47d96bd69e1590"
+    },
+    {
+      "file": "evidence/V1/acceptance/pilots/webkit/ai-review-gate/typecheck.log",
+      "rawSha256": "f8fd2069ed39d7a52346f19584de2521e70e4f3ae7a97881e798ef52f7d990e1",
+      "normalizedSha256": "a3724ce1e52d8a51e720263d05123be20837c5084b77d378a29a12af77fe0441"
+    },
+    {
+      "file": "evidence/V1/acceptance/pilots/webkit/clean-consumer/strict-types.log",
+      "rawSha256": "2ec4f908bccb04c41cc68235ca98e4e4523159eeb564c53b1c7c5eaeba4ce101",
+      "normalizedSha256": "0e96760cce36cb41eab4d56bf33c6a4ad0ce27498c54b4c746dbe62b37e0580f"
+    },
+    {
+      "file": "evidence/V1/acceptance/pilots/webkit/clean-consumer/typecheck.log",
+      "rawSha256": "ab337baba6cbfc99d4c60202df61114a8208e9ab5e88788bfd7abb4550947e17",
+      "normalizedSha256": "1a263471ba75605f2b424072061532b37bb5788284093228e4abd7b533b922a8"
+    },
+    {
+      "file": "evidence/V1/acceptance/select-first-attempt/desktop-webkit/error-context.md",
+      "rawSha256": "441dc52902d1602ade707ff636c106b011c3818586ae8e2747abc14309537f36",
+      "normalizedSha256": "e38fed69f24b40ed0f678a7c2c91116f93d95453e6186b48475559deb35dd0fb"
+    },
+    {
+      "file": "evidence/V1/acceptance/hover-first-attempt/desktop/error-context.md",
+      "rawSha256": "2697b6d9f254f08905a53e7fe65698f9cf887eba6dcc733d38c7e8bee982444b",
+      "normalizedSha256": "908f339db7efdcbfdb5a70637ad5b3d1796e107796da6b47b67a7b590db7814f"
+    },
+    {
+      "file": "evidence/V1/acceptance/combobox-first-attempt/desktop-webkit/error-context.md",
+      "rawSha256": "9f4750fa5d0fd3cd4c816e46b65d45adb5f95c1fe89f0d2fa411c11767a43b60",
+      "normalizedSha256": "c7a4005cd661bbf76c55b2af160b987cb1316fd7d96b4bc2f53341c308e620b9"
+    }
+  ]
+}

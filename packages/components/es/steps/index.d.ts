@@ -79,3 +79,4 @@ declare const Steps: import("../utils/install").SFCWithInstall<import("vue").Def
     readonly current: number;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>>;
 export default Steps;
+export { Steps };

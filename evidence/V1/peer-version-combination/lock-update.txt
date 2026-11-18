@@ -1,0 +1,9 @@
+Scope: all 5 workspace projects
+ WARN  `node_modules` is present. Lockfile only installation will make it out-of-date
+/Users/start/code/aheart-ui-wt/v1.4-entries/docs:
+ ERR_PNPM_NO_OFFLINE_META  Failed to resolve vitepress@1.6.4 in package mirror /Users/start/Library/Caches/pnpm/metadata-v1.3/registry.npmjs.org/vitepress.json
+
+This error happened while installing a direct dependency of /Users/start/code/aheart-ui-wt/v1.4-entries/docs
+Progress: resolved 1, reused 0, downloaded 0, added 0
+(node:63440) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)

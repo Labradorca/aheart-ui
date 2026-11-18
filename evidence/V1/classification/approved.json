@@ -1,0 +1,987 @@
+{
+  "recordedAt": "2026-11-17T06:44:04-05:00",
+  "sourceHead": "4f2762a2d13535a551d0969394b525ba5bca5c18",
+  "ownerDecision": "../owner-classification-confirmation-2026-11-17.md",
+  "status": "owner confirmed classification and boundaries; implementation resumed until peer stop; not acceptance",
+  "summary": {
+    "base": {
+      "leaf": 40,
+      "composite": 5
+    },
+    "ai": {
+      "leaf": 9,
+      "composite": 7
+    },
+    "dnd": {
+      "leaf": 4,
+      "composite": 0
+    }
+  },
+  "entries": [
+    {
+      "domain": "base",
+      "subpath": "button",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "button",
+      "auxiliaryBoundary": [
+        "icon"
+      ],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Button"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "config-provider",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "config-provider",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "ConfigProvider"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "icon",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "icon",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Icon"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "typography",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "typography",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Typography",
+        "Title",
+        "Text",
+        "Paragraph",
+        "Link"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "space",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "space",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Space"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "divider",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "divider",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Divider"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "splitter",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "splitter",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Splitter",
+        "SplitterPanel"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "flex",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "flex",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Flex"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "grid",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "grid",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Row",
+        "Col"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "tabs",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "tabs",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Tabs"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "breadcrumb",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "breadcrumb",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Breadcrumb"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "dropdown",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "dropdown",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "DropdownButton",
+        "Dropdown"
+      ],
+      "classification": "composite",
+      "cssGateSelection": "leaf_hard_locked_by_first_pass",
+      "measurementStatus": "first_pass_complete_export_passed; exact-union/full-V1 checks still pending",
+      "measurementReference": "../aiform-precise-imports/composite-css-first-pass.json",
+      "firstPassBytes": 18689
+    },
+    {
+      "domain": "base",
+      "subpath": "menu",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "menu",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Menu"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "steps",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "steps",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Steps"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "input",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "input",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Input"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "date-picker",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "date-picker",
+      "auxiliaryBoundary": [
+        "icon"
+      ],
+      "sameFamilyBoundary": false,
+      "names": [
+        "DateRangePicker",
+        "DatePicker"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "time-picker",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "time-picker",
+      "auxiliaryBoundary": [
+        "icon"
+      ],
+      "sameFamilyBoundary": false,
+      "names": [
+        "TimeRangePicker",
+        "TimePicker"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "upload",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "upload",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Upload"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "tree",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "tree",
+      "auxiliaryBoundary": [
+        "icon"
+      ],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Tree"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "tree-select",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "tree-select",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "TreeSelect"
+      ],
+      "classification": "composite",
+      "cssGateSelection": "leaf_hard_locked_by_first_pass",
+      "measurementStatus": "first_pass_complete_export_passed; exact-union/full-V1 checks still pending",
+      "measurementReference": "../aiform-precise-imports/composite-css-first-pass.json",
+      "firstPassBytes": 8867
+    },
+    {
+      "domain": "base",
+      "subpath": "cascader",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "cascader",
+      "auxiliaryBoundary": [
+        "icon"
+      ],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Cascader"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "textarea",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "textarea",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Textarea"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "input-number",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "input-number",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "InputNumber"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "checkbox",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "checkbox",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Checkbox",
+        "CheckboxGroup"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "radio",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "radio",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Radio",
+        "RadioGroup"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "switch",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "switch",
+      "auxiliaryBoundary": [
+        "icon"
+      ],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Switch"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "combobox",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "combobox",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Combobox"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "select",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "select",
+      "auxiliaryBoundary": [
+        "icon"
+      ],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Select"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "form",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "form",
+      "auxiliaryBoundary": [
+        "tooltip"
+      ],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Form",
+        "FormItem",
+        "FormList"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "tag",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "tag",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Tag",
+        "CheckableTag",
+        "TagGroup"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "badge",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "badge",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Badge",
+        "BadgeRibbon"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "card",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "card",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "CardMeta",
+        "CardGrid",
+        "Card"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "empty",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "empty",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Empty"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "descriptions",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "descriptions",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Descriptions"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "table",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "table",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Table"
+      ],
+      "classification": "composite",
+      "cssGateSelection": "leaf_hard_locked_by_first_pass",
+      "measurementStatus": "first_pass_complete_export_passed; exact-union/full-V1 checks still pending",
+      "measurementReference": "../aiform-precise-imports/composite-css-first-pass.json",
+      "firstPassBytes": 15233
+    },
+    {
+      "domain": "base",
+      "subpath": "pagination",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "pagination",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Pagination"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "alert",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "alert",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Alert"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "message",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "message",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Message"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "modal",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "modal",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Modal"
+      ],
+      "classification": "composite",
+      "cssGateSelection": "leaf_hard_locked_by_first_pass",
+      "measurementStatus": "first_pass_complete_export_passed; exact-union/full-V1 checks still pending",
+      "measurementReference": "../aiform-precise-imports/composite-css-first-pass.json",
+      "firstPassBytes": 16305
+    },
+    {
+      "domain": "base",
+      "subpath": "drawer",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "drawer",
+      "auxiliaryBoundary": [
+        "skeleton"
+      ],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Drawer"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "tooltip",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "tooltip",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Tooltip"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "popover",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "popover",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Popover"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "popconfirm",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "popconfirm",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Popconfirm"
+      ],
+      "classification": "composite",
+      "cssGateSelection": "leaf_hard_locked_by_first_pass",
+      "measurementStatus": "first_pass_complete_export_passed; exact-union/full-V1 checks still pending",
+      "measurementReference": "../aiform-precise-imports/composite-css-first-pass.json",
+      "firstPassBytes": 12034
+    },
+    {
+      "domain": "base",
+      "subpath": "spin",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "spin",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Spin"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "base",
+      "subpath": "skeleton",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "skeleton",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Skeleton"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "ai",
+      "subpath": "actions",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "actions",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIActions"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "ai",
+      "subpath": "attachments",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "attachments",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIAttachments"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "ai",
+      "subpath": "bubble",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "bubble",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIBubble"
+      ],
+      "classification": "composite",
+      "cssGateSelection": "leaf_hard_locked_by_first_pass",
+      "measurementStatus": "first_pass_complete_export_passed; exact-union/full-V1 checks still pending",
+      "measurementReference": "../aiform-precise-imports/composite-css-first-pass.json",
+      "firstPassBytes": 5039
+    },
+    {
+      "domain": "ai",
+      "subpath": "conversations",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "conversations",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIConversations"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "ai",
+      "subpath": "form",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "form",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIForm"
+      ],
+      "classification": "composite",
+      "cssGateSelection": "pending_complete_closure_first_pass; no_union_exception_selected",
+      "measurementStatus": "pending_complete_cross_package_export",
+      "measurementReference": "../aiform-precise-imports/composite-css-first-pass.json"
+    },
+    {
+      "domain": "ai",
+      "subpath": "process",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "process",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIProcess"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "ai",
+      "subpath": "prompts",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "prompts",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIPrompts"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "ai",
+      "subpath": "sender",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "sender",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AISender"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "ai",
+      "subpath": "sources",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "sources",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AISources"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "ai",
+      "subpath": "thought-chain",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "thought-chain",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": true,
+      "names": [
+        "AIThoughtChain"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "ai",
+      "subpath": "welcome",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "welcome",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIWelcome"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "ai",
+      "subpath": "chat-panel",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "chat-panel",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIChatPanel"
+      ],
+      "classification": "composite",
+      "cssGateSelection": "leaf_hard_locked_by_first_pass",
+      "measurementStatus": "first_pass_complete_export_passed; exact-union/full-V1 checks still pending",
+      "measurementReference": "../aiform-precise-imports/composite-css-first-pass.json",
+      "firstPassBytes": 13216
+    },
+    {
+      "domain": "ai",
+      "subpath": "agent-workbench",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "agent-workbench",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "AIAgentWorkbench"
+      ],
+      "classification": "composite",
+      "cssGateSelection": "pending_complete_closure_first_pass; no_union_exception_selected",
+      "measurementStatus": "pending_complete_cross_package_export",
+      "measurementReference": "../aiform-precise-imports/composite-css-first-pass.json"
+    },
+    {
+      "domain": "ai",
+      "subpath": "chat",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "chat",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [],
+      "classification": "composite",
+      "cssGateSelection": "leaf_hard_locked_by_first_pass",
+      "measurementStatus": "first_pass_complete_export_passed; exact-union/full-V1 checks still pending",
+      "measurementReference": "../aiform-precise-imports/composite-css-first-pass.json",
+      "firstPassBytes": 13216
+    },
+    {
+      "domain": "ai",
+      "subpath": "agent",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "agent",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [],
+      "classification": "composite",
+      "cssGateSelection": "pending_complete_closure_first_pass; no_union_exception_selected",
+      "measurementStatus": "pending_complete_cross_package_export",
+      "measurementReference": "../aiform-precise-imports/composite-css-first-pass.json"
+    },
+    {
+      "domain": "ai",
+      "subpath": "workbench",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "agent-workbench",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [],
+      "classification": "composite",
+      "cssGateSelection": "pending_complete_closure_first_pass; no_union_exception_selected",
+      "measurementStatus": "pending_complete_cross_package_export",
+      "measurementReference": "../aiform-precise-imports/composite-css-first-pass.json"
+    },
+    {
+      "domain": "dnd",
+      "subpath": "draggable",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "draggable",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "Draggable"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "dnd",
+      "subpath": "droppable",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "droppable",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "DropZone"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "dnd",
+      "subpath": "drag-overlay",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "drag-overlay",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "DragOverlay"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    },
+    {
+      "domain": "dnd",
+      "subpath": "sortable",
+      "status": "owner_confirmed",
+      "canonicalSubpath": "sortable",
+      "auxiliaryBoundary": [],
+      "sameFamilyBoundary": false,
+      "names": [
+        "SortableList",
+        "SortableItem"
+      ],
+      "classification": "leaf",
+      "cssGateSelection": "leaf_hard",
+      "measurementStatus": "pending_complete_closure_measurement"
+    }
+  ],
+  "approvalSource": "../owner-classification-confirmation-2026-11-17.md",
+  "approvedFromHead": "e0c6f8034fef376702abdd98a261db40c16de612",
+  "criteriaProposal": "Built-in composition across public component families is composite; same-family subcomponents/forwarders and declared Icon/Skeleton/Tooltip/infrastructure-only helpers retain the stricter leaf gate. Non-base primitives also retain leaf limits under the confirmed stricter leaf rule. Owner confirmed; conditional composite gate selection also applies.",
+  "cssGateSelectionPolicy": "Composite entries first measure complete closure against leaf 25%/30%; passing entries lock leaf-hard permanently; only measured exceedances may use exact-union/non-increase. Theme 5% and both JS budgets unchanged. Modal retains M1 leaf-hard regardless of classification."
+}

@@ -118,3 +118,4 @@ declare const Grid: Plugin;
 export { Row, Col, Row as ARow, Col as ACol };
 export type { ColProps, ColResponsiveConfig, ColSpanConfig, GridBreakpoint, GridGutter, GridResponsiveGutter, RowAlign, RowJustify, RowProps } from './types';
 export default Grid;
+export { Grid };
