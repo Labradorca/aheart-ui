@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-11-17T23:32:33.678Z",
+  "node": "v24.17.0",
+  "tarball": "/Users/start/code/aheart-ui-wt/v1.4-entries/test-results/release-tarballs/aheart-ui-1.4.0.tgz",
+  "tarballSHA256": "fdf5a2abe927aff8735bd68170aac76d287bc58e31134b276d6c1774eec17bc6",
+  "consumerRoot": "/private/var/folders/r6/2s10_vtx00l5g5kwbl5hkxw00000gn/T/aheart-form-list-consumer-PPVnaG",
+  "symlink": false,
+  "baselineGzipBytes": 24868,
+  "bundleGzipBytes": 57093,
+  "incrementalGzipBytes": 32225,
+  "checks": {
+    "typecheck": true,
+    "esm": true,
+    "cjs": true,
+    "css": true,
+    "ssr": true,
+    "hydration": true,
+    "interaction": true
+  },
+  "status": "passed"
+}

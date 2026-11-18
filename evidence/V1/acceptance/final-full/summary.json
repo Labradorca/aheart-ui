@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "sourceSha": "5b808157535d87479e0d2ab28714079adfa0528b",
+  "branch": "codex/v1.4-entries",
+  "command": "AHEART_E2E_PORT=5187 AHEART_E2E_SKIP_QG5=0 PLAYWRIGHT_JSON_OUTPUT_FILE=test-results/v1-e2e-r2/results.json PLAYWRIGHT_HTML_OUTPUT_DIR=test-results/v1-e2e-r2/html corepack pnpm exec playwright test --workers=1 --output=test-results/v1-e2e-r2/artifacts --reporter=line,json,html",
+  "exitCode": 0,
+  "stats": {
+    "startTime": "2026-11-17T23:47:47.192Z",
+    "duration": 1466311.7380000001,
+    "expected": 868,
+    "skipped": 131,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "projects": {
+    "desktop": {
+      "passed": 277,
+      "skipped": 26,
+      "failed": 0,
+      "flaky": 0
+    },
+    "mobile": {
+      "passed": 234,
+      "skipped": 69,
+      "failed": 0,
+      "flaky": 0
+    },
+    "desktop-firefox": {
+      "passed": 117,
+      "skipped": 14,
+      "failed": 0,
+      "flaky": 0
+    },
+    "desktop-webkit": {
+      "passed": 117,
+      "skipped": 14,
+      "failed": 0,
+      "flaky": 0
+    },
+    "mobile-webkit": {
+      "passed": 123,
+      "skipped": 8,
+      "failed": 0,
+      "flaky": 0
+    }
+  },
+  "firstFullRun": {
+    "total": 999,
+    "exitCode": 1,
+    "failed": 4
+  },
+  "sameTestIdentities": true,
+  "sameSkippedTestIdentities": true,
+  "previouslyFailingCasesPassed": [
+    [
+      "desktop",
+      "button-hover-contrast.spec.ts",
+      "button-hover-contrast.spec.ts",
+      "hover text token can be themed separately from the button border"
+    ],
+    [
+      "mobile",
+      "button-hover-contrast.spec.ts",
+      "button-hover-contrast.spec.ts",
+      "hover text token can be themed separately from the button border"
+    ],
+    [
+      "desktop-webkit",
+      "combobox.spec.ts",
+      "combobox.spec.ts",
+      "Combobox filters, selects and dismisses while preserving native focus"
+    ],
+    [
+      "desktop-webkit",
+      "d4-select-virtual.spec.ts",
+      "d4-select-virtual.spec.ts",
+      "Select virtual preserves stable middle keys through insertion deletion reorder and active removal"
+    ]
+  ],
+  "staticSkipLedgerCount": 41,
+  "rawReportSha256": "0ad12b0d1e0e9708c008863a06cd2a22a59995217c332826c6094c1cddb6886b",
+  "log": {
+    "originalSha256": "1ef5fc78684477c3d67011cd223b67e2f906182a2716f63921f15be3a557014f",
+    "archivedSha256": "2c83641c6083fe85816adfec70d04e76c7d777c68140b0b02e0126c2f0ef9dba",
+    "normalization": "trailing whitespace and blank EOF only"
+  }
+}

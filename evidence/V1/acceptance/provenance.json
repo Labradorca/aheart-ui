@@ -1,0 +1,66 @@
+{
+  "scope": "cross-check of produced artifacts and tracked source for the V1 local candidate",
+  "checkedHead": "5b808157535d87479e0d2ab28714079adfa0528b",
+  "v0": "b1eef9b6f5e1b64706beee5d4d56e08891f27c26",
+  "runtimeSourceSha": "f20bc4986510d3cd7a4c8dd55439c297b6ad45df",
+  "packedSha256": {
+    "aheart-ui": "fdf5a2abe927aff8735bd68170aac76d287bc58e31134b276d6c1774eec17bc6",
+    "@aheart-ui/dnd": "8cbc23c703b7250154c7d8afd2c18bf0e2ba3fe16f6bd6a82754967caf54747a",
+    "@aheart-ui/ai": "be22efd9b1adcfb435608a5fa76715eda57702ef53e8f5319fc011a4f274aebe"
+  },
+  "currentTarballEvidence": [
+    "css-integrity/validated/results.json",
+    "acceptance/budgets/strict-results.json",
+    "css-integrity/freeze-review.json",
+    "acceptance/visual/results.json",
+    "acceptance/migration-current.json",
+    "acceptance/pilots/chromium/results.json",
+    "acceptance/pilots/firefox/results.json",
+    "acceptance/pilots/webkit/results.json"
+  ],
+  "coverage": {
+    "ready": 49,
+    "readyCovered": 49,
+    "entries": {
+      "base": 45,
+      "ai": 16,
+      "dnd": 4
+    },
+    "resolverNames": 81,
+    "navigationReady": 49
+  },
+  "auditedEntries": 65,
+  "reviewedCompositeEntries": [
+    "base/dropdown",
+    "base/tree-select",
+    "base/table",
+    "base/modal",
+    "base/popconfirm",
+    "ai/bubble",
+    "ai/form",
+    "ai/chat-panel",
+    "ai/agent-workbench",
+    "ai/chat",
+    "ai/agent",
+    "ai/workbench"
+  ],
+  "corrected": [
+    "ai/agent-workbench",
+    "ai/workbench"
+  ],
+  "otherMeasurementsEqualToInitial": 63,
+  "protectedFiles": 57,
+  "ownerApprovedOldAssertions": [
+    "scripts/fixtures/m3-consumer/probe.mjs",
+    "scripts/m1-consumer.mjs"
+  ],
+  "skipLedger": {
+    "ok": true,
+    "count": 41,
+    "missing": [],
+    "stale": [],
+    "sha256": "96325ade9e4924f3186a7b78360ce24b9200e6c431000ba7cab81b9ab49f95e9",
+    "byteIdenticalToV0": true
+  },
+  "diffCheckExit": 0
+}

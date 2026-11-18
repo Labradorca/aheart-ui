@@ -1,6 +1,6 @@
 # 复合入口 CSS 门禁与本轮完整测量
 
-**负责人已限定授权纠正Workbench两路径无效初测；当前65入口CSS/JS消费门禁通过，完整V1仍在验收。** [决定](owner-workbench-baseline-correction-2026-11-17.md)、[独立审查及有效基线](css-integrity/README.md)。12个复合基线均先通过独立完整性审查才冻结。
+**负责人已限定授权纠正Workbench两路径无效初测；当前 65 个入口 CSS/JS 消费门禁通过。** [决定](owner-workbench-baseline-correction-2026-11-17.md)、[独立审查及有效基线](css-integrity/README.md)。12个复合基线均先通过独立完整性审查才冻结。
 
 来源：[负责人分类确认和追加限制](owner-classification-confirmation-2026-11-17.md)。12复合先测25%/30%；8项达标者继续硬门禁，Modal保留M1。4项超线者执行精确并集/不回升；53叶子继续原门槛，合计61项叶子硬门禁。full201,510 B、theme1,767 B（0.877%）；所有入口theme≤5%不变，full与V0字节摘要相同。
 
@@ -25,4 +25,4 @@ Workbench最初记录54,109 B（26.852%），修复后54,212 B（26.903%），�
 
 门禁拒绝闭包增长、任一依赖字节/占比回升或声明集合变化；原子规则检查缺失/额外选择器及声明、上下文、important、重复和顺序。--init-baselines只允许文件不存在时创建，不能重跑重设。独立审查另从源选择器任意类名位置核对，避免生成器和验证器共享遗漏；修复后967条缺失0，fixture4条排除。
 
-开PR前差异摘要必须列出全部12项的最终有效基线和同条件实测值。JS两类均gzip<full Plugin、相对root named增量≤max(512 B,1%)，固定M1 Vite5.0.12/Vue3.5.44；工具SDK类型测试的Vite5.4.21不用于预算。
+[开 PR 前差异摘要](diff-summary.md)已列出全部 12 项的最终有效基线和同条件实测值。JS两类均gzip<full Plugin、相对root named增量≤max(512 B,1%)，固定M1 Vite5.0.12/Vue3.5.44；工具SDK类型测试的Vite5.4.21不用于预算。
