@@ -77,6 +77,12 @@ Core 和 AI 的 `next` 均指向 `2.0.0-beta.1` 后，可升级到包含 AI 工�
 npm install --save-exact aheart-ui@2.0.0-beta.1 @aheart-ui/ai@2.0.0-beta.1
 ```
 
+Core 和 AI 的 `next` 均指向 `2.0.0-rc.0` 后，可安装以下候选版本。
+
+```sh
+npm install --save-exact aheart-ui@2.0.0-rc.0 @aheart-ui/ai@2.0.0-rc.0
+```
+
 核对锁文件中的精确版本、`resolved` 与 `integrity`。Workbench 和 AI full 还需要 `npm install --save-exact @aheart-ui/dnd@1.1.0`。用本地 tarball 验收时，在应用副本里更新依赖清单和锁文件。
 
 ## 验证和回退
