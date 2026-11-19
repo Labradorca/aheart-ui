@@ -1,6 +1,6 @@
 {
   "name": "aheart-ui",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-rc.0",
   "description": "Professional Vue 3 components for product interfaces.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
