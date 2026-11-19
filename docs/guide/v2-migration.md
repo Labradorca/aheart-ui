@@ -65,10 +65,16 @@ node scripts/codemods/aheart-v2.mjs --check /path/to/app/src/App.vue /path/to/ap
 npm install --save-exact aheart-ui@2.0.0-alpha.0 @aheart-ui/ai@2.0.0-alpha.0
 ```
 
-Core 和 AI 的 `next` 均指向 Beta 后，可从 Alpha 升级到以下版本。
+Core 和 AI 的 `next` 均指向 `2.0.0-beta.0` 时，可从 Alpha 升级到以下版本。
 
 ```sh
 npm install --save-exact aheart-ui@2.0.0-beta.0 @aheart-ui/ai@2.0.0-beta.0
+```
+
+Core 和 AI 的 `next` 均指向 `2.0.0-beta.1` 后，可升级到包含 AI 工作台 SSR 修复的版本。
+
+```sh
+npm install --save-exact aheart-ui@2.0.0-beta.1 @aheart-ui/ai@2.0.0-beta.1
 ```
 
 核对锁文件中的精确版本、`resolved` 与 `integrity`。Workbench 和 AI full 还需要 `npm install --save-exact @aheart-ui/dnd@1.1.0`。用本地 tarball 验收时，在应用副本里更新依赖清单和锁文件。

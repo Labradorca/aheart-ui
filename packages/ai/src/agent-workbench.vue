@@ -70,8 +70,8 @@
           </main>
         </ASplitterPanel>
         <ASplitterPanel :min="180" collapsible>
-          <aside class="aheart-ai-workbench__execution" aria-label="执行与产物">
-            <Teleport :to="layoutReady ? mobileExecutionTarget : `#${executionTargetId}`" :disabled="!layoutReady || !isMobile || mobileView !== 'execution' || !mobileExecutionTarget">
+          <aside :id="executionSourceId" class="aheart-ai-workbench__execution" aria-label="执行与产物">
+            <Teleport :to="layoutReady ? mobileExecutionTarget : `#${executionSourceId}`" :disabled="!layoutReady || !isMobile || mobileView !== 'execution' || !mobileExecutionTarget">
             <AgentExecution
               key="execution-owner"
               :tasks="tasks"
@@ -125,7 +125,7 @@
         </section>
       </section>
       <section v-show="mobileView === 'chat'" class="aheart-ai-workbench__mobile-panel">
-        <div class="aheart-ai-workbench__mobile-panel--chat"><div :id="`${scopeId}-chat-target`" ref="mobileChatTarget" class="aheart-ai-workbench__mobile-owner-target"></div></div>
+        <div class="aheart-ai-workbench__mobile-panel--chat"><div :id="chatTargetId" ref="mobileChatTarget" class="aheart-ai-workbench__mobile-owner-target"></div></div>
         <p v-if="!transport" class="aheart-ai-workbench__empty">业务层尚未提供对话传输适配器。</p>
         <slot name="sources" :sources="sources"><AISources :sources="sources" /></slot>
         <slot name="attachments" :attachments="attachments"><AIAttachments :items="attachments" /></slot>
@@ -236,9 +236,11 @@ let mediaListener: ((event: MediaQueryListEvent) => void) | undefined
 const instance = getCurrentInstance()
 const instanceScope = `scope-${useId().replace(/[^a-zA-Z0-9_-]/g, '-')}`
 const ownerId = instanceScope.replace(/^scope-/, '')
-const chatTargetId = `aheart-ai-${ownerId}-chat-target`
+// The drawer is mounted on the client, so hydrate the disabled teleport against its SSR source.
+const executionSourceId = `aheart-ai-${ownerId}-execution-source`
 const executionTargetId = `aheart-ai-${ownerId}-execution-target`
 const scopeId = computed(() => props.scopeKey === undefined ? instanceScope : `scope-${String(props.scopeKey).replace(/[^a-zA-Z0-9_-]/g, '-')}-${instanceScope.replace(/^scope-/, '')}`)
+const chatTargetId = computed(() => `${scopeId.value}-chat-target`)
 onMounted(async () => {
   clientMounted.value = true
   const ownerDocument = (instance?.proxy?.$el as HTMLElement | undefined)?.ownerDocument

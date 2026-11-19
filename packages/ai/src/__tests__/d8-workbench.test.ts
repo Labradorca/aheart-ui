@@ -1,5 +1,5 @@
 import { flushPromises, mount } from '@vue/test-utils'
-import { defineComponent, h, nextTick } from 'vue'
+import { createSSRApp, defineComponent, h, nextTick } from 'vue'
 import { describe, expect, it, vi } from 'vitest'
 import AIAgentWorkbench from '../agent-workbench.vue'
 
@@ -86,6 +86,78 @@ const clickAction = async (wrapper: any, id: string, action: string) => {
 }
 
 describe('D8 AIAgentWorkbench single owner and operation contract', () => {
+  it('keeps hydrated chat and execution owners across repeated viewport changes', async () => {
+    const { renderToString } = await import('../../../components/node_modules/@vue/server-renderer')
+    const transport = { send: async function* () { yield { type: 'done' } } }
+    const App = defineComponent({
+      render: () => h('div', [
+        h(Workbench, { transport }),
+        h(Workbench, { transport, scopeKey: 'review / draft' })
+      ])
+    })
+    const host = document.createElement('div')
+    host.innerHTML = await renderToString(createSSRApp(App))
+    document.body.append(host)
+    const media = installResponsiveMedia()
+    media.change(false)
+    const app = createSSRApp(App)
+    const errors: unknown[] = []
+    app.config.errorHandler = (error) => { errors.push(error) }
+    try {
+      const workbenches = [...host.querySelectorAll('.aheart-ai-workbench')]
+      expect(workbenches).toHaveLength(2)
+      const chats = workbenches.map((workbench) => workbench.querySelector('.aheart-ai-chat-panel'))
+      const [firstWorkbench] = workbenches
+      const execution = firstWorkbench.querySelector('.aheart-ai-workbench__execution-content')
+      expect(execution).toBeInstanceOf(HTMLElement)
+      app.mount(host)
+      await nextTick()
+
+      const draft = chats[0]?.querySelector('textarea')
+      expect(draft).toBeInstanceOf(HTMLTextAreaElement)
+      draft!.value = '未发送的草稿'
+      draft!.dispatchEvent(new Event('input', { bubbles: true }))
+
+      for (const mobile of [true, false, true]) {
+        media.change(mobile)
+        await nextTick()
+        expect(errors).toEqual([])
+        const owner = mobile
+          ? '.aheart-ai-workbench__mobile-owner-target'
+          : '.aheart-ai-workbench__chat'
+        for (const [index, workbench] of workbenches.entries()) {
+          expect(workbench.querySelectorAll('.aheart-ai-chat-panel')).toHaveLength(1)
+          expect(workbench.querySelector(`${owner} .aheart-ai-chat-panel`)).toBe(chats[index])
+        }
+        expect(draft).toHaveProperty('value', '未发送的草稿')
+      }
+
+      const executionTab = [...firstWorkbench.querySelectorAll<HTMLButtonElement>('[role="tab"]')]
+        .find((tab) => tab.textContent?.startsWith('执行'))
+      expect(executionTab).toBeDefined()
+      executionTab!.click()
+      await nextTick()
+      expect(firstWorkbench.querySelector('.aheart-drawer__body .aheart-ai-workbench__execution-content')).toBe(execution)
+      for (const mobile of [false, true]) {
+        media.change(mobile)
+        await nextTick()
+        expect(errors).toEqual([])
+        const owner = mobile ? '.aheart-drawer__body' : '.aheart-ai-workbench__execution'
+        expect(firstWorkbench.querySelectorAll('.aheart-ai-workbench__execution-content')).toHaveLength(1)
+        expect(firstWorkbench.querySelector(`${owner} .aheart-ai-workbench__execution-content`)).toBe(execution)
+      }
+    } finally {
+      try {
+        app.unmount()
+      } catch (error) {
+        errors.push(error)
+      }
+      media.restore()
+      host.remove()
+    }
+    expect(errors).toEqual([])
+  })
+
   it('mounts exactly one ChatPanel and one AgentExecution across desktop and mobile views', async () => {
     const media = installResponsiveMedia()
     const wrapper = mountWorkbench({

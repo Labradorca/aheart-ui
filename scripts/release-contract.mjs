@@ -25,7 +25,7 @@ const aiExports = {
 export const packageContracts = [
   {
     name: 'aheart-ui',
-    version: '2.0.0-beta.0',
+    version: '2.0.0-beta.1',
     packageDir: 'packages/components',
     expectedExports: baseExports,
     dist: true,
@@ -46,7 +46,7 @@ export const packageContracts = [
   },
   {
     name: '@aheart-ui/ai',
-    version: '2.0.0-beta.0',
+    version: '2.0.0-beta.1',
     packageDir: 'packages/ai',
     expectedExports: aiExports,
     dist: true,
